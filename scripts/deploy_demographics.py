@@ -12,7 +12,7 @@ MODULE_DIST = os.path.abspath(
     os.path.join(os.path.dirname(__file__), "..", "aiims-esm-demographics-app", "dist")
 )
 MODULE_NAME = "@aiims/esm-demographics-app"
-TARGET_SUBDIR = "openmrs-esm-aiims-demographics-app-1.0.3"
+TARGET_SUBDIR = "openmrs-esm-aiims-demographics-app-1.0.4"
 TARGET_DIR = f"/usr/share/nginx/html/{TARGET_SUBDIR}"
 MAIN_JS = "openmrs-esm-aiims-esm-demographics-app.js"
 

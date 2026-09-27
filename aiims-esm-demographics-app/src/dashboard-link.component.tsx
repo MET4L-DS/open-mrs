@@ -44,46 +44,17 @@ function DashboardLinkInner({ basePath, path, title }: { basePath: string; path:
     <div key={path}>
       <a
         className={classNames('cds--side-nav__link', {
+          'cds--side-nav__link--current': isActive,
           'active-left-nav-link': isActive,
         })}
         href={targetUrl}
         onClick={handleClick}
-        style={{
-          display: 'flex',
-          alignItems: 'center',
-          padding: '0 1rem',
-          height: '2rem',
-          textDecoration: 'none',
-          color: 'inherit',
-          cursor: 'pointer',
-        }}
       >
-        <span
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-            width: '100%',
-          }}
-        >
-          <Identification
-            size={16}
-            style={{
-              marginRight: '1rem',
-              flexShrink: 0,
-              fill: 'currentColor',
-            }}
-          />
-          <span
-            style={{
-              fontSize: '0.875rem',
-              fontWeight: isActive ? 600 : 400,
-              overflow: 'hidden',
-              textOverflow: 'ellipsis',
-              whiteSpace: 'nowrap',
-            }}
-          >
-            {t(title)}
-          </span>
+        <div className="cds--side-nav__icon">
+          <Identification size={16} />
+        </div>
+        <span className="cds--side-nav__link-text">
+          {t(title)}
         </span>
       </a>
     </div>
