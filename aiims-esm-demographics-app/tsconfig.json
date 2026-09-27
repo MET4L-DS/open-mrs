@@ -21,7 +21,7 @@
       "esnext"
     ],
     "noEmit": true,
-    "noImplicitAny": false,
+    "noImplicitAny": true,
     "baseUrl": ".",
     "paths": {
       "__mocks__": ["./__mocks__"],

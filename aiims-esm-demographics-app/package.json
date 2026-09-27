@@ -45,7 +45,7 @@
     "src"
   ],
   "dependencies": {
-    "@carbon/react": "1.x"
+    "classnames": "^2.5.1"
   },
   "peerDependencies": {
     "@carbon/react": "1.x",
@@ -55,14 +55,12 @@
     "react": "18.x",
     "react-dom": "18.x",
     "react-i18next": "16.x",
-    "react-is": "18.x",
     "react-router-dom": "6.x",
-    "rxjs": "6.x",
-    "sass": "1.x",
     "single-spa": "6.x",
     "swr": "2.x"
   },
   "devDependencies": {
+    "@carbon/react": "1.x",
     "@openmrs/eslint-config": "^2.0.0",
     "@openmrs/esm-framework": "^10.0.0",
     "@testing-library/dom": "^10.4.1",

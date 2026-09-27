@@ -2,7 +2,7 @@
 @use '@carbon/type';
 
 .container {
-  padding: 1rem 1.5rem 2rem 1.5rem;
+  padding: 1.25rem 1.75rem 2.5rem 1.75rem;
   max-width: 1400px;
 }
 
@@ -15,12 +15,23 @@
   border-bottom: 1px solid var(--cds-border-subtle, #e0e0e0);
 }
 
+.toolbarInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
 .lastUpdated {
   font-size: 0.875rem;
   color: var(--cds-text-secondary, #525252);
+
+  strong {
+    color: var(--cds-text-primary, #161616);
+    font-weight: 600;
+  }
 }
 
-.actions {
+.toolbarActions {
   display: flex;
   align-items: center;
   gap: 0.75rem;
@@ -50,6 +61,7 @@
 
   svg {
     fill: var(--cds-interactive, #005d5d);
+    color: var(--cds-interactive, #005d5d);
   }
 
   h4 {
@@ -101,20 +113,32 @@
 .emptyState {
   text-align: center;
   padding: 3rem 1.5rem;
-  background: var(--cds-layer, #ffffff);
+  background-color: var(--cds-layer, #ffffff);
   border: 1px dashed var(--cds-border-subtle, #c6c6c6);
   border-radius: 4px;
   margin-top: 1rem;
+}
 
-  h3 {
-    margin: 1rem 0 0.5rem 0;
-    font-size: 1.25rem;
-    color: var(--cds-text-primary, #161616);
-  }
+.emptyStateIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  color: #8d8d8d;
+}
 
-  p {
-    color: var(--cds-text-secondary, #525252);
-    margin-bottom: 1.5rem;
-    font-size: 0.9375rem;
-  }
+.emptyStateTitle {
+  margin: 1rem 0 0.5rem 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--cds-text-primary, #161616);
+}
+
+.emptyStateBody {
+  color: var(--cds-text-secondary, #525252);
+  margin-bottom: 1.5rem;
+  font-size: 0.9375rem;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
 }

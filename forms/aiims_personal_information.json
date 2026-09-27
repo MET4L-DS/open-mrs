@@ -250,7 +250,7 @@
               "required": "true",
               "questionOptions": {
                 "rendering": "radio",
-                "concept": "1712AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "concept": "c0010001-0000-0000-0000-000000000013",
                 "answers": [
                   {
                     "concept": "160296AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",

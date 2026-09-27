@@ -19,6 +19,7 @@
   "husbandOccupation": "Occupation",
   "kuppuswamyClass": "Kuppuswamy Scale Class",
   "lastRecorded": "Last recorded",
+  "noRecordedEncounterGeneric": "No encounter recorded yet",
   "noRecordedEncounter": "No AIIMS Personal Information Intake encounter recorded yet",
   "updateDemographics": "Update Demographics",
   "recordDemographics": "Record Demographics",
@@ -26,5 +27,9 @@
   "loadingDemographics": "Loading AIIMS Demographics...",
   "errorLoading": "Error loading demographics",
   "noDemographicsHeader": "No Demographics Recorded Yet",
-  "noDemographicsBody": "Personal, family, education, and socioeconomic details have not been submitted for this patient yet."
+  "noDemographicsBody": "Personal, family, education, and socioeconomic details have not been submitted for this patient yet.",
+  "unitFormat": "Unit {{unit}}",
+  "years": "years",
+  "kgPerMSq": "kg/m²",
+  "valueWithUnit": "{{value}} {{unit}}"
 }

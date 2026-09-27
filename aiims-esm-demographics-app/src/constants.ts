@@ -1,8 +1,27 @@
+import { Identification } from '@carbon/react/icons';
+import { type FormRegistryEntry } from './shared/types';
+
 export const moduleName = '@aiims/esm-demographics-app';
 
 // Form UUID for AIIMS Visit: Personal Information Intake
 export const AIIMS_FORM_UUID = '80930653-7e80-4bfd-9e29-ec37c334d880';
 export const AIIMS_FORM_NAME = 'AIIMS Visit: Personal Information Intake';
+
+// Form Registry: Centralized configuration for all current and future AIIMS forms
+export const FORM_REGISTRY: FormRegistryEntry[] = [
+  {
+    key: 'demographics',
+    uuid: AIIMS_FORM_UUID,
+    name: AIIMS_FORM_NAME,
+    path: 'aiims-demographics',
+    titleKey: 'aiimsDemographicsTitle',
+    title: 'AIIMS Demographics',
+    slot: 'aiims-demographics-dashboard-slot',
+    icon: Identification,
+    order: 1,
+  },
+  // Additional forms (anthropometry, clinical history, ultrasound, etc.) will be registered here
+];
 
 // Concept UUIDs matching concept_registry.md and AIIMS form
 export const CONCEPTS = {
@@ -16,8 +35,10 @@ export const CONCEPTS = {
   occupationWife: 'c0010001-0000-0000-0000-000000000014',
   occupationHusband: 'c0010001-0000-0000-0000-000000000015',
   socioeconomicStatus: 'c0010001-0000-0000-0000-000000000016',
-  // Standard CIEL concept used for education (wife and husband)
+  // Education concepts: distinct concept for husband to avoid array index ambiguity
+  educationHusband: 'c0010001-0000-0000-0000-000000000013',
   educationLevel: '1712AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA',
+  educationWife: '1712AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA',
 };
 
 // Person Attribute Type UUID for Patient Telephone Number
