@@ -1,0 +1,381 @@
+{
+  "name": "AIIMS Visit: Personal Information Intake",
+  "description": "AIIMS Department of Reproductive Medicine & IVF - Patient & Partner Personal Information Intake Sheet",
+  "version": "2.0",
+  "published": true,
+  "retired": false,
+  "encounter": "Consultation",
+  "processor": "EncounterFormProcessor",
+  "referencedForms": [],
+  "pages": [
+    {
+      "label": "Personal Information",
+      "sections": [
+        {
+          "label": "Clinical & Unit Identification",
+          "isExpanded": true,
+          "questions": [
+            {
+              "label": "Consultant Unit",
+              "type": "obs",
+              "id": "consultant_unit",
+              "required": "true",
+              "questionOptions": {
+                "rendering": "text",
+                "concept": "c0010001-0000-0000-0000-000000000001",
+                "placeholder": "e.g. Unit 1 / IVF Unit"
+              }
+            },
+            {
+              "label": "Consultant Name",
+              "type": "obs",
+              "id": "consultant_name",
+              "required": "true",
+              "questionOptions": {
+                "rendering": "text",
+                "concept": "c0010001-0000-0000-0000-000000000002",
+                "placeholder": "Dr. Full Name"
+              }
+            }
+          ]
+        },
+        {
+          "label": "Patient (Wife) Demographics & Profile",
+          "isExpanded": true,
+          "questions": [
+            {
+              "label": "Age (years)",
+              "type": "obs",
+              "id": "wife_age",
+              "required": "true",
+              "questionOptions": {
+                "rendering": "number",
+                "concept": "c0010001-0000-0000-0000-000000000004",
+                "min": "15",
+                "max": "65"
+              },
+              "validators": [
+                {
+                  "type": "js_expression",
+                  "failsWhenExpression": "myValue < 15 || myValue > 65",
+                  "message": "Age should normally be between 15 and 65 years."
+                }
+              ]
+            },
+            {
+              "label": "Phone Number (Wife)",
+              "type": "personAttribute",
+              "id": "wife_phone",
+              "required": "true",
+              "questionOptions": {
+                "rendering": "text",
+                "attributeType": "14d4f066-15f5-102d-96e4-000c29c2a5d7",
+                "placeholder": "10-digit mobile number"
+              },
+              "validators": [
+                {
+                  "type": "js_expression",
+                  "failsWhenExpression": "!/^[0-9]{10}$/.test(myValue)",
+                  "message": "Please enter a valid 10-digit phone number."
+                }
+              ]
+            },
+            {
+              "label": "Education (Wife)",
+              "type": "obs",
+              "id": "wife_education",
+              "required": "true",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "1712AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "answers": [
+                  {
+                    "concept": "160296AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Profession or honours"
+                  },
+                  {
+                    "concept": "159786AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Graduate"
+                  },
+                  {
+                    "concept": "159785AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Intermediate or diploma"
+                  },
+                  {
+                    "concept": "1714AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "High school certificate"
+                  },
+                  {
+                    "concept": "160297AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Middle school certificate"
+                  },
+                  {
+                    "concept": "1713AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Primary school certificate"
+                  },
+                  {
+                    "concept": "160298AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Illiterate"
+                  }
+                ]
+              }
+            },
+            {
+              "label": "Occupation (Wife)",
+              "type": "obs",
+              "id": "wife_occupation",
+              "required": "true",
+              "questionOptions": {
+                "rendering": "select",
+                "concept": "c0010001-0000-0000-0000-000000000014",
+                "answers": [
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000001",
+                    "label": "Legislators, senior officials and managers"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000002",
+                    "label": "Professionals"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000003",
+                    "label": "Technicians and associate professionals"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000004",
+                    "label": "Clerks"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000005",
+                    "label": "Skilled workers and shop and market sale workers"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000006",
+                    "label": "Skilled agricultural and fishery workers"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000007",
+                    "label": "Craft and related trade workers"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000008",
+                    "label": "Plant and machine operators and assemblers"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000009",
+                    "label": "Elementary occupation"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000010",
+                    "label": "Unemployed"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "label": "Husband Demographics & Profile",
+          "isExpanded": true,
+          "questions": [
+            {
+              "label": "Husband Name",
+              "type": "obs",
+              "id": "husband_name",
+              "required": "true",
+              "questionOptions": {
+                "rendering": "text",
+                "concept": "c0010001-0000-0000-0000-000000000007"
+              }
+            },
+            {
+              "label": "Husband Age (years)",
+              "type": "obs",
+              "id": "husband_age",
+              "required": "true",
+              "questionOptions": {
+                "rendering": "number",
+                "concept": "c0010001-0000-0000-0000-000000000008",
+                "min": "18",
+                "max": "80"
+              },
+              "validators": [
+                {
+                  "type": "js_expression",
+                  "failsWhenExpression": "myValue < 18 || myValue > 80",
+                  "message": "Husband age should normally be between 18 and 80 years."
+                }
+              ]
+            },
+            {
+              "label": "Husband Body Mass Index (BMI)",
+              "type": "obs",
+              "id": "husband_bmi",
+              "questionOptions": {
+                "rendering": "number",
+                "concept": "1342AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "min": "10.0",
+                "max": "60.0",
+                "placeholder": "kg/m2"
+              },
+              "validators": [
+                {
+                  "type": "js_expression",
+                  "failsWhenExpression": "myValue < 10.0 || myValue > 60.0",
+                  "message": "BMI must be between 10.0 and 60.0 kg/m2."
+                }
+              ]
+            },
+            {
+              "label": "Phone Number (Husband)",
+              "type": "obs",
+              "id": "husband_phone",
+              "questionOptions": {
+                "rendering": "text",
+                "concept": "c0010001-0000-0000-0000-000000000011",
+                "placeholder": "10-digit mobile number"
+              },
+              "validators": [
+                {
+                  "type": "js_expression",
+                  "failsWhenExpression": "myValue && !/^[0-9]{10}$/.test(myValue)",
+                  "message": "Please enter a valid 10-digit phone number."
+                }
+              ]
+            },
+            {
+              "label": "Education (Husband)",
+              "type": "obs",
+              "id": "husband_education",
+              "required": "true",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "1712AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "answers": [
+                  {
+                    "concept": "160296AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Profession or honours"
+                  },
+                  {
+                    "concept": "159786AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Graduate"
+                  },
+                  {
+                    "concept": "159785AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Intermediate or diploma"
+                  },
+                  {
+                    "concept": "1714AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "High school certificate"
+                  },
+                  {
+                    "concept": "160297AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Middle school certificate"
+                  },
+                  {
+                    "concept": "1713AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Primary school certificate"
+                  },
+                  {
+                    "concept": "160298AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Illiterate"
+                  }
+                ]
+              }
+            },
+            {
+              "label": "Occupation (Husband)",
+              "type": "obs",
+              "id": "husband_occupation",
+              "required": "true",
+              "questionOptions": {
+                "rendering": "select",
+                "concept": "c0010001-0000-0000-0000-000000000015",
+                "answers": [
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000001",
+                    "label": "Legislators, senior officials and managers"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000002",
+                    "label": "Professionals"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000003",
+                    "label": "Technicians and associate professionals"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000004",
+                    "label": "Clerks"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000005",
+                    "label": "Skilled workers and shop and market sale workers"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000006",
+                    "label": "Skilled agricultural and fishery workers"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000007",
+                    "label": "Craft and related trade workers"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000008",
+                    "label": "Plant and machine operators and assemblers"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000009",
+                    "label": "Elementary occupation"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000010",
+                    "label": "Unemployed"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "label": "Socioeconomic Assessment",
+          "isExpanded": true,
+          "questions": [
+            {
+              "label": "Socioeconomic Status (Modified Kuppuswamy Scale)",
+              "type": "obs",
+              "id": "socioeconomic_status",
+              "required": "true",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "c0010001-0000-0000-0000-000000000016",
+                "answers": [
+                  {
+                    "concept": "c0010003-0000-0000-0000-000000000001",
+                    "label": "Upper (I)"
+                  },
+                  {
+                    "concept": "c0010003-0000-0000-0000-000000000002",
+                    "label": "Upper Middle (II)"
+                  },
+                  {
+                    "concept": "c0010003-0000-0000-0000-000000000003",
+                    "label": "Lower Middle (III)"
+                  },
+                  {
+                    "concept": "c0010003-0000-0000-0000-000000000004",
+                    "label": "Upper Lower (IV)"
+                  },
+                  {
+                    "concept": "c0010003-0000-0000-0000-000000000005",
+                    "label": "Lower (V)"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

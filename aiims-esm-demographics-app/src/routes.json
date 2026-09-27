@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json.openmrs.org/routes.schema.json",
+  "extensions": [
+    {
+      "name": "aiims-demographics-dashboard-link",
+      "component": "aiimsDemographicsDashboardLink",
+      "slot": "patient-chart-dashboard-slot",
+      "order": 1,
+      "meta": {
+        "slot": "aiims-demographics-dashboard-slot",
+        "path": "aiims-demographics",
+        "title": "AIIMS Demographics"
+      },
+      "online": true,
+      "offline": true
+    },
+    {
+      "name": "aiims-demographics-dashboard",
+      "component": "aiimsDemographicsDashboard",
+      "slot": "aiims-demographics-dashboard-slot",
+      "online": true,
+      "offline": true
+    }
+  ]
+}

@@ -1,0 +1,120 @@
+@use '@carbon/layout';
+@use '@carbon/type';
+
+.container {
+  padding: 1rem 1.5rem 2rem 1.5rem;
+  max-width: 1400px;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--cds-border-subtle, #e0e0e0);
+}
+
+.lastUpdated {
+  font-size: 0.875rem;
+  color: var(--cds-text-secondary, #525252);
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(440px, 1fr));
+  gap: 1.25rem;
+}
+
+.card {
+  padding: 1.25rem;
+  background-color: var(--cds-layer, #ffffff);
+  border: 1px solid var(--cds-border-subtle, #e0e0e0);
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding-bottom: 0.75rem;
+  margin-bottom: 0.75rem;
+  border-bottom: 1px solid var(--cds-border-subtle, #f4f4f4);
+
+  svg {
+    fill: var(--cds-interactive, #005d5d);
+  }
+
+  h4 {
+    margin: 0;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--cds-text-primary, #161616);
+  }
+}
+
+.fieldList {
+  display: flex;
+  flex-direction: column;
+}
+
+.fieldRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 0.45rem 0;
+  border-bottom: 1px solid var(--cds-border-subtle-01, #f4f4f4);
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.fieldLabel {
+  color: var(--cds-text-secondary, #525252);
+  font-size: 0.875rem;
+  font-weight: 400;
+  flex: 1;
+}
+
+.fieldValue {
+  color: var(--cds-text-primary, #161616);
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-align: right;
+  flex: 1;
+  word-break: break-word;
+
+  &.empty {
+    color: var(--cds-text-placeholder, #8d8d8d);
+    font-weight: 400;
+  }
+}
+
+.emptyState {
+  text-align: center;
+  padding: 3rem 1.5rem;
+  background: var(--cds-layer, #ffffff);
+  border: 1px dashed var(--cds-border-subtle, #c6c6c6);
+  border-radius: 4px;
+  margin-top: 1rem;
+
+  h3 {
+    margin: 1rem 0 0.5rem 0;
+    font-size: 1.25rem;
+    color: var(--cds-text-primary, #161616);
+  }
+
+  p {
+    color: var(--cds-text-secondary, #525252);
+    margin-bottom: 1.5rem;
+    font-size: 0.9375rem;
+  }
+}

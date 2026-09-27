@@ -1,0 +1,105 @@
+{
+  "name": "Quick Triage & Lifestyle Intake",
+  "description": "Demonstration clinical intake form with vital signs validation and conditional skip logic",
+  "version": "1.0",
+  "published": true,
+  "retired": false,
+  "encounter": "Consultation",
+  "processor": "EncounterFormProcessor",
+  "referencedForms": [],
+  "pages": [
+    {
+      "label": "Triage & Habits",
+      "sections": [
+        {
+          "label": "Vital Signs Assessment",
+          "isExpanded": true,
+          "questions": [
+            {
+              "label": "Pulse Rate (beats / min)",
+              "type": "obs",
+              "id": "pulse_rate",
+              "questionOptions": {
+                "rendering": "number",
+                "concept": "5087AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "min": "30",
+                "max": "220"
+              },
+              "validators": [
+                {
+                  "type": "js_expression",
+                  "failsWhenExpression": "myValue < 30 || myValue > 220",
+                  "message": "Pulse must be between 30 and 220 bpm."
+                }
+              ]
+            },
+            {
+              "label": "Body Temperature (°C)",
+              "type": "obs",
+              "id": "body_temp",
+              "questionOptions": {
+                "rendering": "number",
+                "concept": "5088AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "min": "32.0",
+                "max": "43.0"
+              },
+              "validators": [
+                {
+                  "type": "js_expression",
+                  "failsWhenExpression": "myValue < 32.0 || myValue > 43.0",
+                  "message": "Temperature must be between 32.0°C and 43.0°C."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Lifestyle & Habits",
+          "isExpanded": true,
+          "questions": [
+            {
+              "label": "Is the patient a current tobacco smoker?",
+              "type": "obs",
+              "id": "is_smoker",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "152722AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "answers": [
+                  {
+                    "label": "Yes",
+                    "concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                  },
+                  {
+                    "label": "No",
+                    "concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                  }
+                ]
+              }
+            },
+            {
+              "label": "Average cigarettes smoked per day",
+              "type": "obs",
+              "id": "daily_cigarettes",
+              "questionOptions": {
+                "rendering": "number",
+                "concept": "1546AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "min": "1",
+                "max": "100"
+              },
+              "hide": {
+                "hideWhenExpression": "is_smoker !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              },
+              "validators": [
+                {
+                  "type": "js_expression",
+                  "failsWhenExpression": "myValue < 1 || myValue > 100",
+                  "message": "Please enter a valid count between 1 and 100."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

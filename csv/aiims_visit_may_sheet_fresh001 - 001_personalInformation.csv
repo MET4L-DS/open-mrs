@@ -1,0 +1,11 @@
+Consultant_unit,Consultant_name,Name,Age,Unique Health Identifier,In-Vitro-Fertiliation Number,Husband name,Husband age,Husband Body Mass Index,Phone Number Wife,Phone Number Husband,Education(wife),Education(husband),Occupation(wife),Occupation(husband),Socioeconomic status
+,,,,,,,,,,,Profession or honours,Profession or honours,"Legislators, senior officials and managers","Legislators, senior officials and managers",Upper (I)
+,,,,,,,,,,,Graduate,Graduate,Professionals,Professionals,Upper Middle (II)
+,,,,,,,,,,,Intermediate or diploma,Intermediate or diploma,Technicians and associate professionals,Technicians and associate professionals,Lower Middle (III)
+,,,,,,,,,,,High school certificate,High school certificate,Clerks,Clerks,Upper Lower (IV)
+,,,,,,,,,,,Middle school certificate,Middle school certificate,Skilled workers and shop and market sale workers,Skilled workers and shop and market sale workers,Lower (V)
+,,,,,,,,,,,Primary school certificate,Primary school certificate,Skilled agricultural and fishery workers,Skilled agricultural and fishery workers,
+,,,,,,,,,,,Illiterate,Illiterate,Craft and related trade workers,Craft and related trade workers,
+,,,,,,,,,,,,,Plant and machine operators and assemblers,Plant and machine operators and assemblers,
+,,,,,,,,,,,,,Elementary occupation,Elementary occupation,
+,,,,,,,,,,,,,Unemployed,Unemployed,
