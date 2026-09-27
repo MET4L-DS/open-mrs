@@ -2,7 +2,7 @@ import React, { useCallback } from 'react';
 import { InlineLoading, InlineNotification } from '@carbon/react';
 import { useTranslation } from 'react-i18next';
 import { formatDatetime, launchWorkspace2, usePatient } from '@openmrs/esm-framework';
-import { AIIMS_FORM_UUID } from '../constants';
+import { AIIMS_FORM_UUID, AIIMS_FORM_NAME } from '../constants';
 import { useAiimsDemographics } from './demographics.resource';
 import { ClinicalCard } from './clinical-card.component';
 import { PatientCard } from './patient-card.component';
@@ -17,11 +17,13 @@ interface DemographicsDashboardProps {
   patientUuid?: string;
   basePath?: string;
   formUuid?: string;
+  formName?: string;
 }
 
 export default function DemographicsDashboard({
   patientUuid: propPatientUuid,
   formUuid = AIIMS_FORM_UUID,
+  formName = AIIMS_FORM_NAME,
 }: DemographicsDashboardProps) {
   const { t } = useTranslation();
   const {
@@ -42,11 +44,23 @@ export default function DemographicsDashboard({
   const handleOpenForm = useCallback(
     (encounterUuid?: string) => {
       launchWorkspace2('patient-form-entry-workspace', {
-        formUuid,
+        workspaceTitle: formName,
+        form: {
+          uuid: formUuid,
+          name: formName,
+          display: formName,
+        },
         encounterUuid,
+        patientUuid,
+        patient,
+        additionalProps: {
+          mode: encounterUuid ? 'edit' : 'enter',
+          formSessionIntent: '*',
+          openClinicalFormsWorkspaceOnFormClose: false,
+        },
       });
     },
-    [formUuid]
+    [formUuid, formName, patientUuid, patient]
   );
 
   const error = patientError || demographicsError;

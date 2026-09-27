@@ -122,8 +122,9 @@ python scripts/publish_aiims_form.py
 
 1. **CSS vs JS Presentational Logic**:
    - Never use JS index checks (`idx === len - 1`) to toggle borders. Use native CSS `:last-child`.
-2. **Backend Query Redundancy**:
-   - If REST query parameters filter (`form=UUID`) and sort (`order=desc`), do not re-filter or re-sort on the client in `useMemo`.
+2. **Backend Query Caveats (Encounter Filtering & Sorting)**:
+   - The OpenMRS REST API `/ws/rest/v1/encounter` does **NOT** filter by `form` parameter on the backend (the parameter is ignored), and does not guarantee sorting by `encounterDatetime` descending.
+   - Client-side filtering (`e.form?.uuid === formUuid`) and sorting by `encounterDatetime` (`timeB - timeA`) in `useMemo` is **MANDATORY** to prevent picking unassociated or older encounters (such as empty encounters created with `form: null`).
 3. **i18n & Localization**:
    - Never hardcode units (e.g. `'years'`, `'kg/m²'`) or string templates (`"Unit " + val`).
    - Use `t('key', fallback, { ...params })` with interpolation.
@@ -135,6 +136,8 @@ python scripts/publish_aiims_form.py
 6. **Dependencies**:
    - Keep framework packages (`@openmrs/esm-framework`, `@carbon/react`, `swr`) in `peerDependencies` to avoid bundle duplication.
    - Build-only tools like `sass` belong in `devDependencies`, not `peerDependencies`.
+7. **Workspace Launching Contract**:
+   - When launching `patient-form-entry-workspace` via `launchWorkspace2`, the `workspaceProps` must be passed directly at the top level, NOT wrapped in a `state` object. The workspace component `PatientFormEntryWorkspace` expects to find its props like `props.form.uuid`. Passing it flatly is correct. Ensure `form: { uuid, name, display }` is passed directly as a property of the workspace props object.
 
 ---
 

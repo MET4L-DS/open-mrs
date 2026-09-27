@@ -82,7 +82,25 @@ export function useFormEncounter(
   );
 
   const allEncounters = data?.data?.results;
-  const formEncounters = allEncounters ?? [];
+
+  // OpenMRS REST API /ws/rest/v1/encounter does not filter by form parameter on the backend
+  // and does not guarantee encounterDatetime desc sorting. We must filter and sort client-side.
+  const formEncounters = useMemo(() => {
+    if (!allEncounters) return [];
+    let list = allEncounters;
+    if (formUuid) {
+      list = list.filter(e => e.form?.uuid === formUuid);
+    }
+    if (encounterTypeUuid) {
+      list = list.filter(e => (e as any).encounterType?.uuid === encounterTypeUuid);
+    }
+    return [...list].sort((a, b) => {
+      const timeA = a.encounterDatetime ? new Date(a.encounterDatetime).getTime() : 0;
+      const timeB = b.encounterDatetime ? new Date(b.encounterDatetime).getTime() : 0;
+      return timeB - timeA;
+    });
+  }, [allEncounters, formUuid, encounterTypeUuid]);
+
   const latestEncounter = formEncounters.length > 0 ? formEncounters[0] : null;
 
   // Build index by concept UUID for fast lookup, sorting obs deterministically by obsDatetime
