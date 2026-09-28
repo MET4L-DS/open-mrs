@@ -40,6 +40,26 @@
       "slot": "aiims-infertility-type-dashboard-slot",
       "online": true,
       "offline": true
+    },
+    {
+      "name": "aiims-obstetric-history-dashboard-link",
+      "component": "aiimsObstetricHistoryDashboardLink",
+      "slot": "patient-chart-dashboard-slot",
+      "order": 1,
+      "meta": {
+        "slot": "aiims-obstetric-history-dashboard-slot",
+        "path": "aiims-obstetric-history",
+        "title": "Obstetric History"
+      },
+      "online": true,
+      "offline": true
+    },
+    {
+      "name": "aiims-obstetric-history-dashboard",
+      "component": "aiimsObstetricHistoryDashboard",
+      "slot": "aiims-obstetric-history-dashboard-slot",
+      "online": true,
+      "offline": true
     }
   ]
 }

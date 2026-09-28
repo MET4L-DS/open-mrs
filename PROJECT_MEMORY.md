@@ -150,6 +150,9 @@ python scripts/publish_aiims_form.py
 2. **Form 2: AIIMS Visit: Type of Infertility** (`80930653-7e80-4bfd-9e29-ec37c334d881`)
    - Path: `aiims-infertility-type`
    - Infertility classification (Primary / Secondary), duration of marriage, and duration of infertility.
+3. **Form 3: AIIMS Visit: Obstetric History** (`80930653-7e80-4bfd-9e29-ec37c334d882`)
+   - Path: `aiims-obstetric-history`
+   - Obstetric indicators: Gravida (G), Parity (P), Living Children (L), Abortion/Miscarriage (A), Ectopic Pregnancy.
 
 ---
 
@@ -157,8 +160,8 @@ python scripts/publish_aiims_form.py
 
 - [x] Register Form 1: Personal Information Intake (`demographics`).
 - [x] Register Form 2: Type of Infertility Intake (`infertility-type`).
-- [ ] Register Form 3: Anthropometry & Vitals.
-- [ ] Register Form 4: Clinical & Obstetric History.
+- [x] Register Form 3: Obstetric History (`obstetric-history`).
+- [ ] Register Form 4: Anthropometry & Vitals.
 - [ ] Register Form 5: Physical Examination.
 - [ ] Register Form 6: Ultrasound & Imaging.
 - [ ] Register Form 7: Laboratory & Investigations.

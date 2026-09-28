@@ -42,5 +42,18 @@
   "recordInfertility": "Record Infertility Details",
   "updateInfertility": "Update Infertility Details",
   "loadingInfertility": "Loading Type of Infertility...",
-  "noRecordedInfertilityEncounter": "No AIIMS Type of Infertility encounter recorded yet"
+  "noRecordedInfertilityEncounter": "No AIIMS Type of Infertility encounter recorded yet",
+  "aiimsObstetricHistoryTitle": "Obstetric History",
+  "obstetricHistoryDetails": "Obstetric History Details",
+  "gravida": "Gravida (G)",
+  "parity": "Parity (P)",
+  "livingChildren": "Living Children (L)",
+  "abortionMiscarriage": "Abortion / Miscarriage (A)",
+  "ectopicPregnancy": "Ectopic Pregnancy",
+  "noObstetricHistoryHeader": "No Obstetric History Recorded Yet",
+  "noObstetricHistoryBody": "Gravida, parity, living children, abortion/miscarriage, and ectopic pregnancy details have not been submitted for this patient yet.",
+  "recordObstetricHistory": "Record Obstetric History",
+  "updateObstetricHistory": "Update Obstetric History",
+  "loadingObstetricHistory": "Loading Obstetric History...",
+  "noRecordedObstetricHistoryEncounter": "No AIIMS Obstetric History encounter recorded yet"
 }

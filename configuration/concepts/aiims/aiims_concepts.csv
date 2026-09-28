@@ -34,3 +34,8 @@ c0010001-0000-0000-0000-000000000016,,,Socioeconomic Status,Socioeconomic Status
 c0010001-0000-0000-0000-000000000017,,,Type of infertility,Type of infertility,Question,Coded,"c0010002-0000-0000-0000-000000000101;c0010002-0000-0000-0000-000000000102",,
 c0010001-0000-0000-0000-000000000018,,,Married for years,Married for years,Question,Numeric,,,
 c0010001-0000-0000-0000-000000000019,,,Duration of infertility,Duration of infertility,Question,Numeric,,,
+c0010001-0000-0000-0000-000000000020,,,Gravida,Gravida,Question,Numeric,,,
+c0010001-0000-0000-0000-000000000021,,,Parity,Parity,Question,Numeric,,,
+c0010001-0000-0000-0000-000000000022,,,Living Children,Living Children,Question,Numeric,,,
+c0010001-0000-0000-0000-000000000023,,,Abortion or Miscarriage,Abortion or Miscarriage,Question,Numeric,,,
+c0010001-0000-0000-0000-000000000024,,,Ectopic Pregnancy,Ectopic Pregnancy,Question,Numeric,,,

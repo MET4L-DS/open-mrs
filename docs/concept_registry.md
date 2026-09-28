@@ -38,6 +38,11 @@ To maintain agility and avoid blocking clinical deployment pending terminology l
 | `c0010001-0000-0000-0000-000000000017` | Type of infertility | Coded | Finding | SNOMED CT | `275275009` | Yes | Active | Concept answers: `c0010002-...101`, `102` |
 | `c0010001-0000-0000-0000-000000000018` | Married for years | Numeric | Observable entity | SNOMED CT | `224134009` | Yes | Active | Marriage duration in years |
 | `c0010001-0000-0000-0000-000000000019` | Duration of infertility | Numeric | Observable entity | SNOMED CT | `6738008` | Yes | Active | Infertility duration in years |
+| `c0010001-0000-0000-0000-000000000020` | Gravida | Numeric | Finding | SNOMED CT | `161732006` | Yes | Active | Total number of pregnancies |
+| `c0010001-0000-0000-0000-000000000021` | Parity | Numeric | Finding | SNOMED CT | `364325004` | Yes | Active | Number of deliveries |
+| `c0010001-0000-0000-0000-000000000022` | Living Children | Numeric | Finding | SNOMED CT | `161746007` | Yes | Active | Number of living children |
+| `c0010001-0000-0000-0000-000000000023` | Abortion or Miscarriage | Numeric | Finding | SNOMED CT | `161733001` | Yes | Active | Number of abortions / miscarriages |
+| `c0010001-0000-0000-0000-000000000024` | Ectopic Pregnancy | Numeric | Finding | SNOMED CT | `34801009` | Yes | Active | Number of ectopic pregnancies |
 
 ---
 

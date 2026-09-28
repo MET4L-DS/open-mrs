@@ -60,6 +60,15 @@ const infertilityTypeExtensions = createFormExtensions(
 export const aiimsInfertilityTypeDashboardLink = infertilityTypeExtensions.link;
 export const aiimsInfertilityTypeDashboard = infertilityTypeExtensions.dashboard;
 
+const obstetricHistoryExtensions = createFormExtensions(
+  getFormRegistryEntry('obstetric-history'),
+  () => import('./obstetric-history/obstetric-history-dashboard.component')
+);
+
+export const aiimsObstetricHistoryDashboardLink = obstetricHistoryExtensions.link;
+export const aiimsObstetricHistoryDashboard = obstetricHistoryExtensions.dashboard;
+
 export { FORM_REGISTRY } from './constants';
 export * from './shared';
 export * from './infertility-type';
+export * from './obstetric-history';

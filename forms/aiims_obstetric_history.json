@@ -1,0 +1,118 @@
+{
+  "name": "AIIMS Visit: Obstetric History",
+  "description": "AIIMS Department of Reproductive Medicine & IVF - Obstetric History Sheet",
+  "version": "1.0",
+  "published": true,
+  "retired": false,
+  "encounter": "Consultation",
+  "processor": "EncounterFormProcessor",
+  "referencedForms": [],
+  "pages": [
+    {
+      "label": "Obstetric History",
+      "sections": [
+        {
+          "label": "Obstetric History Details",
+          "isExpanded": true,
+          "questions": [
+            {
+              "label": "G - Gravida",
+              "type": "obs",
+              "id": "gravida",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "number",
+                "concept": "c0010001-0000-0000-0000-000000000020",
+                "min": "0",
+                "max": "30"
+              },
+              "validators": [
+                {
+                  "type": "js_expression",
+                  "failsWhenExpression": "myValue < 0 || myValue > 30",
+                  "message": "Gravida should be between 0 and 30."
+                }
+              ]
+            },
+            {
+              "label": "P - Parity",
+              "type": "obs",
+              "id": "parity",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "number",
+                "concept": "c0010001-0000-0000-0000-000000000021",
+                "min": "0",
+                "max": "30"
+              },
+              "validators": [
+                {
+                  "type": "js_expression",
+                  "failsWhenExpression": "myValue < 0 || myValue > 30",
+                  "message": "Parity should be between 0 and 30."
+                }
+              ]
+            },
+            {
+              "label": "L - Living Children",
+              "type": "obs",
+              "id": "living_children",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "number",
+                "concept": "c0010001-0000-0000-0000-000000000022",
+                "min": "0",
+                "max": "30"
+              },
+              "validators": [
+                {
+                  "type": "js_expression",
+                  "failsWhenExpression": "myValue < 0 || myValue > 30",
+                  "message": "Living children count should be between 0 and 30."
+                }
+              ]
+            },
+            {
+              "label": "A - Abortion / Miscarriage",
+              "type": "obs",
+              "id": "abortion_miscarriage",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "number",
+                "concept": "c0010001-0000-0000-0000-000000000023",
+                "min": "0",
+                "max": "30"
+              },
+              "validators": [
+                {
+                  "type": "js_expression",
+                  "failsWhenExpression": "myValue < 0 || myValue > 30",
+                  "message": "Abortion/miscarriage count should be between 0 and 30."
+                }
+              ]
+            },
+            {
+              "label": "Ectopic Pregnancy",
+              "type": "obs",
+              "id": "ectopic_pregnancy",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "number",
+                "concept": "c0010001-0000-0000-0000-000000000024",
+                "min": "0",
+                "max": "30"
+              },
+              "validators": [
+                {
+                  "type": "js_expression",
+                  "failsWhenExpression": "myValue < 0 || myValue > 30",
+                  "message": "Ectopic pregnancy count should be between 0 and 30."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

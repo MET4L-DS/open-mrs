@@ -1,4 +1,4 @@
-import { Identification, Events } from '@carbon/react/icons';
+import { Identification, Events, ParentChild } from '@carbon/react/icons';
 import { type FormRegistryEntry } from './shared/types';
 
 export const moduleName = '@aiims/esm-demographics-app';
@@ -10,6 +10,10 @@ export const AIIMS_FORM_NAME = 'AIIMS Visit: Personal Information Intake';
 // Form UUID for AIIMS Visit: Type of Infertility
 export const AIIMS_INFERTILITY_FORM_UUID = '80930653-7e80-4bfd-9e29-ec37c334d881';
 export const AIIMS_INFERTILITY_FORM_NAME = 'AIIMS Visit: Type of Infertility';
+
+// Form UUID for AIIMS Visit: Obstetric History
+export const AIIMS_OBSTETRIC_FORM_UUID = '80930653-7e80-4bfd-9e29-ec37c334d882';
+export const AIIMS_OBSTETRIC_FORM_NAME = 'AIIMS Visit: Obstetric History';
 
 // Form Registry: Centralized configuration for all current and future AIIMS forms
 export const FORM_REGISTRY: FormRegistryEntry[] = [
@@ -33,6 +37,17 @@ export const FORM_REGISTRY: FormRegistryEntry[] = [
     title: 'Type of Infertility',
     slot: 'aiims-infertility-type-dashboard-slot',
     icon: Events,
+    order: 1,
+  },
+  {
+    key: 'obstetric-history',
+    uuid: AIIMS_OBSTETRIC_FORM_UUID,
+    name: AIIMS_OBSTETRIC_FORM_NAME,
+    path: 'aiims-obstetric-history',
+    titleKey: 'aiimsObstetricHistoryTitle',
+    title: 'Obstetric History',
+    slot: 'aiims-obstetric-history-dashboard-slot',
+    icon: ParentChild,
     order: 1,
   },
   // Additional forms (anthropometry, clinical history, ultrasound, etc.) will be registered here
@@ -60,6 +75,12 @@ export const CONCEPTS = {
   durationOfInfertility: 'c0010001-0000-0000-0000-000000000019',
   primaryInfertility: 'c0010002-0000-0000-0000-000000000101',
   secondaryInfertility: 'c0010002-0000-0000-0000-000000000102',
+  // Obstetric History concepts
+  gravida: 'c0010001-0000-0000-0000-000000000020',
+  parity: 'c0010001-0000-0000-0000-000000000021',
+  livingChildren: 'c0010001-0000-0000-0000-000000000022',
+  abortionMiscarriage: 'c0010001-0000-0000-0000-000000000023',
+  ectopicPregnancy: 'c0010001-0000-0000-0000-000000000024',
 };
 
 // Person Attribute Type UUID for Patient Telephone Number
