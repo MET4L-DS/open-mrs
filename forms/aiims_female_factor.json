@@ -1,0 +1,303 @@
+{
+  "name": "AIIMS Visit: Female Factor",
+  "description": "AIIMS Department of Reproductive Medicine & IVF - Female Factor Infertility Sheet",
+  "version": "1.0",
+  "published": true,
+  "retired": false,
+  "encounter": "Consultation",
+  "processor": "EncounterFormProcessor",
+  "referencedForms": [],
+  "pages": [
+    {
+      "label": "Female Factor Infertility",
+      "sections": [
+        {
+          "label": "Diagnostic Factors & Classifications",
+          "isExpanded": true,
+          "questions": [
+            {
+              "label": "Female Infertility Factor Categories",
+              "type": "obs",
+              "id": "female_factors",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "checkbox",
+                "concept": "c0010001-0000-0000-0000-000000000030",
+                "answers": [
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000301",
+                    "label": "Tubal factor"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000302",
+                    "label": "Diminished ovarian reserve"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000303",
+                    "label": "Endometriosis"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000304",
+                    "label": "Polycystic ovary syndrome (PCOS)"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000305",
+                    "label": "Uterine Factor"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000306",
+                    "label": "Female infertility due to advanced maternal age"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000307",
+                    "label": "Other female factors"
+                  }
+                ]
+              }
+            },
+            {
+              "label": "Tubal Factor Details",
+              "type": "obs",
+              "id": "tubal_factor_details",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "checkbox",
+                "concept": "c0010001-0000-0000-0000-000000000031",
+                "answers": [
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000311",
+                    "label": "Tubal block unilateral"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000312",
+                    "label": "Tubal block bilateral"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000313",
+                    "label": "Previous ectopic"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000314",
+                    "label": "Hydrosalpinx"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000315",
+                    "label": "Hematosalpinx"
+                  }
+                ]
+              },
+              "hide": {
+                "hideWhenExpression": "!female_factors || !female_factors.includes('c0010002-0000-0000-0000-000000000301')"
+              }
+            },
+            {
+              "label": "Diminished Ovarian Reserve Details",
+              "type": "obs",
+              "id": "dor_details",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "c0010001-0000-0000-0000-000000000032",
+                "answers": [
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000321",
+                    "label": "Borderline Ovarian Reserve"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000322",
+                    "label": "Patient-Oriented Strategies Encompassing IndividualizeD Oocyte Number (POSEIDON)"
+                  }
+                ]
+              },
+              "hide": {
+                "hideWhenExpression": "!female_factors || !female_factors.includes('c0010002-0000-0000-0000-000000000302')"
+              }
+            },
+            {
+              "label": "POSEIDON Group",
+              "type": "obs",
+              "id": "poseidon_group",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "c0010001-0000-0000-0000-000000000033",
+                "answers": [
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000323",
+                    "label": "POSEIDON GROUP 1a"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000324",
+                    "label": "POSEIDON GROUP 1b"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000325",
+                    "label": "POSEIDON GROUP 2a"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000326",
+                    "label": "POSEIDON GROUP 2b"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000327",
+                    "label": "POSEIDON GROUP 3"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000328",
+                    "label": "POSEIDON GROUP 4"
+                  }
+                ]
+              },
+              "hide": {
+                "hideWhenExpression": "!female_factors || !female_factors.includes('c0010002-0000-0000-0000-000000000302') || dor_details !== 'c0010002-0000-0000-0000-000000000322'"
+              }
+            },
+            {
+              "label": "Endometriosis Classification",
+              "type": "obs",
+              "id": "endometriosis_classification",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "checkbox",
+                "concept": "c0010001-0000-0000-0000-000000000034",
+                "answers": [
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000331",
+                    "label": "American Society for Reproductive Medicine-ASRM"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000332",
+                    "label": "Endometriosis Fertility Index-EFI"
+                  }
+                ]
+              },
+              "hide": {
+                "hideWhenExpression": "!female_factors || !female_factors.includes('c0010002-0000-0000-0000-000000000303')"
+              }
+            },
+            {
+              "label": "Polycystic Ovary Syndrome (PCOS) Phenotype",
+              "type": "obs",
+              "id": "pcos_phenotype",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "c0010001-0000-0000-0000-000000000035",
+                "answers": [
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000341",
+                    "label": "Phenotype A (Classic/Severe)"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000342",
+                    "label": "Phenotype B (Classic)"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000343",
+                    "label": "Phenotype C (Ovulatory)"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000344",
+                    "label": "Phenotype D (Mild/Non-hyperandrogenic)"
+                  }
+                ]
+              },
+              "hide": {
+                "hideWhenExpression": "!female_factors || !female_factors.includes('c0010002-0000-0000-0000-000000000304')"
+              }
+            },
+            {
+              "label": "Uterine Factor Details",
+              "type": "obs",
+              "id": "uterine_factor_details",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "checkbox",
+                "concept": "c0010001-0000-0000-0000-000000000036",
+                "answers": [
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000351",
+                    "label": "Adenomyosis"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000352",
+                    "label": "Fibroids"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000353",
+                    "label": "Polyps"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000354",
+                    "label": "Asherman's"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000355",
+                    "label": "Septate Uterus"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000356",
+                    "label": "Unicornuate uterus"
+                  }
+                ]
+              },
+              "hide": {
+                "hideWhenExpression": "!female_factors || !female_factors.includes('c0010002-0000-0000-0000-000000000305')"
+              }
+            },
+            {
+              "label": "Other Female Infertility Factors",
+              "type": "obs",
+              "id": "other_female_factors",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "checkbox",
+                "concept": "c0010001-0000-0000-0000-000000000037",
+                "answers": [
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000361",
+                    "label": "Hypogonadotropic hypogonadism"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000362",
+                    "label": "Oncofertility"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000363",
+                    "label": "H/O Tuberculosis"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000364",
+                    "label": "Turner Mosaic"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000365",
+                    "label": "Unexplained Infertility"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000366",
+                    "label": "Serodiscordant couple"
+                  }
+                ]
+              },
+              "hide": {
+                "hideWhenExpression": "!female_factors || !female_factors.includes('c0010002-0000-0000-0000-000000000307')"
+              }
+            },
+            {
+              "label": "Female Factor Others (Clinical Notes)",
+              "type": "obs",
+              "id": "female_factor_others",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "textarea",
+                "concept": "c0010001-0000-0000-0000-000000000038",
+                "rows": 3
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

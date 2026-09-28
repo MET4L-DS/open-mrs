@@ -30,6 +30,7 @@ print("Connected to:", res.strip())
 sql_statements = []
 
 def add_concept_sql(c_uuid, name, datatype_id, class_id=7, is_numeric=False, units=None, allow_decimal=0, low_abs=None, hi_abs=None):
+    safe_name = name.replace("'", "''")
     # Check if concept already exists by UUID
     sql = f"""
     SET @existing_id = (SELECT concept_id FROM concept WHERE uuid = '{c_uuid}');
@@ -39,7 +40,7 @@ def add_concept_sql(c_uuid, name, datatype_id, class_id=7, is_numeric=False, uni
         SET @new_id = LAST_INSERT_ID();
         
         INSERT INTO concept_name (concept_id, name, locale, locale_preferred, creator, date_created, concept_name_type, voided, uuid)
-        VALUES (@new_id, '{name}', 'en', 1, 1, NOW(), 'FULLY_SPECIFIED', 0, UUID());
+        VALUES (@new_id, '{safe_name}', 'en', 1, 1, NOW(), 'FULLY_SPECIFIED', 0, UUID());
         
         {"INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@new_id, " + (f"'{units}'" if units else "NULL") + f", {allow_decimal}, " + (str(low_abs) if low_abs is not None else "NULL") + f", " + (str(hi_abs) if hi_abs is not None else "NULL") + ");" if is_numeric else ""}
     ELSE
@@ -111,6 +112,54 @@ menstrual_answers = [
     ("c0010002-0000-0000-0000-000000000210", "Amenorrhoea"),
 ]
 
+female_factor_answers = [
+    # Primary categories
+    ("c0010002-0000-0000-0000-000000000301", "Tubal factor"),
+    ("c0010002-0000-0000-0000-000000000302", "Diminished ovarian reserve"),
+    ("c0010002-0000-0000-0000-000000000303", "Endometriosis"),
+    ("c0010002-0000-0000-0000-000000000304", "Polycystic ovary syndrome (PCOS)"),
+    ("c0010002-0000-0000-0000-000000000305", "Uterine Factor"),
+    ("c0010002-0000-0000-0000-000000000306", "Female infertility due to advanced maternal age"),
+    ("c0010002-0000-0000-0000-000000000307", "Other female factors"),
+    # Tubal factor details
+    ("c0010002-0000-0000-0000-000000000311", "Tubal block unilateral"),
+    ("c0010002-0000-0000-0000-000000000312", "Tubal block bilateral"),
+    ("c0010002-0000-0000-0000-000000000313", "Previous ectopic"),
+    ("c0010002-0000-0000-0000-000000000314", "Hydrosalpinx"),
+    ("c0010002-0000-0000-0000-000000000315", "Hematosalpinx"),
+    # Diminished ovarian reserve details
+    ("c0010002-0000-0000-0000-000000000321", "Borderline Ovarian Reserve"),
+    ("c0010002-0000-0000-0000-000000000322", "Patient-Oriented Strategies Encompassing IndividualizeD Oocyte Number (POSEIDON)"),
+    ("c0010002-0000-0000-0000-000000000323", "POSEIDON GROUP 1a"),
+    ("c0010002-0000-0000-0000-000000000324", "POSEIDON GROUP 1b"),
+    ("c0010002-0000-0000-0000-000000000325", "POSEIDON GROUP 2a"),
+    ("c0010002-0000-0000-0000-000000000326", "POSEIDON GROUP 2b"),
+    ("c0010002-0000-0000-0000-000000000327", "POSEIDON GROUP 3"),
+    ("c0010002-0000-0000-0000-000000000328", "POSEIDON GROUP 4"),
+    # Endometriosis classification
+    ("c0010002-0000-0000-0000-000000000331", "American Society for Reproductive Medicine-ASRM"),
+    ("c0010002-0000-0000-0000-000000000332", "Endometriosis Fertility Index-EFI"),
+    # PCOS phenotypes
+    ("c0010002-0000-0000-0000-000000000341", "Phenotype A (Classic/Severe)"),
+    ("c0010002-0000-0000-0000-000000000342", "Phenotype B (Classic)"),
+    ("c0010002-0000-0000-0000-000000000343", "Phenotype C (Ovulatory)"),
+    ("c0010002-0000-0000-0000-000000000344", "Phenotype D (Mild/Non-hyperandrogenic)"),
+    # Uterine factor details
+    ("c0010002-0000-0000-0000-000000000351", "Adenomyosis"),
+    ("c0010002-0000-0000-0000-000000000352", "Fibroids"),
+    ("c0010002-0000-0000-0000-000000000353", "Polyps"),
+    ("c0010002-0000-0000-0000-000000000354", "Asherman's"),
+    ("c0010002-0000-0000-0000-000000000355", "Septate Uterus"),
+    ("c0010002-0000-0000-0000-000000000356", "Unicornuate uterus"),
+    # Other female factors
+    ("c0010002-0000-0000-0000-000000000361", "Hypogonadotropic hypogonadism"),
+    ("c0010002-0000-0000-0000-000000000362", "Oncofertility"),
+    ("c0010002-0000-0000-0000-000000000363", "H/O Tuberculosis"),
+    ("c0010002-0000-0000-0000-000000000364", "Turner Mosaic"),
+    ("c0010002-0000-0000-0000-000000000365", "Unexplained Infertility"),
+    ("c0010002-0000-0000-0000-000000000366", "Serodiscordant couple"),
+]
+
 # We assemble the migration script wrapped in a stored procedure for IF/ELSE control flow
 full_script = [
     "DELIMITER $$",
@@ -133,6 +182,9 @@ for u, name in infertility_answers:
     full_script.append(add_concept_sql(u, name, datatype_id=4, class_id=11))
 
 for u, name in menstrual_answers:
+    full_script.append(add_concept_sql(u, name, datatype_id=4, class_id=11))
+
+for u, name in female_factor_answers:
     full_script.append(add_concept_sql(u, name, datatype_id=4, class_id=11))
 
 # 2. Question concepts
@@ -203,6 +255,26 @@ full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000028", "Irre
 # Type of Amenorrhoea
 full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000029", "Type of Amenorrhoea", datatype_id=2, class_id=7))
 
+# Female Factor Concepts
+# Female Infertility Factor
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000030", "Female Infertility Factor", datatype_id=2, class_id=7))
+# Tubal Factor Details
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000031", "Tubal Factor Details", datatype_id=2, class_id=7))
+# Diminished Ovarian Reserve Details
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000032", "Diminished Ovarian Reserve Details", datatype_id=2, class_id=7))
+# POSEIDON Group
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000033", "POSEIDON Group", datatype_id=2, class_id=7))
+# Endometriosis Classification
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000034", "Endometriosis Classification", datatype_id=2, class_id=7))
+# PCOS Phenotype
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000035", "PCOS Phenotype", datatype_id=2, class_id=7))
+# Uterine Factor Details
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000036", "Uterine Factor Details", datatype_id=2, class_id=7))
+# Other Female Infertility Factors
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000037", "Other Female Infertility Factors", datatype_id=2, class_id=7))
+# Female Factor Others
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000038", "Female Factor Others", datatype_id=3, class_id=7))
+
 # 3. Link Answers
 # Education Wife answers
 for u, _ in education_answers:
@@ -263,6 +335,84 @@ for ans_uuid in [
     "c0010002-0000-0000-0000-000000000208",  # Secondary Amenorrhoea
 ]:
     full_script.append(add_answer_sql("c0010001-0000-0000-0000-000000000029", ans_uuid))
+
+# Female Infertility Factor answers
+for ans_uuid in [
+    "c0010002-0000-0000-0000-000000000301",
+    "c0010002-0000-0000-0000-000000000302",
+    "c0010002-0000-0000-0000-000000000303",
+    "c0010002-0000-0000-0000-000000000304",
+    "c0010002-0000-0000-0000-000000000305",
+    "c0010002-0000-0000-0000-000000000306",
+    "c0010002-0000-0000-0000-000000000307",
+]:
+    full_script.append(add_answer_sql("c0010001-0000-0000-0000-000000000030", ans_uuid))
+
+# Tubal Factor Details answers
+for ans_uuid in [
+    "c0010002-0000-0000-0000-000000000311",
+    "c0010002-0000-0000-0000-000000000312",
+    "c0010002-0000-0000-0000-000000000313",
+    "c0010002-0000-0000-0000-000000000314",
+    "c0010002-0000-0000-0000-000000000315",
+]:
+    full_script.append(add_answer_sql("c0010001-0000-0000-0000-000000000031", ans_uuid))
+
+# Diminished Ovarian Reserve Details answers
+for ans_uuid in [
+    "c0010002-0000-0000-0000-000000000321",
+    "c0010002-0000-0000-0000-000000000322",
+]:
+    full_script.append(add_answer_sql("c0010001-0000-0000-0000-000000000032", ans_uuid))
+
+# POSEIDON Group answers
+for ans_uuid in [
+    "c0010002-0000-0000-0000-000000000323",
+    "c0010002-0000-0000-0000-000000000324",
+    "c0010002-0000-0000-0000-000000000325",
+    "c0010002-0000-0000-0000-000000000326",
+    "c0010002-0000-0000-0000-000000000327",
+    "c0010002-0000-0000-0000-000000000328",
+]:
+    full_script.append(add_answer_sql("c0010001-0000-0000-0000-000000000033", ans_uuid))
+
+# Endometriosis Classification answers
+for ans_uuid in [
+    "c0010002-0000-0000-0000-000000000331",
+    "c0010002-0000-0000-0000-000000000332",
+]:
+    full_script.append(add_answer_sql("c0010001-0000-0000-0000-000000000034", ans_uuid))
+
+# PCOS Phenotype answers
+for ans_uuid in [
+    "c0010002-0000-0000-0000-000000000341",
+    "c0010002-0000-0000-0000-000000000342",
+    "c0010002-0000-0000-0000-000000000343",
+    "c0010002-0000-0000-0000-000000000344",
+]:
+    full_script.append(add_answer_sql("c0010001-0000-0000-0000-000000000035", ans_uuid))
+
+# Uterine Factor Details answers
+for ans_uuid in [
+    "c0010002-0000-0000-0000-000000000351",
+    "c0010002-0000-0000-0000-000000000352",
+    "c0010002-0000-0000-0000-000000000353",
+    "c0010002-0000-0000-0000-000000000354",
+    "c0010002-0000-0000-0000-000000000355",
+    "c0010002-0000-0000-0000-000000000356",
+]:
+    full_script.append(add_answer_sql("c0010001-0000-0000-0000-000000000036", ans_uuid))
+
+# Other Female Infertility Factors answers
+for ans_uuid in [
+    "c0010002-0000-0000-0000-000000000361",
+    "c0010002-0000-0000-0000-000000000362",
+    "c0010002-0000-0000-0000-000000000363",
+    "c0010002-0000-0000-0000-000000000364",
+    "c0010002-0000-0000-0000-000000000365",
+    "c0010002-0000-0000-0000-000000000366",
+]:
+    full_script.append(add_answer_sql("c0010001-0000-0000-0000-000000000037", ans_uuid))
 
 full_script.append("END$$")
 full_script.append("DELIMITER ;")

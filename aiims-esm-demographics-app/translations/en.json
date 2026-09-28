@@ -68,5 +68,22 @@
   "recordMenstrualHistory": "Record Menstrual History",
   "updateMenstrualHistory": "Update Menstrual History",
   "loadingMenstrualHistory": "Loading Menstrual History...",
-  "noRecordedMenstrualHistoryEncounter": "No AIIMS Menstrual History encounter recorded yet"
+  "noRecordedMenstrualHistoryEncounter": "No AIIMS Menstrual History encounter recorded yet",
+  "aiimsFemaleFactorTitle": "Female Factor",
+  "femaleFactorDetails": "Female Factor Infertility Details",
+  "femaleInfertilityFactor": "Female Infertility Factors",
+  "tubalFactorDetails": "Tubal Factor Findings",
+  "dorDetails": "Diminished Ovarian Reserve",
+  "poseidonGroup": "POSEIDON Group",
+  "endometriosisClassification": "Endometriosis Classification",
+  "pcosPhenotype": "PCOS Phenotype",
+  "uterineFactorDetails": "Uterine Factor Findings",
+  "otherFemaleFactors": "Other Factors",
+  "femaleFactorOthers": "Clinical Notes",
+  "noFemaleFactorHeader": "No Female Factor Recorded Yet",
+  "noFemaleFactorBody": "Diagnostic categories, tubal findings, ovarian reserve, PCOS phenotypes, and uterine factor details have not been submitted for this patient yet.",
+  "recordFemaleFactor": "Record Female Factor",
+  "updateFemaleFactor": "Update Female Factor",
+  "loadingFemaleFactor": "Loading Female Factor details...",
+  "noRecordedFemaleFactorEncounter": "No AIIMS Female Factor encounter recorded yet"
 }

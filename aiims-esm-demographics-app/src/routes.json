@@ -80,6 +80,26 @@
       "slot": "aiims-menstrual-history-dashboard-slot",
       "online": true,
       "offline": true
+    },
+    {
+      "name": "aiims-female-factor-dashboard-link",
+      "component": "aiimsFemaleFactorDashboardLink",
+      "slot": "patient-chart-dashboard-slot",
+      "order": 1,
+      "meta": {
+        "slot": "aiims-female-factor-dashboard-slot",
+        "path": "aiims-female-factor",
+        "title": "Female Factor"
+      },
+      "online": true,
+      "offline": true
+    },
+    {
+      "name": "aiims-female-factor-dashboard",
+      "component": "aiimsFemaleFactorDashboard",
+      "slot": "aiims-female-factor-dashboard-slot",
+      "online": true,
+      "offline": true
     }
   ]
 }

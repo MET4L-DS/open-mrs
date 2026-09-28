@@ -1,4 +1,4 @@
-import { Identification, Events, ParentChild, Calendar } from '@carbon/react/icons';
+import { Identification, Events, ParentChild, Calendar, Activity } from '@carbon/react/icons';
 import { type FormRegistryEntry } from './shared/types';
 
 export const moduleName = '@aiims/esm-demographics-app';
@@ -18,6 +18,10 @@ export const AIIMS_OBSTETRIC_FORM_NAME = 'AIIMS Visit: Obstetric History';
 // Form UUID for AIIMS Visit: Menstrual History
 export const AIIMS_MENSTRUAL_FORM_UUID = '80930653-7e80-4bfd-9e29-ec37c334d883';
 export const AIIMS_MENSTRUAL_FORM_NAME = 'AIIMS Visit: Menstrual History';
+
+// Form UUID for AIIMS Visit: Female Factor
+export const AIIMS_FEMALE_FACTOR_FORM_UUID = '80930653-7e80-4bfd-9e29-ec37c334d884';
+export const AIIMS_FEMALE_FACTOR_FORM_NAME = 'AIIMS Visit: Female Factor';
 
 // Form Registry: Centralized configuration for all current and future AIIMS forms
 export const FORM_REGISTRY: FormRegistryEntry[] = [
@@ -63,6 +67,17 @@ export const FORM_REGISTRY: FormRegistryEntry[] = [
     title: 'Menstrual History',
     slot: 'aiims-menstrual-history-dashboard-slot',
     icon: Calendar,
+    order: 1,
+  },
+  {
+    key: 'female-factor',
+    uuid: AIIMS_FEMALE_FACTOR_FORM_UUID,
+    name: AIIMS_FEMALE_FACTOR_FORM_NAME,
+    path: 'aiims-female-factor',
+    titleKey: 'aiimsFemaleFactorTitle',
+    title: 'Female Factor',
+    slot: 'aiims-female-factor-dashboard-slot',
+    icon: Activity,
     order: 1,
   },
   // Additional forms (anthropometry, clinical history, ultrasound, etc.) will be registered here
@@ -112,6 +127,16 @@ export const CONCEPTS = {
   amenorrhoea: 'c0010002-0000-0000-0000-000000000210',
   irregularCycleType: 'c0010001-0000-0000-0000-000000000028',
   amenorrhoeaType: 'c0010001-0000-0000-0000-000000000029',
+  // Female Factor concepts
+  femaleInfertilityFactor: 'c0010001-0000-0000-0000-000000000030',
+  tubalFactorDetails: 'c0010001-0000-0000-0000-000000000031',
+  dorDetails: 'c0010001-0000-0000-0000-000000000032',
+  poseidonGroup: 'c0010001-0000-0000-0000-000000000033',
+  endometriosisClassification: 'c0010001-0000-0000-0000-000000000034',
+  pcosPhenotype: 'c0010001-0000-0000-0000-000000000035',
+  uterineFactorDetails: 'c0010001-0000-0000-0000-000000000036',
+  otherFemaleFactors: 'c0010001-0000-0000-0000-000000000037',
+  femaleFactorOthers: 'c0010001-0000-0000-0000-000000000038',
 };
 
 // Person Attribute Type UUID for Patient Telephone Number

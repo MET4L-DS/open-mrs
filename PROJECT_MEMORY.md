@@ -161,6 +161,18 @@ python scripts/publish_aiims_form.py
    - Flow of Menstrual cycle: Normal, Hypomenorrhoea, Amenorrhoea, Heavy Menstrual Bleeding (HMB).
      - Nested skip logic: selecting "Amenorrhoea" conditionally displays "Type of Amenorrhoea" (Primary, Secondary).
    - Card UI dynamically presents nested sub-types when recorded.
+5. **Form 5: AIIMS Visit: Female Factor** (`80930653-7e80-4bfd-9e29-ec37c334d884`)
+   - Path: `aiims-female-factor`
+   - Diagnostic categories: Multi-select checkboxes for Tubal factor, Diminished ovarian reserve, Endometriosis, PCOS, Uterine factor, Advanced maternal age, Others.
+   - Multi-level nested skip logic:
+     - Tubal factor -> Tubal block (unilateral/bilateral), Previous ectopic, Hydrosalpinx, Hematosalpinx.
+     - Diminished ovarian reserve -> Borderline vs. POSEIDON criteria -> POSEIDON Groups (1a, 1b, 2a, 2b, 3, 4).
+     - Endometriosis -> ASRM, EFI.
+     - PCOS -> Rotterdam Phenotypes (A, B, C, D).
+     - Uterine factor -> Adenomyosis, Fibroids, Polyps, Asherman's, Septate, Unicornuate.
+     - Others -> Hypogonadotropic hypogonadism, Oncofertility, H/O Tuberculosis, Turner Mosaic, Unexplained, Serodiscordant.
+     - Clinical notes textarea for custom remarks.
+   - Observation card with Carbon tags and detail rows.
 
 ---
 
@@ -169,10 +181,11 @@ python scripts/publish_aiims_form.py
 - [x] Register Form 1: Personal Information Intake (`demographics`).
 - [x] Register Form 2: Type of Infertility Intake (`infertility-type`).
 - [x] Register Form 3: Obstetric History (`obstetric-history`).
-- [ ] Register Form 4: Anthropometry & Vitals.
-- [ ] Register Form 5: Physical Examination.
-- [ ] Register Form 6: Ultrasound & Imaging.
-- [ ] Register Form 7: Laboratory & Investigations.
-- [ ] Register Form 8: Diagnosis & Treatment Plan.
-- [ ] Register Form 9: Follow-up & Discharge Summary.
+- [x] Register Form 4: Menstrual History (`menstrual-history`).
+- [x] Register Form 5: Female Factor Infertility (`female-factor`).
+- [ ] Register Form 6: Male Factor Infertility.
+- [ ] Register Form 7: Anthropometry & Clinical Examination.
+- [ ] Register Form 8: Ultrasound & Imaging.
+- [ ] Register Form 9: Diagnosis & Treatment Plan.
+
 

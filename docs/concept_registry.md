@@ -48,6 +48,15 @@ To maintain agility and avoid blocking clinical deployment pending terminology l
 | `c0010001-0000-0000-0000-000000000027` | Flow of Menstrual cycle | Coded | Finding | SNOMED CT | `289564002` | Yes | Active | Concept answers: `c0010002-...205-210` |
 | `c0010001-0000-0000-0000-000000000028` | Irregular cycle type | Coded | Finding | SNOMED CT | `80182007` | Yes | Active | Concept answers: `c0010002-...203, 204` |
 | `c0010001-0000-0000-0000-000000000029` | Type of Amenorrhoea | Coded | Finding | SNOMED CT | `8943002` | Yes | Active | Concept answers: `c0010002-...207, 208` |
+| `c0010001-0000-0000-0000-000000000030` | Female Infertility Factor | Coded | Finding | SNOMED CT | `6738008` | Yes | Active | Concept answers: `c0010002-...301-307` |
+| `c0010001-0000-0000-0000-000000000031` | Tubal Factor Details | Coded | Finding | SNOMED CT | `237072004` | Yes | Active | Concept answers: `c0010002-...311-315` |
+| `c0010001-0000-0000-0000-000000000032` | Diminished Ovarian Reserve Details | Coded | Finding | SNOMED CT | `723722002` | Yes | Active | Concept answers: `c0010002-...321, 322` |
+| `c0010001-0000-0000-0000-000000000033` | POSEIDON Group | Coded | Finding | Local / POSEIDON | — | Yes | Active | Concept answers: `c0010002-...323-328` |
+| `c0010001-0000-0000-0000-000000000034` | Endometriosis Classification | Coded | Finding | SNOMED CT | `129103003` | Yes | Active | Concept answers: `c0010002-...331, 332` |
+| `c0010001-0000-0000-0000-000000000035` | PCOS Phenotype | Coded | Finding | SNOMED CT | `237055002` | Yes | Active | Concept answers: `c0010002-...341-344` |
+| `c0010001-0000-0000-0000-000000000036` | Uterine Factor Details | Coded | Finding | SNOMED CT | `289539003` | Yes | Active | Concept answers: `c0010002-...351-356` |
+| `c0010001-0000-0000-0000-000000000037` | Other Female Infertility Factors | Coded | Finding | SNOMED CT | `6738008` | Yes | Active | Concept answers: `c0010002-...361-366` |
+| `c0010001-0000-0000-0000-000000000038` | Female Factor Others | Text | Misc | Local / Institutional | — | — | Active | Free-text clinical notes |
 
 
 ---
@@ -106,6 +115,51 @@ To maintain agility and avoid blocking clinical deployment pending terminology l
 | `c0010002-0000-0000-0000-000000000208` | Secondary Amenorrhoea | SNOMED CT | `156036002` | Yes | Active |
 | `c0010002-0000-0000-0000-000000000209` | Heavy Menstrual Bleeding (HMB) | SNOMED CT | `16464003` | Yes | Active |
 | `c0010002-0000-0000-0000-000000000210` | Amenorrhoea | SNOMED CT | `8943002` | Yes | Active |
+
+---
+
+### 2.6 Female Factor Infertility Answer Options (`c0010002-...`)
+
+| Placeholder UUID | Display Name | Target Standard | Target Code | ATHENA Verified | Status |
+|:---|:---|:---|:---:|:---:|:---:|
+| `c0010002-0000-0000-0000-000000000301` | Tubal factor | SNOMED CT | `237072004` | Yes | Active |
+| `c0010002-0000-0000-0000-000000000302` | Diminished ovarian reserve | SNOMED CT | `723722002` | Yes | Active |
+| `c0010002-0000-0000-0000-000000000303` | Endometriosis | SNOMED CT | `129103003` | Yes | Active |
+| `c0010002-0000-0000-0000-000000000304` | Polycystic ovary syndrome (PCOS) | SNOMED CT | `237055002` | Yes | Active |
+| `c0010002-0000-0000-0000-000000000305` | Uterine Factor | SNOMED CT | `289539003` | Yes | Active |
+| `c0010002-0000-0000-0000-000000000306` | Female infertility due to advanced maternal age | SNOMED CT | `281694009` | Yes | Active |
+| `c0010002-0000-0000-0000-000000000307` | Other female factors | SNOMED CT | `6738008` | Yes | Active |
+| `c0010002-0000-0000-0000-000000000311` | Tubal block unilateral | SNOMED CT | `237073009` | Yes | Active |
+| `c0010002-0000-0000-0000-000000000312` | Tubal block bilateral | SNOMED CT | `237074003` | Yes | Active |
+| `c0010002-0000-0000-0000-000000000313` | Previous ectopic | SNOMED CT | `161747003` | Yes | Active |
+| `c0010002-0000-0000-0000-000000000314` | Hydrosalpinx | SNOMED CT | `398031006` | Yes | Active |
+| `c0010002-0000-0000-0000-000000000315` | Hematosalpinx | SNOMED CT | `66085002` | Yes | Active |
+| `c0010002-0000-0000-0000-000000000321` | Borderline Ovarian Reserve | Local / Clinical | — | — | Active |
+| `c0010002-0000-0000-0000-000000000322` | Patient-Oriented Strategies Encompassing IndividualizeD Oocyte Number (POSEIDON) | Local / POSEIDON | — | — | Active |
+| `c0010002-0000-0000-0000-000000000323` | POSEIDON GROUP 1a | Local / POSEIDON | — | — | Active |
+| `c0010002-0000-0000-0000-000000000324` | POSEIDON GROUP 1b | Local / POSEIDON | — | — | Active |
+| `c0010002-0000-0000-0000-000000000325` | POSEIDON GROUP 2a | Local / POSEIDON | — | — | Active |
+| `c0010002-0000-0000-0000-000000000326` | POSEIDON GROUP 2b | Local / POSEIDON | — | — | Active |
+| `c0010002-0000-0000-0000-000000000327` | POSEIDON GROUP 3 | Local / POSEIDON | — | — | Active |
+| `c0010002-0000-0000-0000-000000000328` | POSEIDON GROUP 4 | Local / POSEIDON | — | — | Active |
+| `c0010002-0000-0000-0000-000000000331` | American Society for Reproductive Medicine-ASRM | Local / ASRM | — | — | Active |
+| `c0010002-0000-0000-0000-000000000332` | Endometriosis Fertility Index-EFI | Local / EFI | — | — | Active |
+| `c0010002-0000-0000-0000-000000000341` | Phenotype A (Classic/Severe) | Rotterdam Criteria | — | — | Active |
+| `c0010002-0000-0000-0000-000000000342` | Phenotype B (Classic) | Rotterdam Criteria | — | — | Active |
+| `c0010002-0000-0000-0000-000000000343` | Phenotype C (Ovulatory) | Rotterdam Criteria | — | — | Active |
+| `c0010002-0000-0000-0000-000000000344` | Phenotype D (Mild/Non-hyperandrogenic) | Rotterdam Criteria | — | — | Active |
+| `c0010002-0000-0000-0000-000000000351` | Adenomyosis | SNOMED CT | `254840008` | Yes | Active |
+| `c0010002-0000-0000-0000-000000000352` | Fibroids | SNOMED CT | `95317003` | Yes | Active |
+| `c0010002-0000-0000-0000-000000000353` | Polyps | SNOMED CT | `70160000` | Yes | Active |
+| `c0010002-0000-0000-0000-000000000354` | Asherman's | SNOMED CT | `81703009` | Yes | Active |
+| `c0010002-0000-0000-0000-000000000355` | Septate Uterus | SNOMED CT | `205423000` | Yes | Active |
+| `c0010002-0000-0000-0000-000000000356` | Unicornuate uterus | SNOMED CT | `205422005` | Yes | Active |
+| `c0010002-0000-0000-0000-000000000361` | Hypogonadotropic hypogonadism | SNOMED CT | `237667008` | Yes | Active |
+| `c0010002-0000-0000-0000-000000000362` | Oncofertility | SNOMED CT | `714777002` | Yes | Active |
+| `c0010002-0000-0000-0000-000000000363` | H/O Tuberculosis | SNOMED CT | `161424004` | Yes | Active |
+| `c0010002-0000-0000-0000-000000000364` | Turner Mosaic | SNOMED CT | `205562002` | Yes | Active |
+| `c0010002-0000-0000-0000-000000000365` | Unexplained Infertility | SNOMED CT | `237064003` | Yes | Active |
+| `c0010002-0000-0000-0000-000000000366` | Serodiscordant couple | SNOMED CT | `426978007` | Yes | Active |
 
 
 ---
