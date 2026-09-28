@@ -143,14 +143,25 @@ python scripts/publish_aiims_form.py
    - If any files in `openmrs-data` were created/modified by root (e.g. via ad-hoc docker commands), the startup script fails with `cp: cannot create regular file ... Permission denied`, putting the backend into an immediate crash/restart loop and causing Nginx to return `502 Bad Gateway`.
    - Fix with: `docker run --rm -v openmrs-distro-referenceapplication_openmrs-data:/data alpine chown -R 1001:root /data && chmod -R u+rwX /data`.
 
+### Forms Implemented
+1. **Form 1: AIIMS Visit: Personal Information Intake** (`80930653-7e80-4bfd-9e29-ec37c334d880`)
+   - Path: `aiims-demographics`
+   - Clinical context, patient profile, husband profile, socioeconomic status (Kuppuswamy).
+2. **Form 2: AIIMS Visit: Type of Infertility** (`80930653-7e80-4bfd-9e29-ec37c334d881`)
+   - Path: `aiims-infertility-type`
+   - Infertility classification (Primary / Secondary), duration of marriage, and duration of infertility.
+
 ---
 
 ## 7. Next Steps & Extension Roadmap
 
-- [ ] Register Form 2: Anthropometry & Vitals in `FORM_REGISTRY`.
-- [ ] Register Form 3: Clinical & Obstetric History.
-- [ ] Register Form 4: Physical Examination.
-- [ ] Register Form 5: Ultrasound & Imaging.
-- [ ] Register Form 6: Laboratory & Investigations.
-- [ ] Register Form 7: Diagnosis & Treatment Plan.
-- [ ] Register Form 8: Follow-up & Discharge Summary.
+- [x] Register Form 1: Personal Information Intake (`demographics`).
+- [x] Register Form 2: Type of Infertility Intake (`infertility-type`).
+- [ ] Register Form 3: Anthropometry & Vitals.
+- [ ] Register Form 4: Clinical & Obstetric History.
+- [ ] Register Form 5: Physical Examination.
+- [ ] Register Form 6: Ultrasound & Imaging.
+- [ ] Register Form 7: Laboratory & Investigations.
+- [ ] Register Form 8: Diagnosis & Treatment Plan.
+- [ ] Register Form 9: Follow-up & Discharge Summary.
+

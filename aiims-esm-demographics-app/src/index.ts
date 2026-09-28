@@ -52,5 +52,14 @@ const demographicsExtensions = createFormExtensions(
 export const aiimsDemographicsDashboardLink = demographicsExtensions.link;
 export const aiimsDemographicsDashboard = demographicsExtensions.dashboard;
 
+const infertilityTypeExtensions = createFormExtensions(
+  getFormRegistryEntry('infertility-type'),
+  () => import('./infertility-type/infertility-type-dashboard.component')
+);
+
+export const aiimsInfertilityTypeDashboardLink = infertilityTypeExtensions.link;
+export const aiimsInfertilityTypeDashboard = infertilityTypeExtensions.dashboard;
+
 export { FORM_REGISTRY } from './constants';
 export * from './shared';
+export * from './infertility-type';

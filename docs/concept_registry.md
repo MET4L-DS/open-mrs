@@ -35,6 +35,9 @@ To maintain agility and avoid blocking clinical deployment pending terminology l
 | `c0010001-0000-0000-0000-000000000014` | Occupation Wife | Coded | Finding | SNOMED CT | `105429006` | Yes | Active | Concept answers: `c0010002-...` |
 | `c0010001-0000-0000-0000-000000000015` | Occupation Husband | Coded | Finding | SNOMED CT | `105429006` | Yes | Active | Concept answers: `c0010002-...` |
 | `c0010001-0000-0000-0000-000000000016` | Socioeconomic Status | Coded | Finding | SNOMED CT | `73831000` | Yes | Active | Concept answers: `c0010003-...` |
+| `c0010001-0000-0000-0000-000000000017` | Type of infertility | Coded | Finding | SNOMED CT | `275275009` | Yes | Active | Concept answers: `c0010002-...101`, `102` |
+| `c0010001-0000-0000-0000-000000000018` | Married for years | Numeric | Observable entity | SNOMED CT | `224134009` | Yes | Active | Marriage duration in years |
+| `c0010001-0000-0000-0000-000000000019` | Duration of infertility | Numeric | Observable entity | SNOMED CT | `6738008` | Yes | Active | Infertility duration in years |
 
 ---
 
@@ -56,7 +59,16 @@ To maintain agility and avoid blocking clinical deployment pending terminology l
 
 ---
 
-### 2.3 Socioeconomic Assessment Answer Options (`c0010003-...`)
+### 2.3 Infertility Answer Options (`c0010002-...`)
+
+| Placeholder UUID | Display Name | Target Standard | Target Code | ATHENA Verified | Status |
+|:---|:---|:---|:---:|:---:|:---:|
+| `c0010002-0000-0000-0000-000000000101` | Primary infertility | SNOMED CT | `15603001` | Yes | Active |
+| `c0010002-0000-0000-0000-000000000102` | Secondary infertility | SNOMED CT | `275276005` | Yes | Active |
+
+---
+
+### 2.4 Socioeconomic Assessment Answer Options (`c0010003-...`)
 *Modified Kuppuswamy Socioeconomic Scale classifications.*
 
 | Placeholder UUID | Display Name | Target Standard | Target Code | ATHENA Verified | Status |

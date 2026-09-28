@@ -93,6 +93,11 @@ ses_answers = [
     ("c0010003-0000-0000-0000-000000000005", "Lower (V)"),
 ]
 
+infertility_answers = [
+    ("c0010002-0000-0000-0000-000000000101", "Primary infertility"),
+    ("c0010002-0000-0000-0000-000000000102", "Secondary infertility"),
+]
+
 # We assemble the migration script wrapped in a stored procedure for IF/ELSE control flow
 full_script = [
     "DELIMITER $$",
@@ -109,6 +114,9 @@ for u, name in occupation_answers:
     full_script.append(add_concept_sql(u, name, datatype_id=4, class_id=11))
 
 for u, name in ses_answers:
+    full_script.append(add_concept_sql(u, name, datatype_id=4, class_id=11))
+
+for u, name in infertility_answers:
     full_script.append(add_concept_sql(u, name, datatype_id=4, class_id=11))
 
 # 2. Question concepts
@@ -148,6 +156,13 @@ full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000015", "Occu
 # Socioeconomic Status
 full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000016", "Socioeconomic Status", datatype_id=2, class_id=7))
 
+# Type of Infertility
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000017", "Type of infertility", datatype_id=2, class_id=7))
+# Married for years
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000018", "Married for years", datatype_id=1, class_id=7, is_numeric=True, units="years", allow_decimal=0, low_abs=0, hi_abs=80))
+# Duration of infertility
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000019", "Duration of infertility", datatype_id=1, class_id=7, is_numeric=True, units="years", allow_decimal=0, low_abs=0, hi_abs=80))
+
 # 3. Link Answers
 # Education Wife answers
 for u, _ in education_answers:
@@ -168,6 +183,10 @@ for u, _ in occupation_answers:
 # Socioeconomic status answers
 for u, _ in ses_answers:
     full_script.append(add_answer_sql("c0010001-0000-0000-0000-000000000016", u))
+
+# Type of infertility answers
+for u, _ in infertility_answers:
+    full_script.append(add_answer_sql("c0010001-0000-0000-0000-000000000017", u))
 
 full_script.append("END$$")
 full_script.append("DELIMITER ;")

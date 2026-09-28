@@ -31,5 +31,16 @@
   "unitFormat": "Unit {{unit}}",
   "years": "years",
   "kgPerMSq": "kg/m²",
-  "valueWithUnit": "{{value}} {{unit}}"
+  "valueWithUnit": "{{value}} {{unit}}",
+  "aiimsInfertilityTypeTitle": "Type of Infertility",
+  "infertilityClassification": "Infertility Classification & Timeline",
+  "typeOfInfertility": "Type of Infertility",
+  "marriedForYears": "Married for",
+  "durationOfInfertility": "Duration of Infertility",
+  "noInfertilityHeader": "No Infertility Details Recorded Yet",
+  "noInfertilityBody": "Infertility classification, marriage duration, and duration of infertility have not been submitted for this patient yet.",
+  "recordInfertility": "Record Infertility Details",
+  "updateInfertility": "Update Infertility Details",
+  "loadingInfertility": "Loading Type of Infertility...",
+  "noRecordedInfertilityEncounter": "No AIIMS Type of Infertility encounter recorded yet"
 }

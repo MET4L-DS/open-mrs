@@ -1,4 +1,4 @@
-import { Identification } from '@carbon/react/icons';
+import { Identification, Events } from '@carbon/react/icons';
 import { type FormRegistryEntry } from './shared/types';
 
 export const moduleName = '@aiims/esm-demographics-app';
@@ -6,6 +6,10 @@ export const moduleName = '@aiims/esm-demographics-app';
 // Form UUID for AIIMS Visit: Personal Information Intake
 export const AIIMS_FORM_UUID = '80930653-7e80-4bfd-9e29-ec37c334d880';
 export const AIIMS_FORM_NAME = 'AIIMS Visit: Personal Information Intake';
+
+// Form UUID for AIIMS Visit: Type of Infertility
+export const AIIMS_INFERTILITY_FORM_UUID = '80930653-7e80-4bfd-9e29-ec37c334d881';
+export const AIIMS_INFERTILITY_FORM_NAME = 'AIIMS Visit: Type of Infertility';
 
 // Form Registry: Centralized configuration for all current and future AIIMS forms
 export const FORM_REGISTRY: FormRegistryEntry[] = [
@@ -18,6 +22,17 @@ export const FORM_REGISTRY: FormRegistryEntry[] = [
     title: 'AIIMS Demographics',
     slot: 'aiims-demographics-dashboard-slot',
     icon: Identification,
+    order: 1,
+  },
+  {
+    key: 'infertility-type',
+    uuid: AIIMS_INFERTILITY_FORM_UUID,
+    name: AIIMS_INFERTILITY_FORM_NAME,
+    path: 'aiims-infertility-type',
+    titleKey: 'aiimsInfertilityTypeTitle',
+    title: 'Type of Infertility',
+    slot: 'aiims-infertility-type-dashboard-slot',
+    icon: Events,
     order: 1,
   },
   // Additional forms (anthropometry, clinical history, ultrasound, etc.) will be registered here
@@ -39,6 +54,12 @@ export const CONCEPTS = {
   educationHusband: 'c0010001-0000-0000-0000-000000000013',
   educationLevel: '1712AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA',
   educationWife: '1712AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA',
+  // Infertility concepts
+  typeOfInfertility: 'c0010001-0000-0000-0000-000000000017',
+  marriedForYears: 'c0010001-0000-0000-0000-000000000018',
+  durationOfInfertility: 'c0010001-0000-0000-0000-000000000019',
+  primaryInfertility: 'c0010002-0000-0000-0000-000000000101',
+  secondaryInfertility: 'c0010002-0000-0000-0000-000000000102',
 };
 
 // Person Attribute Type UUID for Patient Telephone Number

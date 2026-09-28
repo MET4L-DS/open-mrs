@@ -20,6 +20,26 @@
       "slot": "aiims-demographics-dashboard-slot",
       "online": true,
       "offline": true
+    },
+    {
+      "name": "aiims-infertility-type-dashboard-link",
+      "component": "aiimsInfertilityTypeDashboardLink",
+      "slot": "patient-chart-dashboard-slot",
+      "order": 1,
+      "meta": {
+        "slot": "aiims-infertility-type-dashboard-slot",
+        "path": "aiims-infertility-type",
+        "title": "Type of Infertility"
+      },
+      "online": true,
+      "offline": true
+    },
+    {
+      "name": "aiims-infertility-type-dashboard",
+      "component": "aiimsInfertilityTypeDashboard",
+      "slot": "aiims-infertility-type-dashboard-slot",
+      "online": true,
+      "offline": true
     }
   ]
 }

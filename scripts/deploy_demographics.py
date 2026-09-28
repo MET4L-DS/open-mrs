@@ -1,9 +1,11 @@
 """
 Deploy AIIMS Demographics ESM microfrontend to running OpenMRS Docker container.
+Automatically increments version to bypass browser HTTP cache (nginx expires 1y).
 """
 
 import json
 import os
+import re
 import subprocess
 import sys
 
@@ -12,8 +14,6 @@ MODULE_DIST = os.path.abspath(
     os.path.join(os.path.dirname(__file__), "..", "aiims-esm-demographics-app", "dist")
 )
 MODULE_NAME = "@aiims/esm-demographics-app"
-TARGET_SUBDIR = "openmrs-esm-aiims-demographics-app-1.0.7"
-TARGET_DIR = f"/usr/share/nginx/html/{TARGET_SUBDIR}"
 MAIN_JS = "openmrs-esm-aiims-esm-demographics-app.js"
 
 
@@ -33,16 +33,29 @@ def main():
         print("Run 'npm run build' inside aiims-esm-demographics-app first.")
         sys.exit(1)
 
-    print(f"1. Creating target directory in container: {TARGET_DIR} ...")
-    run_docker(["exec", CONTAINER_NAME, "mkdir", "-p", TARGET_DIR])
-
-    print("2. Copying dist files to container ...")
-    run_docker(["cp", f"{MODULE_DIST}/.", f"{CONTAINER_NAME}:{TARGET_DIR}/"])
-
-    print("3. Updating importmap.json ...")
+    print("1. Reading importmap.json to determine version...")
     res = run_docker(["exec", CONTAINER_NAME, "cat", "/usr/share/nginx/html/importmap.json"])
     importmap = json.loads(res.stdout)
-    importmap["imports"][MODULE_NAME] = f"./{TARGET_SUBDIR}/{MAIN_JS}"
+    current_entry = importmap.get("imports", {}).get(MODULE_NAME, "")
+
+    # Extract current patch version and increment to force browser cache invalidation
+    match = re.search(r"openmrs-esm-aiims-demographics-app-1\.0\.(\d+)", current_entry)
+    if match:
+        next_patch = int(match.group(1)) + 1
+    else:
+        next_patch = 8
+
+    target_subdir = f"openmrs-esm-aiims-demographics-app-1.0.{next_patch}"
+    target_dir = f"/usr/share/nginx/html/{target_subdir}"
+
+    print(f"2. Creating target directory in container: {target_dir} ...")
+    run_docker(["exec", CONTAINER_NAME, "mkdir", "-p", target_dir])
+
+    print("3. Copying dist files to container ...")
+    run_docker(["cp", f"{MODULE_DIST}/.", f"{CONTAINER_NAME}:{target_dir}/"])
+
+    print(f"4. Updating importmap.json with {target_subdir} ...")
+    importmap["imports"][MODULE_NAME] = f"./{target_subdir}/{MAIN_JS}"
     importmap_json = json.dumps(importmap, indent=2)
 
     # Write patched importmap.json back to container
@@ -53,7 +66,7 @@ def main():
     if os.path.exists(temp_importmap):
         os.remove(temp_importmap)
 
-    print("4. Updating routes.registry.json ...")
+    print("5. Updating routes.registry.json ...")
     routes_file = os.path.join(MODULE_DIST, "routes.json")
     with open(routes_file, "r", encoding="utf-8") as f:
         module_routes = json.load(f)
@@ -70,11 +83,14 @@ def main():
     if os.path.exists(temp_registry):
         os.remove(temp_registry)
 
+    print("6. Reloading Nginx in frontend container...")
+    run_docker(["exec", CONTAINER_NAME, "nginx", "-s", "reload"], check=False)
+
     print("\n[SUCCESS] Deployment successful!")
     print(f"   Module: {MODULE_NAME}")
-    print(f"   Bundle: {TARGET_DIR}/{MAIN_JS}")
+    print(f"   Bundle: {target_dir}/{MAIN_JS}")
     print("   Updated: importmap.json and routes.registry.json")
-    print("   Refresh browser to see 'AIIMS Demographics' in the patient chart sidebar.\n")
+    print(f"   Cache-Busting Version: 1.0.{next_patch}\n")
 
 
 if __name__ == "__main__":
