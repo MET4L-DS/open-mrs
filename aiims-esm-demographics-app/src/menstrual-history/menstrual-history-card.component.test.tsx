@@ -45,4 +45,28 @@ describe('MenstrualHistoryCard', () => {
     const dashes = screen.getAllByText('—');
     expect(dashes.length).toBe(3);
   });
+
+  it('renders nested sub-type fields when present', () => {
+    render(
+      <MenstrualHistoryCard
+        data={{
+          hasData: true,
+          patternOfMenstrualCycle: 'Irregular periods',
+          irregularCycleType: 'Oligomenorrhea',
+          lastMenstrualPeriod: '2026-05-15T00:00:00.000Z',
+          flowOfMenstrualCycle: 'Amenorrhoea',
+          amenorrhoeaType: 'Secondary',
+        }}
+      />
+    );
+
+    expect(screen.getByText('Pattern of Menstrual Cycle')).toBeInTheDocument();
+    expect(screen.getByText('Irregular periods')).toBeInTheDocument();
+    expect(screen.getByText('Type of Irregular Periods')).toBeInTheDocument();
+    expect(screen.getByText('Oligomenorrhea')).toBeInTheDocument();
+    expect(screen.getByText('Flow of Menstrual Cycle')).toBeInTheDocument();
+    expect(screen.getByText('Amenorrhoea')).toBeInTheDocument();
+    expect(screen.getByText('Type of Amenorrhoea')).toBeInTheDocument();
+    expect(screen.getByText('Secondary')).toBeInTheDocument();
+  });
 });

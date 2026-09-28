@@ -45,7 +45,9 @@ To maintain agility and avoid blocking clinical deployment pending terminology l
 | `c0010001-0000-0000-0000-000000000024` | Ectopic Pregnancy | Numeric | Finding | SNOMED CT | `34801009` | Yes | Active | Number of ectopic pregnancies |
 | `c0010001-0000-0000-0000-000000000025` | Pattern of Menstrual cycle | Coded | Finding | SNOMED CT | `302757007` | Yes | Active | Concept answers: `c0010002-...201-204, 207-208` |
 | `c0010001-0000-0000-0000-000000000026` | Last menstrual period | Date | Observable entity | SNOMED CT | `21840007` | Yes | Active | 1st day of last menstrual period |
-| `c0010001-0000-0000-0000-000000000027` | Flow of Menstrual cycle | Coded | Finding | SNOMED CT | `289564002` | Yes | Active | Concept answers: `c0010002-...205-209` |
+| `c0010001-0000-0000-0000-000000000027` | Flow of Menstrual cycle | Coded | Finding | SNOMED CT | `289564002` | Yes | Active | Concept answers: `c0010002-...205-210` |
+| `c0010001-0000-0000-0000-000000000028` | Irregular cycle type | Coded | Finding | SNOMED CT | `80182007` | Yes | Active | Concept answers: `c0010002-...203, 204` |
+| `c0010001-0000-0000-0000-000000000029` | Type of Amenorrhoea | Coded | Finding | SNOMED CT | `8943002` | Yes | Active | Concept answers: `c0010002-...207, 208` |
 
 
 ---
@@ -103,6 +105,7 @@ To maintain agility and avoid blocking clinical deployment pending terminology l
 | `c0010002-0000-0000-0000-000000000207` | Primary Amenorrhoea | SNOMED CT | `156035003` | Yes | Active |
 | `c0010002-0000-0000-0000-000000000208` | Secondary Amenorrhoea | SNOMED CT | `156036002` | Yes | Active |
 | `c0010002-0000-0000-0000-000000000209` | Heavy Menstrual Bleeding (HMB) | SNOMED CT | `16464003` | Yes | Active |
+| `c0010002-0000-0000-0000-000000000210` | Amenorrhoea | SNOMED CT | `8943002` | Yes | Active |
 
 
 ---

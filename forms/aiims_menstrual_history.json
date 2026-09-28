@@ -31,7 +31,19 @@
                   {
                     "concept": "c0010002-0000-0000-0000-000000000202",
                     "label": "Irregular periods"
-                  },
+                  }
+                ]
+              }
+            },
+            {
+              "label": "Type of Irregular periods",
+              "type": "obs",
+              "id": "irregular_cycle_type",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "c0010001-0000-0000-0000-000000000028",
+                "answers": [
                   {
                     "concept": "c0010002-0000-0000-0000-000000000203",
                     "label": "Oligomenorrhea"
@@ -39,16 +51,11 @@
                   {
                     "concept": "c0010002-0000-0000-0000-000000000204",
                     "label": "Polymenorrhea"
-                  },
-                  {
-                    "concept": "c0010002-0000-0000-0000-000000000207",
-                    "label": "Primary Amenorrhoea"
-                  },
-                  {
-                    "concept": "c0010002-0000-0000-0000-000000000208",
-                    "label": "Secondary Amenorrhoea"
                   }
                 ]
+              },
+              "hide": {
+                "hideWhenExpression": "pattern_of_menstrual_cycle !== 'c0010002-0000-0000-0000-000000000202'"
               }
             },
             {
@@ -79,18 +86,37 @@
                     "label": "Hypomenorrhoea"
                   },
                   {
-                    "concept": "c0010002-0000-0000-0000-000000000207",
-                    "label": "Primary Amenorrhoea"
-                  },
-                  {
-                    "concept": "c0010002-0000-0000-0000-000000000208",
-                    "label": "Secondary Amenorrhoea"
+                    "concept": "c0010002-0000-0000-0000-000000000210",
+                    "label": "Amenorrhoea"
                   },
                   {
                     "concept": "c0010002-0000-0000-0000-000000000209",
                     "label": "Heavy Menstrual Bleeding (HMB)"
                   }
                 ]
+              }
+            },
+            {
+              "label": "Type of Amenorrhoea",
+              "type": "obs",
+              "id": "amenorrhoea_type",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "c0010001-0000-0000-0000-000000000029",
+                "answers": [
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000207",
+                    "label": "Primary"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000208",
+                    "label": "Secondary"
+                  }
+                ]
+              },
+              "hide": {
+                "hideWhenExpression": "flow_of_menstrual_cycle !== 'c0010002-0000-0000-0000-000000000210'"
               }
             }
           ]

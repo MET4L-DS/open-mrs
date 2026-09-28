@@ -108,6 +108,7 @@ menstrual_answers = [
     ("c0010002-0000-0000-0000-000000000207", "Primary Amenorrhoea"),
     ("c0010002-0000-0000-0000-000000000208", "Secondary Amenorrhoea"),
     ("c0010002-0000-0000-0000-000000000209", "Heavy Menstrual Bleeding (HMB)"),
+    ("c0010002-0000-0000-0000-000000000210", "Amenorrhoea"),
 ]
 
 # We assemble the migration script wrapped in a stored procedure for IF/ELSE control flow
@@ -197,6 +198,10 @@ full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000025", "Patt
 full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000026", "Last menstrual period", datatype_id=6, class_id=7))
 # Flow of Menstrual cycle
 full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000027", "Flow of Menstrual cycle", datatype_id=2, class_id=7))
+# Irregular cycle type
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000028", "Irregular cycle type", datatype_id=2, class_id=7))
+# Type of Amenorrhoea
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000029", "Type of Amenorrhoea", datatype_id=2, class_id=7))
 
 # 3. Link Answers
 # Education Wife answers
@@ -241,8 +246,23 @@ for ans_uuid in [
     "c0010002-0000-0000-0000-000000000207",  # Primary Amenorrhoea
     "c0010002-0000-0000-0000-000000000208",  # Secondary Amenorrhoea
     "c0010002-0000-0000-0000-000000000209",  # Heavy Menstrual Bleeding (HMB)
+    "c0010002-0000-0000-0000-000000000210",  # Amenorrhoea
 ]:
     full_script.append(add_answer_sql("c0010001-0000-0000-0000-000000000027", ans_uuid))
+
+# Irregular cycle type answers
+for ans_uuid in [
+    "c0010002-0000-0000-0000-000000000203",  # Oligomenorrhea
+    "c0010002-0000-0000-0000-000000000204",  # Polymenorrhea
+]:
+    full_script.append(add_answer_sql("c0010001-0000-0000-0000-000000000028", ans_uuid))
+
+# Type of Amenorrhoea answers
+for ans_uuid in [
+    "c0010002-0000-0000-0000-000000000207",  # Primary Amenorrhoea
+    "c0010002-0000-0000-0000-000000000208",  # Secondary Amenorrhoea
+]:
+    full_script.append(add_answer_sql("c0010001-0000-0000-0000-000000000029", ans_uuid))
 
 full_script.append("END$$")
 full_script.append("DELIMITER ;")

@@ -155,7 +155,12 @@ python scripts/publish_aiims_form.py
    - Obstetric indicators: Gravida (G), Parity (P), Living Children (L), Abortion/Miscarriage (A), Ectopic Pregnancy.
 4. **Form 4: AIIMS Visit: Menstrual History** (`80930653-7e80-4bfd-9e29-ec37c334d883`)
    - Path: `aiims-menstrual-history`
-   - Menstrual cycle pattern (Regular, Irregular, Oligomenorrhea, Polymenorrhea, Primary Amenorrhoea, Secondary Amenorrhoea), Last menstrual period 1st day (LMP Date), Flow (Normal, Hypomenorrhoea, Primary/Secondary Amenorrhoea, HMB).
+   - Menstrual cycle pattern: Regular vs. Irregular periods.
+     - Nested skip logic: selecting "Irregular periods" conditionally displays "Type of Irregular periods" (Oligomenorrhea, Polymenorrhea).
+   - Last menstrual period 1st day (LMP Date).
+   - Flow of Menstrual cycle: Normal, Hypomenorrhoea, Amenorrhoea, Heavy Menstrual Bleeding (HMB).
+     - Nested skip logic: selecting "Amenorrhoea" conditionally displays "Type of Amenorrhoea" (Primary, Secondary).
+   - Card UI dynamically presents nested sub-types when recorded.
 
 ---
 

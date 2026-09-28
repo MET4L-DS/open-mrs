@@ -109,6 +109,9 @@ export const CONCEPTS = {
   primaryAmenorrhoea: 'c0010002-0000-0000-0000-000000000207',
   secondaryAmenorrhoea: 'c0010002-0000-0000-0000-000000000208',
   heavyMenstrualBleeding: 'c0010002-0000-0000-0000-000000000209',
+  amenorrhoea: 'c0010002-0000-0000-0000-000000000210',
+  irregularCycleType: 'c0010001-0000-0000-0000-000000000028',
+  amenorrhoeaType: 'c0010001-0000-0000-0000-000000000029',
 };
 
 // Person Attribute Type UUID for Patient Telephone Number

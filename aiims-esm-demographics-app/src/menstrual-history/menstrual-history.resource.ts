@@ -6,8 +6,10 @@ export interface AiimsMenstrualHistoryData {
   encounterUuid?: string;
   encounterDatetime?: string;
   patternOfMenstrualCycle?: string;
+  irregularCycleType?: string;
   lastMenstrualPeriod?: string;
   flowOfMenstrualCycle?: string;
+  amenorrhoeaType?: string;
 }
 
 export function useMenstrualHistory(
@@ -41,8 +43,10 @@ export function useMenstrualHistory(
     encounterUuid: latestEncounter.uuid,
     encounterDatetime: latestEncounter.encounterDatetime,
     patternOfMenstrualCycle: getObsValue(CONCEPTS.patternOfMenstrualCycle),
+    irregularCycleType: getObsValue(CONCEPTS.irregularCycleType),
     lastMenstrualPeriod: getObsValue(CONCEPTS.lastMenstrualPeriod),
     flowOfMenstrualCycle: getObsValue(CONCEPTS.flowOfMenstrualCycle),
+    amenorrhoeaType: getObsValue(CONCEPTS.amenorrhoeaType),
   };
 
   return {

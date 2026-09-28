@@ -25,24 +25,53 @@ export const MenstrualHistoryCard: React.FC<MenstrualHistoryCardProps> = ({ data
     }
   }, [data.lastMenstrualPeriod]);
 
+  const rows = React.useMemo(() => {
+    const list = [
+      {
+        label: t('patternOfMenstrualCycle', 'Pattern of Menstrual Cycle'),
+        value: data.patternOfMenstrualCycle,
+      },
+    ];
+
+    if (data.irregularCycleType) {
+      list.push({
+        label: t('irregularCycleType', 'Type of Irregular Periods'),
+        value: data.irregularCycleType,
+      });
+    }
+
+    list.push({
+      label: t('lastMenstrualPeriod', 'Last Menstrual Period (LMP)'),
+      value: formattedLmp,
+    });
+
+    list.push({
+      label: t('flowOfMenstrualCycle', 'Flow of Menstrual Cycle'),
+      value: data.flowOfMenstrualCycle,
+    });
+
+    if (data.amenorrhoeaType) {
+      list.push({
+        label: t('amenorrhoeaType', 'Type of Amenorrhoea'),
+        value: data.amenorrhoeaType,
+      });
+    }
+
+    return list;
+  }, [
+    data.patternOfMenstrualCycle,
+    data.irregularCycleType,
+    formattedLmp,
+    data.flowOfMenstrualCycle,
+    data.amenorrhoeaType,
+    t,
+  ]);
+
   return (
     <ObservationCard
       title={t('menstrualCycleDetails', 'Menstrual Cycle Details')}
       icon={Calendar}
-      rows={[
-        {
-          label: t('patternOfMenstrualCycle', 'Pattern of Menstrual Cycle'),
-          value: data.patternOfMenstrualCycle,
-        },
-        {
-          label: t('lastMenstrualPeriod', 'Last Menstrual Period (LMP)'),
-          value: formattedLmp,
-        },
-        {
-          label: t('flowOfMenstrualCycle', 'Flow of Menstrual Cycle'),
-          value: data.flowOfMenstrualCycle,
-        },
-      ]}
+      rows={rows}
     />
   );
 };
