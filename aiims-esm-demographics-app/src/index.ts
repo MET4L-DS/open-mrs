@@ -68,7 +68,16 @@ const obstetricHistoryExtensions = createFormExtensions(
 export const aiimsObstetricHistoryDashboardLink = obstetricHistoryExtensions.link;
 export const aiimsObstetricHistoryDashboard = obstetricHistoryExtensions.dashboard;
 
+const menstrualHistoryExtensions = createFormExtensions(
+  getFormRegistryEntry('menstrual-history'),
+  () => import('./menstrual-history/menstrual-history-dashboard.component')
+);
+
+export const aiimsMenstrualHistoryDashboardLink = menstrualHistoryExtensions.link;
+export const aiimsMenstrualHistoryDashboard = menstrualHistoryExtensions.dashboard;
+
 export { FORM_REGISTRY } from './constants';
 export * from './shared';
 export * from './infertility-type';
 export * from './obstetric-history';
+export * from './menstrual-history';

@@ -43,6 +43,10 @@ To maintain agility and avoid blocking clinical deployment pending terminology l
 | `c0010001-0000-0000-0000-000000000022` | Living Children | Numeric | Finding | SNOMED CT | `161746007` | Yes | Active | Number of living children |
 | `c0010001-0000-0000-0000-000000000023` | Abortion or Miscarriage | Numeric | Finding | SNOMED CT | `161733001` | Yes | Active | Number of abortions / miscarriages |
 | `c0010001-0000-0000-0000-000000000024` | Ectopic Pregnancy | Numeric | Finding | SNOMED CT | `34801009` | Yes | Active | Number of ectopic pregnancies |
+| `c0010001-0000-0000-0000-000000000025` | Pattern of Menstrual cycle | Coded | Finding | SNOMED CT | `302757007` | Yes | Active | Concept answers: `c0010002-...201-204, 207-208` |
+| `c0010001-0000-0000-0000-000000000026` | Last menstrual period | Date | Observable entity | SNOMED CT | `21840007` | Yes | Active | 1st day of last menstrual period |
+| `c0010001-0000-0000-0000-000000000027` | Flow of Menstrual cycle | Coded | Finding | SNOMED CT | `289564002` | Yes | Active | Concept answers: `c0010002-...205-209` |
+
 
 ---
 
@@ -83,6 +87,23 @@ To maintain agility and avoid blocking clinical deployment pending terminology l
 | `c0010003-0000-0000-0000-000000000003` | Lower Middle (Class III) | SNOMED CT | `22575001` | Yes | Active |
 | `c0010003-0000-0000-0000-000000000004` | Upper Lower (Class IV) | SNOMED CT | `38877009` | Yes | Active |
 | `c0010003-0000-0000-0000-000000000005` | Lower (Class V) | SNOMED CT | `38877009` | Yes | Active |
+
+---
+
+### 2.5 Menstrual History Answer Options (`c0010002-...`)
+
+| Placeholder UUID | Display Name | Target Standard | Target Code | ATHENA Verified | Status |
+|:---|:---|:---|:---:|:---:|:---:|
+| `c0010002-0000-0000-0000-000000000201` | Regular periods | SNOMED CT | `302757007` | Yes | Active |
+| `c0010002-0000-0000-0000-000000000202` | Irregular periods | SNOMED CT | `80182007` | Yes | Active |
+| `c0010002-0000-0000-0000-000000000203` | Oligomenorrhea | SNOMED CT | `52073004` | Yes | Active |
+| `c0010002-0000-0000-0000-000000000204` | Polymenorrhea | SNOMED CT | `398007005` | Yes | Active |
+| `c0010002-0000-0000-0000-000000000205` | Normal | SNOMED CT | `17621005` | Yes | Active |
+| `c0010002-0000-0000-0000-000000000206` | Hypomenorrhoea | SNOMED CT | `64206003` | Yes | Active |
+| `c0010002-0000-0000-0000-000000000207` | Primary Amenorrhoea | SNOMED CT | `156035003` | Yes | Active |
+| `c0010002-0000-0000-0000-000000000208` | Secondary Amenorrhoea | SNOMED CT | `156036002` | Yes | Active |
+| `c0010002-0000-0000-0000-000000000209` | Heavy Menstrual Bleeding (HMB) | SNOMED CT | `16464003` | Yes | Active |
+
 
 ---
 

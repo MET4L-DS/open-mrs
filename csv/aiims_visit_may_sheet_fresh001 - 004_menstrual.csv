@@ -1,0 +1,7 @@
+Pattern of Menstrual cycle,,Last menstrual period -1st day,Flow of Menstrual cycle,
+Regular periods[SNOMED:302757007],,,Normal,
+Irregular periods[SNOMED:80182007],,,Hypomenorrhoea[SNOMED:64206003],
+,Oligomenorrhea[SNOMED:52073004],,Amenorrhoea,
+,Polymenorrhea,,,Primary 
+,,,,Secondary
+,,,Heavy Menstrual Bleeding(HMB),

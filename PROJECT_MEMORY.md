@@ -153,6 +153,9 @@ python scripts/publish_aiims_form.py
 3. **Form 3: AIIMS Visit: Obstetric History** (`80930653-7e80-4bfd-9e29-ec37c334d882`)
    - Path: `aiims-obstetric-history`
    - Obstetric indicators: Gravida (G), Parity (P), Living Children (L), Abortion/Miscarriage (A), Ectopic Pregnancy.
+4. **Form 4: AIIMS Visit: Menstrual History** (`80930653-7e80-4bfd-9e29-ec37c334d883`)
+   - Path: `aiims-menstrual-history`
+   - Menstrual cycle pattern (Regular, Irregular, Oligomenorrhea, Polymenorrhea, Primary Amenorrhoea, Secondary Amenorrhoea), Last menstrual period 1st day (LMP Date), Flow (Normal, Hypomenorrhoea, Primary/Secondary Amenorrhoea, HMB).
 
 ---
 

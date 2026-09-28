@@ -1,0 +1,101 @@
+{
+  "name": "AIIMS Visit: Menstrual History",
+  "description": "AIIMS Department of Reproductive Medicine & IVF - Menstrual History Sheet",
+  "version": "1.0",
+  "published": true,
+  "retired": false,
+  "encounter": "Consultation",
+  "processor": "EncounterFormProcessor",
+  "referencedForms": [],
+  "pages": [
+    {
+      "label": "Menstrual History",
+      "sections": [
+        {
+          "label": "Menstrual Cycle Details",
+          "isExpanded": true,
+          "questions": [
+            {
+              "label": "Pattern of Menstrual cycle",
+              "type": "obs",
+              "id": "pattern_of_menstrual_cycle",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "c0010001-0000-0000-0000-000000000025",
+                "answers": [
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000201",
+                    "label": "Regular periods"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000202",
+                    "label": "Irregular periods"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000203",
+                    "label": "Oligomenorrhea"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000204",
+                    "label": "Polymenorrhea"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000207",
+                    "label": "Primary Amenorrhoea"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000208",
+                    "label": "Secondary Amenorrhoea"
+                  }
+                ]
+              }
+            },
+            {
+              "label": "Last menstrual period - 1st day (LMP)",
+              "type": "obs",
+              "id": "last_menstrual_period",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "date",
+                "concept": "c0010001-0000-0000-0000-000000000026"
+              }
+            },
+            {
+              "label": "Flow of Menstrual cycle",
+              "type": "obs",
+              "id": "flow_of_menstrual_cycle",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "c0010001-0000-0000-0000-000000000027",
+                "answers": [
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000205",
+                    "label": "Normal"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000206",
+                    "label": "Hypomenorrhoea"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000207",
+                    "label": "Primary Amenorrhoea"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000208",
+                    "label": "Secondary Amenorrhoea"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000209",
+                    "label": "Heavy Menstrual Bleeding (HMB)"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

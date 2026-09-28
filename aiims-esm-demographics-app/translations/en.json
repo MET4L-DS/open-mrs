@@ -55,5 +55,16 @@
   "recordObstetricHistory": "Record Obstetric History",
   "updateObstetricHistory": "Update Obstetric History",
   "loadingObstetricHistory": "Loading Obstetric History...",
-  "noRecordedObstetricHistoryEncounter": "No AIIMS Obstetric History encounter recorded yet"
+  "noRecordedObstetricHistoryEncounter": "No AIIMS Obstetric History encounter recorded yet",
+  "aiimsMenstrualHistoryTitle": "Menstrual History",
+  "menstrualCycleDetails": "Menstrual Cycle Details",
+  "patternOfMenstrualCycle": "Pattern of Menstrual Cycle",
+  "lastMenstrualPeriod": "Last Menstrual Period (LMP)",
+  "flowOfMenstrualCycle": "Flow of Menstrual Cycle",
+  "noMenstrualHistoryHeader": "No Menstrual History Recorded Yet",
+  "noMenstrualHistoryBody": "Menstrual pattern, last menstrual period, and flow details have not been submitted for this patient yet.",
+  "recordMenstrualHistory": "Record Menstrual History",
+  "updateMenstrualHistory": "Update Menstrual History",
+  "loadingMenstrualHistory": "Loading Menstrual History...",
+  "noRecordedMenstrualHistoryEncounter": "No AIIMS Menstrual History encounter recorded yet"
 }

@@ -1,4 +1,4 @@
-import { Identification, Events, ParentChild } from '@carbon/react/icons';
+import { Identification, Events, ParentChild, Calendar } from '@carbon/react/icons';
 import { type FormRegistryEntry } from './shared/types';
 
 export const moduleName = '@aiims/esm-demographics-app';
@@ -14,6 +14,10 @@ export const AIIMS_INFERTILITY_FORM_NAME = 'AIIMS Visit: Type of Infertility';
 // Form UUID for AIIMS Visit: Obstetric History
 export const AIIMS_OBSTETRIC_FORM_UUID = '80930653-7e80-4bfd-9e29-ec37c334d882';
 export const AIIMS_OBSTETRIC_FORM_NAME = 'AIIMS Visit: Obstetric History';
+
+// Form UUID for AIIMS Visit: Menstrual History
+export const AIIMS_MENSTRUAL_FORM_UUID = '80930653-7e80-4bfd-9e29-ec37c334d883';
+export const AIIMS_MENSTRUAL_FORM_NAME = 'AIIMS Visit: Menstrual History';
 
 // Form Registry: Centralized configuration for all current and future AIIMS forms
 export const FORM_REGISTRY: FormRegistryEntry[] = [
@@ -50,6 +54,17 @@ export const FORM_REGISTRY: FormRegistryEntry[] = [
     icon: ParentChild,
     order: 1,
   },
+  {
+    key: 'menstrual-history',
+    uuid: AIIMS_MENSTRUAL_FORM_UUID,
+    name: AIIMS_MENSTRUAL_FORM_NAME,
+    path: 'aiims-menstrual-history',
+    titleKey: 'aiimsMenstrualHistoryTitle',
+    title: 'Menstrual History',
+    slot: 'aiims-menstrual-history-dashboard-slot',
+    icon: Calendar,
+    order: 1,
+  },
   // Additional forms (anthropometry, clinical history, ultrasound, etc.) will be registered here
 ];
 
@@ -81,6 +96,19 @@ export const CONCEPTS = {
   livingChildren: 'c0010001-0000-0000-0000-000000000022',
   abortionMiscarriage: 'c0010001-0000-0000-0000-000000000023',
   ectopicPregnancy: 'c0010001-0000-0000-0000-000000000024',
+  // Menstrual History concepts
+  patternOfMenstrualCycle: 'c0010001-0000-0000-0000-000000000025',
+  lastMenstrualPeriod: 'c0010001-0000-0000-0000-000000000026',
+  flowOfMenstrualCycle: 'c0010001-0000-0000-0000-000000000027',
+  regularPeriods: 'c0010002-0000-0000-0000-000000000201',
+  irregularPeriods: 'c0010002-0000-0000-0000-000000000202',
+  oligomenorrhea: 'c0010002-0000-0000-0000-000000000203',
+  polymenorrhea: 'c0010002-0000-0000-0000-000000000204',
+  flowNormal: 'c0010002-0000-0000-0000-000000000205',
+  hypomenorrhoea: 'c0010002-0000-0000-0000-000000000206',
+  primaryAmenorrhoea: 'c0010002-0000-0000-0000-000000000207',
+  secondaryAmenorrhoea: 'c0010002-0000-0000-0000-000000000208',
+  heavyMenstrualBleeding: 'c0010002-0000-0000-0000-000000000209',
 };
 
 // Person Attribute Type UUID for Patient Telephone Number

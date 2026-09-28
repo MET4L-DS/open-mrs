@@ -60,6 +60,26 @@
       "slot": "aiims-obstetric-history-dashboard-slot",
       "online": true,
       "offline": true
+    },
+    {
+      "name": "aiims-menstrual-history-dashboard-link",
+      "component": "aiimsMenstrualHistoryDashboardLink",
+      "slot": "patient-chart-dashboard-slot",
+      "order": 1,
+      "meta": {
+        "slot": "aiims-menstrual-history-dashboard-slot",
+        "path": "aiims-menstrual-history",
+        "title": "Menstrual History"
+      },
+      "online": true,
+      "offline": true
+    },
+    {
+      "name": "aiims-menstrual-history-dashboard",
+      "component": "aiimsMenstrualHistoryDashboard",
+      "slot": "aiims-menstrual-history-dashboard-slot",
+      "online": true,
+      "offline": true
     }
   ]
 }
