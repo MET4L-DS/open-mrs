@@ -138,6 +138,10 @@ python scripts/publish_aiims_form.py
    - Build-only tools like `sass` belong in `devDependencies`, not `peerDependencies`.
 7. **Workspace Launching Contract**:
    - When launching `patient-form-entry-workspace` via `launchWorkspace2`, the `workspaceProps` must be passed directly at the top level, NOT wrapped in a `state` object. The workspace component `PatientFormEntryWorkspace` expects to find its props like `props.form.uuid`. Passing it flatly is correct. Ensure `form: { uuid, name, display }` is passed directly as a property of the workspace props object.
+8. **Docker Volume Permissions (`openmrs-data` & UID 1001)**:
+   - The OpenMRS backend container runs as non-root user `1001`. On container startup, its entrypoint copies distribution files to `/openmrs/data/configuration/...`.
+   - If any files in `openmrs-data` were created/modified by root (e.g. via ad-hoc docker commands), the startup script fails with `cp: cannot create regular file ... Permission denied`, putting the backend into an immediate crash/restart loop and causing Nginx to return `502 Bad Gateway`.
+   - Fix with: `docker run --rm -v openmrs-distro-referenceapplication_openmrs-data:/data alpine chown -R 1001:root /data && chmod -R u+rwX /data`.
 
 ---
 
