@@ -296,6 +296,15 @@ full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000040", "Azoo
 # Male Factor Others
 full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000041", "Male Factor Others", datatype_id=3, class_id=7))
 
+# Male Hormone & Surgery Concepts
+# Follicle Stimulating Hormone Husband
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000042", "Follicle Stimulating Hormone Husband", datatype_id=1, class_id=7, is_numeric=True, units="mIU/mL", allow_decimal=1, low_abs=0, hi_abs=100))
+# Testosterone Husband
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000043", "Testosterone Husband", datatype_id=1, class_id=7, is_numeric=True, units="ng/dL", allow_decimal=1, low_abs=0, hi_abs=2000))
+# Testicular Biopsy
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000044", "Testicular Biopsy", datatype_id=3, class_id=7))
+
+
 # 3. Link Answers
 # Education Wife answers
 for u, _ in education_answers:

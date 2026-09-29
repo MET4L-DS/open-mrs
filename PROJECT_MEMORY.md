@@ -190,6 +190,11 @@ python scripts/publish_aiims_form.py
      - Selecting "Azoospermia" conditionally reveals Azoospermia Details (Obstructive vs. Non-Obstructive).
    - Clinical notes textarea for semen analysis parameters or surgical remarks.
    - Observation card with teal Carbon tags, detail rows, and GenderMale icon.
+7. **Form 7: AIIMS Visit: Male Hormone and Surgery** (`80930653-7e80-4bfd-9e29-ec37c334d886`)
+   - Path: `aiims-male-hormone-surgery`
+   - Hormonal evaluation: Follicle Stimulating Hormone (FSH) in `mIU/mL`, Serum Testosterone in `ng/dL`.
+   - Surgical & biopsy findings: Textarea for Testicular Biopsy report and surgical sperm retrieval notes (Micro-TESE / TESE / PESA).
+   - Observation card with numeric rows, localized units, and Scalpel icon.
 
 ---
 
@@ -201,9 +206,11 @@ python scripts/publish_aiims_form.py
 - [x] Register Form 4: Menstrual History (`menstrual-history`).
 - [x] Register Form 5: Female Factor Infertility (`female-factor`).
 - [x] Register Form 6: Male Factor Infertility (`male-factor`).
-- [ ] Register Form 7: Anthropometry & Clinical Examination.
-- [ ] Register Form 8: Ultrasound & Imaging.
-- [ ] Register Form 9: Diagnosis & Treatment Plan.
+- [x] Register Form 7: Male Hormone & Surgery (`male-hormone-surgery`).
+- [ ] Register Form 8: Anthropometry & Clinical Examination.
+- [ ] Register Form 9: Ultrasound & Imaging.
+- [ ] Register Form 10: Diagnosis & Treatment Plan.
+
 
 
 

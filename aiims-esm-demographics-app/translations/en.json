@@ -96,6 +96,20 @@
   "recordMaleFactor": "Record Male Factor",
   "updateMaleFactor": "Update Male Factor",
   "loadingMaleFactor": "Loading Male Factor details...",
-  "noRecordedMaleFactorEncounter": "No AIIMS Male Factor encounter recorded yet"
+  "noRecordedMaleFactorEncounter": "No AIIMS Male Factor encounter recorded yet",
+  "aiimsMaleHormoneSurgeryTitle": "Male Hormone & Surgery",
+  "fshHusband": "Follicle Stimulating Hormone (FSH)",
+  "testosteroneHusband": "Serum Testosterone",
+  "testicularBiopsy": "Testicular Biopsy Report / Notes",
+  "maleHormoneSurgeryDetails": "Male Hormone & Surgery Findings",
+  "mIuPerMl": "mIU/mL",
+  "ngPerDl": "ng/dL",
+  "noMaleHormoneSurgeryHeader": "No Male Hormone & Surgery Recorded Yet",
+  "noMaleHormoneSurgeryBody": "Follicle stimulating hormone (FSH), serum testosterone, and testicular biopsy reports have not been submitted for this patient yet.",
+  "recordMaleHormoneSurgery": "Record Hormone & Surgery",
+  "updateMaleHormoneSurgery": "Update Hormone & Surgery",
+  "loadingMaleHormoneSurgery": "Loading Male Hormone & Surgery details...",
+  "noRecordedMaleHormoneSurgeryEncounter": "No AIIMS Male Hormone & Surgery encounter recorded yet"
 }
+
 

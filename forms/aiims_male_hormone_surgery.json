@@ -1,0 +1,59 @@
+{
+  "name": "AIIMS Visit: Male Hormone and Surgery",
+  "description": "AIIMS Department of Reproductive Medicine & IVF - Male Hormone and Surgery Sheet",
+  "version": "1.0",
+  "published": true,
+  "retired": false,
+  "encounter": "Consultation",
+  "processor": "EncounterFormProcessor",
+  "referencedForms": [],
+  "pages": [
+    {
+      "label": "Male Hormone & Surgery",
+      "sections": [
+        {
+          "label": "Hormonal Workup & Testicular Surgery",
+          "isExpanded": true,
+          "questions": [
+            {
+              "label": "Follicle Stimulating Hormone (FSH) - Husband (mIU/mL)",
+              "type": "obs",
+              "id": "fsh_husband",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "number",
+                "concept": "c0010001-0000-0000-0000-000000000042",
+                "max": "100",
+                "min": "0"
+              }
+            },
+            {
+              "label": "Serum Testosterone - Husband (ng/dL)",
+              "type": "obs",
+              "id": "testosterone_husband",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "number",
+                "concept": "c0010001-0000-0000-0000-000000000043",
+                "max": "2000",
+                "min": "0"
+              }
+            },
+            {
+              "label": "Testicular Biopsy Report / Surgical Notes",
+              "type": "obs",
+              "id": "testicular_biopsy",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "textarea",
+                "concept": "c0010001-0000-0000-0000-000000000044",
+                "rows": 4,
+                "placeholder": "Enter biopsy histopathology findings (e.g., Normal spermatogenesis, SCOS, Maturation arrest) or surgical sperm retrieval remarks (Micro-TESE / TESE / PESA)..."
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

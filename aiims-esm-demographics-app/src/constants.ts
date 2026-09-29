@@ -1,4 +1,4 @@
-import { Identification, Events, ParentChild, Calendar, Activity, GenderMale } from '@carbon/react/icons';
+import { Identification, Events, ParentChild, Calendar, Activity, GenderMale, Scalpel } from '@carbon/react/icons';
 import { type FormRegistryEntry } from './shared/types';
 
 export const moduleName = '@aiims/esm-demographics-app';
@@ -26,6 +26,10 @@ export const AIIMS_FEMALE_FACTOR_FORM_NAME = 'AIIMS Visit: Female Factor';
 // Form UUID for AIIMS Visit: Male Factor
 export const AIIMS_MALE_FACTOR_FORM_UUID = '80930653-7e80-4bfd-9e29-ec37c334d885';
 export const AIIMS_MALE_FACTOR_FORM_NAME = 'AIIMS Visit: Male Factor';
+
+// Form UUID for AIIMS Visit: Male Hormone and Surgery
+export const AIIMS_MALE_HORMONE_SURGERY_FORM_UUID = '80930653-7e80-4bfd-9e29-ec37c334d886';
+export const AIIMS_MALE_HORMONE_SURGERY_FORM_NAME = 'AIIMS Visit: Male Hormone and Surgery';
 
 // Form Registry: Centralized configuration for all current and future AIIMS forms
 export const FORM_REGISTRY: FormRegistryEntry[] = [
@@ -93,6 +97,17 @@ export const FORM_REGISTRY: FormRegistryEntry[] = [
     title: 'Male Factor',
     slot: 'aiims-male-factor-dashboard-slot',
     icon: GenderMale,
+    order: 1,
+  },
+  {
+    key: 'male-hormone-surgery',
+    uuid: AIIMS_MALE_HORMONE_SURGERY_FORM_UUID,
+    name: AIIMS_MALE_HORMONE_SURGERY_FORM_NAME,
+    path: 'aiims-male-hormone-surgery',
+    titleKey: 'aiimsMaleHormoneSurgeryTitle',
+    title: 'Male Hormone & Surgery',
+    slot: 'aiims-male-hormone-surgery-dashboard-slot',
+    icon: Scalpel,
     order: 1,
   },
   // Additional forms (anthropometry, clinical history, ultrasound, etc.) will be registered here
@@ -168,6 +183,10 @@ export const CONCEPTS = {
   oats: 'c0010002-0000-0000-0000-000000000409',
   obstructiveAzoospermia: 'c0010002-0000-0000-0000-000000000411',
   nonObstructiveAzoospermia: 'c0010002-0000-0000-0000-000000000412',
+  // Male Hormone & Surgery concepts
+  fshHusband: 'c0010001-0000-0000-0000-000000000042',
+  testosteroneHusband: 'c0010001-0000-0000-0000-000000000043',
+  testicularBiopsy: 'c0010001-0000-0000-0000-000000000044',
 };
 
 // Person Attribute Type UUID for Patient Telephone Number
