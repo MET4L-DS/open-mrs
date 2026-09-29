@@ -170,6 +170,12 @@ female_factor_answers = [
     ("c0010002-0000-0000-0000-000000000409", "Oligoasthenoteratozoospermia (OATS)"),
     ("c0010002-0000-0000-0000-000000000411", "Obstructive Azoospermia"),
     ("c0010002-0000-0000-0000-000000000412", "Non-Obstructive Azoospermia"),
+    # Previous OI & IUI drug answers
+    ("c0010002-0000-0000-0000-000000000501", "Letrozole"),
+    ("c0010002-0000-0000-0000-000000000502", "Human menopausal gonadotropin"),
+    ("c0010002-0000-0000-0000-000000000503", "Clomiphene citrate"),
+    ("c0010002-0000-0000-0000-000000000504", "Human menopausal gonadotropin + Clomiphene citrate"),
+    ("c0010002-0000-0000-0000-000000000505", "Multiple OVI"),
 ]
 
 
@@ -303,6 +309,36 @@ full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000042", "Foll
 full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000043", "Testosterone Husband", datatype_id=1, class_id=7, is_numeric=True, units="ng/dL", allow_decimal=1, low_abs=0, hi_abs=2000))
 # Testicular Biopsy
 full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000044", "Testicular Biopsy", datatype_id=3, class_id=7))
+
+# Previous OI and IUI Concepts (Form 8)
+# Previous Ovulation Induction (Yes/No)
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000045", "Previous Ovulation Induction", datatype_id=2, class_id=7))
+# Ovulation Induction Drugs OI
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000046", "Ovulation Induction Drugs OI", datatype_id=2, class_id=7))
+# Dose of drugs in Ovulation Induction
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000047", "Dose of drugs in Ovulation Induction", datatype_id=3, class_id=7))
+# Number of Previous Ovulation Induction
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000048", "Number of Previous Ovulation Induction", datatype_id=1, class_id=7, is_numeric=True, allow_decimal=0, low_abs=0, hi_abs=50))
+# Year of Previous Ovulation Induction
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000049", "Year of Previous Ovulation Induction", datatype_id=1, class_id=7, is_numeric=True, allow_decimal=0, low_abs=1970, hi_abs=2100))
+
+# Previous OI and IUI (Yes/No)
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000050", "Previous OI and IUI", datatype_id=2, class_id=7))
+# Ovulation Induction Drugs IUI
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000051", "Ovulation Induction Drugs IUI", datatype_id=2, class_id=7))
+# Dose of drugs in OI and IUI
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000052", "Dose of drugs in OI and IUI", datatype_id=3, class_id=7))
+# Number of Previous OI and IUI
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000053", "Number of Previous OI and IUI", datatype_id=1, class_id=7, is_numeric=True, allow_decimal=0, low_abs=0, hi_abs=50))
+# Year of Previous OI and IUI
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000054", "Year of Previous OI and IUI", datatype_id=1, class_id=7, is_numeric=True, allow_decimal=0, low_abs=1970, hi_abs=2100))
+
+# Failed In vitro fertilization (Yes/No)
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000055", "Failed In vitro fertilization", datatype_id=2, class_id=7))
+# Number of Failed IVF Cycles
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000056", "Number of Failed IVF Cycles", datatype_id=1, class_id=7, is_numeric=True, allow_decimal=0, low_abs=0, hi_abs=50))
+# Previous ART Treatment Clinical Notes
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000057", "Previous ART Treatment Clinical Notes", datatype_id=3, class_id=7))
 
 
 # 3. Link Answers
@@ -464,6 +500,37 @@ for ans_uuid in [
     "c0010002-0000-0000-0000-000000000412",  # Non-Obstructive
 ]:
     full_script.append(add_answer_sql("c0010001-0000-0000-0000-000000000040", ans_uuid))
+
+# Previous OI (Yes/No) answers
+full_script.append(add_answer_sql("c0010001-0000-0000-0000-000000000045", "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"))
+full_script.append(add_answer_sql("c0010001-0000-0000-0000-000000000045", "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"))
+
+# Ovulation Induction Drugs OI answers
+for ans_uuid in [
+    "c0010002-0000-0000-0000-000000000501",  # Letrozole
+    "c0010002-0000-0000-0000-000000000502",  # Human menopausal gonadotropin
+    "c0010002-0000-0000-0000-000000000503",  # Clomiphene citrate
+    "c0010002-0000-0000-0000-000000000504",  # Human menopausal gonadotropin + Clomiphene citrate
+    "c0010002-0000-0000-0000-000000000505",  # Multiple OVI
+]:
+    full_script.append(add_answer_sql("c0010001-0000-0000-0000-000000000046", ans_uuid))
+
+# Previous OI and IUI (Yes/No) answers
+full_script.append(add_answer_sql("c0010001-0000-0000-0000-000000000050", "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"))
+full_script.append(add_answer_sql("c0010001-0000-0000-0000-000000000050", "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"))
+
+# Ovulation Induction Drugs IUI answers
+for ans_uuid in [
+    "c0010002-0000-0000-0000-000000000501",  # Letrozole
+    "c0010002-0000-0000-0000-000000000502",  # Human menopausal gonadotropin
+    "c0010002-0000-0000-0000-000000000503",  # Clomiphene citrate
+    "c0010002-0000-0000-0000-000000000504",  # Human menopausal gonadotropin + Clomiphene citrate
+]:
+    full_script.append(add_answer_sql("c0010001-0000-0000-0000-000000000051", ans_uuid))
+
+# Failed In vitro fertilization (Yes/No) answers
+full_script.append(add_answer_sql("c0010001-0000-0000-0000-000000000055", "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"))
+full_script.append(add_answer_sql("c0010001-0000-0000-0000-000000000055", "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"))
 
 full_script.append("END$$")
 full_script.append("DELIMITER ;")

@@ -1,0 +1,311 @@
+{
+  "name": "AIIMS Visit: Previous OI and IUI",
+  "description": "AIIMS Department of Reproductive Medicine & IVF - Previous OI and IUI Sheet",
+  "version": "1.0",
+  "published": true,
+  "retired": false,
+  "encounter": "Consultation",
+  "processor": "EncounterFormProcessor",
+  "referencedForms": [],
+  "pages": [
+    {
+      "label": "Previous OI and IUI",
+      "sections": [
+        {
+          "label": "Previous Ovulation Induction (OI alone)",
+          "isExpanded": true,
+          "questions": [
+            {
+              "label": "Previous Ovulation Induction",
+              "type": "obs",
+              "id": "prev_oi",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "c0010001-0000-0000-0000-000000000045",
+                "answers": [
+                  {
+                    "concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "No"
+                  }
+                ]
+              }
+            },
+            {
+              "label": "Ovulation induction drugs",
+              "type": "obs",
+              "id": "oi_drugs",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "checkbox",
+                "concept": "c0010001-0000-0000-0000-000000000046",
+                "answers": [
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000501",
+                    "label": "Letrozole"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000502",
+                    "label": "Human menopausal gonadotropin"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000503",
+                    "label": "Clomiphene citrate"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000504",
+                    "label": "Human menopausal gonadotropin + Clomiphene citrate"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000505",
+                    "label": "Multiple OVI"
+                  }
+                ]
+              },
+              "hide": {
+                "hideWhenExpression": "!prev_oi || prev_oi !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              }
+            },
+            {
+              "label": "Dose of drugs in Ovulation Induction",
+              "type": "obs",
+              "id": "oi_dose",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "text",
+                "concept": "c0010001-0000-0000-0000-000000000047",
+                "placeholder": "e.g., 2.5 mg OD, 100 mg CC"
+              },
+              "hide": {
+                "hideWhenExpression": "!prev_oi || prev_oi !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              }
+            },
+            {
+              "label": "Number of Previous Ovulation Induction",
+              "type": "obs",
+              "id": "oi_cycles",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "number",
+                "concept": "c0010001-0000-0000-0000-000000000048",
+                "min": "0",
+                "max": "50"
+              },
+              "hide": {
+                "hideWhenExpression": "!prev_oi || prev_oi !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              },
+              "validators": [
+                {
+                  "type": "js_expression",
+                  "failsWhenExpression": "myValue < 0 || myValue > 50",
+                  "message": "Number of cycles must be between 0 and 50."
+                }
+              ]
+            },
+            {
+              "label": "Year of Previous Ovulation Induction",
+              "type": "obs",
+              "id": "oi_year",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "number",
+                "concept": "c0010001-0000-0000-0000-000000000049",
+                "min": "1970",
+                "max": "2100"
+              },
+              "hide": {
+                "hideWhenExpression": "!prev_oi || prev_oi !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              },
+              "validators": [
+                {
+                  "type": "js_expression",
+                  "failsWhenExpression": "myValue < 1970 || myValue > 2100",
+                  "message": "Please enter a valid 4-digit year."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Previous Ovulation Induction and Intra-Uterine Insemination (OI + IUI)",
+          "isExpanded": true,
+          "questions": [
+            {
+              "label": "Previous Ovulation Induction and Intra-Uterine Insemination",
+              "type": "obs",
+              "id": "prev_oi_iui",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "c0010001-0000-0000-0000-000000000050",
+                "answers": [
+                  {
+                    "concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "No"
+                  }
+                ]
+              }
+            },
+            {
+              "label": "Ovulation induction drugs in IUI",
+              "type": "obs",
+              "id": "iui_drugs",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "checkbox",
+                "concept": "c0010001-0000-0000-0000-000000000051",
+                "answers": [
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000501",
+                    "label": "Letrozole"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000502",
+                    "label": "Human menopausal gonadotropin"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000503",
+                    "label": "Clomiphene citrate"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000504",
+                    "label": "Human menopausal gonadotropin + Clomiphene citrate"
+                  }
+                ]
+              },
+              "hide": {
+                "hideWhenExpression": "!prev_oi_iui || prev_oi_iui !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              }
+            },
+            {
+              "label": "Dose of drugs in Ovulation Induction and Intra-Uterine Insemination",
+              "type": "obs",
+              "id": "iui_dose",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "text",
+                "concept": "c0010001-0000-0000-0000-000000000052",
+                "placeholder": "e.g., 5 mg OD Letrozole + 75 IU hMG"
+              },
+              "hide": {
+                "hideWhenExpression": "!prev_oi_iui || prev_oi_iui !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              }
+            },
+            {
+              "label": "Number of Previous Ovulation Induction and Intra-Uterine Insemination",
+              "type": "obs",
+              "id": "iui_cycles",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "number",
+                "concept": "c0010001-0000-0000-0000-000000000053",
+                "min": "0",
+                "max": "50"
+              },
+              "hide": {
+                "hideWhenExpression": "!prev_oi_iui || prev_oi_iui !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              },
+              "validators": [
+                {
+                  "type": "js_expression",
+                  "failsWhenExpression": "myValue < 0 || myValue > 50",
+                  "message": "Number of IUI cycles must be between 0 and 50."
+                }
+              ]
+            },
+            {
+              "label": "Year of Previous Ovulation Induction and Intra-Uterine Insemination",
+              "type": "obs",
+              "id": "iui_year",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "number",
+                "concept": "c0010001-0000-0000-0000-000000000054",
+                "min": "1970",
+                "max": "2100"
+              },
+              "hide": {
+                "hideWhenExpression": "!prev_oi_iui || prev_oi_iui !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              },
+              "validators": [
+                {
+                  "type": "js_expression",
+                  "failsWhenExpression": "myValue < 1970 || myValue > 2100",
+                  "message": "Please enter a valid 4-digit year."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Previous In Vitro Fertilization (Failed IVF History)",
+          "isExpanded": true,
+          "questions": [
+            {
+              "label": "Failed In vitro fertilization",
+              "type": "obs",
+              "id": "failed_ivf",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "c0010001-0000-0000-0000-000000000055",
+                "answers": [
+                  {
+                    "concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "No"
+                  }
+                ]
+              }
+            },
+            {
+              "label": "Number of Failed IVF Cycles",
+              "type": "obs",
+              "id": "failed_ivf_cycles",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "number",
+                "concept": "c0010001-0000-0000-0000-000000000056",
+                "min": "0",
+                "max": "50"
+              },
+              "hide": {
+                "hideWhenExpression": "!failed_ivf || failed_ivf !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              },
+              "validators": [
+                {
+                  "type": "js_expression",
+                  "failsWhenExpression": "myValue < 0 || myValue > 50",
+                  "message": "Number of failed IVF cycles must be between 0 and 50."
+                }
+              ]
+            },
+            {
+              "label": "Previous ART Treatment Clinical Notes",
+              "type": "obs",
+              "id": "previous_art_notes",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "textarea",
+                "concept": "c0010001-0000-0000-0000-000000000057",
+                "rows": 4,
+                "placeholder": "Enter details of prior stimulation protocols, egg retrieval outcomes, embryo transfer history, or complications..."
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

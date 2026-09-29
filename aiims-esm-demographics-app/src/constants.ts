@@ -1,4 +1,4 @@
-import { Identification, Events, ParentChild, Calendar, Activity, GenderMale, Scalpel } from '@carbon/react/icons';
+import { Identification, Events, ParentChild, Calendar, Activity, GenderMale, Scalpel, Medication } from '@carbon/react/icons';
 import { type FormRegistryEntry } from './shared/types';
 
 export const moduleName = '@aiims/esm-demographics-app';
@@ -30,6 +30,10 @@ export const AIIMS_MALE_FACTOR_FORM_NAME = 'AIIMS Visit: Male Factor';
 // Form UUID for AIIMS Visit: Male Hormone and Surgery
 export const AIIMS_MALE_HORMONE_SURGERY_FORM_UUID = '80930653-7e80-4bfd-9e29-ec37c334d886';
 export const AIIMS_MALE_HORMONE_SURGERY_FORM_NAME = 'AIIMS Visit: Male Hormone and Surgery';
+
+// Form UUID for AIIMS Visit: Previous OI and IUI
+export const AIIMS_PREV_OI_IUI_FORM_UUID = '80930653-7e80-4bfd-9e29-ec37c334d887';
+export const AIIMS_PREV_OI_IUI_FORM_NAME = 'AIIMS Visit: Previous OI and IUI';
 
 // Form Registry: Centralized configuration for all current and future AIIMS forms
 export const FORM_REGISTRY: FormRegistryEntry[] = [
@@ -110,6 +114,17 @@ export const FORM_REGISTRY: FormRegistryEntry[] = [
     icon: Scalpel,
     order: 1,
   },
+  {
+    key: 'previous-oi-iui',
+    uuid: AIIMS_PREV_OI_IUI_FORM_UUID,
+    name: AIIMS_PREV_OI_IUI_FORM_NAME,
+    path: 'aiims-previous-oi-iui',
+    titleKey: 'aiimsPreviousOiIuiTitle',
+    title: 'Previous OI & IUI',
+    slot: 'aiims-previous-oi-iui-dashboard-slot',
+    icon: Medication,
+    order: 1,
+  },
   // Additional forms (anthropometry, clinical history, ultrasound, etc.) will be registered here
 ];
 
@@ -187,6 +202,28 @@ export const CONCEPTS = {
   fshHusband: 'c0010001-0000-0000-0000-000000000042',
   testosteroneHusband: 'c0010001-0000-0000-0000-000000000043',
   testicularBiopsy: 'c0010001-0000-0000-0000-000000000044',
+  // Previous OI and IUI concepts (Form 8)
+  prevOi: 'c0010001-0000-0000-0000-000000000045',
+  oiDrugs: 'c0010001-0000-0000-0000-000000000046',
+  oiDose: 'c0010001-0000-0000-0000-000000000047',
+  oiCycles: 'c0010001-0000-0000-0000-000000000048',
+  oiYear: 'c0010001-0000-0000-0000-000000000049',
+  prevOiIui: 'c0010001-0000-0000-0000-000000000050',
+  iuiDrugs: 'c0010001-0000-0000-0000-000000000051',
+  iuiDose: 'c0010001-0000-0000-0000-000000000052',
+  iuiCycles: 'c0010001-0000-0000-0000-000000000053',
+  iuiYear: 'c0010001-0000-0000-0000-000000000054',
+  failedIvf: 'c0010001-0000-0000-0000-000000000055',
+  failedIvfCycles: 'c0010001-0000-0000-0000-000000000056',
+  previousArtNotes: 'c0010001-0000-0000-0000-000000000057',
+  // Standard and medication answer concepts
+  yes: '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA',
+  no: '1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA',
+  letrozole: 'c0010002-0000-0000-0000-000000000501',
+  hmg: 'c0010002-0000-0000-0000-000000000502',
+  clomiphene: 'c0010002-0000-0000-0000-000000000503',
+  hmgPlusClomiphene: 'c0010002-0000-0000-0000-000000000504',
+  multipleOvi: 'c0010002-0000-0000-0000-000000000505',
 };
 
 // Person Attribute Type UUID for Patient Telephone Number

@@ -140,6 +140,26 @@
       "slot": "aiims-male-hormone-surgery-dashboard-slot",
       "online": true,
       "offline": true
+    },
+    {
+      "name": "aiims-previous-oi-iui-dashboard-link",
+      "component": "aiimsPreviousOiIuiDashboardLink",
+      "slot": "patient-chart-dashboard-slot",
+      "order": 1,
+      "meta": {
+        "slot": "aiims-previous-oi-iui-dashboard-slot",
+        "path": "aiims-previous-oi-iui",
+        "title": "Previous OI & IUI"
+      },
+      "online": true,
+      "offline": true
+    },
+    {
+      "name": "aiims-previous-oi-iui-dashboard",
+      "component": "aiimsPreviousOiIuiDashboard",
+      "slot": "aiims-previous-oi-iui-dashboard-slot",
+      "online": true,
+      "offline": true
     }
   ]
 }

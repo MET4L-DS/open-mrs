@@ -90,6 +90,14 @@ const maleHormoneSurgeryExtensions = createFormExtensions(
 export const aiimsMaleHormoneSurgeryDashboardLink = maleHormoneSurgeryExtensions.link;
 export const aiimsMaleHormoneSurgeryDashboard = maleHormoneSurgeryExtensions.dashboard;
 
+const previousOiIuiExtensions = createFormExtensions(
+  getFormRegistryEntry('previous-oi-iui'),
+  () => import('./previous-oi-iui/previous-oi-iui-dashboard.component')
+);
+
+export const aiimsPreviousOiIuiDashboardLink = previousOiIuiExtensions.link;
+export const aiimsPreviousOiIuiDashboard = previousOiIuiExtensions.dashboard;
+
 export { FORM_REGISTRY, getFormRegistryEntry, getFormUuid, getFormName } from './constants';
 export * from './shared';
 export * from './infertility-type';
@@ -98,6 +106,7 @@ export * from './menstrual-history';
 export * from './female-factor';
 export * from './male-factor';
 export * from './male-hormone-surgery';
+export * from './previous-oi-iui';
 
 
 

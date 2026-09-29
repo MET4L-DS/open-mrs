@@ -195,6 +195,14 @@ python scripts/publish_aiims_form.py
    - Hormonal evaluation: Follicle Stimulating Hormone (FSH) in `mIU/mL`, Serum Testosterone in `ng/dL`.
    - Surgical & biopsy findings: Textarea for Testicular Biopsy report and surgical sperm retrieval notes (Micro-TESE / TESE / PESA).
    - Observation card with numeric rows, localized units, and Scalpel icon.
+8. **Form 8: AIIMS Visit: Previous OI and IUI** (`80930653-7e80-4bfd-9e29-ec37c334d887`)
+   - Path: `aiims-previous-oi-iui`
+   - Prior assisted reproductive technology (ART) interventions across 3 modalities:
+     - Previous Ovulation Induction (OI alone): Letrozole, hMG, Clomiphene, hMG + Clomiphene, Multiple OVI; Dose, Cycles, Year.
+     - Previous Ovulation Induction & IUI (OI + IUI): Letrozole, hMG, Clomiphene, hMG + Clomiphene; Dose, Cycles, Year.
+     - Failed In Vitro Fertilization (Failed IVF): Failed cycles count and clinical notes textarea.
+   - Dynamic AMPATH skip logic for conditional medication/cycle entry.
+   - Observation card with Medication icon, teal/purple Carbon tags, and localized unit interpolation.
 
 ---
 
@@ -207,9 +215,9 @@ python scripts/publish_aiims_form.py
 - [x] Register Form 5: Female Factor Infertility (`female-factor`).
 - [x] Register Form 6: Male Factor Infertility (`male-factor`).
 - [x] Register Form 7: Male Hormone & Surgery (`male-hormone-surgery`).
-- [ ] Register Form 8: Anthropometry & Clinical Examination.
-- [ ] Register Form 9: Ultrasound & Imaging.
-- [ ] Register Form 10: Diagnosis & Treatment Plan.
+- [x] Register Form 8: Previous OI and IUI (`previous-oi-iui`).
+- [ ] Register Form 9: Anthropometry & Clinical Examination.
+- [ ] Register Form 10: Ultrasound & Imaging.
 
 
 
