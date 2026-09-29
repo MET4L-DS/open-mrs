@@ -131,7 +131,25 @@
   "recordPreviousOiIui": "Record OI & IUI History",
   "updatePreviousOiIui": "Update OI & IUI History",
   "loadingPreviousOiIui": "Loading Previous OI & IUI history...",
-  "noRecordedPreviousOiIuiEncounter": "No AIIMS Previous OI and IUI encounter recorded yet"
+  "noRecordedPreviousOiIuiEncounter": "No AIIMS Previous OI and IUI encounter recorded yet",
+  "aiimsPreviousSurgeryTitle": "Previous Surgery",
+  "previousSurgery": "Previous Surgery",
+  "previousSurgeryPerformed": "Previous Surgery Performed",
+  "surgicalApproach": "Surgical Approach",
+  "yearOrDateOfSurgery": "Year / Date of Surgery",
+  "uterineSurgeries": "Uterine Surgeries",
+  "endometriosisSurgeries": "Endometriosis Surgeries",
+  "ovarianSurgeries": "Ovarian Surgeries",
+  "fallopianTubeSurgeries": "Fallopian Tube Surgeries",
+  "peritonealSurgeries": "Peritoneal Surgeries",
+  "intraoperativeFindings": "Intra-operative Findings",
+  "previousSurgeryOtherNotes": "Previous Surgery Notes",
+  "noPreviousSurgeryHeader": "No Previous Surgery History Recorded Yet",
+  "noPreviousSurgeryBody": "Previous surgical procedures including laparoscopy, laparotomy, and pelvic interventions have not been recorded for this patient yet.",
+  "recordPreviousSurgery": "Record Previous Surgery",
+  "updatePreviousSurgery": "Update Previous Surgery",
+  "loadingPreviousSurgery": "Loading Previous Surgery history...",
+  "noRecordedPreviousSurgeryEncounter": "No AIIMS Previous Surgery encounter recorded yet"
 }
 
 

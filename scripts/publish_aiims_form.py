@@ -69,6 +69,14 @@ FORMS_TO_PUBLISH = [
         "uuid": "80930653-7e80-4bfd-9e29-ec37c334d887",
         "encounter_type": "dd528487-82a5-4082-9c72-ed246bd49591",  # Consultation
     },
+    {
+        "name": "AIIMS Visit: Previous Surgery",
+        "version": "1.0",
+        "description": "AIIMS Reproductive Medicine & IVF Previous Surgery Sheet",
+        "schema_path": "forms/aiims_prev_surgery.json",
+        "uuid": "80930653-7e80-4bfd-9e29-ec37c334d888",
+        "encounter_type": "dd528487-82a5-4082-9c72-ed246bd49591",  # Consultation
+    },
 ]
 
 def run_sql(sql_commands):

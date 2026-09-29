@@ -203,6 +203,21 @@ python scripts/publish_aiims_form.py
      - Failed In Vitro Fertilization (Failed IVF): Failed cycles count and clinical notes textarea.
    - Dynamic AMPATH skip logic for conditional medication/cycle entry.
    - Observation card with Medication icon, teal/purple Carbon tags, and localized unit interpolation.
+9. **Form 9: AIIMS Visit: Previous Surgery** (`80930653-7e80-4bfd-9e29-ec37c334d888`)
+   - Path: `aiims-previous-surgery`
+   - Surgical history for gynecological & fertility interventions:
+     - Previous Surgery Performed (Yes / No).
+     - Surgical Approach: Laparoscopy, Open, Laparoscopy converted to open.
+     - Year / Date of Surgery.
+     - Categorized procedures with conditional laterality (Right / Left / Bilateral):
+       - Uterine: Adenomyomectomy, Myomectomy, Isthmocele Repair.
+       - Endometriosis (with laterality): Cystectomy, Bipolar Ablation, Argon Plasma Coagulation (APC), Drainage, Sclerotherapy, Oophorectomy.
+       - Ovarian (with laterality): Dermoid/Mature Teratoma, Simple Cyst, Paraovarian Cyst, Cyst Aspiration, Oophorectomy, Cystectomy.
+       - Fallopian Tube (with laterality): Chromopertubation, Tubal cannulation, Salpingectomy, Fimbrioplasty, Tubal clipping, Recanalization.
+       - Peritoneal: Adhesiolysis, Peritonectomy.
+     - Clinical narrative: Intra-operative findings and surgical notes textareas.
+   - Observation card with `Cut` icon from Carbon React and color-coded tags displaying procedures paired with their laterality.
+   - Laterality extraction: `PROCEDURE_TO_LATERALITY_MAP` maps both concept UUIDs and localized display labels to respective laterality question UUIDs, formatted cleanly as `Procedure (Right|Left|Bilateral)`.
 
 ---
 
@@ -216,8 +231,10 @@ python scripts/publish_aiims_form.py
 - [x] Register Form 6: Male Factor Infertility (`male-factor`).
 - [x] Register Form 7: Male Hormone & Surgery (`male-hormone-surgery`).
 - [x] Register Form 8: Previous OI and IUI (`previous-oi-iui`).
-- [ ] Register Form 9: Anthropometry & Clinical Examination.
-- [ ] Register Form 10: Ultrasound & Imaging.
+- [x] Register Form 9: Previous Surgery (`previous-surgery`).
+- [ ] Register Form 10: Anthropometry & Clinical Examination.
+- [ ] Register Form 11: Ultrasound & Imaging.
+
 
 
 

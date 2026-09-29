@@ -1,4 +1,4 @@
-import { Identification, Events, ParentChild, Calendar, Activity, GenderMale, Scalpel, Medication } from '@carbon/react/icons';
+import { Identification, Events, ParentChild, Calendar, Activity, GenderMale, Scalpel, Medication, Cut } from '@carbon/react/icons';
 import { type FormRegistryEntry } from './shared/types';
 
 export const moduleName = '@aiims/esm-demographics-app';
@@ -34,6 +34,10 @@ export const AIIMS_MALE_HORMONE_SURGERY_FORM_NAME = 'AIIMS Visit: Male Hormone a
 // Form UUID for AIIMS Visit: Previous OI and IUI
 export const AIIMS_PREV_OI_IUI_FORM_UUID = '80930653-7e80-4bfd-9e29-ec37c334d887';
 export const AIIMS_PREV_OI_IUI_FORM_NAME = 'AIIMS Visit: Previous OI and IUI';
+
+// Form UUID for AIIMS Visit: Previous Surgery
+export const AIIMS_PREV_SURGERY_FORM_UUID = '80930653-7e80-4bfd-9e29-ec37c334d888';
+export const AIIMS_PREV_SURGERY_FORM_NAME = 'AIIMS Visit: Previous Surgery';
 
 // Form Registry: Centralized configuration for all current and future AIIMS forms
 export const FORM_REGISTRY: FormRegistryEntry[] = [
@@ -123,6 +127,17 @@ export const FORM_REGISTRY: FormRegistryEntry[] = [
     title: 'Previous OI & IUI',
     slot: 'aiims-previous-oi-iui-dashboard-slot',
     icon: Medication,
+    order: 1,
+  },
+  {
+    key: 'previous-surgery',
+    uuid: AIIMS_PREV_SURGERY_FORM_UUID,
+    name: AIIMS_PREV_SURGERY_FORM_NAME,
+    path: 'aiims-previous-surgery',
+    titleKey: 'aiimsPreviousSurgeryTitle',
+    title: 'Previous Surgery',
+    slot: 'aiims-previous-surgery-dashboard-slot',
+    icon: Cut,
     order: 1,
   },
   // Additional forms (anthropometry, clinical history, ultrasound, etc.) will be registered here
@@ -216,6 +231,66 @@ export const CONCEPTS = {
   failedIvf: 'c0010001-0000-0000-0000-000000000055',
   failedIvfCycles: 'c0010001-0000-0000-0000-000000000056',
   previousArtNotes: 'c0010001-0000-0000-0000-000000000057',
+  // Previous Surgery concepts (Form 9)
+  previousSurgeryPerformed: 'c0010001-0000-0000-0000-000000000058',
+  surgicalApproach: 'c0010001-0000-0000-0000-000000000059',
+  yearOrDateOfSurgery: 'c0010001-0000-0000-0000-000000000060',
+  uterineSurgeries: 'c0010001-0000-0000-0000-000000000061',
+  endometriosisSurgeries: 'c0010001-0000-0000-0000-000000000062',
+  ovarianSurgeries: 'c0010001-0000-0000-0000-000000000063',
+  fallopianTubeSurgeries: 'c0010001-0000-0000-0000-000000000064',
+  peritonealSurgeries: 'c0010001-0000-0000-0000-000000000065',
+  // Procedure laterality questions
+  endometrioticCystectomyLaterality: 'c0010001-0000-0000-0000-000000000066',
+  endometrioticBipolarAblationLaterality: 'c0010001-0000-0000-0000-000000000067',
+  endometrioticApcLaterality: 'c0010001-0000-0000-0000-000000000068',
+  endometrioticDrainageLaterality: 'c0010001-0000-0000-0000-000000000069',
+  endometrioticSclerotherapyLaterality: 'c0010001-0000-0000-0000-000000000070',
+  endometriosisOophorectomyLaterality: 'c0010001-0000-0000-0000-000000000071',
+  ovarianDermoidLaterality: 'c0010001-0000-0000-0000-000000000072',
+  simpleOvarianCystLaterality: 'c0010001-0000-0000-0000-000000000073',
+  paraovarianCystLaterality: 'c0010001-0000-0000-0000-000000000074',
+  ovarianCystAspirationLaterality: 'c0010001-0000-0000-0000-000000000075',
+  oophorectomyLaterality: 'c0010001-0000-0000-0000-000000000076',
+  ovarianCystectomyLaterality: 'c0010001-0000-0000-0000-000000000077',
+  chromopertubationLaterality: 'c0010001-0000-0000-0000-000000000078',
+  tubalCannulationLaterality: 'c0010001-0000-0000-0000-000000000079',
+  salpingectomyLaterality: 'c0010001-0000-0000-0000-000000000080',
+  fimbrioplastyLaterality: 'c0010001-0000-0000-0000-000000000081',
+  tubalClippingLaterality: 'c0010001-0000-0000-0000-000000000082',
+  recanalizationLaterality: 'c0010001-0000-0000-0000-000000000083',
+  intraoperativeFindings: 'c0010001-0000-0000-0000-000000000084',
+  previousSurgeryOtherNotes: 'c0010001-0000-0000-0000-000000000085',
+  // Surgery answer concepts
+  lateralityRight: 'c0010002-0000-0000-0000-000000000601',
+  lateralityLeft: 'c0010002-0000-0000-0000-000000000602',
+  lateralityBilateral: 'c0010002-0000-0000-0000-000000000603',
+  approachLaparoscopy: 'c0010002-0000-0000-0000-000000000611',
+  approachOpen: 'c0010002-0000-0000-0000-000000000612',
+  approachLapConvertedOpen: 'c0010002-0000-0000-0000-000000000613',
+  uterineAdenomyomectomy: 'c0010002-0000-0000-0000-000000000621',
+  uterineMyomectomy: 'c0010002-0000-0000-0000-000000000622',
+  uterineIsthmoceleRepair: 'c0010002-0000-0000-0000-000000000623',
+  endometrioticCystectomy: 'c0010002-0000-0000-0000-000000000631',
+  endometrioticBipolarAblation: 'c0010002-0000-0000-0000-000000000632',
+  endometrioticApc: 'c0010002-0000-0000-0000-000000000633',
+  endometrioticDrainage: 'c0010002-0000-0000-0000-000000000634',
+  endometrioticSclerotherapy: 'c0010002-0000-0000-0000-000000000635',
+  endometriosisOophorectomy: 'c0010002-0000-0000-0000-000000000636',
+  ovarianDermoid: 'c0010002-0000-0000-0000-000000000641',
+  simpleOvarianCyst: 'c0010002-0000-0000-0000-000000000642',
+  paraovarianCyst: 'c0010002-0000-0000-0000-000000000643',
+  ovarianCystAspiration: 'c0010002-0000-0000-0000-000000000644',
+  oophorectomyProcedure: 'c0010002-0000-0000-0000-000000000645',
+  ovarianCystectomy: 'c0010002-0000-0000-0000-000000000646',
+  chromopertubation: 'c0010002-0000-0000-0000-000000000651',
+  tubalCannulation: 'c0010002-0000-0000-0000-000000000652',
+  salpingectomy: 'c0010002-0000-0000-0000-000000000653',
+  fimbrioplasty: 'c0010002-0000-0000-0000-000000000654',
+  tubalClipping: 'c0010002-0000-0000-0000-000000000655',
+  recanalization: 'c0010002-0000-0000-0000-000000000656',
+  peritonealAdhesiolysis: 'c0010002-0000-0000-0000-000000000661',
+  peritonectomy: 'c0010002-0000-0000-0000-000000000662',
   // Standard and medication answer concepts
   yes: '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA',
   no: '1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA',

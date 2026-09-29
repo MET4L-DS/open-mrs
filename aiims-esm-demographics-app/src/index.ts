@@ -98,6 +98,14 @@ const previousOiIuiExtensions = createFormExtensions(
 export const aiimsPreviousOiIuiDashboardLink = previousOiIuiExtensions.link;
 export const aiimsPreviousOiIuiDashboard = previousOiIuiExtensions.dashboard;
 
+const previousSurgeryExtensions = createFormExtensions(
+  getFormRegistryEntry('previous-surgery'),
+  () => import('./previous-surgery/previous-surgery-dashboard.component')
+);
+
+export const aiimsPreviousSurgeryDashboardLink = previousSurgeryExtensions.link;
+export const aiimsPreviousSurgeryDashboard = previousSurgeryExtensions.dashboard;
+
 export { FORM_REGISTRY, getFormRegistryEntry, getFormUuid, getFormName } from './constants';
 export * from './shared';
 export * from './infertility-type';
@@ -107,6 +115,7 @@ export * from './female-factor';
 export * from './male-factor';
 export * from './male-hormone-surgery';
 export * from './previous-oi-iui';
+export * from './previous-surgery';
 
 
 

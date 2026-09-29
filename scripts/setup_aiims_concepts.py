@@ -176,6 +176,36 @@ female_factor_answers = [
     ("c0010002-0000-0000-0000-000000000503", "Clomiphene citrate"),
     ("c0010002-0000-0000-0000-000000000504", "Human menopausal gonadotropin + Clomiphene citrate"),
     ("c0010002-0000-0000-0000-000000000505", "Multiple OVI"),
+    # Previous Surgery answers (Group 600)
+    ("c0010002-0000-0000-0000-000000000601", "Right"),
+    ("c0010002-0000-0000-0000-000000000602", "Left"),
+    ("c0010002-0000-0000-0000-000000000603", "Bilateral"),
+    ("c0010002-0000-0000-0000-000000000611", "Laparoscopy"),
+    ("c0010002-0000-0000-0000-000000000612", "Open"),
+    ("c0010002-0000-0000-0000-000000000613", "Laparoscopy converted to open"),
+    ("c0010002-0000-0000-0000-000000000621", "Uterine Adenomyomectomy"),
+    ("c0010002-0000-0000-0000-000000000622", "Uterine Myomectomy"),
+    ("c0010002-0000-0000-0000-000000000623", "Uterine Isthmocele Repair"),
+    ("c0010002-0000-0000-0000-000000000631", "Endometriotic Cystectomy"),
+    ("c0010002-0000-0000-0000-000000000632", "Endometriotic Bipolar Ablation"),
+    ("c0010002-0000-0000-0000-000000000633", "Endometriotic Argon Plasma Coagulation"),
+    ("c0010002-0000-0000-0000-000000000634", "Endometriotic Drainage"),
+    ("c0010002-0000-0000-0000-000000000635", "Endometriotic Sclerotherapy"),
+    ("c0010002-0000-0000-0000-000000000636", "Endometriosis Oophorectomy"),
+    ("c0010002-0000-0000-0000-000000000641", "Ovarian Dermoid/Mature Teratoma"),
+    ("c0010002-0000-0000-0000-000000000642", "Simple Ovarian Cyst"),
+    ("c0010002-0000-0000-0000-000000000643", "Paraovarian Cyst"),
+    ("c0010002-0000-0000-0000-000000000644", "Ovarian Cyst Aspiration"),
+    ("c0010002-0000-0000-0000-000000000645", "Oophorectomy"),
+    ("c0010002-0000-0000-0000-000000000646", "Ovarian Cystectomy"),
+    ("c0010002-0000-0000-0000-000000000651", "Chromopertubation of Fallopian tubes"),
+    ("c0010002-0000-0000-0000-000000000652", "Tubal cannulation"),
+    ("c0010002-0000-0000-0000-000000000653", "Salpingectomy of Fallopian tubes"),
+    ("c0010002-0000-0000-0000-000000000654", "Fimbrioplasty of Fallopian tubes"),
+    ("c0010002-0000-0000-0000-000000000655", "Tubal clipping of Fallopian tubes"),
+    ("c0010002-0000-0000-0000-000000000656", "Recanalization of Fallopian tubes"),
+    ("c0010002-0000-0000-0000-000000000661", "Peritoneal Adhesiolysis"),
+    ("c0010002-0000-0000-0000-000000000662", "Peritonectomy"),
 ]
 
 
@@ -339,6 +369,42 @@ full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000055", "Fail
 full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000056", "Number of Failed IVF Cycles", datatype_id=1, class_id=7, is_numeric=True, allow_decimal=0, low_abs=0, hi_abs=50))
 # Previous ART Treatment Clinical Notes
 full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000057", "Previous ART Treatment Clinical Notes", datatype_id=3, class_id=7))
+
+# Previous Surgery Concepts (Form 9)
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000058", "Previous Surgery Performed", datatype_id=2, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000059", "Surgical Approach", datatype_id=2, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000060", "Year or Date of Surgery", datatype_id=3, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000061", "Uterine Surgeries", datatype_id=2, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000062", "Endometriosis Surgeries", datatype_id=2, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000063", "Ovarian Surgeries", datatype_id=2, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000064", "Fallopian Tube Surgeries", datatype_id=2, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000065", "Peritoneal Surgeries", datatype_id=2, class_id=7))
+
+# Laterality Question Concepts (0066-0083)
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000066", "Endometriotic Cystectomy Laterality", datatype_id=2, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000067", "Endometriotic Bipolar Ablation Laterality", datatype_id=2, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000068", "Endometriotic APC Laterality", datatype_id=2, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000069", "Endometriotic Drainage Laterality", datatype_id=2, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000070", "Endometriotic Sclerotherapy Laterality", datatype_id=2, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000071", "Endometriosis Oophorectomy Laterality", datatype_id=2, class_id=7))
+
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000072", "Ovarian Dermoid Laterality", datatype_id=2, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000073", "Simple Ovarian Cyst Laterality", datatype_id=2, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000074", "Paraovarian Cyst Laterality", datatype_id=2, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000075", "Ovarian Cyst Aspiration Laterality", datatype_id=2, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000076", "Oophorectomy Laterality", datatype_id=2, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000077", "Ovarian Cystectomy Laterality", datatype_id=2, class_id=7))
+
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000078", "Chromopertubation Laterality", datatype_id=2, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000079", "Tubal Cannulation Laterality", datatype_id=2, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000080", "Salpingectomy Laterality", datatype_id=2, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000081", "Fimbrioplasty Laterality", datatype_id=2, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000082", "Tubal Clipping Laterality", datatype_id=2, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000083", "Recanalization Laterality", datatype_id=2, class_id=7))
+
+# Findings and Other Notes
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000084", "Intra-operative Findings", datatype_id=3, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000085", "Previous Surgery Other Notes", datatype_id=3, class_id=7))
 
 
 # 3. Link Answers
@@ -531,6 +597,79 @@ for ans_uuid in [
 # Failed In vitro fertilization (Yes/No) answers
 full_script.append(add_answer_sql("c0010001-0000-0000-0000-000000000055", "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"))
 full_script.append(add_answer_sql("c0010001-0000-0000-0000-000000000055", "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"))
+
+# Form 9: Previous Surgery answers
+# Previous Surgery Performed (Yes/No)
+full_script.append(add_answer_sql("c0010001-0000-0000-0000-000000000058", "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"))
+full_script.append(add_answer_sql("c0010001-0000-0000-0000-000000000058", "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"))
+
+# Surgical Approach
+for ans_uuid in [
+    "c0010002-0000-0000-0000-000000000611",  # Laparoscopy
+    "c0010002-0000-0000-0000-000000000612",  # Open
+    "c0010002-0000-0000-0000-000000000613",  # Laparoscopy converted to open
+]:
+    full_script.append(add_answer_sql("c0010001-0000-0000-0000-000000000059", ans_uuid))
+
+# Uterine Surgeries
+for ans_uuid in [
+    "c0010002-0000-0000-0000-000000000621",  # Uterine Adenomyomectomy
+    "c0010002-0000-0000-0000-000000000622",  # Uterine Myomectomy
+    "c0010002-0000-0000-0000-000000000623",  # Uterine Isthmocele Repair
+]:
+    full_script.append(add_answer_sql("c0010001-0000-0000-0000-000000000061", ans_uuid))
+
+# Endometriosis Surgeries
+for ans_uuid in [
+    "c0010002-0000-0000-0000-000000000631",  # Endometriotic Cystectomy
+    "c0010002-0000-0000-0000-000000000632",  # Endometriotic Bipolar Ablation
+    "c0010002-0000-0000-0000-000000000633",  # Endometriotic Argon Plasma Coagulation
+    "c0010002-0000-0000-0000-000000000634",  # Endometriotic Drainage
+    "c0010002-0000-0000-0000-000000000635",  # Endometriotic Sclerotherapy
+    "c0010002-0000-0000-0000-000000000636",  # Endometriosis Oophorectomy
+]:
+    full_script.append(add_answer_sql("c0010001-0000-0000-0000-000000000062", ans_uuid))
+
+# Ovarian Surgeries
+for ans_uuid in [
+    "c0010002-0000-0000-0000-000000000641",  # Ovarian Dermoid/Mature Teratoma
+    "c0010002-0000-0000-0000-000000000642",  # Simple Ovarian Cyst
+    "c0010002-0000-0000-0000-000000000643",  # Paraovarian Cyst
+    "c0010002-0000-0000-0000-000000000644",  # Ovarian Cyst Aspiration
+    "c0010002-0000-0000-0000-000000000645",  # Oophorectomy
+    "c0010002-0000-0000-0000-000000000646",  # Ovarian Cystectomy
+]:
+    full_script.append(add_answer_sql("c0010001-0000-0000-0000-000000000063", ans_uuid))
+
+# Fallopian Tube Surgeries
+for ans_uuid in [
+    "c0010002-0000-0000-0000-000000000651",  # Chromopertubation of Fallopian tubes
+    "c0010002-0000-0000-0000-000000000652",  # Tubal cannulation
+    "c0010002-0000-0000-0000-000000000653",  # Salpingectomy of Fallopian tubes
+    "c0010002-0000-0000-0000-000000000654",  # Fimbrioplasty of Fallopian tubes
+    "c0010002-0000-0000-0000-000000000655",  # Tubal clipping of Fallopian tubes
+    "c0010002-0000-0000-0000-000000000656",  # Recanalization of Fallopian tubes
+]:
+    full_script.append(add_answer_sql("c0010001-0000-0000-0000-000000000064", ans_uuid))
+
+# Peritoneal Surgeries
+for ans_uuid in [
+    "c0010002-0000-0000-0000-000000000661",  # Peritoneal Adhesiolysis
+    "c0010002-0000-0000-0000-000000000662",  # Peritonectomy
+]:
+    full_script.append(add_answer_sql("c0010001-0000-0000-0000-000000000065", ans_uuid))
+
+# Laterality links (Right, Left, Bilateral) for each procedure with laterality (0066-0083)
+laterality_answers = [
+    "c0010002-0000-0000-0000-000000000601",  # Right
+    "c0010002-0000-0000-0000-000000000602",  # Left
+    "c0010002-0000-0000-0000-000000000603",  # Bilateral
+]
+
+for q_num in range(66, 84):
+    q_uuid = f"c0010001-0000-0000-0000-{q_num:012d}"
+    for ans_u in laterality_answers:
+        full_script.append(add_answer_sql(q_uuid, ans_u))
 
 full_script.append("END$$")
 full_script.append("DELIMITER ;")

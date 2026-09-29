@@ -1,0 +1,629 @@
+{
+  "name": "AIIMS Visit: Previous Surgery",
+  "description": "AIIMS Department of Reproductive Medicine & IVF - Previous Surgery Sheet",
+  "version": "1.0",
+  "published": true,
+  "retired": false,
+  "encounter": "Consultation",
+  "processor": "EncounterFormProcessor",
+  "referencedForms": [],
+  "pages": [
+    {
+      "label": "Previous Surgery",
+      "sections": [
+        {
+          "label": "Surgical History & Approach",
+          "isExpanded": true,
+          "questions": [
+            {
+              "label": "Previous Surgery Performed",
+              "type": "obs",
+              "id": "prev_surgery",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "c0010001-0000-0000-0000-000000000058",
+                "answers": [
+                  {
+                    "concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "No"
+                  }
+                ]
+              }
+            },
+            {
+              "label": "Surgical Approach",
+              "type": "obs",
+              "id": "surgical_approach",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "c0010001-0000-0000-0000-000000000059",
+                "answers": [
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000611",
+                    "label": "Laparoscopy"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000612",
+                    "label": "Open"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000613",
+                    "label": "Laparoscopy converted to open"
+                  }
+                ]
+              },
+              "hide": {
+                "hideWhenExpression": "!prev_surgery || prev_surgery !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              }
+            },
+            {
+              "label": "Year or Date of Surgery",
+              "type": "obs",
+              "id": "surgery_year_date",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "text",
+                "concept": "c0010001-0000-0000-0000-000000000060",
+                "placeholder": "e.g., 2023, May 2021, 15/04/2020"
+              },
+              "hide": {
+                "hideWhenExpression": "!prev_surgery || prev_surgery !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              }
+            }
+          ]
+        },
+        {
+          "label": "Uterine & Peritoneal Procedures",
+          "isExpanded": true,
+          "questions": [
+            {
+              "label": "Uterine Surgeries",
+              "type": "obs",
+              "id": "uterine_surgeries",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "checkbox",
+                "concept": "c0010001-0000-0000-0000-000000000061",
+                "answers": [
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000621",
+                    "label": "Uterine Adenomyomectomy"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000622",
+                    "label": "Uterine Myomectomy"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000623",
+                    "label": "Uterine Isthmocele Repair"
+                  }
+                ]
+              },
+              "hide": {
+                "hideWhenExpression": "!prev_surgery || prev_surgery !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              }
+            },
+            {
+              "label": "Peritoneal Surgeries",
+              "type": "obs",
+              "id": "peritoneal_surgeries",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "checkbox",
+                "concept": "c0010001-0000-0000-0000-000000000065",
+                "answers": [
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000661",
+                    "label": "Peritoneal Adhesiolysis"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000662",
+                    "label": "Peritonectomy"
+                  }
+                ]
+              },
+              "hide": {
+                "hideWhenExpression": "!prev_surgery || prev_surgery !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              }
+            }
+          ]
+        },
+        {
+          "label": "Endometriosis Procedures",
+          "isExpanded": true,
+          "questions": [
+            {
+              "label": "Endometriosis Surgeries",
+              "type": "obs",
+              "id": "endometriosis_surgeries",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "checkbox",
+                "concept": "c0010001-0000-0000-0000-000000000062",
+                "answers": [
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000631",
+                    "label": "Endometriotic Cystectomy"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000632",
+                    "label": "Endometriotic Bipolar Ablation"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000633",
+                    "label": "Endometriotic Argon Plasma Coagulation"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000634",
+                    "label": "Endometriotic Drainage"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000635",
+                    "label": "Endometriotic Sclerotherapy"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000636",
+                    "label": "Endometriosis Oophorectomy"
+                  }
+                ]
+              },
+              "hide": {
+                "hideWhenExpression": "!prev_surgery || prev_surgery !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              }
+            },
+            {
+              "label": "Endometriotic Cystectomy Laterality",
+              "type": "obs",
+              "id": "endo_cystectomy_lat",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "c0010001-0000-0000-0000-000000000066",
+                "answers": [
+                  { "concept": "c0010002-0000-0000-0000-000000000601", "label": "Right" },
+                  { "concept": "c0010002-0000-0000-0000-000000000602", "label": "Left" },
+                  { "concept": "c0010002-0000-0000-0000-000000000603", "label": "Bilateral" }
+                ]
+              },
+              "hide": {
+                "hideWhenExpression": "!endometriosis_surgeries || !endometriosis_surgeries.includes('c0010002-0000-0000-0000-000000000631')"
+              }
+            },
+            {
+              "label": "Endometriotic Bipolar Ablation Laterality",
+              "type": "obs",
+              "id": "endo_bipolar_lat",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "c0010001-0000-0000-0000-000000000067",
+                "answers": [
+                  { "concept": "c0010002-0000-0000-0000-000000000601", "label": "Right" },
+                  { "concept": "c0010002-0000-0000-0000-000000000602", "label": "Left" },
+                  { "concept": "c0010002-0000-0000-0000-000000000603", "label": "Bilateral" }
+                ]
+              },
+              "hide": {
+                "hideWhenExpression": "!endometriosis_surgeries || !endometriosis_surgeries.includes('c0010002-0000-0000-0000-000000000632')"
+              }
+            },
+            {
+              "label": "Endometriotic Argon Plasma Coagulation Laterality",
+              "type": "obs",
+              "id": "endo_apc_lat",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "c0010001-0000-0000-0000-000000000068",
+                "answers": [
+                  { "concept": "c0010002-0000-0000-0000-000000000601", "label": "Right" },
+                  { "concept": "c0010002-0000-0000-0000-000000000602", "label": "Left" },
+                  { "concept": "c0010002-0000-0000-0000-000000000603", "label": "Bilateral" }
+                ]
+              },
+              "hide": {
+                "hideWhenExpression": "!endometriosis_surgeries || !endometriosis_surgeries.includes('c0010002-0000-0000-0000-000000000633')"
+              }
+            },
+            {
+              "label": "Endometriotic Drainage Laterality",
+              "type": "obs",
+              "id": "endo_drainage_lat",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "c0010001-0000-0000-0000-000000000069",
+                "answers": [
+                  { "concept": "c0010002-0000-0000-0000-000000000601", "label": "Right" },
+                  { "concept": "c0010002-0000-0000-0000-000000000602", "label": "Left" },
+                  { "concept": "c0010002-0000-0000-0000-000000000603", "label": "Bilateral" }
+                ]
+              },
+              "hide": {
+                "hideWhenExpression": "!endometriosis_surgeries || !endometriosis_surgeries.includes('c0010002-0000-0000-0000-000000000634')"
+              }
+            },
+            {
+              "label": "Endometriotic Sclerotherapy Laterality",
+              "type": "obs",
+              "id": "endo_sclero_lat",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "c0010001-0000-0000-0000-000000000070",
+                "answers": [
+                  { "concept": "c0010002-0000-0000-0000-000000000601", "label": "Right" },
+                  { "concept": "c0010002-0000-0000-0000-000000000602", "label": "Left" },
+                  { "concept": "c0010002-0000-0000-0000-000000000603", "label": "Bilateral" }
+                ]
+              },
+              "hide": {
+                "hideWhenExpression": "!endometriosis_surgeries || !endometriosis_surgeries.includes('c0010002-0000-0000-0000-000000000635')"
+              }
+            },
+            {
+              "label": "Endometriosis Oophorectomy Laterality",
+              "type": "obs",
+              "id": "endo_oophorectomy_lat",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "c0010001-0000-0000-0000-000000000071",
+                "answers": [
+                  { "concept": "c0010002-0000-0000-0000-000000000601", "label": "Right" },
+                  { "concept": "c0010002-0000-0000-0000-000000000602", "label": "Left" },
+                  { "concept": "c0010002-0000-0000-0000-000000000603", "label": "Bilateral" }
+                ]
+              },
+              "hide": {
+                "hideWhenExpression": "!endometriosis_surgeries || !endometriosis_surgeries.includes('c0010002-0000-0000-0000-000000000636')"
+              }
+            }
+          ]
+        },
+        {
+          "label": "Ovarian & Adnexal Procedures",
+          "isExpanded": true,
+          "questions": [
+            {
+              "label": "Ovarian Surgeries",
+              "type": "obs",
+              "id": "ovarian_surgeries",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "checkbox",
+                "concept": "c0010001-0000-0000-0000-000000000063",
+                "answers": [
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000641",
+                    "label": "Ovarian Dermoid/Mature Teratoma"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000642",
+                    "label": "Simple Ovarian Cyst"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000643",
+                    "label": "Paraovarian Cyst"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000644",
+                    "label": "Ovarian Cyst Aspiration"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000645",
+                    "label": "Oophorectomy"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000646",
+                    "label": "Ovarian Cystectomy"
+                  }
+                ]
+              },
+              "hide": {
+                "hideWhenExpression": "!prev_surgery || prev_surgery !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              }
+            },
+            {
+              "label": "Ovarian Dermoid Laterality",
+              "type": "obs",
+              "id": "ovarian_dermoid_lat",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "c0010001-0000-0000-0000-000000000072",
+                "answers": [
+                  { "concept": "c0010002-0000-0000-0000-000000000601", "label": "Right" },
+                  { "concept": "c0010002-0000-0000-0000-000000000602", "label": "Left" },
+                  { "concept": "c0010002-0000-0000-0000-000000000603", "label": "Bilateral" }
+                ]
+              },
+              "hide": {
+                "hideWhenExpression": "!ovarian_surgeries || !ovarian_surgeries.includes('c0010002-0000-0000-0000-000000000641')"
+              }
+            },
+            {
+              "label": "Simple Ovarian Cyst Laterality",
+              "type": "obs",
+              "id": "simple_cyst_lat",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "c0010001-0000-0000-0000-000000000073",
+                "answers": [
+                  { "concept": "c0010002-0000-0000-0000-000000000601", "label": "Right" },
+                  { "concept": "c0010002-0000-0000-0000-000000000602", "label": "Left" },
+                  { "concept": "c0010002-0000-0000-0000-000000000603", "label": "Bilateral" }
+                ]
+              },
+              "hide": {
+                "hideWhenExpression": "!ovarian_surgeries || !ovarian_surgeries.includes('c0010002-0000-0000-0000-000000000642')"
+              }
+            },
+            {
+              "label": "Paraovarian Cyst Laterality",
+              "type": "obs",
+              "id": "paraovarian_cyst_lat",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "c0010001-0000-0000-0000-000000000074",
+                "answers": [
+                  { "concept": "c0010002-0000-0000-0000-000000000601", "label": "Right" },
+                  { "concept": "c0010002-0000-0000-0000-000000000602", "label": "Left" },
+                  { "concept": "c0010002-0000-0000-0000-000000000603", "label": "Bilateral" }
+                ]
+              },
+              "hide": {
+                "hideWhenExpression": "!ovarian_surgeries || !ovarian_surgeries.includes('c0010002-0000-0000-0000-000000000643')"
+              }
+            },
+            {
+              "label": "Ovarian Cyst Aspiration Laterality",
+              "type": "obs",
+              "id": "cyst_aspiration_lat",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "c0010001-0000-0000-0000-000000000075",
+                "answers": [
+                  { "concept": "c0010002-0000-0000-0000-000000000601", "label": "Right" },
+                  { "concept": "c0010002-0000-0000-0000-000000000602", "label": "Left" },
+                  { "concept": "c0010002-0000-0000-0000-000000000603", "label": "Bilateral" }
+                ]
+              },
+              "hide": {
+                "hideWhenExpression": "!ovarian_surgeries || !ovarian_surgeries.includes('c0010002-0000-0000-0000-000000000644')"
+              }
+            },
+            {
+              "label": "Oophorectomy Laterality",
+              "type": "obs",
+              "id": "oophorectomy_lat",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "c0010001-0000-0000-0000-000000000076",
+                "answers": [
+                  { "concept": "c0010002-0000-0000-0000-000000000601", "label": "Right" },
+                  { "concept": "c0010002-0000-0000-0000-000000000602", "label": "Left" },
+                  { "concept": "c0010002-0000-0000-0000-000000000603", "label": "Bilateral" }
+                ]
+              },
+              "hide": {
+                "hideWhenExpression": "!ovarian_surgeries || !ovarian_surgeries.includes('c0010002-0000-0000-0000-000000000645')"
+              }
+            },
+            {
+              "label": "Ovarian Cystectomy Laterality",
+              "type": "obs",
+              "id": "ovarian_cystectomy_lat",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "c0010001-0000-0000-0000-000000000077",
+                "answers": [
+                  { "concept": "c0010002-0000-0000-0000-000000000601", "label": "Right" },
+                  { "concept": "c0010002-0000-0000-0000-000000000602", "label": "Left" },
+                  { "concept": "c0010002-0000-0000-0000-000000000603", "label": "Bilateral" }
+                ]
+              },
+              "hide": {
+                "hideWhenExpression": "!ovarian_surgeries || !ovarian_surgeries.includes('c0010002-0000-0000-0000-000000000646')"
+              }
+            }
+          ]
+        },
+        {
+          "label": "Fallopian Tube (Tubal) Procedures",
+          "isExpanded": true,
+          "questions": [
+            {
+              "label": "Fallopian Tube Surgeries",
+              "type": "obs",
+              "id": "tubal_surgeries",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "checkbox",
+                "concept": "c0010001-0000-0000-0000-000000000064",
+                "answers": [
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000651",
+                    "label": "Chromopertubation of Fallopian tubes"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000652",
+                    "label": "Tubal cannulation"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000653",
+                    "label": "Salpingectomy of Fallopian tubes"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000654",
+                    "label": "Fimbrioplasty of Fallopian tubes"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000655",
+                    "label": "Tubal clipping of Fallopian tubes"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000656",
+                    "label": "Recanalization of Fallopian tubes"
+                  }
+                ]
+              },
+              "hide": {
+                "hideWhenExpression": "!prev_surgery || prev_surgery !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              }
+            },
+            {
+              "label": "Chromopertubation Laterality",
+              "type": "obs",
+              "id": "chromopertubation_lat",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "c0010001-0000-0000-0000-000000000078",
+                "answers": [
+                  { "concept": "c0010002-0000-0000-0000-000000000601", "label": "Right" },
+                  { "concept": "c0010002-0000-0000-0000-000000000602", "label": "Left" },
+                  { "concept": "c0010002-0000-0000-0000-000000000603", "label": "Bilateral" }
+                ]
+              },
+              "hide": {
+                "hideWhenExpression": "!tubal_surgeries || !tubal_surgeries.includes('c0010002-0000-0000-0000-000000000651')"
+              }
+            },
+            {
+              "label": "Tubal Cannulation Laterality",
+              "type": "obs",
+              "id": "tubal_cannulation_lat",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "c0010001-0000-0000-0000-000000000079",
+                "answers": [
+                  { "concept": "c0010002-0000-0000-0000-000000000601", "label": "Right" },
+                  { "concept": "c0010002-0000-0000-0000-000000000602", "label": "Left" },
+                  { "concept": "c0010002-0000-0000-0000-000000000603", "label": "Bilateral" }
+                ]
+              },
+              "hide": {
+                "hideWhenExpression": "!tubal_surgeries || !tubal_surgeries.includes('c0010002-0000-0000-0000-000000000652')"
+              }
+            },
+            {
+              "label": "Salpingectomy Laterality",
+              "type": "obs",
+              "id": "salpingectomy_lat",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "c0010001-0000-0000-0000-000000000080",
+                "answers": [
+                  { "concept": "c0010002-0000-0000-0000-000000000601", "label": "Right" },
+                  { "concept": "c0010002-0000-0000-0000-000000000602", "label": "Left" },
+                  { "concept": "c0010002-0000-0000-0000-000000000603", "label": "Bilateral" }
+                ]
+              },
+              "hide": {
+                "hideWhenExpression": "!tubal_surgeries || !tubal_surgeries.includes('c0010002-0000-0000-0000-000000000653')"
+              }
+            },
+            {
+              "label": "Fimbrioplasty Laterality",
+              "type": "obs",
+              "id": "fimbrioplasty_lat",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "c0010001-0000-0000-0000-000000000081",
+                "answers": [
+                  { "concept": "c0010002-0000-0000-0000-000000000601", "label": "Right" },
+                  { "concept": "c0010002-0000-0000-0000-000000000602", "label": "Left" },
+                  { "concept": "c0010002-0000-0000-0000-000000000603", "label": "Bilateral" }
+                ]
+              },
+              "hide": {
+                "hideWhenExpression": "!tubal_surgeries || !tubal_surgeries.includes('c0010002-0000-0000-0000-000000000654')"
+              }
+            },
+            {
+              "label": "Tubal Clipping Laterality",
+              "type": "obs",
+              "id": "tubal_clipping_lat",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "c0010001-0000-0000-0000-000000000082",
+                "answers": [
+                  { "concept": "c0010002-0000-0000-0000-000000000601", "label": "Right" },
+                  { "concept": "c0010002-0000-0000-0000-000000000602", "label": "Left" },
+                  { "concept": "c0010002-0000-0000-0000-000000000603", "label": "Bilateral" }
+                ]
+              },
+              "hide": {
+                "hideWhenExpression": "!tubal_surgeries || !tubal_surgeries.includes('c0010002-0000-0000-0000-000000000655')"
+              }
+            },
+            {
+              "label": "Recanalization Laterality",
+              "type": "obs",
+              "id": "recanalization_lat",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "c0010001-0000-0000-0000-000000000083",
+                "answers": [
+                  { "concept": "c0010002-0000-0000-0000-000000000601", "label": "Right" },
+                  { "concept": "c0010002-0000-0000-0000-000000000602", "label": "Left" },
+                  { "concept": "c0010002-0000-0000-0000-000000000603", "label": "Bilateral" }
+                ]
+              },
+              "hide": {
+                "hideWhenExpression": "!tubal_surgeries || !tubal_surgeries.includes('c0010002-0000-0000-0000-000000000656')"
+              }
+            }
+          ]
+        },
+        {
+          "label": "Intra-operative Findings & Remarks",
+          "isExpanded": true,
+          "questions": [
+            {
+              "label": "Intra-operative Findings",
+              "type": "obs",
+              "id": "intraoperative_findings",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "textarea",
+                "concept": "c0010001-0000-0000-0000-000000000084",
+                "rows": 4,
+                "placeholder": "Enter intra-operative observations, pelvic adhesions, endometriosis staging, tubal status, etc."
+              }
+            },
+            {
+              "label": "Other Surgeries / Remarks",
+              "type": "obs",
+              "id": "surgery_others",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "textarea",
+                "concept": "c0010001-0000-0000-0000-000000000085",
+                "rows": 3,
+                "placeholder": "Other previous surgeries, appendectomy, cholecystectomy, or clinical remarks..."
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
