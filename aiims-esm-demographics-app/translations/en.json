@@ -85,5 +85,17 @@
   "recordFemaleFactor": "Record Female Factor",
   "updateFemaleFactor": "Update Female Factor",
   "loadingFemaleFactor": "Loading Female Factor details...",
-  "noRecordedFemaleFactorEncounter": "No AIIMS Female Factor encounter recorded yet"
+  "noRecordedFemaleFactorEncounter": "No AIIMS Female Factor encounter recorded yet",
+  "aiimsMaleFactorTitle": "Male Factor",
+  "maleInfertilityFactor": "Male Infertility Factors",
+  "azoospermiaClassification": "Azoospermia Classification",
+  "maleFactorOthers": "Clinical Notes",
+  "maleFactorDetails": "Male Factor Infertility Details",
+  "noMaleFactorHeader": "No Male Factor Recorded Yet",
+  "noMaleFactorBody": "Semen analysis indicators, azoospermia details, and other male infertility factors have not been submitted for this patient yet.",
+  "recordMaleFactor": "Record Male Factor",
+  "updateMaleFactor": "Update Male Factor",
+  "loadingMaleFactor": "Loading Male Factor details...",
+  "noRecordedMaleFactorEncounter": "No AIIMS Male Factor encounter recorded yet"
 }
+

@@ -183,6 +183,13 @@ python scripts/publish_aiims_form.py
      - Others -> Hypogonadotropic hypogonadism, Oncofertility, H/O Tuberculosis, Turner Mosaic, Unexplained, Serodiscordant.
      - Clinical notes textarea for custom remarks.
    - Observation card with Carbon tags and detail rows.
+6. **Form 6: AIIMS Visit: Male Factor** (`80930653-7e80-4bfd-9e29-ec37c334d885`)
+   - Path: `aiims-male-factor`
+   - Diagnostic categories: Multi-select checkboxes for Azoospermia, Oligozoospermia, Asthenozoospermia, Teratozoospermia, Unexplained infertility, Erectile dysfunction, Ejaculatory Dysfunction, Retrograde Ejaculation, Oligoasthenoteratozoospermia (OATS).
+   - Nested skip logic:
+     - Selecting "Azoospermia" conditionally reveals Azoospermia Details (Obstructive vs. Non-Obstructive).
+   - Clinical notes textarea for semen analysis parameters or surgical remarks.
+   - Observation card with teal Carbon tags, detail rows, and GenderMale icon.
 
 ---
 
@@ -193,9 +200,10 @@ python scripts/publish_aiims_form.py
 - [x] Register Form 3: Obstetric History (`obstetric-history`).
 - [x] Register Form 4: Menstrual History (`menstrual-history`).
 - [x] Register Form 5: Female Factor Infertility (`female-factor`).
-- [ ] Register Form 6: Male Factor Infertility.
+- [x] Register Form 6: Male Factor Infertility (`male-factor`).
 - [ ] Register Form 7: Anthropometry & Clinical Examination.
 - [ ] Register Form 8: Ultrasound & Imaging.
 - [ ] Register Form 9: Diagnosis & Treatment Plan.
+
 
 

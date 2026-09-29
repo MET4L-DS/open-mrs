@@ -1,0 +1,106 @@
+{
+  "name": "AIIMS Visit: Male Factor",
+  "description": "AIIMS Department of Reproductive Medicine & IVF - Male Factor Infertility Diagnostic Sheet",
+  "version": "1.0",
+  "published": true,
+  "retired": false,
+  "encounter": "Consultation",
+  "processor": "EncounterFormProcessor",
+  "referencedForms": [],
+  "pages": [
+    {
+      "label": "Male Factor Infertility",
+      "sections": [
+        {
+          "label": "Male Factor Diagnostic Categories",
+          "isExpanded": true,
+          "questions": [
+            {
+              "label": "Male Infertility Factor",
+              "type": "obs",
+              "id": "male_factors",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "checkbox",
+                "concept": "c0010001-0000-0000-0000-000000000039",
+                "answers": [
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000401",
+                    "label": "Azoospermia"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000402",
+                    "label": "Oligozoospermia"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000403",
+                    "label": "Asthenozoospermia"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000404",
+                    "label": "Teratozoospermia"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000405",
+                    "label": "Unexplained infertility"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000406",
+                    "label": "Erectile dysfunction"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000407",
+                    "label": "Ejaculatory Dysfunction"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000408",
+                    "label": "Retrograde Ejaculation"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000409",
+                    "label": "Oligoasthenoteratozoospermia (OATS)"
+                  }
+                ]
+              }
+            },
+            {
+              "label": "Azoospermia Classification",
+              "type": "obs",
+              "id": "azoospermia_details",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "c0010001-0000-0000-0000-000000000040",
+                "answers": [
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000411",
+                    "label": "Obstructive"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000412",
+                    "label": "Non-Obstructive"
+                  }
+                ]
+              },
+              "hide": {
+                "hideWhenExpression": "!male_factors || !male_factors.includes('c0010002-0000-0000-0000-000000000401')"
+              }
+            },
+            {
+              "label": "Clinical Notes / Remarks",
+              "type": "obs",
+              "id": "male_factor_notes",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "textarea",
+                "concept": "c0010001-0000-0000-0000-000000000041",
+                "rows": 4,
+                "placeholder": "Enter additional clinical findings, semen analysis notes, or surgical history..."
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

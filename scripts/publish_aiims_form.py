@@ -45,6 +45,14 @@ FORMS_TO_PUBLISH = [
         "uuid": "80930653-7e80-4bfd-9e29-ec37c334d884",
         "encounter_type": "dd528487-82a5-4082-9c72-ed246bd49591",  # Consultation
     },
+    {
+        "name": "AIIMS Visit: Male Factor",
+        "version": "1.0",
+        "description": "AIIMS Reproductive Medicine & IVF Male Factor Infertility Diagnostic Sheet",
+        "schema_path": "forms/aiims_male_factor.json",
+        "uuid": "80930653-7e80-4bfd-9e29-ec37c334d885",
+        "encounter_type": "dd528487-82a5-4082-9c72-ed246bd49591",  # Consultation
+    },
 ]
 
 def run_sql(sql_commands):

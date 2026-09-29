@@ -74,10 +74,20 @@ const femaleFactorExtensions = createFormExtensions(
 export const aiimsFemaleFactorDashboardLink = femaleFactorExtensions.link;
 export const aiimsFemaleFactorDashboard = femaleFactorExtensions.dashboard;
 
+const maleFactorExtensions = createFormExtensions(
+  getFormRegistryEntry('male-factor'),
+  () => import('./male-factor/male-factor-dashboard.component')
+);
+
+export const aiimsMaleFactorDashboardLink = maleFactorExtensions.link;
+export const aiimsMaleFactorDashboard = maleFactorExtensions.dashboard;
+
 export { FORM_REGISTRY, getFormRegistryEntry, getFormUuid, getFormName } from './constants';
 export * from './shared';
 export * from './infertility-type';
 export * from './obstetric-history';
 export * from './menstrual-history';
 export * from './female-factor';
+export * from './male-factor';
+
 

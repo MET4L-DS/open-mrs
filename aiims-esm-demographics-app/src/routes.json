@@ -100,6 +100,26 @@
       "slot": "aiims-female-factor-dashboard-slot",
       "online": true,
       "offline": true
+    },
+    {
+      "name": "aiims-male-factor-dashboard-link",
+      "component": "aiimsMaleFactorDashboardLink",
+      "slot": "patient-chart-dashboard-slot",
+      "order": 1,
+      "meta": {
+        "slot": "aiims-male-factor-dashboard-slot",
+        "path": "aiims-male-factor",
+        "title": "Male Factor"
+      },
+      "online": true,
+      "offline": true
+    },
+    {
+      "name": "aiims-male-factor-dashboard",
+      "component": "aiimsMaleFactorDashboard",
+      "slot": "aiims-male-factor-dashboard-slot",
+      "online": true,
+      "offline": true
     }
   ]
 }

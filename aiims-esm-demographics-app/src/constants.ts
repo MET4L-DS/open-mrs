@@ -1,4 +1,4 @@
-import { Identification, Events, ParentChild, Calendar, Activity } from '@carbon/react/icons';
+import { Identification, Events, ParentChild, Calendar, Activity, GenderMale } from '@carbon/react/icons';
 import { type FormRegistryEntry } from './shared/types';
 
 export const moduleName = '@aiims/esm-demographics-app';
@@ -22,6 +22,10 @@ export const AIIMS_MENSTRUAL_FORM_NAME = 'AIIMS Visit: Menstrual History';
 // Form UUID for AIIMS Visit: Female Factor
 export const AIIMS_FEMALE_FACTOR_FORM_UUID = '80930653-7e80-4bfd-9e29-ec37c334d884';
 export const AIIMS_FEMALE_FACTOR_FORM_NAME = 'AIIMS Visit: Female Factor';
+
+// Form UUID for AIIMS Visit: Male Factor
+export const AIIMS_MALE_FACTOR_FORM_UUID = '80930653-7e80-4bfd-9e29-ec37c334d885';
+export const AIIMS_MALE_FACTOR_FORM_NAME = 'AIIMS Visit: Male Factor';
 
 // Form Registry: Centralized configuration for all current and future AIIMS forms
 export const FORM_REGISTRY: FormRegistryEntry[] = [
@@ -78,6 +82,17 @@ export const FORM_REGISTRY: FormRegistryEntry[] = [
     title: 'Female Factor',
     slot: 'aiims-female-factor-dashboard-slot',
     icon: Activity,
+    order: 1,
+  },
+  {
+    key: 'male-factor',
+    uuid: AIIMS_MALE_FACTOR_FORM_UUID,
+    name: AIIMS_MALE_FACTOR_FORM_NAME,
+    path: 'aiims-male-factor',
+    titleKey: 'aiimsMaleFactorTitle',
+    title: 'Male Factor',
+    slot: 'aiims-male-factor-dashboard-slot',
+    icon: GenderMale,
     order: 1,
   },
   // Additional forms (anthropometry, clinical history, ultrasound, etc.) will be registered here
@@ -137,6 +152,22 @@ export const CONCEPTS = {
   uterineFactorDetails: 'c0010001-0000-0000-0000-000000000036',
   otherFemaleFactors: 'c0010001-0000-0000-0000-000000000037',
   femaleFactorOthers: 'c0010001-0000-0000-0000-000000000038',
+  // Male Factor concepts
+  maleInfertilityFactor: 'c0010001-0000-0000-0000-000000000039',
+  azoospermiaDetails: 'c0010001-0000-0000-0000-000000000040',
+  maleFactorOthers: 'c0010001-0000-0000-0000-000000000041',
+  // Male Factor answer concepts
+  azoospermia: 'c0010002-0000-0000-0000-000000000401',
+  oligozoospermia: 'c0010002-0000-0000-0000-000000000402',
+  asthenozoospermia: 'c0010002-0000-0000-0000-000000000403',
+  teratozoospermia: 'c0010002-0000-0000-0000-000000000404',
+  unexplainedInfertilityMale: 'c0010002-0000-0000-0000-000000000405',
+  erectileDysfunction: 'c0010002-0000-0000-0000-000000000406',
+  ejaculatoryDysfunction: 'c0010002-0000-0000-0000-000000000407',
+  retrogradeEjaculation: 'c0010002-0000-0000-0000-000000000408',
+  oats: 'c0010002-0000-0000-0000-000000000409',
+  obstructiveAzoospermia: 'c0010002-0000-0000-0000-000000000411',
+  nonObstructiveAzoospermia: 'c0010002-0000-0000-0000-000000000412',
 };
 
 // Person Attribute Type UUID for Patient Telephone Number

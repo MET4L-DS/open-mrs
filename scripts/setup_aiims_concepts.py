@@ -158,7 +158,20 @@ female_factor_answers = [
     ("c0010002-0000-0000-0000-000000000364", "Turner Mosaic"),
     ("c0010002-0000-0000-0000-000000000365", "Unexplained Infertility"),
     ("c0010002-0000-0000-0000-000000000366", "Serodiscordant couple"),
+    # Male Factor answers
+    ("c0010002-0000-0000-0000-000000000401", "Azoospermia"),
+    ("c0010002-0000-0000-0000-000000000402", "Oligozoospermia"),
+    ("c0010002-0000-0000-0000-000000000403", "Asthenozoospermia"),
+    ("c0010002-0000-0000-0000-000000000404", "Teratozoospermia"),
+    ("c0010002-0000-0000-0000-000000000405", "Unexplained Infertility (Male)"),
+    ("c0010002-0000-0000-0000-000000000406", "Erectile dysfunction"),
+    ("c0010002-0000-0000-0000-000000000407", "Ejaculatory Dysfunction"),
+    ("c0010002-0000-0000-0000-000000000408", "Retrograde Ejaculation"),
+    ("c0010002-0000-0000-0000-000000000409", "Oligoasthenoteratozoospermia (OATS)"),
+    ("c0010002-0000-0000-0000-000000000411", "Obstructive Azoospermia"),
+    ("c0010002-0000-0000-0000-000000000412", "Non-Obstructive Azoospermia"),
 ]
+
 
 # We assemble the migration script wrapped in a stored procedure for IF/ELSE control flow
 full_script = [
@@ -274,6 +287,14 @@ full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000036", "Uter
 full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000037", "Other Female Infertility Factors", datatype_id=2, class_id=7))
 # Female Factor Others
 full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000038", "Female Factor Others", datatype_id=3, class_id=7))
+
+# Male Factor Concepts
+# Male Infertility Factor
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000039", "Male Infertility Factor", datatype_id=2, class_id=7))
+# Azoospermia Details
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000040", "Azoospermia Details", datatype_id=2, class_id=7))
+# Male Factor Others
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000041", "Male Factor Others", datatype_id=3, class_id=7))
 
 # 3. Link Answers
 # Education Wife answers
@@ -413,6 +434,27 @@ for ans_uuid in [
     "c0010002-0000-0000-0000-000000000366",
 ]:
     full_script.append(add_answer_sql("c0010001-0000-0000-0000-000000000037", ans_uuid))
+
+# Male Infertility Factor answers
+for ans_uuid in [
+    "c0010002-0000-0000-0000-000000000401",  # Azoospermia
+    "c0010002-0000-0000-0000-000000000402",  # Oligozoospermia
+    "c0010002-0000-0000-0000-000000000403",  # Asthenozoospermia
+    "c0010002-0000-0000-0000-000000000404",  # Teratozoospermia
+    "c0010002-0000-0000-0000-000000000405",  # Unexplained Infertility (Male)
+    "c0010002-0000-0000-0000-000000000406",  # Erectile dysfunction
+    "c0010002-0000-0000-0000-000000000407",  # Ejaculatory Dysfunction
+    "c0010002-0000-0000-0000-000000000408",  # Retrograde Ejaculation
+    "c0010002-0000-0000-0000-000000000409",  # Oligoasthenoteratozoospermia (OATS)
+]:
+    full_script.append(add_answer_sql("c0010001-0000-0000-0000-000000000039", ans_uuid))
+
+# Azoospermia Details answers
+for ans_uuid in [
+    "c0010002-0000-0000-0000-000000000411",  # Obstructive
+    "c0010002-0000-0000-0000-000000000412",  # Non-Obstructive
+]:
+    full_script.append(add_answer_sql("c0010001-0000-0000-0000-000000000040", ans_uuid))
 
 full_script.append("END$$")
 full_script.append("DELIMITER ;")
