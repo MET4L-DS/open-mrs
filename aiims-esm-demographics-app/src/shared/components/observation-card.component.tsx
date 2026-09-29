@@ -29,7 +29,7 @@ export const ObservationCard: React.FC<ObservationCardProps> = ({
   return (
     <Tile className={className ? `${styles.card} ${className}` : styles.card}>
       <div className={styles.cardHeader}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+        <div className={styles.cardTitleWrapper}>
           {Icon && <Icon size={20} />}
           <h4>{title}</h4>
         </div>

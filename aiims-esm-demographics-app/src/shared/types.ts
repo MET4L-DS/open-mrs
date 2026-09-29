@@ -12,6 +12,51 @@ export interface FormRegistryEntry {
   order: number;
 }
 
+export interface OpenMrsConceptName {
+  display?: string;
+  name?: string;
+}
+
+export interface ConceptDisplay {
+  uuid: string;
+  display: string;
+  name?: string | OpenMrsConceptName;
+}
+
+export type ObsValue =
+  | string
+  | number
+  | boolean
+  | ConceptDisplay
+  | { display?: string; name?: string | OpenMrsConceptName }
+  | null
+  | undefined;
+
+export interface ObsItem {
+  uuid: string;
+  concept: ConceptDisplay;
+  value: ObsValue;
+  obsDatetime: string;
+}
+
+export interface EncounterItem {
+  uuid: string;
+  encounterDatetime: string;
+  encounterType?: {
+    uuid: string;
+    display?: string;
+  };
+  form?: {
+    uuid: string;
+    name: string;
+  };
+  obs: ObsItem[];
+}
+
+export interface EncounterResponse {
+  results: EncounterItem[];
+}
+
 export interface PersonAttribute {
   attributeType?: {
     uuid?: string;
@@ -37,4 +82,5 @@ export interface PatientResource {
   }>;
   [key: string]: unknown;
 }
+
 

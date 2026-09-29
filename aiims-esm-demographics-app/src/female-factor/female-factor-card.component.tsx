@@ -4,6 +4,7 @@ import { Tag } from '@carbon/react';
 import { useTranslation } from 'react-i18next';
 import { type AiimsFemaleFactorData } from './female-factor.resource';
 import { ObservationCard, type ObservationRow } from '../shared/components';
+import styles from '../shared/styles/shared.scss';
 
 interface FemaleFactorCardProps {
   data: AiimsFemaleFactorData;
@@ -17,7 +18,7 @@ export const FemaleFactorCard: React.FC<FemaleFactorCardProps> = ({ data }) => {
       return undefined;
     }
     return (
-      <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.25rem' }}>
+      <div className={styles.tagList}>
         {data.femaleFactors.map(factor => (
           <Tag key={factor} type="teal" size="sm">
             {factor}

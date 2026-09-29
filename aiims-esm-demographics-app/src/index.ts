@@ -1,20 +1,10 @@
 import { getAsyncLifecycle, getSyncLifecycle } from '@openmrs/esm-framework';
 import { createDashboardLink } from './shared/components/dashboard-link.component';
-import { FORM_REGISTRY, moduleName } from './constants';
+import { FORM_REGISTRY, moduleName, getFormRegistryEntry, getFormUuid, getFormName } from './constants';
 import type { FormRegistryEntry } from './shared/types';
 
 export const importTranslation = require.context('../translations', false, /.json$/, 'lazy');
 
-/**
- * Helper to retrieve form registry entry by key safely.
- */
-export function getFormRegistryEntry(key: string): FormRegistryEntry {
-  const entry = FORM_REGISTRY.find(e => e.key === key);
-  if (!entry) {
-    throw new Error(`Form configuration for key "${key}" not found in FORM_REGISTRY.`);
-  }
-  return entry;
-}
 
 /**
  * Factory helper to generate lifecycle extensions for any form entry in FORM_REGISTRY.
@@ -84,9 +74,10 @@ const femaleFactorExtensions = createFormExtensions(
 export const aiimsFemaleFactorDashboardLink = femaleFactorExtensions.link;
 export const aiimsFemaleFactorDashboard = femaleFactorExtensions.dashboard;
 
-export { FORM_REGISTRY } from './constants';
+export { FORM_REGISTRY, getFormRegistryEntry, getFormUuid, getFormName } from './constants';
 export * from './shared';
 export * from './infertility-type';
 export * from './obstetric-history';
 export * from './menstrual-history';
 export * from './female-factor';
+

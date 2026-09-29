@@ -1,34 +1,19 @@
 import { useMemo, useCallback } from 'react';
 import useSWR from 'swr';
 import { openmrsFetch, restBaseUrl } from '@openmrs/esm-framework';
+import type { ConceptUuid } from '../../constants';
+import type {
+  ConceptDisplay,
+  EncounterItem,
+  EncounterResponse,
+  ObsItem,
+  ObsValue,
+  OpenMrsConceptName,
+} from '../types';
 
-export interface ConceptDisplay {
-  uuid: string;
-  display: string;
-}
+export type { ConceptDisplay, EncounterItem, EncounterResponse, ObsItem, ObsValue, OpenMrsConceptName };
 
-export interface ObsItem {
-  uuid: string;
-  concept: ConceptDisplay;
-  value: string | number | ConceptDisplay | { display?: string; name?: { display?: string } };
-  obsDatetime: string;
-}
-
-export interface EncounterItem {
-  uuid: string;
-  encounterDatetime: string;
-  form?: {
-    uuid: string;
-    name: string;
-  };
-  obs: ObsItem[];
-}
-
-export interface EncounterResponse {
-  results: EncounterItem[];
-}
-
-export function formatObsValue(val: unknown): string {
+export function formatObsValue(val: ObsValue | unknown): string {
   if (val === null || val === undefined) {
     return '';
   }
@@ -44,6 +29,9 @@ export function formatObsValue(val: unknown): string {
       const nameObj = obj.name as Record<string, unknown>;
       if (typeof nameObj.display === 'string') {
         return nameObj.display;
+      }
+      if (typeof nameObj.name === 'string') {
+        return nameObj.name;
       }
     }
   }
@@ -97,20 +85,27 @@ export function useFormEncounter(
     return [...list].sort((a, b) => {
       const timeA = a.encounterDatetime ? new Date(a.encounterDatetime).getTime() : 0;
       const timeB = b.encounterDatetime ? new Date(b.encounterDatetime).getTime() : 0;
-      return timeB - timeA;
+      if (timeB !== timeA) {
+        return timeB - timeA;
+      }
+      return (b.uuid || '').localeCompare(a.uuid || '');
     });
   }, [allEncounters, formUuid, encounterTypeUuid]);
 
   const latestEncounter = formEncounters.length > 0 ? formEncounters[0] : null;
 
   // Build index by concept UUID for fast lookup, sorting obs deterministically by obsDatetime
+  // with UUID tie-breaker to avoid race conditions when multiple obs share identical timestamps.
   const obsByConcept = useMemo(() => {
     const map = new Map<string, ObsItem[]>();
     if (latestEncounter?.obs) {
       const sortedObs = [...latestEncounter.obs].sort((a, b) => {
         const timeA = a.obsDatetime ? new Date(a.obsDatetime).getTime() : 0;
         const timeB = b.obsDatetime ? new Date(b.obsDatetime).getTime() : 0;
-        return timeB - timeA;
+        if (timeB !== timeA) {
+          return timeB - timeA;
+        }
+        return (b.uuid || '').localeCompare(a.uuid || '');
       });
       for (const o of sortedObs) {
         if (!o.concept?.uuid) continue;
@@ -122,16 +117,27 @@ export function useFormEncounter(
     return map;
   }, [latestEncounter]);
 
-  const getObsValue = useCallback((conceptUuid: string): string => {
+  const getObsValue = useCallback((conceptUuid: ConceptUuid): string => {
     const list = obsByConcept.get(conceptUuid);
     if (!list || list.length === 0) return '';
     return formatObsValue(list[0].value);
   }, [obsByConcept]);
 
-  const getObsValues = useCallback((conceptUuid: string): string[] => {
+  const getOptionalObsValue = useCallback(
+    (conceptUuid: ConceptUuid): string | undefined => {
+      const val = getObsValue(conceptUuid);
+      return val && val.trim().length > 0 ? val : undefined;
+    },
+    [getObsValue]
+  );
+
+  const getObsValues = useCallback((conceptUuid: ConceptUuid): string[] => {
     const list = obsByConcept.get(conceptUuid);
     if (!list) return [];
-    return list.map(item => formatObsValue(item.value));
+    const formatted = list
+      .map(item => formatObsValue(item.value))
+      .filter(val => val && val.trim().length > 0);
+    return Array.from(new Set(formatted));
   }, [obsByConcept]);
 
   return {
@@ -142,7 +148,9 @@ export function useFormEncounter(
     error,
     mutate,
     getObsValue,
+    getOptionalObsValue,
     getObsValues,
     obsByConcept,
   };
 }
+

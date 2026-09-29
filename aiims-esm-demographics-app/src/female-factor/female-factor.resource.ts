@@ -1,5 +1,6 @@
 import { AIIMS_FEMALE_FACTOR_FORM_UUID, CONCEPTS } from '../constants';
 import { useFormEncounter } from '../shared/hooks/useFormEncounter';
+import type { EncounterItem } from '../shared/types';
 
 export interface AiimsFemaleFactorData {
   hasData: boolean;
@@ -16,6 +17,15 @@ export interface AiimsFemaleFactorData {
   femaleFactorOthers?: string;
 }
 
+export const initialAiimsFemaleFactorData: Readonly<AiimsFemaleFactorData> = Object.freeze({
+  hasData: false,
+  femaleFactors: [],
+  tubalFactorDetails: [],
+  endometriosisClassification: [],
+  uterineFactorDetails: [],
+  otherFemaleFactors: [],
+});
+
 export function useFemaleFactor(
   patientUuid: string | undefined,
   formUuid: string = AIIMS_FEMALE_FACTOR_FORM_UUID
@@ -25,23 +35,14 @@ export function useFemaleFactor(
     isLoading,
     error,
     mutate,
-    getObsValue,
+    getOptionalObsValue,
     getObsValues,
   } = useFormEncounter(patientUuid, formUuid);
 
   if (!latestEncounter) {
-    const femaleFactorData: AiimsFemaleFactorData = {
-      hasData: false,
-      femaleFactors: [],
-      tubalFactorDetails: [],
-      endometriosisClassification: [],
-      uterineFactorDetails: [],
-      otherFemaleFactors: [],
-    };
-
     return {
-      femaleFactorData,
-      latestEncounter: null,
+      femaleFactorData: initialAiimsFemaleFactorData,
+      latestEncounter: null as EncounterItem | null,
       isLoading,
       error,
       mutate,
@@ -54,13 +55,13 @@ export function useFemaleFactor(
     encounterDatetime: latestEncounter.encounterDatetime,
     femaleFactors: getObsValues(CONCEPTS.femaleInfertilityFactor),
     tubalFactorDetails: getObsValues(CONCEPTS.tubalFactorDetails),
-    dorDetails: getObsValue(CONCEPTS.dorDetails) || undefined,
-    poseidonGroup: getObsValue(CONCEPTS.poseidonGroup) || undefined,
+    dorDetails: getOptionalObsValue(CONCEPTS.dorDetails),
+    poseidonGroup: getOptionalObsValue(CONCEPTS.poseidonGroup),
     endometriosisClassification: getObsValues(CONCEPTS.endometriosisClassification),
-    pcosPhenotype: getObsValue(CONCEPTS.pcosPhenotype) || undefined,
+    pcosPhenotype: getOptionalObsValue(CONCEPTS.pcosPhenotype),
     uterineFactorDetails: getObsValues(CONCEPTS.uterineFactorDetails),
     otherFemaleFactors: getObsValues(CONCEPTS.otherFemaleFactors),
-    femaleFactorOthers: getObsValue(CONCEPTS.femaleFactorOthers) || undefined,
+    femaleFactorOthers: getOptionalObsValue(CONCEPTS.femaleFactorOthers),
   };
 
   return {
@@ -71,3 +72,4 @@ export function useFemaleFactor(
     mutate,
   };
 }
+

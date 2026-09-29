@@ -1,5 +1,6 @@
 import { AIIMS_MENSTRUAL_FORM_UUID, CONCEPTS } from '../constants';
 import { useFormEncounter } from '../shared/hooks/useFormEncounter';
+import type { EncounterItem } from '../shared/types';
 
 export interface AiimsMenstrualHistoryData {
   hasData: boolean;
@@ -12,6 +13,10 @@ export interface AiimsMenstrualHistoryData {
   amenorrhoeaType?: string;
 }
 
+export const initialAiimsMenstrualHistoryData: Readonly<AiimsMenstrualHistoryData> = Object.freeze({
+  hasData: false,
+});
+
 export function useMenstrualHistory(
   patientUuid: string | undefined,
   formUuid: string = AIIMS_MENSTRUAL_FORM_UUID
@@ -21,17 +26,13 @@ export function useMenstrualHistory(
     isLoading,
     error,
     mutate,
-    getObsValue,
+    getOptionalObsValue,
   } = useFormEncounter(patientUuid, formUuid);
 
   if (!latestEncounter) {
-    const menstrualData: AiimsMenstrualHistoryData = {
-      hasData: false,
-    };
-
     return {
-      menstrualData,
-      latestEncounter: null,
+      menstrualData: initialAiimsMenstrualHistoryData,
+      latestEncounter: null as EncounterItem | null,
       isLoading,
       error,
       mutate,
@@ -42,11 +43,11 @@ export function useMenstrualHistory(
     hasData: true,
     encounterUuid: latestEncounter.uuid,
     encounterDatetime: latestEncounter.encounterDatetime,
-    patternOfMenstrualCycle: getObsValue(CONCEPTS.patternOfMenstrualCycle),
-    irregularCycleType: getObsValue(CONCEPTS.irregularCycleType),
-    lastMenstrualPeriod: getObsValue(CONCEPTS.lastMenstrualPeriod),
-    flowOfMenstrualCycle: getObsValue(CONCEPTS.flowOfMenstrualCycle),
-    amenorrhoeaType: getObsValue(CONCEPTS.amenorrhoeaType),
+    patternOfMenstrualCycle: getOptionalObsValue(CONCEPTS.patternOfMenstrualCycle),
+    irregularCycleType: getOptionalObsValue(CONCEPTS.irregularCycleType),
+    lastMenstrualPeriod: getOptionalObsValue(CONCEPTS.lastMenstrualPeriod),
+    flowOfMenstrualCycle: getOptionalObsValue(CONCEPTS.flowOfMenstrualCycle),
+    amenorrhoeaType: getOptionalObsValue(CONCEPTS.amenorrhoeaType),
   };
 
   return {
@@ -57,3 +58,4 @@ export function useMenstrualHistory(
     mutate,
   };
 }
+

@@ -141,3 +141,32 @@ export const CONCEPTS = {
 
 // Person Attribute Type UUID for Patient Telephone Number
 export const TELEPHONE_ATTRIBUTE_TYPE_UUID = '14d4f066-15f5-102d-96e4-000c29c2a5d7';
+
+export type KnownConceptUuid = (typeof CONCEPTS)[keyof typeof CONCEPTS];
+export type ConceptUuid = KnownConceptUuid | (string & {});
+
+/**
+ * Safely retrieve a FormRegistryEntry by its key from FORM_REGISTRY.
+ */
+export function getFormRegistryEntry(key: string): FormRegistryEntry {
+  const entry = FORM_REGISTRY.find(e => e.key === key);
+  if (!entry) {
+    throw new Error(`Form configuration for key "${key}" not found in FORM_REGISTRY.`);
+  }
+  return entry;
+}
+
+/**
+ * Safely retrieve a form's UUID by its registry key.
+ */
+export function getFormUuid(key: string): string {
+  return getFormRegistryEntry(key).uuid;
+}
+
+/**
+ * Safely retrieve a form's display name by its registry key.
+ */
+export function getFormName(key: string): string {
+  return getFormRegistryEntry(key).name;
+}
+

@@ -142,6 +142,16 @@ python scripts/publish_aiims_form.py
    - The OpenMRS backend container runs as non-root user `1001`. On container startup, its entrypoint copies distribution files to `/openmrs/data/configuration/...`.
    - If any files in `openmrs-data` were created/modified by root (e.g. via ad-hoc docker commands), the startup script fails with `cp: cannot create regular file ... Permission denied`, putting the backend into an immediate crash/restart loop and causing Nginx to return `502 Bad Gateway`.
    - Fix with: `docker run --rm -v openmrs-distro-referenceapplication_openmrs-data:/data alpine chown -R 1001:root /data && chmod -R u+rwX /data`.
+9. **Observation & Encounter Deterministic Sorting**:
+   - `useFormEncounter` sorts encounters and observations by `datetime` descending, with a fallback tie-breaker on `uuid` descending (`(b.uuid || '').localeCompare(a.uuid || '')`). This guarantees deterministic ordering even when observations share identical timestamps from the same form submission.
+10. **Dashboard Shell Architecture**:
+    - All clinical form dashboards must use the reusable `FormDashboardShell` component (`src/shared/components/form-dashboard-shell.component.tsx`). It unifies patient loading, encounter loading, error states, `DashboardToolbar`, `EmptyState`, and form workspace launching.
+11. **Observation Value Handling & Deduplication**:
+    - Use `getOptionalObsValue(conceptUuid)` instead of `getObsValue(...) || undefined` to safely handle empty vs falsy values.
+    - `getObsValues` automatically deduplicates identical observation values for multi-select concepts using a `Set`.
+12. **Routes & Registry Synchronization**:
+    - `scripts/sync_routes.py` verifies or auto-syncs `routes.json` with `FORM_REGISTRY` in `constants.ts` to prevent extension drift.
+
 
 ### Forms Implemented
 1. **Form 1: AIIMS Visit: Personal Information Intake** (`80930653-7e80-4bfd-9e29-ec37c334d880`)

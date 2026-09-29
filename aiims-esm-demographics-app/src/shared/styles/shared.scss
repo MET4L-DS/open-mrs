@@ -72,10 +72,23 @@
   }
 }
 
+.cardTitleWrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.tagList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+
 .fieldList {
   display: flex;
   flex-direction: column;
 }
+
 
 .fieldRow {
   display: flex;

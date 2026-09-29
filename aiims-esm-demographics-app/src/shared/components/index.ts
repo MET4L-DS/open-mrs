@@ -3,3 +3,5 @@ export * from './dashboard-toolbar.component';
 export * from './empty-state.component';
 export * from './data-row.component';
 export * from './observation-card.component';
+export * from './form-dashboard-shell.component';
+
