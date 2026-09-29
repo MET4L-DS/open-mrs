@@ -10,6 +10,19 @@ export interface DataRowProps {
   emptyPlaceholder?: string;
 }
 
+function decodeHtmlEntities(val: React.ReactNode): React.ReactNode {
+  if (typeof val === 'string') {
+    return val
+      .replace(/&#x2F;/gi, '/')
+      .replace(/&#x27;/gi, "'")
+      .replace(/&quot;/gi, '"')
+      .replace(/&amp;/gi, '&')
+      .replace(/&lt;/gi, '<')
+      .replace(/&gt;/gi, '>');
+  }
+  return val;
+}
+
 export const DataRow: React.FC<DataRowProps> = ({
   label,
   value,
@@ -23,11 +36,18 @@ export const DataRow: React.FC<DataRowProps> = ({
     value === '' ||
     value === emptyPlaceholder;
 
-  const displayValue = isValueEmpty
+  const rawDisplayValue = isValueEmpty
     ? emptyPlaceholder
     : unit
-    ? t('valueWithUnit', '{{value}} {{unit}}', { value: String(value), unit })
+    ? t('valueWithUnit', '{{value}} {{unit}}', {
+        value: String(value),
+        unit,
+        interpolation: { escapeValue: false },
+      })
     : value;
+
+  const displayValue = decodeHtmlEntities(rawDisplayValue);
+
 
   return (
     <div className={styles.fieldRow}>

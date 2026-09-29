@@ -19,7 +19,10 @@ export const ClinicalCard: React.FC<ClinicalCardProps> = ({ demographics }) => {
         {
           label: t('consultantUnit', 'Consultant Unit'),
           value: demographics.consultantUnit
-            ? t('unitFormat', 'Unit {{unit}}', { unit: demographics.consultantUnit })
+            ? t('unitFormat', 'Unit {{unit}}', {
+                unit: demographics.consultantUnit,
+                interpolation: { escapeValue: false },
+              })
             : '',
         },
         {

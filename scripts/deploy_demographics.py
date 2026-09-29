@@ -17,9 +17,18 @@ MODULE_NAME = "@aiims/esm-demographics-app"
 MAIN_JS = "openmrs-esm-aiims-esm-demographics-app.js"
 
 
-def run_docker(cmd, check=True):
+def run_docker(cmd, check=True, timeout=120):
+    if cmd and cmd[0] == "exec" and "-i" not in cmd and "-it" not in cmd:
+        cmd = ["exec", "-i"] + cmd[1:]
     full_cmd = ["docker"] + cmd
-    res = subprocess.run(full_cmd, capture_output=True, text=True)
+    res = subprocess.run(
+        full_cmd,
+        capture_output=True,
+        text=True,
+        timeout=timeout,
+        stdin=subprocess.DEVNULL,
+    )
+
     if check and res.returncode != 0:
         print(f"Error executing {' '.join(full_cmd)}:")
         print(res.stderr)
@@ -73,6 +82,7 @@ def main():
 
     res = run_docker(["exec", CONTAINER_NAME, "cat", "/usr/share/nginx/html/routes.registry.json"])
     registry = json.loads(res.stdout)
+
     registry[MODULE_NAME] = module_routes
     registry_json = json.dumps(registry, indent=2)
 
@@ -84,7 +94,7 @@ def main():
         os.remove(temp_registry)
 
     print("6. Reloading Nginx in frontend container...")
-    run_docker(["exec", CONTAINER_NAME, "nginx", "-s", "reload"], check=False)
+    run_docker(["exec", CONTAINER_NAME, "nginx", "-s", "reload"], check=False, timeout=30)
 
     print("\n[SUCCESS] Deployment successful!")
     print(f"   Module: {MODULE_NAME}")
