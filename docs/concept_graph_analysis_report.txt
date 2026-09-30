@@ -1,0 +1,59 @@
+======================================================================
+  OPENMRS AIIMS CONCEPT & SKIP-LOGIC GRAPH ANALYSIS REPORT
+======================================================================
+
+[1] GRAPH TOPOLOGY SUMMARY
+  • Total Vertices: 219 (Forms: 10, Questions: 90, Answers: 119)
+  • Total Edges:    336
+    - Form Contains Edges:     85
+    - Question Answers Edges:  205
+    - Skip-Logic Branch Edges: 46
+
+[2] SKIP-LOGIC INTEGRITY & CYCLE DETECTION
+  [PASS] No circular dependencies detected in skip-logic branching (Graph is a clean DAG).
+
+[3] ORPHAN QUESTION CONCEPTS IN CSV (5 found)
+  (Defined as 'Question' in aiims_concepts.csv, but not present in any AMPATH form)
+  - [c0010001-0000-0000-0000-000000000003] Patient Name (Text)
+  - [c0010001-0000-0000-0000-000000000005] Unique Health Identifier (Text)
+  - [c0010001-0000-0000-0000-000000000006] In-Vitro-Fertilization Number (Text)
+  - [c0010001-0000-0000-0000-000000000009] Husband Body Mass Index (Numeric)
+  - [c0010001-0000-0000-0000-000000000010] Phone Number Wife (Text)
+
+[4] EXTERNAL / CIEL CONCEPTS IN FORMS (6 found)
+  (Referenced in forms, but mapped to CIEL or external dictionaries)
+  - [1712AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA] Education (Wife)
+  - [1342AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA] Husband Body Mass Index (BMI)
+  - [5087AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA] Pulse Rate (beats / min)
+  - [5088AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA] Body Temperature (°C)
+  - [152722AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA] Is the patient a current tobacco smoker?
+  - [1546AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA] Average cigarettes smoked per day
+
+[5] FORM COMPLEXITY & BRANCHING METRICS
+  Form Name                           | Questions  | Skip Conditions
+  ------------------------------------------------------------------
+  AIIMS Visit: Previous Surgery       | 28         | 25             
+  AIIMS Visit: Previous OI and IUI    | 13         | 9              
+  AIIMS Visit: Female Factor          | 9          | 8              
+  AIIMS Visit: Menstrual History      | 5          | 2              
+  AIIMS Visit: Male Factor            | 3          | 1              
+  Quick Triage & Lifestyle Intake     | 4          | 1              
+  AIIMS Visit: Type of Infertility    | 3          | 0              
+  AIIMS Visit: Male Hormone and Surge | 3          | 0              
+  AIIMS Visit: Obstetric History      | 5          | 0              
+  AIIMS Visit: Personal Information I | 12         | 0              
+
+[6] TOP SKIP-LOGIC CONTROLLERS (High Impact Hubs)
+  (Variables whose values trigger the most visibility changes)
+  • Female Infertility Factor [c0010001...]: controls visibility of 7 dependent fields
+  • Previous Surgery Performed [c0010001...]: controls visibility of 7 dependent fields
+  • Endometriosis Surgeries [c0010001...]: controls visibility of 6 dependent fields
+  • Ovarian Surgeries [c0010001...]: controls visibility of 6 dependent fields
+  • Fallopian Tube Surgeries [c0010001...]: controls visibility of 6 dependent fields
+  • Previous Ovulation Induction [c0010001...]: controls visibility of 4 dependent fields
+  • Previous OI and IUI [c0010001...]: controls visibility of 4 dependent fields
+  • Pattern of Menstrual cycle [c0010001...]: controls visibility of 1 dependent fields
+  • Flow of Menstrual cycle [c0010001...]: controls visibility of 1 dependent fields
+  • Diminished Ovarian Reserve Details [c0010001...]: controls visibility of 1 dependent fields
+
+======================================================================
