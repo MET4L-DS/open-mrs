@@ -6,25 +6,25 @@
 <body style="margin:0;">
   <style>
     /* Main divisions */
-    #iGq8lCFjVYeoM2Cf4-main-div {
+    #ibXiZlAhkaP5pdbuw-main-div {
       line-height: normal;
       box-sizing: content-box;
       padding: 3px;
       background-color: white;
     }
-    #iGq8lCFjVYeoM2Cf4-left-div {
+    #ibXiZlAhkaP5pdbuw-left-div {
       float: left;
       line-height: normal;
       box-sizing: content-box;
     }
-    #iGq8lCFjVYeoM2Cf4-right-div {
+    #ibXiZlAhkaP5pdbuw-right-div {
       float: left;
       height: 100%;
       display: none;
       line-height: normal;
       box-sizing: content-box;
     }
-    #iGq8lCFjVYeoM2Cf4-right-inner-div {
+    #ibXiZlAhkaP5pdbuw-right-inner-div {
       padding-left: 5px;
       padding-right: 2px;
       overflow-x: hidden;
@@ -35,7 +35,7 @@
     }
 
     /* Graph and details (contained in left-inner-div) */
-    #iGq8lCFjVYeoM2Cf4-graph-div {
+    #ibXiZlAhkaP5pdbuw-graph-div {
       overflow: hidden;
       resize: vertical;
       position: relative;
@@ -46,7 +46,7 @@
       line-height: normal;
       box-sizing: content-box;
     }
-    #iGq8lCFjVYeoM2Cf4-details-div {
+    #ibXiZlAhkaP5pdbuw-details-div {
       overflow: auto;
       resize: vertical;
       margin-top: 5px;
@@ -57,7 +57,7 @@
       line-height: normal;
       box-sizing: content-box;
     }
-    #iGq8lCFjVYeoM2Cf4-details-head {
+    #ibXiZlAhkaP5pdbuw-details-head {
       user-select: none;
       padding-left: 4px !important;
       padding-top: 4px !important;
@@ -67,7 +67,7 @@
       line-height: normal;
       box-sizing: content-box;
     }
-    #iGq8lCFjVYeoM2Cf4-details-body {
+    #ibXiZlAhkaP5pdbuw-details-body {
       padding: 10px;
       padding-top: 6px;
       font-size: 10px;
@@ -77,7 +77,7 @@
     }
 
     /* Control menu (contained in right-inner-div) */
-    .iGq8lCFjVYeoM2Cf4-menu-item-head {
+    .ibXiZlAhkaP5pdbuw-menu-item-head {
       font-size: 11px;
       font-family: "Lucida Console", Monaco, monospace;
       color: black;
@@ -93,13 +93,13 @@
       line-height: normal;
       box-sizing: content-box;
     }
-    .iGq8lCFjVYeoM2Cf4-menu-item-body {
+    .ibXiZlAhkaP5pdbuw-menu-item-body {
       margin-left: 5px;
       margin-bottom: 10px;
       line-height: normal;
       box-sizing: content-box;
     }
-    .iGq8lCFjVYeoM2Cf4-menu-subitem-head {
+    .ibXiZlAhkaP5pdbuw-menu-subitem-head {
       font-size: 9px;
       font-family: "Lucida Console", Monaco, monospace;
       font-weight: 600;
@@ -109,7 +109,7 @@
       line-height: normal;
       box-sizing: content-box;
     }
-    .iGq8lCFjVYeoM2Cf4-menu-subitem-body {
+    .ibXiZlAhkaP5pdbuw-menu-subitem-body {
       font-size: 8px;
       font-family: "Lucida Console", Monaco, monospace;
       margin-left: 7px;
@@ -117,28 +117,28 @@
       line-height: normal;
       box-sizing: content-box;
     }
-    .iGq8lCFjVYeoM2Cf4-labeled-input {
+    .ibXiZlAhkaP5pdbuw-labeled-input {
       all: initial;
       display: flex;
       align-items: center;
       margin-top: 1px;
       margin-bottom: 1px;
     }
-    .iGq8lCFjVYeoM2Cf4-label {
+    .ibXiZlAhkaP5pdbuw-label {
       all: initial;
       font-size: 8px;
       font-family: "Lucida Console", Monaco, monospace;
       font-style: italic;
       cursor: pointer;
     }
-    .iGq8lCFjVYeoM2Cf4-slider {
+    .ibXiZlAhkaP5pdbuw-slider {
       width: 100%;
       margin-bottom: 2px;
     }
-    .iGq8lCFjVYeoM2Cf4-slider::-moz-focus-outer {
+    .ibXiZlAhkaP5pdbuw-slider::-moz-focus-outer {
       border: 0;
     }
-    .iGq8lCFjVYeoM2Cf4-slider-text-left {
+    .ibXiZlAhkaP5pdbuw-slider-text-left {
       font-size: 8px;
       font-family: "Lucida Console", Monaco, monospace;
       font-style: italic;
@@ -146,20 +146,20 @@
       float: left;
       margin-top: 2px;
     }
-    .iGq8lCFjVYeoM2Cf4-slider-text-right {
+    .ibXiZlAhkaP5pdbuw-slider-text-right {
       font-size: 8px;
       font-family: "Lucida Console", Monaco, monospace;
       color: black;
       float: right;
     }
-    .iGq8lCFjVYeoM2Cf4-checkbox {
+    .ibXiZlAhkaP5pdbuw-checkbox {
       margin-left: 0px !important;
       margin-right: 4px !important;
       margin-top: 2px !important;
       margin-bottom: 2px !important;
       padding: 0px !important;
     }
-    .iGq8lCFjVYeoM2Cf4-select {
+    .ibXiZlAhkaP5pdbuw-select {
       cursor: pointer;
       outline: none;
       font-size: 8px;
@@ -188,15 +188,15 @@
     }
     @-moz-document url-prefix() {
       /* Dirty hack to remove dotted border on focus */
-      .iGq8lCFjVYeoM2Cf4-select {
+      .ibXiZlAhkaP5pdbuw-select {
         color: transparent !important;
         text-shadow: 0 0 0 black !important;
       }
     }
-    .iGq8lCFjVYeoM2Cf4-select:after {
+    .ibXiZlAhkaP5pdbuw-select:after {
       cursor: pointer;
     }
-    .iGq8lCFjVYeoM2Cf4-button {
+    .ibXiZlAhkaP5pdbuw-button {
       cursor: pointer;
       outline: none;
       font-size: 8px;
@@ -213,29 +213,29 @@
       border: 1.2px solid #bbb;
       box-shadow: 0 1px 0 1px rgba(0, 0, 0, 0.04);
     }
-    .iGq8lCFjVYeoM2Cf4-button:hover {
+    .ibXiZlAhkaP5pdbuw-button:hover {
       border: 1.2px solid #999;
       background-color: #f2f2f2;
     }
-    .iGq8lCFjVYeoM2Cf4-button:active {
+    .ibXiZlAhkaP5pdbuw-button:active {
       background-color: #ddd;
     }
-    .iGq8lCFjVYeoM2Cf4-button::-moz-focus-inner {
+    .ibXiZlAhkaP5pdbuw-button::-moz-focus-inner {
       border: 0;
     }
     /* Hidden menu items */
-    #iGq8lCFjVYeoM2Cf4-graph-select-div {
+    #ibXiZlAhkaP5pdbuw-graph-select-div {
       display: none;
     }
-    #iGq8lCFjVYeoM2Cf4-node-size-norm-div {
+    #ibXiZlAhkaP5pdbuw-node-size-norm-div {
       display: none;
     }
-    #iGq8lCFjVYeoM2Cf4-edge-size-norm-div {
+    #ibXiZlAhkaP5pdbuw-edge-size-norm-div {
       display: none;
     }
 
     /* Graph */
-    #iGq8lCFjVYeoM2Cf4-tooltip-div {
+    #ibXiZlAhkaP5pdbuw-tooltip-div {
       font-size: 10px;
       font-family: "Lucida Console", Monaco, monospace;
       z-index: 42001;
@@ -254,7 +254,7 @@
       line-height: normal;
       box-sizing: content-box;
     }
-    #iGq8lCFjVYeoM2Cf4-menu-toggle-button, #iGq8lCFjVYeoM2Cf4-details-toggle-button, #iGq8lCFjVYeoM2Cf4-progress-container {
+    #ibXiZlAhkaP5pdbuw-menu-toggle-button, #ibXiZlAhkaP5pdbuw-details-toggle-button, #ibXiZlAhkaP5pdbuw-progress-container {
       font-size: 14px;
       font-family: "Lucida Console", Monaco, monospace;
       z-index: 42000;
@@ -266,7 +266,7 @@
       line-height: normal;
       box-sizing: content-box;
     }
-    #iGq8lCFjVYeoM2Cf4-menu-toggle-button {
+    #ibXiZlAhkaP5pdbuw-menu-toggle-button {
       top: 0;
       right: 0;
       padding-left: 6px;
@@ -278,7 +278,7 @@
       border-bottom: 1px solid #ccc;
       border-left: 1px solid #ccc;
     }
-    #iGq8lCFjVYeoM2Cf4-details-toggle-button {
+    #ibXiZlAhkaP5pdbuw-details-toggle-button {
       bottom: 0;
       left: 0;
       padding-left: 19px;
@@ -290,7 +290,7 @@
       border-bottom: 0px;
       border-left: 0px;
     }
-    #iGq8lCFjVYeoM2Cf4-progress-container {
+    #ibXiZlAhkaP5pdbuw-progress-container {
       font-size: 10px;
       text-align: center;
       top: 46%;
@@ -302,7 +302,7 @@
     }
 
     /* Details */
-    #iGq8lCFjVYeoM2Cf4-details-user-provided {
+    #ibXiZlAhkaP5pdbuw-details-user-provided {
       margin-top: 3px;
       padding-top: 3.5px;
       border-top: 0.5px dashed black;
@@ -311,578 +311,578 @@
       white-space: pre-wrap;
       word-break: break-word;
     }
-    #iGq8lCFjVYeoM2Cf4-details-user-provided ul {
+    #ibXiZlAhkaP5pdbuw-details-user-provided ul {
       list-style-position: inside;
       padding-left: 6px;
     }
   </style>
 
-  <div id="iGq8lCFjVYeoM2Cf4-main-div">
-    <div id="iGq8lCFjVYeoM2Cf4-tooltip-div"></div>
+  <div id="ibXiZlAhkaP5pdbuw-main-div">
+    <div id="ibXiZlAhkaP5pdbuw-tooltip-div"></div>
 
-    <div id="iGq8lCFjVYeoM2Cf4-left-div">
-      <div id="iGq8lCFjVYeoM2Cf4-left-inner-div">
-        <div id="iGq8lCFjVYeoM2Cf4-graph-div"></div>
-        <div id="iGq8lCFjVYeoM2Cf4-details-div">
-          <div id="iGq8lCFjVYeoM2Cf4-details-head">
+    <div id="ibXiZlAhkaP5pdbuw-left-div">
+      <div id="ibXiZlAhkaP5pdbuw-left-inner-div">
+        <div id="ibXiZlAhkaP5pdbuw-graph-div"></div>
+        <div id="ibXiZlAhkaP5pdbuw-details-div">
+          <div id="ibXiZlAhkaP5pdbuw-details-head">
             Details for selected element
           </div>
-          <div id="iGq8lCFjVYeoM2Cf4-details-body">
+          <div id="ibXiZlAhkaP5pdbuw-details-body">
           </div>
         </div>
       </div>
     </div>
 
-    <div id="iGq8lCFjVYeoM2Cf4-right-div">
-      <div id="iGq8lCFjVYeoM2Cf4-right-inner-div">
+    <div id="ibXiZlAhkaP5pdbuw-right-div">
+      <div id="ibXiZlAhkaP5pdbuw-right-inner-div">
         <!-- Menu: General -->
-        <div class="iGq8lCFjVYeoM2Cf4-menu-item-head"
-             id="iGq8lCFjVYeoM2Cf4-general-head">
+        <div class="ibXiZlAhkaP5pdbuw-menu-item-head"
+             id="ibXiZlAhkaP5pdbuw-general-head">
           General
         </div>
-        <div class="iGq8lCFjVYeoM2Cf4-menu-item-body"
-             id="iGq8lCFjVYeoM2Cf4-general-body">
+        <div class="ibXiZlAhkaP5pdbuw-menu-item-body"
+             id="ibXiZlAhkaP5pdbuw-general-body">
           <!-- Sub-menu: State -->
           <div>
-            <div class="iGq8lCFjVYeoM2Cf4-menu-subitem-head">
+            <div class="ibXiZlAhkaP5pdbuw-menu-subitem-head">
               App state
             </div>
-            <div class="iGq8lCFjVYeoM2Cf4-menu-subitem-body">
-              <button class="iGq8lCFjVYeoM2Cf4-button"
-                      id="iGq8lCFjVYeoM2Cf4-reset"
+            <div class="ibXiZlAhkaP5pdbuw-menu-subitem-body">
+              <button class="ibXiZlAhkaP5pdbuw-button"
+                      id="ibXiZlAhkaP5pdbuw-reset"
                       type="button">Reset</button>
             </div>
           </div>
           <!-- Sub-menu: Display mode (fullscreen or not) -->
           <div>
-            <div class="iGq8lCFjVYeoM2Cf4-menu-subitem-head">
+            <div class="ibXiZlAhkaP5pdbuw-menu-subitem-head">
               Display mode
             </div>
-            <div class="iGq8lCFjVYeoM2Cf4-menu-subitem-body">
-              <button class="iGq8lCFjVYeoM2Cf4-button"
-                      id="iGq8lCFjVYeoM2Cf4-fullscreen-button"
+            <div class="ibXiZlAhkaP5pdbuw-menu-subitem-body">
+              <button class="ibXiZlAhkaP5pdbuw-button"
+                      id="ibXiZlAhkaP5pdbuw-fullscreen-button"
                       type="button">Enter full screen</button>
             </div>
           </div>
           <!-- Sub-menu: Export -->
           <div>
-            <div class="iGq8lCFjVYeoM2Cf4-menu-subitem-head">
+            <div class="ibXiZlAhkaP5pdbuw-menu-subitem-head">
               Export
             </div>
-            <div class="iGq8lCFjVYeoM2Cf4-menu-subitem-body">
-              <button class="iGq8lCFjVYeoM2Cf4-button"
-                      id="iGq8lCFjVYeoM2Cf4-svg"
+            <div class="ibXiZlAhkaP5pdbuw-menu-subitem-body">
+              <button class="ibXiZlAhkaP5pdbuw-button"
+                      id="ibXiZlAhkaP5pdbuw-svg"
                       type="button">SVG</button>
-              <button class="iGq8lCFjVYeoM2Cf4-button"
-                      id="iGq8lCFjVYeoM2Cf4-png"
+              <button class="ibXiZlAhkaP5pdbuw-button"
+                      id="ibXiZlAhkaP5pdbuw-png"
                       type="button">PNG</button>
-              <button class="iGq8lCFjVYeoM2Cf4-button"
-                      id="iGq8lCFjVYeoM2Cf4-jpg"
+              <button class="ibXiZlAhkaP5pdbuw-button"
+                      id="ibXiZlAhkaP5pdbuw-jpg"
                       type="button">JPG</button>
             </div>
           </div>
         </div>
         <!-- Menu: Data -->
-        <div class="iGq8lCFjVYeoM2Cf4-menu-item-head"
-             id="iGq8lCFjVYeoM2Cf4-data-head">
+        <div class="ibXiZlAhkaP5pdbuw-menu-item-head"
+             id="ibXiZlAhkaP5pdbuw-data-head">
           Data selection
         </div>
-        <div class="iGq8lCFjVYeoM2Cf4-menu-item-body"
-             id="iGq8lCFjVYeoM2Cf4-data-body">
+        <div class="ibXiZlAhkaP5pdbuw-menu-item-body"
+             id="ibXiZlAhkaP5pdbuw-data-body">
           <!-- Sub-menu: Graph (only shown if multiple graphs in data) -->
-          <div id="iGq8lCFjVYeoM2Cf4-graph-select-div">
-            <div class="iGq8lCFjVYeoM2Cf4-menu-subitem-head">
+          <div id="ibXiZlAhkaP5pdbuw-graph-select-div">
+            <div class="ibXiZlAhkaP5pdbuw-menu-subitem-head">
               Graph
             </div>
-            <div class="iGq8lCFjVYeoM2Cf4-menu-subitem-body">
-              <select class="iGq8lCFjVYeoM2Cf4-select"
-                      id="iGq8lCFjVYeoM2Cf4-graph-select"></select>
+            <div class="ibXiZlAhkaP5pdbuw-menu-subitem-body">
+              <select class="ibXiZlAhkaP5pdbuw-select"
+                      id="ibXiZlAhkaP5pdbuw-graph-select"></select>
             </div>
           </div>
           <!-- Sub-menu: Node label text -->
           <div>
-            <div class="iGq8lCFjVYeoM2Cf4-menu-subitem-head">
+            <div class="ibXiZlAhkaP5pdbuw-menu-subitem-head">
               Node label text
             </div>
-            <div class="iGq8lCFjVYeoM2Cf4-menu-subitem-body">
-              <select class="iGq8lCFjVYeoM2Cf4-select"
-                      id="iGq8lCFjVYeoM2Cf4-node-label-data-source-select"></select>
+            <div class="ibXiZlAhkaP5pdbuw-menu-subitem-body">
+              <select class="ibXiZlAhkaP5pdbuw-select"
+                      id="ibXiZlAhkaP5pdbuw-node-label-data-source-select"></select>
             </div>
           </div>
           <!-- Sub-menu: Edge label text -->
           <div>
-            <div class="iGq8lCFjVYeoM2Cf4-menu-subitem-head">
+            <div class="ibXiZlAhkaP5pdbuw-menu-subitem-head">
               Edge label text
             </div>
-            <div class="iGq8lCFjVYeoM2Cf4-menu-subitem-body">
-              <select class="iGq8lCFjVYeoM2Cf4-select"
-                      id="iGq8lCFjVYeoM2Cf4-edge-label-data-source-select"></select>
+            <div class="ibXiZlAhkaP5pdbuw-menu-subitem-body">
+              <select class="ibXiZlAhkaP5pdbuw-select"
+                      id="ibXiZlAhkaP5pdbuw-edge-label-data-source-select"></select>
             </div>
           </div>
           <!-- Sub-menu: Node size -->
-          <div class="iGq8lCFjVYeoM2Cf4-menu-subitem-head">
+          <div class="ibXiZlAhkaP5pdbuw-menu-subitem-head">
             Node size
           </div>
-          <div class="iGq8lCFjVYeoM2Cf4-menu-subitem-body">
+          <div class="ibXiZlAhkaP5pdbuw-menu-subitem-body">
             <div>
-              <select class="iGq8lCFjVYeoM2Cf4-select"
-                      id="iGq8lCFjVYeoM2Cf4-node-size-data-source-select"></select>
+              <select class="ibXiZlAhkaP5pdbuw-select"
+                      id="ibXiZlAhkaP5pdbuw-node-size-data-source-select"></select>
             </div>
-            <div class="iGq8lCFjVYeoM2Cf4-labeled-input">
-              <input class="iGq8lCFjVYeoM2Cf4-checkbox"
-                     id="iGq8lCFjVYeoM2Cf4-node-size-normalization-checkbox"
+            <div class="ibXiZlAhkaP5pdbuw-labeled-input">
+              <input class="ibXiZlAhkaP5pdbuw-checkbox"
+                     id="ibXiZlAhkaP5pdbuw-node-size-normalization-checkbox"
                      type="checkbox">
-              <label class="iGq8lCFjVYeoM2Cf4-label"
-                     for="iGq8lCFjVYeoM2Cf4-node-size-normalization-checkbox">Normalize</label>
+              <label class="ibXiZlAhkaP5pdbuw-label"
+                     for="ibXiZlAhkaP5pdbuw-node-size-normalization-checkbox">Normalize</label>
             </div>
-            <div id="iGq8lCFjVYeoM2Cf4-node-size-norm-div">
+            <div id="ibXiZlAhkaP5pdbuw-node-size-norm-div">
               <div>
-                <span class="iGq8lCFjVYeoM2Cf4-slider-text-left">Minimum</span>
-                <span class="iGq8lCFjVYeoM2Cf4-slider-text-right"
-                      id="iGq8lCFjVYeoM2Cf4-node-size-normalization-min-text"></span>
-                <input class="iGq8lCFjVYeoM2Cf4-slider"
-                       id="iGq8lCFjVYeoM2Cf4-node-size-normalization-min-slider"
+                <span class="ibXiZlAhkaP5pdbuw-slider-text-left">Minimum</span>
+                <span class="ibXiZlAhkaP5pdbuw-slider-text-right"
+                      id="ibXiZlAhkaP5pdbuw-node-size-normalization-min-text"></span>
+                <input class="ibXiZlAhkaP5pdbuw-slider"
+                       id="ibXiZlAhkaP5pdbuw-node-size-normalization-min-slider"
                        type="range" min="0.01" max="300.0" step="0.01">
               </div>
               <div>
-                <span class="iGq8lCFjVYeoM2Cf4-slider-text-left">Maximum</span>
-                <span class="iGq8lCFjVYeoM2Cf4-slider-text-right"
-                      id="iGq8lCFjVYeoM2Cf4-node-size-normalization-max-text"></span>
-                <input class="iGq8lCFjVYeoM2Cf4-slider"
-                       id="iGq8lCFjVYeoM2Cf4-node-size-normalization-max-slider"
+                <span class="ibXiZlAhkaP5pdbuw-slider-text-left">Maximum</span>
+                <span class="ibXiZlAhkaP5pdbuw-slider-text-right"
+                      id="ibXiZlAhkaP5pdbuw-node-size-normalization-max-text"></span>
+                <input class="ibXiZlAhkaP5pdbuw-slider"
+                       id="ibXiZlAhkaP5pdbuw-node-size-normalization-max-slider"
                        type="range" min="0.01" max="300.0" step="0.01">
               </div>
             </div>
           </div>
           <!-- Sub-menu: Edge size -->
-          <div class="iGq8lCFjVYeoM2Cf4-menu-subitem-head">
+          <div class="ibXiZlAhkaP5pdbuw-menu-subitem-head">
             Edge size
           </div>
-          <div class="iGq8lCFjVYeoM2Cf4-menu-subitem-body">
+          <div class="ibXiZlAhkaP5pdbuw-menu-subitem-body">
             <div>
-              <select class="iGq8lCFjVYeoM2Cf4-select"
-                      id="iGq8lCFjVYeoM2Cf4-edge-size-data-source-select"></select>
+              <select class="ibXiZlAhkaP5pdbuw-select"
+                      id="ibXiZlAhkaP5pdbuw-edge-size-data-source-select"></select>
             </div>
-            <div class="iGq8lCFjVYeoM2Cf4-labeled-input">
-              <input class="iGq8lCFjVYeoM2Cf4-checkbox"
-                     id="iGq8lCFjVYeoM2Cf4-edge-size-normalization-checkbox"
+            <div class="ibXiZlAhkaP5pdbuw-labeled-input">
+              <input class="ibXiZlAhkaP5pdbuw-checkbox"
+                     id="ibXiZlAhkaP5pdbuw-edge-size-normalization-checkbox"
                      type="checkbox">
-              <label class="iGq8lCFjVYeoM2Cf4-label"
-                     for="iGq8lCFjVYeoM2Cf4-edge-size-normalization-checkbox">Normalize</label>
+              <label class="ibXiZlAhkaP5pdbuw-label"
+                     for="ibXiZlAhkaP5pdbuw-edge-size-normalization-checkbox">Normalize</label>
             </div>
-            <div id="iGq8lCFjVYeoM2Cf4-edge-size-norm-div">
+            <div id="ibXiZlAhkaP5pdbuw-edge-size-norm-div">
               <div>
-                <span class="iGq8lCFjVYeoM2Cf4-slider-text-left">Minimum</span>
-                <span class="iGq8lCFjVYeoM2Cf4-slider-text-right"
-                      id="iGq8lCFjVYeoM2Cf4-edge-size-normalization-min-text"></span>
-                <input class="iGq8lCFjVYeoM2Cf4-slider"
-                       id="iGq8lCFjVYeoM2Cf4-edge-size-normalization-min-slider"
+                <span class="ibXiZlAhkaP5pdbuw-slider-text-left">Minimum</span>
+                <span class="ibXiZlAhkaP5pdbuw-slider-text-right"
+                      id="ibXiZlAhkaP5pdbuw-edge-size-normalization-min-text"></span>
+                <input class="ibXiZlAhkaP5pdbuw-slider"
+                       id="ibXiZlAhkaP5pdbuw-edge-size-normalization-min-slider"
                        type="range" min="0.01" max="50.0" step="0.01">
               </div>
               <div>
-                <span class="iGq8lCFjVYeoM2Cf4-slider-text-left">Maximum</span>
-                <span class="iGq8lCFjVYeoM2Cf4-slider-text-right"
-                      id="iGq8lCFjVYeoM2Cf4-edge-size-normalization-max-text"></span>
-                <input class="iGq8lCFjVYeoM2Cf4-slider"
-                       id="iGq8lCFjVYeoM2Cf4-edge-size-normalization-max-slider"
+                <span class="ibXiZlAhkaP5pdbuw-slider-text-left">Maximum</span>
+                <span class="ibXiZlAhkaP5pdbuw-slider-text-right"
+                      id="ibXiZlAhkaP5pdbuw-edge-size-normalization-max-text"></span>
+                <input class="ibXiZlAhkaP5pdbuw-slider"
+                       id="ibXiZlAhkaP5pdbuw-edge-size-normalization-max-slider"
                        type="range" min="0.01" max="50.0" step="0.01">
               </div>
             </div>
           </div>
         </div>
         <!-- Menu: Nodes -->
-        <div class="iGq8lCFjVYeoM2Cf4-menu-item-head"
-             id="iGq8lCFjVYeoM2Cf4-node-head">
+        <div class="ibXiZlAhkaP5pdbuw-menu-item-head"
+             id="ibXiZlAhkaP5pdbuw-node-head">
           Nodes
         </div>
-        <div class="iGq8lCFjVYeoM2Cf4-menu-item-body"
-             id="iGq8lCFjVYeoM2Cf4-node-body">
+        <div class="ibXiZlAhkaP5pdbuw-menu-item-body"
+             id="ibXiZlAhkaP5pdbuw-node-body">
           <!-- Sub-menu: Visibility -->
           <div>
-            <div class="iGq8lCFjVYeoM2Cf4-menu-subitem-head">
+            <div class="ibXiZlAhkaP5pdbuw-menu-subitem-head">
               Visibility
             </div>
-            <div class="iGq8lCFjVYeoM2Cf4-menu-subitem-body">
-              <div class="iGq8lCFjVYeoM2Cf4-labeled-input">
-                <input class="iGq8lCFjVYeoM2Cf4-checkbox"
-                       id="iGq8lCFjVYeoM2Cf4-node-checkbox"
+            <div class="ibXiZlAhkaP5pdbuw-menu-subitem-body">
+              <div class="ibXiZlAhkaP5pdbuw-labeled-input">
+                <input class="ibXiZlAhkaP5pdbuw-checkbox"
+                       id="ibXiZlAhkaP5pdbuw-node-checkbox"
                        type="checkbox">
-                <label class="iGq8lCFjVYeoM2Cf4-label"
-                       for="iGq8lCFjVYeoM2Cf4-node-checkbox">Show nodes</label>
+                <label class="ibXiZlAhkaP5pdbuw-label"
+                       for="ibXiZlAhkaP5pdbuw-node-checkbox">Show nodes</label>
               </div>
             </div>
           </div>
           <!-- Sub-menu: Size -->
           <div>
-            <div class="iGq8lCFjVYeoM2Cf4-menu-subitem-head">
+            <div class="ibXiZlAhkaP5pdbuw-menu-subitem-head">
               Size
             </div>
-            <div class="iGq8lCFjVYeoM2Cf4-menu-subitem-body">
+            <div class="ibXiZlAhkaP5pdbuw-menu-subitem-body">
               <div>
-                <span class="iGq8lCFjVYeoM2Cf4-slider-text-left">Scaling factor</span>
-                <span class="iGq8lCFjVYeoM2Cf4-slider-text-right"
-                      id="iGq8lCFjVYeoM2Cf4-node-size-factor-text"></span>
-                <input class="iGq8lCFjVYeoM2Cf4-slider"
-                       id="iGq8lCFjVYeoM2Cf4-node-size-factor-slider"
+                <span class="ibXiZlAhkaP5pdbuw-slider-text-left">Scaling factor</span>
+                <span class="ibXiZlAhkaP5pdbuw-slider-text-right"
+                      id="ibXiZlAhkaP5pdbuw-node-size-factor-text"></span>
+                <input class="ibXiZlAhkaP5pdbuw-slider"
+                       id="ibXiZlAhkaP5pdbuw-node-size-factor-slider"
                        type="range" min="0.01" max="5.0" step="0.01">
               </div>
             </div>
           </div>
           <!-- Sub-menu: Position -->
           <div>
-            <div class="iGq8lCFjVYeoM2Cf4-menu-subitem-head">
+            <div class="ibXiZlAhkaP5pdbuw-menu-subitem-head">
               Position
             </div>
-            <div class="iGq8lCFjVYeoM2Cf4-menu-subitem-body">
-              <button class="iGq8lCFjVYeoM2Cf4-button"
-                      id="iGq8lCFjVYeoM2Cf4-node-release-button"
+            <div class="ibXiZlAhkaP5pdbuw-menu-subitem-body">
+              <button class="ibXiZlAhkaP5pdbuw-button"
+                      id="ibXiZlAhkaP5pdbuw-node-release-button"
                       type="button">Release fixed nodes</button>
             </div>
           </div>
           <!-- Sub-menu: Drag behavior -->
           <div>
-            <div class="iGq8lCFjVYeoM2Cf4-menu-subitem-head">
+            <div class="ibXiZlAhkaP5pdbuw-menu-subitem-head">
               Drag behavior
             </div>
-            <div class="iGq8lCFjVYeoM2Cf4-menu-subitem-body">
-              <div class="iGq8lCFjVYeoM2Cf4-labeled-input">
-                <input class="iGq8lCFjVYeoM2Cf4-checkbox"
-                       id="iGq8lCFjVYeoM2Cf4-node-drag-fix-checkbox"
+            <div class="ibXiZlAhkaP5pdbuw-menu-subitem-body">
+              <div class="ibXiZlAhkaP5pdbuw-labeled-input">
+                <input class="ibXiZlAhkaP5pdbuw-checkbox"
+                       id="ibXiZlAhkaP5pdbuw-node-drag-fix-checkbox"
                        type="checkbox">
-                <label class="iGq8lCFjVYeoM2Cf4-label"
-                       for="iGq8lCFjVYeoM2Cf4-node-drag-fix-checkbox">Fix node position</label>
+                <label class="ibXiZlAhkaP5pdbuw-label"
+                       for="ibXiZlAhkaP5pdbuw-node-drag-fix-checkbox">Fix node position</label>
               </div>
             </div>
           </div>
           <!-- Sub-menu: Hover behavior -->
           <div>
-            <div class="iGq8lCFjVYeoM2Cf4-menu-subitem-head">
+            <div class="ibXiZlAhkaP5pdbuw-menu-subitem-head">
               Hover behavior
             </div>
-            <div class="iGq8lCFjVYeoM2Cf4-menu-subitem-body">
-              <div class="iGq8lCFjVYeoM2Cf4-labeled-input">
-                <input class="iGq8lCFjVYeoM2Cf4-checkbox"
-                       id="iGq8lCFjVYeoM2Cf4-node-hover-neighborhood-checkbox"
+            <div class="ibXiZlAhkaP5pdbuw-menu-subitem-body">
+              <div class="ibXiZlAhkaP5pdbuw-labeled-input">
+                <input class="ibXiZlAhkaP5pdbuw-checkbox"
+                       id="ibXiZlAhkaP5pdbuw-node-hover-neighborhood-checkbox"
                        type="checkbox">
-                <label class="iGq8lCFjVYeoM2Cf4-label"
-                       for="iGq8lCFjVYeoM2Cf4-node-hover-neighborhood-checkbox">Show neighborhood</label>
+                <label class="ibXiZlAhkaP5pdbuw-label"
+                       for="ibXiZlAhkaP5pdbuw-node-hover-neighborhood-checkbox">Show neighborhood</label>
               </div>
-              <div class="iGq8lCFjVYeoM2Cf4-labeled-input">
-                <input class="iGq8lCFjVYeoM2Cf4-checkbox"
-                       id="iGq8lCFjVYeoM2Cf4-node-hover-tooltip-checkbox"
+              <div class="ibXiZlAhkaP5pdbuw-labeled-input">
+                <input class="ibXiZlAhkaP5pdbuw-checkbox"
+                       id="ibXiZlAhkaP5pdbuw-node-hover-tooltip-checkbox"
                        type="checkbox">
-                <label class="iGq8lCFjVYeoM2Cf4-label"
-                       for="iGq8lCFjVYeoM2Cf4-node-hover-tooltip-checkbox">Show tooltips (if provided)</label>
+                <label class="ibXiZlAhkaP5pdbuw-label"
+                       for="ibXiZlAhkaP5pdbuw-node-hover-tooltip-checkbox">Show tooltips (if provided)</label>
               </div>
             </div>
           </div>
         </div>
         <!-- Menu: Node images -->
-        <div id="iGq8lCFjVYeoM2Cf4-node-image-meta-control">
-          <div class="iGq8lCFjVYeoM2Cf4-menu-item-head"
-               id="iGq8lCFjVYeoM2Cf4-node-image-head">
+        <div id="ibXiZlAhkaP5pdbuw-node-image-meta-control">
+          <div class="ibXiZlAhkaP5pdbuw-menu-item-head"
+               id="ibXiZlAhkaP5pdbuw-node-image-head">
             Node images
           </div>
-          <div class="iGq8lCFjVYeoM2Cf4-menu-item-body"
-               id="iGq8lCFjVYeoM2Cf4-node-image-body">
+          <div class="ibXiZlAhkaP5pdbuw-menu-item-body"
+               id="ibXiZlAhkaP5pdbuw-node-image-body">
             <!-- Sub-menu: Visibility -->
             <div>
-              <div class="iGq8lCFjVYeoM2Cf4-menu-subitem-head">
+              <div class="ibXiZlAhkaP5pdbuw-menu-subitem-head">
                 Visibility
               </div>
-              <div class="iGq8lCFjVYeoM2Cf4-menu-subitem-body">
-                <div class="iGq8lCFjVYeoM2Cf4-labeled-input">
-                  <input class="iGq8lCFjVYeoM2Cf4-checkbox"
-                         id="iGq8lCFjVYeoM2Cf4-node-image-checkbox"
+              <div class="ibXiZlAhkaP5pdbuw-menu-subitem-body">
+                <div class="ibXiZlAhkaP5pdbuw-labeled-input">
+                  <input class="ibXiZlAhkaP5pdbuw-checkbox"
+                         id="ibXiZlAhkaP5pdbuw-node-image-checkbox"
                          type="checkbox">
-                  <label class="iGq8lCFjVYeoM2Cf4-label"
-                         for="iGq8lCFjVYeoM2Cf4-node-image-checkbox">Show node images</label>
+                  <label class="ibXiZlAhkaP5pdbuw-label"
+                         for="ibXiZlAhkaP5pdbuw-node-image-checkbox">Show node images</label>
                 </div>
               </div>
             </div>
             <!-- Sub-menu: Size -->
             <div>
-              <div class="iGq8lCFjVYeoM2Cf4-menu-subitem-head">
+              <div class="ibXiZlAhkaP5pdbuw-menu-subitem-head">
                 Size
               </div>
-              <div class="iGq8lCFjVYeoM2Cf4-menu-subitem-body">
-                <span class="iGq8lCFjVYeoM2Cf4-slider-text-left">Scaling factor</span>
-                <span class="iGq8lCFjVYeoM2Cf4-slider-text-right"
-                      id="iGq8lCFjVYeoM2Cf4-node-image-size-factor-text"></span>
-                <input class="iGq8lCFjVYeoM2Cf4-slider"
-                       id="iGq8lCFjVYeoM2Cf4-node-image-size-factor-slider"
+              <div class="ibXiZlAhkaP5pdbuw-menu-subitem-body">
+                <span class="ibXiZlAhkaP5pdbuw-slider-text-left">Scaling factor</span>
+                <span class="ibXiZlAhkaP5pdbuw-slider-text-right"
+                      id="ibXiZlAhkaP5pdbuw-node-image-size-factor-text"></span>
+                <input class="ibXiZlAhkaP5pdbuw-slider"
+                       id="ibXiZlAhkaP5pdbuw-node-image-size-factor-slider"
                        type="range" min="0.01" max="5.0" step="0.01">
               </div>
             </div>
           </div>
         </div>
         <!-- Menu: Node labels -->
-        <div class="iGq8lCFjVYeoM2Cf4-menu-item-head"
-             id="iGq8lCFjVYeoM2Cf4-node-label-head">
+        <div class="ibXiZlAhkaP5pdbuw-menu-item-head"
+             id="ibXiZlAhkaP5pdbuw-node-label-head">
           Node labels
         </div>
-        <div class="iGq8lCFjVYeoM2Cf4-menu-item-body"
-             id="iGq8lCFjVYeoM2Cf4-node-label-body">
+        <div class="ibXiZlAhkaP5pdbuw-menu-item-body"
+             id="ibXiZlAhkaP5pdbuw-node-label-body">
           <!-- Sub-menu: Visibility -->
           <div>
-            <div class="iGq8lCFjVYeoM2Cf4-menu-subitem-head">
+            <div class="ibXiZlAhkaP5pdbuw-menu-subitem-head">
               Visibility
             </div>
-            <div class="iGq8lCFjVYeoM2Cf4-menu-subitem-body">
-              <div class="iGq8lCFjVYeoM2Cf4-labeled-input">
-                <input class="iGq8lCFjVYeoM2Cf4-checkbox"
-                       id="iGq8lCFjVYeoM2Cf4-node-label-checkbox"
+            <div class="ibXiZlAhkaP5pdbuw-menu-subitem-body">
+              <div class="ibXiZlAhkaP5pdbuw-labeled-input">
+                <input class="ibXiZlAhkaP5pdbuw-checkbox"
+                       id="ibXiZlAhkaP5pdbuw-node-label-checkbox"
                        type="checkbox">
-                <label class="iGq8lCFjVYeoM2Cf4-label"
-                       for="iGq8lCFjVYeoM2Cf4-node-label-checkbox">Show node labels</label>
+                <label class="ibXiZlAhkaP5pdbuw-label"
+                       for="ibXiZlAhkaP5pdbuw-node-label-checkbox">Show node labels</label>
               </div>
-              <div class="iGq8lCFjVYeoM2Cf4-labeled-input">
-                <input class="iGq8lCFjVYeoM2Cf4-checkbox"
-                       id="iGq8lCFjVYeoM2Cf4-node-label-border-checkbox"
+              <div class="ibXiZlAhkaP5pdbuw-labeled-input">
+                <input class="ibXiZlAhkaP5pdbuw-checkbox"
+                       id="ibXiZlAhkaP5pdbuw-node-label-border-checkbox"
                        type="checkbox">
-                <label class="iGq8lCFjVYeoM2Cf4-label"
-                       for="iGq8lCFjVYeoM2Cf4-node-label-border-checkbox">Show borders</label>
+                <label class="ibXiZlAhkaP5pdbuw-label"
+                       for="ibXiZlAhkaP5pdbuw-node-label-border-checkbox">Show borders</label>
               </div>
             </div>
           </div>
           <!-- Sub-menu: Size -->
           <div>
-            <div class="iGq8lCFjVYeoM2Cf4-menu-subitem-head">
+            <div class="ibXiZlAhkaP5pdbuw-menu-subitem-head">
               Size
             </div>
-            <div class="iGq8lCFjVYeoM2Cf4-menu-subitem-body">
-              <span class="iGq8lCFjVYeoM2Cf4-slider-text-left">Scaling factor</span>
-              <span class="iGq8lCFjVYeoM2Cf4-slider-text-right"
-                    id="iGq8lCFjVYeoM2Cf4-node-label-size-factor-text"></span>
-              <input class="iGq8lCFjVYeoM2Cf4-slider"
-                     id="iGq8lCFjVYeoM2Cf4-node-label-size-factor-slider"
+            <div class="ibXiZlAhkaP5pdbuw-menu-subitem-body">
+              <span class="ibXiZlAhkaP5pdbuw-slider-text-left">Scaling factor</span>
+              <span class="ibXiZlAhkaP5pdbuw-slider-text-right"
+                    id="ibXiZlAhkaP5pdbuw-node-label-size-factor-text"></span>
+              <input class="ibXiZlAhkaP5pdbuw-slider"
+                     id="ibXiZlAhkaP5pdbuw-node-label-size-factor-slider"
                      type="range" min="0.01" max="5.0" step="0.01">
             </div>
           </div>
           <!-- Sub-menu: Rotation -->
-          <div id="iGq8lCFjVYeoM2Cf4-node-label-rotation">
-            <div class="iGq8lCFjVYeoM2Cf4-menu-subitem-head">
+          <div id="ibXiZlAhkaP5pdbuw-node-label-rotation">
+            <div class="ibXiZlAhkaP5pdbuw-menu-subitem-head">
               Rotation
             </div>
-            <div class="iGq8lCFjVYeoM2Cf4-menu-subitem-body">
-              <span class="iGq8lCFjVYeoM2Cf4-slider-text-left">Angle</span>
-              <span class="iGq8lCFjVYeoM2Cf4-slider-text-right"
-                    id="iGq8lCFjVYeoM2Cf4-node-label-rotation-text"></span>
-              <input class="iGq8lCFjVYeoM2Cf4-slider"
-                     id="iGq8lCFjVYeoM2Cf4-node-label-rotation-slider"
+            <div class="ibXiZlAhkaP5pdbuw-menu-subitem-body">
+              <span class="ibXiZlAhkaP5pdbuw-slider-text-left">Angle</span>
+              <span class="ibXiZlAhkaP5pdbuw-slider-text-right"
+                    id="ibXiZlAhkaP5pdbuw-node-label-rotation-text"></span>
+              <input class="ibXiZlAhkaP5pdbuw-slider"
+                     id="ibXiZlAhkaP5pdbuw-node-label-rotation-slider"
                      type="range" min="0.0" max="359.0" step="1.0">
             </div>
           </div>
         </div>
         <!-- Menu: Edges -->
-        <div class="iGq8lCFjVYeoM2Cf4-menu-item-head"
-             id="iGq8lCFjVYeoM2Cf4-edge-head">
+        <div class="ibXiZlAhkaP5pdbuw-menu-item-head"
+             id="ibXiZlAhkaP5pdbuw-edge-head">
           Edges
         </div>
-        <div class="iGq8lCFjVYeoM2Cf4-menu-item-body"
-             id="iGq8lCFjVYeoM2Cf4-edge-body">
+        <div class="ibXiZlAhkaP5pdbuw-menu-item-body"
+             id="ibXiZlAhkaP5pdbuw-edge-body">
           <!-- Sub-menu: Visibility -->
           <div>
-            <div class="iGq8lCFjVYeoM2Cf4-menu-subitem-head">
+            <div class="ibXiZlAhkaP5pdbuw-menu-subitem-head">
               Visibility
             </div>
-            <div class="iGq8lCFjVYeoM2Cf4-menu-subitem-body">
-              <div class="iGq8lCFjVYeoM2Cf4-labeled-input">
-                <input class="iGq8lCFjVYeoM2Cf4-checkbox"
-                       id="iGq8lCFjVYeoM2Cf4-edge-checkbox"
+            <div class="ibXiZlAhkaP5pdbuw-menu-subitem-body">
+              <div class="ibXiZlAhkaP5pdbuw-labeled-input">
+                <input class="ibXiZlAhkaP5pdbuw-checkbox"
+                       id="ibXiZlAhkaP5pdbuw-edge-checkbox"
                        type="checkbox">
-                <label class="iGq8lCFjVYeoM2Cf4-label"
-                       for="iGq8lCFjVYeoM2Cf4-edge-checkbox">Show edges</label>
+                <label class="ibXiZlAhkaP5pdbuw-label"
+                       for="ibXiZlAhkaP5pdbuw-edge-checkbox">Show edges</label>
               </div>
             </div>
           </div>
           <!-- Sub-menu: Size -->
           <div>
-            <div class="iGq8lCFjVYeoM2Cf4-menu-subitem-head">
+            <div class="ibXiZlAhkaP5pdbuw-menu-subitem-head">
               Size
             </div>
-            <div class="iGq8lCFjVYeoM2Cf4-menu-subitem-body">
-              <span class="iGq8lCFjVYeoM2Cf4-slider-text-left">Scaling factor</span>
-              <span class="iGq8lCFjVYeoM2Cf4-slider-text-right"
-                    id="iGq8lCFjVYeoM2Cf4-edge-size-factor-text"></span>
-              <input class="iGq8lCFjVYeoM2Cf4-slider"
-                     id="iGq8lCFjVYeoM2Cf4-edge-size-factor-slider"
+            <div class="ibXiZlAhkaP5pdbuw-menu-subitem-body">
+              <span class="ibXiZlAhkaP5pdbuw-slider-text-left">Scaling factor</span>
+              <span class="ibXiZlAhkaP5pdbuw-slider-text-right"
+                    id="ibXiZlAhkaP5pdbuw-edge-size-factor-text"></span>
+              <input class="ibXiZlAhkaP5pdbuw-slider"
+                     id="ibXiZlAhkaP5pdbuw-edge-size-factor-slider"
                      type="range" min="0.01" max="5.0" step="0.01">
             </div>
           </div>
           <!-- Sub-menu: Form -->
           <div>
-            <div class="iGq8lCFjVYeoM2Cf4-menu-subitem-head">
+            <div class="ibXiZlAhkaP5pdbuw-menu-subitem-head">
               Form
             </div>
-            <div class="iGq8lCFjVYeoM2Cf4-menu-subitem-body">
-              <span class="iGq8lCFjVYeoM2Cf4-slider-text-left">Curvature</span>
-              <span class="iGq8lCFjVYeoM2Cf4-slider-text-right"
-                    id="iGq8lCFjVYeoM2Cf4-edge-curvature-text"></span>
-              <input class="iGq8lCFjVYeoM2Cf4-slider"
-                     id="iGq8lCFjVYeoM2Cf4-edge-curvature-slider"
+            <div class="ibXiZlAhkaP5pdbuw-menu-subitem-body">
+              <span class="ibXiZlAhkaP5pdbuw-slider-text-left">Curvature</span>
+              <span class="ibXiZlAhkaP5pdbuw-slider-text-right"
+                    id="ibXiZlAhkaP5pdbuw-edge-curvature-text"></span>
+              <input class="ibXiZlAhkaP5pdbuw-slider"
+                     id="ibXiZlAhkaP5pdbuw-edge-curvature-slider"
                      type="range" min="-1.2" max="1.2" step="0.02">
             </div>
           </div>
           <!-- Sub-menu: Hover behavior -->
           <div>
-            <div class="iGq8lCFjVYeoM2Cf4-menu-subitem-head">
+            <div class="ibXiZlAhkaP5pdbuw-menu-subitem-head">
               Hover behavior
             </div>
-            <div class="iGq8lCFjVYeoM2Cf4-menu-subitem-body">
-              <div class="iGq8lCFjVYeoM2Cf4-labeled-input">
-                <input class="iGq8lCFjVYeoM2Cf4-checkbox"
-                       id="iGq8lCFjVYeoM2Cf4-edge-hover-tooltip-checkbox"
+            <div class="ibXiZlAhkaP5pdbuw-menu-subitem-body">
+              <div class="ibXiZlAhkaP5pdbuw-labeled-input">
+                <input class="ibXiZlAhkaP5pdbuw-checkbox"
+                       id="ibXiZlAhkaP5pdbuw-edge-hover-tooltip-checkbox"
                        type="checkbox">
-                <label class="iGq8lCFjVYeoM2Cf4-label"
-                       for="iGq8lCFjVYeoM2Cf4-edge-hover-tooltip-checkbox">Show tooltips (if provided)</label>
+                <label class="ibXiZlAhkaP5pdbuw-label"
+                       for="ibXiZlAhkaP5pdbuw-edge-hover-tooltip-checkbox">Show tooltips (if provided)</label>
               </div>
             </div>
           </div>
         </div>
         <!-- Menu: Edge labels -->
-        <div class="iGq8lCFjVYeoM2Cf4-menu-item-head"
-             id="iGq8lCFjVYeoM2Cf4-edge-label-head">
+        <div class="ibXiZlAhkaP5pdbuw-menu-item-head"
+             id="ibXiZlAhkaP5pdbuw-edge-label-head">
           Edge labels
         </div>
-        <div class="iGq8lCFjVYeoM2Cf4-menu-item-body"
-             id="iGq8lCFjVYeoM2Cf4-edge-label-body">
+        <div class="ibXiZlAhkaP5pdbuw-menu-item-body"
+             id="ibXiZlAhkaP5pdbuw-edge-label-body">
           <!-- Sub-menu: Visibility -->
           <div>
-            <div class="iGq8lCFjVYeoM2Cf4-menu-subitem-head">
+            <div class="ibXiZlAhkaP5pdbuw-menu-subitem-head">
               Visibility
             </div>
-            <div class="iGq8lCFjVYeoM2Cf4-menu-subitem-body">
-              <div class="iGq8lCFjVYeoM2Cf4-labeled-input">
-                <input class="iGq8lCFjVYeoM2Cf4-checkbox"
-                       id="iGq8lCFjVYeoM2Cf4-edge-label-checkbox"
+            <div class="ibXiZlAhkaP5pdbuw-menu-subitem-body">
+              <div class="ibXiZlAhkaP5pdbuw-labeled-input">
+                <input class="ibXiZlAhkaP5pdbuw-checkbox"
+                       id="ibXiZlAhkaP5pdbuw-edge-label-checkbox"
                        type="checkbox">
-                <label class="iGq8lCFjVYeoM2Cf4-label"
-                       for="iGq8lCFjVYeoM2Cf4-edge-label-checkbox">Show edge labels</label>
+                <label class="ibXiZlAhkaP5pdbuw-label"
+                       for="ibXiZlAhkaP5pdbuw-edge-label-checkbox">Show edge labels</label>
               </div>
-              <div class="iGq8lCFjVYeoM2Cf4-labeled-input">
-                <input class="iGq8lCFjVYeoM2Cf4-checkbox"
-                       id="iGq8lCFjVYeoM2Cf4-edge-label-border-checkbox"
+              <div class="ibXiZlAhkaP5pdbuw-labeled-input">
+                <input class="ibXiZlAhkaP5pdbuw-checkbox"
+                       id="ibXiZlAhkaP5pdbuw-edge-label-border-checkbox"
                        type="checkbox">
-                <label class="iGq8lCFjVYeoM2Cf4-label"
-                       for="iGq8lCFjVYeoM2Cf4-edge-label-border-checkbox">Show borders</label>
+                <label class="ibXiZlAhkaP5pdbuw-label"
+                       for="ibXiZlAhkaP5pdbuw-edge-label-border-checkbox">Show borders</label>
               </div>
             </div>
           </div>
           <!-- Sub-menu: Size -->
           <div>
-            <div class="iGq8lCFjVYeoM2Cf4-menu-subitem-head">
+            <div class="ibXiZlAhkaP5pdbuw-menu-subitem-head">
               Size
             </div>
-            <div class="iGq8lCFjVYeoM2Cf4-menu-subitem-body">
-              <span class="iGq8lCFjVYeoM2Cf4-slider-text-left">Scaling factor</span>
-              <span class="iGq8lCFjVYeoM2Cf4-slider-text-right"
-                    id="iGq8lCFjVYeoM2Cf4-edge-label-size-factor-text"></span>
-              <input class="iGq8lCFjVYeoM2Cf4-slider"
-                     id="iGq8lCFjVYeoM2Cf4-edge-label-size-factor-slider"
+            <div class="ibXiZlAhkaP5pdbuw-menu-subitem-body">
+              <span class="ibXiZlAhkaP5pdbuw-slider-text-left">Scaling factor</span>
+              <span class="ibXiZlAhkaP5pdbuw-slider-text-right"
+                    id="ibXiZlAhkaP5pdbuw-edge-label-size-factor-text"></span>
+              <input class="ibXiZlAhkaP5pdbuw-slider"
+                     id="ibXiZlAhkaP5pdbuw-edge-label-size-factor-slider"
                      type="range" min="0.01" max="5.0" step="0.01">
             </div>
           </div>
           <!-- Sub-menu: Rotation -->
-          <div id="iGq8lCFjVYeoM2Cf4-edge-label-rotation">
-            <div class="iGq8lCFjVYeoM2Cf4-menu-subitem-head">
+          <div id="ibXiZlAhkaP5pdbuw-edge-label-rotation">
+            <div class="ibXiZlAhkaP5pdbuw-menu-subitem-head">
               Rotation
             </div>
-            <div class="iGq8lCFjVYeoM2Cf4-menu-subitem-body">
-              <span class="iGq8lCFjVYeoM2Cf4-slider-text-left">Angle</span>
-              <span class="iGq8lCFjVYeoM2Cf4-slider-text-right"
-                      id="iGq8lCFjVYeoM2Cf4-edge-label-rotation-text"></span>
-              <input class="iGq8lCFjVYeoM2Cf4-slider"
-                     id="iGq8lCFjVYeoM2Cf4-edge-label-rotation-slider"
+            <div class="ibXiZlAhkaP5pdbuw-menu-subitem-body">
+              <span class="ibXiZlAhkaP5pdbuw-slider-text-left">Angle</span>
+              <span class="ibXiZlAhkaP5pdbuw-slider-text-right"
+                      id="ibXiZlAhkaP5pdbuw-edge-label-rotation-text"></span>
+              <input class="ibXiZlAhkaP5pdbuw-slider"
+                     id="ibXiZlAhkaP5pdbuw-edge-label-rotation-slider"
                      type="range" min="0.0" max="359.0" step="1.0">
             </div>
           </div>
         </div>
         <!-- Menu: Layout algorithm -->
-        <div class="iGq8lCFjVYeoM2Cf4-menu-item-head"
-             id="iGq8lCFjVYeoM2Cf4-layout-algorithm-head">
+        <div class="ibXiZlAhkaP5pdbuw-menu-item-head"
+             id="ibXiZlAhkaP5pdbuw-layout-algorithm-head">
           Layout algorithm
         </div>
-        <div class="iGq8lCFjVYeoM2Cf4-menu-item-body"
-             id="iGq8lCFjVYeoM2Cf4-layout-algorithm-body">
+        <div class="ibXiZlAhkaP5pdbuw-menu-item-body"
+             id="ibXiZlAhkaP5pdbuw-layout-algorithm-body">
 
           <!-- Sub-menu: Simulation -->
           <div>
-            <div class="iGq8lCFjVYeoM2Cf4-menu-subitem-head">
+            <div class="ibXiZlAhkaP5pdbuw-menu-subitem-head">
               Simulation
             </div>
-            <div class="iGq8lCFjVYeoM2Cf4-menu-subitem-body">
-              <div class="iGq8lCFjVYeoM2Cf4-labeled-input">
-                <input class="iGq8lCFjVYeoM2Cf4-checkbox"
-                       id="iGq8lCFjVYeoM2Cf4-simulation-active-checkbox"
+            <div class="ibXiZlAhkaP5pdbuw-menu-subitem-body">
+              <div class="ibXiZlAhkaP5pdbuw-labeled-input">
+                <input class="ibXiZlAhkaP5pdbuw-checkbox"
+                       id="ibXiZlAhkaP5pdbuw-simulation-active-checkbox"
                        type="checkbox">
-                <label class="iGq8lCFjVYeoM2Cf4-label"
-                       for="iGq8lCFjVYeoM2Cf4-simulation-active-checkbox">Active</label>
+                <label class="ibXiZlAhkaP5pdbuw-label"
+                       for="ibXiZlAhkaP5pdbuw-simulation-active-checkbox">Active</label>
               </div>
             </div>
           </div>
           <!-- Sub-menu: Many-body force -->
           <div>
-            <div class="iGq8lCFjVYeoM2Cf4-menu-subitem-head">
+            <div class="ibXiZlAhkaP5pdbuw-menu-subitem-head">
               Many-body force
             </div>
-            <div class="iGq8lCFjVYeoM2Cf4-menu-subitem-body">
-              <div class="iGq8lCFjVYeoM2Cf4-labeled-input">
-                <input class="iGq8lCFjVYeoM2Cf4-checkbox"
-                       id="iGq8lCFjVYeoM2Cf4-many-body-force-checkbox"
+            <div class="ibXiZlAhkaP5pdbuw-menu-subitem-body">
+              <div class="ibXiZlAhkaP5pdbuw-labeled-input">
+                <input class="ibXiZlAhkaP5pdbuw-checkbox"
+                       id="ibXiZlAhkaP5pdbuw-many-body-force-checkbox"
                        type="checkbox">
-                <label class="iGq8lCFjVYeoM2Cf4-label"
-                       for="iGq8lCFjVYeoM2Cf4-many-body-force-checkbox">On</label>
+                <label class="ibXiZlAhkaP5pdbuw-label"
+                       for="ibXiZlAhkaP5pdbuw-many-body-force-checkbox">On</label>
               </div>
-              <div id="iGq8lCFjVYeoM2Cf4-many-body-force-div">
+              <div id="ibXiZlAhkaP5pdbuw-many-body-force-div">
                 <div>
-                  <span class="iGq8lCFjVYeoM2Cf4-slider-text-left">Strength</span>
-                  <span class="iGq8lCFjVYeoM2Cf4-slider-text-right"
-                        id="iGq8lCFjVYeoM2Cf4-many-body-force-strength-text"></span>
-                  <input class="iGq8lCFjVYeoM2Cf4-slider"
-                         id="iGq8lCFjVYeoM2Cf4-many-body-force-strength-slider"
+                  <span class="ibXiZlAhkaP5pdbuw-slider-text-left">Strength</span>
+                  <span class="ibXiZlAhkaP5pdbuw-slider-text-right"
+                        id="ibXiZlAhkaP5pdbuw-many-body-force-strength-text"></span>
+                  <input class="ibXiZlAhkaP5pdbuw-slider"
+                         id="ibXiZlAhkaP5pdbuw-many-body-force-strength-slider"
                          type="range" min="-2000.0" max="200.0" step="0.01"
                          style="direction:rtl;">
                 </div>
                 <div>
-                  <span class="iGq8lCFjVYeoM2Cf4-slider-text-left">Theta</span>
-                  <span class="iGq8lCFjVYeoM2Cf4-slider-text-right"
-                        id="iGq8lCFjVYeoM2Cf4-many-body-force-theta-text"></span>
-                  <input class="iGq8lCFjVYeoM2Cf4-slider"
-                         id="iGq8lCFjVYeoM2Cf4-many-body-force-theta-slider"
+                  <span class="ibXiZlAhkaP5pdbuw-slider-text-left">Theta</span>
+                  <span class="ibXiZlAhkaP5pdbuw-slider-text-right"
+                        id="ibXiZlAhkaP5pdbuw-many-body-force-theta-text"></span>
+                  <input class="ibXiZlAhkaP5pdbuw-slider"
+                         id="ibXiZlAhkaP5pdbuw-many-body-force-theta-slider"
                          type="range" min="0.01" max="2.0" step="0.001">
                 </div>
                 <div style="margin-top: 6px;">
-                  <div class="iGq8lCFjVYeoM2Cf4-labeled-input">
-                    <input class="iGq8lCFjVYeoM2Cf4-checkbox"
-                         id="iGq8lCFjVYeoM2Cf4-many-body-force-min-distance-checkbox"
+                  <div class="ibXiZlAhkaP5pdbuw-labeled-input">
+                    <input class="ibXiZlAhkaP5pdbuw-checkbox"
+                         id="ibXiZlAhkaP5pdbuw-many-body-force-min-distance-checkbox"
                          type="checkbox">
-                    <label class="iGq8lCFjVYeoM2Cf4-label"
-                           for="iGq8lCFjVYeoM2Cf4-many-body-force-min-distance-checkbox">Use minimum distance</label>
+                    <label class="ibXiZlAhkaP5pdbuw-label"
+                           for="ibXiZlAhkaP5pdbuw-many-body-force-min-distance-checkbox">Use minimum distance</label>
                   </div>
-                  <div id="iGq8lCFjVYeoM2Cf4-many-body-force-min-distance-div">
-                    <span class="iGq8lCFjVYeoM2Cf4-slider-text-left">Min</span>
-                    <span class="iGq8lCFjVYeoM2Cf4-slider-text-right"
-                          id="iGq8lCFjVYeoM2Cf4-many-body-force-min-distance-text"></span>
-                    <input class="iGq8lCFjVYeoM2Cf4-slider"
-                           id="iGq8lCFjVYeoM2Cf4-many-body-force-min-distance-slider"
+                  <div id="ibXiZlAhkaP5pdbuw-many-body-force-min-distance-div">
+                    <span class="ibXiZlAhkaP5pdbuw-slider-text-left">Min</span>
+                    <span class="ibXiZlAhkaP5pdbuw-slider-text-right"
+                          id="ibXiZlAhkaP5pdbuw-many-body-force-min-distance-text"></span>
+                    <input class="ibXiZlAhkaP5pdbuw-slider"
+                           id="ibXiZlAhkaP5pdbuw-many-body-force-min-distance-slider"
                            type="range" min="0.01" max="10000.0" step="0.01">
                   </div>
                 </div>
                 <div style="margin-top: 6px;">
-                  <div class="iGq8lCFjVYeoM2Cf4-labeled-input">
-                    <input class="iGq8lCFjVYeoM2Cf4-checkbox"
-                         id="iGq8lCFjVYeoM2Cf4-many-body-force-max-distance-checkbox"
+                  <div class="ibXiZlAhkaP5pdbuw-labeled-input">
+                    <input class="ibXiZlAhkaP5pdbuw-checkbox"
+                         id="ibXiZlAhkaP5pdbuw-many-body-force-max-distance-checkbox"
                          type="checkbox">
-                    <label class="iGq8lCFjVYeoM2Cf4-label"
-                           for="iGq8lCFjVYeoM2Cf4-many-body-force-max-distance-checkbox">Use maximum distance</label>
+                    <label class="ibXiZlAhkaP5pdbuw-label"
+                           for="ibXiZlAhkaP5pdbuw-many-body-force-max-distance-checkbox">Use maximum distance</label>
                   </div>
-                  <div id="iGq8lCFjVYeoM2Cf4-many-body-force-max-distance-div">
-                    <span class="iGq8lCFjVYeoM2Cf4-slider-text-left">Max</span>
-                    <span class="iGq8lCFjVYeoM2Cf4-slider-text-right"
-                          id="iGq8lCFjVYeoM2Cf4-many-body-force-max-distance-text"></span>
-                    <input class="iGq8lCFjVYeoM2Cf4-slider"
-                           id="iGq8lCFjVYeoM2Cf4-many-body-force-max-distance-slider"
+                  <div id="ibXiZlAhkaP5pdbuw-many-body-force-max-distance-div">
+                    <span class="ibXiZlAhkaP5pdbuw-slider-text-left">Max</span>
+                    <span class="ibXiZlAhkaP5pdbuw-slider-text-right"
+                          id="ibXiZlAhkaP5pdbuw-many-body-force-max-distance-text"></span>
+                    <input class="ibXiZlAhkaP5pdbuw-slider"
+                           id="ibXiZlAhkaP5pdbuw-many-body-force-max-distance-slider"
                            type="range" min="0.01" max="10000.0" step="0.01">
                   </div>
                 </div>
@@ -891,33 +891,33 @@
           </div>
           <!-- Sub-menu: Links force -->
           <div>
-            <div class="iGq8lCFjVYeoM2Cf4-menu-subitem-head">
+            <div class="ibXiZlAhkaP5pdbuw-menu-subitem-head">
               Links force
             </div>
-            <div class="iGq8lCFjVYeoM2Cf4-menu-subitem-body">
-              <div class="iGq8lCFjVYeoM2Cf4-labeled-input">
-                <input class="iGq8lCFjVYeoM2Cf4-checkbox"
-                       id="iGq8lCFjVYeoM2Cf4-links-force-checkbox"
+            <div class="ibXiZlAhkaP5pdbuw-menu-subitem-body">
+              <div class="ibXiZlAhkaP5pdbuw-labeled-input">
+                <input class="ibXiZlAhkaP5pdbuw-checkbox"
+                       id="ibXiZlAhkaP5pdbuw-links-force-checkbox"
                        type="checkbox">
-                <label class="iGq8lCFjVYeoM2Cf4-label"
-                       for="iGq8lCFjVYeoM2Cf4-links-force-checkbox">On</label>
+                <label class="ibXiZlAhkaP5pdbuw-label"
+                       for="ibXiZlAhkaP5pdbuw-links-force-checkbox">On</label>
                 </label>
               </div>
-              <div id="iGq8lCFjVYeoM2Cf4-links-force-div">
+              <div id="ibXiZlAhkaP5pdbuw-links-force-div">
                 <div>
-                  <span class="iGq8lCFjVYeoM2Cf4-slider-text-left">Distance</span>
-                  <span class="iGq8lCFjVYeoM2Cf4-slider-text-right"
-                        id="iGq8lCFjVYeoM2Cf4-links-force-distance-text"></span>
-                  <input class="iGq8lCFjVYeoM2Cf4-slider"
-                         id="iGq8lCFjVYeoM2Cf4-links-force-distance-slider"
+                  <span class="ibXiZlAhkaP5pdbuw-slider-text-left">Distance</span>
+                  <span class="ibXiZlAhkaP5pdbuw-slider-text-right"
+                        id="ibXiZlAhkaP5pdbuw-links-force-distance-text"></span>
+                  <input class="ibXiZlAhkaP5pdbuw-slider"
+                         id="ibXiZlAhkaP5pdbuw-links-force-distance-slider"
                          type="range" min="0.01" max="1000.0" step="0.01">
                 </div>
                 <div>
-                  <span class="iGq8lCFjVYeoM2Cf4-slider-text-left">Strength</span>
-                  <span class="iGq8lCFjVYeoM2Cf4-slider-text-right"
-                        id="iGq8lCFjVYeoM2Cf4-links-force-strength-text"></span>
-                  <input class="iGq8lCFjVYeoM2Cf4-slider"
-                         id="iGq8lCFjVYeoM2Cf4-links-force-strength-slider"
+                  <span class="ibXiZlAhkaP5pdbuw-slider-text-left">Strength</span>
+                  <span class="ibXiZlAhkaP5pdbuw-slider-text-right"
+                        id="ibXiZlAhkaP5pdbuw-links-force-strength-text"></span>
+                  <input class="ibXiZlAhkaP5pdbuw-slider"
+                         id="ibXiZlAhkaP5pdbuw-links-force-strength-slider"
                          type="range" min="0.01" max="1.0" step="0.001">
                 </div>
               </div>
@@ -925,32 +925,32 @@
           </div>
           <!-- Sub-menu: Collision force -->
           <div>
-            <div class="iGq8lCFjVYeoM2Cf4-menu-subitem-head">
+            <div class="ibXiZlAhkaP5pdbuw-menu-subitem-head">
               Collision force
             </div>
-            <div class="iGq8lCFjVYeoM2Cf4-menu-subitem-body">
-              <div class="iGq8lCFjVYeoM2Cf4-labeled-input">
-                <input class="iGq8lCFjVYeoM2Cf4-checkbox"
-                       id="iGq8lCFjVYeoM2Cf4-collision-force-checkbox"
+            <div class="ibXiZlAhkaP5pdbuw-menu-subitem-body">
+              <div class="ibXiZlAhkaP5pdbuw-labeled-input">
+                <input class="ibXiZlAhkaP5pdbuw-checkbox"
+                       id="ibXiZlAhkaP5pdbuw-collision-force-checkbox"
                        type="checkbox">
-                <label class="iGq8lCFjVYeoM2Cf4-label"
-                       for="iGq8lCFjVYeoM2Cf4-collision-force-checkbox">On</label>
+                <label class="ibXiZlAhkaP5pdbuw-label"
+                       for="ibXiZlAhkaP5pdbuw-collision-force-checkbox">On</label>
               </div>
-              <div id="iGq8lCFjVYeoM2Cf4-collision-force-div">
+              <div id="ibXiZlAhkaP5pdbuw-collision-force-div">
                 <div>
-                  <span class="iGq8lCFjVYeoM2Cf4-slider-text-left">Radius</span>
-                  <span class="iGq8lCFjVYeoM2Cf4-slider-text-right"
-                        id="iGq8lCFjVYeoM2Cf4-collision-force-radius-text"></span>
-                  <input class="iGq8lCFjVYeoM2Cf4-slider"
-                         id="iGq8lCFjVYeoM2Cf4-collision-force-radius-slider"
+                  <span class="ibXiZlAhkaP5pdbuw-slider-text-left">Radius</span>
+                  <span class="ibXiZlAhkaP5pdbuw-slider-text-right"
+                        id="ibXiZlAhkaP5pdbuw-collision-force-radius-text"></span>
+                  <input class="ibXiZlAhkaP5pdbuw-slider"
+                         id="ibXiZlAhkaP5pdbuw-collision-force-radius-slider"
                          type="range" min="0" max="100.0" step="0.01">
                 </div>
                 <div>
-                  <span class="iGq8lCFjVYeoM2Cf4-slider-text-left">Strength</span>
-                  <span class="iGq8lCFjVYeoM2Cf4-slider-text-right"
-                        id="iGq8lCFjVYeoM2Cf4-collision-force-strength-text"></span>
-                  <input class="iGq8lCFjVYeoM2Cf4-slider"
-                         id="iGq8lCFjVYeoM2Cf4-collision-force-strength-slider"
+                  <span class="ibXiZlAhkaP5pdbuw-slider-text-left">Strength</span>
+                  <span class="ibXiZlAhkaP5pdbuw-slider-text-right"
+                        id="ibXiZlAhkaP5pdbuw-collision-force-strength-text"></span>
+                  <input class="ibXiZlAhkaP5pdbuw-slider"
+                         id="ibXiZlAhkaP5pdbuw-collision-force-strength-slider"
                          type="range" min="0.01" max="1.0" step="0.001">
                 </div>
               </div>
@@ -958,24 +958,24 @@
           </div>
           <!-- Sub-menu: x-positioning force -->
           <div>
-            <div class="iGq8lCFjVYeoM2Cf4-menu-subitem-head">
+            <div class="ibXiZlAhkaP5pdbuw-menu-subitem-head">
               x-positioning force
             </div>
-            <div class="iGq8lCFjVYeoM2Cf4-menu-subitem-body">
-              <div class="iGq8lCFjVYeoM2Cf4-labeled-input">
-                <input class="iGq8lCFjVYeoM2Cf4-checkbox"
-                       id="iGq8lCFjVYeoM2Cf4-x-positioning-force-checkbox"
+            <div class="ibXiZlAhkaP5pdbuw-menu-subitem-body">
+              <div class="ibXiZlAhkaP5pdbuw-labeled-input">
+                <input class="ibXiZlAhkaP5pdbuw-checkbox"
+                       id="ibXiZlAhkaP5pdbuw-x-positioning-force-checkbox"
                        type="checkbox">
-                <label class="iGq8lCFjVYeoM2Cf4-label"
-                       for="iGq8lCFjVYeoM2Cf4-x-positioning-force-checkbox">On</label>
+                <label class="ibXiZlAhkaP5pdbuw-label"
+                       for="ibXiZlAhkaP5pdbuw-x-positioning-force-checkbox">On</label>
               </div>
-              <div id="iGq8lCFjVYeoM2Cf4-x-positioning-force-div">
+              <div id="ibXiZlAhkaP5pdbuw-x-positioning-force-div">
                 <div>
-                  <span class="iGq8lCFjVYeoM2Cf4-slider-text-left">Strength</span>
-                  <span class="iGq8lCFjVYeoM2Cf4-slider-text-right"
-                        id="iGq8lCFjVYeoM2Cf4-x-positioning-force-strength-text"></span>
-                  <input class="iGq8lCFjVYeoM2Cf4-slider"
-                         id="iGq8lCFjVYeoM2Cf4-x-positioning-force-strength-slider"
+                  <span class="ibXiZlAhkaP5pdbuw-slider-text-left">Strength</span>
+                  <span class="ibXiZlAhkaP5pdbuw-slider-text-right"
+                        id="ibXiZlAhkaP5pdbuw-x-positioning-force-strength-text"></span>
+                  <input class="ibXiZlAhkaP5pdbuw-slider"
+                         id="ibXiZlAhkaP5pdbuw-x-positioning-force-strength-slider"
                          type="range" min="0.01" max="1.0" step="0.001">
                 </div>
               </div>
@@ -983,24 +983,24 @@
           </div>
           <!-- Sub-menu: y-positioning force -->
           <div>
-            <div class="iGq8lCFjVYeoM2Cf4-menu-subitem-head">
+            <div class="ibXiZlAhkaP5pdbuw-menu-subitem-head">
               y-positioning force
             </div>
-            <div class="iGq8lCFjVYeoM2Cf4-menu-subitem-body">
-              <div class="iGq8lCFjVYeoM2Cf4-labeled-input">
-                <input class="iGq8lCFjVYeoM2Cf4-checkbox"
-                       id="iGq8lCFjVYeoM2Cf4-y-positioning-force-checkbox"
+            <div class="ibXiZlAhkaP5pdbuw-menu-subitem-body">
+              <div class="ibXiZlAhkaP5pdbuw-labeled-input">
+                <input class="ibXiZlAhkaP5pdbuw-checkbox"
+                       id="ibXiZlAhkaP5pdbuw-y-positioning-force-checkbox"
                        type="checkbox">
-                <label class="iGq8lCFjVYeoM2Cf4-label"
-                       for="iGq8lCFjVYeoM2Cf4-y-positioning-force-checkbox">On</label>
+                <label class="ibXiZlAhkaP5pdbuw-label"
+                       for="ibXiZlAhkaP5pdbuw-y-positioning-force-checkbox">On</label>
               </div>
-              <div id="iGq8lCFjVYeoM2Cf4-y-positioning-force-div">
+              <div id="ibXiZlAhkaP5pdbuw-y-positioning-force-div">
                 <div>
-                  <span class="iGq8lCFjVYeoM2Cf4-slider-text-left">Strength</span>
-                  <span class="iGq8lCFjVYeoM2Cf4-slider-text-right"
-                        id="iGq8lCFjVYeoM2Cf4-y-positioning-force-strength-text"></span>
-                  <input class="iGq8lCFjVYeoM2Cf4-slider"
-                         id="iGq8lCFjVYeoM2Cf4-y-positioning-force-strength-slider"
+                  <span class="ibXiZlAhkaP5pdbuw-slider-text-left">Strength</span>
+                  <span class="ibXiZlAhkaP5pdbuw-slider-text-right"
+                        id="ibXiZlAhkaP5pdbuw-y-positioning-force-strength-text"></span>
+                  <input class="ibXiZlAhkaP5pdbuw-slider"
+                         id="ibXiZlAhkaP5pdbuw-y-positioning-force-strength-slider"
                          type="range" min="0.01" max="1.0" step="0.001">
                 </div>
               </div>
@@ -1008,16 +1008,16 @@
           </div>
           <!-- Sub-menu: Centering force -->
           <div>
-            <div class="iGq8lCFjVYeoM2Cf4-menu-subitem-head">
+            <div class="ibXiZlAhkaP5pdbuw-menu-subitem-head">
               Centering force
             </div>
-            <div class="iGq8lCFjVYeoM2Cf4-menu-subitem-body">
-              <div class="iGq8lCFjVYeoM2Cf4-labeled-input">
-                <input class="iGq8lCFjVYeoM2Cf4-checkbox"
-                       id="iGq8lCFjVYeoM2Cf4-centering-force-checkbox"
+            <div class="ibXiZlAhkaP5pdbuw-menu-subitem-body">
+              <div class="ibXiZlAhkaP5pdbuw-labeled-input">
+                <input class="ibXiZlAhkaP5pdbuw-checkbox"
+                       id="ibXiZlAhkaP5pdbuw-centering-force-checkbox"
                        type="checkbox">
-                <label class="iGq8lCFjVYeoM2Cf4-label"
-                       for="iGq8lCFjVYeoM2Cf4-centering-force-checkbox">On</label>
+                <label class="ibXiZlAhkaP5pdbuw-label"
+                       for="ibXiZlAhkaP5pdbuw-centering-force-checkbox">On</label>
               </div>
             </div>
           </div>
@@ -1070,7 +1070,7 @@ function(t){"use strict";function n(t,n){return null==t||null==n?NaN:t<n?-1:t>n?
 
           // 1) Fetch state.rawData
           fetchRawDataFromTemplating(){
-            state.rawData = [{"nodes": {"0": {"label": "Pattern of Menstrual cycle", "metadata": {"node_type": "Question", "datatype": "Coded", "color": "#1f77b4", "size": 14, "shape": "circle", "hover": "[Question] Pattern of Menstrual cycle (UUID: c0010001-0000-0000-0000-000000000025) | Type: Coded", "name": "c0010001-0000-0000-0000-000000000025"}}, "1": {"label": "Flow of Menstrual cycle", "metadata": {"node_type": "Question", "datatype": "Coded", "color": "#1f77b4", "size": 14, "shape": "circle", "hover": "[Question] Flow of Menstrual cycle (UUID: c0010001-0000-0000-0000-000000000027) | Type: Coded", "name": "c0010001-0000-0000-0000-000000000027"}}, "2": {"label": "Irregular cycle type", "metadata": {"node_type": "Question", "datatype": "Coded", "color": "#1f77b4", "size": 14, "shape": "circle", "hover": "[Question] Irregular cycle type (UUID: c0010001-0000-0000-0000-000000000028) | Type: Coded", "name": "c0010001-0000-0000-0000-000000000028"}}, "3": {"label": "Type of Amenorrhoea", "metadata": {"node_type": "Question", "datatype": "Coded", "color": "#1f77b4", "size": 14, "shape": "circle", "hover": "[Question] Type of Amenorrhoea (UUID: c0010001-0000-0000-0000-000000000029) | Type: Coded", "name": "c0010001-0000-0000-0000-000000000029"}}, "4": {"label": "Female Infertility Factor", "metadata": {"node_type": "Question", "datatype": "Coded", "color": "#1f77b4", "size": 14, "shape": "circle", "hover": "[Question] Female Infertility Factor (UUID: c0010001-0000-0000-0000-000000000030) | Type: Coded", "name": "c0010001-0000-0000-0000-000000000030"}}, "5": {"label": "Tubal Factor Details", "metadata": {"node_type": "Question", "datatype": "Coded", "color": "#1f77b4", "size": 14, "shape": "circle", "hover": "[Question] Tubal Factor Details (UUID: c0010001-0000-0000-0000-000000000031) | Type: Coded", "name": "c0010001-0000-0000-0000-000000000031"}}, "6": {"label": "Diminished Ovarian Reserve Details", "metadata": {"node_type": "Question", "datatype": "Coded", "color": "#1f77b4", "size": 14, "shape": "circle", "hover": "[Question] Diminished Ovarian Reserve Details (UUID: c0010001-0000-0000-0000-000000000032) | Type: Coded", "name": "c0010001-0000-0000-0000-000000000032"}}, "7": {"label": "POSEIDON Group", "metadata": {"node_type": "Question", "datatype": "Coded", "color": "#1f77b4", "size": 14, "shape": "circle", "hover": "[Question] POSEIDON Group (UUID: c0010001-0000-0000-0000-000000000033) | Type: Coded", "name": "c0010001-0000-0000-0000-000000000033"}}, "8": {"label": "Endometriosis Classification", "metadata": {"node_type": "Question", "datatype": "Coded", "color": "#1f77b4", "size": 14, "shape": "circle", "hover": "[Question] Endometriosis Classification (UUID: c0010001-0000-0000-0000-000000000034) | Type: Coded", "name": "c0010001-0000-0000-0000-000000000034"}}, "9": {"label": "PCOS Phenotype", "metadata": {"node_type": "Question", "datatype": "Coded", "color": "#1f77b4", "size": 14, "shape": "circle", "hover": "[Question] PCOS Phenotype (UUID: c0010001-0000-0000-0000-000000000035) | Type: Coded", "name": "c0010001-0000-0000-0000-000000000035"}}, "10": {"label": "Uterine Factor Details", "metadata": {"node_type": "Question", "datatype": "Coded", "color": "#1f77b4", "size": 14, "shape": "circle", "hover": "[Question] Uterine Factor Details (UUID: c0010001-0000-0000-0000-000000000036) | Type: Coded", "name": "c0010001-0000-0000-0000-000000000036"}}, "11": {"label": "Other Female Infertility Factors", "metadata": {"node_type": "Question", "datatype": "Coded", "color": "#1f77b4", "size": 14, "shape": "circle", "hover": "[Question] Other Female Infertility Factors (UUID: c0010001-0000-0000-0000-000000000037) | Type: Coded", "name": "c0010001-0000-0000-0000-000000000037"}}, "12": {"label": "Male Infertility Factor", "metadata": {"node_type": "Question", "datatype": "Coded", "color": "#1f77b4", "size": 14, "shape": "circle", "hover": "[Question] Male Infertility Factor (UUID: c0010001-0000-0000-0000-000000000039) | Type: Coded", "name": "c0010001-0000-0000-0000-000000000039"}}, "13": {"label": "Azoospermia Details", "metadata": {"node_type": "Question", "datatype": "Coded", "color": "#1f77b4", "size": 14, "shape": "circle", "hover": "[Question] Azoospermia Details (UUID: c0010001-0000-0000-0000-000000000040) | Type: Coded", "name": "c0010001-0000-0000-0000-000000000040"}}, "14": {"label": "Previous Ovulation Induction", "metadata": {"node_type": "Question", "datatype": "Coded", "color": "#1f77b4", "size": 14, "shape": "circle", "hover": "[Question] Previous Ovulation Induction (UUID: c0010001-0000-0000-0000-000000000045) | Type: Coded", "name": "c0010001-0000-0000-0000-000000000045"}}, "15": {"label": "Ovulation Induction Drugs OI", "metadata": {"node_type": "Question", "datatype": "Coded", "color": "#1f77b4", "size": 14, "shape": "circle", "hover": "[Question] Ovulation Induction Drugs OI (UUID: c0010001-0000-0000-0000-000000000046) | Type: Coded", "name": "c0010001-0000-0000-0000-000000000046"}}, "16": {"label": "Dose of drugs in Ovulation Induction", "metadata": {"node_type": "Question", "datatype": "Text", "color": "#1f77b4", "size": 14, "shape": "circle", "hover": "[Question] Dose of drugs in Ovulation Induction (UUID: c0010001-0000-0000-0000-000000000047) | Type: Text", "name": "c0010001-0000-0000-0000-000000000047"}}, "17": {"label": "Number of Previous Ovulation Induction", "metadata": {"node_type": "Question", "datatype": "Numeric", "color": "#1f77b4", "size": 14, "shape": "circle", "hover": "[Question] Number of Previous Ovulation Induction (UUID: c0010001-0000-0000-0000-000000000048) | Type: Numeric", "name": "c0010001-0000-0000-0000-000000000048"}}, "18": {"label": "Year of Previous Ovulation Induction", "metadata": {"node_type": "Question", "datatype": "Numeric", "color": "#1f77b4", "size": 14, "shape": "circle", "hover": "[Question] Year of Previous Ovulation Induction (UUID: c0010001-0000-0000-0000-000000000049) | Type: Numeric", "name": "c0010001-0000-0000-0000-000000000049"}}, "19": {"label": "Previous OI and IUI", "metadata": {"node_type": "Question", "datatype": "Coded", "color": "#1f77b4", "size": 14, "shape": "circle", "hover": "[Question] Previous OI and IUI (UUID: c0010001-0000-0000-0000-000000000050) | Type: Coded", "name": "c0010001-0000-0000-0000-000000000050"}}, "20": {"label": "Ovulation Induction Drugs IUI", "metadata": {"node_type": "Question", "datatype": "Coded", "color": "#1f77b4", "size": 14, "shape": "circle", "hover": "[Question] Ovulation Induction Drugs IUI (UUID: c0010001-0000-0000-0000-000000000051) | Type: Coded", "name": "c0010001-0000-0000-0000-000000000051"}}, "21": {"label": "Dose of drugs in OI and IUI", "metadata": {"node_type": "Question", "datatype": "Text", "color": "#1f77b4", "size": 14, "shape": "circle", "hover": "[Question] Dose of drugs in OI and IUI (UUID: c0010001-0000-0000-0000-000000000052) | Type: Text", "name": "c0010001-0000-0000-0000-000000000052"}}, "22": {"label": "Number of Previous OI and IUI", "metadata": {"node_type": "Question", "datatype": "Numeric", "color": "#1f77b4", "size": 14, "shape": "circle", "hover": "[Question] Number of Previous OI and IUI (UUID: c0010001-0000-0000-0000-000000000053) | Type: Numeric", "name": "c0010001-0000-0000-0000-000000000053"}}, "23": {"label": "Year of Previous OI and IUI", "metadata": {"node_type": "Question", "datatype": "Numeric", "color": "#1f77b4", "size": 14, "shape": "circle", "hover": "[Question] Year of Previous OI and IUI (UUID: c0010001-0000-0000-0000-000000000054) | Type: Numeric", "name": "c0010001-0000-0000-0000-000000000054"}}, "24": {"label": "Failed In vitro fertilization", "metadata": {"node_type": "Question", "datatype": "Coded", "color": "#1f77b4", "size": 14, "shape": "circle", "hover": "[Question] Failed In vitro fertilization (UUID: c0010001-0000-0000-0000-000000000055) | Type: Coded", "name": "c0010001-0000-0000-0000-000000000055"}}, "25": {"label": "Number of Failed IVF Cycles", "metadata": {"node_type": "Question", "datatype": "Numeric", "color": "#1f77b4", "size": 14, "shape": "circle", "hover": "[Question] Number of Failed IVF Cycles (UUID: c0010001-0000-0000-0000-000000000056) | Type: Numeric", "name": "c0010001-0000-0000-0000-000000000056"}}, "26": {"label": "Previous Surgery Performed", "metadata": {"node_type": "Question", "datatype": "Coded", "color": "#1f77b4", "size": 14, "shape": "circle", "hover": "[Question] Previous Surgery Performed (UUID: c0010001-0000-0000-0000-000000000058) | Type: Coded", "name": "c0010001-0000-0000-0000-000000000058"}}, "27": {"label": "Surgical Approach", "metadata": {"node_type": "Question", "datatype": "Coded", "color": "#1f77b4", "size": 14, "shape": "circle", "hover": "[Question] Surgical Approach (UUID: c0010001-0000-0000-0000-000000000059) | Type: Coded", "name": "c0010001-0000-0000-0000-000000000059"}}, "28": {"label": "Year or Date of Surgery", "metadata": {"node_type": "Question", "datatype": "Text", "color": "#1f77b4", "size": 14, "shape": "circle", "hover": "[Question] Year or Date of Surgery (UUID: c0010001-0000-0000-0000-000000000060) | Type: Text", "name": "c0010001-0000-0000-0000-000000000060"}}, "29": {"label": "Uterine Surgeries", "metadata": {"node_type": "Question", "datatype": "Coded", "color": "#1f77b4", "size": 14, "shape": "circle", "hover": "[Question] Uterine Surgeries (UUID: c0010001-0000-0000-0000-000000000061) | Type: Coded", "name": "c0010001-0000-0000-0000-000000000061"}}, "30": {"label": "Endometriosis Surgeries", "metadata": {"node_type": "Question", "datatype": "Coded", "color": "#1f77b4", "size": 14, "shape": "circle", "hover": "[Question] Endometriosis Surgeries (UUID: c0010001-0000-0000-0000-000000000062) | Type: Coded", "name": "c0010001-0000-0000-0000-000000000062"}}, "31": {"label": "Ovarian Surgeries", "metadata": {"node_type": "Question", "datatype": "Coded", "color": "#1f77b4", "size": 14, "shape": "circle", "hover": "[Question] Ovarian Surgeries (UUID: c0010001-0000-0000-0000-000000000063) | Type: Coded", "name": "c0010001-0000-0000-0000-000000000063"}}, "32": {"label": "Fallopian Tube Surgeries", "metadata": {"node_type": "Question", "datatype": "Coded", "color": "#1f77b4", "size": 14, "shape": "circle", "hover": "[Question] Fallopian Tube Surgeries (UUID: c0010001-0000-0000-0000-000000000064) | Type: Coded", "name": "c0010001-0000-0000-0000-000000000064"}}, "33": {"label": "Peritoneal Surgeries", "metadata": {"node_type": "Question", "datatype": "Coded", "color": "#1f77b4", "size": 14, "shape": "circle", "hover": "[Question] Peritoneal Surgeries (UUID: c0010001-0000-0000-0000-000000000065) | Type: Coded", "name": "c0010001-0000-0000-0000-000000000065"}}, "34": {"label": "Endometriotic Cystectomy Laterality", "metadata": {"node_type": "Question", "datatype": "Coded", "color": "#1f77b4", "size": 14, "shape": "circle", "hover": "[Question] Endometriotic Cystectomy Laterality (UUID: c0010001-0000-0000-0000-000000000066) | Type: Coded", "name": "c0010001-0000-0000-0000-000000000066"}}, "35": {"label": "Endometriotic Bipolar Ablation Laterality", "metadata": {"node_type": "Question", "datatype": "Coded", "color": "#1f77b4", "size": 14, "shape": "circle", "hover": "[Question] Endometriotic Bipolar Ablation Laterality (UUID: c0010001-0000-0000-0000-000000000067) | Type: Coded", "name": "c0010001-0000-0000-0000-000000000067"}}, "36": {"label": "Endometriotic APC Laterality", "metadata": {"node_type": "Question", "datatype": "Coded", "color": "#1f77b4", "size": 14, "shape": "circle", "hover": "[Question] Endometriotic APC Laterality (UUID: c0010001-0000-0000-0000-000000000068) | Type: Coded", "name": "c0010001-0000-0000-0000-000000000068"}}, "37": {"label": "Endometriotic Drainage Laterality", "metadata": {"node_type": "Question", "datatype": "Coded", "color": "#1f77b4", "size": 14, "shape": "circle", "hover": "[Question] Endometriotic Drainage Laterality (UUID: c0010001-0000-0000-0000-000000000069) | Type: Coded", "name": "c0010001-0000-0000-0000-000000000069"}}, "38": {"label": "Endometriotic Sclerotherapy Laterality", "metadata": {"node_type": "Question", "datatype": "Coded", "color": "#1f77b4", "size": 14, "shape": "circle", "hover": "[Question] Endometriotic Sclerotherapy Laterality (UUID: c0010001-0000-0000-0000-000000000070) | Type: Coded", "name": "c0010001-0000-0000-0000-000000000070"}}, "39": {"label": "Endometriosis Oophorectomy Laterality", "metadata": {"node_type": "Question", "datatype": "Coded", "color": "#1f77b4", "size": 14, "shape": "circle", "hover": "[Question] Endometriosis Oophorectomy Laterality (UUID: c0010001-0000-0000-0000-000000000071) | Type: Coded", "name": "c0010001-0000-0000-0000-000000000071"}}, "40": {"label": "Ovarian Dermoid Laterality", "metadata": {"node_type": "Question", "datatype": "Coded", "color": "#1f77b4", "size": 14, "shape": "circle", "hover": "[Question] Ovarian Dermoid Laterality (UUID: c0010001-0000-0000-0000-000000000072) | Type: Coded", "name": "c0010001-0000-0000-0000-000000000072"}}, "41": {"label": "Simple Ovarian Cyst Laterality", "metadata": {"node_type": "Question", "datatype": "Coded", "color": "#1f77b4", "size": 14, "shape": "circle", "hover": "[Question] Simple Ovarian Cyst Laterality (UUID: c0010001-0000-0000-0000-000000000073) | Type: Coded", "name": "c0010001-0000-0000-0000-000000000073"}}, "42": {"label": "Paraovarian Cyst Laterality", "metadata": {"node_type": "Question", "datatype": "Coded", "color": "#1f77b4", "size": 14, "shape": "circle", "hover": "[Question] Paraovarian Cyst Laterality (UUID: c0010001-0000-0000-0000-000000000074) | Type: Coded", "name": "c0010001-0000-0000-0000-000000000074"}}, "43": {"label": "Ovarian Cyst Aspiration Laterality", "metadata": {"node_type": "Question", "datatype": "Coded", "color": "#1f77b4", "size": 14, "shape": "circle", "hover": "[Question] Ovarian Cyst Aspiration Laterality (UUID: c0010001-0000-0000-0000-000000000075) | Type: Coded", "name": "c0010001-0000-0000-0000-000000000075"}}, "44": {"label": "Oophorectomy Laterality", "metadata": {"node_type": "Question", "datatype": "Coded", "color": "#1f77b4", "size": 14, "shape": "circle", "hover": "[Question] Oophorectomy Laterality (UUID: c0010001-0000-0000-0000-000000000076) | Type: Coded", "name": "c0010001-0000-0000-0000-000000000076"}}, "45": {"label": "Ovarian Cystectomy Laterality", "metadata": {"node_type": "Question", "datatype": "Coded", "color": "#1f77b4", "size": 14, "shape": "circle", "hover": "[Question] Ovarian Cystectomy Laterality (UUID: c0010001-0000-0000-0000-000000000077) | Type: Coded", "name": "c0010001-0000-0000-0000-000000000077"}}, "46": {"label": "Chromopertubation Laterality", "metadata": {"node_type": "Question", "datatype": "Coded", "color": "#1f77b4", "size": 14, "shape": "circle", "hover": "[Question] Chromopertubation Laterality (UUID: c0010001-0000-0000-0000-000000000078) | Type: Coded", "name": "c0010001-0000-0000-0000-000000000078"}}, "47": {"label": "Tubal Cannulation Laterality", "metadata": {"node_type": "Question", "datatype": "Coded", "color": "#1f77b4", "size": 14, "shape": "circle", "hover": "[Question] Tubal Cannulation Laterality (UUID: c0010001-0000-0000-0000-000000000079) | Type: Coded", "name": "c0010001-0000-0000-0000-000000000079"}}, "48": {"label": "Salpingectomy Laterality", "metadata": {"node_type": "Question", "datatype": "Coded", "color": "#1f77b4", "size": 14, "shape": "circle", "hover": "[Question] Salpingectomy Laterality (UUID: c0010001-0000-0000-0000-000000000080) | Type: Coded", "name": "c0010001-0000-0000-0000-000000000080"}}, "49": {"label": "Fimbrioplasty Laterality", "metadata": {"node_type": "Question", "datatype": "Coded", "color": "#1f77b4", "size": 14, "shape": "circle", "hover": "[Question] Fimbrioplasty Laterality (UUID: c0010001-0000-0000-0000-000000000081) | Type: Coded", "name": "c0010001-0000-0000-0000-000000000081"}}, "50": {"label": "Tubal Clipping Laterality", "metadata": {"node_type": "Question", "datatype": "Coded", "color": "#1f77b4", "size": 14, "shape": "circle", "hover": "[Question] Tubal Clipping Laterality (UUID: c0010001-0000-0000-0000-000000000082) | Type: Coded", "name": "c0010001-0000-0000-0000-000000000082"}}, "51": {"label": "Recanalization Laterality", "metadata": {"node_type": "Question", "datatype": "Coded", "color": "#1f77b4", "size": 14, "shape": "circle", "hover": "[Question] Recanalization Laterality (UUID: c0010001-0000-0000-0000-000000000083) | Type: Coded", "name": "c0010001-0000-0000-0000-000000000083"}}, "52": {"label": "Is the patient a current tobacco smoker?", "metadata": {"node_type": "Question", "datatype": "Unknown", "color": "#1f77b4", "size": 16, "shape": "circle", "hover": "[Question] Is the patient a current tobacco smoker? (UUID: 152722AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA)", "name": "152722AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"}}, "53": {"label": "Average cigarettes smoked per day", "metadata": {"node_type": "Question", "datatype": "Unknown", "color": "#1f77b4", "size": 16, "shape": "circle", "hover": "[Question] Average cigarettes smoked per day (UUID: 1546AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA)", "name": "1546AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"}}}, "edges": [{"source": "4", "target": "5", "metadata": {"edge_type": "SKIP_LOGIC", "color": "#d62728", "hover": "SKIP LOGIC: 'female_factors' controls 'tubal_factor_details'\nCondition: !female_factors || !female_factors.includes('c0010002-0000-0000-0000-000000000301')", "weight": 2.5, "condition": "!female_factors || !female_factors.includes('c0010002-0000-0000-0000-000000000301')"}}, {"source": "4", "target": "6", "metadata": {"edge_type": "SKIP_LOGIC", "color": "#d62728", "hover": "SKIP LOGIC: 'female_factors' controls 'dor_details'\nCondition: !female_factors || !female_factors.includes('c0010002-0000-0000-0000-000000000302')", "weight": 2.5, "condition": "!female_factors || !female_factors.includes('c0010002-0000-0000-0000-000000000302')"}}, {"source": "4", "target": "7", "metadata": {"edge_type": "SKIP_LOGIC", "color": "#d62728", "hover": "SKIP LOGIC: 'female_factors' controls 'poseidon_group'\nCondition: !female_factors || !female_factors.includes('c0010002-0000-0000-0000-000000000302') || dor_details !== 'c0010002-0000-0000-0000-000000000322'", "weight": 2.5, "condition": "!female_factors || !female_factors.includes('c0010002-0000-0000-0000-000000000302') || dor_details !== 'c0010002-0000-0000-0000-000000000322'"}}, {"source": "6", "target": "7", "metadata": {"edge_type": "SKIP_LOGIC", "color": "#d62728", "hover": "SKIP LOGIC: 'dor_details' controls 'poseidon_group'\nCondition: !female_factors || !female_factors.includes('c0010002-0000-0000-0000-000000000302') || dor_details !== 'c0010002-0000-0000-0000-000000000322'", "weight": 2.5, "condition": "!female_factors || !female_factors.includes('c0010002-0000-0000-0000-000000000302') || dor_details !== 'c0010002-0000-0000-0000-000000000322'"}}, {"source": "4", "target": "8", "metadata": {"edge_type": "SKIP_LOGIC", "color": "#d62728", "hover": "SKIP LOGIC: 'female_factors' controls 'endometriosis_classification'\nCondition: !female_factors || !female_factors.includes('c0010002-0000-0000-0000-000000000303')", "weight": 2.5, "condition": "!female_factors || !female_factors.includes('c0010002-0000-0000-0000-000000000303')"}}, {"source": "4", "target": "9", "metadata": {"edge_type": "SKIP_LOGIC", "color": "#d62728", "hover": "SKIP LOGIC: 'female_factors' controls 'pcos_phenotype'\nCondition: !female_factors || !female_factors.includes('c0010002-0000-0000-0000-000000000304')", "weight": 2.5, "condition": "!female_factors || !female_factors.includes('c0010002-0000-0000-0000-000000000304')"}}, {"source": "4", "target": "10", "metadata": {"edge_type": "SKIP_LOGIC", "color": "#d62728", "hover": "SKIP LOGIC: 'female_factors' controls 'uterine_factor_details'\nCondition: !female_factors || !female_factors.includes('c0010002-0000-0000-0000-000000000305')", "weight": 2.5, "condition": "!female_factors || !female_factors.includes('c0010002-0000-0000-0000-000000000305')"}}, {"source": "4", "target": "11", "metadata": {"edge_type": "SKIP_LOGIC", "color": "#d62728", "hover": "SKIP LOGIC: 'female_factors' controls 'other_female_factors'\nCondition: !female_factors || !female_factors.includes('c0010002-0000-0000-0000-000000000307')", "weight": 2.5, "condition": "!female_factors || !female_factors.includes('c0010002-0000-0000-0000-000000000307')"}}, {"source": "12", "target": "13", "metadata": {"edge_type": "SKIP_LOGIC", "color": "#d62728", "hover": "SKIP LOGIC: 'male_factors' controls 'azoospermia_details'\nCondition: !male_factors || !male_factors.includes('c0010002-0000-0000-0000-000000000401')", "weight": 2.5, "condition": "!male_factors || !male_factors.includes('c0010002-0000-0000-0000-000000000401')"}}, {"source": "0", "target": "2", "metadata": {"edge_type": "SKIP_LOGIC", "color": "#d62728", "hover": "SKIP LOGIC: 'pattern_of_menstrual_cycle' controls 'irregular_cycle_type'\nCondition: pattern_of_menstrual_cycle !== 'c0010002-0000-0000-0000-000000000202'", "weight": 2.5, "condition": "pattern_of_menstrual_cycle !== 'c0010002-0000-0000-0000-000000000202'"}}, {"source": "1", "target": "3", "metadata": {"edge_type": "SKIP_LOGIC", "color": "#d62728", "hover": "SKIP LOGIC: 'flow_of_menstrual_cycle' controls 'amenorrhoea_type'\nCondition: flow_of_menstrual_cycle !== 'c0010002-0000-0000-0000-000000000210'", "weight": 2.5, "condition": "flow_of_menstrual_cycle !== 'c0010002-0000-0000-0000-000000000210'"}}, {"source": "14", "target": "15", "metadata": {"edge_type": "SKIP_LOGIC", "color": "#d62728", "hover": "SKIP LOGIC: 'prev_oi' controls 'oi_drugs'\nCondition: !prev_oi || prev_oi !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'", "weight": 2.5, "condition": "!prev_oi || prev_oi !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"}}, {"source": "14", "target": "16", "metadata": {"edge_type": "SKIP_LOGIC", "color": "#d62728", "hover": "SKIP LOGIC: 'prev_oi' controls 'oi_dose'\nCondition: !prev_oi || prev_oi !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'", "weight": 2.5, "condition": "!prev_oi || prev_oi !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"}}, {"source": "14", "target": "17", "metadata": {"edge_type": "SKIP_LOGIC", "color": "#d62728", "hover": "SKIP LOGIC: 'prev_oi' controls 'oi_cycles'\nCondition: !prev_oi || prev_oi !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'", "weight": 2.5, "condition": "!prev_oi || prev_oi !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"}}, {"source": "14", "target": "18", "metadata": {"edge_type": "SKIP_LOGIC", "color": "#d62728", "hover": "SKIP LOGIC: 'prev_oi' controls 'oi_year'\nCondition: !prev_oi || prev_oi !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'", "weight": 2.5, "condition": "!prev_oi || prev_oi !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"}}, {"source": "19", "target": "20", "metadata": {"edge_type": "SKIP_LOGIC", "color": "#d62728", "hover": "SKIP LOGIC: 'prev_oi_iui' controls 'iui_drugs'\nCondition: !prev_oi_iui || prev_oi_iui !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'", "weight": 2.5, "condition": "!prev_oi_iui || prev_oi_iui !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"}}, {"source": "19", "target": "21", "metadata": {"edge_type": "SKIP_LOGIC", "color": "#d62728", "hover": "SKIP LOGIC: 'prev_oi_iui' controls 'iui_dose'\nCondition: !prev_oi_iui || prev_oi_iui !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'", "weight": 2.5, "condition": "!prev_oi_iui || prev_oi_iui !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"}}, {"source": "19", "target": "22", "metadata": {"edge_type": "SKIP_LOGIC", "color": "#d62728", "hover": "SKIP LOGIC: 'prev_oi_iui' controls 'iui_cycles'\nCondition: !prev_oi_iui || prev_oi_iui !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'", "weight": 2.5, "condition": "!prev_oi_iui || prev_oi_iui !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"}}, {"source": "19", "target": "23", "metadata": {"edge_type": "SKIP_LOGIC", "color": "#d62728", "hover": "SKIP LOGIC: 'prev_oi_iui' controls 'iui_year'\nCondition: !prev_oi_iui || prev_oi_iui !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'", "weight": 2.5, "condition": "!prev_oi_iui || prev_oi_iui !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"}}, {"source": "24", "target": "25", "metadata": {"edge_type": "SKIP_LOGIC", "color": "#d62728", "hover": "SKIP LOGIC: 'failed_ivf' controls 'failed_ivf_cycles'\nCondition: !failed_ivf || failed_ivf !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'", "weight": 2.5, "condition": "!failed_ivf || failed_ivf !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"}}, {"source": "26", "target": "27", "metadata": {"edge_type": "SKIP_LOGIC", "color": "#d62728", "hover": "SKIP LOGIC: 'prev_surgery' controls 'surgical_approach'\nCondition: !prev_surgery || prev_surgery !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'", "weight": 2.5, "condition": "!prev_surgery || prev_surgery !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"}}, {"source": "26", "target": "28", "metadata": {"edge_type": "SKIP_LOGIC", "color": "#d62728", "hover": "SKIP LOGIC: 'prev_surgery' controls 'surgery_year_date'\nCondition: !prev_surgery || prev_surgery !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'", "weight": 2.5, "condition": "!prev_surgery || prev_surgery !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"}}, {"source": "26", "target": "29", "metadata": {"edge_type": "SKIP_LOGIC", "color": "#d62728", "hover": "SKIP LOGIC: 'prev_surgery' controls 'uterine_surgeries'\nCondition: !prev_surgery || prev_surgery !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'", "weight": 2.5, "condition": "!prev_surgery || prev_surgery !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"}}, {"source": "26", "target": "33", "metadata": {"edge_type": "SKIP_LOGIC", "color": "#d62728", "hover": "SKIP LOGIC: 'prev_surgery' controls 'peritoneal_surgeries'\nCondition: !prev_surgery || prev_surgery !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'", "weight": 2.5, "condition": "!prev_surgery || prev_surgery !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"}}, {"source": "26", "target": "30", "metadata": {"edge_type": "SKIP_LOGIC", "color": "#d62728", "hover": "SKIP LOGIC: 'prev_surgery' controls 'endometriosis_surgeries'\nCondition: !prev_surgery || prev_surgery !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'", "weight": 2.5, "condition": "!prev_surgery || prev_surgery !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"}}, {"source": "30", "target": "34", "metadata": {"edge_type": "SKIP_LOGIC", "color": "#d62728", "hover": "SKIP LOGIC: 'endometriosis_surgeries' controls 'endo_cystectomy_lat'\nCondition: !endometriosis_surgeries || !endometriosis_surgeries.includes('c0010002-0000-0000-0000-000000000631')", "weight": 2.5, "condition": "!endometriosis_surgeries || !endometriosis_surgeries.includes('c0010002-0000-0000-0000-000000000631')"}}, {"source": "30", "target": "35", "metadata": {"edge_type": "SKIP_LOGIC", "color": "#d62728", "hover": "SKIP LOGIC: 'endometriosis_surgeries' controls 'endo_bipolar_lat'\nCondition: !endometriosis_surgeries || !endometriosis_surgeries.includes('c0010002-0000-0000-0000-000000000632')", "weight": 2.5, "condition": "!endometriosis_surgeries || !endometriosis_surgeries.includes('c0010002-0000-0000-0000-000000000632')"}}, {"source": "30", "target": "36", "metadata": {"edge_type": "SKIP_LOGIC", "color": "#d62728", "hover": "SKIP LOGIC: 'endometriosis_surgeries' controls 'endo_apc_lat'\nCondition: !endometriosis_surgeries || !endometriosis_surgeries.includes('c0010002-0000-0000-0000-000000000633')", "weight": 2.5, "condition": "!endometriosis_surgeries || !endometriosis_surgeries.includes('c0010002-0000-0000-0000-000000000633')"}}, {"source": "30", "target": "37", "metadata": {"edge_type": "SKIP_LOGIC", "color": "#d62728", "hover": "SKIP LOGIC: 'endometriosis_surgeries' controls 'endo_drainage_lat'\nCondition: !endometriosis_surgeries || !endometriosis_surgeries.includes('c0010002-0000-0000-0000-000000000634')", "weight": 2.5, "condition": "!endometriosis_surgeries || !endometriosis_surgeries.includes('c0010002-0000-0000-0000-000000000634')"}}, {"source": "30", "target": "38", "metadata": {"edge_type": "SKIP_LOGIC", "color": "#d62728", "hover": "SKIP LOGIC: 'endometriosis_surgeries' controls 'endo_sclero_lat'\nCondition: !endometriosis_surgeries || !endometriosis_surgeries.includes('c0010002-0000-0000-0000-000000000635')", "weight": 2.5, "condition": "!endometriosis_surgeries || !endometriosis_surgeries.includes('c0010002-0000-0000-0000-000000000635')"}}, {"source": "30", "target": "39", "metadata": {"edge_type": "SKIP_LOGIC", "color": "#d62728", "hover": "SKIP LOGIC: 'endometriosis_surgeries' controls 'endo_oophorectomy_lat'\nCondition: !endometriosis_surgeries || !endometriosis_surgeries.includes('c0010002-0000-0000-0000-000000000636')", "weight": 2.5, "condition": "!endometriosis_surgeries || !endometriosis_surgeries.includes('c0010002-0000-0000-0000-000000000636')"}}, {"source": "26", "target": "31", "metadata": {"edge_type": "SKIP_LOGIC", "color": "#d62728", "hover": "SKIP LOGIC: 'prev_surgery' controls 'ovarian_surgeries'\nCondition: !prev_surgery || prev_surgery !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'", "weight": 2.5, "condition": "!prev_surgery || prev_surgery !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"}}, {"source": "31", "target": "40", "metadata": {"edge_type": "SKIP_LOGIC", "color": "#d62728", "hover": "SKIP LOGIC: 'ovarian_surgeries' controls 'ovarian_dermoid_lat'\nCondition: !ovarian_surgeries || !ovarian_surgeries.includes('c0010002-0000-0000-0000-000000000641')", "weight": 2.5, "condition": "!ovarian_surgeries || !ovarian_surgeries.includes('c0010002-0000-0000-0000-000000000641')"}}, {"source": "31", "target": "41", "metadata": {"edge_type": "SKIP_LOGIC", "color": "#d62728", "hover": "SKIP LOGIC: 'ovarian_surgeries' controls 'simple_cyst_lat'\nCondition: !ovarian_surgeries || !ovarian_surgeries.includes('c0010002-0000-0000-0000-000000000642')", "weight": 2.5, "condition": "!ovarian_surgeries || !ovarian_surgeries.includes('c0010002-0000-0000-0000-000000000642')"}}, {"source": "31", "target": "42", "metadata": {"edge_type": "SKIP_LOGIC", "color": "#d62728", "hover": "SKIP LOGIC: 'ovarian_surgeries' controls 'paraovarian_cyst_lat'\nCondition: !ovarian_surgeries || !ovarian_surgeries.includes('c0010002-0000-0000-0000-000000000643')", "weight": 2.5, "condition": "!ovarian_surgeries || !ovarian_surgeries.includes('c0010002-0000-0000-0000-000000000643')"}}, {"source": "31", "target": "43", "metadata": {"edge_type": "SKIP_LOGIC", "color": "#d62728", "hover": "SKIP LOGIC: 'ovarian_surgeries' controls 'cyst_aspiration_lat'\nCondition: !ovarian_surgeries || !ovarian_surgeries.includes('c0010002-0000-0000-0000-000000000644')", "weight": 2.5, "condition": "!ovarian_surgeries || !ovarian_surgeries.includes('c0010002-0000-0000-0000-000000000644')"}}, {"source": "31", "target": "44", "metadata": {"edge_type": "SKIP_LOGIC", "color": "#d62728", "hover": "SKIP LOGIC: 'ovarian_surgeries' controls 'oophorectomy_lat'\nCondition: !ovarian_surgeries || !ovarian_surgeries.includes('c0010002-0000-0000-0000-000000000645')", "weight": 2.5, "condition": "!ovarian_surgeries || !ovarian_surgeries.includes('c0010002-0000-0000-0000-000000000645')"}}, {"source": "31", "target": "45", "metadata": {"edge_type": "SKIP_LOGIC", "color": "#d62728", "hover": "SKIP LOGIC: 'ovarian_surgeries' controls 'ovarian_cystectomy_lat'\nCondition: !ovarian_surgeries || !ovarian_surgeries.includes('c0010002-0000-0000-0000-000000000646')", "weight": 2.5, "condition": "!ovarian_surgeries || !ovarian_surgeries.includes('c0010002-0000-0000-0000-000000000646')"}}, {"source": "26", "target": "32", "metadata": {"edge_type": "SKIP_LOGIC", "color": "#d62728", "hover": "SKIP LOGIC: 'prev_surgery' controls 'tubal_surgeries'\nCondition: !prev_surgery || prev_surgery !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'", "weight": 2.5, "condition": "!prev_surgery || prev_surgery !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"}}, {"source": "32", "target": "46", "metadata": {"edge_type": "SKIP_LOGIC", "color": "#d62728", "hover": "SKIP LOGIC: 'tubal_surgeries' controls 'chromopertubation_lat'\nCondition: !tubal_surgeries || !tubal_surgeries.includes('c0010002-0000-0000-0000-000000000651')", "weight": 2.5, "condition": "!tubal_surgeries || !tubal_surgeries.includes('c0010002-0000-0000-0000-000000000651')"}}, {"source": "32", "target": "47", "metadata": {"edge_type": "SKIP_LOGIC", "color": "#d62728", "hover": "SKIP LOGIC: 'tubal_surgeries' controls 'tubal_cannulation_lat'\nCondition: !tubal_surgeries || !tubal_surgeries.includes('c0010002-0000-0000-0000-000000000652')", "weight": 2.5, "condition": "!tubal_surgeries || !tubal_surgeries.includes('c0010002-0000-0000-0000-000000000652')"}}, {"source": "32", "target": "48", "metadata": {"edge_type": "SKIP_LOGIC", "color": "#d62728", "hover": "SKIP LOGIC: 'tubal_surgeries' controls 'salpingectomy_lat'\nCondition: !tubal_surgeries || !tubal_surgeries.includes('c0010002-0000-0000-0000-000000000653')", "weight": 2.5, "condition": "!tubal_surgeries || !tubal_surgeries.includes('c0010002-0000-0000-0000-000000000653')"}}, {"source": "32", "target": "49", "metadata": {"edge_type": "SKIP_LOGIC", "color": "#d62728", "hover": "SKIP LOGIC: 'tubal_surgeries' controls 'fimbrioplasty_lat'\nCondition: !tubal_surgeries || !tubal_surgeries.includes('c0010002-0000-0000-0000-000000000654')", "weight": 2.5, "condition": "!tubal_surgeries || !tubal_surgeries.includes('c0010002-0000-0000-0000-000000000654')"}}, {"source": "32", "target": "50", "metadata": {"edge_type": "SKIP_LOGIC", "color": "#d62728", "hover": "SKIP LOGIC: 'tubal_surgeries' controls 'tubal_clipping_lat'\nCondition: !tubal_surgeries || !tubal_surgeries.includes('c0010002-0000-0000-0000-000000000655')", "weight": 2.5, "condition": "!tubal_surgeries || !tubal_surgeries.includes('c0010002-0000-0000-0000-000000000655')"}}, {"source": "32", "target": "51", "metadata": {"edge_type": "SKIP_LOGIC", "color": "#d62728", "hover": "SKIP LOGIC: 'tubal_surgeries' controls 'recanalization_lat'\nCondition: !tubal_surgeries || !tubal_surgeries.includes('c0010002-0000-0000-0000-000000000656')", "weight": 2.5, "condition": "!tubal_surgeries || !tubal_surgeries.includes('c0010002-0000-0000-0000-000000000656')"}}, {"source": "52", "target": "53", "metadata": {"edge_type": "SKIP_LOGIC", "color": "#d62728", "hover": "SKIP LOGIC: 'is_smoker' controls 'daily_cigarettes'\nCondition: is_smoker !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'", "weight": 2.5, "condition": "is_smoker !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"}}], "directed": true}];
+            state.rawData = [{"nodes": {"0": {"label": "Pattern of Menstrual cycle", "metadata": {"node_type": "Question", "datatype": "Coded", "color": "#1f77b4", "size": 14, "shape": "circle", "hover": "[Question] Pattern of Menstrual cycle (UUID: c0010001-0000-0000-0000-000000000025) | Type: Coded", "name": "c0010001-0000-0000-0000-000000000025"}}, "1": {"label": "Flow of Menstrual cycle", "metadata": {"node_type": "Question", "datatype": "Coded", "color": "#1f77b4", "size": 14, "shape": "circle", "hover": "[Question] Flow of Menstrual cycle (UUID: c0010001-0000-0000-0000-000000000027) | Type: Coded", "name": "c0010001-0000-0000-0000-000000000027"}}, "2": {"label": "Irregular cycle type", "metadata": {"node_type": "Question", "datatype": "Coded", "color": "#1f77b4", "size": 14, "shape": "circle", "hover": "[Question] Irregular cycle type (UUID: c0010001-0000-0000-0000-000000000028) | Type: Coded", "name": "c0010001-0000-0000-0000-000000000028"}}, "3": {"label": "Type of Amenorrhoea", "metadata": {"node_type": "Question", "datatype": "Coded", "color": "#1f77b4", "size": 14, "shape": "circle", "hover": "[Question] Type of Amenorrhoea (UUID: c0010001-0000-0000-0000-000000000029) | Type: Coded", "name": "c0010001-0000-0000-0000-000000000029"}}, "4": {"label": "Female Infertility Factor", "metadata": {"node_type": "Question", "datatype": "Coded", "color": "#1f77b4", "size": 14, "shape": "circle", "hover": "[Question] Female Infertility Factor (UUID: c0010001-0000-0000-0000-000000000030) | Type: Coded", "name": "c0010001-0000-0000-0000-000000000030"}}, "5": {"label": "Tubal Factor Details", "metadata": {"node_type": "Question", "datatype": "Coded", "color": "#1f77b4", "size": 14, "shape": "circle", "hover": "[Question] Tubal Factor Details (UUID: c0010001-0000-0000-0000-000000000031) | Type: Coded", "name": "c0010001-0000-0000-0000-000000000031"}}, "6": {"label": "Diminished Ovarian Reserve Details", "metadata": {"node_type": "Question", "datatype": "Coded", "color": "#1f77b4", "size": 14, "shape": "circle", "hover": "[Question] Diminished Ovarian Reserve Details (UUID: c0010001-0000-0000-0000-000000000032) | Type: Coded", "name": "c0010001-0000-0000-0000-000000000032"}}, "7": {"label": "POSEIDON Group", "metadata": {"node_type": "Question", "datatype": "Coded", "color": "#1f77b4", "size": 14, "shape": "circle", "hover": "[Question] POSEIDON Group (UUID: c0010001-0000-0000-0000-000000000033) | Type: Coded", "name": "c0010001-0000-0000-0000-000000000033"}}, "8": {"label": "Endometriosis Classification", "metadata": {"node_type": "Question", "datatype": "Coded", "color": "#1f77b4", "size": 14, "shape": "circle", "hover": "[Question] Endometriosis Classification (UUID: c0010001-0000-0000-0000-000000000034) | Type: Coded", "name": "c0010001-0000-0000-0000-000000000034"}}, "9": {"label": "PCOS Phenotype", "metadata": {"node_type": "Question", "datatype": "Coded", "color": "#1f77b4", "size": 14, "shape": "circle", "hover": "[Question] PCOS Phenotype (UUID: c0010001-0000-0000-0000-000000000035) | Type: Coded", "name": "c0010001-0000-0000-0000-000000000035"}}, "10": {"label": "Uterine Factor Details", "metadata": {"node_type": "Question", "datatype": "Coded", "color": "#1f77b4", "size": 14, "shape": "circle", "hover": "[Question] Uterine Factor Details (UUID: c0010001-0000-0000-0000-000000000036) | Type: Coded", "name": "c0010001-0000-0000-0000-000000000036"}}, "11": {"label": "Other Female Infertility Factors", "metadata": {"node_type": "Question", "datatype": "Coded", "color": "#1f77b4", "size": 14, "shape": "circle", "hover": "[Question] Other Female Infertility Factors (UUID: c0010001-0000-0000-0000-000000000037) | Type: Coded", "name": "c0010001-0000-0000-0000-000000000037"}}, "12": {"label": "Male Infertility Factor", "metadata": {"node_type": "Question", "datatype": "Coded", "color": "#1f77b4", "size": 14, "shape": "circle", "hover": "[Question] Male Infertility Factor (UUID: c0010001-0000-0000-0000-000000000039) | Type: Coded", "name": "c0010001-0000-0000-0000-000000000039"}}, "13": {"label": "Azoospermia Details", "metadata": {"node_type": "Question", "datatype": "Coded", "color": "#1f77b4", "size": 14, "shape": "circle", "hover": "[Question] Azoospermia Details (UUID: c0010001-0000-0000-0000-000000000040) | Type: Coded", "name": "c0010001-0000-0000-0000-000000000040"}}, "14": {"label": "Previous Ovulation Induction", "metadata": {"node_type": "Question", "datatype": "Coded", "color": "#1f77b4", "size": 14, "shape": "circle", "hover": "[Question] Previous Ovulation Induction (UUID: c0010001-0000-0000-0000-000000000045) | Type: Coded", "name": "c0010001-0000-0000-0000-000000000045"}}, "15": {"label": "Ovulation Induction Drugs OI", "metadata": {"node_type": "Question", "datatype": "Coded", "color": "#1f77b4", "size": 14, "shape": "circle", "hover": "[Question] Ovulation Induction Drugs OI (UUID: c0010001-0000-0000-0000-000000000046) | Type: Coded", "name": "c0010001-0000-0000-0000-000000000046"}}, "16": {"label": "Dose of drugs in Ovulation Induction", "metadata": {"node_type": "Question", "datatype": "Text", "color": "#1f77b4", "size": 14, "shape": "circle", "hover": "[Question] Dose of drugs in Ovulation Induction (UUID: c0010001-0000-0000-0000-000000000047) | Type: Text", "name": "c0010001-0000-0000-0000-000000000047"}}, "17": {"label": "Number of Previous Ovulation Induction", "metadata": {"node_type": "Question", "datatype": "Numeric", "color": "#1f77b4", "size": 14, "shape": "circle", "hover": "[Question] Number of Previous Ovulation Induction (UUID: c0010001-0000-0000-0000-000000000048) | Type: Numeric", "name": "c0010001-0000-0000-0000-000000000048"}}, "18": {"label": "Year of Previous Ovulation Induction", "metadata": {"node_type": "Question", "datatype": "Numeric", "color": "#1f77b4", "size": 14, "shape": "circle", "hover": "[Question] Year of Previous Ovulation Induction (UUID: c0010001-0000-0000-0000-000000000049) | Type: Numeric", "name": "c0010001-0000-0000-0000-000000000049"}}, "19": {"label": "Previous OI and IUI", "metadata": {"node_type": "Question", "datatype": "Coded", "color": "#1f77b4", "size": 14, "shape": "circle", "hover": "[Question] Previous OI and IUI (UUID: c0010001-0000-0000-0000-000000000050) | Type: Coded", "name": "c0010001-0000-0000-0000-000000000050"}}, "20": {"label": "Ovulation Induction Drugs IUI", "metadata": {"node_type": "Question", "datatype": "Coded", "color": "#1f77b4", "size": 14, "shape": "circle", "hover": "[Question] Ovulation Induction Drugs IUI (UUID: c0010001-0000-0000-0000-000000000051) | Type: Coded", "name": "c0010001-0000-0000-0000-000000000051"}}, "21": {"label": "Dose of drugs in OI and IUI", "metadata": {"node_type": "Question", "datatype": "Text", "color": "#1f77b4", "size": 14, "shape": "circle", "hover": "[Question] Dose of drugs in OI and IUI (UUID: c0010001-0000-0000-0000-000000000052) | Type: Text", "name": "c0010001-0000-0000-0000-000000000052"}}, "22": {"label": "Number of Previous OI and IUI", "metadata": {"node_type": "Question", "datatype": "Numeric", "color": "#1f77b4", "size": 14, "shape": "circle", "hover": "[Question] Number of Previous OI and IUI (UUID: c0010001-0000-0000-0000-000000000053) | Type: Numeric", "name": "c0010001-0000-0000-0000-000000000053"}}, "23": {"label": "Year of Previous OI and IUI", "metadata": {"node_type": "Question", "datatype": "Numeric", "color": "#1f77b4", "size": 14, "shape": "circle", "hover": "[Question] Year of Previous OI and IUI (UUID: c0010001-0000-0000-0000-000000000054) | Type: Numeric", "name": "c0010001-0000-0000-0000-000000000054"}}, "24": {"label": "Failed In vitro fertilization", "metadata": {"node_type": "Question", "datatype": "Coded", "color": "#1f77b4", "size": 14, "shape": "circle", "hover": "[Question] Failed In vitro fertilization (UUID: c0010001-0000-0000-0000-000000000055) | Type: Coded", "name": "c0010001-0000-0000-0000-000000000055"}}, "25": {"label": "Number of Failed IVF Cycles", "metadata": {"node_type": "Question", "datatype": "Numeric", "color": "#1f77b4", "size": 14, "shape": "circle", "hover": "[Question] Number of Failed IVF Cycles (UUID: c0010001-0000-0000-0000-000000000056) | Type: Numeric", "name": "c0010001-0000-0000-0000-000000000056"}}, "26": {"label": "Previous Surgery Performed", "metadata": {"node_type": "Question", "datatype": "Coded", "color": "#1f77b4", "size": 14, "shape": "circle", "hover": "[Question] Previous Surgery Performed (UUID: c0010001-0000-0000-0000-000000000058) | Type: Coded", "name": "c0010001-0000-0000-0000-000000000058"}}, "27": {"label": "Surgical Approach", "metadata": {"node_type": "Question", "datatype": "Coded", "color": "#1f77b4", "size": 14, "shape": "circle", "hover": "[Question] Surgical Approach (UUID: c0010001-0000-0000-0000-000000000059) | Type: Coded", "name": "c0010001-0000-0000-0000-000000000059"}}, "28": {"label": "Year or Date of Surgery", "metadata": {"node_type": "Question", "datatype": "Text", "color": "#1f77b4", "size": 14, "shape": "circle", "hover": "[Question] Year or Date of Surgery (UUID: c0010001-0000-0000-0000-000000000060) | Type: Text", "name": "c0010001-0000-0000-0000-000000000060"}}, "29": {"label": "Uterine Surgeries", "metadata": {"node_type": "Question", "datatype": "Coded", "color": "#1f77b4", "size": 14, "shape": "circle", "hover": "[Question] Uterine Surgeries (UUID: c0010001-0000-0000-0000-000000000061) | Type: Coded", "name": "c0010001-0000-0000-0000-000000000061"}}, "30": {"label": "Endometriosis Surgeries", "metadata": {"node_type": "Question", "datatype": "Coded", "color": "#1f77b4", "size": 14, "shape": "circle", "hover": "[Question] Endometriosis Surgeries (UUID: c0010001-0000-0000-0000-000000000062) | Type: Coded", "name": "c0010001-0000-0000-0000-000000000062"}}, "31": {"label": "Ovarian Surgeries", "metadata": {"node_type": "Question", "datatype": "Coded", "color": "#1f77b4", "size": 14, "shape": "circle", "hover": "[Question] Ovarian Surgeries (UUID: c0010001-0000-0000-0000-000000000063) | Type: Coded", "name": "c0010001-0000-0000-0000-000000000063"}}, "32": {"label": "Fallopian Tube Surgeries", "metadata": {"node_type": "Question", "datatype": "Coded", "color": "#1f77b4", "size": 14, "shape": "circle", "hover": "[Question] Fallopian Tube Surgeries (UUID: c0010001-0000-0000-0000-000000000064) | Type: Coded", "name": "c0010001-0000-0000-0000-000000000064"}}, "33": {"label": "Peritoneal Surgeries", "metadata": {"node_type": "Question", "datatype": "Coded", "color": "#1f77b4", "size": 14, "shape": "circle", "hover": "[Question] Peritoneal Surgeries (UUID: c0010001-0000-0000-0000-000000000065) | Type: Coded", "name": "c0010001-0000-0000-0000-000000000065"}}, "34": {"label": "Endometriotic Cystectomy Laterality", "metadata": {"node_type": "Question", "datatype": "Coded", "color": "#1f77b4", "size": 14, "shape": "circle", "hover": "[Question] Endometriotic Cystectomy Laterality (UUID: c0010001-0000-0000-0000-000000000066) | Type: Coded", "name": "c0010001-0000-0000-0000-000000000066"}}, "35": {"label": "Endometriotic Bipolar Ablation Laterality", "metadata": {"node_type": "Question", "datatype": "Coded", "color": "#1f77b4", "size": 14, "shape": "circle", "hover": "[Question] Endometriotic Bipolar Ablation Laterality (UUID: c0010001-0000-0000-0000-000000000067) | Type: Coded", "name": "c0010001-0000-0000-0000-000000000067"}}, "36": {"label": "Endometriotic APC Laterality", "metadata": {"node_type": "Question", "datatype": "Coded", "color": "#1f77b4", "size": 14, "shape": "circle", "hover": "[Question] Endometriotic APC Laterality (UUID: c0010001-0000-0000-0000-000000000068) | Type: Coded", "name": "c0010001-0000-0000-0000-000000000068"}}, "37": {"label": "Endometriotic Drainage Laterality", "metadata": {"node_type": "Question", "datatype": "Coded", "color": "#1f77b4", "size": 14, "shape": "circle", "hover": "[Question] Endometriotic Drainage Laterality (UUID: c0010001-0000-0000-0000-000000000069) | Type: Coded", "name": "c0010001-0000-0000-0000-000000000069"}}, "38": {"label": "Endometriotic Sclerotherapy Laterality", "metadata": {"node_type": "Question", "datatype": "Coded", "color": "#1f77b4", "size": 14, "shape": "circle", "hover": "[Question] Endometriotic Sclerotherapy Laterality (UUID: c0010001-0000-0000-0000-000000000070) | Type: Coded", "name": "c0010001-0000-0000-0000-000000000070"}}, "39": {"label": "Endometriosis Oophorectomy Laterality", "metadata": {"node_type": "Question", "datatype": "Coded", "color": "#1f77b4", "size": 14, "shape": "circle", "hover": "[Question] Endometriosis Oophorectomy Laterality (UUID: c0010001-0000-0000-0000-000000000071) | Type: Coded", "name": "c0010001-0000-0000-0000-000000000071"}}, "40": {"label": "Ovarian Dermoid Laterality", "metadata": {"node_type": "Question", "datatype": "Coded", "color": "#1f77b4", "size": 14, "shape": "circle", "hover": "[Question] Ovarian Dermoid Laterality (UUID: c0010001-0000-0000-0000-000000000072) | Type: Coded", "name": "c0010001-0000-0000-0000-000000000072"}}, "41": {"label": "Simple Ovarian Cyst Laterality", "metadata": {"node_type": "Question", "datatype": "Coded", "color": "#1f77b4", "size": 14, "shape": "circle", "hover": "[Question] Simple Ovarian Cyst Laterality (UUID: c0010001-0000-0000-0000-000000000073) | Type: Coded", "name": "c0010001-0000-0000-0000-000000000073"}}, "42": {"label": "Paraovarian Cyst Laterality", "metadata": {"node_type": "Question", "datatype": "Coded", "color": "#1f77b4", "size": 14, "shape": "circle", "hover": "[Question] Paraovarian Cyst Laterality (UUID: c0010001-0000-0000-0000-000000000074) | Type: Coded", "name": "c0010001-0000-0000-0000-000000000074"}}, "43": {"label": "Ovarian Cyst Aspiration Laterality", "metadata": {"node_type": "Question", "datatype": "Coded", "color": "#1f77b4", "size": 14, "shape": "circle", "hover": "[Question] Ovarian Cyst Aspiration Laterality (UUID: c0010001-0000-0000-0000-000000000075) | Type: Coded", "name": "c0010001-0000-0000-0000-000000000075"}}, "44": {"label": "Oophorectomy Laterality", "metadata": {"node_type": "Question", "datatype": "Coded", "color": "#1f77b4", "size": 14, "shape": "circle", "hover": "[Question] Oophorectomy Laterality (UUID: c0010001-0000-0000-0000-000000000076) | Type: Coded", "name": "c0010001-0000-0000-0000-000000000076"}}, "45": {"label": "Ovarian Cystectomy Laterality", "metadata": {"node_type": "Question", "datatype": "Coded", "color": "#1f77b4", "size": 14, "shape": "circle", "hover": "[Question] Ovarian Cystectomy Laterality (UUID: c0010001-0000-0000-0000-000000000077) | Type: Coded", "name": "c0010001-0000-0000-0000-000000000077"}}, "46": {"label": "Chromopertubation Laterality", "metadata": {"node_type": "Question", "datatype": "Coded", "color": "#1f77b4", "size": 14, "shape": "circle", "hover": "[Question] Chromopertubation Laterality (UUID: c0010001-0000-0000-0000-000000000078) | Type: Coded", "name": "c0010001-0000-0000-0000-000000000078"}}, "47": {"label": "Tubal Cannulation Laterality", "metadata": {"node_type": "Question", "datatype": "Coded", "color": "#1f77b4", "size": 14, "shape": "circle", "hover": "[Question] Tubal Cannulation Laterality (UUID: c0010001-0000-0000-0000-000000000079) | Type: Coded", "name": "c0010001-0000-0000-0000-000000000079"}}, "48": {"label": "Salpingectomy Laterality", "metadata": {"node_type": "Question", "datatype": "Coded", "color": "#1f77b4", "size": 14, "shape": "circle", "hover": "[Question] Salpingectomy Laterality (UUID: c0010001-0000-0000-0000-000000000080) | Type: Coded", "name": "c0010001-0000-0000-0000-000000000080"}}, "49": {"label": "Fimbrioplasty Laterality", "metadata": {"node_type": "Question", "datatype": "Coded", "color": "#1f77b4", "size": 14, "shape": "circle", "hover": "[Question] Fimbrioplasty Laterality (UUID: c0010001-0000-0000-0000-000000000081) | Type: Coded", "name": "c0010001-0000-0000-0000-000000000081"}}, "50": {"label": "Tubal Clipping Laterality", "metadata": {"node_type": "Question", "datatype": "Coded", "color": "#1f77b4", "size": 14, "shape": "circle", "hover": "[Question] Tubal Clipping Laterality (UUID: c0010001-0000-0000-0000-000000000082) | Type: Coded", "name": "c0010001-0000-0000-0000-000000000082"}}, "51": {"label": "Recanalization Laterality", "metadata": {"node_type": "Question", "datatype": "Coded", "color": "#1f77b4", "size": 14, "shape": "circle", "hover": "[Question] Recanalization Laterality (UUID: c0010001-0000-0000-0000-000000000083) | Type: Coded", "name": "c0010001-0000-0000-0000-000000000083"}}, "52": {"label": "Is the patient a current tobacco smoker?", "metadata": {"node_type": "Question", "datatype": "Unknown", "color": "#1f77b4", "size": 16, "shape": "circle", "hover": "[Question] Is the patient a current tobacco smoker? (UUID: 152722AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA)", "name": "152722AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"}}, "53": {"label": "Average cigarettes smoked per day", "metadata": {"node_type": "Question", "datatype": "Unknown", "color": "#1f77b4", "size": 16, "shape": "circle", "hover": "[Question] Average cigarettes smoked per day (UUID: 1546AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA)", "name": "1546AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"}}}, "edges": [{"source": "4", "target": "5", "metadata": {"edge_type": "SKIP_LOGIC", "color": "#d62728", "hover": "SKIP LOGIC: 'female_factors' controls 'tubal_factor_details'\nCondition: !female_factors || !female_factors.includes('c0010002-0000-0000-0000-000000000301')", "weight": 2.5, "condition": "!female_factors || !female_factors.includes('c0010002-0000-0000-0000-000000000301')"}}, {"source": "4", "target": "6", "metadata": {"edge_type": "SKIP_LOGIC", "color": "#d62728", "hover": "SKIP LOGIC: 'female_factors' controls 'dor_details'\nCondition: !female_factors || !female_factors.includes('c0010002-0000-0000-0000-000000000302')", "weight": 2.5, "condition": "!female_factors || !female_factors.includes('c0010002-0000-0000-0000-000000000302')"}}, {"source": "6", "target": "7", "metadata": {"edge_type": "SKIP_LOGIC", "color": "#d62728", "hover": "SKIP LOGIC: 'dor_details' controls 'poseidon_group'\nCondition: !female_factors || !female_factors.includes('c0010002-0000-0000-0000-000000000302') || dor_details !== 'c0010002-0000-0000-0000-000000000322'", "weight": 2.5, "condition": "!female_factors || !female_factors.includes('c0010002-0000-0000-0000-000000000302') || dor_details !== 'c0010002-0000-0000-0000-000000000322'"}}, {"source": "4", "target": "7", "metadata": {"edge_type": "SKIP_LOGIC", "color": "#d62728", "hover": "SKIP LOGIC: 'female_factors' controls 'poseidon_group'\nCondition: !female_factors || !female_factors.includes('c0010002-0000-0000-0000-000000000302') || dor_details !== 'c0010002-0000-0000-0000-000000000322'", "weight": 2.5, "condition": "!female_factors || !female_factors.includes('c0010002-0000-0000-0000-000000000302') || dor_details !== 'c0010002-0000-0000-0000-000000000322'"}}, {"source": "4", "target": "8", "metadata": {"edge_type": "SKIP_LOGIC", "color": "#d62728", "hover": "SKIP LOGIC: 'female_factors' controls 'endometriosis_classification'\nCondition: !female_factors || !female_factors.includes('c0010002-0000-0000-0000-000000000303')", "weight": 2.5, "condition": "!female_factors || !female_factors.includes('c0010002-0000-0000-0000-000000000303')"}}, {"source": "4", "target": "9", "metadata": {"edge_type": "SKIP_LOGIC", "color": "#d62728", "hover": "SKIP LOGIC: 'female_factors' controls 'pcos_phenotype'\nCondition: !female_factors || !female_factors.includes('c0010002-0000-0000-0000-000000000304')", "weight": 2.5, "condition": "!female_factors || !female_factors.includes('c0010002-0000-0000-0000-000000000304')"}}, {"source": "4", "target": "10", "metadata": {"edge_type": "SKIP_LOGIC", "color": "#d62728", "hover": "SKIP LOGIC: 'female_factors' controls 'uterine_factor_details'\nCondition: !female_factors || !female_factors.includes('c0010002-0000-0000-0000-000000000305')", "weight": 2.5, "condition": "!female_factors || !female_factors.includes('c0010002-0000-0000-0000-000000000305')"}}, {"source": "4", "target": "11", "metadata": {"edge_type": "SKIP_LOGIC", "color": "#d62728", "hover": "SKIP LOGIC: 'female_factors' controls 'other_female_factors'\nCondition: !female_factors || !female_factors.includes('c0010002-0000-0000-0000-000000000307')", "weight": 2.5, "condition": "!female_factors || !female_factors.includes('c0010002-0000-0000-0000-000000000307')"}}, {"source": "12", "target": "13", "metadata": {"edge_type": "SKIP_LOGIC", "color": "#d62728", "hover": "SKIP LOGIC: 'male_factors' controls 'azoospermia_details'\nCondition: !male_factors || !male_factors.includes('c0010002-0000-0000-0000-000000000401')", "weight": 2.5, "condition": "!male_factors || !male_factors.includes('c0010002-0000-0000-0000-000000000401')"}}, {"source": "0", "target": "2", "metadata": {"edge_type": "SKIP_LOGIC", "color": "#d62728", "hover": "SKIP LOGIC: 'pattern_of_menstrual_cycle' controls 'irregular_cycle_type'\nCondition: pattern_of_menstrual_cycle !== 'c0010002-0000-0000-0000-000000000202'", "weight": 2.5, "condition": "pattern_of_menstrual_cycle !== 'c0010002-0000-0000-0000-000000000202'"}}, {"source": "1", "target": "3", "metadata": {"edge_type": "SKIP_LOGIC", "color": "#d62728", "hover": "SKIP LOGIC: 'flow_of_menstrual_cycle' controls 'amenorrhoea_type'\nCondition: flow_of_menstrual_cycle !== 'c0010002-0000-0000-0000-000000000210'", "weight": 2.5, "condition": "flow_of_menstrual_cycle !== 'c0010002-0000-0000-0000-000000000210'"}}, {"source": "14", "target": "15", "metadata": {"edge_type": "SKIP_LOGIC", "color": "#d62728", "hover": "SKIP LOGIC: 'prev_oi' controls 'oi_drugs'\nCondition: !prev_oi || prev_oi !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'", "weight": 2.5, "condition": "!prev_oi || prev_oi !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"}}, {"source": "14", "target": "16", "metadata": {"edge_type": "SKIP_LOGIC", "color": "#d62728", "hover": "SKIP LOGIC: 'prev_oi' controls 'oi_dose'\nCondition: !prev_oi || prev_oi !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'", "weight": 2.5, "condition": "!prev_oi || prev_oi !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"}}, {"source": "14", "target": "17", "metadata": {"edge_type": "SKIP_LOGIC", "color": "#d62728", "hover": "SKIP LOGIC: 'prev_oi' controls 'oi_cycles'\nCondition: !prev_oi || prev_oi !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'", "weight": 2.5, "condition": "!prev_oi || prev_oi !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"}}, {"source": "14", "target": "18", "metadata": {"edge_type": "SKIP_LOGIC", "color": "#d62728", "hover": "SKIP LOGIC: 'prev_oi' controls 'oi_year'\nCondition: !prev_oi || prev_oi !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'", "weight": 2.5, "condition": "!prev_oi || prev_oi !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"}}, {"source": "19", "target": "20", "metadata": {"edge_type": "SKIP_LOGIC", "color": "#d62728", "hover": "SKIP LOGIC: 'prev_oi_iui' controls 'iui_drugs'\nCondition: !prev_oi_iui || prev_oi_iui !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'", "weight": 2.5, "condition": "!prev_oi_iui || prev_oi_iui !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"}}, {"source": "19", "target": "21", "metadata": {"edge_type": "SKIP_LOGIC", "color": "#d62728", "hover": "SKIP LOGIC: 'prev_oi_iui' controls 'iui_dose'\nCondition: !prev_oi_iui || prev_oi_iui !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'", "weight": 2.5, "condition": "!prev_oi_iui || prev_oi_iui !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"}}, {"source": "19", "target": "22", "metadata": {"edge_type": "SKIP_LOGIC", "color": "#d62728", "hover": "SKIP LOGIC: 'prev_oi_iui' controls 'iui_cycles'\nCondition: !prev_oi_iui || prev_oi_iui !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'", "weight": 2.5, "condition": "!prev_oi_iui || prev_oi_iui !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"}}, {"source": "19", "target": "23", "metadata": {"edge_type": "SKIP_LOGIC", "color": "#d62728", "hover": "SKIP LOGIC: 'prev_oi_iui' controls 'iui_year'\nCondition: !prev_oi_iui || prev_oi_iui !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'", "weight": 2.5, "condition": "!prev_oi_iui || prev_oi_iui !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"}}, {"source": "24", "target": "25", "metadata": {"edge_type": "SKIP_LOGIC", "color": "#d62728", "hover": "SKIP LOGIC: 'failed_ivf' controls 'failed_ivf_cycles'\nCondition: !failed_ivf || failed_ivf !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'", "weight": 2.5, "condition": "!failed_ivf || failed_ivf !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"}}, {"source": "26", "target": "27", "metadata": {"edge_type": "SKIP_LOGIC", "color": "#d62728", "hover": "SKIP LOGIC: 'prev_surgery' controls 'surgical_approach'\nCondition: !prev_surgery || prev_surgery !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'", "weight": 2.5, "condition": "!prev_surgery || prev_surgery !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"}}, {"source": "26", "target": "28", "metadata": {"edge_type": "SKIP_LOGIC", "color": "#d62728", "hover": "SKIP LOGIC: 'prev_surgery' controls 'surgery_year_date'\nCondition: !prev_surgery || prev_surgery !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'", "weight": 2.5, "condition": "!prev_surgery || prev_surgery !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"}}, {"source": "26", "target": "29", "metadata": {"edge_type": "SKIP_LOGIC", "color": "#d62728", "hover": "SKIP LOGIC: 'prev_surgery' controls 'uterine_surgeries'\nCondition: !prev_surgery || prev_surgery !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'", "weight": 2.5, "condition": "!prev_surgery || prev_surgery !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"}}, {"source": "26", "target": "33", "metadata": {"edge_type": "SKIP_LOGIC", "color": "#d62728", "hover": "SKIP LOGIC: 'prev_surgery' controls 'peritoneal_surgeries'\nCondition: !prev_surgery || prev_surgery !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'", "weight": 2.5, "condition": "!prev_surgery || prev_surgery !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"}}, {"source": "26", "target": "30", "metadata": {"edge_type": "SKIP_LOGIC", "color": "#d62728", "hover": "SKIP LOGIC: 'prev_surgery' controls 'endometriosis_surgeries'\nCondition: !prev_surgery || prev_surgery !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'", "weight": 2.5, "condition": "!prev_surgery || prev_surgery !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"}}, {"source": "30", "target": "34", "metadata": {"edge_type": "SKIP_LOGIC", "color": "#d62728", "hover": "SKIP LOGIC: 'endometriosis_surgeries' controls 'endo_cystectomy_lat'\nCondition: !endometriosis_surgeries || !endometriosis_surgeries.includes('c0010002-0000-0000-0000-000000000631')", "weight": 2.5, "condition": "!endometriosis_surgeries || !endometriosis_surgeries.includes('c0010002-0000-0000-0000-000000000631')"}}, {"source": "30", "target": "35", "metadata": {"edge_type": "SKIP_LOGIC", "color": "#d62728", "hover": "SKIP LOGIC: 'endometriosis_surgeries' controls 'endo_bipolar_lat'\nCondition: !endometriosis_surgeries || !endometriosis_surgeries.includes('c0010002-0000-0000-0000-000000000632')", "weight": 2.5, "condition": "!endometriosis_surgeries || !endometriosis_surgeries.includes('c0010002-0000-0000-0000-000000000632')"}}, {"source": "30", "target": "36", "metadata": {"edge_type": "SKIP_LOGIC", "color": "#d62728", "hover": "SKIP LOGIC: 'endometriosis_surgeries' controls 'endo_apc_lat'\nCondition: !endometriosis_surgeries || !endometriosis_surgeries.includes('c0010002-0000-0000-0000-000000000633')", "weight": 2.5, "condition": "!endometriosis_surgeries || !endometriosis_surgeries.includes('c0010002-0000-0000-0000-000000000633')"}}, {"source": "30", "target": "37", "metadata": {"edge_type": "SKIP_LOGIC", "color": "#d62728", "hover": "SKIP LOGIC: 'endometriosis_surgeries' controls 'endo_drainage_lat'\nCondition: !endometriosis_surgeries || !endometriosis_surgeries.includes('c0010002-0000-0000-0000-000000000634')", "weight": 2.5, "condition": "!endometriosis_surgeries || !endometriosis_surgeries.includes('c0010002-0000-0000-0000-000000000634')"}}, {"source": "30", "target": "38", "metadata": {"edge_type": "SKIP_LOGIC", "color": "#d62728", "hover": "SKIP LOGIC: 'endometriosis_surgeries' controls 'endo_sclero_lat'\nCondition: !endometriosis_surgeries || !endometriosis_surgeries.includes('c0010002-0000-0000-0000-000000000635')", "weight": 2.5, "condition": "!endometriosis_surgeries || !endometriosis_surgeries.includes('c0010002-0000-0000-0000-000000000635')"}}, {"source": "30", "target": "39", "metadata": {"edge_type": "SKIP_LOGIC", "color": "#d62728", "hover": "SKIP LOGIC: 'endometriosis_surgeries' controls 'endo_oophorectomy_lat'\nCondition: !endometriosis_surgeries || !endometriosis_surgeries.includes('c0010002-0000-0000-0000-000000000636')", "weight": 2.5, "condition": "!endometriosis_surgeries || !endometriosis_surgeries.includes('c0010002-0000-0000-0000-000000000636')"}}, {"source": "26", "target": "31", "metadata": {"edge_type": "SKIP_LOGIC", "color": "#d62728", "hover": "SKIP LOGIC: 'prev_surgery' controls 'ovarian_surgeries'\nCondition: !prev_surgery || prev_surgery !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'", "weight": 2.5, "condition": "!prev_surgery || prev_surgery !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"}}, {"source": "31", "target": "40", "metadata": {"edge_type": "SKIP_LOGIC", "color": "#d62728", "hover": "SKIP LOGIC: 'ovarian_surgeries' controls 'ovarian_dermoid_lat'\nCondition: !ovarian_surgeries || !ovarian_surgeries.includes('c0010002-0000-0000-0000-000000000641')", "weight": 2.5, "condition": "!ovarian_surgeries || !ovarian_surgeries.includes('c0010002-0000-0000-0000-000000000641')"}}, {"source": "31", "target": "41", "metadata": {"edge_type": "SKIP_LOGIC", "color": "#d62728", "hover": "SKIP LOGIC: 'ovarian_surgeries' controls 'simple_cyst_lat'\nCondition: !ovarian_surgeries || !ovarian_surgeries.includes('c0010002-0000-0000-0000-000000000642')", "weight": 2.5, "condition": "!ovarian_surgeries || !ovarian_surgeries.includes('c0010002-0000-0000-0000-000000000642')"}}, {"source": "31", "target": "42", "metadata": {"edge_type": "SKIP_LOGIC", "color": "#d62728", "hover": "SKIP LOGIC: 'ovarian_surgeries' controls 'paraovarian_cyst_lat'\nCondition: !ovarian_surgeries || !ovarian_surgeries.includes('c0010002-0000-0000-0000-000000000643')", "weight": 2.5, "condition": "!ovarian_surgeries || !ovarian_surgeries.includes('c0010002-0000-0000-0000-000000000643')"}}, {"source": "31", "target": "43", "metadata": {"edge_type": "SKIP_LOGIC", "color": "#d62728", "hover": "SKIP LOGIC: 'ovarian_surgeries' controls 'cyst_aspiration_lat'\nCondition: !ovarian_surgeries || !ovarian_surgeries.includes('c0010002-0000-0000-0000-000000000644')", "weight": 2.5, "condition": "!ovarian_surgeries || !ovarian_surgeries.includes('c0010002-0000-0000-0000-000000000644')"}}, {"source": "31", "target": "44", "metadata": {"edge_type": "SKIP_LOGIC", "color": "#d62728", "hover": "SKIP LOGIC: 'ovarian_surgeries' controls 'oophorectomy_lat'\nCondition: !ovarian_surgeries || !ovarian_surgeries.includes('c0010002-0000-0000-0000-000000000645')", "weight": 2.5, "condition": "!ovarian_surgeries || !ovarian_surgeries.includes('c0010002-0000-0000-0000-000000000645')"}}, {"source": "31", "target": "45", "metadata": {"edge_type": "SKIP_LOGIC", "color": "#d62728", "hover": "SKIP LOGIC: 'ovarian_surgeries' controls 'ovarian_cystectomy_lat'\nCondition: !ovarian_surgeries || !ovarian_surgeries.includes('c0010002-0000-0000-0000-000000000646')", "weight": 2.5, "condition": "!ovarian_surgeries || !ovarian_surgeries.includes('c0010002-0000-0000-0000-000000000646')"}}, {"source": "26", "target": "32", "metadata": {"edge_type": "SKIP_LOGIC", "color": "#d62728", "hover": "SKIP LOGIC: 'prev_surgery' controls 'tubal_surgeries'\nCondition: !prev_surgery || prev_surgery !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'", "weight": 2.5, "condition": "!prev_surgery || prev_surgery !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"}}, {"source": "32", "target": "46", "metadata": {"edge_type": "SKIP_LOGIC", "color": "#d62728", "hover": "SKIP LOGIC: 'tubal_surgeries' controls 'chromopertubation_lat'\nCondition: !tubal_surgeries || !tubal_surgeries.includes('c0010002-0000-0000-0000-000000000651')", "weight": 2.5, "condition": "!tubal_surgeries || !tubal_surgeries.includes('c0010002-0000-0000-0000-000000000651')"}}, {"source": "32", "target": "47", "metadata": {"edge_type": "SKIP_LOGIC", "color": "#d62728", "hover": "SKIP LOGIC: 'tubal_surgeries' controls 'tubal_cannulation_lat'\nCondition: !tubal_surgeries || !tubal_surgeries.includes('c0010002-0000-0000-0000-000000000652')", "weight": 2.5, "condition": "!tubal_surgeries || !tubal_surgeries.includes('c0010002-0000-0000-0000-000000000652')"}}, {"source": "32", "target": "48", "metadata": {"edge_type": "SKIP_LOGIC", "color": "#d62728", "hover": "SKIP LOGIC: 'tubal_surgeries' controls 'salpingectomy_lat'\nCondition: !tubal_surgeries || !tubal_surgeries.includes('c0010002-0000-0000-0000-000000000653')", "weight": 2.5, "condition": "!tubal_surgeries || !tubal_surgeries.includes('c0010002-0000-0000-0000-000000000653')"}}, {"source": "32", "target": "49", "metadata": {"edge_type": "SKIP_LOGIC", "color": "#d62728", "hover": "SKIP LOGIC: 'tubal_surgeries' controls 'fimbrioplasty_lat'\nCondition: !tubal_surgeries || !tubal_surgeries.includes('c0010002-0000-0000-0000-000000000654')", "weight": 2.5, "condition": "!tubal_surgeries || !tubal_surgeries.includes('c0010002-0000-0000-0000-000000000654')"}}, {"source": "32", "target": "50", "metadata": {"edge_type": "SKIP_LOGIC", "color": "#d62728", "hover": "SKIP LOGIC: 'tubal_surgeries' controls 'tubal_clipping_lat'\nCondition: !tubal_surgeries || !tubal_surgeries.includes('c0010002-0000-0000-0000-000000000655')", "weight": 2.5, "condition": "!tubal_surgeries || !tubal_surgeries.includes('c0010002-0000-0000-0000-000000000655')"}}, {"source": "32", "target": "51", "metadata": {"edge_type": "SKIP_LOGIC", "color": "#d62728", "hover": "SKIP LOGIC: 'tubal_surgeries' controls 'recanalization_lat'\nCondition: !tubal_surgeries || !tubal_surgeries.includes('c0010002-0000-0000-0000-000000000656')", "weight": 2.5, "condition": "!tubal_surgeries || !tubal_surgeries.includes('c0010002-0000-0000-0000-000000000656')"}}, {"source": "52", "target": "53", "metadata": {"edge_type": "SKIP_LOGIC", "color": "#d62728", "hover": "SKIP LOGIC: 'is_smoker' controls 'daily_cigarettes'\nCondition: is_smoker !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'", "weight": 2.5, "condition": "is_smoker !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"}}], "directed": true}];
             // Data selection and normalization
             state.nodeSizeDataSource = "size";
             state.useNodeSizeNormalization = false;
@@ -1092,7 +1092,7 @@ function(t){"use strict";function n(t,n){return null==t||null==n?NaN:t<n?-1:t>n?
             // Nodes
             state.showNodes = true;
             state.nodeSizeFactor = 1.6;
-            state.nodeDragFix = true;
+            state.nodeDragFix = false;
             state.nodeHoverNeighborhood = true;
             state.nodeHoverTooltip = true;
             state.showNodeImages = true;
@@ -2000,126 +2000,126 @@ function(t){"use strict";function n(t,n){return null==t||null==n?NaN:t<n?-1:t>n?
 
         elements:{
           // Containers
-          mainContainer: document.getElementById("iGq8lCFjVYeoM2Cf4-main-div"),
-          tooltipContainer: document.getElementById("iGq8lCFjVYeoM2Cf4-tooltip-div"),
-          leftContainer: document.getElementById("iGq8lCFjVYeoM2Cf4-left-div"),
-          rightContainer: document.getElementById("iGq8lCFjVYeoM2Cf4-right-div"),
-          graphContainer: document.getElementById("iGq8lCFjVYeoM2Cf4-graph-div"),
-          detailsContainer: document.getElementById("iGq8lCFjVYeoM2Cf4-details-div"),
-          detailsHead: document.getElementById("iGq8lCFjVYeoM2Cf4-details-head"),
-          detailsBody: document.getElementById("iGq8lCFjVYeoM2Cf4-details-body"),
+          mainContainer: document.getElementById("ibXiZlAhkaP5pdbuw-main-div"),
+          tooltipContainer: document.getElementById("ibXiZlAhkaP5pdbuw-tooltip-div"),
+          leftContainer: document.getElementById("ibXiZlAhkaP5pdbuw-left-div"),
+          rightContainer: document.getElementById("ibXiZlAhkaP5pdbuw-right-div"),
+          graphContainer: document.getElementById("ibXiZlAhkaP5pdbuw-graph-div"),
+          detailsContainer: document.getElementById("ibXiZlAhkaP5pdbuw-details-div"),
+          detailsHead: document.getElementById("ibXiZlAhkaP5pdbuw-details-head"),
+          detailsBody: document.getElementById("ibXiZlAhkaP5pdbuw-details-body"),
           // Data sources
-          dataHead: document.getElementById("iGq8lCFjVYeoM2Cf4-data-head"),
-          dataBody: document.getElementById("iGq8lCFjVYeoM2Cf4-data-body"),
-          graphSelectionContainer: document.getElementById("iGq8lCFjVYeoM2Cf4-graph-select-div"),
-          graphSelection: document.getElementById("iGq8lCFjVYeoM2Cf4-graph-select"),
-          nodeSizeDataSourceSelect: document.getElementById("iGq8lCFjVYeoM2Cf4-node-size-data-source-select"),
-          nodeSizeNormalizationCheckbox: document.getElementById("iGq8lCFjVYeoM2Cf4-node-size-normalization-checkbox"),
-          nodeSizeNormalizationContainer: document.getElementById("iGq8lCFjVYeoM2Cf4-node-size-norm-div"),
-          nodeSizeNormalizationMinText: document.getElementById("iGq8lCFjVYeoM2Cf4-node-size-normalization-min-text"),
-          nodeSizeNormalizationMinSlider: document.getElementById("iGq8lCFjVYeoM2Cf4-node-size-normalization-min-slider"),
-          nodeSizeNormalizationMaxText: document.getElementById("iGq8lCFjVYeoM2Cf4-node-size-normalization-max-text"),
-          nodeSizeNormalizationMaxSlider: document.getElementById("iGq8lCFjVYeoM2Cf4-node-size-normalization-max-slider"),
-          edgeSizeDataSourceSelect: document.getElementById("iGq8lCFjVYeoM2Cf4-edge-size-data-source-select"),
-          edgeSizeNormalizationCheckbox: document.getElementById("iGq8lCFjVYeoM2Cf4-edge-size-normalization-checkbox"),
-          edgeSizeNormalizationContainer: document.getElementById("iGq8lCFjVYeoM2Cf4-edge-size-norm-div"),
-          edgeSizeNormalizationMinText: document.getElementById("iGq8lCFjVYeoM2Cf4-edge-size-normalization-min-text"),
-          edgeSizeNormalizationMinSlider: document.getElementById("iGq8lCFjVYeoM2Cf4-edge-size-normalization-min-slider"),
-          edgeSizeNormalizationMaxText: document.getElementById("iGq8lCFjVYeoM2Cf4-edge-size-normalization-max-text"),
-          edgeSizeNormalizationMaxSlider: document.getElementById("iGq8lCFjVYeoM2Cf4-edge-size-normalization-max-slider"),
+          dataHead: document.getElementById("ibXiZlAhkaP5pdbuw-data-head"),
+          dataBody: document.getElementById("ibXiZlAhkaP5pdbuw-data-body"),
+          graphSelectionContainer: document.getElementById("ibXiZlAhkaP5pdbuw-graph-select-div"),
+          graphSelection: document.getElementById("ibXiZlAhkaP5pdbuw-graph-select"),
+          nodeSizeDataSourceSelect: document.getElementById("ibXiZlAhkaP5pdbuw-node-size-data-source-select"),
+          nodeSizeNormalizationCheckbox: document.getElementById("ibXiZlAhkaP5pdbuw-node-size-normalization-checkbox"),
+          nodeSizeNormalizationContainer: document.getElementById("ibXiZlAhkaP5pdbuw-node-size-norm-div"),
+          nodeSizeNormalizationMinText: document.getElementById("ibXiZlAhkaP5pdbuw-node-size-normalization-min-text"),
+          nodeSizeNormalizationMinSlider: document.getElementById("ibXiZlAhkaP5pdbuw-node-size-normalization-min-slider"),
+          nodeSizeNormalizationMaxText: document.getElementById("ibXiZlAhkaP5pdbuw-node-size-normalization-max-text"),
+          nodeSizeNormalizationMaxSlider: document.getElementById("ibXiZlAhkaP5pdbuw-node-size-normalization-max-slider"),
+          edgeSizeDataSourceSelect: document.getElementById("ibXiZlAhkaP5pdbuw-edge-size-data-source-select"),
+          edgeSizeNormalizationCheckbox: document.getElementById("ibXiZlAhkaP5pdbuw-edge-size-normalization-checkbox"),
+          edgeSizeNormalizationContainer: document.getElementById("ibXiZlAhkaP5pdbuw-edge-size-norm-div"),
+          edgeSizeNormalizationMinText: document.getElementById("ibXiZlAhkaP5pdbuw-edge-size-normalization-min-text"),
+          edgeSizeNormalizationMinSlider: document.getElementById("ibXiZlAhkaP5pdbuw-edge-size-normalization-min-slider"),
+          edgeSizeNormalizationMaxText: document.getElementById("ibXiZlAhkaP5pdbuw-edge-size-normalization-max-text"),
+          edgeSizeNormalizationMaxSlider: document.getElementById("ibXiZlAhkaP5pdbuw-edge-size-normalization-max-slider"),
           // General
-          generalHead: document.getElementById("iGq8lCFjVYeoM2Cf4-general-head"),
-          generalBody: document.getElementById("iGq8lCFjVYeoM2Cf4-general-body"),
-          resetButton: document.getElementById("iGq8lCFjVYeoM2Cf4-reset"),
-          fullscreenButton: document.getElementById("iGq8lCFjVYeoM2Cf4-fullscreen-button"),
-          svgExportButton: document.getElementById("iGq8lCFjVYeoM2Cf4-svg"),
-          pngExportButton: document.getElementById("iGq8lCFjVYeoM2Cf4-png"),
-          jpgExportButton: document.getElementById("iGq8lCFjVYeoM2Cf4-jpg"),
+          generalHead: document.getElementById("ibXiZlAhkaP5pdbuw-general-head"),
+          generalBody: document.getElementById("ibXiZlAhkaP5pdbuw-general-body"),
+          resetButton: document.getElementById("ibXiZlAhkaP5pdbuw-reset"),
+          fullscreenButton: document.getElementById("ibXiZlAhkaP5pdbuw-fullscreen-button"),
+          svgExportButton: document.getElementById("ibXiZlAhkaP5pdbuw-svg"),
+          pngExportButton: document.getElementById("ibXiZlAhkaP5pdbuw-png"),
+          jpgExportButton: document.getElementById("ibXiZlAhkaP5pdbuw-jpg"),
           // Nodes
-          nodeHead: document.getElementById("iGq8lCFjVYeoM2Cf4-node-head"),
-          nodeBody: document.getElementById("iGq8lCFjVYeoM2Cf4-node-body"),
-          nodeCheckbox: document.getElementById("iGq8lCFjVYeoM2Cf4-node-checkbox"),
-          nodeSizeFactorText: document.getElementById("iGq8lCFjVYeoM2Cf4-node-size-factor-text"),
-          nodeSizeFactorSlider: document.getElementById("iGq8lCFjVYeoM2Cf4-node-size-factor-slider"),
-          nodeDragFixCheckbox: document.getElementById("iGq8lCFjVYeoM2Cf4-node-drag-fix-checkbox"),
-          nodeHoverNeighborhoodCheckbox: document.getElementById("iGq8lCFjVYeoM2Cf4-node-hover-neighborhood-checkbox"),
-          nodeHoverTooltipCheckbox: document.getElementById("iGq8lCFjVYeoM2Cf4-node-hover-tooltip-checkbox"),
-          nodeReleaseButton: document.getElementById("iGq8lCFjVYeoM2Cf4-node-release-button"),
+          nodeHead: document.getElementById("ibXiZlAhkaP5pdbuw-node-head"),
+          nodeBody: document.getElementById("ibXiZlAhkaP5pdbuw-node-body"),
+          nodeCheckbox: document.getElementById("ibXiZlAhkaP5pdbuw-node-checkbox"),
+          nodeSizeFactorText: document.getElementById("ibXiZlAhkaP5pdbuw-node-size-factor-text"),
+          nodeSizeFactorSlider: document.getElementById("ibXiZlAhkaP5pdbuw-node-size-factor-slider"),
+          nodeDragFixCheckbox: document.getElementById("ibXiZlAhkaP5pdbuw-node-drag-fix-checkbox"),
+          nodeHoverNeighborhoodCheckbox: document.getElementById("ibXiZlAhkaP5pdbuw-node-hover-neighborhood-checkbox"),
+          nodeHoverTooltipCheckbox: document.getElementById("ibXiZlAhkaP5pdbuw-node-hover-tooltip-checkbox"),
+          nodeReleaseButton: document.getElementById("ibXiZlAhkaP5pdbuw-node-release-button"),
           // Node images
-          nodeImageHead: document.getElementById("iGq8lCFjVYeoM2Cf4-node-image-head"),
-          nodeImageBody: document.getElementById("iGq8lCFjVYeoM2Cf4-node-image-body"),
-          nodeImageCheckbox: document.getElementById("iGq8lCFjVYeoM2Cf4-node-image-checkbox"),
-          nodeImageMetaControl: document.getElementById("iGq8lCFjVYeoM2Cf4-node-image-meta-control"),
-          nodeImageSizeFactorText: document.getElementById("iGq8lCFjVYeoM2Cf4-node-image-size-factor-text"),
-          nodeImageSizeFactorSlider: document.getElementById("iGq8lCFjVYeoM2Cf4-node-image-size-factor-slider"),
+          nodeImageHead: document.getElementById("ibXiZlAhkaP5pdbuw-node-image-head"),
+          nodeImageBody: document.getElementById("ibXiZlAhkaP5pdbuw-node-image-body"),
+          nodeImageCheckbox: document.getElementById("ibXiZlAhkaP5pdbuw-node-image-checkbox"),
+          nodeImageMetaControl: document.getElementById("ibXiZlAhkaP5pdbuw-node-image-meta-control"),
+          nodeImageSizeFactorText: document.getElementById("ibXiZlAhkaP5pdbuw-node-image-size-factor-text"),
+          nodeImageSizeFactorSlider: document.getElementById("ibXiZlAhkaP5pdbuw-node-image-size-factor-slider"),
           // Node labels
-          nodeLabelHead: document.getElementById("iGq8lCFjVYeoM2Cf4-node-label-head"),
-          nodeLabelBody: document.getElementById("iGq8lCFjVYeoM2Cf4-node-label-body"),
-          nodeLabelCheckbox: document.getElementById("iGq8lCFjVYeoM2Cf4-node-label-checkbox"),
-          nodeLabelBorderCheckbox: document.getElementById("iGq8lCFjVYeoM2Cf4-node-label-border-checkbox"),
-          nodeLabelTextDataSourceSelect: document.getElementById("iGq8lCFjVYeoM2Cf4-node-label-data-source-select"),
-          nodeLabelSizeFactorText: document.getElementById("iGq8lCFjVYeoM2Cf4-node-label-size-factor-text"),
-          nodeLabelSizeFactorSlider: document.getElementById("iGq8lCFjVYeoM2Cf4-node-label-size-factor-slider"),
-          nodeLabelRotationText: document.getElementById("iGq8lCFjVYeoM2Cf4-node-label-rotation-text"),
-          nodeLabelRotationSlider: document.getElementById("iGq8lCFjVYeoM2Cf4-node-label-rotation-slider"),
+          nodeLabelHead: document.getElementById("ibXiZlAhkaP5pdbuw-node-label-head"),
+          nodeLabelBody: document.getElementById("ibXiZlAhkaP5pdbuw-node-label-body"),
+          nodeLabelCheckbox: document.getElementById("ibXiZlAhkaP5pdbuw-node-label-checkbox"),
+          nodeLabelBorderCheckbox: document.getElementById("ibXiZlAhkaP5pdbuw-node-label-border-checkbox"),
+          nodeLabelTextDataSourceSelect: document.getElementById("ibXiZlAhkaP5pdbuw-node-label-data-source-select"),
+          nodeLabelSizeFactorText: document.getElementById("ibXiZlAhkaP5pdbuw-node-label-size-factor-text"),
+          nodeLabelSizeFactorSlider: document.getElementById("ibXiZlAhkaP5pdbuw-node-label-size-factor-slider"),
+          nodeLabelRotationText: document.getElementById("ibXiZlAhkaP5pdbuw-node-label-rotation-text"),
+          nodeLabelRotationSlider: document.getElementById("ibXiZlAhkaP5pdbuw-node-label-rotation-slider"),
           // Edges
-          edgeHead: document.getElementById("iGq8lCFjVYeoM2Cf4-edge-head"),
-          edgeBody: document.getElementById("iGq8lCFjVYeoM2Cf4-edge-body"),
-          edgeCheckbox: document.getElementById("iGq8lCFjVYeoM2Cf4-edge-checkbox"),
-          edgeSizeFactorText: document.getElementById("iGq8lCFjVYeoM2Cf4-edge-size-factor-text"),
-          edgeSizeFactorSlider: document.getElementById("iGq8lCFjVYeoM2Cf4-edge-size-factor-slider"),
-          edgeCurvatureText: document.getElementById("iGq8lCFjVYeoM2Cf4-edge-curvature-text"),
-          edgeCurvatureSlider: document.getElementById("iGq8lCFjVYeoM2Cf4-edge-curvature-slider"),
-          edgeHoverTooltipCheckbox: document.getElementById("iGq8lCFjVYeoM2Cf4-edge-hover-tooltip-checkbox"),
+          edgeHead: document.getElementById("ibXiZlAhkaP5pdbuw-edge-head"),
+          edgeBody: document.getElementById("ibXiZlAhkaP5pdbuw-edge-body"),
+          edgeCheckbox: document.getElementById("ibXiZlAhkaP5pdbuw-edge-checkbox"),
+          edgeSizeFactorText: document.getElementById("ibXiZlAhkaP5pdbuw-edge-size-factor-text"),
+          edgeSizeFactorSlider: document.getElementById("ibXiZlAhkaP5pdbuw-edge-size-factor-slider"),
+          edgeCurvatureText: document.getElementById("ibXiZlAhkaP5pdbuw-edge-curvature-text"),
+          edgeCurvatureSlider: document.getElementById("ibXiZlAhkaP5pdbuw-edge-curvature-slider"),
+          edgeHoverTooltipCheckbox: document.getElementById("ibXiZlAhkaP5pdbuw-edge-hover-tooltip-checkbox"),
           // Edge labels
-          edgeLabelHead: document.getElementById("iGq8lCFjVYeoM2Cf4-edge-label-head"),
-          edgeLabelBody: document.getElementById("iGq8lCFjVYeoM2Cf4-edge-label-body"),
-          edgeLabelCheckbox: document.getElementById("iGq8lCFjVYeoM2Cf4-edge-label-checkbox"),
-          edgeLabelBorderCheckbox: document.getElementById("iGq8lCFjVYeoM2Cf4-edge-label-border-checkbox"),
-          edgeLabelTextDataSourceSelect: document.getElementById("iGq8lCFjVYeoM2Cf4-edge-label-data-source-select"),
-          edgeLabelSizeFactorText: document.getElementById("iGq8lCFjVYeoM2Cf4-edge-label-size-factor-text"),
-          edgeLabelSizeFactorSlider: document.getElementById("iGq8lCFjVYeoM2Cf4-edge-label-size-factor-slider"),
-          edgeLabelRotationText: document.getElementById("iGq8lCFjVYeoM2Cf4-edge-label-rotation-text"),
-          edgeLabelRotationSlider: document.getElementById("iGq8lCFjVYeoM2Cf4-edge-label-rotation-slider"),
+          edgeLabelHead: document.getElementById("ibXiZlAhkaP5pdbuw-edge-label-head"),
+          edgeLabelBody: document.getElementById("ibXiZlAhkaP5pdbuw-edge-label-body"),
+          edgeLabelCheckbox: document.getElementById("ibXiZlAhkaP5pdbuw-edge-label-checkbox"),
+          edgeLabelBorderCheckbox: document.getElementById("ibXiZlAhkaP5pdbuw-edge-label-border-checkbox"),
+          edgeLabelTextDataSourceSelect: document.getElementById("ibXiZlAhkaP5pdbuw-edge-label-data-source-select"),
+          edgeLabelSizeFactorText: document.getElementById("ibXiZlAhkaP5pdbuw-edge-label-size-factor-text"),
+          edgeLabelSizeFactorSlider: document.getElementById("ibXiZlAhkaP5pdbuw-edge-label-size-factor-slider"),
+          edgeLabelRotationText: document.getElementById("ibXiZlAhkaP5pdbuw-edge-label-rotation-text"),
+          edgeLabelRotationSlider: document.getElementById("ibXiZlAhkaP5pdbuw-edge-label-rotation-slider"),
           // Layout algorithm
-          layoutAlgorithmHead: document.getElementById("iGq8lCFjVYeoM2Cf4-layout-algorithm-head"),
-          layoutAlgorithmBody: document.getElementById("iGq8lCFjVYeoM2Cf4-layout-algorithm-body"),
-          simulationCheckbox: document.getElementById("iGq8lCFjVYeoM2Cf4-simulation-active-checkbox"),
-          manyBodyForceCheckbox: document.getElementById("iGq8lCFjVYeoM2Cf4-many-body-force-checkbox"),
-          manyBodyForceContainer: document.getElementById("iGq8lCFjVYeoM2Cf4-many-body-force-div"),
-          manyBodyForceStrengthText: document.getElementById("iGq8lCFjVYeoM2Cf4-many-body-force-strength-text"),
-          manyBodyForceStrengthSlider: document.getElementById("iGq8lCFjVYeoM2Cf4-many-body-force-strength-slider"),
-          manyBodyForceThetaText: document.getElementById("iGq8lCFjVYeoM2Cf4-many-body-force-theta-text"),
-          manyBodyForceThetaSlider: document.getElementById("iGq8lCFjVYeoM2Cf4-many-body-force-theta-slider"),
-          manyBodyForceMinDistCheckbox: document.getElementById("iGq8lCFjVYeoM2Cf4-many-body-force-min-distance-checkbox"),
-          manyBodyForceMinDistContainer: document.getElementById("iGq8lCFjVYeoM2Cf4-many-body-force-min-distance-div"),
-          manyBodyForceMinDistText: document.getElementById("iGq8lCFjVYeoM2Cf4-many-body-force-min-distance-text"),
-          manyBodyForceMinDistSlider: document.getElementById("iGq8lCFjVYeoM2Cf4-many-body-force-min-distance-slider"),
-          manyBodyForceMaxDistCheckbox: document.getElementById("iGq8lCFjVYeoM2Cf4-many-body-force-max-distance-checkbox"),
-          manyBodyForceMaxDistContainer: document.getElementById("iGq8lCFjVYeoM2Cf4-many-body-force-max-distance-div"),
-          manyBodyForceMaxDistText: document.getElementById("iGq8lCFjVYeoM2Cf4-many-body-force-max-distance-text"),
-          manyBodyForceMaxDistSlider: document.getElementById("iGq8lCFjVYeoM2Cf4-many-body-force-max-distance-slider"),
-          linksForceCheckbox: document.getElementById("iGq8lCFjVYeoM2Cf4-links-force-checkbox"),
-          linksForceContainer: document.getElementById("iGq8lCFjVYeoM2Cf4-links-force-div"),
-          linksForceDistanceText: document.getElementById("iGq8lCFjVYeoM2Cf4-links-force-distance-text"),
-          linksForceDistanceSlider: document.getElementById("iGq8lCFjVYeoM2Cf4-links-force-distance-slider"),
-          linksForceStrengthText: document.getElementById("iGq8lCFjVYeoM2Cf4-links-force-strength-text"),
-          linksForceStrengthSlider: document.getElementById("iGq8lCFjVYeoM2Cf4-links-force-strength-slider"),
-          collisionForceCheckbox: document.getElementById("iGq8lCFjVYeoM2Cf4-collision-force-checkbox"),
-          collisionForceContainer: document.getElementById("iGq8lCFjVYeoM2Cf4-collision-force-div"),
-          collisionForceRadiusText: document.getElementById("iGq8lCFjVYeoM2Cf4-collision-force-radius-text"),
-          collisionForceRadiusSlider: document.getElementById("iGq8lCFjVYeoM2Cf4-collision-force-radius-slider"),
-          collisionForceStrengthText: document.getElementById("iGq8lCFjVYeoM2Cf4-collision-force-strength-text"),
-          collisionForceStrengthSlider: document.getElementById("iGq8lCFjVYeoM2Cf4-collision-force-strength-slider"),
-          xPositioningForceCheckbox: document.getElementById("iGq8lCFjVYeoM2Cf4-x-positioning-force-checkbox"),
-          xPositioningForceContainer: document.getElementById("iGq8lCFjVYeoM2Cf4-x-positioning-force-div"),
-          xPositioningForceStrengthText: document.getElementById("iGq8lCFjVYeoM2Cf4-x-positioning-force-strength-text"),
-          xPositioningForceStrengthSlider: document.getElementById("iGq8lCFjVYeoM2Cf4-x-positioning-force-strength-slider"),
-          yPositioningForceCheckbox: document.getElementById("iGq8lCFjVYeoM2Cf4-y-positioning-force-checkbox"),
-          yPositioningForceContainer: document.getElementById("iGq8lCFjVYeoM2Cf4-y-positioning-force-div"),
-          yPositioningForceStrengthText: document.getElementById("iGq8lCFjVYeoM2Cf4-y-positioning-force-strength-text"),
-          yPositioningForceStrengthSlider: document.getElementById("iGq8lCFjVYeoM2Cf4-y-positioning-force-strength-slider"),
-          centeringForceCheckbox: document.getElementById("iGq8lCFjVYeoM2Cf4-centering-force-checkbox"),
+          layoutAlgorithmHead: document.getElementById("ibXiZlAhkaP5pdbuw-layout-algorithm-head"),
+          layoutAlgorithmBody: document.getElementById("ibXiZlAhkaP5pdbuw-layout-algorithm-body"),
+          simulationCheckbox: document.getElementById("ibXiZlAhkaP5pdbuw-simulation-active-checkbox"),
+          manyBodyForceCheckbox: document.getElementById("ibXiZlAhkaP5pdbuw-many-body-force-checkbox"),
+          manyBodyForceContainer: document.getElementById("ibXiZlAhkaP5pdbuw-many-body-force-div"),
+          manyBodyForceStrengthText: document.getElementById("ibXiZlAhkaP5pdbuw-many-body-force-strength-text"),
+          manyBodyForceStrengthSlider: document.getElementById("ibXiZlAhkaP5pdbuw-many-body-force-strength-slider"),
+          manyBodyForceThetaText: document.getElementById("ibXiZlAhkaP5pdbuw-many-body-force-theta-text"),
+          manyBodyForceThetaSlider: document.getElementById("ibXiZlAhkaP5pdbuw-many-body-force-theta-slider"),
+          manyBodyForceMinDistCheckbox: document.getElementById("ibXiZlAhkaP5pdbuw-many-body-force-min-distance-checkbox"),
+          manyBodyForceMinDistContainer: document.getElementById("ibXiZlAhkaP5pdbuw-many-body-force-min-distance-div"),
+          manyBodyForceMinDistText: document.getElementById("ibXiZlAhkaP5pdbuw-many-body-force-min-distance-text"),
+          manyBodyForceMinDistSlider: document.getElementById("ibXiZlAhkaP5pdbuw-many-body-force-min-distance-slider"),
+          manyBodyForceMaxDistCheckbox: document.getElementById("ibXiZlAhkaP5pdbuw-many-body-force-max-distance-checkbox"),
+          manyBodyForceMaxDistContainer: document.getElementById("ibXiZlAhkaP5pdbuw-many-body-force-max-distance-div"),
+          manyBodyForceMaxDistText: document.getElementById("ibXiZlAhkaP5pdbuw-many-body-force-max-distance-text"),
+          manyBodyForceMaxDistSlider: document.getElementById("ibXiZlAhkaP5pdbuw-many-body-force-max-distance-slider"),
+          linksForceCheckbox: document.getElementById("ibXiZlAhkaP5pdbuw-links-force-checkbox"),
+          linksForceContainer: document.getElementById("ibXiZlAhkaP5pdbuw-links-force-div"),
+          linksForceDistanceText: document.getElementById("ibXiZlAhkaP5pdbuw-links-force-distance-text"),
+          linksForceDistanceSlider: document.getElementById("ibXiZlAhkaP5pdbuw-links-force-distance-slider"),
+          linksForceStrengthText: document.getElementById("ibXiZlAhkaP5pdbuw-links-force-strength-text"),
+          linksForceStrengthSlider: document.getElementById("ibXiZlAhkaP5pdbuw-links-force-strength-slider"),
+          collisionForceCheckbox: document.getElementById("ibXiZlAhkaP5pdbuw-collision-force-checkbox"),
+          collisionForceContainer: document.getElementById("ibXiZlAhkaP5pdbuw-collision-force-div"),
+          collisionForceRadiusText: document.getElementById("ibXiZlAhkaP5pdbuw-collision-force-radius-text"),
+          collisionForceRadiusSlider: document.getElementById("ibXiZlAhkaP5pdbuw-collision-force-radius-slider"),
+          collisionForceStrengthText: document.getElementById("ibXiZlAhkaP5pdbuw-collision-force-strength-text"),
+          collisionForceStrengthSlider: document.getElementById("ibXiZlAhkaP5pdbuw-collision-force-strength-slider"),
+          xPositioningForceCheckbox: document.getElementById("ibXiZlAhkaP5pdbuw-x-positioning-force-checkbox"),
+          xPositioningForceContainer: document.getElementById("ibXiZlAhkaP5pdbuw-x-positioning-force-div"),
+          xPositioningForceStrengthText: document.getElementById("ibXiZlAhkaP5pdbuw-x-positioning-force-strength-text"),
+          xPositioningForceStrengthSlider: document.getElementById("ibXiZlAhkaP5pdbuw-x-positioning-force-strength-slider"),
+          yPositioningForceCheckbox: document.getElementById("ibXiZlAhkaP5pdbuw-y-positioning-force-checkbox"),
+          yPositioningForceContainer: document.getElementById("ibXiZlAhkaP5pdbuw-y-positioning-force-div"),
+          yPositioningForceStrengthText: document.getElementById("ibXiZlAhkaP5pdbuw-y-positioning-force-strength-text"),
+          yPositioningForceStrengthSlider: document.getElementById("ibXiZlAhkaP5pdbuw-y-positioning-force-strength-slider"),
+          centeringForceCheckbox: document.getElementById("ibXiZlAhkaP5pdbuw-centering-force-checkbox"),
         },
 
         composites:{
@@ -2481,7 +2481,7 @@ function(t){"use strict";function n(t,n){return null==t||null==n?NaN:t<n?-1:t>n?
             create(){
               // Main container
               this.mainContainer = document.createElement("div");
-              this.mainContainer.id = "iGq8lCFjVYeoM2Cf4-progress-container";
+              this.mainContainer.id = "ibXiZlAhkaP5pdbuw-progress-container";
               this.mainContainer.style.backgroundColor = state.shownData.general.background_color;
               ui.elements.graphContainer.style.backgroundColor = state.shownData.general.background_color;
               // Text container
@@ -2530,7 +2530,7 @@ function(t){"use strict";function n(t,n){return null==t||null==n?NaN:t<n?-1:t>n?
                 } else {
                   menuDiv.innerText = ui.symbols.menuHidden;
                 }
-                menuDiv.id = "iGq8lCFjVYeoM2Cf4-menu-toggle-button";
+                menuDiv.id = "ibXiZlAhkaP5pdbuw-menu-toggle-button";
                 menuDiv.onclick = ui.composites.menu.toggle;
                 ui.elements.graphContainer.appendChild(menuDiv);
                 ui.elements.menuToggleDiv = menuDiv;
@@ -2544,27 +2544,27 @@ function(t){"use strict";function n(t,n){return null==t||null==n?NaN:t<n?-1:t>n?
                 } else {
                   detailsDiv.innerText = ui.symbols.detailsHidden;
                 }
-                detailsDiv.id = "iGq8lCFjVYeoM2Cf4-details-toggle-button";
+                detailsDiv.id = "ibXiZlAhkaP5pdbuw-details-toggle-button";
                 detailsDiv.onclick = ui.composites.details.toggle;
                 ui.elements.graphContainer.appendChild(detailsDiv);
                 ui.elements.detailsToggleDiv = detailsDiv;
               }
 
               // - Graph drawing area
-              const svg = d3.select("#iGq8lCFjVYeoM2Cf4-graph-div").append("svg");
+              const svg = d3.select("#ibXiZlAhkaP5pdbuw-graph-div").append("svg");
               state.currentGraphParts.svg = svg;
               svg
                 .attr("width", state.graphContainerWidth)
                 .attr("height", state.graphContainerHeight);
               // - Background rectangle
               const backgroundRect = svg.append("rect")
-                .attr("id", "iGq8lCFjVYeoM2Cf4-background")
+                .attr("id", "ibXiZlAhkaP5pdbuw-background")
                 .attr("width", state.graphContainerWidth)
                 .attr("height", state.graphContainerHeight)
                 .attr("fill", state.shownData.general.background_color);
               state.currentGraphParts.backgroundRect = backgroundRect;
               // - Zoomable and draggable group as graph drawing area
-              const view = svg.append("g").attr("id", "iGq8lCFjVYeoM2Cf4-zoomable-graph-group");
+              const view = svg.append("g").attr("id", "ibXiZlAhkaP5pdbuw-zoomable-graph-group");
               state.currentGraphParts.view = view;
               function zoomed(event) {
                 view.attr("transform", event.transform);
@@ -2623,7 +2623,7 @@ function(t){"use strict";function n(t,n){return null==t||null==n?NaN:t<n?-1:t>n?
               //       in back and which are drawn in front (there is no z-order property in SVG)
               // Edges
               state.currentGraphParts.edgeMainGroup = view.append("g")
-                .attr("id", "iGq8lCFjVYeoM2Cf4-edge-group")
+                .attr("id", "ibXiZlAhkaP5pdbuw-edge-group")
                 .style("display", ui.convert.boolToDisplayStyle(state.showEdges));
               state.currentGraphParts.edgeGroups = state.currentGraphParts.edgeMainGroup
                 .selectAll("g")
@@ -2631,7 +2631,7 @@ function(t){"use strict";function n(t,n){return null==t||null==n?NaN:t<n?-1:t>n?
                 .join("g");
               // Nodes
               state.currentGraphParts.nodeMainGroup = view.append("g")
-                .attr("id", "iGq8lCFjVYeoM2Cf4-node-group")
+                .attr("id", "ibXiZlAhkaP5pdbuw-node-group")
                 .style("display", ui.convert.boolToDisplayStyle(state.showNodes));
               state.currentGraphParts.nodeGroups = state.currentGraphParts.nodeMainGroup
                 .selectAll("g")
@@ -2643,7 +2643,7 @@ function(t){"use strict";function n(t,n){return null==t||null==n?NaN:t<n?-1:t>n?
                 edgeLabelData.push(i);
               }
               state.currentGraphParts.edgeLabelMainGroup = view.append("g")
-                .attr("id", "iGq8lCFjVYeoM2Cf4-edge-label-group")
+                .attr("id", "ibXiZlAhkaP5pdbuw-edge-label-group")
                 .style("display", ui.convert.boolToDisplayStyle(state.showEdgeLabels));
               state.currentGraphParts.edgeLabelGroups = state.currentGraphParts.edgeLabelMainGroup
                 .selectAll("g")
@@ -2655,7 +2655,7 @@ function(t){"use strict";function n(t,n){return null==t||null==n?NaN:t<n?-1:t>n?
                 nodeLabelData.push(i);
               }
               state.currentGraphParts.nodeLabelMainGroup = view.append("g")
-                .attr("id", "iGq8lCFjVYeoM2Cf4-node-label-group");
+                .attr("id", "ibXiZlAhkaP5pdbuw-node-label-group");
               state.currentGraphParts.nodeLabelGroups = state.currentGraphParts.nodeLabelMainGroup
                 .style("display", ui.convert.boolToDisplayStyle(state.showNodeLabels))
                 .selectAll("g")
@@ -2672,7 +2672,7 @@ function(t){"use strict";function n(t,n){return null==t||null==n?NaN:t<n?-1:t>n?
                 }
               }
               state.currentGraphParts.nodeImageMainGroup = view.append("g")
-                .attr("id", "iGq8lCFjVYeoM2Cf4-node-image-group")
+                .attr("id", "ibXiZlAhkaP5pdbuw-node-image-group")
                 .style("display", ui.convert.boolToDisplayStyle(state.showNodeImages));
               state.currentGraphParts.nodeImageGroups = state.currentGraphParts.nodeImageMainGroup
                 .selectAll("g")
@@ -2903,7 +2903,7 @@ function(t){"use strict";function n(t,n){return null==t||null==n?NaN:t<n?-1:t>n?
               function nodeClicked(event, node){
                 let htmlText = "<div>Node: " + String(node.id) + "</div>";
                 if(typeof(node.click) !== "undefined" && node.click !== ""){
-                  htmlText += '<div id="iGq8lCFjVYeoM2Cf4-details-user-provided">' + node.click + '</div>';
+                  htmlText += '<div id="ibXiZlAhkaP5pdbuw-details-user-provided">' + node.click + '</div>';
                 }
                 ui.elements.detailsBody.innerHTML = htmlText;
               }
@@ -2946,6 +2946,7 @@ function(t){"use strict";function n(t,n){return null==t||null==n?NaN:t<n?-1:t>n?
                     if(Math.abs(event.x - xAtDragStart) > 0.1 || Math.abs(event.y - yAtDragStart) > 0.1){
                       d.fx = null;
                       d.fy = null;
+                      if(state.layoutAlgorithmActive){ simulation.alpha(0.08).restart(); }
                     }
                   }
                 }
@@ -3157,7 +3158,7 @@ function(t){"use strict";function n(t,n){return null==t||null==n?NaN:t<n?-1:t>n?
 
               // 1) Remove existing elements
               ui.composites.graph.removeEdges();
-              svg.select("#iGq8lCFjVYeoM2Cf4-arrow-marker").remove();
+              svg.select("#ibXiZlAhkaP5pdbuw-arrow-marker").remove();
               // 2) Create new elements
               // - Paths
               state.currentGraphParts.edgePaths = edgeGroups.append("path")
@@ -3171,7 +3172,7 @@ function(t){"use strict";function n(t,n){return null==t||null==n?NaN:t<n?-1:t>n?
                 const arrowSizeDouble = arrowSize * 2.0,
                   arrowSizeHalf = arrowSize / 2.0;
                 const marker = svg.append("marker")
-                  .attr("id", "iGq8lCFjVYeoM2Cf4-arrow-marker")
+                  .attr("id", "ibXiZlAhkaP5pdbuw-arrow-marker")
                   .attr("markerUnits", "userSpaceOnUse")
                   .attr("viewBox", "0 0 " + arrowSizeDouble + " " + arrowSizeDouble)
                   .attr("refX", 0)
@@ -3184,7 +3185,7 @@ function(t){"use strict";function n(t,n){return null==t||null==n?NaN:t<n?-1:t>n?
                     .attr("d", "M 0 0 L " + arrowSizeDouble + " " + arrowSizeHalf + " L 0 " + arrowSize + " z")
                     .attr("fill", state.shownData.general.arrow_color)
                 state.currentGraphParts.edgePaths
-                  .attr("marker-end", "url(#iGq8lCFjVYeoM2Cf4-arrow-marker)");
+                  .attr("marker-end", "url(#ibXiZlAhkaP5pdbuw-arrow-marker)");
               }
               // - Edge hover behavior
               if(state.parsedData.general.contains_edge_hover){
@@ -3218,7 +3219,7 @@ function(t){"use strict";function n(t,n){return null==t||null==n?NaN:t<n?-1:t>n?
               function edgeClicked(event, edge){
                 let htmlText = "<div>Edge: " + String(edge.id) + "</div>";
                 if(typeof(edge.click) !== "undefined" && edge.click !== ""){
-                  htmlText += '<div id="iGq8lCFjVYeoM2Cf4-details-user-provided">' + edge.click + '</div>';
+                  htmlText += '<div id="ibXiZlAhkaP5pdbuw-details-user-provided">' + edge.click + '</div>';
                 }
                 ui.elements.detailsBody.innerHTML = htmlText;
               }

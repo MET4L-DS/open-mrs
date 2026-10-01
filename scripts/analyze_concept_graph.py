@@ -401,6 +401,8 @@ def patch_gravis_html(html_str):
        does not cause all other nodes to rush or jitter.
     2. Gently reheats (`simulation.alpha(0.03).restart()`) only when the node is actively dragged,
        ensuring only connected links smoothly adapt without heating the entire network.
+    3. On release (dragended), frees the fixed coordinates (d.fx = null, d.fy = null) and allows
+       the node to naturally react to forces and settle into equilibrium.
     """
     # Disable reheat on dragstarted (mousedown)
     html_str = re.sub(
@@ -412,6 +414,12 @@ def patch_gravis_html(html_str):
     html_str = re.sub(
         r'function dragged\(event, d\)\{\s*d\.fx = event\.x;\s*d\.fy = event\.y;\s*if\(!state\.layoutAlgorithmActive\)\{',
         'function dragged(event, d){\n                  d.fx = event.x;\n                  d.fy = event.y;\n                  d.x = event.x;\n                  d.y = event.y;\n                  if(state.layoutAlgorithmActive){ simulation.alpha(0.03).restart(); } else {',
+        html_str,
+    )
+    # On dragended, when node is freed, give gentle alpha so it settles with its forces
+    html_str = re.sub(
+        r'd\.fx = null;\s*d\.fy = null;',
+        'd.fx = null;\n                      d.fy = null;\n                      if(state.layoutAlgorithmActive){ simulation.alpha(0.08).restart(); }',
         html_str,
     )
     return html_str
@@ -434,7 +442,7 @@ def export_visualizations(g):
             graph_height=750,
             node_size_factor=1.6,
             node_hover_neighborhood=True,
-            node_drag_fix=True,
+            node_drag_fix=False,
             edge_curvature=0.2,
             use_many_body_force=True,
             many_body_force_strength=-45.0,
@@ -465,7 +473,7 @@ def export_visualizations(g):
         graph_height=850,
         node_size_factor=1.1,
         node_hover_neighborhood=True,
-        node_drag_fix=True,
+        node_drag_fix=False,
         edge_curvature=0.15,
         use_many_body_force=True,
         many_body_force_strength=-35.0,
@@ -480,7 +488,7 @@ def export_visualizations(g):
         use_y_positioning_force=True,
         y_positioning_force_strength=0.015,
         use_collision_force=True,
-        collision_force_radius=16.0,
+        collision_force_radius=40.0,
         collision_force_strength=0.8,
         zoom_factor=0.85,
         show_menu=True,
