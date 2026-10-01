@@ -2,14 +2,25 @@ import subprocess
 import sys
 import uuid
 
+def get_db_container():
+    try:
+        proc = subprocess.run(["docker", "ps", "--filter", "name=db", "--format", "{{.Names}}"], capture_output=True, text=True)
+        for name in proc.stdout.splitlines():
+            name = name.strip()
+            if "db" in name and "backend" not in name:
+                return name
+    except Exception:
+        pass
+    return "openmrs-distro-referenceapplication-db-1"
+
 # Database connection details
-DB_CONTAINER = "openmrs-distro-referenceapplication-db-1"
+DB_CONTAINER = get_db_container()
 DB_USER = "openmrs"
 DB_PASS = "openmrs"
 DB_NAME = "openmrs"
 
 def run_sql(sql_commands):
-    full_cmd = f"docker exec -i {DB_CONTAINER} mariadb -u{DB_USER} -p{DB_PASS} {DB_NAME}"
+    full_cmd = f"docker exec -i {DB_CONTAINER} mariadb --default-character-set=utf8mb4 -u{DB_USER} -p{DB_PASS} {DB_NAME}"
     proc = subprocess.run(
         full_cmd,
         shell=True,

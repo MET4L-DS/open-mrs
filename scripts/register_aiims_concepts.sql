@@ -3463,46 +3463,6 @@ BEGIN
     END IF;
     
 
-    SET @q_id = (SELECT concept_id FROM concept WHERE uuid = 'c0010001-0000-0000-0000-000000000025');
-    SET @a_id = (SELECT concept_id FROM concept WHERE uuid = 'c0010002-0000-0000-0000-000000000203');
-    IF @q_id IS NOT NULL AND @a_id IS NOT NULL THEN
-        IF NOT EXISTS (SELECT 1 FROM concept_answer WHERE concept_id = @q_id AND answer_concept = @a_id) THEN
-            INSERT INTO concept_answer (concept_id, answer_concept, creator, date_created, uuid)
-            VALUES (@q_id, @a_id, 1, NOW(), UUID());
-        END IF;
-    END IF;
-    
-
-    SET @q_id = (SELECT concept_id FROM concept WHERE uuid = 'c0010001-0000-0000-0000-000000000025');
-    SET @a_id = (SELECT concept_id FROM concept WHERE uuid = 'c0010002-0000-0000-0000-000000000204');
-    IF @q_id IS NOT NULL AND @a_id IS NOT NULL THEN
-        IF NOT EXISTS (SELECT 1 FROM concept_answer WHERE concept_id = @q_id AND answer_concept = @a_id) THEN
-            INSERT INTO concept_answer (concept_id, answer_concept, creator, date_created, uuid)
-            VALUES (@q_id, @a_id, 1, NOW(), UUID());
-        END IF;
-    END IF;
-    
-
-    SET @q_id = (SELECT concept_id FROM concept WHERE uuid = 'c0010001-0000-0000-0000-000000000025');
-    SET @a_id = (SELECT concept_id FROM concept WHERE uuid = 'c0010002-0000-0000-0000-000000000207');
-    IF @q_id IS NOT NULL AND @a_id IS NOT NULL THEN
-        IF NOT EXISTS (SELECT 1 FROM concept_answer WHERE concept_id = @q_id AND answer_concept = @a_id) THEN
-            INSERT INTO concept_answer (concept_id, answer_concept, creator, date_created, uuid)
-            VALUES (@q_id, @a_id, 1, NOW(), UUID());
-        END IF;
-    END IF;
-    
-
-    SET @q_id = (SELECT concept_id FROM concept WHERE uuid = 'c0010001-0000-0000-0000-000000000025');
-    SET @a_id = (SELECT concept_id FROM concept WHERE uuid = 'c0010002-0000-0000-0000-000000000208');
-    IF @q_id IS NOT NULL AND @a_id IS NOT NULL THEN
-        IF NOT EXISTS (SELECT 1 FROM concept_answer WHERE concept_id = @q_id AND answer_concept = @a_id) THEN
-            INSERT INTO concept_answer (concept_id, answer_concept, creator, date_created, uuid)
-            VALUES (@q_id, @a_id, 1, NOW(), UUID());
-        END IF;
-    END IF;
-    
-
     SET @q_id = (SELECT concept_id FROM concept WHERE uuid = 'c0010001-0000-0000-0000-000000000027');
     SET @a_id = (SELECT concept_id FROM concept WHERE uuid = 'c0010002-0000-0000-0000-000000000205');
     IF @q_id IS NOT NULL AND @a_id IS NOT NULL THEN
@@ -3515,26 +3475,6 @@ BEGIN
 
     SET @q_id = (SELECT concept_id FROM concept WHERE uuid = 'c0010001-0000-0000-0000-000000000027');
     SET @a_id = (SELECT concept_id FROM concept WHERE uuid = 'c0010002-0000-0000-0000-000000000206');
-    IF @q_id IS NOT NULL AND @a_id IS NOT NULL THEN
-        IF NOT EXISTS (SELECT 1 FROM concept_answer WHERE concept_id = @q_id AND answer_concept = @a_id) THEN
-            INSERT INTO concept_answer (concept_id, answer_concept, creator, date_created, uuid)
-            VALUES (@q_id, @a_id, 1, NOW(), UUID());
-        END IF;
-    END IF;
-    
-
-    SET @q_id = (SELECT concept_id FROM concept WHERE uuid = 'c0010001-0000-0000-0000-000000000027');
-    SET @a_id = (SELECT concept_id FROM concept WHERE uuid = 'c0010002-0000-0000-0000-000000000207');
-    IF @q_id IS NOT NULL AND @a_id IS NOT NULL THEN
-        IF NOT EXISTS (SELECT 1 FROM concept_answer WHERE concept_id = @q_id AND answer_concept = @a_id) THEN
-            INSERT INTO concept_answer (concept_id, answer_concept, creator, date_created, uuid)
-            VALUES (@q_id, @a_id, 1, NOW(), UUID());
-        END IF;
-    END IF;
-    
-
-    SET @q_id = (SELECT concept_id FROM concept WHERE uuid = 'c0010001-0000-0000-0000-000000000027');
-    SET @a_id = (SELECT concept_id FROM concept WHERE uuid = 'c0010002-0000-0000-0000-000000000208');
     IF @q_id IS NOT NULL AND @a_id IS NOT NULL THEN
         IF NOT EXISTS (SELECT 1 FROM concept_answer WHERE concept_id = @q_id AND answer_concept = @a_id) THEN
             INSERT INTO concept_answer (concept_id, answer_concept, creator, date_created, uuid)

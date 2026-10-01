@@ -79,8 +79,20 @@ FORMS_TO_PUBLISH = [
     },
 ]
 
+def get_db_container():
+    try:
+        proc = subprocess.run(["docker", "ps", "--filter", "name=db", "--format", "{{.Names}}"], capture_output=True, text=True)
+        for name in proc.stdout.splitlines():
+            name = name.strip()
+            if "db" in name and "backend" not in name:
+                return name
+    except Exception:
+        pass
+    return "openmrs-distro-referenceapplication-db-1"
+
 def run_sql(sql_commands):
-    full_cmd = "docker exec -i openmrs-distro-referenceapplication-db-1 mariadb --default-character-set=utf8mb4 -uopenmrs -popenmrs openmrs"
+    db_container = get_db_container()
+    full_cmd = f"docker exec -i {db_container} mariadb --default-character-set=utf8mb4 -uopenmrs -popenmrs openmrs"
     proc = subprocess.run(
         full_cmd,
         shell=True,

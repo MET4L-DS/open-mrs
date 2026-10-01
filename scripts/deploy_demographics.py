@@ -9,7 +9,18 @@ import re
 import subprocess
 import sys
 
-CONTAINER_NAME = "openmrs-distro-referenceapplication-frontend-1"
+def get_frontend_container():
+    try:
+        proc = subprocess.run(["docker", "ps", "--filter", "name=frontend", "--format", "{{.Names}}"], capture_output=True, text=True)
+        for name in proc.stdout.splitlines():
+            name = name.strip()
+            if "frontend" in name and "gateway" not in name:
+                return name
+    except Exception:
+        pass
+    return "openmrs-distro-referenceapplication-frontend-1"
+
+CONTAINER_NAME = get_frontend_container()
 MODULE_DIST = os.path.abspath(
     os.path.join(os.path.dirname(__file__), "..", "aiims-esm-demographics-app", "dist")
 )

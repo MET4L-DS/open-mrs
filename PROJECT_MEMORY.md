@@ -26,7 +26,8 @@ This file serves as the persistent project-level memory and source of truth acro
 - **REST API**: `http://localhost/openmrs/ws/rest/v1`
 - **FHIR R4 API**: `http://localhost/openmrs/ws/fhir2/R4`
 - **Credentials**: `admin` / `Admin123`
-- **Helper Script**: `.\openmrs.ps1 {start|stop|down|status|logs|open}`
+- **Helper Script**: `.\openmrs.ps1 {setup|start|stop|down|status|logs|open}` (run `setup` for complete 1-click bootstrap on a fresh system)
+- **Bootstrap Script**: `python scripts/setup_environment.py` (automates docker startup, health checks, DB concept registration, form publishing, and frontend hot-deploy)
 
 ---
 

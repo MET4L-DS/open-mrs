@@ -15,7 +15,7 @@
 
 param (
     [Parameter(Position=0)]
-    [ValidateSet("start", "stop", "restart", "status", "logs", "open", "pull", "down")]
+    [ValidateSet("start", "stop", "restart", "status", "logs", "open", "pull", "down", "setup")]
     [string]$Action = "status",
 
     [Parameter(Position=1)]
@@ -89,5 +89,10 @@ switch ($Action) {
     "open" {
         Write-Host "Opening OpenMRS 3.x in browser: http://localhost/openmrs/spa" -ForegroundColor Green
         Start-Process "http://localhost/openmrs/spa"
+    }
+    "setup" {
+        Write-Host "Running OpenMRS AIIMS Complete Environment Setup..." -ForegroundColor Cyan
+        $SetupScript = Join-Path $PSScriptRoot "scripts\setup_environment.py"
+        python $SetupScript
     }
 }
