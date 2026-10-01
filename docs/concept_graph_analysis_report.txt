@@ -4,9 +4,9 @@
 
 [1] GRAPH TOPOLOGY SUMMARY
   • Total Vertices: 219 (Forms: 10, Questions: 90, Answers: 119)
-  • Total Edges:    336
-    - Form Contains Edges:     85
-    - Question Answers Edges:  205
+  • Total Edges:    285
+    - Form Contains Edges:     40
+    - Question Answers Edges:  199
     - Skip-Logic Branch Edges: 46
 
 [2] SKIP-LOGIC INTEGRITY & CYCLE DETECTION

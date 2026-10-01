@@ -216,6 +216,19 @@ def build_graph(concepts_dict, form_files):
 
         known_qids = set(q_id_to_concept.keys())
 
+        # Collect question concepts that are targets of skip logic in this form
+        skip_target_concepts = set()
+        for q in questions:
+            hide_obj = q.get("hide", {})
+            hide_expr = hide_obj.get("hideWhenExpression") if isinstance(hide_obj, dict) else None
+            if hide_expr:
+                deps = extract_dependencies_from_expr(hide_expr, known_qids)
+                for dep_qid in deps:
+                    parent_concept_uuid = q_id_to_concept.get(dep_qid)
+                    target_concept_uuid = q_id_to_concept.get(q.get("id"))
+                    if parent_concept_uuid and target_concept_uuid and parent_concept_uuid != target_concept_uuid:
+                        skip_target_concepts.add(target_concept_uuid)
+
         # Second pass: build edges
         for q in questions:
             qid = q.get("id")
@@ -241,14 +254,15 @@ def build_graph(concepts_dict, form_files):
                 hover=f"[Question] {concept_name} (UUID: {concept_uuid})",
             )
 
-            # Edge: Form -> Contains -> Question
-            add_unique_edge(
-                form_idx,
-                q_idx,
-                edge_type="CONTAINS",
-                color="#bdbdbd",
-                hover=f"Form '{form_title}' contains '{concept_name}'"
-            )
+            # Edge: Form -> Contains -> Question (only for top-level root questions)
+            if concept_uuid not in skip_target_concepts:
+                add_unique_edge(
+                    form_idx,
+                    q_idx,
+                    edge_type="CONTAINS",
+                    color="#bdbdbd",
+                    hover=f"Form '{form_title}' contains '{concept_name}'"
+                )
 
             # Edge: Question -> Has Answer
             for ans in qopt.get("answers", []):
@@ -426,7 +440,7 @@ def patch_gravis_html(html_str):
 
 
 def export_visualizations(g):
-    """Exports interactive HTML visualizations using Gravis."""
+    """Exports interactive HTML visualizations using Gravis with organic force-directed layout."""
     if not HAS_GRAVIS:
         return []
 
@@ -457,7 +471,7 @@ def export_visualizations(g):
             use_y_positioning_force=True,
             y_positioning_force_strength=0.015,
             use_collision_force=True,
-            collision_force_radius=22.0,
+            collision_force_radius=40.0,
             collision_force_strength=0.7,
             zoom_factor=0.95,
             show_menu=True,

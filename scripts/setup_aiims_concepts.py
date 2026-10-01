@@ -436,10 +436,6 @@ for u, _ in infertility_answers:
 for ans_uuid in [
     "c0010002-0000-0000-0000-000000000201",  # Regular periods
     "c0010002-0000-0000-0000-000000000202",  # Irregular periods
-    "c0010002-0000-0000-0000-000000000203",  # Oligomenorrhea
-    "c0010002-0000-0000-0000-000000000204",  # Polymenorrhea
-    "c0010002-0000-0000-0000-000000000207",  # Primary Amenorrhoea
-    "c0010002-0000-0000-0000-000000000208",  # Secondary Amenorrhoea
 ]:
     full_script.append(add_answer_sql("c0010001-0000-0000-0000-000000000025", ans_uuid))
 
@@ -447,8 +443,6 @@ for ans_uuid in [
 for ans_uuid in [
     "c0010002-0000-0000-0000-000000000205",  # Normal
     "c0010002-0000-0000-0000-000000000206",  # Hypomenorrhoea
-    "c0010002-0000-0000-0000-000000000207",  # Primary Amenorrhoea
-    "c0010002-0000-0000-0000-000000000208",  # Secondary Amenorrhoea
     "c0010002-0000-0000-0000-000000000209",  # Heavy Menstrual Bleeding (HMB)
     "c0010002-0000-0000-0000-000000000210",  # Amenorrhoea
 ]:
