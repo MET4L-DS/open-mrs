@@ -73,6 +73,27 @@ def add_answer_sql(question_uuid, answer_uuid):
     """
     return sql
 
+def add_snomed_map_sql(c_uuid, snomed_code, term_name=""):
+    safe_name = term_name.replace("'", "''")
+    sql = f"""
+    SET @c_id = (SELECT concept_id FROM concept WHERE uuid = '{c_uuid}');
+    SET @source_id = (SELECT concept_source_id FROM concept_reference_source WHERE name = 'SNOMED CT' LIMIT 1);
+    IF @c_id IS NOT NULL AND @source_id IS NOT NULL THEN
+        SET @term_id = (SELECT concept_reference_term_id FROM concept_reference_term WHERE concept_source_id = @source_id AND code = '{snomed_code}' LIMIT 1);
+        IF @term_id IS NULL THEN
+            INSERT INTO concept_reference_term (concept_source_id, name, code, creator, date_created, retired, uuid)
+            VALUES (@source_id, '{safe_name}', '{snomed_code}', 1, NOW(), 0, UUID());
+            SET @term_id = LAST_INSERT_ID();
+        END IF;
+        IF NOT EXISTS (SELECT 1 FROM concept_reference_map WHERE concept_id = @c_id AND concept_reference_term_id = @term_id) THEN
+            INSERT INTO concept_reference_map (concept_reference_term_id, concept_map_type_id, creator, date_created, concept_id, uuid)
+            VALUES (@term_id, 1, 1, NOW(), @c_id, UUID());
+        END IF;
+    END IF;
+    """
+    return sql
+
+
 # Define all concepts
 education_answers = [
     ("160296AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "Profession or honours"),
@@ -258,6 +279,32 @@ medical_disease_answers = [
     ("c0010002-0000-0000-0000-000000000799", "Other medical disease"),
 ]
 
+tb_site_answers = [
+    # Form 12: Tuberculosis History answers (Group 800)
+    ("c0010002-0000-0000-0000-000000000801", "Tuberculosis of abdomen", "447330002"),
+    ("c0010002-0000-0000-0000-000000000802", "Tuberculosis of bone", "38279006"),
+    ("c0010002-0000-0000-0000-000000000803", "Cervical tuberculous lymphadenitis", "54084005"),
+    ("c0010002-0000-0000-0000-000000000804", "Tuberculosis of eye", "49107007"),
+    ("c0010002-0000-0000-0000-000000000805", "Tuberculosis of female genital organs", "74181004"),
+    ("c0010002-0000-0000-0000-000000000806", "Genital tuberculosis", "281623008"),
+    ("c0010002-0000-0000-0000-000000000807", "Pulmonary tuberculosis", "154283005"),
+    ("c0010002-0000-0000-0000-000000000808", "Tuberculosis of gastrointestinal tract", "240376003"),
+    ("c0010002-0000-0000-0000-000000000809", "Tuberculous abscess", "40486464"),
+    ("c0010002-0000-0000-0000-000000000810", "Other site of tuberculosis", None),
+]
+
+att_duration_answers = [
+    ("c0010002-0000-0000-0000-000000000821", "6 Months"),
+    ("c0010002-0000-0000-0000-000000000822", "9 Months"),
+    ("c0010002-0000-0000-0000-000000000823", "1 Year"),
+    ("c0010002-0000-0000-0000-000000000824", "2 Year"),
+    ("c0010002-0000-0000-0000-000000000825", "3 Year"),
+    ("c0010002-0000-0000-0000-000000000826", "Month"),
+    ("c0010002-0000-0000-0000-000000000827", "Year"),
+    ("c0010002-0000-0000-0000-000000000828", "Other duration"),
+]
+
+
 
 # We assemble the migration script wrapped in a stored procedure for IF/ELSE control flow
 full_script = [
@@ -288,6 +335,13 @@ for u, name in female_factor_answers:
 
 for u, name in medical_disease_answers:
     full_script.append(add_concept_sql(u, name, datatype_id=4, class_id=11))
+
+for u, name, _ in tb_site_answers:
+    full_script.append(add_concept_sql(u, name, datatype_id=4, class_id=11))
+
+for u, name in att_duration_answers:
+    full_script.append(add_concept_sql(u, name, datatype_id=4, class_id=11))
+
 
 # 2. Question concepts
 # Consultant Unit
@@ -475,6 +529,16 @@ family_members_concepts = [
 for q_uuid, q_name, note_uuid, note_name in family_members_concepts:
     full_script.append(add_concept_sql(q_uuid, q_name, datatype_id=2, class_id=7))
     full_script.append(add_concept_sql(note_uuid, note_name, datatype_id=3, class_id=7))
+
+# Tuberculosis History Concepts (Form 12)
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000100", "Tuberculosis Date of Diagnosis", datatype_id=6, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000101", "Site of Tuberculosis", datatype_id=2, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000102", "Other Site of Tuberculosis", datatype_id=3, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000103", "Anti-tubercular Therapy Start Date", datatype_id=6, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000104", "Anti-tubercular Therapy Count", datatype_id=1, class_id=7, is_numeric=True, allow_decimal=0, low_abs=0, hi_abs=50))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000105", "Anti-tubercular Therapy Duration", datatype_id=2, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000106", "Tuberculosis Clinical Notes", datatype_id=3, class_id=7))
+
 
 
 # 3. Link Answers
@@ -743,6 +807,16 @@ for ans_uuid, _ in medical_disease_answers:
 for q_uuid, _, _, _ in family_members_concepts:
     for ans_uuid, _ in medical_disease_answers:
         full_script.append(add_answer_sql(q_uuid, ans_uuid))
+
+# Form 12: Tuberculosis History answers and SNOMED mappings
+for ans_uuid, name, snomed_code in tb_site_answers:
+    full_script.append(add_answer_sql("c0010001-0000-0000-0000-000000000101", ans_uuid))
+    if snomed_code:
+        full_script.append(add_snomed_map_sql(ans_uuid, snomed_code, name))
+
+for ans_uuid, _ in att_duration_answers:
+    full_script.append(add_answer_sql("c0010001-0000-0000-0000-000000000105", ans_uuid))
+
 
 full_script.append("END$$")
 full_script.append("DELIMITER ;")

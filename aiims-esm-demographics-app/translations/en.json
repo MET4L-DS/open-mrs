@@ -169,7 +169,7 @@
   "noPastMedicalHistoryBody": "Past medical conditions, chronic illnesses, and medical disease history have not been recorded for this patient yet.",
   "recordPastMedicalHistory": "Record Past Medical History",
   "updatePastMedicalHistory": "Update Past Medical History",
-  "aiimsFamilyHistoryTitle": "Family History",
+  "aiimsFamilyHistoryTitle": "Past Medical History - Family",
   "familyHistoryCardTitle": "Family History & Conditions",
   "loadingFamilyHistory": "Loading Family History details...",
   "noRecordedFamilyHistoryEncounter": "No AIIMS Family History encounter recorded yet",
@@ -183,7 +183,20 @@
   "familyMemberBrother": "Brother",
   "familyMemberMaternalGrandmother": "Maternal Grandmother",
   "familyMemberMaternalGrandfather": "Maternal Grandfather",
-  "notesPrefix": "Notes:"
+  "notesPrefix": "Notes:",
+  "aiimsTuberculosisHistoryTitle": "Tuberculosis History",
+  "tuberculosisHistoryCardTitle": "Tuberculosis & Anti-Tubercular Therapy",
+  "tbDateOfDiagnosis": "Tuberculosis Date of Diagnosis",
+  "siteOfTuberculosis": "Site of Tuberculosis",
+  "otherSitePrefix": "Other Site:",
+  "attStartDate": "ATT Start Date",
+  "attCount": "ATT Count",
+  "attDuration": "ATT Duration",
+  "tbClinicalNotes": "Clinical Notes & Regimen",
+  "loadingTuberculosisHistory": "Loading Tuberculosis History details...",
+  "noRecordedTuberculosisHistoryEncounter": "No AIIMS Tuberculosis History encounter recorded yet",
+  "noTuberculosisHistoryHeader": "No Tuberculosis History Recorded Yet",
+  "noTuberculosisHistoryBody": "Tuberculosis diagnosis, sites of infection, and anti-tubercular therapy (ATT) details have not been recorded for this patient yet.",
+  "recordTuberculosisHistory": "Record Tuberculosis History",
+  "updateTuberculosisHistory": "Update Tuberculosis History"
 }
-
-

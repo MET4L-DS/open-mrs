@@ -30,7 +30,52 @@ if (typeof window !== 'undefined') {
       return originalError.apply(console, args);
     };
   }
+
+  // Diagnostic pipeline logger for form submissions (POST /encounter)
+  if (!(window as any).__aiims_fetch_logger_installed) {
+
+    (window as any).__aiims_fetch_logger_installed = true;
+    const originalFetch = window.fetch;
+    window.fetch = async function (input: RequestInfo | URL, init?: RequestInit) {
+      const url = typeof input === 'string' ? input : input instanceof Request ? input.url : input.toString();
+      const method = (init?.method || (input instanceof Request ? input.method : 'GET')).toUpperCase();
+      const isEncounterPost = method === 'POST' && url.includes('/encounter');
+
+      if (isEncounterPost) {
+        let parsedBody: unknown = undefined;
+        try {
+          if (init?.body && typeof init.body === 'string') {
+            parsedBody = JSON.parse(init.body);
+          }
+        } catch {
+          parsedBody = init?.body;
+        }
+
+        console.log(`[AIIMS Pipeline] Submitting encounter: ${method} ${url}`, {
+          payload: parsedBody,
+          timestamp: new Date().toISOString(),
+        });
+
+        const startTime = performance.now();
+        try {
+          const response = await originalFetch.apply(this, [input, init]);
+          const duration = Math.round(performance.now() - startTime);
+          console.log(`[AIIMS Pipeline] Encounter submission responded: HTTP ${response.status} (${duration}ms)`, {
+            ok: response.ok,
+            url,
+          });
+          return response;
+        } catch (err) {
+          const duration = Math.round(performance.now() - startTime);
+          console.error(`[AIIMS Pipeline] Encounter submission failed (${duration}ms):`, err);
+          throw err;
+        }
+      }
+      return originalFetch.apply(this, [input, init]);
+    };
+  }
 }
+
 
 
 /**
@@ -154,6 +199,14 @@ const familyHistoryExtensions = createFormExtensions(
 export const aiimsFamilyHistoryDashboardLink = familyHistoryExtensions.link;
 export const aiimsFamilyHistoryDashboard = familyHistoryExtensions.dashboard;
 
+const tuberculosisHistoryExtensions = createFormExtensions(
+  getFormRegistryEntry('tuberculosis-history'),
+  () => import('./tuberculosis-history/tuberculosis-history-dashboard.component')
+);
+
+export const aiimsTuberculosisHistoryDashboardLink = tuberculosisHistoryExtensions.link;
+export const aiimsTuberculosisHistoryDashboard = tuberculosisHistoryExtensions.dashboard;
+
 export { FORM_REGISTRY, getFormRegistryEntry, getFormUuid, getFormName } from './constants';
 export * from './shared';
 export * from './infertility-type';
@@ -166,6 +219,8 @@ export * from './previous-oi-iui';
 export * from './previous-surgery';
 export * from './past-medical-history';
 export * from './family-history';
+export * from './tuberculosis-history';
+
 
 
 

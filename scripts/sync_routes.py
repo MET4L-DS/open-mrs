@@ -80,6 +80,15 @@ def generate_routes(entries):
         }
         extensions.append(link_ext)
         extensions.append(dash_ext)
+        if key == 'demographics':
+            extensions.append({
+                "name": "aiims-demographics-summary-widget",
+                "component": "aiimsDemographicsSummaryWidget",
+                "slot": "patient-info-slot",
+                "online": True,
+                "offline": True,
+            })
+
 
     return {
         "$schema": "https://json.openmrs.org/routes.schema.json",

@@ -1,0 +1,191 @@
+{
+  "name": "AIIMS Visit: Tuberculosis History",
+  "description": "AIIMS Department of Reproductive Medicine & IVF - Tuberculosis History Sheet",
+  "version": "1.0",
+  "published": true,
+  "retired": false,
+  "encounter": "Consultation",
+  "processor": "EncounterFormProcessor",
+  "referencedForms": [],
+  "pages": [
+    {
+      "label": "Tuberculosis History",
+      "sections": [
+        {
+          "label": "Tuberculosis Diagnosis & Sites",
+          "isExpanded": true,
+          "questions": [
+            {
+              "label": "Tuberculosis Date of Diagnosis",
+              "type": "obs",
+              "id": "tb_date_of_diagnosis",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "date",
+                "concept": "c0010001-0000-0000-0000-000000000100"
+              }
+            },
+            {
+              "label": "Site of Tuberculosis",
+              "type": "obs",
+              "id": "site_of_tb",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "checkbox",
+                "concept": "c0010001-0000-0000-0000-000000000101",
+                "answers": [
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000801",
+                    "label": "Tuberculosis of abdomen"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000802",
+                    "label": "Tuberculosis of bone"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000803",
+                    "label": "Cervical tuberculous lymphadenitis"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000804",
+                    "label": "Tuberculosis of eye"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000805",
+                    "label": "Tuberculosis of female genital organs"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000806",
+                    "label": "Genital tuberculosis"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000807",
+                    "label": "Pulmonary tuberculosis"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000808",
+                    "label": "Tuberculosis of gastrointestinal tract"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000809",
+                    "label": "Tuberculous abscess"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000810",
+                    "label": "Other site of tuberculosis"
+                  }
+                ]
+              }
+            },
+            {
+              "label": "Other Site of Tuberculosis / Clinical Notes",
+              "type": "obs",
+              "id": "site_of_tb_other",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "textarea",
+                "concept": "c0010001-0000-0000-0000-000000000102",
+                "rows": 3,
+                "placeholder": "Specify other site(s) of tuberculosis..."
+              },
+              "hide": {
+                "hideWhenExpression": "!site_of_tb || !site_of_tb.includes('c0010002-0000-0000-0000-000000000810')"
+              }
+            }
+          ]
+        },
+        {
+          "label": "Anti-Tubercular Therapy (ATT)",
+          "isExpanded": true,
+          "questions": [
+            {
+              "label": "Anti-tubercular therapy (Start date)",
+              "type": "obs",
+              "id": "att_start_date",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "date",
+                "concept": "c0010001-0000-0000-0000-000000000103"
+              }
+            },
+            {
+              "label": "Anti-tubercular therapy (Count)",
+              "type": "obs",
+              "id": "att_count",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "number",
+                "concept": "c0010001-0000-0000-0000-000000000104",
+                "min": "0",
+                "max": "50"
+              },
+              "validators": [
+                {
+                  "type": "js_expression",
+                  "failsWhenExpression": "myValue < 0 || myValue > 50",
+                  "message": "ATT Count must be between 0 and 50."
+                }
+              ]
+            },
+            {
+              "label": "Anti-tubercular therapy (Duration)",
+              "type": "obs",
+              "id": "att_duration",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "c0010001-0000-0000-0000-000000000105",
+                "answers": [
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000821",
+                    "label": "6 Months"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000822",
+                    "label": "9 Months"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000823",
+                    "label": "1 Year"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000824",
+                    "label": "2 Year"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000825",
+                    "label": "3 Year"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000826",
+                    "label": "Month"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000827",
+                    "label": "Year"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000828",
+                    "label": "Other duration"
+                  }
+                ]
+              }
+            },
+            {
+              "label": "Tuberculosis & ATT Clinical Notes",
+              "type": "obs",
+              "id": "tb_clinical_notes",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "textarea",
+                "concept": "c0010001-0000-0000-0000-000000000106",
+                "rows": 3,
+                "placeholder": "Enter any additional clinical notes, treatment regimen details, drug resistance, or remarks..."
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

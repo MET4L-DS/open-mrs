@@ -92,7 +92,22 @@ export function useFormEncounter(
     });
   }, [allEncounters, formUuid, encounterTypeUuid]);
 
-  const latestEncounter = formEncounters.length > 0 ? formEncounters[0] : null;
+  const latestEncounter = useMemo(() => {
+    const enc = formEncounters.length > 0 ? formEncounters[0] : null;
+    if (enc) {
+      console.log('[AIIMS Pipeline] Loaded latest encounter:', {
+        formUuid,
+        encounterUuid: enc.uuid,
+        obsCount: enc.obs?.length ?? 0,
+        encounterDatetime: enc.encounterDatetime,
+      });
+    }
+    if (error) {
+      console.error('[AIIMS Pipeline] Error fetching encounters for form:', formUuid, error);
+    }
+    return enc;
+  }, [formEncounters, formUuid, error]);
+
 
   // Build index by concept UUID for fast lookup, sorting obs deterministically by obsDatetime
   // with UUID tie-breaker to avoid race conditions when multiple obs share identical timestamps.

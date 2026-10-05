@@ -53,6 +53,13 @@ export const FormDashboardShell: React.FC<FormDashboardShellProps> = ({
 
   const handleOpenForm = useCallback(
     (targetEncounterUuid?: string) => {
+      console.log('[AIIMS Pipeline] Opening form entry workspace:', {
+        formUuid,
+        formName,
+        targetEncounterUuid,
+        patientUuid,
+        mode: targetEncounterUuid ? 'edit' : 'enter',
+      });
       launchWorkspace2('patient-form-entry-workspace', {
         workspaceTitle: formName,
         form: {
@@ -72,6 +79,7 @@ export const FormDashboardShell: React.FC<FormDashboardShellProps> = ({
     },
     [formUuid, formName, patientUuid, patient]
   );
+
 
   const error = patientError || dataError;
 

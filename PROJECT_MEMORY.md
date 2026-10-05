@@ -230,6 +230,10 @@ python scripts/publish_aiims_form.py
     - Uses identical 35 SNOMED-CT mapped medical disease select options as Past Medical History for each member.
     - Conditional skip logic: selecting "Other medical disease" reveals member-specific notes/textarea.
     - Observation card with `PedestrianFamily` Carbon icon, individual family member rows with teal disease tags and notes.
+12. **Form 12: AIIMS Visit: Tuberculosis History** (`80930653-7e80-4bfd-9e29-ec37c334d88b`)
+    - Path: `aiims-tuberculosis-history`
+    - Tuberculosis diagnosis, site classification (with SNOMED-CT mapped terms for abdomen, bone, cervical lymphadenitis, eye, genital organs, pulmonary, GI tract, tuberculous abscess, and other sites), and anti-tubercular therapy (ATT) start date, count, duration, and clinical notes.
+    - Observation card with `Microscope` Carbon icon, magenta tags for sites, formatted dates, and detailed regimen remarks.
 
 ---
 
@@ -246,8 +250,10 @@ python scripts/publish_aiims_form.py
 - [x] Register Form 9: Previous Surgery (`previous-surgery`).
 - [x] Register Form 10: Past Medical History (`past-medical-history`).
 - [x] Register Form 11: Family History (`family-history`).
-- [ ] Register Form 12: Anthropometry & Clinical Examination.
-- [ ] Register Form 13: Ultrasound & Imaging.
+- [x] Register Form 12: Tuberculosis History (`tuberculosis-history`).
+- [ ] Register Form 13: Anthropometry & Clinical Examination.
+- [ ] Register Form 14: Ultrasound & Imaging.
+
 
 
 

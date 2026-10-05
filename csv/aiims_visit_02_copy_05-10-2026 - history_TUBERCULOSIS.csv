@@ -1,0 +1,10 @@
+Tuberculosis_date_of_diagnosis,Site_of_Tuberculosis,Anti-tubercular_therapy(Start_date),Anti-tubercular_therapy(Count),Anti-tubercular_therapy(Duration),
+,Tuberculosis of abdomen[SNOMED:447330002],,,Year,
+,Tuberculosis of bone[SNOMED:38279006],,,,1 Year
+,Cervical tuberculous lymphadenitis[SNOMED:54084005],,,,2 Year
+,Tuberculosis of eye[SNOMED:49107007],,,,3 Year
+,Tuberculosis of female genital organs[SNOMED:74181004],,,Month,
+,Genital tuberculosis[SNOMED:281623008],,,,6 Months
+,Pulmonary tuberculosis[SNOMED:154283005],,,,9 Months
+,Tuberculosis of gastrointestinal tract[SNOMED:240376003],,,,
+,Tuberculous abscess[SNOMED:40486464],,,,

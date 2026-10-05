@@ -1,5 +1,6 @@
-import { Identification, Events, ParentChild, Calendar, Activity, GenderMale, Scalpel, Medication, Cut, PedestrianFamily } from '@carbon/react/icons';
+import { Identification, Events, ParentChild, Calendar, Activity, GenderMale, Scalpel, Medication, Cut, PedestrianFamily, Microscope } from '@carbon/react/icons';
 import { type FormRegistryEntry } from './shared/types';
+
 
 export const moduleName = '@aiims/esm-demographics-app';
 
@@ -47,7 +48,12 @@ export const AIIMS_PAST_MEDICAL_HISTORY_FORM_NAME = 'AIIMS Visit: Past Medical H
 export const AIIMS_FAMILY_HISTORY_FORM_UUID = '80930653-7e80-4bfd-9e29-ec37c334d88a';
 export const AIIMS_FAMILY_HISTORY_FORM_NAME = 'AIIMS Visit: Family History';
 
+// Form UUID for AIIMS Visit: Tuberculosis History
+export const AIIMS_TUBERCULOSIS_HISTORY_FORM_UUID = '80930653-7e80-4bfd-9e29-ec37c334d88b';
+export const AIIMS_TUBERCULOSIS_HISTORY_FORM_NAME = 'AIIMS Visit: Tuberculosis History';
+
 // Form Registry: Centralized configuration for all current and future AIIMS forms
+
 export const FORM_REGISTRY: FormRegistryEntry[] = [
   {
     key: 'demographics',
@@ -170,8 +176,20 @@ export const FORM_REGISTRY: FormRegistryEntry[] = [
     icon: PedestrianFamily,
     order: 1,
   },
+  {
+    key: 'tuberculosis-history',
+    uuid: AIIMS_TUBERCULOSIS_HISTORY_FORM_UUID,
+    name: AIIMS_TUBERCULOSIS_HISTORY_FORM_NAME,
+    path: 'aiims-tuberculosis-history',
+    titleKey: 'aiimsTuberculosisHistoryTitle',
+    title: 'Tuberculosis History',
+    slot: 'aiims-tuberculosis-history-dashboard-slot',
+    icon: Microscope,
+    order: 1,
+  },
   // Additional forms (anthropometry, clinical history, ultrasound, etc.) will be registered here
 ];
+
 
 // Concept UUIDs matching concept_registry.md and AIIMS form
 export const CONCEPTS = {
@@ -346,7 +364,17 @@ export const CONCEPTS = {
   maternalGrandmotherMedicalDiseasesOthers: 'c0010001-0000-0000-0000-000000000097',
   maternalGrandfatherMedicalDisease: 'c0010001-0000-0000-0000-000000000098',
   maternalGrandfatherMedicalDiseasesOthers: 'c0010001-0000-0000-0000-000000000099',
+
+  // Form 12: Tuberculosis History Concepts
+  tbDateOfDiagnosis: 'c0010001-0000-0000-0000-000000000100',
+  tbSite: 'c0010001-0000-0000-0000-000000000101',
+  tbSiteOther: 'c0010001-0000-0000-0000-000000000102',
+  attStartDate: 'c0010001-0000-0000-0000-000000000103',
+  attCount: 'c0010001-0000-0000-0000-000000000104',
+  attDuration: 'c0010001-0000-0000-0000-000000000105',
+  tbClinicalNotes: 'c0010001-0000-0000-0000-000000000106',
 };
+
 
 // Person Attribute Type UUID for Patient Telephone Number
 export const TELEPHONE_ATTRIBUTE_TYPE_UUID = '14d4f066-15f5-102d-96e4-000c29c2a5d7';

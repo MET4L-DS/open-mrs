@@ -227,6 +227,26 @@
       "slot": "aiims-family-history-dashboard-slot",
       "online": true,
       "offline": true
+    },
+    {
+      "name": "aiims-tuberculosis-history-dashboard-link",
+      "component": "aiimsTuberculosisHistoryDashboardLink",
+      "slot": "patient-chart-dashboard-slot",
+      "order": 1,
+      "meta": {
+        "slot": "aiims-tuberculosis-history-dashboard-slot",
+        "path": "aiims-tuberculosis-history",
+        "title": "Tuberculosis History"
+      },
+      "online": true,
+      "offline": true
+    },
+    {
+      "name": "aiims-tuberculosis-history-dashboard",
+      "component": "aiimsTuberculosisHistoryDashboard",
+      "slot": "aiims-tuberculosis-history-dashboard-slot",
+      "online": true,
+      "offline": true
     }
   ]
 }
