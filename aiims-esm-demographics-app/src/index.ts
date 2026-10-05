@@ -60,10 +60,24 @@ if (typeof window !== 'undefined') {
         try {
           const response = await originalFetch.apply(this, [input, init]);
           const duration = Math.round(performance.now() - startTime);
-          console.log(`[AIIMS Pipeline] Encounter submission responded: HTTP ${response.status} (${duration}ms)`, {
-            ok: response.ok,
-            url,
-          });
+          if (!response.ok) {
+            try {
+              const clone = response.clone();
+              const errBody = await clone.json();
+              console.error(`[AIIMS Pipeline] Encounter submission failed (HTTP ${response.status}):`, errBody);
+            } catch {
+              try {
+                const clone = response.clone();
+                const errText = await clone.text();
+                console.error(`[AIIMS Pipeline] Encounter submission failed (HTTP ${response.status}):`, errText);
+              } catch {}
+            }
+          } else {
+            console.log(`[AIIMS Pipeline] Encounter submission responded: HTTP ${response.status} (${duration}ms)`, {
+              ok: response.ok,
+              url,
+            });
+          }
           return response;
         } catch (err) {
           const duration = Math.round(performance.now() - startTime);
@@ -207,6 +221,14 @@ const tuberculosisHistoryExtensions = createFormExtensions(
 export const aiimsTuberculosisHistoryDashboardLink = tuberculosisHistoryExtensions.link;
 export const aiimsTuberculosisHistoryDashboard = tuberculosisHistoryExtensions.dashboard;
 
+const investigationUltrasoundExtensions = createFormExtensions(
+  getFormRegistryEntry('investigation-ultrasound'),
+  () => import('./investigation-ultrasound/investigation-ultrasound-dashboard.component')
+);
+
+export const aiimsInvestigationUltrasoundDashboardLink = investigationUltrasoundExtensions.link;
+export const aiimsInvestigationUltrasoundDashboard = investigationUltrasoundExtensions.dashboard;
+
 export { FORM_REGISTRY, getFormRegistryEntry, getFormUuid, getFormName } from './constants';
 export * from './shared';
 export * from './infertility-type';
@@ -220,6 +242,7 @@ export * from './previous-surgery';
 export * from './past-medical-history';
 export * from './family-history';
 export * from './tuberculosis-history';
+export * from './investigation-ultrasound';
 
 
 

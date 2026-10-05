@@ -247,6 +247,26 @@
       "slot": "aiims-tuberculosis-history-dashboard-slot",
       "online": true,
       "offline": true
+    },
+    {
+      "name": "aiims-investigation-ultrasound-dashboard-link",
+      "component": "aiimsInvestigationUltrasoundDashboardLink",
+      "slot": "patient-chart-dashboard-slot",
+      "order": 1,
+      "meta": {
+        "slot": "aiims-investigation-ultrasound-dashboard-slot",
+        "path": "aiims-investigation-ultrasound",
+        "title": "Investigation Ultrasound"
+      },
+      "online": true,
+      "offline": true
+    },
+    {
+      "name": "aiims-investigation-ultrasound-dashboard",
+      "component": "aiimsInvestigationUltrasoundDashboard",
+      "slot": "aiims-investigation-ultrasound-dashboard-slot",
+      "online": true,
+      "offline": true
     }
   ]
 }

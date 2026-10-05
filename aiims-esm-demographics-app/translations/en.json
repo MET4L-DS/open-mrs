@@ -198,5 +198,19 @@
   "noTuberculosisHistoryHeader": "No Tuberculosis History Recorded Yet",
   "noTuberculosisHistoryBody": "Tuberculosis diagnosis, sites of infection, and anti-tubercular therapy (ATT) details have not been recorded for this patient yet.",
   "recordTuberculosisHistory": "Record Tuberculosis History",
-  "updateTuberculosisHistory": "Update Tuberculosis History"
+  "updateTuberculosisHistory": "Update Tuberculosis History",
+  "aiimsInvestigationUltrasoundTitle": "Investigation Ultrasound",
+  "ultrasoundAssessmentTitle": "Ultrasound Assessment",
+  "totalAntralFollicleCount": "Total Antral Follicle Count",
+  "volumeRightOvary": "Volume Right Ovary",
+  "volumeLeftOvary": "Volume Left Ovary",
+  "ultrasoundRemarks": "Ultrasound Remarks / Notes",
+  "cubicCentimeters": "cm³",
+  "follicles": "follicles",
+  "loadingInvestigationUltrasound": "Loading Investigation Ultrasound details...",
+  "noRecordedInvestigationUltrasoundEncounter": "No AIIMS Investigation Ultrasound encounter recorded yet",
+  "noInvestigationUltrasoundHeader": "No Investigation Ultrasound Recorded Yet",
+  "noInvestigationUltrasoundBody": "Total antral follicle count and ovary volumes have not been recorded for this patient yet.",
+  "recordInvestigationUltrasound": "Record Investigation Ultrasound",
+  "updateInvestigationUltrasound": "Update Investigation Ultrasound"
 }

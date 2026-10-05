@@ -539,7 +539,11 @@ full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000104", "Anti
 full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000105", "Anti-tubercular Therapy Duration", datatype_id=2, class_id=7))
 full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000106", "Tuberculosis Clinical Notes", datatype_id=3, class_id=7))
 
-
+# Investigation Ultrasound Concepts (Form 13)
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000107", "Total Antral Follicle Count", datatype_id=1, class_id=7, is_numeric=True, allow_decimal=0, low_abs=0, hi_abs=150))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000108", "Volume Right Ovary", datatype_id=1, class_id=7, is_numeric=True, units="cm3", allow_decimal=2, low_abs=0, hi_abs=200))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000109", "Volume Left Ovary", datatype_id=1, class_id=7, is_numeric=True, units="cm3", allow_decimal=2, low_abs=0, hi_abs=200))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000110", "Ultrasound Remarks", datatype_id=3, class_id=7))
 
 # 3. Link Answers
 # Education Wife answers

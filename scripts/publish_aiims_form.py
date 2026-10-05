@@ -101,6 +101,14 @@ FORMS_TO_PUBLISH = [
         "uuid": "80930653-7e80-4bfd-9e29-ec37c334d88b",
         "encounter_type": "dd528487-82a5-4082-9c72-ed246bd49591",  # Consultation
     },
+    {
+        "name": "AIIMS Visit: Investigation Ultrasound",
+        "version": "1.0",
+        "description": "AIIMS Reproductive Medicine & IVF Investigation Ultrasound Sheet",
+        "schema_path": "forms/aiims_investigation_ultrasound.json",
+        "uuid": "80930653-7e80-4bfd-9e29-ec37c334d88c",
+        "encounter_type": "dd528487-82a5-4082-9c72-ed246bd49591",  # Consultation
+    },
 ]
 
 def get_db_container():

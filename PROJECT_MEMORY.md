@@ -251,8 +251,9 @@ python scripts/publish_aiims_form.py
 - [x] Register Form 10: Past Medical History (`past-medical-history`).
 - [x] Register Form 11: Family History (`family-history`).
 - [x] Register Form 12: Tuberculosis History (`tuberculosis-history`).
-- [ ] Register Form 13: Anthropometry & Clinical Examination.
-- [ ] Register Form 14: Ultrasound & Imaging.
+- [x] Register Form 13: Investigation Ultrasound (`investigation-ultrasound`).
+- [ ] Register Form 14: Anthropometry & Clinical Examination.
+- [ ] Register Form 15: Additional Lab & Imaging Investigations.
 
 
 

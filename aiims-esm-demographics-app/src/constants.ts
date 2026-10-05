@@ -1,4 +1,4 @@
-import { Identification, Events, ParentChild, Calendar, Activity, GenderMale, Scalpel, Medication, Cut, PedestrianFamily, Microscope } from '@carbon/react/icons';
+import { Identification, Events, ParentChild, Calendar, Activity, GenderMale, Scalpel, Medication, Cut, PedestrianFamily, Microscope, Waveform } from '@carbon/react/icons';
 import { type FormRegistryEntry } from './shared/types';
 
 
@@ -51,6 +51,10 @@ export const AIIMS_FAMILY_HISTORY_FORM_NAME = 'AIIMS Visit: Family History';
 // Form UUID for AIIMS Visit: Tuberculosis History
 export const AIIMS_TUBERCULOSIS_HISTORY_FORM_UUID = '80930653-7e80-4bfd-9e29-ec37c334d88b';
 export const AIIMS_TUBERCULOSIS_HISTORY_FORM_NAME = 'AIIMS Visit: Tuberculosis History';
+
+// Form UUID for AIIMS Visit: Investigation Ultrasound
+export const AIIMS_INVESTIGATION_ULTRASOUND_FORM_UUID = '80930653-7e80-4bfd-9e29-ec37c334d88c';
+export const AIIMS_INVESTIGATION_ULTRASOUND_FORM_NAME = 'AIIMS Visit: Investigation Ultrasound';
 
 // Form Registry: Centralized configuration for all current and future AIIMS forms
 
@@ -187,7 +191,18 @@ export const FORM_REGISTRY: FormRegistryEntry[] = [
     icon: Microscope,
     order: 1,
   },
-  // Additional forms (anthropometry, clinical history, ultrasound, etc.) will be registered here
+  {
+    key: 'investigation-ultrasound',
+    uuid: AIIMS_INVESTIGATION_ULTRASOUND_FORM_UUID,
+    name: AIIMS_INVESTIGATION_ULTRASOUND_FORM_NAME,
+    path: 'aiims-investigation-ultrasound',
+    titleKey: 'aiimsInvestigationUltrasoundTitle',
+    title: 'Investigation Ultrasound',
+    slot: 'aiims-investigation-ultrasound-dashboard-slot',
+    icon: Waveform,
+    order: 1,
+  },
+  // Additional forms (anthropometry, clinical history, semen analysis, etc.) will be registered here
 ];
 
 
@@ -373,6 +388,12 @@ export const CONCEPTS = {
   attCount: 'c0010001-0000-0000-0000-000000000104',
   attDuration: 'c0010001-0000-0000-0000-000000000105',
   tbClinicalNotes: 'c0010001-0000-0000-0000-000000000106',
+
+  // Form 13: Investigation Ultrasound Concepts
+  totalAntralFollicleCount: 'c0010001-0000-0000-0000-000000000107',
+  volumeRightOvary: 'c0010001-0000-0000-0000-000000000108',
+  volumeLeftOvary: 'c0010001-0000-0000-0000-000000000109',
+  ultrasoundRemarks: 'c0010001-0000-0000-0000-000000000110',
 };
 
 
