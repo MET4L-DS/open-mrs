@@ -21,7 +21,26 @@ export default function DemographicsSummaryWidget({
     patientUuid: contextPatientUuid,
     isLoading: isPatientLoading,
   } = usePatient(propPatientUuid);
-  const patientUuid = propPatientUuid || contextPatientUuid;
+
+  const spaBase = typeof window !== 'undefined' && window.spaBase ? window.spaBase : '/openmrs/spa';
+
+  const urlPatientUuid = React.useMemo(() => {
+    if (typeof window === 'undefined') return '';
+    const match = window.location.pathname.match(/\/patient\/([a-zA-Z0-9\-]+)\/chart/);
+    return match ? match[1] : '';
+  }, []);
+
+  const patientUuid = propPatientUuid || contextPatientUuid || urlPatientUuid;
+
+  const chartBasePath = basePath || (patientUuid ? `${spaBase}/patient/${patientUuid}/chart` : '');
+  const targetUrl = chartBasePath ? `${chartBasePath}/aiims-demographics` : '#';
+
+  const navigateToFullDemographics = (e: React.MouseEvent) => {
+    e.preventDefault();
+    if (targetUrl && targetUrl !== '#') {
+      navigate({ to: targetUrl });
+    }
+  };
 
   const {
     demographics,
@@ -36,12 +55,6 @@ export default function DemographicsSummaryWidget({
     );
   }
 
-  const navigateToFullDemographics = (e: React.MouseEvent) => {
-    e.preventDefault();
-    const targetUrl = basePath ? `${basePath}/aiims-demographics` : 'aiims-demographics';
-    navigate({ to: targetUrl });
-  };
-
   if (!demographics.hasData) {
     return (
       <div className={styles.summaryContainer}>
@@ -54,7 +67,7 @@ export default function DemographicsSummaryWidget({
           </span>
         </div>
         <a
-          href="#aiims-demographics"
+          href={targetUrl}
           onClick={navigateToFullDemographics}
           className={styles.viewLink}
         >
@@ -123,7 +136,7 @@ export default function DemographicsSummaryWidget({
         </React.Fragment>
       ))}
       <a
-        href="#aiims-demographics"
+        href={targetUrl}
         onClick={navigateToFullDemographics}
         className={styles.viewLink}
       >
