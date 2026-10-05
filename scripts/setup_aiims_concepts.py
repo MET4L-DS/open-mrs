@@ -457,7 +457,7 @@ full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000047", "Dose
 # Number of Previous Ovulation Induction
 full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000048", "Number of Previous Ovulation Induction", datatype_id=1, class_id=7, is_numeric=True, allow_decimal=0, low_abs=0, hi_abs=50))
 # Year of Previous Ovulation Induction
-full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000049", "Year of Previous Ovulation Induction", datatype_id=1, class_id=7, is_numeric=True, allow_decimal=0, low_abs=1970, hi_abs=2100))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000049", "Year of Previous Ovulation Induction", datatype_id=1, class_id=7, is_numeric=True, allow_decimal=0))
 
 # Previous OI and IUI (Yes/No)
 full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000050", "Previous OI and IUI", datatype_id=2, class_id=7))
@@ -468,7 +468,7 @@ full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000052", "Dose
 # Number of Previous OI and IUI
 full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000053", "Number of Previous OI and IUI", datatype_id=1, class_id=7, is_numeric=True, allow_decimal=0, low_abs=0, hi_abs=50))
 # Year of Previous OI and IUI
-full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000054", "Year of Previous OI and IUI", datatype_id=1, class_id=7, is_numeric=True, allow_decimal=0, low_abs=1970, hi_abs=2100))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000054", "Year of Previous OI and IUI", datatype_id=1, class_id=7, is_numeric=True, allow_decimal=0))
 
 # Failed In vitro fertilization (Yes/No)
 full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000055", "Failed In vitro fertilization", datatype_id=2, class_id=7))

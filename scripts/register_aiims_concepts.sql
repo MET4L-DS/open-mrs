@@ -3282,7 +3282,7 @@ BEGIN
         INSERT INTO concept_name (concept_id, name, locale, locale_preferred, creator, date_created, concept_name_type, voided, uuid)
         VALUES (@new_id, 'Year of Previous Ovulation Induction', 'en', 1, 1, NOW(), 'FULLY_SPECIFIED', 0, UUID());
         
-        INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@new_id, NULL, 0, 1970, 2100);
+        INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@new_id, NULL, 0, NULL, NULL);
     ELSE
         SET @new_id = @existing_id;
     END IF;
@@ -3357,7 +3357,7 @@ BEGIN
         INSERT INTO concept_name (concept_id, name, locale, locale_preferred, creator, date_created, concept_name_type, voided, uuid)
         VALUES (@new_id, 'Year of Previous OI and IUI', 'en', 1, 1, NOW(), 'FULLY_SPECIFIED', 0, UUID());
         
-        INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@new_id, NULL, 0, 1970, 2100);
+        INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@new_id, NULL, 0, NULL, NULL);
     ELSE
         SET @new_id = @existing_id;
     END IF;

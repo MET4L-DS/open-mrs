@@ -91,9 +91,7 @@
               "required": "false",
               "questionOptions": {
                 "rendering": "number",
-                "concept": "c0010001-0000-0000-0000-000000000048",
-                "min": "0",
-                "max": "50"
+                "concept": "c0010001-0000-0000-0000-000000000048"
               },
               "hide": {
                 "hideWhenExpression": "!prev_oi || prev_oi !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
@@ -101,7 +99,7 @@
               "validators": [
                 {
                   "type": "js_expression",
-                  "failsWhenExpression": "myValue < 0 || myValue > 50",
+                  "failsWhenExpression": "myValue !== undefined && myValue !== null && myValue !== '' && (Number(myValue) < 0 || Number(myValue) > 50)",
                   "message": "Number of cycles must be between 0 and 50."
                 }
               ]
@@ -113,9 +111,7 @@
               "required": "false",
               "questionOptions": {
                 "rendering": "number",
-                "concept": "c0010001-0000-0000-0000-000000000049",
-                "min": "1970",
-                "max": "2100"
+                "concept": "c0010001-0000-0000-0000-000000000049"
               },
               "hide": {
                 "hideWhenExpression": "!prev_oi || prev_oi !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
@@ -123,7 +119,7 @@
               "validators": [
                 {
                   "type": "js_expression",
-                  "failsWhenExpression": "myValue < 1970 || myValue > 2100",
+                  "failsWhenExpression": "myValue && myValue != 0 && (Number(myValue) < 1970 || Number(myValue) > 2100)",
                   "message": "Please enter a valid 4-digit year."
                 }
               ]
@@ -206,9 +202,7 @@
               "required": "false",
               "questionOptions": {
                 "rendering": "number",
-                "concept": "c0010001-0000-0000-0000-000000000053",
-                "min": "0",
-                "max": "50"
+                "concept": "c0010001-0000-0000-0000-000000000053"
               },
               "hide": {
                 "hideWhenExpression": "!prev_oi_iui || prev_oi_iui !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
@@ -216,7 +210,7 @@
               "validators": [
                 {
                   "type": "js_expression",
-                  "failsWhenExpression": "myValue < 0 || myValue > 50",
+                  "failsWhenExpression": "myValue !== undefined && myValue !== null && myValue !== '' && (Number(myValue) < 0 || Number(myValue) > 50)",
                   "message": "Number of IUI cycles must be between 0 and 50."
                 }
               ]
@@ -228,9 +222,7 @@
               "required": "false",
               "questionOptions": {
                 "rendering": "number",
-                "concept": "c0010001-0000-0000-0000-000000000054",
-                "min": "1970",
-                "max": "2100"
+                "concept": "c0010001-0000-0000-0000-000000000054"
               },
               "hide": {
                 "hideWhenExpression": "!prev_oi_iui || prev_oi_iui !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
@@ -238,7 +230,7 @@
               "validators": [
                 {
                   "type": "js_expression",
-                  "failsWhenExpression": "myValue < 1970 || myValue > 2100",
+                  "failsWhenExpression": "myValue && myValue != 0 && (Number(myValue) < 1970 || Number(myValue) > 2100)",
                   "message": "Please enter a valid 4-digit year."
                 }
               ]
@@ -276,9 +268,7 @@
               "required": "false",
               "questionOptions": {
                 "rendering": "number",
-                "concept": "c0010001-0000-0000-0000-000000000056",
-                "min": "0",
-                "max": "50"
+                "concept": "c0010001-0000-0000-0000-000000000056"
               },
               "hide": {
                 "hideWhenExpression": "!failed_ivf || failed_ivf !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
@@ -286,7 +276,7 @@
               "validators": [
                 {
                   "type": "js_expression",
-                  "failsWhenExpression": "myValue < 0 || myValue > 50",
+                  "failsWhenExpression": "myValue !== undefined && myValue !== null && myValue !== '' && (Number(myValue) < 0 || Number(myValue) > 50)",
                   "message": "Number of failed IVF cycles must be between 0 and 50."
                 }
               ]

@@ -211,17 +211,16 @@
               "label": "Husband Body Mass Index (BMI)",
               "type": "obs",
               "id": "husband_bmi",
+              "required": "false",
               "questionOptions": {
                 "rendering": "number",
                 "concept": "1342AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                "min": "10.0",
-                "max": "60.0",
                 "placeholder": "kg/m2"
               },
               "validators": [
                 {
                   "type": "js_expression",
-                  "failsWhenExpression": "myValue < 10.0 || myValue > 60.0",
+                  "failsWhenExpression": "myValue && myValue != 0 && (Number(myValue) < 10.0 || Number(myValue) > 60.0)",
                   "message": "BMI must be between 10.0 and 60.0 kg/m2."
                 }
               ]
