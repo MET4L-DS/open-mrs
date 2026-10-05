@@ -146,6 +146,14 @@ const pastMedicalHistoryExtensions = createFormExtensions(
 export const aiimsPastMedicalHistoryDashboardLink = pastMedicalHistoryExtensions.link;
 export const aiimsPastMedicalHistoryDashboard = pastMedicalHistoryExtensions.dashboard;
 
+const familyHistoryExtensions = createFormExtensions(
+  getFormRegistryEntry('family-history'),
+  () => import('./family-history/family-history-dashboard.component')
+);
+
+export const aiimsFamilyHistoryDashboardLink = familyHistoryExtensions.link;
+export const aiimsFamilyHistoryDashboard = familyHistoryExtensions.dashboard;
+
 export { FORM_REGISTRY, getFormRegistryEntry, getFormUuid, getFormName } from './constants';
 export * from './shared';
 export * from './infertility-type';
@@ -157,6 +165,7 @@ export * from './male-hormone-surgery';
 export * from './previous-oi-iui';
 export * from './previous-surgery';
 export * from './past-medical-history';
+export * from './family-history';
 
 
 

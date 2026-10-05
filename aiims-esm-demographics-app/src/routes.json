@@ -207,6 +207,26 @@
       "slot": "aiims-past-medical-history-dashboard-slot",
       "online": true,
       "offline": true
+    },
+    {
+      "name": "aiims-family-history-dashboard-link",
+      "component": "aiimsFamilyHistoryDashboardLink",
+      "slot": "patient-chart-dashboard-slot",
+      "order": 1,
+      "meta": {
+        "slot": "aiims-family-history-dashboard-slot",
+        "path": "aiims-family-history",
+        "title": "Family History"
+      },
+      "online": true,
+      "offline": true
+    },
+    {
+      "name": "aiims-family-history-dashboard",
+      "component": "aiimsFamilyHistoryDashboard",
+      "slot": "aiims-family-history-dashboard-slot",
+      "online": true,
+      "offline": true
     }
   ]
 }

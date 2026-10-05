@@ -224,6 +224,12 @@ python scripts/publish_aiims_form.py
     - Coded medical conditions from SNOMED CT covering 34 conditions (diabetes, hypertension, TB, endometriosis, etc.) plus unlisted/other conditions.
     - Conditional skip logic: selecting "Other medical disease" reveals `medical_diseases_others` notes/free-text.
     - Observation card with Carbon tags and detail row for other conditions.
+11. **Form 11: AIIMS Visit: Family History** (`80930653-7e80-4bfd-9e29-ec37c334d88a`)
+    - Path: `aiims-family-history`
+    - Hereditary and familial condition tracking across 6 distinct family members: Father, Mother, Husband, Brother, Maternal Grandmother, Maternal Grandfather.
+    - Uses identical 35 SNOMED-CT mapped medical disease select options as Past Medical History for each member.
+    - Conditional skip logic: selecting "Other medical disease" reveals member-specific notes/textarea.
+    - Observation card with `PedestrianFamily` Carbon icon, individual family member rows with teal disease tags and notes.
 
 ---
 
@@ -239,8 +245,9 @@ python scripts/publish_aiims_form.py
 - [x] Register Form 8: Previous OI and IUI (`previous-oi-iui`).
 - [x] Register Form 9: Previous Surgery (`previous-surgery`).
 - [x] Register Form 10: Past Medical History (`past-medical-history`).
-- [ ] Register Form 11: Anthropometry & Clinical Examination.
-- [ ] Register Form 12: Ultrasound & Imaging.
+- [x] Register Form 11: Family History (`family-history`).
+- [ ] Register Form 12: Anthropometry & Clinical Examination.
+- [ ] Register Form 13: Ultrasound & Imaging.
 
 
 

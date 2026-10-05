@@ -1,0 +1,1055 @@
+{
+  "name": "AIIMS Visit: Family History",
+  "description": "AIIMS Department of Reproductive Medicine & IVF - Family History Sheet",
+  "version": "1.0",
+  "published": true,
+  "retired": false,
+  "encounter": "Consultation",
+  "processor": "EncounterFormProcessor",
+  "referencedForms": [],
+  "pages": [
+    {
+      "label": "Family History",
+      "sections": [
+        {
+          "label": "Family Member: Father",
+          "isExpanded": true,
+          "questions": [
+            {
+              "label": "Medical Diseases (Father)",
+              "type": "obs",
+              "id": "father_medical_disease",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "checkbox",
+                "concept": "c0010001-0000-0000-0000-000000000088",
+                "answers": [
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000701",
+                    "label": "B-cell lymphoma"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000702",
+                    "label": "Bell's palsy"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000703",
+                    "label": "Intervertebral disc prolapse"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000704",
+                    "label": "Bipolar disorder"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000705",
+                    "label": "Carcinoma of breast"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000706",
+                    "label": "Carcinoma"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000707",
+                    "label": "Cervical tuberculous lymphadenitis"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000708",
+                    "label": "Ventricular septal defect"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000709",
+                    "label": "Ductal carcinoma in situ of breast"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000710",
+                    "label": "Epilepsy"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000711",
+                    "label": "Tuberculosis of female genital organs"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000712",
+                    "label": "TB - (tuberculosis) chemotherapy"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000713",
+                    "label": "Graves' disease"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000714",
+                    "label": "History of tuberculosis drug therapy"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000715",
+                    "label": "Genital tuberculosis"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000716",
+                    "label": "Hyperprolactinemia"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000717",
+                    "label": "Trichobezoar"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000718",
+                    "label": "Ectopic pregnancy"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000719",
+                    "label": "Primary mucinous adenocarcinoma of appendix"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000720",
+                    "label": "Pseudomyxoma peritonei"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000721",
+                    "label": "Hidradenitis suppurativa"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000722",
+                    "label": "Hodgkin's disease"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000723",
+                    "label": "Entire tibia"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000724",
+                    "label": "Hypertensive disorder"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000725",
+                    "label": "Amlodipine"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000726",
+                    "label": "Type 2 diabetes mellitus"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000727",
+                    "label": "Hypothyroidism"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000728",
+                    "label": "Tuberculosis of abdomen"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000729",
+                    "label": "Endometrioma of left ovary"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000730",
+                    "label": "Endometriosis"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000731",
+                    "label": "Vasopressin-related polyuria"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000732",
+                    "label": "Psychiatric"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000733",
+                    "label": "Pulmonary tuberculosis"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000734",
+                    "label": "Systemic lupus erythematosus"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000799",
+                    "label": "Other medical disease"
+                  }
+                ]
+              }
+            },
+            {
+              "label": "Other Medical Diseases / Clinical Notes (Father)",
+              "type": "obs",
+              "id": "father_medical_diseases_others",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "textarea",
+                "concept": "c0010001-0000-0000-0000-000000000089",
+                "rows": 3,
+                "placeholder": "Specify any other medical conditions, diagnoses, or notes for Father..."
+              },
+              "hide": {
+                "hideWhenExpression": "!father_medical_disease || !father_medical_disease.includes('c0010002-0000-0000-0000-000000000799')"
+              }
+            }
+          ]
+        },
+        {
+          "label": "Family Member: Mother",
+          "isExpanded": true,
+          "questions": [
+            {
+              "label": "Medical Diseases (Mother)",
+              "type": "obs",
+              "id": "mother_medical_disease",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "checkbox",
+                "concept": "c0010001-0000-0000-0000-000000000090",
+                "answers": [
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000701",
+                    "label": "B-cell lymphoma"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000702",
+                    "label": "Bell's palsy"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000703",
+                    "label": "Intervertebral disc prolapse"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000704",
+                    "label": "Bipolar disorder"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000705",
+                    "label": "Carcinoma of breast"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000706",
+                    "label": "Carcinoma"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000707",
+                    "label": "Cervical tuberculous lymphadenitis"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000708",
+                    "label": "Ventricular septal defect"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000709",
+                    "label": "Ductal carcinoma in situ of breast"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000710",
+                    "label": "Epilepsy"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000711",
+                    "label": "Tuberculosis of female genital organs"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000712",
+                    "label": "TB - (tuberculosis) chemotherapy"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000713",
+                    "label": "Graves' disease"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000714",
+                    "label": "History of tuberculosis drug therapy"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000715",
+                    "label": "Genital tuberculosis"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000716",
+                    "label": "Hyperprolactinemia"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000717",
+                    "label": "Trichobezoar"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000718",
+                    "label": "Ectopic pregnancy"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000719",
+                    "label": "Primary mucinous adenocarcinoma of appendix"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000720",
+                    "label": "Pseudomyxoma peritonei"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000721",
+                    "label": "Hidradenitis suppurativa"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000722",
+                    "label": "Hodgkin's disease"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000723",
+                    "label": "Entire tibia"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000724",
+                    "label": "Hypertensive disorder"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000725",
+                    "label": "Amlodipine"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000726",
+                    "label": "Type 2 diabetes mellitus"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000727",
+                    "label": "Hypothyroidism"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000728",
+                    "label": "Tuberculosis of abdomen"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000729",
+                    "label": "Endometrioma of left ovary"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000730",
+                    "label": "Endometriosis"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000731",
+                    "label": "Vasopressin-related polyuria"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000732",
+                    "label": "Psychiatric"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000733",
+                    "label": "Pulmonary tuberculosis"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000734",
+                    "label": "Systemic lupus erythematosus"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000799",
+                    "label": "Other medical disease"
+                  }
+                ]
+              }
+            },
+            {
+              "label": "Other Medical Diseases / Clinical Notes (Mother)",
+              "type": "obs",
+              "id": "mother_medical_diseases_others",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "textarea",
+                "concept": "c0010001-0000-0000-0000-000000000091",
+                "rows": 3,
+                "placeholder": "Specify any other medical conditions, diagnoses, or notes for Mother..."
+              },
+              "hide": {
+                "hideWhenExpression": "!mother_medical_disease || !mother_medical_disease.includes('c0010002-0000-0000-0000-000000000799')"
+              }
+            }
+          ]
+        },
+        {
+          "label": "Family Member: Husband",
+          "isExpanded": true,
+          "questions": [
+            {
+              "label": "Medical Diseases (Husband)",
+              "type": "obs",
+              "id": "husband_medical_disease",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "checkbox",
+                "concept": "c0010001-0000-0000-0000-000000000092",
+                "answers": [
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000701",
+                    "label": "B-cell lymphoma"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000702",
+                    "label": "Bell's palsy"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000703",
+                    "label": "Intervertebral disc prolapse"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000704",
+                    "label": "Bipolar disorder"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000705",
+                    "label": "Carcinoma of breast"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000706",
+                    "label": "Carcinoma"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000707",
+                    "label": "Cervical tuberculous lymphadenitis"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000708",
+                    "label": "Ventricular septal defect"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000709",
+                    "label": "Ductal carcinoma in situ of breast"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000710",
+                    "label": "Epilepsy"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000711",
+                    "label": "Tuberculosis of female genital organs"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000712",
+                    "label": "TB - (tuberculosis) chemotherapy"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000713",
+                    "label": "Graves' disease"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000714",
+                    "label": "History of tuberculosis drug therapy"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000715",
+                    "label": "Genital tuberculosis"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000716",
+                    "label": "Hyperprolactinemia"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000717",
+                    "label": "Trichobezoar"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000718",
+                    "label": "Ectopic pregnancy"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000719",
+                    "label": "Primary mucinous adenocarcinoma of appendix"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000720",
+                    "label": "Pseudomyxoma peritonei"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000721",
+                    "label": "Hidradenitis suppurativa"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000722",
+                    "label": "Hodgkin's disease"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000723",
+                    "label": "Entire tibia"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000724",
+                    "label": "Hypertensive disorder"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000725",
+                    "label": "Amlodipine"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000726",
+                    "label": "Type 2 diabetes mellitus"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000727",
+                    "label": "Hypothyroidism"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000728",
+                    "label": "Tuberculosis of abdomen"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000729",
+                    "label": "Endometrioma of left ovary"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000730",
+                    "label": "Endometriosis"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000731",
+                    "label": "Vasopressin-related polyuria"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000732",
+                    "label": "Psychiatric"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000733",
+                    "label": "Pulmonary tuberculosis"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000734",
+                    "label": "Systemic lupus erythematosus"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000799",
+                    "label": "Other medical disease"
+                  }
+                ]
+              }
+            },
+            {
+              "label": "Other Medical Diseases / Clinical Notes (Husband)",
+              "type": "obs",
+              "id": "husband_medical_diseases_others",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "textarea",
+                "concept": "c0010001-0000-0000-0000-000000000093",
+                "rows": 3,
+                "placeholder": "Specify any other medical conditions, diagnoses, or notes for Husband..."
+              },
+              "hide": {
+                "hideWhenExpression": "!husband_medical_disease || !husband_medical_disease.includes('c0010002-0000-0000-0000-000000000799')"
+              }
+            }
+          ]
+        },
+        {
+          "label": "Family Member: Brother",
+          "isExpanded": true,
+          "questions": [
+            {
+              "label": "Medical Diseases (Brother)",
+              "type": "obs",
+              "id": "brother_medical_disease",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "checkbox",
+                "concept": "c0010001-0000-0000-0000-000000000094",
+                "answers": [
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000701",
+                    "label": "B-cell lymphoma"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000702",
+                    "label": "Bell's palsy"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000703",
+                    "label": "Intervertebral disc prolapse"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000704",
+                    "label": "Bipolar disorder"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000705",
+                    "label": "Carcinoma of breast"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000706",
+                    "label": "Carcinoma"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000707",
+                    "label": "Cervical tuberculous lymphadenitis"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000708",
+                    "label": "Ventricular septal defect"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000709",
+                    "label": "Ductal carcinoma in situ of breast"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000710",
+                    "label": "Epilepsy"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000711",
+                    "label": "Tuberculosis of female genital organs"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000712",
+                    "label": "TB - (tuberculosis) chemotherapy"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000713",
+                    "label": "Graves' disease"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000714",
+                    "label": "History of tuberculosis drug therapy"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000715",
+                    "label": "Genital tuberculosis"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000716",
+                    "label": "Hyperprolactinemia"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000717",
+                    "label": "Trichobezoar"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000718",
+                    "label": "Ectopic pregnancy"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000719",
+                    "label": "Primary mucinous adenocarcinoma of appendix"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000720",
+                    "label": "Pseudomyxoma peritonei"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000721",
+                    "label": "Hidradenitis suppurativa"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000722",
+                    "label": "Hodgkin's disease"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000723",
+                    "label": "Entire tibia"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000724",
+                    "label": "Hypertensive disorder"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000725",
+                    "label": "Amlodipine"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000726",
+                    "label": "Type 2 diabetes mellitus"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000727",
+                    "label": "Hypothyroidism"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000728",
+                    "label": "Tuberculosis of abdomen"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000729",
+                    "label": "Endometrioma of left ovary"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000730",
+                    "label": "Endometriosis"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000731",
+                    "label": "Vasopressin-related polyuria"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000732",
+                    "label": "Psychiatric"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000733",
+                    "label": "Pulmonary tuberculosis"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000734",
+                    "label": "Systemic lupus erythematosus"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000799",
+                    "label": "Other medical disease"
+                  }
+                ]
+              }
+            },
+            {
+              "label": "Other Medical Diseases / Clinical Notes (Brother)",
+              "type": "obs",
+              "id": "brother_medical_diseases_others",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "textarea",
+                "concept": "c0010001-0000-0000-0000-000000000095",
+                "rows": 3,
+                "placeholder": "Specify any other medical conditions, diagnoses, or notes for Brother..."
+              },
+              "hide": {
+                "hideWhenExpression": "!brother_medical_disease || !brother_medical_disease.includes('c0010002-0000-0000-0000-000000000799')"
+              }
+            }
+          ]
+        },
+        {
+          "label": "Family Member: Maternal Grandmother",
+          "isExpanded": true,
+          "questions": [
+            {
+              "label": "Medical Diseases (Maternal Grandmother)",
+              "type": "obs",
+              "id": "maternal_grandmother_medical_disease",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "checkbox",
+                "concept": "c0010001-0000-0000-0000-000000000096",
+                "answers": [
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000701",
+                    "label": "B-cell lymphoma"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000702",
+                    "label": "Bell's palsy"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000703",
+                    "label": "Intervertebral disc prolapse"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000704",
+                    "label": "Bipolar disorder"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000705",
+                    "label": "Carcinoma of breast"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000706",
+                    "label": "Carcinoma"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000707",
+                    "label": "Cervical tuberculous lymphadenitis"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000708",
+                    "label": "Ventricular septal defect"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000709",
+                    "label": "Ductal carcinoma in situ of breast"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000710",
+                    "label": "Epilepsy"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000711",
+                    "label": "Tuberculosis of female genital organs"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000712",
+                    "label": "TB - (tuberculosis) chemotherapy"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000713",
+                    "label": "Graves' disease"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000714",
+                    "label": "History of tuberculosis drug therapy"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000715",
+                    "label": "Genital tuberculosis"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000716",
+                    "label": "Hyperprolactinemia"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000717",
+                    "label": "Trichobezoar"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000718",
+                    "label": "Ectopic pregnancy"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000719",
+                    "label": "Primary mucinous adenocarcinoma of appendix"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000720",
+                    "label": "Pseudomyxoma peritonei"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000721",
+                    "label": "Hidradenitis suppurativa"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000722",
+                    "label": "Hodgkin's disease"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000723",
+                    "label": "Entire tibia"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000724",
+                    "label": "Hypertensive disorder"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000725",
+                    "label": "Amlodipine"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000726",
+                    "label": "Type 2 diabetes mellitus"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000727",
+                    "label": "Hypothyroidism"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000728",
+                    "label": "Tuberculosis of abdomen"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000729",
+                    "label": "Endometrioma of left ovary"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000730",
+                    "label": "Endometriosis"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000731",
+                    "label": "Vasopressin-related polyuria"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000732",
+                    "label": "Psychiatric"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000733",
+                    "label": "Pulmonary tuberculosis"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000734",
+                    "label": "Systemic lupus erythematosus"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000799",
+                    "label": "Other medical disease"
+                  }
+                ]
+              }
+            },
+            {
+              "label": "Other Medical Diseases / Clinical Notes (Maternal Grandmother)",
+              "type": "obs",
+              "id": "maternal_grandmother_medical_diseases_others",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "textarea",
+                "concept": "c0010001-0000-0000-0000-000000000097",
+                "rows": 3,
+                "placeholder": "Specify any other medical conditions, diagnoses, or notes for Maternal Grandmother..."
+              },
+              "hide": {
+                "hideWhenExpression": "!maternal_grandmother_medical_disease || !maternal_grandmother_medical_disease.includes('c0010002-0000-0000-0000-000000000799')"
+              }
+            }
+          ]
+        },
+        {
+          "label": "Family Member: Maternal Grandfather",
+          "isExpanded": true,
+          "questions": [
+            {
+              "label": "Medical Diseases (Maternal Grandfather)",
+              "type": "obs",
+              "id": "maternal_grandfather_medical_disease",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "checkbox",
+                "concept": "c0010001-0000-0000-0000-000000000098",
+                "answers": [
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000701",
+                    "label": "B-cell lymphoma"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000702",
+                    "label": "Bell's palsy"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000703",
+                    "label": "Intervertebral disc prolapse"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000704",
+                    "label": "Bipolar disorder"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000705",
+                    "label": "Carcinoma of breast"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000706",
+                    "label": "Carcinoma"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000707",
+                    "label": "Cervical tuberculous lymphadenitis"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000708",
+                    "label": "Ventricular septal defect"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000709",
+                    "label": "Ductal carcinoma in situ of breast"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000710",
+                    "label": "Epilepsy"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000711",
+                    "label": "Tuberculosis of female genital organs"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000712",
+                    "label": "TB - (tuberculosis) chemotherapy"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000713",
+                    "label": "Graves' disease"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000714",
+                    "label": "History of tuberculosis drug therapy"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000715",
+                    "label": "Genital tuberculosis"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000716",
+                    "label": "Hyperprolactinemia"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000717",
+                    "label": "Trichobezoar"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000718",
+                    "label": "Ectopic pregnancy"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000719",
+                    "label": "Primary mucinous adenocarcinoma of appendix"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000720",
+                    "label": "Pseudomyxoma peritonei"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000721",
+                    "label": "Hidradenitis suppurativa"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000722",
+                    "label": "Hodgkin's disease"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000723",
+                    "label": "Entire tibia"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000724",
+                    "label": "Hypertensive disorder"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000725",
+                    "label": "Amlodipine"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000726",
+                    "label": "Type 2 diabetes mellitus"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000727",
+                    "label": "Hypothyroidism"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000728",
+                    "label": "Tuberculosis of abdomen"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000729",
+                    "label": "Endometrioma of left ovary"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000730",
+                    "label": "Endometriosis"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000731",
+                    "label": "Vasopressin-related polyuria"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000732",
+                    "label": "Psychiatric"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000733",
+                    "label": "Pulmonary tuberculosis"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000734",
+                    "label": "Systemic lupus erythematosus"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000799",
+                    "label": "Other medical disease"
+                  }
+                ]
+              }
+            },
+            {
+              "label": "Other Medical Diseases / Clinical Notes (Maternal Grandfather)",
+              "type": "obs",
+              "id": "maternal_grandfather_medical_diseases_others",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "textarea",
+                "concept": "c0010001-0000-0000-0000-000000000099",
+                "rows": 3,
+                "placeholder": "Specify any other medical conditions, diagnoses, or notes for Maternal Grandfather..."
+              },
+              "hide": {
+                "hideWhenExpression": "!maternal_grandfather_medical_disease || !maternal_grandfather_medical_disease.includes('c0010002-0000-0000-0000-000000000799')"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -463,6 +463,19 @@ full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000085", "Prev
 full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000086", "Medical Disease", datatype_id=2, class_id=7))
 full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000087", "Medical Diseases Others", datatype_id=3, class_id=7))
 
+# Family History Concepts (Form 11)
+family_members_concepts = [
+    ("c0010001-0000-0000-0000-000000000088", "Father Medical Disease", "c0010001-0000-0000-0000-000000000089", "Father Medical Diseases Others"),
+    ("c0010001-0000-0000-0000-000000000090", "Mother Medical Disease", "c0010001-0000-0000-0000-000000000091", "Mother Medical Diseases Others"),
+    ("c0010001-0000-0000-0000-000000000092", "Husband Medical Disease", "c0010001-0000-0000-0000-000000000093", "Husband Medical Diseases Others"),
+    ("c0010001-0000-0000-0000-000000000094", "Brother Medical Disease", "c0010001-0000-0000-0000-000000000095", "Brother Medical Diseases Others"),
+    ("c0010001-0000-0000-0000-000000000096", "Maternal Grandmother Medical Disease", "c0010001-0000-0000-0000-000000000097", "Maternal Grandmother Medical Diseases Others"),
+    ("c0010001-0000-0000-0000-000000000098", "Maternal Grandfather Medical Disease", "c0010001-0000-0000-0000-000000000099", "Maternal Grandfather Medical Diseases Others"),
+]
+for q_uuid, q_name, note_uuid, note_name in family_members_concepts:
+    full_script.append(add_concept_sql(q_uuid, q_name, datatype_id=2, class_id=7))
+    full_script.append(add_concept_sql(note_uuid, note_name, datatype_id=3, class_id=7))
+
 
 # 3. Link Answers
 # Education Wife answers
@@ -725,6 +738,11 @@ for q_num in range(66, 84):
 # Past Medical History answers
 for ans_uuid, _ in medical_disease_answers:
     full_script.append(add_answer_sql("c0010001-0000-0000-0000-000000000086", ans_uuid))
+
+# Family History answers
+for q_uuid, _, _, _ in family_members_concepts:
+    for ans_uuid, _ in medical_disease_answers:
+        full_script.append(add_answer_sql(q_uuid, ans_uuid))
 
 full_script.append("END$$")
 full_script.append("DELIMITER ;")

@@ -1,4 +1,4 @@
-import { Identification, Events, ParentChild, Calendar, Activity, GenderMale, Scalpel, Medication, Cut } from '@carbon/react/icons';
+import { Identification, Events, ParentChild, Calendar, Activity, GenderMale, Scalpel, Medication, Cut, PedestrianFamily } from '@carbon/react/icons';
 import { type FormRegistryEntry } from './shared/types';
 
 export const moduleName = '@aiims/esm-demographics-app';
@@ -42,6 +42,10 @@ export const AIIMS_PREV_SURGERY_FORM_NAME = 'AIIMS Visit: Previous Surgery';
 // Form UUID for AIIMS Visit: Past Medical History
 export const AIIMS_PAST_MEDICAL_HISTORY_FORM_UUID = '80930653-7e80-4bfd-9e29-ec37c334d889';
 export const AIIMS_PAST_MEDICAL_HISTORY_FORM_NAME = 'AIIMS Visit: Past Medical History';
+
+// Form UUID for AIIMS Visit: Family History
+export const AIIMS_FAMILY_HISTORY_FORM_UUID = '80930653-7e80-4bfd-9e29-ec37c334d88a';
+export const AIIMS_FAMILY_HISTORY_FORM_NAME = 'AIIMS Visit: Family History';
 
 // Form Registry: Centralized configuration for all current and future AIIMS forms
 export const FORM_REGISTRY: FormRegistryEntry[] = [
@@ -153,6 +157,17 @@ export const FORM_REGISTRY: FormRegistryEntry[] = [
     title: 'Past Medical History',
     slot: 'aiims-past-medical-history-dashboard-slot',
     icon: Events,
+    order: 1,
+  },
+  {
+    key: 'family-history',
+    uuid: AIIMS_FAMILY_HISTORY_FORM_UUID,
+    name: AIIMS_FAMILY_HISTORY_FORM_NAME,
+    path: 'aiims-family-history',
+    titleKey: 'aiimsFamilyHistoryTitle',
+    title: 'Family History',
+    slot: 'aiims-family-history-dashboard-slot',
+    icon: PedestrianFamily,
     order: 1,
   },
   // Additional forms (anthropometry, clinical history, ultrasound, etc.) will be registered here
@@ -318,6 +333,19 @@ export const CONCEPTS = {
   medicalDisease: 'c0010001-0000-0000-0000-000000000086',
   medicalDiseasesOthers: 'c0010001-0000-0000-0000-000000000087',
   otherMedicalDisease: 'c0010002-0000-0000-0000-000000000799',
+  // Form 11: Family History concepts
+  fatherMedicalDisease: 'c0010001-0000-0000-0000-000000000088',
+  fatherMedicalDiseasesOthers: 'c0010001-0000-0000-0000-000000000089',
+  motherMedicalDisease: 'c0010001-0000-0000-0000-000000000090',
+  motherMedicalDiseasesOthers: 'c0010001-0000-0000-0000-000000000091',
+  husbandMedicalDisease: 'c0010001-0000-0000-0000-000000000092',
+  husbandMedicalDiseasesOthers: 'c0010001-0000-0000-0000-000000000093',
+  brotherMedicalDisease: 'c0010001-0000-0000-0000-000000000094',
+  brotherMedicalDiseasesOthers: 'c0010001-0000-0000-0000-000000000095',
+  maternalGrandmotherMedicalDisease: 'c0010001-0000-0000-0000-000000000096',
+  maternalGrandmotherMedicalDiseasesOthers: 'c0010001-0000-0000-0000-000000000097',
+  maternalGrandfatherMedicalDisease: 'c0010001-0000-0000-0000-000000000098',
+  maternalGrandfatherMedicalDiseasesOthers: 'c0010001-0000-0000-0000-000000000099',
 };
 
 // Person Attribute Type UUID for Patient Telephone Number
