@@ -57,6 +57,8 @@ To maintain agility and avoid blocking clinical deployment pending terminology l
 | `c0010001-0000-0000-0000-000000000036` | Uterine Factor Details | Coded | Finding | SNOMED CT | `289539003` | Yes | Active | Concept answers: `c0010002-...351-356` |
 | `c0010001-0000-0000-0000-000000000037` | Other Female Infertility Factors | Coded | Finding | SNOMED CT | `6738008` | Yes | Active | Concept answers: `c0010002-...361-366` |
 | `c0010001-0000-0000-0000-000000000038` | Female Factor Others | Text | Misc | Local / Institutional | — | — | Active | Free-text clinical notes |
+| `c0010001-0000-0000-0000-000000000086` | Medical Disease | Coded | Finding | SNOMED CT | `64572001` | Yes | Active | Concept answers: `c0010002-...701-799` |
+| `c0010001-0000-0000-0000-000000000087` | Medical Diseases Others | Text | Misc | Local / Institutional | — | — | Active | Free-text / Other diseases |
 
 
 ---

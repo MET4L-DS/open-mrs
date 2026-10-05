@@ -157,7 +157,18 @@
   "consultantNameLabel": "Consultant",
   "sesLabel": "SES",
   "notRecorded": "Demographics not recorded",
-  "viewDemographics": "View full demographics"
+  "viewDemographics": "View full demographics",
+  "aiimsPastMedicalHistoryTitle": "Past Medical History",
+  "pastMedicalHistory": "Past Medical History",
+  "medicalDiseasesLabel": "Diagnosed Conditions / Diseases",
+  "medicalDiseasesOthersLabel": "Other Medical Conditions / Notes",
+  "pastMedicalHistoryCardTitle": "Past Medical History & Conditions",
+  "loadingPastMedicalHistory": "Loading Past Medical History details...",
+  "noRecordedPastMedicalHistoryEncounter": "No AIIMS Past Medical History encounter recorded yet",
+  "noPastMedicalHistoryHeader": "No Past Medical History Recorded Yet",
+  "noPastMedicalHistoryBody": "Past medical conditions, chronic illnesses, and medical disease history have not been recorded for this patient yet.",
+  "recordPastMedicalHistory": "Record Past Medical History",
+  "updatePastMedicalHistory": "Update Past Medical History"
 }
 
 

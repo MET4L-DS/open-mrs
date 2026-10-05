@@ -187,6 +187,26 @@
       "slot": "aiims-previous-surgery-dashboard-slot",
       "online": true,
       "offline": true
+    },
+    {
+      "name": "aiims-past-medical-history-dashboard-link",
+      "component": "aiimsPastMedicalHistoryDashboardLink",
+      "slot": "patient-chart-dashboard-slot",
+      "order": 1,
+      "meta": {
+        "slot": "aiims-past-medical-history-dashboard-slot",
+        "path": "aiims-past-medical-history",
+        "title": "Past Medical History"
+      },
+      "online": true,
+      "offline": true
+    },
+    {
+      "name": "aiims-past-medical-history-dashboard",
+      "component": "aiimsPastMedicalHistoryDashboard",
+      "slot": "aiims-past-medical-history-dashboard-slot",
+      "online": true,
+      "offline": true
     }
   ]
 }

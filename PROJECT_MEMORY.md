@@ -219,6 +219,11 @@ python scripts/publish_aiims_form.py
      - Clinical narrative: Intra-operative findings and surgical notes textareas.
    - Observation card with `Cut` icon from Carbon React and color-coded tags displaying procedures paired with their laterality.
    - Laterality extraction: `PROCEDURE_TO_LATERALITY_MAP` maps both concept UUIDs and localized display labels to respective laterality question UUIDs, formatted cleanly as `Procedure (Right|Left|Bilateral)`.
+10. **Form 10: AIIMS Visit: Past Medical History** (`80930653-7e80-4bfd-9e29-ec37c334d889`)
+    - Path: `aiims-past-medical-history`
+    - Coded medical conditions from SNOMED CT covering 34 conditions (diabetes, hypertension, TB, endometriosis, etc.) plus unlisted/other conditions.
+    - Conditional skip logic: selecting "Other medical disease" reveals `medical_diseases_others` notes/free-text.
+    - Observation card with Carbon tags and detail row for other conditions.
 
 ---
 
@@ -233,8 +238,9 @@ python scripts/publish_aiims_form.py
 - [x] Register Form 7: Male Hormone & Surgery (`male-hormone-surgery`).
 - [x] Register Form 8: Previous OI and IUI (`previous-oi-iui`).
 - [x] Register Form 9: Previous Surgery (`previous-surgery`).
-- [ ] Register Form 10: Anthropometry & Clinical Examination.
-- [ ] Register Form 11: Ultrasound & Imaging.
+- [x] Register Form 10: Past Medical History (`past-medical-history`).
+- [ ] Register Form 11: Anthropometry & Clinical Examination.
+- [ ] Register Form 12: Ultrasound & Imaging.
 
 
 

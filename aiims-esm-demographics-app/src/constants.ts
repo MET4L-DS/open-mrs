@@ -39,6 +39,10 @@ export const AIIMS_PREV_OI_IUI_FORM_NAME = 'AIIMS Visit: Previous OI and IUI';
 export const AIIMS_PREV_SURGERY_FORM_UUID = '80930653-7e80-4bfd-9e29-ec37c334d888';
 export const AIIMS_PREV_SURGERY_FORM_NAME = 'AIIMS Visit: Previous Surgery';
 
+// Form UUID for AIIMS Visit: Past Medical History
+export const AIIMS_PAST_MEDICAL_HISTORY_FORM_UUID = '80930653-7e80-4bfd-9e29-ec37c334d889';
+export const AIIMS_PAST_MEDICAL_HISTORY_FORM_NAME = 'AIIMS Visit: Past Medical History';
+
 // Form Registry: Centralized configuration for all current and future AIIMS forms
 export const FORM_REGISTRY: FormRegistryEntry[] = [
   {
@@ -138,6 +142,17 @@ export const FORM_REGISTRY: FormRegistryEntry[] = [
     title: 'Previous Surgery',
     slot: 'aiims-previous-surgery-dashboard-slot',
     icon: Cut,
+    order: 1,
+  },
+  {
+    key: 'past-medical-history',
+    uuid: AIIMS_PAST_MEDICAL_HISTORY_FORM_UUID,
+    name: AIIMS_PAST_MEDICAL_HISTORY_FORM_NAME,
+    path: 'aiims-past-medical-history',
+    titleKey: 'aiimsPastMedicalHistoryTitle',
+    title: 'Past Medical History',
+    slot: 'aiims-past-medical-history-dashboard-slot',
+    icon: Events,
     order: 1,
   },
   // Additional forms (anthropometry, clinical history, ultrasound, etc.) will be registered here
@@ -299,6 +314,10 @@ export const CONCEPTS = {
   clomiphene: 'c0010002-0000-0000-0000-000000000503',
   hmgPlusClomiphene: 'c0010002-0000-0000-0000-000000000504',
   multipleOvi: 'c0010002-0000-0000-0000-000000000505',
+  // Form 10: Past Medical History concepts
+  medicalDisease: 'c0010001-0000-0000-0000-000000000086',
+  medicalDiseasesOthers: 'c0010001-0000-0000-0000-000000000087',
+  otherMedicalDisease: 'c0010002-0000-0000-0000-000000000799',
 };
 
 // Person Attribute Type UUID for Patient Telephone Number

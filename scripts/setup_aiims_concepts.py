@@ -219,6 +219,45 @@ female_factor_answers = [
     ("c0010002-0000-0000-0000-000000000662", "Peritonectomy"),
 ]
 
+medical_disease_answers = [
+    # Form 10: Past Medical History answers (Group 700)
+    ("c0010002-0000-0000-0000-000000000701", "B-cell lymphoma"),
+    ("c0010002-0000-0000-0000-000000000702", "Bell's palsy"),
+    ("c0010002-0000-0000-0000-000000000703", "Intervertebral disc prolapse"),
+    ("c0010002-0000-0000-0000-000000000704", "Bipolar disorder"),
+    ("c0010002-0000-0000-0000-000000000705", "Carcinoma of breast"),
+    ("c0010002-0000-0000-0000-000000000706", "Carcinoma"),
+    ("c0010002-0000-0000-0000-000000000707", "Cervical tuberculous lymphadenitis"),
+    ("c0010002-0000-0000-0000-000000000708", "Ventricular septal defect"),
+    ("c0010002-0000-0000-0000-000000000709", "Ductal carcinoma in situ of breast"),
+    ("c0010002-0000-0000-0000-000000000710", "Epilepsy"),
+    ("c0010002-0000-0000-0000-000000000711", "Tuberculosis of female genital organs"),
+    ("c0010002-0000-0000-0000-000000000712", "TB - (tuberculosis) chemotherapy"),
+    ("c0010002-0000-0000-0000-000000000713", "Graves' disease"),
+    ("c0010002-0000-0000-0000-000000000714", "History of tuberculosis drug therapy"),
+    ("c0010002-0000-0000-0000-000000000715", "Genital tuberculosis"),
+    ("c0010002-0000-0000-0000-000000000716", "Hyperprolactinemia"),
+    ("c0010002-0000-0000-0000-000000000717", "Trichobezoar"),
+    ("c0010002-0000-0000-0000-000000000718", "Ectopic pregnancy"),
+    ("c0010002-0000-0000-0000-000000000719", "Primary mucinous adenocarcinoma of appendix"),
+    ("c0010002-0000-0000-0000-000000000720", "Pseudomyxoma peritonei"),
+    ("c0010002-0000-0000-0000-000000000721", "Hidradenitis suppurativa"),
+    ("c0010002-0000-0000-0000-000000000722", "Hodgkin's disease"),
+    ("c0010002-0000-0000-0000-000000000723", "Entire tibia"),
+    ("c0010002-0000-0000-0000-000000000724", "Hypertensive disorder"),
+    ("c0010002-0000-0000-0000-000000000725", "Amlodipine"),
+    ("c0010002-0000-0000-0000-000000000726", "Type 2 diabetes mellitus"),
+    ("c0010002-0000-0000-0000-000000000727", "Hypothyroidism"),
+    ("c0010002-0000-0000-0000-000000000728", "Tuberculosis of abdomen"),
+    ("c0010002-0000-0000-0000-000000000729", "Endometrioma of left ovary"),
+    ("c0010002-0000-0000-0000-000000000730", "Endometriosis"),
+    ("c0010002-0000-0000-0000-000000000731", "Vasopressin-related polyuria"),
+    ("c0010002-0000-0000-0000-000000000732", "Psychiatric"),
+    ("c0010002-0000-0000-0000-000000000733", "Pulmonary tuberculosis"),
+    ("c0010002-0000-0000-0000-000000000734", "Systemic lupus erythematosus"),
+    ("c0010002-0000-0000-0000-000000000799", "Other medical disease"),
+]
+
 
 # We assemble the migration script wrapped in a stored procedure for IF/ELSE control flow
 full_script = [
@@ -245,6 +284,9 @@ for u, name in menstrual_answers:
     full_script.append(add_concept_sql(u, name, datatype_id=4, class_id=11))
 
 for u, name in female_factor_answers:
+    full_script.append(add_concept_sql(u, name, datatype_id=4, class_id=11))
+
+for u, name in medical_disease_answers:
     full_script.append(add_concept_sql(u, name, datatype_id=4, class_id=11))
 
 # 2. Question concepts
@@ -416,6 +458,10 @@ full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000083", "Reca
 # Findings and Other Notes
 full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000084", "Intra-operative Findings", datatype_id=3, class_id=7))
 full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000085", "Previous Surgery Other Notes", datatype_id=3, class_id=7))
+
+# Past Medical History Concepts (Form 10)
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000086", "Medical Disease", datatype_id=2, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000087", "Medical Diseases Others", datatype_id=3, class_id=7))
 
 
 # 3. Link Answers
@@ -675,6 +721,10 @@ for q_num in range(66, 84):
     q_uuid = f"c0010001-0000-0000-0000-{q_num:012d}"
     for ans_u in laterality_answers:
         full_script.append(add_answer_sql(q_uuid, ans_u))
+
+# Past Medical History answers
+for ans_uuid, _ in medical_disease_answers:
+    full_script.append(add_answer_sql("c0010001-0000-0000-0000-000000000086", ans_uuid))
 
 full_script.append("END$$")
 full_script.append("DELIMITER ;")
