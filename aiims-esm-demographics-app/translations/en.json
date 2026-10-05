@@ -149,7 +149,15 @@
   "recordPreviousSurgery": "Record Previous Surgery",
   "updatePreviousSurgery": "Update Previous Surgery",
   "loadingPreviousSurgery": "Loading Previous Surgery history...",
-  "noRecordedPreviousSurgeryEncounter": "No AIIMS Previous Surgery encounter recorded yet"
+  "noRecordedPreviousSurgeryEncounter": "No AIIMS Previous Surgery encounter recorded yet",
+  "wifeAge": "Wife's Age",
+  "husbandNameLabel": "Husband",
+  "husbandAgeLabel": "Husband's Age",
+  "consultantUnitLabel": "Unit",
+  "consultantNameLabel": "Consultant",
+  "sesLabel": "SES",
+  "notRecorded": "Demographics not recorded",
+  "viewDemographics": "View full demographics"
 }
 
 

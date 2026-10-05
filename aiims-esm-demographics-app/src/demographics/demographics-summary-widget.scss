@@ -1,0 +1,66 @@
+@use '@carbon/styles/scss/spacing' as *;
+@use '@carbon/styles/scss/type' as *;
+@use '@carbon/styles/scss/theme' as *;
+
+.summaryContainer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: $spacing-05;
+  padding: $spacing-04 $spacing-05;
+  background-color: $layer-01;
+  border-bottom: 1px solid $border-subtle-01;
+  min-height: 3rem;
+  width: 100%;
+}
+
+.summaryItem {
+  display: inline-flex;
+  align-items: baseline;
+  gap: $spacing-02;
+  white-space: nowrap;
+}
+
+.summaryLabel {
+  @include type-style('label-01');
+  color: $text-secondary;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.summaryValue {
+  @include type-style('body-compact-01');
+  color: $text-primary;
+  font-weight: 600;
+}
+
+.divider {
+  width: 1px;
+  height: 1.25rem;
+  background-color: $border-subtle-01;
+  align-self: center;
+}
+
+.notRecordedContainer {
+  display: inline-flex;
+  align-items: center;
+  gap: $spacing-03;
+}
+
+.notRecordedText {
+  @include type-style('body-short-01');
+  color: $text-secondary;
+  font-style: italic;
+}
+
+.viewLink {
+  margin-left: auto;
+  @include type-style('body-compact-01');
+  color: $link-primary;
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

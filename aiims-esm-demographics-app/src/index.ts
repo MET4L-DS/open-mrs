@@ -5,6 +5,33 @@ import type { FormRegistryEntry } from './shared/types';
 
 export const importTranslation = require.context('../translations', false, /.json$/, 'lazy');
 
+// Polyfill missing core translation for patient contact attribute in O3
+if (typeof window !== 'undefined') {
+  const i18n = (window as any).i18next;
+  if (i18n) {
+    i18n.addResource('en', 'core', 'Telephone Number', 'Telephone Number');
+    i18n.on?.('initialized', () => {
+      i18n.addResource('en', 'core', 'Telephone Number', 'Telephone Number');
+    });
+  }
+
+  // Suppress spurious upstream O3 core translation warning for 'Telephone Number'
+  if (!(window as any).__o3_translation_hook_installed) {
+    (window as any).__o3_translation_hook_installed = true;
+    const originalError = console.error;
+    console.error = function (...args: any[]) {
+      if (
+        typeof args[0] === 'string' &&
+        args[0].includes('O3 Core Translations does not provide key') &&
+        args[0].includes('Telephone Number')
+      ) {
+        return;
+      }
+      return originalError.apply(console, args);
+    };
+  }
+}
+
 
 /**
  * Factory helper to generate lifecycle extensions for any form entry in FORM_REGISTRY.
@@ -41,6 +68,11 @@ const demographicsExtensions = createFormExtensions(
 
 export const aiimsDemographicsDashboardLink = demographicsExtensions.link;
 export const aiimsDemographicsDashboard = demographicsExtensions.dashboard;
+
+export const aiimsDemographicsSummaryWidget = getAsyncLifecycle(
+  () => import('./demographics/demographics-summary-widget.component'),
+  { featureName: 'aiims-demographics-summary', moduleName }
+);
 
 const infertilityTypeExtensions = createFormExtensions(
   getFormRegistryEntry('infertility-type'),
