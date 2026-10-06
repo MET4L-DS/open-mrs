@@ -1,4 +1,4 @@
-import { Identification, Events, ParentChild, Calendar, Activity, GenderMale, Scalpel, Medication, Cut, PedestrianFamily, Microscope, Waveform } from '@carbon/react/icons';
+import { Identification, Events, ParentChild, Calendar, Activity, GenderMale, Scalpel, Medication, Cut, PedestrianFamily, Microscope, Waveform, Chemistry } from '@carbon/react/icons';
 import { type FormRegistryEntry } from './shared/types';
 
 
@@ -55,6 +55,10 @@ export const AIIMS_TUBERCULOSIS_HISTORY_FORM_NAME = 'AIIMS Visit: Tuberculosis H
 // Form UUID for AIIMS Visit: Investigation Ultrasound
 export const AIIMS_INVESTIGATION_ULTRASOUND_FORM_UUID = '80930653-7e80-4bfd-9e29-ec37c334d88c';
 export const AIIMS_INVESTIGATION_ULTRASOUND_FORM_NAME = 'AIIMS Visit: Investigation Ultrasound';
+
+// Form UUID for AIIMS Visit: Investigation Female Blood Hormone
+export const AIIMS_FEMALE_BLOOD_HORMONE_FORM_UUID = '80930653-7e80-4bfd-9e29-ec37c334d88d';
+export const AIIMS_FEMALE_BLOOD_HORMONE_FORM_NAME = 'AIIMS Visit: Investigation Female Blood Hormone';
 
 // Form Registry: Centralized configuration for all current and future AIIMS forms
 
@@ -200,6 +204,17 @@ export const FORM_REGISTRY: FormRegistryEntry[] = [
     title: 'Investigation Ultrasound',
     slot: 'aiims-investigation-ultrasound-dashboard-slot',
     icon: Waveform,
+    order: 1,
+  },
+  {
+    key: 'female-blood-hormone',
+    uuid: AIIMS_FEMALE_BLOOD_HORMONE_FORM_UUID,
+    name: AIIMS_FEMALE_BLOOD_HORMONE_FORM_NAME,
+    path: 'aiims-female-blood-hormone',
+    titleKey: 'aiimsFemaleBloodHormoneTitle',
+    title: 'Female Blood Hormone',
+    slot: 'aiims-female-blood-hormone-dashboard-slot',
+    icon: Chemistry,
     order: 1,
   },
   // Additional forms (anthropometry, clinical history, semen analysis, etc.) will be registered here
@@ -394,6 +409,13 @@ export const CONCEPTS = {
   volumeRightOvary: 'c0010001-0000-0000-0000-000000000108',
   volumeLeftOvary: 'c0010001-0000-0000-0000-000000000109',
   ultrasoundRemarks: 'c0010001-0000-0000-0000-000000000110',
+
+  // Form 14: Investigation Female Blood Hormone Concepts
+  antiMullerianHormone: 'c0010001-0000-0000-0000-000000000111',
+  day2FollicleStimulatingHormone: 'c0010001-0000-0000-0000-000000000112',
+  day2LuteinizingHormone: 'c0010001-0000-0000-0000-000000000113',
+  thyroidStimulatingHormone: 'c0010001-0000-0000-0000-000000000114',
+  serumProlactin: 'c0010001-0000-0000-0000-000000000115',
 };
 
 

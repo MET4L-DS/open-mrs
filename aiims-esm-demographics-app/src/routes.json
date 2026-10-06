@@ -267,6 +267,26 @@
       "slot": "aiims-investigation-ultrasound-dashboard-slot",
       "online": true,
       "offline": true
+    },
+    {
+      "name": "aiims-female-blood-hormone-dashboard-link",
+      "component": "aiimsFemaleBloodHormoneDashboardLink",
+      "slot": "patient-chart-dashboard-slot",
+      "order": 1,
+      "meta": {
+        "slot": "aiims-female-blood-hormone-dashboard-slot",
+        "path": "aiims-female-blood-hormone",
+        "title": "Female Blood Hormone"
+      },
+      "online": true,
+      "offline": true
+    },
+    {
+      "name": "aiims-female-blood-hormone-dashboard",
+      "component": "aiimsFemaleBloodHormoneDashboard",
+      "slot": "aiims-female-blood-hormone-dashboard-slot",
+      "online": true,
+      "offline": true
     }
   ]
 }

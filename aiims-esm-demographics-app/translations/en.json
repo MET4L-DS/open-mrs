@@ -212,5 +212,21 @@
   "noInvestigationUltrasoundHeader": "No Investigation Ultrasound Recorded Yet",
   "noInvestigationUltrasoundBody": "Total antral follicle count and ovary volumes have not been recorded for this patient yet.",
   "recordInvestigationUltrasound": "Record Investigation Ultrasound",
-  "updateInvestigationUltrasound": "Update Investigation Ultrasound"
+  "updateInvestigationUltrasound": "Update Investigation Ultrasound",
+  "aiimsFemaleBloodHormoneTitle": "Investigation Female Blood Hormone",
+  "femaleBloodHormoneProfileTitle": "Female Blood Hormone Profile",
+  "antiMullerianHormone": "Anti-Mullerian Hormone (AMH)",
+  "day2FollicleStimulatingHormone": "Day 2 Follicle-Stimulating Hormone (FSH)",
+  "day2LuteinizingHormone": "Day 2 Luteinizing Hormone (LH)",
+  "thyroidStimulatingHormone": "Thyroid-Stimulating Hormone (TSH)",
+  "serumProlactin": "Serum Prolactin",
+  "unitNgMl": "ng/mL",
+  "unitMiuMl": "mIU/mL",
+  "unitUiuMl": "uIU/mL",
+  "loadingFemaleBloodHormone": "Loading Investigation Female Blood Hormone details...",
+  "noRecordedFemaleBloodHormoneEncounter": "No AIIMS Investigation Female Blood Hormone encounter recorded yet",
+  "noFemaleBloodHormoneHeader": "No Investigation Female Blood Hormone Recorded Yet",
+  "noFemaleBloodHormoneBody": "Anti-Mullerian hormone, FSH, LH, TSH, and serum prolactin levels have not been recorded for this patient yet.",
+  "recordFemaleBloodHormone": "Record Female Blood Hormone",
+  "updateFemaleBloodHormone": "Update Female Blood Hormone"
 }
