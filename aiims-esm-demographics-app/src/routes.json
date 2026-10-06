@@ -287,6 +287,26 @@
       "slot": "aiims-female-blood-hormone-dashboard-slot",
       "online": true,
       "offline": true
+    },
+    {
+      "name": "aiims-female-surgical-procedure-dashboard-link",
+      "component": "aiimsFemaleSurgicalProcedureDashboardLink",
+      "slot": "patient-chart-dashboard-slot",
+      "order": 1,
+      "meta": {
+        "slot": "aiims-female-surgical-procedure-dashboard-slot",
+        "path": "aiims-female-surgical-procedure",
+        "title": "Female Surgical Procedure"
+      },
+      "online": true,
+      "offline": true
+    },
+    {
+      "name": "aiims-female-surgical-procedure-dashboard",
+      "component": "aiimsFemaleSurgicalProcedureDashboard",
+      "slot": "aiims-female-surgical-procedure-dashboard-slot",
+      "online": true,
+      "offline": true
     }
   ]
 }

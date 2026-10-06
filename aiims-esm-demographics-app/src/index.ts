@@ -237,6 +237,14 @@ const femaleBloodHormoneExtensions = createFormExtensions(
 export const aiimsFemaleBloodHormoneDashboardLink = femaleBloodHormoneExtensions.link;
 export const aiimsFemaleBloodHormoneDashboard = femaleBloodHormoneExtensions.dashboard;
 
+const femaleSurgicalProcedureExtensions = createFormExtensions(
+  getFormRegistryEntry('female-surgical-procedure'),
+  () => import('./investigation-female-surgical/female-surgical-procedure-dashboard.component')
+);
+
+export const aiimsFemaleSurgicalProcedureDashboardLink = femaleSurgicalProcedureExtensions.link;
+export const aiimsFemaleSurgicalProcedureDashboard = femaleSurgicalProcedureExtensions.dashboard;
+
 export { FORM_REGISTRY, getFormRegistryEntry, getFormUuid, getFormName } from './constants';
 export * from './shared';
 export * from './infertility-type';
@@ -252,6 +260,7 @@ export * from './family-history';
 export * from './tuberculosis-history';
 export * from './investigation-ultrasound';
 export * from './investigation-female-blood';
+export * from './investigation-female-surgical';
 
 
 

@@ -1,4 +1,4 @@
-import { Identification, Events, ParentChild, Calendar, Activity, GenderMale, Scalpel, Medication, Cut, PedestrianFamily, Microscope, Waveform, Chemistry } from '@carbon/react/icons';
+import { Identification, Events, ParentChild, Calendar, Activity, GenderMale, Scalpel, Medication, Cut, PedestrianFamily, Microscope, Waveform, Chemistry, ReportData } from '@carbon/react/icons';
 import { type FormRegistryEntry } from './shared/types';
 
 
@@ -59,6 +59,10 @@ export const AIIMS_INVESTIGATION_ULTRASOUND_FORM_NAME = 'AIIMS Visit: Investigat
 // Form UUID for AIIMS Visit: Investigation Female Blood Hormone
 export const AIIMS_FEMALE_BLOOD_HORMONE_FORM_UUID = '80930653-7e80-4bfd-9e29-ec37c334d88d';
 export const AIIMS_FEMALE_BLOOD_HORMONE_FORM_NAME = 'AIIMS Visit: Investigation Female Blood Hormone';
+
+// Form UUID for AIIMS Visit: Investigation Female Surgical Procedure
+export const AIIMS_FEMALE_SURGICAL_PROCEDURE_FORM_UUID = '80930653-7e80-4bfd-9e29-ec37c334d88e';
+export const AIIMS_FEMALE_SURGICAL_PROCEDURE_FORM_NAME = 'AIIMS Visit: Investigation Female Surgical Procedure';
 
 // Form Registry: Centralized configuration for all current and future AIIMS forms
 
@@ -215,6 +219,17 @@ export const FORM_REGISTRY: FormRegistryEntry[] = [
     title: 'Female Blood Hormone',
     slot: 'aiims-female-blood-hormone-dashboard-slot',
     icon: Chemistry,
+    order: 1,
+  },
+  {
+    key: 'female-surgical-procedure',
+    uuid: AIIMS_FEMALE_SURGICAL_PROCEDURE_FORM_UUID,
+    name: AIIMS_FEMALE_SURGICAL_PROCEDURE_FORM_NAME,
+    path: 'aiims-female-surgical-procedure',
+    titleKey: 'aiimsFemaleSurgicalProcedureTitle',
+    title: 'Female Surgical Procedure',
+    slot: 'aiims-female-surgical-procedure-dashboard-slot',
+    icon: ReportData,
     order: 1,
   },
   // Additional forms (anthropometry, clinical history, semen analysis, etc.) will be registered here
@@ -416,6 +431,78 @@ export const CONCEPTS = {
   day2LuteinizingHormone: 'c0010001-0000-0000-0000-000000000113',
   thyroidStimulatingHormone: 'c0010001-0000-0000-0000-000000000114',
   serumProlactin: 'c0010001-0000-0000-0000-000000000115',
+
+  // Form 15: Investigation Female Surgical Procedure Concepts
+  // Hysteroscopy
+  hysteroscopyOstia: 'c0010001-0000-0000-0000-000000000116',
+  hysteroscopyEndometrium: 'c0010001-0000-0000-0000-000000000117',
+  hysteroscopyEndometrialCavity: 'c0010001-0000-0000-0000-000000000118',
+  hysteroscopyCervicalCanalDirection: 'c0010001-0000-0000-0000-000000000119',
+  hysteroscopyDimensions: 'c0010001-0000-0000-0000-000000000120',
+  operativeHysteroscopy: 'c0010001-0000-0000-0000-000000000121',
+
+  // TVS Findings
+  uterineSizeLength: 'c0010001-0000-0000-0000-000000000122',
+  uterineSizeWidth: 'c0010001-0000-0000-0000-000000000123',
+  uterineSizeTransverseDiameter: 'c0010001-0000-0000-0000-000000000124',
+  uterineSizeVolume: 'c0010001-0000-0000-0000-000000000125',
+  dayOfCycle: 'c0010001-0000-0000-0000-000000000126',
+  adenomyosisTvsFinding: 'c0010001-0000-0000-0000-000000000127',
+  uterineCalcifications: 'c0010001-0000-0000-0000-000000000128',
+  fibroidsPresent: 'c0010001-0000-0000-0000-000000000129',
+  numberOfFibroids: 'c0010001-0000-0000-0000-000000000130',
+  fibroidsLocation: 'c0010001-0000-0000-0000-000000000131',
+  fibroidsSize: 'c0010001-0000-0000-0000-000000000132',
+  fibroidStagesFigo: 'c0010001-0000-0000-0000-000000000133',
+  tvsEndometrialCavity: 'c0010001-0000-0000-0000-000000000134',
+  endometrialMyometrialJunction: 'c0010001-0000-0000-0000-000000000135',
+  septateFinding: 'c0010001-0000-0000-0000-000000000136',
+  endometrialCavitySeptateAngle: 'c0010001-0000-0000-0000-000000000137',
+  endometrialCavityLengthOfSeptum: 'c0010001-0000-0000-0000-000000000138',
+  bicornuateUterus: 'c0010001-0000-0000-0000-000000000139',
+  bicornuateUterusRightVolume: 'c0010001-0000-0000-0000-000000000140',
+  bicornuateUterusLeftVolume: 'c0010001-0000-0000-0000-000000000141',
+  unicornuateUterus: 'c0010001-0000-0000-0000-000000000142',
+  unicornuateUterusVolume: 'c0010001-0000-0000-0000-000000000143',
+  polypFinding: 'c0010001-0000-0000-0000-000000000144',
+  numberOfPolyps: 'c0010001-0000-0000-0000-000000000145',
+  dimensionsOfPolyps: 'c0010001-0000-0000-0000-000000000146',
+  afcRightOvary: 'c0010001-0000-0000-0000-000000000147',
+  afcLeftOvary: 'c0010001-0000-0000-0000-000000000148',
+  rightOvaryDimensions: 'c0010001-0000-0000-0000-000000000149',
+  leftOvaryDimensions: 'c0010001-0000-0000-0000-000000000150',
+  endometriomaFinding: 'c0010001-0000-0000-0000-000000000151',
+  numberOfEndometriomas: 'c0010001-0000-0000-0000-000000000152',
+  folliclesAccessible: 'c0010001-0000-0000-0000-000000000153',
+  folliclesInaccessible: 'c0010001-0000-0000-0000-000000000154',
+  endometriomaRightOvaryDimensions: 'c0010001-0000-0000-0000-000000000155',
+  endometriomaLeftOvaryDimensions: 'c0010001-0000-0000-0000-000000000156',
+  focalAdenomyomaDimensions: 'c0010001-0000-0000-0000-000000000157',
+  hydrosalpinxFinding: 'c0010001-0000-0000-0000-000000000158',
+  hydrosalpinxDimensions: 'c0010001-0000-0000-0000-000000000159',
+  day1416EndometrialThickness: 'c0010001-0000-0000-0000-000000000160',
+  day1416EndometrialPattern: 'c0010001-0000-0000-0000-000000000161',
+  ovarianDermoidFinding: 'c0010001-0000-0000-0000-000000000162',
+  rightOvaryDermoidDimensions: 'c0010001-0000-0000-0000-000000000163',
+  leftOvaryDermoidDimensions: 'c0010001-0000-0000-0000-000000000164',
+  haemorrhagicCystFinding: 'c0010001-0000-0000-0000-000000000165',
+  rightOvaryHaemorrhagicDimensions: 'c0010001-0000-0000-0000-000000000166',
+  leftOvaryHaemorrhagicDimensions: 'c0010001-0000-0000-0000-000000000167',
+  corpusLuteumFinding: 'c0010001-0000-0000-0000-000000000168',
+  corpusLuteumRightDimensions: 'c0010001-0000-0000-0000-000000000169',
+  corpusLuteumLeftDimensions: 'c0010001-0000-0000-0000-000000000170',
+  paroOvarianCystFinding: 'c0010001-0000-0000-0000-000000000171',
+  paroOvarianRightDimensions: 'c0010001-0000-0000-0000-000000000172',
+  paroOvarianLeftDimensions: 'c0010001-0000-0000-0000-000000000173',
+
+  // Endometrial Zones
+  zone1Dimensions: 'c0010001-0000-0000-0000-000000000174',
+  zone2Dimensions: 'c0010001-0000-0000-0000-000000000175',
+  zone3Dimensions: 'c0010001-0000-0000-0000-000000000176',
+  zone4Dimensions: 'c0010001-0000-0000-0000-000000000177',
+
+  // Remarks
+  femaleSurgicalProcedureRemarks: 'c0010001-0000-0000-0000-000000000178',
 };
 
 

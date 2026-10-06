@@ -59,6 +59,78 @@ To maintain agility and avoid blocking clinical deployment pending terminology l
 | `c0010001-0000-0000-0000-000000000038` | Female Factor Others | Text | Misc | Local / Institutional | — | — | Active | Free-text clinical notes |
 | `c0010001-0000-0000-0000-000000000086` | Medical Disease | Coded | Finding | SNOMED CT | `64572001` | Yes | Active | Concept answers: `c0010002-...701-799` |
 | `c0010001-0000-0000-0000-000000000087` | Medical Diseases Others | Text | Misc | Local / Institutional | — | — | Active | Free-text / Other diseases |
+| `c0010001-0000-0000-0000-000000000107` | Total Antral Follicle Count | Numeric | Finding | Local / Ultrasound | — | — | Active | Form 13: Total AFC count |
+| `c0010001-0000-0000-0000-000000000108` | Volume Right Ovary | Numeric | Finding | Local / Ultrasound | — | — | Active | Form 13: Right ovary volume (cm³) |
+| `c0010001-0000-0000-0000-000000000109` | Volume Left Ovary | Numeric | Finding | Local / Ultrasound | — | — | Active | Form 13: Left ovary volume (cm³) |
+| `c0010001-0000-0000-0000-000000000110` | Ultrasound Remarks | Text | Misc | Local / Ultrasound | — | — | Active | Form 13: Clinical ultrasound notes |
+| `c0010001-0000-0000-0000-000000000111` | Anti-Mullerian Hormone | Numeric | Finding | LOINC | `38476-8` | Yes | Active | Form 14: AMH (ng/mL) |
+| `c0010001-0000-0000-0000-000000000112` | Day 2 Follicle-Stimulating Hormone | Numeric | Finding | LOINC | `15067-2` | Yes | Active | Form 14: Day 2 FSH (mIU/mL) |
+| `c0010001-0000-0000-0000-000000000113` | Day 2 Luteinizing Hormone | Numeric | Finding | LOINC | `10501-5` | Yes | Active | Form 14: Day 2 LH (mIU/mL) |
+| `c0010001-0000-0000-0000-000000000114` | Thyroid-Stimulating Hormone | Numeric | Finding | LOINC | `3016-3` | Yes | Active | Form 14: TSH (uIU/mL) |
+| `c0010001-0000-0000-0000-000000000115` | Serum Prolactin | Numeric | Finding | LOINC | `2842-3` | Yes | Active | Form 14: Prolactin (ng/mL) |
+| `c0010001-0000-0000-0000-000000000116` | Hysteroscopy Ostia | Coded | Finding | Local / Hysteroscopy | — | — | Active | Form 15: Deep seated, normal, adhesions, not seen |
+| `c0010001-0000-0000-0000-000000000117` | Hysteroscopy Endometrium | Coded | Finding | Local / Hysteroscopy | — | — | Active | Form 15: Normal, pale, micropolyps, thin, congested, etc. |
+| `c0010001-0000-0000-0000-000000000118` | Hysteroscopy Endometrial Cavity | Coded | Finding | Local / Hysteroscopy | — | — | Active | Form 15: Normal, polyp, septum, adhesion, fibroid, etc. |
+| `c0010001-0000-0000-0000-000000000119` | Hysteroscopy Cervical Canal Direction | Coded | Finding | Local / Hysteroscopy | — | — | Active | Form 15: Direction & cervical adhesions |
+| `c0010001-0000-0000-0000-000000000120` | Hysteroscopy Dimensions | Text | Finding | Local / Hysteroscopy | — | — | Active | Form 15: Dimensions in cm |
+| `c0010001-0000-0000-0000-000000000121` | Operative Hysteroscopy | Coded | Procedure | Local / Hysteroscopy | — | — | Active | Form 15: Polypectomy, metroplasty, adhesiolysis, etc. |
+| `c0010001-0000-0000-0000-000000000122` | Uterine Size Length | Numeric | Finding | Local / TVS | — | — | Active | Form 15: Uterine length (cm) |
+| `c0010001-0000-0000-0000-000000000123` | Uterine Size Width | Numeric | Finding | Local / TVS | — | — | Active | Form 15: Uterine width (cm) |
+| `c0010001-0000-0000-0000-000000000124` | Uterine Size Transverse Diameter | Numeric | Finding | Local / TVS | — | — | Active | Form 15: Transverse diameter (cm) |
+| `c0010001-0000-0000-0000-000000000125` | Uterine Size Volume | Numeric | Finding | Local / TVS | — | — | Active | Form 15: Volume (cm³) |
+| `c0010001-0000-0000-0000-000000000126` | Day of Cycle | Numeric | Finding | Local / TVS | — | — | Active | Form 15: Cycle day of examination |
+| `c0010001-0000-0000-0000-000000000127` | Adenomyosis TVS Finding | Coded | Finding | Local / TVS | — | — | Active | Form 15: Globular, asymmetrical, cysts, islands, etc. |
+| `c0010001-0000-0000-0000-000000000128` | Uterine Calcifications | Coded | Finding | Local / TVS | — | — | Active | Form 15: Yes/No |
+| `c0010001-0000-0000-0000-000000000129` | Fibroids Present | Coded | Finding | Local / TVS | — | — | Active | Form 15: Yes/No |
+| `c0010001-0000-0000-0000-000000000130` | Number of Fibroids | Numeric | Finding | Local / TVS | — | — | Active | Form 15: Count |
+| `c0010001-0000-0000-0000-000000000131` | Fibroids Location | Coded | Finding | Local / TVS | — | — | Active | Form 15: Anterior, posterior, fundal, etc. |
+| `c0010001-0000-0000-0000-000000000132` | Fibroids Size | Text | Finding | Local / TVS | — | — | Active | Form 15: Dimensions in cm |
+| `c0010001-0000-0000-0000-000000000133` | Fibroid Stages FIGO | Coded | Finding | FIGO Classification | — | — | Active | Form 15: FIGO 0 through 8, 2-5 |
+| `c0010001-0000-0000-0000-000000000134` | TVS Endometrial Cavity | Coded | Finding | Local / TVS | — | — | Active | Form 15: Normal, 3D, 4D, adhesions, fluid |
+| `c0010001-0000-0000-0000-000000000135` | Endometrial-Myometrial Junction | Coded | Finding | Local / TVS | — | — | Active | Form 15: Well-defined, ill-defined, irregular, interrupted |
+| `c0010001-0000-0000-0000-000000000136` | Septate Finding | Coded | Finding | Local / TVS | — | — | Active | Form 15: Yes/No |
+| `c0010001-0000-0000-0000-000000000137` | Endometrial Cavity Septate Angle | Numeric | Finding | Local / TVS | — | — | Active | Form 15: Degrees |
+| `c0010001-0000-0000-0000-000000000138` | Endometrial Cavity Length of Septum | Numeric | Finding | Local / TVS | — | — | Active | Form 15: cm |
+| `c0010001-0000-0000-0000-000000000139` | Bicornuate Uterus | Coded | Finding | Local / TVS | — | — | Active | Form 15: Yes/No |
+| `c0010001-0000-0000-0000-000000000140` | Bicornuate Uterus Right Volume | Numeric | Finding | Local / TVS | — | — | Active | Form 15: Right horn volume (cm³) |
+| `c0010001-0000-0000-0000-000000000141` | Bicornuate Uterus Left Volume | Numeric | Finding | Local / TVS | — | — | Active | Form 15: Left horn volume (cm³) |
+| `c0010001-0000-0000-0000-000000000142` | Unicornuate Uterus | Coded | Finding | Local / TVS | — | — | Active | Form 15: Yes/No |
+| `c0010001-0000-0000-0000-000000000143` | Unicornuate Uterus Volume | Numeric | Finding | Local / TVS | — | — | Active | Form 15: Volume (cm³) |
+| `c0010001-0000-0000-0000-000000000144` | Polyp Finding | Coded | Finding | Local / TVS | — | — | Active | Form 15: Present/Absent |
+| `c0010001-0000-0000-0000-000000000145` | Number of Polyps | Numeric | Finding | Local / TVS | — | — | Active | Form 15: Count |
+| `c0010001-0000-0000-0000-000000000146` | Dimensions of Polyps | Text | Finding | Local / TVS | — | — | Active | Form 15: Dimensions in cm |
+| `c0010001-0000-0000-0000-000000000147` | Antral Follicle Count Right Ovary | Numeric | Finding | Local / TVS | — | — | Active | Form 15: Count |
+| `c0010001-0000-0000-0000-000000000148` | Antral Follicle Count Left Ovary | Numeric | Finding | Local / TVS | — | — | Active | Form 15: Count |
+| `c0010001-0000-0000-0000-000000000149` | Right Ovary Dimensions | Text | Finding | Local / TVS | — | — | Active | Form 15: Dimensions in cm |
+| `c0010001-0000-0000-0000-000000000150` | Left Ovary Dimensions | Text | Finding | Local / TVS | — | — | Active | Form 15: Dimensions in cm |
+| `c0010001-0000-0000-0000-000000000151` | Endometrioma Finding | Coded | Finding | Local / TVS | — | — | Active | Form 15: Present/Absent |
+| `c0010001-0000-0000-0000-000000000152` | Number of Endometriomas | Numeric | Finding | Local / TVS | — | — | Active | Form 15: Count |
+| `c0010001-0000-0000-0000-000000000153` | Number of Follicles Accessible | Numeric | Finding | Local / TVS | — | — | Active | Form 15: Count |
+| `c0010001-0000-0000-0000-000000000154` | Number of Follicles Inaccessible | Numeric | Finding | Local / TVS | — | — | Active | Form 15: Count |
+| `c0010001-0000-0000-0000-000000000155` | Endometrioma Right Ovary Dimensions | Text | Finding | Local / TVS | — | — | Active | Form 15: Dimensions in cm |
+| `c0010001-0000-0000-0000-000000000156` | Endometrioma Left Ovary Dimensions | Text | Finding | Local / TVS | — | — | Active | Form 15: Dimensions in cm |
+| `c0010001-0000-0000-0000-000000000157` | Focal Adenomyoma Dimensions | Text | Finding | Local / TVS | — | — | Active | Form 15: Dimensions in cm |
+| `c0010001-0000-0000-0000-000000000158` | Hydrosalpinx Finding | Coded | Finding | Local / TVS | — | — | Active | Form 15: Right, left, both, absent |
+| `c0010001-0000-0000-0000-000000000159` | Hydrosalpinx Dimensions | Text | Finding | Local / TVS | — | — | Active | Form 15: Dimensions in cm |
+| `c0010001-0000-0000-0000-000000000160` | Day 14-16 Endometrial Thickness Measurements | Numeric | Finding | Local / TVS | — | — | Active | Form 15: Thickness (mm) |
+| `c0010001-0000-0000-0000-000000000161` | Day 14-16 Endometrial Thickness Pattern | Coded | Finding | Local / TVS | — | — | Active | Form 15: Trilaminar, diffuse, fluid |
+| `c0010001-0000-0000-0000-000000000162` | Ovarian Dermoid Finding | Coded | Finding | Local / TVS | — | — | Active | Form 15: Yes/No |
+| `c0010001-0000-0000-0000-000000000163` | Right Ovary Dermoid Dimensions | Text | Finding | Local / TVS | — | — | Active | Form 15: Dimensions in cm |
+| `c0010001-0000-0000-0000-000000000164` | Left Ovary Dermoid Dimensions | Text | Finding | Local / TVS | — | — | Active | Form 15: Dimensions in cm |
+| `c0010001-0000-0000-0000-000000000165` | Haemorrhagic Cyst Finding | Coded | Finding | Local / TVS | — | — | Active | Form 15: Yes/No |
+| `c0010001-0000-0000-0000-000000000166` | Right Ovary Haemorrhagic Cyst Dimensions | Text | Finding | Local / TVS | — | — | Active | Form 15: Dimensions in cm |
+| `c0010001-0000-0000-0000-000000000167` | Left Ovary Haemorrhagic Cyst Dimensions | Text | Finding | Local / TVS | — | — | Active | Form 15: Dimensions in cm |
+| `c0010001-0000-0000-0000-000000000168` | Corpus Luteum Finding | Coded | Finding | Local / TVS | — | — | Active | Form 15: Yes/No |
+| `c0010001-0000-0000-0000-000000000169` | Right Ovary Corpus Luteum Dimensions | Text | Finding | Local / TVS | — | — | Active | Form 15: Dimensions in cm |
+| `c0010001-0000-0000-0000-000000000170` | Left Ovary Corpus Luteum Dimensions | Text | Finding | Local / TVS | — | — | Active | Form 15: Dimensions in cm |
+| `c0010001-0000-0000-0000-000000000171` | Paro-ovarian Cyst Finding | Coded | Finding | Local / TVS | — | — | Active | Form 15: Yes/No |
+| `c0010001-0000-0000-0000-000000000172` | Right Paro-ovarian Cyst Dimensions | Text | Finding | Local / TVS | — | — | Active | Form 15: Dimensions in cm |
+| `c0010001-0000-0000-0000-000000000173` | Left Paro-ovarian Cyst Dimensions | Text | Finding | Local / TVS | — | — | Active | Form 15: Dimensions in cm |
+| `c0010001-0000-0000-0000-000000000174` | Zone 1 Myometrium Dimensions | Numeric | Finding | Local / Zone | — | — | Active | Form 15: Zone 1 dimensions (cm) |
+| `c0010001-0000-0000-0000-000000000175` | Zone 2 Hyperechoic Endometrial Edge Dimensions | Numeric | Finding | Local / Zone | — | — | Active | Form 15: Zone 2 dimensions (cm) |
+| `c0010001-0000-0000-0000-000000000176` | Zone 3 Internal Endometrial Hypoechoic Zone Dimensions | Numeric | Finding | Local / Zone | — | — | Active | Form 15: Zone 3 dimensions (cm) |
+| `c0010001-0000-0000-0000-000000000177` | Zone 4 Endometrial Cavity Dimensions | Numeric | Finding | Local / Zone | — | — | Active | Form 15: Zone 4 dimensions (cm) |
+| `c0010001-0000-0000-0000-000000000178` | Female Surgical Procedure Remarks | Text | Misc | Local / Surgical | — | — | Active | Form 15: Procedure remarks & notes |
 
 
 ---

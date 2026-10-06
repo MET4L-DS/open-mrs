@@ -304,6 +304,91 @@ att_duration_answers = [
     ("c0010002-0000-0000-0000-000000000828", "Other duration"),
 ]
 
+# Form 15: Investigation Female Surgical Procedure answers (Group 900)
+female_surgical_answers = [
+    # Hysteroscopy Ostia
+    ("c0010002-0000-0000-0000-000000000901", "Deep seated"),
+    ("c0010002-0000-0000-0000-000000000902", "Peri-ostial adhesion"),
+    ("c0010002-0000-0000-0000-000000000903", "Right ostia not seen"),
+    ("c0010002-0000-0000-0000-000000000904", "Left ostia not seen"),
+    ("c0010002-0000-0000-0000-000000000905", "Both ostia not seen"),
+    # Hysteroscopy Endometrium
+    ("c0010002-0000-0000-0000-000000000906", "Pale endometrium"),
+    ("c0010002-0000-0000-0000-000000000907", "Micropolyps"),
+    ("c0010002-0000-0000-0000-000000000908", "Thin endometrium"),
+    ("c0010002-0000-0000-0000-000000000909", "Congested endometrium"),
+    ("c0010002-0000-0000-0000-000000000910", "Endometrial fibrosis"),
+    ("c0010002-0000-0000-0000-000000000911", "Polypoidal endometrium"),
+    # Hysteroscopy Endometrial Cavity
+    ("c0010002-0000-0000-0000-000000000912", "Polyp"),
+    ("c0010002-0000-0000-0000-000000000913", "Septum"),
+    ("c0010002-0000-0000-0000-000000000914", "Adhesion"),
+    ("c0010002-0000-0000-0000-000000000915", "Fibroid"),
+    ("c0010002-0000-0000-0000-000000000916", "Subseptate"),
+    ("c0010002-0000-0000-0000-000000000917", "Tubular"),
+    ("c0010002-0000-0000-0000-000000000918", "Adequate"),
+    # Cervical Canal Direction
+    ("c0010002-0000-0000-0000-000000000919", "Straight cervical canal"),
+    ("c0010002-0000-0000-0000-000000000920", "Towards left"),
+    ("c0010002-0000-0000-0000-000000000921", "Towards right"),
+    ("c0010002-0000-0000-0000-000000000922", "Cervical adhesions"),
+    ("c0010002-0000-0000-0000-000000000923", "Anteverted"),
+    ("c0010002-0000-0000-0000-000000000924", "Retroverted"),
+    # Operative Hysteroscopy
+    ("c0010002-0000-0000-0000-000000000925", "Uterine Polypectomy"),
+    ("c0010002-0000-0000-0000-000000000926", "Metroplasty"),
+    ("c0010002-0000-0000-0000-000000000927", "Septal resection"),
+    ("c0010002-0000-0000-0000-000000000928", "Myomectomy"),
+    ("c0010002-0000-0000-0000-000000000929", "Adhesiolysis"),
+    ("c0010002-0000-0000-0000-000000000930", "Platelet Rich Plasma (PRP)/Stem cell instillation"),
+    # TVS Adenomyosis
+    ("c0010002-0000-0000-0000-000000000931", "Globular"),
+    ("c0010002-0000-0000-0000-000000000932", "Asymmetrical thickening"),
+    ("c0010002-0000-0000-0000-000000000933", "Cysts"),
+    ("c0010002-0000-0000-0000-000000000934", "Hyperechoic islands"),
+    ("c0010002-0000-0000-0000-000000000935", "Fan-shaped shadowing"),
+    ("c0010002-0000-0000-0000-000000000936", "Echogenic subendometrial lines and buds"),
+    ("c0010002-0000-0000-0000-000000000937", "Translesional Vascularity"),
+    ("c0010002-0000-0000-0000-000000000938", "Irregular junctional zone"),
+    ("c0010002-0000-0000-0000-000000000939", "Interrupted junctional zone"),
+    # TVS Fibroid Locations
+    ("c0010002-0000-0000-0000-000000000940", "Anterior wall"),
+    ("c0010002-0000-0000-0000-000000000941", "Posterior wall"),
+    ("c0010002-0000-0000-0000-000000000942", "Fundal"),
+    ("c0010002-0000-0000-0000-000000000943", "Right lateral"),
+    ("c0010002-0000-0000-0000-000000000944", "Left lateral"),
+    ("c0010002-0000-0000-0000-000000000945", "Cervical"),
+    # TVS Fibroid Stages FIGO
+    ("c0010002-0000-0000-0000-000000000946", "FIGO 0"),
+    ("c0010002-0000-0000-0000-000000000947", "FIGO 1"),
+    ("c0010002-0000-0000-0000-000000000948", "FIGO 2"),
+    ("c0010002-0000-0000-0000-000000000949", "FIGO 3"),
+    ("c0010002-0000-0000-0000-000000000950", "FIGO 4"),
+    ("c0010002-0000-0000-0000-000000000951", "FIGO 5"),
+    ("c0010002-0000-0000-0000-000000000952", "FIGO 6"),
+    ("c0010002-0000-0000-0000-000000000953", "FIGO 7"),
+    ("c0010002-0000-0000-0000-000000000954", "FIGO 8"),
+    ("c0010002-0000-0000-0000-000000000955", "FIGO 2-5"),
+    # TVS Endometrial Cavity
+    ("c0010002-0000-0000-0000-000000000956", "3D"),
+    ("c0010002-0000-0000-0000-000000000957", "4D"),
+    ("c0010002-0000-0000-0000-000000000958", "Endometrial Cavity Adhesions"),
+    ("c0010002-0000-0000-0000-000000000959", "Fluid in cavity"),
+    # TVS Endometrial-Myometrial Junction
+    ("c0010002-0000-0000-0000-000000000960", "Well-defined"),
+    ("c0010002-0000-0000-0000-000000000961", "Ill-defined"),
+    ("c0010002-0000-0000-0000-000000000962", "Irregular"),
+    ("c0010002-0000-0000-0000-000000000963", "Interrupted"),
+    # TVS Hydrosalpinx
+    ("c0010002-0000-0000-0000-000000000964", "Right Hydrosalpinx"),
+    ("c0010002-0000-0000-0000-000000000965", "Left Hydrosalpinx"),
+    ("c0010002-0000-0000-0000-000000000966", "Both Hydrosalpinx"),
+    # TVS Endometrial Thickness Pattern
+    ("c0010002-0000-0000-0000-000000000967", "Trilaminar"),
+    ("c0010002-0000-0000-0000-000000000968", "Diffuse"),
+    ("c0010002-0000-0000-0000-000000000969", "Fluid pattern"),
+]
+
 
 
 # We assemble the migration script wrapped in a stored procedure for IF/ELSE control flow
@@ -340,6 +425,9 @@ for u, name, _ in tb_site_answers:
     full_script.append(add_concept_sql(u, name, datatype_id=4, class_id=11))
 
 for u, name in att_duration_answers:
+    full_script.append(add_concept_sql(u, name, datatype_id=4, class_id=11))
+
+for u, name in female_surgical_answers:
     full_script.append(add_concept_sql(u, name, datatype_id=4, class_id=11))
 
 
@@ -550,7 +638,79 @@ full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000111", "Anti
 full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000112", "Day 2 Follicle-Stimulating Hormone", datatype_id=1, class_id=7, is_numeric=True, units="mIU/mL", allow_decimal=1))
 full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000113", "Day 2 Luteinizing Hormone", datatype_id=1, class_id=7, is_numeric=True, units="mIU/mL", allow_decimal=1))
 full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000114", "Thyroid-Stimulating Hormone", datatype_id=1, class_id=7, is_numeric=True, units="uIU/mL", allow_decimal=1))
-full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000115", "Serum Prolactin", datatype_id=1, class_id=7, is_numeric=True, units="ng/mL", allow_decimal=1))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000115", "Serum Prolactin", datatype_id=1, class_id=7, units="ng/mL", allow_decimal=1))
+
+# Investigation Female Surgical Procedure Concepts (Form 15)
+# Hysteroscopy (0116-0121)
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000116", "Hysteroscopy Ostia", datatype_id=2, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000117", "Hysteroscopy Endometrium", datatype_id=2, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000118", "Hysteroscopy Endometrial Cavity", datatype_id=2, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000119", "Hysteroscopy Cervical Canal Direction", datatype_id=2, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000120", "Hysteroscopy Dimensions", datatype_id=3, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000121", "Operative Hysteroscopy", datatype_id=2, class_id=7))
+
+# TVS Findings (0122-0173)
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000122", "Uterine Size Length", datatype_id=1, class_id=7, is_numeric=True, units="cm", allow_decimal=1))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000123", "Uterine Size Width", datatype_id=1, class_id=7, is_numeric=True, units="cm", allow_decimal=1))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000124", "Uterine Size Transverse Diameter", datatype_id=1, class_id=7, is_numeric=True, units="cm", allow_decimal=1))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000125", "Uterine Size Volume", datatype_id=1, class_id=7, is_numeric=True, units="cm3", allow_decimal=2))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000126", "Day of Cycle", datatype_id=1, class_id=7, is_numeric=True, allow_decimal=0))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000127", "Adenomyosis TVS Finding", datatype_id=2, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000128", "Uterine Calcifications", datatype_id=2, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000129", "Fibroids Present", datatype_id=2, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000130", "Number of Fibroids", datatype_id=1, class_id=7, is_numeric=True, allow_decimal=0))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000131", "Fibroids Location", datatype_id=2, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000132", "Fibroids Size", datatype_id=3, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000133", "Fibroid Stages FIGO", datatype_id=2, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000134", "TVS Endometrial Cavity", datatype_id=2, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000135", "Endometrial-Myometrial Junction", datatype_id=2, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000136", "Septate Finding", datatype_id=2, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000137", "Endometrial Cavity Septate Angle", datatype_id=1, class_id=7, is_numeric=True, units="degrees", allow_decimal=1))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000138", "Endometrial Cavity Length of Septum", datatype_id=1, class_id=7, is_numeric=True, units="cm", allow_decimal=2))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000139", "Bicornuate Uterus", datatype_id=2, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000140", "Bicornuate Uterus Right Volume", datatype_id=1, class_id=7, is_numeric=True, units="cm3", allow_decimal=2))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000141", "Bicornuate Uterus Left Volume", datatype_id=1, class_id=7, is_numeric=True, units="cm3", allow_decimal=2))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000142", "Unicornuate Uterus", datatype_id=2, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000143", "Unicornuate Uterus Volume", datatype_id=1, class_id=7, is_numeric=True, units="cm3", allow_decimal=2))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000144", "Polyp Finding", datatype_id=2, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000145", "Number of Polyps", datatype_id=1, class_id=7, is_numeric=True, allow_decimal=0))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000146", "Dimensions of Polyps", datatype_id=3, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000147", "Antral Follicle Count Right Ovary", datatype_id=1, class_id=7, is_numeric=True, allow_decimal=0))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000148", "Antral Follicle Count Left Ovary", datatype_id=1, class_id=7, is_numeric=True, allow_decimal=0))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000149", "Right Ovary Dimensions", datatype_id=3, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000150", "Left Ovary Dimensions", datatype_id=3, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000151", "Endometrioma Finding", datatype_id=2, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000152", "Number of Endometriomas", datatype_id=1, class_id=7, is_numeric=True, allow_decimal=0))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000153", "Number of Follicles Accessible", datatype_id=1, class_id=7, is_numeric=True, allow_decimal=0))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000154", "Number of Follicles Inaccessible", datatype_id=1, class_id=7, is_numeric=True, allow_decimal=0))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000155", "Endometrioma Right Ovary Dimensions", datatype_id=3, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000156", "Endometrioma Left Ovary Dimensions", datatype_id=3, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000157", "Focal Adenomyoma Dimensions", datatype_id=3, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000158", "Hydrosalpinx Finding", datatype_id=2, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000159", "Hydrosalpinx Dimensions", datatype_id=3, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000160", "Day 14-16 Endometrial Thickness Measurements", datatype_id=1, class_id=7, is_numeric=True, units="mm", allow_decimal=2))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000161", "Day 14-16 Endometrial Thickness Pattern", datatype_id=2, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000162", "Ovarian Dermoid Finding", datatype_id=2, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000163", "Right Ovary Dermoid Dimensions", datatype_id=3, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000164", "Left Ovary Dermoid Dimensions", datatype_id=3, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000165", "Haemorrhagic Cyst Finding", datatype_id=2, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000166", "Right Ovary Haemorrhagic Cyst Dimensions", datatype_id=3, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000167", "Left Ovary Haemorrhagic Cyst Dimensions", datatype_id=3, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000168", "Corpus Luteum Finding", datatype_id=2, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000169", "Right Ovary Corpus Luteum Dimensions", datatype_id=3, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000170", "Left Ovary Corpus Luteum Dimensions", datatype_id=3, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000171", "Paro-ovarian Cyst Finding", datatype_id=2, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000172", "Right Paro-ovarian Cyst Dimensions", datatype_id=3, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000173", "Left Paro-ovarian Cyst Dimensions", datatype_id=3, class_id=7))
+
+# Endometrial Zones (0174-0177)
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000174", "Zone 1 Myometrium Dimensions", datatype_id=1, class_id=7, is_numeric=True, units="cm", allow_decimal=2))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000175", "Zone 2 Hyperechoic Endometrial Edge Dimensions", datatype_id=1, class_id=7, is_numeric=True, units="cm", allow_decimal=2))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000176", "Zone 3 Internal Endometrial Hypoechoic Zone Dimensions", datatype_id=1, class_id=7, is_numeric=True, units="cm", allow_decimal=2))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000177", "Zone 4 Endometrial Cavity Dimensions", datatype_id=1, class_id=7, is_numeric=True, units="cm", allow_decimal=2))
+
+# Remarks (0178)
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000178", "Female Surgical Procedure Remarks", datatype_id=3, class_id=7))
 
 # 3. Link Answers
 # Education Wife answers
@@ -827,6 +987,165 @@ for ans_uuid, name, snomed_code in tb_site_answers:
 
 for ans_uuid, _ in att_duration_answers:
     full_script.append(add_answer_sql("c0010001-0000-0000-0000-000000000105", ans_uuid))
+
+# Form 15: Investigation Female Surgical Procedure Answer Links
+# Hysteroscopy Ostia (0116)
+for ans_uuid in [
+    "c0010002-0000-0000-0000-000000000901",  # Deep seated
+    "1115AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",  # Normal
+    "c0010002-0000-0000-0000-000000000902",  # Peri-ostial adhesion
+    "c0010002-0000-0000-0000-000000000903",  # Right ostia not seen
+    "c0010002-0000-0000-0000-000000000904",  # Left ostia not seen
+    "c0010002-0000-0000-0000-000000000905",  # Both ostia not seen
+]:
+    full_script.append(add_answer_sql("c0010001-0000-0000-0000-000000000116", ans_uuid))
+
+# Hysteroscopy Endometrium (0117)
+for ans_uuid in [
+    "1115AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",  # Normal
+    "c0010002-0000-0000-0000-000000000906",  # Pale endometrium
+    "c0010002-0000-0000-0000-000000000907",  # Micropolyps
+    "c0010002-0000-0000-0000-000000000908",  # Thin endometrium
+    "c0010002-0000-0000-0000-000000000909",  # Congested endometrium
+    "c0010002-0000-0000-0000-000000000910",  # Endometrial fibrosis
+    "c0010002-0000-0000-0000-000000000911",  # Polypoidal endometrium
+]:
+    full_script.append(add_answer_sql("c0010001-0000-0000-0000-000000000117", ans_uuid))
+
+# Hysteroscopy Endometrial Cavity (0118)
+for ans_uuid in [
+    "1115AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",  # Normal
+    "c0010002-0000-0000-0000-000000000912",  # Polyp
+    "c0010002-0000-0000-0000-000000000913",  # Septum
+    "c0010002-0000-0000-0000-000000000914",  # Adhesion
+    "c0010002-0000-0000-0000-000000000915",  # Fibroid
+    "c0010002-0000-0000-0000-000000000916",  # Subseptate
+    "c0010002-0000-0000-0000-000000000917",  # Tubular
+    "c0010002-0000-0000-0000-000000000918",  # Adequate
+]:
+    full_script.append(add_answer_sql("c0010001-0000-0000-0000-000000000118", ans_uuid))
+
+# Cervical Canal Direction (0119)
+for ans_uuid in [
+    "1115AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",  # Normal
+    "c0010002-0000-0000-0000-000000000919",  # Straight cervical canal
+    "c0010002-0000-0000-0000-000000000920",  # Towards left
+    "c0010002-0000-0000-0000-000000000921",  # Towards right
+    "c0010002-0000-0000-0000-000000000922",  # Cervical adhesions
+    "c0010002-0000-0000-0000-000000000923",  # Anteverted
+    "c0010002-0000-0000-0000-000000000924",  # Retroverted
+]:
+    full_script.append(add_answer_sql("c0010001-0000-0000-0000-000000000119", ans_uuid))
+
+# Operative Hysteroscopy (0121)
+for ans_uuid in [
+    "c0010002-0000-0000-0000-000000000925",  # Uterine Polypectomy
+    "c0010002-0000-0000-0000-000000000926",  # Metroplasty
+    "c0010002-0000-0000-0000-000000000927",  # Septal resection
+    "c0010002-0000-0000-0000-000000000928",  # Myomectomy
+    "c0010002-0000-0000-0000-000000000929",  # Adhesiolysis
+    "c0010002-0000-0000-0000-000000000930",  # PRP/Stem cell instillation
+]:
+    full_script.append(add_answer_sql("c0010001-0000-0000-0000-000000000121", ans_uuid))
+
+# TVS Adenomyosis (0127)
+for ans_uuid in [
+    "c0010002-0000-0000-0000-000000000931",  # Globular
+    "c0010002-0000-0000-0000-000000000932",  # Asymmetrical thickening
+    "c0010002-0000-0000-0000-000000000933",  # Cysts
+    "c0010002-0000-0000-0000-000000000934",  # Hyperechoic islands
+    "c0010002-0000-0000-0000-000000000935",  # Fan-shaped shadowing
+    "c0010002-0000-0000-0000-000000000936",  # Echogenic subendometrial lines and buds
+    "c0010002-0000-0000-0000-000000000937",  # Translesional Vascularity
+    "c0010002-0000-0000-0000-000000000938",  # Irregular junctional zone
+    "c0010002-0000-0000-0000-000000000939",  # Interrupted junctional zone
+]:
+    full_script.append(add_answer_sql("c0010001-0000-0000-0000-000000000127", ans_uuid))
+
+# Yes/No questions (Calcifications 0128, Fibroids 0129, Septate 0136, Bicornuate 0139, Unicornuate 0142, Dermoid 0162, Haemorrhagic 0165, Corpus Luteum 0168, Paro-ovarian 0171)
+for q_uuid in [
+    "c0010001-0000-0000-0000-000000000128",
+    "c0010001-0000-0000-0000-000000000129",
+    "c0010001-0000-0000-0000-000000000136",
+    "c0010001-0000-0000-0000-000000000139",
+    "c0010001-0000-0000-0000-000000000142",
+    "c0010001-0000-0000-0000-000000000162",
+    "c0010001-0000-0000-0000-000000000165",
+    "c0010001-0000-0000-0000-000000000168",
+    "c0010001-0000-0000-0000-000000000171",
+]:
+    full_script.append(add_answer_sql(q_uuid, "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"))
+    full_script.append(add_answer_sql(q_uuid, "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"))
+
+# Fibroids Location (0131)
+for ans_uuid in [
+    "c0010002-0000-0000-0000-000000000940",  # Anterior wall
+    "c0010002-0000-0000-0000-000000000941",  # Posterior wall
+    "c0010002-0000-0000-0000-000000000942",  # Fundal
+    "c0010002-0000-0000-0000-000000000943",  # Right lateral
+    "c0010002-0000-0000-0000-000000000944",  # Left lateral
+    "c0010002-0000-0000-0000-000000000945",  # Cervical
+]:
+    full_script.append(add_answer_sql("c0010001-0000-0000-0000-000000000131", ans_uuid))
+
+# Fibroid Stages FIGO (0133)
+for ans_uuid in [
+    "c0010002-0000-0000-0000-000000000946",
+    "c0010002-0000-0000-0000-000000000947",
+    "c0010002-0000-0000-0000-000000000948",
+    "c0010002-0000-0000-0000-000000000949",
+    "c0010002-0000-0000-0000-000000000950",
+    "c0010002-0000-0000-0000-000000000951",
+    "c0010002-0000-0000-0000-000000000952",
+    "c0010002-0000-0000-0000-000000000953",
+    "c0010002-0000-0000-0000-000000000954",
+    "c0010002-0000-0000-0000-000000000955",
+]:
+    full_script.append(add_answer_sql("c0010001-0000-0000-0000-000000000133", ans_uuid))
+
+# TVS Endometrial Cavity (0134)
+for ans_uuid in [
+    "1115AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",  # Normal
+    "c0010002-0000-0000-0000-000000000956",  # 3D
+    "c0010002-0000-0000-0000-000000000957",  # 4D
+    "c0010002-0000-0000-0000-000000000958",  # Endometrial Cavity Adhesions
+    "c0010002-0000-0000-0000-000000000959",  # Fluid in cavity
+]:
+    full_script.append(add_answer_sql("c0010001-0000-0000-0000-000000000134", ans_uuid))
+
+# Endometrial-Myometrial Junction (0135)
+for ans_uuid in [
+    "c0010002-0000-0000-0000-000000000960",  # Well-defined
+    "c0010002-0000-0000-0000-000000000961",  # Ill-defined
+    "c0010002-0000-0000-0000-000000000962",  # Irregular
+    "c0010002-0000-0000-0000-000000000963",  # Interrupted
+]:
+    full_script.append(add_answer_sql("c0010001-0000-0000-0000-000000000135", ans_uuid))
+
+# Present/Absent questions (Polyp 0144, Endometrioma 0151)
+for q_uuid in [
+    "c0010001-0000-0000-0000-000000000144",
+    "c0010001-0000-0000-0000-000000000151",
+]:
+    full_script.append(add_answer_sql(q_uuid, "163748AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"))  # Present
+    full_script.append(add_answer_sql(q_uuid, "163747AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"))  # Absent
+
+# Hydrosalpinx Finding (0158)
+for ans_uuid in [
+    "c0010002-0000-0000-0000-000000000964",  # Right Hydrosalpinx
+    "c0010002-0000-0000-0000-000000000965",  # Left Hydrosalpinx
+    "c0010002-0000-0000-0000-000000000966",  # Both Hydrosalpinx
+    "163747AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",  # Absent
+]:
+    full_script.append(add_answer_sql("c0010001-0000-0000-0000-000000000158", ans_uuid))
+
+# Day 14-16 Endometrial Thickness Pattern (0161)
+for ans_uuid in [
+    "c0010002-0000-0000-0000-000000000967",  # Trilaminar
+    "c0010002-0000-0000-0000-000000000968",  # Diffuse
+    "c0010002-0000-0000-0000-000000000969",  # Fluid pattern
+]:
+    full_script.append(add_answer_sql("c0010001-0000-0000-0000-000000000161", ans_uuid))
 
 
 full_script.append("END$$")

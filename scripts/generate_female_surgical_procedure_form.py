@@ -1,0 +1,867 @@
+import json
+
+# Yes / No options
+yes_no_answers = [
+    {"concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "label": "Yes"},
+    {"concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "label": "No"},
+]
+
+# Present / Absent options
+present_absent_answers = [
+    {"concept": "163748AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "label": "Present"},
+    {"concept": "163747AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "label": "Absent"},
+]
+
+# Hysteroscopy Ostia answers
+ostia_answers = [
+    {"concept": "c0010002-0000-0000-0000-000000000901", "label": "Deep seated"},
+    {"concept": "1115AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "label": "Normal"},
+    {"concept": "c0010002-0000-0000-0000-000000000902", "label": "Peri-ostial adhesion"},
+    {"concept": "c0010002-0000-0000-0000-000000000903", "label": "Right ostia not seen"},
+    {"concept": "c0010002-0000-0000-0000-000000000904", "label": "Left ostia not seen"},
+    {"concept": "c0010002-0000-0000-0000-000000000905", "label": "Both ostia not seen"},
+]
+
+# Hysteroscopy Endometrium answers
+hyst_endometrium_answers = [
+    {"concept": "1115AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "label": "Normal"},
+    {"concept": "c0010002-0000-0000-0000-000000000906", "label": "Pale"},
+    {"concept": "c0010002-0000-0000-0000-000000000907", "label": "Micropolyps"},
+    {"concept": "c0010002-0000-0000-0000-000000000908", "label": "Thin"},
+    {"concept": "c0010002-0000-0000-0000-000000000909", "label": "Congested"},
+    {"concept": "c0010002-0000-0000-0000-000000000910", "label": "Fibrosis"},
+    {"concept": "c0010002-0000-0000-0000-000000000911", "label": "Polypoidal"},
+]
+
+# Hysteroscopy Endometrial Cavity answers
+hyst_cavity_answers = [
+    {"concept": "1115AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "label": "Normal"},
+    {"concept": "c0010002-0000-0000-0000-000000000912", "label": "Polyp"},
+    {"concept": "c0010002-0000-0000-0000-000000000913", "label": "Septum"},
+    {"concept": "c0010002-0000-0000-0000-000000000914", "label": "Adhesion"},
+    {"concept": "c0010002-0000-0000-0000-000000000915", "label": "Fibroid"},
+    {"concept": "c0010002-0000-0000-0000-000000000916", "label": "Subseptate"},
+    {"concept": "c0010002-0000-0000-0000-000000000917", "label": "Tubular"},
+    {"concept": "c0010002-0000-0000-0000-000000000918", "label": "Adequate"},
+]
+
+# Cervical Canal Direction answers
+cervical_direction_answers = [
+    {"concept": "1115AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "label": "Normal"},
+    {"concept": "c0010002-0000-0000-0000-000000000919", "label": "Straight"},
+    {"concept": "c0010002-0000-0000-0000-000000000920", "label": "Towards left"},
+    {"concept": "c0010002-0000-0000-0000-000000000921", "label": "Towards right"},
+    {"concept": "c0010002-0000-0000-0000-000000000922", "label": "Adhesions"},
+    {"concept": "c0010002-0000-0000-0000-000000000923", "label": "Anteverted"},
+    {"concept": "c0010002-0000-0000-0000-000000000924", "label": "Retroverted"},
+]
+
+# Operative Hysteroscopy answers
+operative_hysteroscopy_answers = [
+    {"concept": "c0010002-0000-0000-0000-000000000925", "label": "Uterine Polypectomy"},
+    {"concept": "c0010002-0000-0000-0000-000000000926", "label": "Metroplasty"},
+    {"concept": "c0010002-0000-0000-0000-000000000927", "label": "Septal resection"},
+    {"concept": "c0010002-0000-0000-0000-000000000928", "label": "Myomectomy"},
+    {"concept": "c0010002-0000-0000-0000-000000000929", "label": "Adhesiolysis"},
+    {"concept": "c0010002-0000-0000-0000-000000000930", "label": "Platelet Rich Plasma (PRP)/Stem cell instillation"},
+]
+
+# TVS Adenomyosis answers
+adenomyosis_answers = [
+    {"concept": "c0010002-0000-0000-0000-000000000931", "label": "Globular"},
+    {"concept": "c0010002-0000-0000-0000-000000000932", "label": "Asymmetrical thickening"},
+    {"concept": "c0010002-0000-0000-0000-000000000933", "label": "Cysts"},
+    {"concept": "c0010002-0000-0000-0000-000000000934", "label": "Hyperechoic islands"},
+    {"concept": "c0010002-0000-0000-0000-000000000935", "label": "Fan-shaped shadowing"},
+    {"concept": "c0010002-0000-0000-0000-000000000936", "label": "Echogenic subendometrial lines and buds"},
+    {"concept": "c0010002-0000-0000-0000-000000000937", "label": "Translesional Vascularity"},
+    {"concept": "c0010002-0000-0000-0000-000000000938", "label": "Irregular junctional zone"},
+    {"concept": "c0010002-0000-0000-0000-000000000939", "label": "Interrupted junctional zone"},
+]
+
+# Fibroids Location answers
+fibroid_location_answers = [
+    {"concept": "c0010002-0000-0000-0000-000000000940", "label": "Anterior wall"},
+    {"concept": "c0010002-0000-0000-0000-000000000941", "label": "Posterior wall"},
+    {"concept": "c0010002-0000-0000-0000-000000000942", "label": "Fundal"},
+    {"concept": "c0010002-0000-0000-0000-000000000943", "label": "Right lateral"},
+    {"concept": "c0010002-0000-0000-0000-000000000944", "label": "Left lateral"},
+    {"concept": "c0010002-0000-0000-0000-000000000945", "label": "Cervical"},
+]
+
+# Fibroid Stages FIGO answers
+figo_answers = [
+    {"concept": "c0010002-0000-0000-0000-000000000946", "label": "FIGO 0"},
+    {"concept": "c0010002-0000-0000-0000-000000000947", "label": "FIGO 1"},
+    {"concept": "c0010002-0000-0000-0000-000000000948", "label": "FIGO 2"},
+    {"concept": "c0010002-0000-0000-0000-000000000949", "label": "FIGO 3"},
+    {"concept": "c0010002-0000-0000-0000-000000000950", "label": "FIGO 4"},
+    {"concept": "c0010002-0000-0000-0000-000000000951", "label": "FIGO 5"},
+    {"concept": "c0010002-0000-0000-0000-000000000952", "label": "FIGO 6"},
+    {"concept": "c0010002-0000-0000-0000-000000000953", "label": "FIGO 7"},
+    {"concept": "c0010002-0000-0000-0000-000000000954", "label": "FIGO 8"},
+    {"concept": "c0010002-0000-0000-0000-000000000955", "label": "FIGO 2-5"},
+]
+
+# TVS Endometrial Cavity answers
+tvs_cavity_answers = [
+    {"concept": "1115AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "label": "Normal"},
+    {"concept": "c0010002-0000-0000-0000-000000000956", "label": "3D"},
+    {"concept": "c0010002-0000-0000-0000-000000000957", "label": "4D"},
+    {"concept": "c0010002-0000-0000-0000-000000000958", "label": "Adhesions"},
+    {"concept": "c0010002-0000-0000-0000-000000000959", "label": "Fluid in cavity"},
+]
+
+# TVS Endometrial-Myometrial Junction answers
+em_junction_answers = [
+    {"concept": "c0010002-0000-0000-0000-000000000960", "label": "Well-defined"},
+    {"concept": "c0010002-0000-0000-0000-000000000961", "label": "Ill-defined"},
+    {"concept": "c0010002-0000-0000-0000-000000000962", "label": "Irregular"},
+    {"concept": "c0010002-0000-0000-0000-000000000963", "label": "Interrupted"},
+]
+
+# Hydrosalpinx answers
+hydrosalpinx_answers = [
+    {"concept": "c0010002-0000-0000-0000-000000000964", "label": "Right Hydrosalpinx"},
+    {"concept": "c0010002-0000-0000-0000-000000000965", "label": "Left Hydrosalpinx"},
+    {"concept": "c0010002-0000-0000-0000-000000000966", "label": "Both Hydrosalpinx"},
+    {"concept": "163747AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "label": "Absent"},
+]
+
+# Day 14-16 Endometrial Thickness Pattern answers
+et_pattern_answers = [
+    {"concept": "c0010002-0000-0000-0000-000000000967", "label": "Trilaminar"},
+    {"concept": "c0010002-0000-0000-0000-000000000968", "label": "Diffuse"},
+    {"concept": "c0010002-0000-0000-0000-000000000969", "label": "Fluid"},
+]
+
+female_surgical_procedure_form = {
+    "name": "AIIMS Visit: Investigation Female Surgical Procedure",
+    "description": "AIIMS Department of Reproductive Medicine & IVF - Female Surgical Procedure, Hysteroscopy & TVS Findings",
+    "version": "1.0",
+    "published": True,
+    "retired": False,
+    "encounter": "Consultation",
+    "processor": "EncounterFormProcessor",
+    "referencedForms": [],
+    "pages": [
+        {
+            "label": "Investigation Female Surgical Procedure",
+            "sections": [
+                {
+                    "label": "Hysteroscopy Findings",
+                    "isExpanded": True,
+                    "questions": [
+                        {
+                            "label": "Ostia",
+                            "type": "obs",
+                            "id": "hysteroscopy_ostia",
+                            "required": "false",
+                            "questionOptions": {
+                                "rendering": "select",
+                                "concept": "c0010001-0000-0000-0000-000000000116",
+                                "answers": ostia_answers,
+                            },
+                        },
+                        {
+                            "label": "Endometrium",
+                            "type": "obs",
+                            "id": "hysteroscopy_endometrium",
+                            "required": "false",
+                            "questionOptions": {
+                                "rendering": "select",
+                                "concept": "c0010001-0000-0000-0000-000000000117",
+                                "answers": hyst_endometrium_answers,
+                            },
+                        },
+                        {
+                            "label": "Endometrial Cavity",
+                            "type": "obs",
+                            "id": "hysteroscopy_endometrial_cavity",
+                            "required": "false",
+                            "questionOptions": {
+                                "rendering": "select",
+                                "concept": "c0010001-0000-0000-0000-000000000118",
+                                "answers": hyst_cavity_answers,
+                            },
+                        },
+                        {
+                            "label": "Cervical Canal Direction",
+                            "type": "obs",
+                            "id": "cervical_canal_direction",
+                            "required": "false",
+                            "questionOptions": {
+                                "rendering": "select",
+                                "concept": "c0010001-0000-0000-0000-000000000119",
+                                "answers": cervical_direction_answers,
+                            },
+                        },
+                        {
+                            "label": "Hysteroscopy Dimensions (cm)",
+                            "type": "obs",
+                            "id": "hysteroscopy_dimensions",
+                            "required": "false",
+                            "questionOptions": {
+                                "rendering": "text",
+                                "concept": "c0010001-0000-0000-0000-000000000120",
+                            },
+                        },
+                        {
+                            "label": "Operative Hysteroscopy",
+                            "type": "obs",
+                            "id": "operative_hysteroscopy",
+                            "required": "false",
+                            "questionOptions": {
+                                "rendering": "select",
+                                "concept": "c0010001-0000-0000-0000-000000000121",
+                                "answers": operative_hysteroscopy_answers,
+                            },
+                        },
+                    ],
+                },
+                {
+                    "label": "TVS Uterine Size & Adenomyosis",
+                    "isExpanded": True,
+                    "questions": [
+                        {
+                            "label": "Uterine size - Length (cm)",
+                            "type": "obs",
+                            "id": "uterine_size_length",
+                            "required": "false",
+                            "questionOptions": {
+                                "rendering": "number",
+                                "concept": "c0010001-0000-0000-0000-000000000122",
+                            },
+                        },
+                        {
+                            "label": "Uterine size - Width (cm)",
+                            "type": "obs",
+                            "id": "uterine_size_width",
+                            "required": "false",
+                            "questionOptions": {
+                                "rendering": "number",
+                                "concept": "c0010001-0000-0000-0000-000000000123",
+                            },
+                        },
+                        {
+                            "label": "Uterine size - Transverse Diameter (cm)",
+                            "type": "obs",
+                            "id": "uterine_size_transverse",
+                            "required": "false",
+                            "questionOptions": {
+                                "rendering": "number",
+                                "concept": "c0010001-0000-0000-0000-000000000124",
+                            },
+                        },
+                        {
+                            "label": "Uterine size - Volume (cm³)",
+                            "type": "obs",
+                            "id": "uterine_size_volume",
+                            "required": "false",
+                            "questionOptions": {
+                                "rendering": "number",
+                                "concept": "c0010001-0000-0000-0000-000000000125",
+                            },
+                        },
+                        {
+                            "label": "Day of Cycle",
+                            "type": "obs",
+                            "id": "day_of_cycle",
+                            "required": "false",
+                            "questionOptions": {
+                                "rendering": "number",
+                                "concept": "c0010001-0000-0000-0000-000000000126",
+                            },
+                        },
+                        {
+                            "label": "Adenomyosis",
+                            "type": "obs",
+                            "id": "adenomyosis",
+                            "required": "false",
+                            "questionOptions": {
+                                "rendering": "select",
+                                "concept": "c0010001-0000-0000-0000-000000000127",
+                                "answers": adenomyosis_answers,
+                            },
+                        },
+                        {
+                            "label": "Calcifications",
+                            "type": "obs",
+                            "id": "calcifications",
+                            "required": "false",
+                            "questionOptions": {
+                                "rendering": "radio",
+                                "concept": "c0010001-0000-0000-0000-000000000128",
+                                "answers": yes_no_answers,
+                            },
+                        },
+                        {
+                            "label": "Focal Adenomyoma Dimensions",
+                            "type": "obs",
+                            "id": "focal_adenomyoma_dimensions",
+                            "required": "false",
+                            "questionOptions": {
+                                "rendering": "text",
+                                "concept": "c0010001-0000-0000-0000-000000000157",
+                            },
+                        },
+                    ],
+                },
+                {
+                    "label": "TVS Fibroids",
+                    "isExpanded": True,
+                    "questions": [
+                        {
+                            "label": "Fibroids",
+                            "type": "obs",
+                            "id": "fibroids_present",
+                            "required": "false",
+                            "questionOptions": {
+                                "rendering": "radio",
+                                "concept": "c0010001-0000-0000-0000-000000000129",
+                                "answers": yes_no_answers,
+                            },
+                        },
+                        {
+                            "label": "Number of Fibroids",
+                            "type": "obs",
+                            "id": "number_of_fibroids",
+                            "required": "false",
+                            "questionOptions": {
+                                "rendering": "number",
+                                "concept": "c0010001-0000-0000-0000-000000000130",
+                            },
+                        },
+                        {
+                            "label": "Fibroids Location",
+                            "type": "obs",
+                            "id": "fibroids_location",
+                            "required": "false",
+                            "questionOptions": {
+                                "rendering": "select",
+                                "concept": "c0010001-0000-0000-0000-000000000131",
+                                "answers": fibroid_location_answers,
+                            },
+                        },
+                        {
+                            "label": "Fibroids Size",
+                            "type": "obs",
+                            "id": "fibroids_size",
+                            "required": "false",
+                            "questionOptions": {
+                                "rendering": "text",
+                                "concept": "c0010001-0000-0000-0000-000000000132",
+                            },
+                        },
+                        {
+                            "label": "Fibroid Stages (FIGO)",
+                            "type": "obs",
+                            "id": "fibroid_stages_figo",
+                            "required": "false",
+                            "questionOptions": {
+                                "rendering": "select",
+                                "concept": "c0010001-0000-0000-0000-000000000133",
+                                "answers": figo_answers,
+                            },
+                        },
+                    ],
+                },
+                {
+                    "label": "TVS Endometrial Cavity & Anomalies",
+                    "isExpanded": True,
+                    "questions": [
+                        {
+                            "label": "Endometrial Cavity",
+                            "type": "obs",
+                            "id": "tvs_endometrial_cavity",
+                            "required": "false",
+                            "questionOptions": {
+                                "rendering": "select",
+                                "concept": "c0010001-0000-0000-0000-000000000134",
+                                "answers": tvs_cavity_answers,
+                            },
+                        },
+                        {
+                            "label": "Endometrial-Myometrial Junction",
+                            "type": "obs",
+                            "id": "endometrial_myometrial_junction",
+                            "required": "false",
+                            "questionOptions": {
+                                "rendering": "select",
+                                "concept": "c0010001-0000-0000-0000-000000000135",
+                                "answers": em_junction_answers,
+                            },
+                        },
+                        {
+                            "label": "Septate Finding",
+                            "type": "obs",
+                            "id": "septate_finding",
+                            "required": "false",
+                            "questionOptions": {
+                                "rendering": "radio",
+                                "concept": "c0010001-0000-0000-0000-000000000136",
+                                "answers": yes_no_answers,
+                            },
+                        },
+                        {
+                            "label": "Septate Angle (degrees)",
+                            "type": "obs",
+                            "id": "septate_angle",
+                            "required": "false",
+                            "questionOptions": {
+                                "rendering": "number",
+                                "concept": "c0010001-0000-0000-0000-000000000137",
+                            },
+                        },
+                        {
+                            "label": "Length of Septum (cm)",
+                            "type": "obs",
+                            "id": "length_of_septum",
+                            "required": "false",
+                            "questionOptions": {
+                                "rendering": "number",
+                                "concept": "c0010001-0000-0000-0000-000000000138",
+                            },
+                        },
+                        {
+                            "label": "Bicornuate Uterus",
+                            "type": "obs",
+                            "id": "bicornuate_uterus",
+                            "required": "false",
+                            "questionOptions": {
+                                "rendering": "radio",
+                                "concept": "c0010001-0000-0000-0000-000000000139",
+                                "answers": yes_no_answers,
+                            },
+                        },
+                        {
+                            "label": "Bicornuate Uterus - Right Volume (cm³)",
+                            "type": "obs",
+                            "id": "bicornuate_uterus_right_volume",
+                            "required": "false",
+                            "questionOptions": {
+                                "rendering": "number",
+                                "concept": "c0010001-0000-0000-0000-000000000140",
+                            },
+                        },
+                        {
+                            "label": "Bicornuate Uterus - Left Volume (cm³)",
+                            "type": "obs",
+                            "id": "bicornuate_uterus_left_volume",
+                            "required": "false",
+                            "questionOptions": {
+                                "rendering": "number",
+                                "concept": "c0010001-0000-0000-0000-000000000141",
+                            },
+                        },
+                        {
+                            "label": "Unicornuate Uterus",
+                            "type": "obs",
+                            "id": "unicornuate_uterus",
+                            "required": "false",
+                            "questionOptions": {
+                                "rendering": "radio",
+                                "concept": "c0010001-0000-0000-0000-000000000142",
+                                "answers": yes_no_answers,
+                            },
+                        },
+                        {
+                            "label": "Unicornuate Uterus Volume (cm³)",
+                            "type": "obs",
+                            "id": "unicornuate_uterus_volume",
+                            "required": "false",
+                            "questionOptions": {
+                                "rendering": "number",
+                                "concept": "c0010001-0000-0000-0000-000000000143",
+                            },
+                        },
+                        {
+                            "label": "Polyp",
+                            "type": "obs",
+                            "id": "polyp_present",
+                            "required": "false",
+                            "questionOptions": {
+                                "rendering": "radio",
+                                "concept": "c0010001-0000-0000-0000-000000000144",
+                                "answers": present_absent_answers,
+                            },
+                        },
+                        {
+                            "label": "Number of Polyps",
+                            "type": "obs",
+                            "id": "number_of_polyps",
+                            "required": "false",
+                            "questionOptions": {
+                                "rendering": "number",
+                                "concept": "c0010001-0000-0000-0000-000000000145",
+                            },
+                        },
+                        {
+                            "label": "Dimensions of Polyps",
+                            "type": "obs",
+                            "id": "dimensions_of_polyps",
+                            "required": "false",
+                            "questionOptions": {
+                                "rendering": "text",
+                                "concept": "c0010001-0000-0000-0000-000000000146",
+                            },
+                        },
+                    ],
+                },
+                {
+                    "label": "TVS Ovaries, AFC & Endometrioma",
+                    "isExpanded": True,
+                    "questions": [
+                        {
+                            "label": "Antral Follicle Count - Right Ovary",
+                            "type": "obs",
+                            "id": "afc_right_ovary",
+                            "required": "false",
+                            "questionOptions": {
+                                "rendering": "number",
+                                "concept": "c0010001-0000-0000-0000-000000000147",
+                            },
+                        },
+                        {
+                            "label": "Antral Follicle Count - Left Ovary",
+                            "type": "obs",
+                            "id": "afc_left_ovary",
+                            "required": "false",
+                            "questionOptions": {
+                                "rendering": "number",
+                                "concept": "c0010001-0000-0000-0000-000000000148",
+                            },
+                        },
+                        {
+                            "label": "Right Ovary Dimensions",
+                            "type": "obs",
+                            "id": "right_ovary_dimensions",
+                            "required": "false",
+                            "questionOptions": {
+                                "rendering": "text",
+                                "concept": "c0010001-0000-0000-0000-000000000149",
+                            },
+                        },
+                        {
+                            "label": "Left Ovary Dimensions",
+                            "type": "obs",
+                            "id": "left_ovary_dimensions",
+                            "required": "false",
+                            "questionOptions": {
+                                "rendering": "text",
+                                "concept": "c0010001-0000-0000-0000-000000000150",
+                            },
+                        },
+                        {
+                            "label": "Endometrioma",
+                            "type": "obs",
+                            "id": "endometrioma_present",
+                            "required": "false",
+                            "questionOptions": {
+                                "rendering": "radio",
+                                "concept": "c0010001-0000-0000-0000-000000000151",
+                                "answers": present_absent_answers,
+                            },
+                        },
+                        {
+                            "label": "Number of Endometrioma",
+                            "type": "obs",
+                            "id": "number_of_endometrioma",
+                            "required": "false",
+                            "questionOptions": {
+                                "rendering": "number",
+                                "concept": "c0010001-0000-0000-0000-000000000152",
+                            },
+                        },
+                        {
+                            "label": "Number of Follicles Accessible",
+                            "type": "obs",
+                            "id": "follicles_accessible",
+                            "required": "false",
+                            "questionOptions": {
+                                "rendering": "number",
+                                "concept": "c0010001-0000-0000-0000-000000000153",
+                            },
+                        },
+                        {
+                            "label": "Number of Follicles Inaccessible",
+                            "type": "obs",
+                            "id": "follicles_inaccessible",
+                            "required": "false",
+                            "questionOptions": {
+                                "rendering": "number",
+                                "concept": "c0010001-0000-0000-0000-000000000154",
+                            },
+                        },
+                        {
+                            "label": "Endometrioma Right Ovary Dimensions",
+                            "type": "obs",
+                            "id": "endometrioma_right_dimensions",
+                            "required": "false",
+                            "questionOptions": {
+                                "rendering": "text",
+                                "concept": "c0010001-0000-0000-0000-000000000155",
+                            },
+                        },
+                        {
+                            "label": "Endometrioma Left Ovary Dimensions",
+                            "type": "obs",
+                            "id": "endometrioma_left_dimensions",
+                            "required": "false",
+                            "questionOptions": {
+                                "rendering": "text",
+                                "concept": "c0010001-0000-0000-0000-000000000156",
+                            },
+                        },
+                    ],
+                },
+                {
+                    "label": "TVS Hydrosalpinx & Endometrial Thickness",
+                    "isExpanded": True,
+                    "questions": [
+                        {
+                            "label": "Hydrosalpinx",
+                            "type": "obs",
+                            "id": "hydrosalpinx",
+                            "required": "false",
+                            "questionOptions": {
+                                "rendering": "select",
+                                "concept": "c0010001-0000-0000-0000-000000000158",
+                                "answers": hydrosalpinx_answers,
+                            },
+                        },
+                        {
+                            "label": "Hydrosalpinx Dimensions",
+                            "type": "obs",
+                            "id": "hydrosalpinx_dimensions",
+                            "required": "false",
+                            "questionOptions": {
+                                "rendering": "text",
+                                "concept": "c0010001-0000-0000-0000-000000000159",
+                            },
+                        },
+                        {
+                            "label": "Day 14-16 Endometrial Thickness (mm)",
+                            "type": "obs",
+                            "id": "day14_16_endometrial_thickness",
+                            "required": "false",
+                            "questionOptions": {
+                                "rendering": "number",
+                                "concept": "c0010001-0000-0000-0000-000000000160",
+                            },
+                        },
+                        {
+                            "label": "Day 14-16 Endometrial Thickness Pattern",
+                            "type": "obs",
+                            "id": "day14_16_endometrial_pattern",
+                            "required": "false",
+                            "questionOptions": {
+                                "rendering": "select",
+                                "concept": "c0010001-0000-0000-0000-000000000161",
+                                "answers": et_pattern_answers,
+                            },
+                        },
+                    ],
+                },
+                {
+                    "label": "TVS Ovarian Cysts",
+                    "isExpanded": True,
+                    "questions": [
+                        {
+                            "label": "Ovarian Dermoid",
+                            "type": "obs",
+                            "id": "ovarian_dermoid",
+                            "required": "false",
+                            "questionOptions": {
+                                "rendering": "radio",
+                                "concept": "c0010001-0000-0000-0000-000000000162",
+                                "answers": yes_no_answers,
+                            },
+                        },
+                        {
+                            "label": "Right Ovary Dermoid Dimensions",
+                            "type": "obs",
+                            "id": "right_ovary_dermoid_dimensions",
+                            "required": "false",
+                            "questionOptions": {
+                                "rendering": "text",
+                                "concept": "c0010001-0000-0000-0000-000000000163",
+                            },
+                        },
+                        {
+                            "label": "Left Ovary Dermoid Dimensions",
+                            "type": "obs",
+                            "id": "left_ovary_dermoid_dimensions",
+                            "required": "false",
+                            "questionOptions": {
+                                "rendering": "text",
+                                "concept": "c0010001-0000-0000-0000-000000000164",
+                            },
+                        },
+                        {
+                            "label": "Haemorrhagic Cyst",
+                            "type": "obs",
+                            "id": "haemorrhagic_cyst",
+                            "required": "false",
+                            "questionOptions": {
+                                "rendering": "radio",
+                                "concept": "c0010001-0000-0000-0000-000000000165",
+                                "answers": yes_no_answers,
+                            },
+                        },
+                        {
+                            "label": "Right Ovary Haemorrhagic Cyst Dimensions",
+                            "type": "obs",
+                            "id": "right_ovary_haemorrhagic_dimensions",
+                            "required": "false",
+                            "questionOptions": {
+                                "rendering": "text",
+                                "concept": "c0010001-0000-0000-0000-000000000166",
+                            },
+                        },
+                        {
+                            "label": "Left Ovary Haemorrhagic Cyst Dimensions",
+                            "type": "obs",
+                            "id": "left_ovary_haemorrhagic_dimensions",
+                            "required": "false",
+                            "questionOptions": {
+                                "rendering": "text",
+                                "concept": "c0010001-0000-0000-0000-000000000167",
+                            },
+                        },
+                        {
+                            "label": "Corpus Luteum",
+                            "type": "obs",
+                            "id": "corpus_luteum",
+                            "required": "false",
+                            "questionOptions": {
+                                "rendering": "radio",
+                                "concept": "c0010001-0000-0000-0000-000000000168",
+                                "answers": yes_no_answers,
+                            },
+                        },
+                        {
+                            "label": "Corpus Luteum Right Ovary Dimensions",
+                            "type": "obs",
+                            "id": "corpus_luteum_right_dimensions",
+                            "required": "false",
+                            "questionOptions": {
+                                "rendering": "text",
+                                "concept": "c0010001-0000-0000-0000-000000000169",
+                            },
+                        },
+                        {
+                            "label": "Corpus Luteum Left Ovary Dimensions",
+                            "type": "obs",
+                            "id": "corpus_luteum_left_dimensions",
+                            "required": "false",
+                            "questionOptions": {
+                                "rendering": "text",
+                                "concept": "c0010001-0000-0000-0000-000000000170",
+                            },
+                        },
+                        {
+                            "label": "Paro-ovarian Cyst",
+                            "type": "obs",
+                            "id": "paro_ovarian_cyst",
+                            "required": "false",
+                            "questionOptions": {
+                                "rendering": "radio",
+                                "concept": "c0010001-0000-0000-0000-000000000171",
+                                "answers": yes_no_answers,
+                            },
+                        },
+                        {
+                            "label": "Paro-ovarian Cyst Right Dimensions",
+                            "type": "obs",
+                            "id": "paro_ovarian_right_dimensions",
+                            "required": "false",
+                            "questionOptions": {
+                                "rendering": "text",
+                                "concept": "c0010001-0000-0000-0000-000000000172",
+                            },
+                        },
+                        {
+                            "label": "Paro-ovarian Cyst Left Dimensions",
+                            "type": "obs",
+                            "id": "paro_ovarian_left_dimensions",
+                            "required": "false",
+                            "questionOptions": {
+                                "rendering": "text",
+                                "concept": "c0010001-0000-0000-0000-000000000173",
+                            },
+                        },
+                    ],
+                },
+                {
+                    "label": "Endometrial Zones",
+                    "isExpanded": True,
+                    "questions": [
+                        {
+                            "label": "Zone 1 (Myometrium surrounding the endometrium) (cm)",
+                            "type": "obs",
+                            "id": "zone_1_dimensions",
+                            "required": "false",
+                            "questionOptions": {
+                                "rendering": "number",
+                                "concept": "c0010001-0000-0000-0000-000000000174",
+                            },
+                        },
+                        {
+                            "label": "Zone 2 (Hyperechoic endometrial edge) (cm)",
+                            "type": "obs",
+                            "id": "zone_2_dimensions",
+                            "required": "false",
+                            "questionOptions": {
+                                "rendering": "number",
+                                "concept": "c0010001-0000-0000-0000-000000000175",
+                            },
+                        },
+                        {
+                            "label": "Zone 3 (Internal endometrial hypoechoic zone) (cm)",
+                            "type": "obs",
+                            "id": "zone_3_dimensions",
+                            "required": "false",
+                            "questionOptions": {
+                                "rendering": "number",
+                                "concept": "c0010001-0000-0000-0000-000000000176",
+                            },
+                        },
+                        {
+                            "label": "Zone 4 (Endometrial cavity) (cm)",
+                            "type": "obs",
+                            "id": "zone_4_dimensions",
+                            "required": "false",
+                            "questionOptions": {
+                                "rendering": "number",
+                                "concept": "c0010001-0000-0000-0000-000000000177",
+                            },
+                        },
+                    ],
+                },
+                {
+                    "label": "Surgical Procedure Remarks",
+                    "isExpanded": True,
+                    "questions": [
+                        {
+                            "label": "Remarks / Notes",
+                            "type": "obs",
+                            "id": "surgical_procedure_remarks",
+                            "required": "false",
+                            "questionOptions": {
+                                "rendering": "textarea",
+                                "concept": "c0010001-0000-0000-0000-000000000178",
+                            },
+                        },
+                    ],
+                },
+            ],
+        }
+    ],
+}
+
+if __name__ == "__main__":
+    out_path = "forms/aiims_female_surgical_procedure.json"
+    with open(out_path, "w", encoding="utf-8") as f:
+        json.dump(female_surgical_procedure_form, f, indent=2)
+    print(f"Generated form schema at {out_path}")
