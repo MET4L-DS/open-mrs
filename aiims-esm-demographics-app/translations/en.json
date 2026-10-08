@@ -321,5 +321,17 @@
   "noProcedureEmbryoTransferHeader": "No Procedure Embryo Transfer Recorded Yet",
   "noProcedureEmbryoTransferBody": "Mock embryo transfer and cervical assessment findings have not been recorded for this patient yet.",
   "recordProcedureEmbryoTransfer": "Record Procedure Embryo Transfer",
-  "updateProcedureEmbryoTransfer": "Update Procedure Embryo Transfer"
+  "updateProcedureEmbryoTransfer": "Update Procedure Embryo Transfer",
+  "aiimsInvestigationFemaleProcedureBiopsyTitle": "Investigation Female Procedure Biopsy",
+  "procedureBiopsyFindingsTitle": "Endometrial Biopsy Findings (EAHPE, PCR, AFB)",
+  "endometrialAspirationHistopathology": "Histopathological Examination (EAHPE)",
+  "endometrialAspirationPcr": "Polymerase Chain Reaction (PCR)",
+  "endometrialAspirationAfb": "Acid Fast Bacillus (AFB)",
+  "procedureBiopsyRemarks": "Biopsy Remarks / Notes",
+  "loadingProcedureBiopsy": "Loading Investigation Female Procedure Biopsy details...",
+  "noRecordedProcedureBiopsyEncounter": "No AIIMS Investigation Female Procedure Biopsy encounter recorded yet",
+  "noProcedureBiopsyHeader": "No Biopsy Investigation Recorded Yet",
+  "noProcedureBiopsyBody": "Endometrial aspiration histopathological examination, PCR, and AFB findings have not been recorded for this patient yet.",
+  "recordProcedureBiopsy": "Record Biopsy Investigation",
+  "updateProcedureBiopsy": "Update Biopsy Investigation"
 }

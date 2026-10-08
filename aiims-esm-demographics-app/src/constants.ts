@@ -68,6 +68,10 @@ export const AIIMS_FEMALE_SURGICAL_PROCEDURE_FORM_NAME = 'AIIMS Visit: Investiga
 export const AIIMS_PROCEDURE_EMBRYO_TRANSFER_FORM_UUID = '80930653-7e80-4bfd-9e29-ec37c334d88f';
 export const AIIMS_PROCEDURE_EMBRYO_TRANSFER_FORM_NAME = 'AIIMS Visit: Procedure Embryo Transfer';
 
+// Form UUID for AIIMS Visit: Investigation Female Procedure Biopsy
+export const AIIMS_INVESTIGATION_FEMALE_PROCEDURE_BIOPSY_FORM_UUID = '80930653-7e80-4bfd-9e29-ec37c334d890';
+export const AIIMS_INVESTIGATION_FEMALE_PROCEDURE_BIOPSY_FORM_NAME = 'AIIMS Visit: Investigation Female Procedure Biopsy';
+
 // Form Registry: Centralized configuration for all current and future AIIMS forms
 
 export const FORM_REGISTRY: FormRegistryEntry[] = [
@@ -245,6 +249,17 @@ export const FORM_REGISTRY: FormRegistryEntry[] = [
     title: 'Procedure Embryo Transfer',
     slot: 'aiims-procedure-embryo-transfer-dashboard-slot',
     icon: Activity,
+    order: 1,
+  },
+  {
+    key: 'investigation-female-procedure-biopsy',
+    uuid: AIIMS_INVESTIGATION_FEMALE_PROCEDURE_BIOPSY_FORM_UUID,
+    name: AIIMS_INVESTIGATION_FEMALE_PROCEDURE_BIOPSY_FORM_NAME,
+    path: 'aiims-investigation-female-procedure-biopsy',
+    titleKey: 'aiimsInvestigationFemaleProcedureBiopsyTitle',
+    title: 'Investigation Female Procedure Biopsy',
+    slot: 'aiims-investigation-female-procedure-biopsy-dashboard-slot',
+    icon: Microscope,
     order: 1,
   },
   // Additional forms (anthropometry, clinical history, semen analysis, etc.) will be registered here
@@ -524,6 +539,12 @@ export const CONCEPTS = {
   mockEmbryoTransferSpeculum: 'c0010001-0000-0000-0000-000000000180',
   embryoTransferCervicalCanalDirection: 'c0010001-0000-0000-0000-000000000181',
   procedureEmbryoTransferRemarks: 'c0010001-0000-0000-0000-000000000182',
+
+  // Investigation Female Procedure Biopsy (Form 17)
+  endometrialAspirationHistopathology: 'c0010001-0000-0000-0000-000000000183',
+  endometrialAspirationPcr: 'c0010001-0000-0000-0000-000000000184',
+  endometrialAspirationAfb: 'c0010001-0000-0000-0000-000000000185',
+  investigationFemaleProcedureBiopsyRemarks: 'c0010001-0000-0000-0000-000000000186',
 };
 
 

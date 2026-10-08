@@ -88,6 +88,7 @@ This file serves as the persistent project-level memory and source of truth acro
   - Form 14 (`female-blood-hormone`): `80930653-7e80-4bfd-9e29-ec37c334d88d` (`AIIMS Visit: Investigation Female Blood Hormone`)
   - Form 15 (`female-surgical-procedure`): `80930653-7e80-4bfd-9e29-ec37c334d88e` (`AIIMS Visit: Investigation Female Surgical Procedure`)
   - Form 16 (`procedure-embryo-transfer`): `80930653-7e80-4bfd-9e29-ec37c334d88f` (`AIIMS Visit: Procedure Embryo Transfer`)
+  - Form 17 (`investigation-female-procedure-biopsy`): `80930653-7e80-4bfd-9e29-ec37c334d890` (`AIIMS Visit: Investigation Female Procedure Biopsy`)
 - **Core Concept UUIDs (`src/constants.ts` & `docs/concept_registry.md`)**:
   - `consultantUnit`: `c0010001-0000-0000-0000-000000000001`
   - `consultantName`: `c0010001-0000-0000-0000-000000000002`
@@ -272,6 +273,14 @@ python scripts/publish_aiims_form.py
       - **Cervical Canal Direction**: Deviated to Left, Deviated to Right, Straight, Acutely anteverted, Anteverted, Retroverted.
       - **Procedure Remarks**: Intra-procedure clinical notes / textarea.
     - Observation card with Carbon `Activity` icon, conditional display of speculum type, and standardized empty placeholder handling.
+17. **Form 17: AIIMS Visit: Investigation Female Procedure Biopsy** (`80930653-7e80-4bfd-9e29-ec37c334d890`)
+    - Path: `aiims-investigation-female-procedure-biopsy`
+    - Endometrial biopsy & tuberculosis investigation:
+      - **Endometrial Aspiration Histopathological Examination (EAHPE)**: Multi-select findings for endometrial phase and pathological signs (Atrophic, Benign, Proliferative, Disordered proliferative, Early/Mid/Late secretory, Endometrial hyperplasia with/without atypia, Epitheloid cells, Granuloma, Granuloma Present/Absent, Fragmented Endometrial Glands, Interval phase).
+      - **Endometrial Aspiration Polymerase Chain Reaction (PCR)**: Positive, Negative, Not done, Not available.
+      - **Endometrial Aspiration Acid Fast Bacillus (AFB)**: Positive, Negative, Not done, Not available.
+      - **Biopsy Remarks**: Free-text clinical and histopathology notes.
+    - Observation card with Carbon `Microscope` icon and comma-separated multi-select aggregation.
 
 ---
 
@@ -293,8 +302,9 @@ python scripts/publish_aiims_form.py
 - [x] Register Form 14: Investigation Female Blood Hormone (`female-blood-hormone`).
 - [x] Register Form 15: Investigation Female Surgical Procedure (`female-surgical-procedure`).
 - [x] Register Form 16: Procedure Embryo Transfer (`procedure-embryo-transfer`).
-- [ ] Register Form 17: Anthropometry & Clinical Examination.
-- [ ] Register Form 18: Additional Lab & Imaging Investigations.
+- [x] Register Form 17: Investigation Female Procedure Biopsy (`investigation-female-procedure-biopsy`).
+- [ ] Register Form 18: Anthropometry & Clinical Examination.
+- [ ] Register Form 19: Additional Lab & Imaging Investigations.
 
 
 

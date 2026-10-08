@@ -135,6 +135,10 @@ To maintain agility and avoid blocking clinical deployment pending terminology l
 | `c0010001-0000-0000-0000-000000000180` | Mock Embryo Transfer Speculum | Coded | Finding | Local / Procedure | — | — | Active | Form 16: With Cusco's, With Sim's |
 | `c0010001-0000-0000-0000-000000000181` | Embryo Transfer Cervical Canal Direction | Coded | Finding | Local / Procedure | — | — | Active | Form 16: Direction |
 | `c0010001-0000-0000-0000-000000000182` | Procedure Embryo Transfer Remarks | Text | Misc | Local / Procedure | — | — | Active | Form 16: Remarks & notes |
+| `c0010001-0000-0000-0000-000000000183` | Endometrial Aspiration Histopathological Examination | Coded | Finding | Local / Biopsy | — | — | Active | Form 17: EAHPE findings |
+| `c0010001-0000-0000-0000-000000000184` | Endometrial Aspiration Polymerase Chain Reaction | Coded | Finding | Local / Biopsy | — | — | Active | Form 17: Positive, Negative, Not done, Not available |
+| `c0010001-0000-0000-0000-000000000185` | Endometrial Aspiration Acid Fast Bacillus | Coded | Finding | Local / Biopsy | — | — | Active | Form 17: Positive, Negative, Not done, Not available |
+| `c0010001-0000-0000-0000-000000000186` | Investigation Female Procedure Biopsy Remarks | Text | Misc | Local / Biopsy | — | — | Active | Form 17: Remarks & notes |
 
 ---
 

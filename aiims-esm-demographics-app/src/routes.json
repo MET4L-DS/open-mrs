@@ -327,6 +327,26 @@
       "slot": "aiims-procedure-embryo-transfer-dashboard-slot",
       "online": true,
       "offline": true
+    },
+    {
+      "name": "aiims-investigation-female-procedure-biopsy-dashboard-link",
+      "component": "aiimsInvestigationFemaleProcedureBiopsyDashboardLink",
+      "slot": "patient-chart-dashboard-slot",
+      "order": 1,
+      "meta": {
+        "slot": "aiims-investigation-female-procedure-biopsy-dashboard-slot",
+        "path": "aiims-investigation-female-procedure-biopsy",
+        "title": "Investigation Female Procedure Biopsy"
+      },
+      "online": true,
+      "offline": true
+    },
+    {
+      "name": "aiims-investigation-female-procedure-biopsy-dashboard",
+      "component": "aiimsInvestigationFemaleProcedureBiopsyDashboard",
+      "slot": "aiims-investigation-female-procedure-biopsy-dashboard-slot",
+      "online": true,
+      "offline": true
     }
   ]
 }

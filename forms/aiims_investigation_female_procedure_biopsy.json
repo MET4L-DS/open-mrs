@@ -1,0 +1,165 @@
+{
+  "name": "AIIMS Visit: Investigation Female Procedure Biopsy",
+  "description": "AIIMS Department of Reproductive Medicine & IVF - Female Procedure Biopsy (EAHPE, PCR, AFB)",
+  "version": "1.0",
+  "published": true,
+  "retired": false,
+  "encounter": "Consultation",
+  "processor": "EncounterFormProcessor",
+  "referencedForms": [],
+  "pages": [
+    {
+      "label": "Investigation Female Procedure Biopsy",
+      "sections": [
+        {
+          "label": "Endometrial Biopsy Findings (EAHPE, PCR, AFB)",
+          "isExpanded": true,
+          "questions": [
+            {
+              "label": "Endometrial Aspiration Histopathological Examination",
+              "type": "obs",
+              "id": "eahpe_finding",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "checkbox",
+                "concept": "c0010001-0000-0000-0000-000000000183",
+                "answers": [
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000979",
+                    "label": "Atrophic endometrium"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000980",
+                    "label": "Benign endometrium"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000981",
+                    "label": "Proliferative endometrium"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000982",
+                    "label": "Disordered proliferative endometrium"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000983",
+                    "label": "Early secretory endometrium"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000984",
+                    "label": "Mid secretory endometrium"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000985",
+                    "label": "Late secretory endometrium"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000986",
+                    "label": "Endometrial hyperplasia"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000987",
+                    "label": "Endometrial hyperplasia with atypia"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000988",
+                    "label": "Endometrial hyperplasia without atypia"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000989",
+                    "label": "Epitheloid cells"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000990",
+                    "label": "Granuloma"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000991",
+                    "label": "Granuloma Present"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000992",
+                    "label": "Granuloma Absent"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000993",
+                    "label": "Fragmented Endometrial Glands"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000994",
+                    "label": "Interval phase endometrium"
+                  }
+                ]
+              }
+            },
+            {
+              "label": "Endometrial Aspiration Polymerase Chain Reaction",
+              "type": "obs",
+              "id": "eahpe_pcr",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "c0010001-0000-0000-0000-000000000184",
+                "answers": [
+                  {
+                    "concept": "703AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Positive"
+                  },
+                  {
+                    "concept": "664AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Negative"
+                  },
+                  {
+                    "concept": "1118AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Not done"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000978",
+                    "label": "Not available"
+                  }
+                ]
+              }
+            },
+            {
+              "label": "Endometrial Aspiration Acid Fast Bacillus",
+              "type": "obs",
+              "id": "eahpe_afb",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "c0010001-0000-0000-0000-000000000185",
+                "answers": [
+                  {
+                    "concept": "703AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Positive"
+                  },
+                  {
+                    "concept": "664AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Negative"
+                  },
+                  {
+                    "concept": "1118AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Not done"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000978",
+                    "label": "Not available"
+                  }
+                ]
+              }
+            },
+            {
+              "label": "Biopsy Remarks",
+              "type": "obs",
+              "id": "procedure_biopsy_remarks",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "textarea",
+                "concept": "c0010001-0000-0000-0000-000000000186"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

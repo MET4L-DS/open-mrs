@@ -400,6 +400,26 @@ procedure_embryo_transfer_answers = [
     ("c0010002-0000-0000-0000-000000000977", "Acutely anteverted"),
 ]
 
+female_procedure_biopsy_answers = [
+    ("c0010002-0000-0000-0000-000000000978", "Not available"),
+    ("c0010002-0000-0000-0000-000000000979", "Atrophic endometrium"),
+    ("c0010002-0000-0000-0000-000000000980", "Benign endometrium"),
+    ("c0010002-0000-0000-0000-000000000981", "Proliferative endometrium"),
+    ("c0010002-0000-0000-0000-000000000982", "Disordered proliferative endometrium"),
+    ("c0010002-0000-0000-0000-000000000983", "Early secretory endometrium"),
+    ("c0010002-0000-0000-0000-000000000984", "Mid secretory endometrium"),
+    ("c0010002-0000-0000-0000-000000000985", "Late secretory endometrium"),
+    ("c0010002-0000-0000-0000-000000000986", "Endometrial hyperplasia"),
+    ("c0010002-0000-0000-0000-000000000987", "Endometrial hyperplasia with atypia"),
+    ("c0010002-0000-0000-0000-000000000988", "Endometrial hyperplasia without atypia"),
+    ("c0010002-0000-0000-0000-000000000989", "Epitheloid cells"),
+    ("c0010002-0000-0000-0000-000000000990", "Granuloma"),
+    ("c0010002-0000-0000-0000-000000000991", "Granuloma Present"),
+    ("c0010002-0000-0000-0000-000000000992", "Granuloma Absent"),
+    ("c0010002-0000-0000-0000-000000000993", "Fragmented Endometrial Glands"),
+    ("c0010002-0000-0000-0000-000000000994", "Interval phase endometrium"),
+]
+
 
 
 # We assemble the migration script wrapped in a stored procedure for IF/ELSE control flow
@@ -442,6 +462,9 @@ for u, name in female_surgical_answers:
     full_script.append(add_concept_sql(u, name, datatype_id=4, class_id=11))
 
 for u, name in procedure_embryo_transfer_answers:
+    full_script.append(add_concept_sql(u, name, datatype_id=4, class_id=11))
+
+for u, name in female_procedure_biopsy_answers:
     full_script.append(add_concept_sql(u, name, datatype_id=4, class_id=11))
 
 
@@ -731,6 +754,12 @@ full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000179", "Mock
 full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000180", "Mock Embryo Transfer Speculum", datatype_id=2, class_id=7))
 full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000181", "Embryo Transfer Cervical Canal Direction", datatype_id=2, class_id=7))
 full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000182", "Procedure Embryo Transfer Remarks", datatype_id=3, class_id=7))
+
+# Investigation Female Procedure Biopsy Concepts (Form 17: 0183-0186)
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000183", "Endometrial Aspiration Histopathological Examination", datatype_id=2, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000184", "Endometrial Aspiration Polymerase Chain Reaction", datatype_id=2, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000185", "Endometrial Aspiration Acid Fast Bacillus", datatype_id=2, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000186", "Investigation Female Procedure Biopsy Remarks", datatype_id=3, class_id=7))
 
 # 3. Link Answers
 # Education Wife answers
@@ -1192,6 +1221,46 @@ for ans_uuid in [
     "c0010002-0000-0000-0000-000000000924",  # Retroverted
 ]:
     full_script.append(add_answer_sql("c0010001-0000-0000-0000-000000000181", ans_uuid))
+
+# Investigation Female Procedure Biopsy (Form 17)
+# Endometrial Aspiration Histopathological Examination (0183)
+for ans_uuid in [
+    "c0010002-0000-0000-0000-000000000979",  # Atrophic endometrium
+    "c0010002-0000-0000-0000-000000000980",  # Benign endometrium
+    "c0010002-0000-0000-0000-000000000981",  # Proliferative endometrium
+    "c0010002-0000-0000-0000-000000000982",  # Disordered proliferative endometrium
+    "c0010002-0000-0000-0000-000000000983",  # Early secretory endometrium
+    "c0010002-0000-0000-0000-000000000984",  # Mid secretory endometrium
+    "c0010002-0000-0000-0000-000000000985",  # Late secretory endometrium
+    "c0010002-0000-0000-0000-000000000986",  # Endometrial hyperplasia
+    "c0010002-0000-0000-0000-000000000987",  # Endometrial hyperplasia with atypia
+    "c0010002-0000-0000-0000-000000000988",  # Endometrial hyperplasia without atypia
+    "c0010002-0000-0000-0000-000000000989",  # Epitheloid cells
+    "c0010002-0000-0000-0000-000000000990",  # Granuloma
+    "c0010002-0000-0000-0000-000000000991",  # Granuloma Present
+    "c0010002-0000-0000-0000-000000000992",  # Granuloma Absent
+    "c0010002-0000-0000-0000-000000000993",  # Fragmented Endometrial Glands
+    "c0010002-0000-0000-0000-000000000994",  # Interval phase endometrium
+]:
+    full_script.append(add_answer_sql("c0010001-0000-0000-0000-000000000183", ans_uuid))
+
+# Endometrial Aspiration Polymerase Chain Reaction (0184)
+for ans_uuid in [
+    "703AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",   # Positive
+    "664AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",   # Negative
+    "1118AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",  # Not done
+    "c0010002-0000-0000-0000-000000000978",  # Not available
+]:
+    full_script.append(add_answer_sql("c0010001-0000-0000-0000-000000000184", ans_uuid))
+
+# Endometrial Aspiration Acid Fast Bacillus (0185)
+for ans_uuid in [
+    "703AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",   # Positive
+    "664AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",   # Negative
+    "1118AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",  # Not done
+    "c0010002-0000-0000-0000-000000000978",  # Not available
+]:
+    full_script.append(add_answer_sql("c0010001-0000-0000-0000-000000000185", ans_uuid))
 
 
 full_script.append("END$$")
