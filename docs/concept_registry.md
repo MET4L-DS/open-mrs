@@ -139,6 +139,12 @@ To maintain agility and avoid blocking clinical deployment pending terminology l
 | `c0010001-0000-0000-0000-000000000184` | Endometrial Aspiration Polymerase Chain Reaction | Coded | Finding | Local / Biopsy | — | — | Active | Form 17: Positive, Negative, Not done, Not available |
 | `c0010001-0000-0000-0000-000000000185` | Endometrial Aspiration Acid Fast Bacillus | Coded | Finding | Local / Biopsy | — | — | Active | Form 17: Positive, Negative, Not done, Not available |
 | `c0010001-0000-0000-0000-000000000186` | Investigation Female Procedure Biopsy Remarks | Text | Misc | Local / Biopsy | — | — | Active | Form 17: Remarks & notes |
+| `c0010001-0000-0000-0000-000000000187` | Husband Semen Analysis Volume | Numeric | Finding | Local / HSA | — | — | Active | Form 18: Volume in mL |
+| `c0010001-0000-0000-0000-000000000188` | Husband Semen Analysis Count in million | Numeric | Finding | Local / HSA | — | — | Active | Form 18: Count in million/mL |
+| `c0010001-0000-0000-0000-000000000189` | Husband Semen Analysis Motility finding | Coded | Finding | Local / HSA | — | — | Active | Form 18: Few motile, Immotile |
+| `c0010001-0000-0000-0000-000000000190` | Husband Semen Analysis Motility (total/progressive) | Text | Finding | Local / HSA | — | — | Active | Form 18: Motility details |
+| `c0010001-0000-0000-0000-000000000191` | Sperm Morphology | Text | Finding | Local / HSA | — | — | Active | Form 18: Morphology details |
+| `c0010001-0000-0000-0000-000000000192` | Investigation Male Semen Remarks | Text | Misc | Local / HSA | — | — | Active | Form 18: Remarks & notes |
 
 ---
 
@@ -241,6 +247,15 @@ To maintain agility and avoid blocking clinical deployment pending terminology l
 | `c0010002-0000-0000-0000-000000000364` | Turner Mosaic | SNOMED CT | `205562002` | Yes | Active |
 | `c0010002-0000-0000-0000-000000000365` | Unexplained Infertility | SNOMED CT | `237064003` | Yes | Active |
 | `c0010002-0000-0000-0000-000000000366` | Serodiscordant couple | SNOMED CT | `426978007` | Yes | Active |
+
+---
+
+### 2.7 Investigation Male Semen Answer Options (`c0010002-...`)
+
+| Placeholder UUID | Display Name | Target Standard | Target Code | ATHENA Verified | Status |
+|:---|:---|:---|:---:|:---:|:---:|
+| `c0010002-0000-0000-0000-000000000995` | Few motile | Local / HSA | — | — | Active |
+| `c0010002-0000-0000-0000-000000000996` | Immotile | Local / HSA | — | — | Active |
 
 
 ---

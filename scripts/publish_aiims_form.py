@@ -141,6 +141,14 @@ FORMS_TO_PUBLISH = [
         "uuid": "80930653-7e80-4bfd-9e29-ec37c334d890",
         "encounter_type": "dd528487-82a5-4082-9c72-ed246bd49591",  # Consultation
     },
+    {
+        "name": "AIIMS Visit: Investigation Male Semen",
+        "version": "1.0",
+        "description": "AIIMS Reproductive Medicine & IVF Investigation Male Semen Sheet",
+        "schema_path": "forms/aiims_investigation_male_semen.json",
+        "uuid": "80930653-7e80-4bfd-9e29-ec37c334d891",
+        "encounter_type": "dd528487-82a5-4082-9c72-ed246bd49591",  # Consultation
+    },
 ]
 
 def get_db_container():

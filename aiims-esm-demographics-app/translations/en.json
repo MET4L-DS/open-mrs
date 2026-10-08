@@ -333,5 +333,21 @@
   "noProcedureBiopsyHeader": "No Biopsy Investigation Recorded Yet",
   "noProcedureBiopsyBody": "Endometrial aspiration histopathological examination, PCR, and AFB findings have not been recorded for this patient yet.",
   "recordProcedureBiopsy": "Record Biopsy Investigation",
-  "updateProcedureBiopsy": "Update Biopsy Investigation"
+  "updateProcedureBiopsy": "Update Biopsy Investigation",
+  "aiimsInvestigationMaleSemenTitle": "Investigation Male Semen",
+  "investigationMaleSemenCardTitle": "Husband Semen Analysis (HSA)",
+  "semenVolume": "Semen Volume",
+  "semenCount": "Semen Count",
+  "semenMotilityFinding": "Motility Finding",
+  "semenMotilityTotalProgressive": "Motility (Total / Progressive)",
+  "spermMorphology": "Sperm Morphology",
+  "maleSemenRemarks": "Semen Analysis Remarks / Notes",
+  "unitMl": "mL",
+  "unitMillionPerMl": "million/mL",
+  "loadingMaleSemen": "Loading Investigation Male Semen details...",
+  "noRecordedMaleSemenEncounter": "No AIIMS Investigation Male Semen encounter recorded yet",
+  "noMaleSemenHeader": "No Semen Analysis Recorded Yet",
+  "noMaleSemenBody": "Husband semen analysis volume, count, motility, and sperm morphology have not been recorded for this patient yet.",
+  "recordMaleSemen": "Record Semen Analysis",
+  "updateMaleSemen": "Update Semen Analysis"
 }

@@ -420,6 +420,11 @@ female_procedure_biopsy_answers = [
     ("c0010002-0000-0000-0000-000000000994", "Interval phase endometrium"),
 ]
 
+investigation_male_semen_answers = [
+    ("c0010002-0000-0000-0000-000000000995", "Few motile"),
+    ("c0010002-0000-0000-0000-000000000996", "Immotile"),
+]
+
 
 
 # We assemble the migration script wrapped in a stored procedure for IF/ELSE control flow
@@ -465,6 +470,9 @@ for u, name in procedure_embryo_transfer_answers:
     full_script.append(add_concept_sql(u, name, datatype_id=4, class_id=11))
 
 for u, name in female_procedure_biopsy_answers:
+    full_script.append(add_concept_sql(u, name, datatype_id=4, class_id=11))
+
+for u, name in investigation_male_semen_answers:
     full_script.append(add_concept_sql(u, name, datatype_id=4, class_id=11))
 
 
@@ -760,6 +768,14 @@ full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000183", "Endo
 full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000184", "Endometrial Aspiration Polymerase Chain Reaction", datatype_id=2, class_id=7))
 full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000185", "Endometrial Aspiration Acid Fast Bacillus", datatype_id=2, class_id=7))
 full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000186", "Investigation Female Procedure Biopsy Remarks", datatype_id=3, class_id=7))
+
+# Investigation Male Semen Concepts (Form 18: 0187-0192)
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000187", "Husband Semen Analysis Volume", datatype_id=1, class_id=7, is_numeric=True, units="mL", allow_decimal=1, low_abs=0, hi_abs=20))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000188", "Husband Semen Analysis Count in million", datatype_id=1, class_id=7, is_numeric=True, units="million/mL", allow_decimal=1, low_abs=0, hi_abs=1000))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000189", "Husband Semen Analysis Motility finding", datatype_id=2, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000190", "Husband Semen Analysis Motility total progressive", datatype_id=3, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000191", "Sperm Morphology", datatype_id=3, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000192", "Investigation Male Semen Remarks", datatype_id=3, class_id=7))
 
 # 3. Link Answers
 # Education Wife answers
@@ -1261,6 +1277,14 @@ for ans_uuid in [
     "c0010002-0000-0000-0000-000000000978",  # Not available
 ]:
     full_script.append(add_answer_sql("c0010001-0000-0000-0000-000000000185", ans_uuid))
+
+# Investigation Male Semen (Form 18)
+# Husband Semen Analysis Motility finding (0189)
+for ans_uuid in [
+    "c0010002-0000-0000-0000-000000000995",  # Few motile
+    "c0010002-0000-0000-0000-000000000996",  # Immotile
+]:
+    full_script.append(add_answer_sql("c0010001-0000-0000-0000-000000000189", ans_uuid))
 
 
 full_script.append("END$$")

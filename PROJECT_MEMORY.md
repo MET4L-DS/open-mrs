@@ -281,6 +281,16 @@ python scripts/publish_aiims_form.py
       - **Endometrial Aspiration Acid Fast Bacillus (AFB)**: Positive, Negative, Not done, Not available.
       - **Biopsy Remarks**: Free-text clinical and histopathology notes.
     - Observation card with Carbon `Microscope` icon and comma-separated multi-select aggregation.
+18. **Form 18: AIIMS Visit: Investigation Male Semen** (`80930653-7e80-4bfd-9e29-ec37c334d891`)
+    - Path: `aiims-investigation-male-semen`
+    - Diagnostic and semen analysis parameters:
+      - **Husband Semen Analysis Volume**: Numeric volume in `mL`.
+      - **Husband Semen Analysis Count**: Numeric sperm count in `million/mL`.
+      - **Husband Semen Analysis Motility finding**: Multi-select options (`Few motile`, `Immotile`).
+      - **Husband Semen Analysis Motility (Total / Progressive)**: Text / percentage detailing total and progressive motility.
+      - **Sperm Morphology**: Morphology evaluation notes.
+      - **Remarks**: Textarea for semen analysis clinical notes and interpretations.
+    - Observation card with Carbon `Chemistry` icon and localized units (`mL`, `million/mL`).
 
 ---
 
@@ -303,8 +313,9 @@ python scripts/publish_aiims_form.py
 - [x] Register Form 15: Investigation Female Surgical Procedure (`female-surgical-procedure`).
 - [x] Register Form 16: Procedure Embryo Transfer (`procedure-embryo-transfer`).
 - [x] Register Form 17: Investigation Female Procedure Biopsy (`investigation-female-procedure-biopsy`).
-- [ ] Register Form 18: Anthropometry & Clinical Examination.
-- [ ] Register Form 19: Additional Lab & Imaging Investigations.
+- [x] Register Form 18: Investigation Male Semen (`investigation-male-semen`).
+- [ ] Register Form 19: Anthropometry & Clinical Examination.
+- [ ] Register Form 20: Additional Lab & Imaging Investigations.
 
 
 

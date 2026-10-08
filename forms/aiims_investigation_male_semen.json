@@ -1,0 +1,93 @@
+{
+  "name": "AIIMS Visit: Investigation Male Semen",
+  "description": "AIIMS Department of Reproductive Medicine & IVF - Investigation Male Semen Analysis (HSA)",
+  "version": "1.0",
+  "published": true,
+  "retired": false,
+  "encounter": "Consultation",
+  "processor": "EncounterFormProcessor",
+  "referencedForms": [],
+  "pages": [
+    {
+      "label": "Investigation Male Semen",
+      "sections": [
+        {
+          "label": "Husband Semen Analysis (HSA)",
+          "isExpanded": true,
+          "questions": [
+            {
+              "label": "Husband Semen Analysis Volume",
+              "type": "obs",
+              "id": "hsa_volume",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "number",
+                "concept": "c0010001-0000-0000-0000-000000000187"
+              }
+            },
+            {
+              "label": "Husband Semen Analysis Count in million",
+              "type": "obs",
+              "id": "hsa_count",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "number",
+                "concept": "c0010001-0000-0000-0000-000000000188"
+              }
+            },
+            {
+              "label": "Husband Semen Analysis Motility finding",
+              "type": "obs",
+              "id": "hsa_motility_finding",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "checkbox",
+                "concept": "c0010001-0000-0000-0000-000000000189",
+                "answers": [
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000995",
+                    "label": "Few motile"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000996",
+                    "label": "Immotile"
+                  }
+                ]
+              }
+            },
+            {
+              "label": "Husband Semen Analysis Motility (total/progressive)",
+              "type": "obs",
+              "id": "hsa_motility_detail",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "text",
+                "concept": "c0010001-0000-0000-0000-000000000190"
+              }
+            },
+            {
+              "label": "Sperm Morphology",
+              "type": "obs",
+              "id": "sperm_morphology",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "text",
+                "concept": "c0010001-0000-0000-0000-000000000191"
+              }
+            },
+            {
+              "label": "Investigation Male Semen Remarks",
+              "type": "obs",
+              "id": "male_semen_remarks",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "textarea",
+                "concept": "c0010001-0000-0000-0000-000000000192"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -261,6 +261,14 @@ const investigationFemaleProcedureBiopsyExtensions = createFormExtensions(
 export const aiimsInvestigationFemaleProcedureBiopsyDashboardLink = investigationFemaleProcedureBiopsyExtensions.link;
 export const aiimsInvestigationFemaleProcedureBiopsyDashboard = investigationFemaleProcedureBiopsyExtensions.dashboard;
 
+const investigationMaleSemenExtensions = createFormExtensions(
+  getFormRegistryEntry('investigation-male-semen'),
+  () => import('./investigation-male-semen/investigation-male-semen-dashboard.component')
+);
+
+export const aiimsInvestigationMaleSemenDashboardLink = investigationMaleSemenExtensions.link;
+export const aiimsInvestigationMaleSemenDashboard = investigationMaleSemenExtensions.dashboard;
+
 export { FORM_REGISTRY, getFormRegistryEntry, getFormUuid, getFormName } from './constants';
 export * from './shared';
 export * from './infertility-type';
@@ -279,6 +287,7 @@ export * from './investigation-female-blood';
 export * from './investigation-female-surgical';
 export * from './procedure-embryo-transfer';
 export * from './investigation-female-procedure-biopsy';
+export * from './investigation-male-semen';
 
 
 

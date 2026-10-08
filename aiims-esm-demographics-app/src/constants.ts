@@ -72,6 +72,10 @@ export const AIIMS_PROCEDURE_EMBRYO_TRANSFER_FORM_NAME = 'AIIMS Visit: Procedure
 export const AIIMS_INVESTIGATION_FEMALE_PROCEDURE_BIOPSY_FORM_UUID = '80930653-7e80-4bfd-9e29-ec37c334d890';
 export const AIIMS_INVESTIGATION_FEMALE_PROCEDURE_BIOPSY_FORM_NAME = 'AIIMS Visit: Investigation Female Procedure Biopsy';
 
+// Form UUID for AIIMS Visit: Investigation Male Semen
+export const AIIMS_INVESTIGATION_MALE_SEMEN_FORM_UUID = '80930653-7e80-4bfd-9e29-ec37c334d891';
+export const AIIMS_INVESTIGATION_MALE_SEMEN_FORM_NAME = 'AIIMS Visit: Investigation Male Semen';
+
 // Form Registry: Centralized configuration for all current and future AIIMS forms
 
 export const FORM_REGISTRY: FormRegistryEntry[] = [
@@ -260,6 +264,17 @@ export const FORM_REGISTRY: FormRegistryEntry[] = [
     title: 'Investigation Female Procedure Biopsy',
     slot: 'aiims-investigation-female-procedure-biopsy-dashboard-slot',
     icon: Microscope,
+    order: 1,
+  },
+  {
+    key: 'investigation-male-semen',
+    uuid: AIIMS_INVESTIGATION_MALE_SEMEN_FORM_UUID,
+    name: AIIMS_INVESTIGATION_MALE_SEMEN_FORM_NAME,
+    path: 'aiims-investigation-male-semen',
+    titleKey: 'aiimsInvestigationMaleSemenTitle',
+    title: 'Investigation Male Semen',
+    slot: 'aiims-investigation-male-semen-dashboard-slot',
+    icon: Chemistry,
     order: 1,
   },
   // Additional forms (anthropometry, clinical history, semen analysis, etc.) will be registered here
@@ -545,6 +560,14 @@ export const CONCEPTS = {
   endometrialAspirationPcr: 'c0010001-0000-0000-0000-000000000184',
   endometrialAspirationAfb: 'c0010001-0000-0000-0000-000000000185',
   investigationFemaleProcedureBiopsyRemarks: 'c0010001-0000-0000-0000-000000000186',
+
+  // Investigation Male Semen (Form 18)
+  semenVolume: 'c0010001-0000-0000-0000-000000000187',
+  semenCount: 'c0010001-0000-0000-0000-000000000188',
+  semenMotilityFinding: 'c0010001-0000-0000-0000-000000000189',
+  semenMotilityTotalProgressive: 'c0010001-0000-0000-0000-000000000190',
+  spermMorphology: 'c0010001-0000-0000-0000-000000000191',
+  investigationMaleSemenRemarks: 'c0010001-0000-0000-0000-000000000192',
 };
 
 

@@ -347,6 +347,26 @@
       "slot": "aiims-investigation-female-procedure-biopsy-dashboard-slot",
       "online": true,
       "offline": true
+    },
+    {
+      "name": "aiims-investigation-male-semen-dashboard-link",
+      "component": "aiimsInvestigationMaleSemenDashboardLink",
+      "slot": "patient-chart-dashboard-slot",
+      "order": 1,
+      "meta": {
+        "slot": "aiims-investigation-male-semen-dashboard-slot",
+        "path": "aiims-investigation-male-semen",
+        "title": "Investigation Male Semen"
+      },
+      "online": true,
+      "offline": true
+    },
+    {
+      "name": "aiims-investigation-male-semen-dashboard",
+      "component": "aiimsInvestigationMaleSemenDashboard",
+      "slot": "aiims-investigation-male-semen-dashboard-slot",
+      "online": true,
+      "offline": true
     }
   ]
 }
