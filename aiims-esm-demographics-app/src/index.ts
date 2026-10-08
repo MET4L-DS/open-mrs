@@ -245,6 +245,14 @@ const femaleSurgicalProcedureExtensions = createFormExtensions(
 export const aiimsFemaleSurgicalProcedureDashboardLink = femaleSurgicalProcedureExtensions.link;
 export const aiimsFemaleSurgicalProcedureDashboard = femaleSurgicalProcedureExtensions.dashboard;
 
+const procedureEmbryoTransferExtensions = createFormExtensions(
+  getFormRegistryEntry('procedure-embryo-transfer'),
+  () => import('./procedure-embryo-transfer/procedure-embryo-transfer-dashboard.component')
+);
+
+export const aiimsProcedureEmbryoTransferDashboardLink = procedureEmbryoTransferExtensions.link;
+export const aiimsProcedureEmbryoTransferDashboard = procedureEmbryoTransferExtensions.dashboard;
+
 export { FORM_REGISTRY, getFormRegistryEntry, getFormUuid, getFormName } from './constants';
 export * from './shared';
 export * from './infertility-type';
@@ -261,6 +269,7 @@ export * from './tuberculosis-history';
 export * from './investigation-ultrasound';
 export * from './investigation-female-blood';
 export * from './investigation-female-surgical';
+export * from './procedure-embryo-transfer';
 
 
 

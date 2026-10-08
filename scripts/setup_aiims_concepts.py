@@ -389,6 +389,17 @@ female_surgical_answers = [
     ("c0010002-0000-0000-0000-000000000969", "Fluid pattern"),
 ]
 
+procedure_embryo_transfer_answers = [
+    ("c0010002-0000-0000-0000-000000000970", "Easy"),
+    ("c0010002-0000-0000-0000-000000000971", "Difficult"),
+    ("c0010002-0000-0000-0000-000000000972", "With Cusco's"),
+    ("c0010002-0000-0000-0000-000000000973", "With Sim's"),
+    ("c0010002-0000-0000-0000-000000000974", "Deviated to Left"),
+    ("c0010002-0000-0000-0000-000000000975", "Deviated to Right"),
+    ("c0010002-0000-0000-0000-000000000976", "Straight"),
+    ("c0010002-0000-0000-0000-000000000977", "Acutely anteverted"),
+]
+
 
 
 # We assemble the migration script wrapped in a stored procedure for IF/ELSE control flow
@@ -428,6 +439,9 @@ for u, name in att_duration_answers:
     full_script.append(add_concept_sql(u, name, datatype_id=4, class_id=11))
 
 for u, name in female_surgical_answers:
+    full_script.append(add_concept_sql(u, name, datatype_id=4, class_id=11))
+
+for u, name in procedure_embryo_transfer_answers:
     full_script.append(add_concept_sql(u, name, datatype_id=4, class_id=11))
 
 
@@ -711,6 +725,12 @@ full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000177", "Zone
 
 # Remarks (0178)
 full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000178", "Female Surgical Procedure Remarks", datatype_id=3, class_id=7))
+
+# Procedure Embryo Transfer Concepts (Form 16: 0179-0182)
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000179", "Mock Embryo Transfer", datatype_id=2, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000180", "Mock Embryo Transfer Speculum", datatype_id=2, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000181", "Embryo Transfer Cervical Canal Direction", datatype_id=2, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000182", "Procedure Embryo Transfer Remarks", datatype_id=3, class_id=7))
 
 # 3. Link Answers
 # Education Wife answers
@@ -1146,6 +1166,32 @@ for ans_uuid in [
     "c0010002-0000-0000-0000-000000000969",  # Fluid pattern
 ]:
     full_script.append(add_answer_sql("c0010001-0000-0000-0000-000000000161", ans_uuid))
+
+# Procedure Embryo Transfer (Form 16)
+# Mock Embryo Transfer (0179)
+for ans_uuid in [
+    "c0010002-0000-0000-0000-000000000970",  # Easy
+    "c0010002-0000-0000-0000-000000000971",  # Difficult
+]:
+    full_script.append(add_answer_sql("c0010001-0000-0000-0000-000000000179", ans_uuid))
+
+# Mock Embryo Transfer Speculum (0180)
+for ans_uuid in [
+    "c0010002-0000-0000-0000-000000000972",  # With Cusco's
+    "c0010002-0000-0000-0000-000000000973",  # With Sim's
+]:
+    full_script.append(add_answer_sql("c0010001-0000-0000-0000-000000000180", ans_uuid))
+
+# Embryo Transfer Cervical Canal Direction (0181)
+for ans_uuid in [
+    "c0010002-0000-0000-0000-000000000974",  # Deviated to Left
+    "c0010002-0000-0000-0000-000000000975",  # Deviated to Right
+    "c0010002-0000-0000-0000-000000000976",  # Straight
+    "c0010002-0000-0000-0000-000000000977",  # Acutely anteverted
+    "c0010002-0000-0000-0000-000000000923",  # Anteverted
+    "c0010002-0000-0000-0000-000000000924",  # Retroverted
+]:
+    full_script.append(add_answer_sql("c0010001-0000-0000-0000-000000000181", ans_uuid))
 
 
 full_script.append("END$$")

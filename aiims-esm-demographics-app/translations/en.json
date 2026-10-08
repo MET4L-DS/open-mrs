@@ -309,5 +309,17 @@
   "noFemaleSurgicalProcedureHeader": "No Investigation Female Surgical Procedure Recorded Yet",
   "noFemaleSurgicalProcedureBody": "Hysteroscopy, TVS findings, and Endometrial zones have not been recorded for this patient yet.",
   "recordFemaleSurgicalProcedure": "Record Surgical Procedure",
-  "updateFemaleSurgicalProcedure": "Update Surgical Procedure"
+  "updateFemaleSurgicalProcedure": "Update Surgical Procedure",
+  "aiimsProcedureEmbryoTransferTitle": "Procedure Embryo Transfer",
+  "procedureEmbryoTransferCardTitle": "Mock Embryo Transfer & Cervical Assessment",
+  "mockEmbryoTransfer": "Mock Embryo Transfer",
+  "mockEmbryoTransferSpeculum": "Speculum Type",
+  "embryoTransferCervicalCanalDirection": "Cervical Canal Direction",
+  "procedureEmbryoTransferRemarks": "Procedure Remarks",
+  "loadingProcedureEmbryoTransfer": "Loading Procedure Embryo Transfer details...",
+  "noRecordedProcedureEmbryoTransferEncounter": "No AIIMS Procedure Embryo Transfer encounter recorded yet",
+  "noProcedureEmbryoTransferHeader": "No Procedure Embryo Transfer Recorded Yet",
+  "noProcedureEmbryoTransferBody": "Mock embryo transfer and cervical assessment findings have not been recorded for this patient yet.",
+  "recordProcedureEmbryoTransfer": "Record Procedure Embryo Transfer",
+  "updateProcedureEmbryoTransfer": "Update Procedure Embryo Transfer"
 }

@@ -87,6 +87,7 @@ This file serves as the persistent project-level memory and source of truth acro
   - Form 13 (`investigation-ultrasound`): `80930653-7e80-4bfd-9e29-ec37c334d88c` (`AIIMS Visit: Investigation Ultrasound`)
   - Form 14 (`female-blood-hormone`): `80930653-7e80-4bfd-9e29-ec37c334d88d` (`AIIMS Visit: Investigation Female Blood Hormone`)
   - Form 15 (`female-surgical-procedure`): `80930653-7e80-4bfd-9e29-ec37c334d88e` (`AIIMS Visit: Investigation Female Surgical Procedure`)
+  - Form 16 (`procedure-embryo-transfer`): `80930653-7e80-4bfd-9e29-ec37c334d88f` (`AIIMS Visit: Procedure Embryo Transfer`)
 - **Core Concept UUIDs (`src/constants.ts` & `docs/concept_registry.md`)**:
   - `consultantUnit`: `c0010001-0000-0000-0000-000000000001`
   - `consultantName`: `c0010001-0000-0000-0000-000000000002`
@@ -264,6 +265,13 @@ python scripts/publish_aiims_form.py
       - **TVS Findings**: Uterine dimensions & volume, Day of cycle, Adenomyosis, Calcifications, Focal adenomyoma, Fibroids (presence, count, location, dimensions, FIGO 0-8 and 2-5), Endometrial cavity morphology (3D, 4D, adhesions, fluid), Endometrial-myometrial junction, Septate findings (angle in degrees, septum length in cm), Anomalies (Bicornuate right/left volumes, Unicornuate volume), Polyps (presence, count, dimensions), Antral Follicle Count (right/left), Ovary dimensions, Endometriomas (count, accessible/inaccessible follicles, dimensions), Hydrosalpinx (right/left/both/absent, dimensions), Day 14-16 Endometrial thickness (mm) & pattern (trilaminar, diffuse, fluid), and Ovarian cysts (Dermoid, Haemorrhagic, Corpus luteum, Paro-ovarian with respective dimensions).
       - **Endometrial Zones**: Zone 1 (Myometrium surrounding endometrium), Zone 2 (Hyperechoic edge), Zone 3 (Internal hypoechoic zone), Zone 4 (Endometrial cavity) in `cm`, and surgical procedure remarks.
     - Responsive grid of 7 categorized `ObservationCard`s with `Cut`, `Activity`, `ReportData`, `Scalpel`, `Events`, and `Waveform` Carbon icons.
+16. **Form 16: AIIMS Visit: Procedure Embryo Transfer** (`80930653-7e80-4bfd-9e29-ec37c334d88f`)
+    - Path: `aiims-procedure-embryo-transfer`
+    - Procedure and trial embryo transfer evaluation:
+      - **Mock Embryo Transfer**: Easy (with Cusco's, with Sim's), Difficult. Dynamic AMPATH skip logic conditionally showing speculum type when Easy.
+      - **Cervical Canal Direction**: Deviated to Left, Deviated to Right, Straight, Acutely anteverted, Anteverted, Retroverted.
+      - **Procedure Remarks**: Intra-procedure clinical notes / textarea.
+    - Observation card with Carbon `Activity` icon, conditional display of speculum type, and standardized empty placeholder handling.
 
 ---
 
@@ -284,8 +292,9 @@ python scripts/publish_aiims_form.py
 - [x] Register Form 13: Investigation Ultrasound (`investigation-ultrasound`).
 - [x] Register Form 14: Investigation Female Blood Hormone (`female-blood-hormone`).
 - [x] Register Form 15: Investigation Female Surgical Procedure (`female-surgical-procedure`).
-- [ ] Register Form 16: Anthropometry & Clinical Examination.
-- [ ] Register Form 17: Additional Lab & Imaging Investigations.
+- [x] Register Form 16: Procedure Embryo Transfer (`procedure-embryo-transfer`).
+- [ ] Register Form 17: Anthropometry & Clinical Examination.
+- [ ] Register Form 18: Additional Lab & Imaging Investigations.
 
 
 

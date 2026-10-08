@@ -64,6 +64,10 @@ export const AIIMS_FEMALE_BLOOD_HORMONE_FORM_NAME = 'AIIMS Visit: Investigation 
 export const AIIMS_FEMALE_SURGICAL_PROCEDURE_FORM_UUID = '80930653-7e80-4bfd-9e29-ec37c334d88e';
 export const AIIMS_FEMALE_SURGICAL_PROCEDURE_FORM_NAME = 'AIIMS Visit: Investigation Female Surgical Procedure';
 
+// Form UUID for AIIMS Visit: Procedure Embryo Transfer
+export const AIIMS_PROCEDURE_EMBRYO_TRANSFER_FORM_UUID = '80930653-7e80-4bfd-9e29-ec37c334d88f';
+export const AIIMS_PROCEDURE_EMBRYO_TRANSFER_FORM_NAME = 'AIIMS Visit: Procedure Embryo Transfer';
+
 // Form Registry: Centralized configuration for all current and future AIIMS forms
 
 export const FORM_REGISTRY: FormRegistryEntry[] = [
@@ -230,6 +234,17 @@ export const FORM_REGISTRY: FormRegistryEntry[] = [
     title: 'Female Surgical Procedure',
     slot: 'aiims-female-surgical-procedure-dashboard-slot',
     icon: ReportData,
+    order: 1,
+  },
+  {
+    key: 'procedure-embryo-transfer',
+    uuid: AIIMS_PROCEDURE_EMBRYO_TRANSFER_FORM_UUID,
+    name: AIIMS_PROCEDURE_EMBRYO_TRANSFER_FORM_NAME,
+    path: 'aiims-procedure-embryo-transfer',
+    titleKey: 'aiimsProcedureEmbryoTransferTitle',
+    title: 'Procedure Embryo Transfer',
+    slot: 'aiims-procedure-embryo-transfer-dashboard-slot',
+    icon: Activity,
     order: 1,
   },
   // Additional forms (anthropometry, clinical history, semen analysis, etc.) will be registered here
@@ -503,6 +518,12 @@ export const CONCEPTS = {
 
   // Remarks
   femaleSurgicalProcedureRemarks: 'c0010001-0000-0000-0000-000000000178',
+
+  // Procedure Embryo Transfer (Form 16)
+  mockEmbryoTransfer: 'c0010001-0000-0000-0000-000000000179',
+  mockEmbryoTransferSpeculum: 'c0010001-0000-0000-0000-000000000180',
+  embryoTransferCervicalCanalDirection: 'c0010001-0000-0000-0000-000000000181',
+  procedureEmbryoTransferRemarks: 'c0010001-0000-0000-0000-000000000182',
 };
 
 

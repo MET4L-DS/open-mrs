@@ -131,7 +131,10 @@ To maintain agility and avoid blocking clinical deployment pending terminology l
 | `c0010001-0000-0000-0000-000000000176` | Zone 3 Internal Endometrial Hypoechoic Zone Dimensions | Numeric | Finding | Local / Zone | — | — | Active | Form 15: Zone 3 dimensions (cm) |
 | `c0010001-0000-0000-0000-000000000177` | Zone 4 Endometrial Cavity Dimensions | Numeric | Finding | Local / Zone | — | — | Active | Form 15: Zone 4 dimensions (cm) |
 | `c0010001-0000-0000-0000-000000000178` | Female Surgical Procedure Remarks | Text | Misc | Local / Surgical | — | — | Active | Form 15: Procedure remarks & notes |
-
+| `c0010001-0000-0000-0000-000000000179` | Mock Embryo Transfer | Coded | Finding | Local / Procedure | — | — | Active | Form 16: Easy, Difficult |
+| `c0010001-0000-0000-0000-000000000180` | Mock Embryo Transfer Speculum | Coded | Finding | Local / Procedure | — | — | Active | Form 16: With Cusco's, With Sim's |
+| `c0010001-0000-0000-0000-000000000181` | Embryo Transfer Cervical Canal Direction | Coded | Finding | Local / Procedure | — | — | Active | Form 16: Direction |
+| `c0010001-0000-0000-0000-000000000182` | Procedure Embryo Transfer Remarks | Text | Misc | Local / Procedure | — | — | Active | Form 16: Remarks & notes |
 
 ---
 

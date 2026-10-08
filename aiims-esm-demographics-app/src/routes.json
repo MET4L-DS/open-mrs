@@ -307,6 +307,26 @@
       "slot": "aiims-female-surgical-procedure-dashboard-slot",
       "online": true,
       "offline": true
+    },
+    {
+      "name": "aiims-procedure-embryo-transfer-dashboard-link",
+      "component": "aiimsProcedureEmbryoTransferDashboardLink",
+      "slot": "patient-chart-dashboard-slot",
+      "order": 1,
+      "meta": {
+        "slot": "aiims-procedure-embryo-transfer-dashboard-slot",
+        "path": "aiims-procedure-embryo-transfer",
+        "title": "Procedure Embryo Transfer"
+      },
+      "online": true,
+      "offline": true
+    },
+    {
+      "name": "aiims-procedure-embryo-transfer-dashboard",
+      "component": "aiimsProcedureEmbryoTransferDashboard",
+      "slot": "aiims-procedure-embryo-transfer-dashboard-slot",
+      "online": true,
+      "offline": true
     }
   ]
 }

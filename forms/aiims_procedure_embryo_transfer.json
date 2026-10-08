@@ -1,0 +1,112 @@
+{
+  "name": "AIIMS Visit: Procedure Embryo Transfer",
+  "description": "AIIMS Department of Reproductive Medicine & IVF - Procedure Embryo Transfer Sheet",
+  "version": "1.0",
+  "published": true,
+  "retired": false,
+  "encounter": "Consultation",
+  "processor": "EncounterFormProcessor",
+  "referencedForms": [],
+  "pages": [
+    {
+      "label": "Procedure Embryo Transfer",
+      "sections": [
+        {
+          "label": "Mock Embryo Transfer & Cervical Assessment",
+          "isExpanded": true,
+          "questions": [
+            {
+              "label": "Mock Embryo Transfer",
+              "type": "obs",
+              "id": "mock_embryo_transfer",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "c0010001-0000-0000-0000-000000000179",
+                "answers": [
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000970",
+                    "label": "Easy"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000971",
+                    "label": "Difficult"
+                  }
+                ]
+              }
+            },
+            {
+              "label": "Speculum Type",
+              "type": "obs",
+              "id": "mock_embryo_transfer_speculum",
+              "required": "false",
+              "hide": {
+                "hideWhenExpression": "mock_embryo_transfer !== 'c0010002-0000-0000-0000-000000000970'"
+              },
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "c0010001-0000-0000-0000-000000000180",
+                "answers": [
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000972",
+                    "label": "With Cusco's"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000973",
+                    "label": "With Sim's"
+                  }
+                ]
+              }
+            },
+            {
+              "label": "Cervical Canal Direction",
+              "type": "obs",
+              "id": "embryo_transfer_cervical_canal_direction",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "select",
+                "concept": "c0010001-0000-0000-0000-000000000181",
+                "answers": [
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000974",
+                    "label": "Deviated to Left"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000975",
+                    "label": "Deviated to Right"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000976",
+                    "label": "Straight"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000977",
+                    "label": "Acutely anteverted"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000923",
+                    "label": "Anteverted"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000924",
+                    "label": "Retroverted"
+                  }
+                ]
+              }
+            },
+            {
+              "label": "Procedure Remarks",
+              "type": "obs",
+              "id": "procedure_embryo_transfer_remarks",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "textarea",
+                "concept": "c0010001-0000-0000-0000-000000000182"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
