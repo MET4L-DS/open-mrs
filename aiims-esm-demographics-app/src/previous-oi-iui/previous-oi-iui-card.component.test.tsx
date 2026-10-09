@@ -7,6 +7,10 @@ import {
   initialAiimsPreviousOiIuiData,
 } from './previous-oi-iui.resource';
 
+vi.mock('@openmrs/esm-framework', () => ({
+  formatDate: (date: Date) => date.toISOString().split('T')[0],
+}));
+
 vi.mock('react-i18next', () => ({
   useTranslation: () => ({
     t: (key: string, defaultValue?: string, options?: Record<string, any>) => {
@@ -26,13 +30,13 @@ describe('PreviousOiIuiCard', () => {
     render(<PreviousOiIuiCard data={initialAiimsPreviousOiIuiData} />);
 
     expect(
-      screen.getByText('Previous Ovulation Induction & IUI History')
+      screen.getByText('Previous OVI & IUI History')
     ).toBeInTheDocument();
     expect(
-      screen.getByText('Previous Ovulation Induction (OI)')
+      screen.getByText('Previous Ovulation Induction (OVI)')
     ).toBeInTheDocument();
     expect(
-      screen.getByText('Previous OI & Intra-Uterine Insemination (IUI)')
+      screen.getByText('Previous OVI & Intra-Uterine Insemination (IUI)')
     ).toBeInTheDocument();
     expect(
       screen.getByText('Failed In Vitro Fertilization (IVF)')
@@ -57,6 +61,8 @@ describe('PreviousOiIuiCard', () => {
       iuiYear: '2024',
       failedIvf: 'Yes',
       failedIvfCycles: '1',
+      prevIvfDetailsDate: '2024-05-15',
+      prevIvfDetails: 'Antagonist protocol, 2 embryos transferred.',
       previousArtNotes: 'Previous antagonist protocol with poor response.',
     };
 
@@ -74,6 +80,10 @@ describe('PreviousOiIuiCard', () => {
     expect(screen.getByText('2024')).toBeInTheDocument();
 
     expect(screen.getByText('1 cycles')).toBeInTheDocument();
+    expect(screen.getByText('2024-05-15')).toBeInTheDocument();
+    expect(
+      screen.getByText('Antagonist protocol, 2 embryos transferred.')
+    ).toBeInTheDocument();
     expect(
       screen.getByText('Previous antagonist protocol with poor response.')
     ).toBeInTheDocument();

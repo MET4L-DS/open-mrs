@@ -777,6 +777,10 @@ full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000190", "Husb
 full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000191", "Sperm Morphology", datatype_id=3, class_id=7))
 full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000192", "Investigation Male Semen Remarks", datatype_id=3, class_id=7))
 
+# Previous OVI & IUI Form Enhancements (0193-0194)
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000193", "Prev In-Vitro Fertilization details", datatype_id=3, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000194", "Prev In-Vitro Fertilization details Date", datatype_id=6, class_id=7))
+
 # 3. Link Answers
 # Education Wife answers
 for u, _ in education_answers:

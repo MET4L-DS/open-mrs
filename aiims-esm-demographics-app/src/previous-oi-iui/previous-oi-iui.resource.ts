@@ -18,6 +18,8 @@ export interface AiimsPreviousOiIuiData {
   iuiYear?: string;
   failedIvf?: string;
   failedIvfCycles?: string;
+  prevIvfDetailsDate?: string;
+  prevIvfDetails?: string;
   previousArtNotes?: string;
 }
 
@@ -66,6 +68,8 @@ export function usePreviousOiIui(
     iuiYear: getOptionalObsValue(CONCEPTS.iuiYear),
     failedIvf: getOptionalObsValue(CONCEPTS.failedIvf),
     failedIvfCycles: getOptionalObsValue(CONCEPTS.failedIvfCycles),
+    prevIvfDetailsDate: getOptionalObsValue(CONCEPTS.prevIvfDetailsDate),
+    prevIvfDetails: getOptionalObsValue(CONCEPTS.prevIvfDetails),
     previousArtNotes: getOptionalObsValue(CONCEPTS.previousArtNotes),
   };
 

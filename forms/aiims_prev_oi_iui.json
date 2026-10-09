@@ -9,10 +9,10 @@
   "referencedForms": [],
   "pages": [
     {
-      "label": "Previous OI and IUI",
+      "label": "Previous OVI and IUI",
       "sections": [
         {
-          "label": "Previous Ovulation Induction (OI alone)",
+          "label": "Previous Ovulation Induction (OVI alone)",
           "isExpanded": true,
           "questions": [
             {
@@ -127,7 +127,7 @@
           ]
         },
         {
-          "label": "Previous Ovulation Induction and Intra-Uterine Insemination (OI + IUI)",
+          "label": "Previous Ovulation Induction and Intra-Uterine Insemination (OVI + IUI)",
           "isExpanded": true,
           "questions": [
             {
@@ -280,6 +280,34 @@
                   "message": "Number of failed IVF cycles must be between 0 and 50."
                 }
               ]
+            },
+            {
+              "label": "Prev In-Vitro Fertilization details Date",
+              "type": "obs",
+              "id": "prev_ivf_date",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "date",
+                "concept": "c0010001-0000-0000-0000-000000000194"
+              },
+              "hide": {
+                "hideWhenExpression": "!failed_ivf || failed_ivf !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              }
+            },
+            {
+              "label": "Prev In-Vitro Fertilization details",
+              "type": "obs",
+              "id": "prev_ivf_details",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "textarea",
+                "concept": "c0010001-0000-0000-0000-000000000193",
+                "rows": 3,
+                "placeholder": "Enter details of prior IVF cycles, protocol, response, or clinics..."
+              },
+              "hide": {
+                "hideWhenExpression": "!failed_ivf || failed_ivf !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              }
             },
             {
               "label": "Previous ART Treatment Clinical Notes",

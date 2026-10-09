@@ -162,7 +162,7 @@ export const FORM_REGISTRY: FormRegistryEntry[] = [
     name: AIIMS_PREV_OI_IUI_FORM_NAME,
     path: 'aiims-previous-oi-iui',
     titleKey: 'aiimsPreviousOiIuiTitle',
-    title: 'Previous OI & IUI',
+    title: 'Previous OVI & IUI',
     slot: 'aiims-previous-oi-iui-dashboard-slot',
     icon: Medication,
     order: 1,
@@ -369,6 +369,8 @@ export const CONCEPTS = {
   failedIvf: 'c0010001-0000-0000-0000-000000000055',
   failedIvfCycles: 'c0010001-0000-0000-0000-000000000056',
   previousArtNotes: 'c0010001-0000-0000-0000-000000000057',
+  prevIvfDetails: 'c0010001-0000-0000-0000-000000000193',
+  prevIvfDetailsDate: 'c0010001-0000-0000-0000-000000000194',
   // Previous Surgery concepts (Form 9)
   previousSurgeryPerformed: 'c0010001-0000-0000-0000-000000000058',
   surgicalApproach: 'c0010001-0000-0000-0000-000000000059',

@@ -37,18 +37,18 @@ export default function PreviousOiIuiDashboard({
       isLoading={isLoading}
       error={error}
       mutate={mutate}
-      loadingDescription={t('loadingPreviousOiIui', 'Loading Previous OI & IUI history...')}
+      loadingDescription={t('loadingPreviousOiIui', 'Loading Previous OVI & IUI history...')}
       noRecordedText={t(
         'noRecordedPreviousOiIuiEncounter',
-        'No AIIMS Previous OI and IUI encounter recorded yet'
+        'No AIIMS Previous OVI and IUI encounter recorded yet'
       )}
-      emptyHeading={t('noPreviousOiIuiHeader', 'No Previous OI & IUI History Recorded Yet')}
+      emptyHeading={t('noPreviousOiIuiHeader', 'No Previous OVI & IUI History Recorded Yet')}
       emptyDescription={t(
         'noPreviousOiIuiBody',
-        'Previous ovulation induction (OI), intra-uterine insemination (IUI), and prior failed IVF treatments have not been recorded for this patient yet.'
+        'Previous ovulation induction (OVI), intra-uterine insemination (IUI), and prior failed IVF treatments have not been recorded for this patient yet.'
       )}
-      recordButtonText={t('recordPreviousOiIui', 'Record OI & IUI History')}
-      updateButtonText={t('updatePreviousOiIui', 'Update OI & IUI History')}
+      recordButtonText={t('recordPreviousOiIui', 'Record OVI & IUI History')}
+      updateButtonText={t('updatePreviousOiIui', 'Update OVI & IUI History')}
     >
       <PreviousOiIuiCard data={previousOiIuiData} />
     </FormDashboardShell>

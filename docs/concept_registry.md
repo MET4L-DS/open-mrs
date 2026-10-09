@@ -145,6 +145,8 @@ To maintain agility and avoid blocking clinical deployment pending terminology l
 | `c0010001-0000-0000-0000-000000000190` | Husband Semen Analysis Motility (total/progressive) | Text | Finding | Local / HSA | — | — | Active | Form 18: Motility details |
 | `c0010001-0000-0000-0000-000000000191` | Sperm Morphology | Text | Finding | Local / HSA | — | — | Active | Form 18: Morphology details |
 | `c0010001-0000-0000-0000-000000000192` | Investigation Male Semen Remarks | Text | Misc | Local / HSA | — | — | Active | Form 18: Remarks & notes |
+| `c0010001-0000-0000-0000-000000000193` | Prev In-Vitro Fertilization details | Text | Finding | Local / ART | — | — | Active | Form 8: Prior IVF clinical details |
+| `c0010001-0000-0000-0000-000000000194` | Prev In-Vitro Fertilization details Date | Date | Finding | Local / ART | — | — | Active | Form 8: Prior IVF procedure date |
 
 ---
 
