@@ -90,6 +90,7 @@ This file serves as the persistent project-level memory and source of truth acro
   - Form 16 (`procedure-embryo-transfer`): `80930653-7e80-4bfd-9e29-ec37c334d88f` (`AIIMS Visit: Procedure Embryo Transfer`)
   - Form 17 (`investigation-female-procedure-biopsy`): `80930653-7e80-4bfd-9e29-ec37c334d890` (`AIIMS Visit: Investigation Female Procedure Biopsy`)
   - Form 18 (`investigation-male-semen`): `80930653-7e80-4bfd-9e29-ec37c334d891` (`AIIMS Visit: Investigation Male Semen`)
+  - Form 19 (`trigger-details`): `80930653-7e80-4bfd-9e29-ec37c334d892` (`AIIMS Visit: Trigger Details`)
 - **Core Concept UUIDs (`src/constants.ts` & `docs/concept_registry.md`)**:
   - `consultantUnit`: `c0010001-0000-0000-0000-000000000001`
   - `consultantName`: `c0010001-0000-0000-0000-000000000002`

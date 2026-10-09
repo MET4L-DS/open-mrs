@@ -259,6 +259,20 @@ To maintain agility and avoid blocking clinical deployment pending terminology l
 | `c0010002-0000-0000-0000-000000000995` | Few motile | Local / HSA | — | — | Active |
 | `c0010002-0000-0000-0000-000000000996` | Immotile | Local / HSA | — | — | Active |
 
+---
+
+### 2.8 Trigger Details Answer Options (`c0010002-...`)
+
+| Placeholder UUID | Display Name | Target Standard | Target Code | ATHENA Verified | Status |
+|:---|:---|:---|:---:|:---:|:---:|
+| `c0010002-0000-0000-0000-000000000967` | Trilaminar | Local / Ultrasound | — | — | Active |
+| `c0010002-0000-0000-0000-000000000997` | Endometrial polyp | Local / Clinical | — | — | Active |
+| `c0010002-0000-0000-0000-000000000998` | Early diffuse | Local / Clinical | — | — | Active |
+| `c0010002-0000-0000-0000-000000000959` | Fluid in cavity | Local / Ultrasound | — | — | Active |
+| `c0010002-0000-0000-0000-000000000999` | Minimal fluid | Local / Clinical | — | — | Active |
+| `c0010002-0000-0000-0000-000000001000` | Leuprolide | SNOMED CT / RxNorm | — | — | Active |
+| `c0010002-0000-0000-0000-000000001001` | Ovitrelle | SNOMED CT / RxNorm | — | — | Active |
+
 
 ---
 

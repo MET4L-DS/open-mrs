@@ -367,6 +367,26 @@
       "slot": "aiims-investigation-male-semen-dashboard-slot",
       "online": true,
       "offline": true
+    },
+    {
+      "name": "aiims-trigger-details-dashboard-link",
+      "component": "aiimsTriggerDetailsDashboardLink",
+      "slot": "patient-chart-dashboard-slot",
+      "order": 1,
+      "meta": {
+        "slot": "aiims-trigger-details-dashboard-slot",
+        "path": "aiims-trigger-details",
+        "title": "Trigger Details"
+      },
+      "online": true,
+      "offline": true
+    },
+    {
+      "name": "aiims-trigger-details-dashboard",
+      "component": "aiimsTriggerDetailsDashboard",
+      "slot": "aiims-trigger-details-dashboard-slot",
+      "online": true,
+      "offline": true
     }
   ]
 }

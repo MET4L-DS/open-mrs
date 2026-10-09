@@ -1,0 +1,177 @@
+{
+  "name": "AIIMS Visit: Trigger Details",
+  "description": "AIIMS Department of Reproductive Medicine & IVF - Trigger Details Sheet",
+  "version": "1.0",
+  "published": true,
+  "retired": false,
+  "encounter": "Consultation",
+  "processor": "EncounterFormProcessor",
+  "referencedForms": [],
+  "pages": [
+    {
+      "label": "Trigger Details",
+      "sections": [
+        {
+          "label": "Follicles & Endometrium on Trigger Day",
+          "isExpanded": true,
+          "questions": [
+            {
+              "label": "Number of Follicles on trigger day (14 mm - 22mm)",
+              "type": "obs",
+              "id": "number_of_follicles_14_22_mm",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "number",
+                "concept": "c0010001-0000-0000-0000-000000000195"
+              }
+            },
+            {
+              "label": "Number of Follicles on trigger day (16 mm - 22mm)",
+              "type": "obs",
+              "id": "number_of_follicles_16_22_mm",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "number",
+                "concept": "c0010001-0000-0000-0000-000000000196"
+              }
+            },
+            {
+              "label": "Endometrial thickness on trigger day (mm)",
+              "type": "obs",
+              "id": "endometrial_thickness_trigger_day",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "number",
+                "concept": "c0010001-0000-0000-0000-000000000197"
+              }
+            },
+            {
+              "label": "Endometrial thickness on trigger day (Pattern)",
+              "type": "obs",
+              "id": "endometrial_pattern_trigger_day",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "select",
+                "concept": "c0010001-0000-0000-0000-000000000198",
+                "answers": [
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000967",
+                    "label": "Trilaminar"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000997",
+                    "label": "Endometrial polyp"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000998",
+                    "label": "Early diffuse"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000959",
+                    "label": "Fluid in cavity"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000999",
+                    "label": "Minimal fluid"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "label": "Hormones on Trigger Day",
+          "isExpanded": true,
+          "questions": [
+            {
+              "label": "Estradiol on Trigger Day (pg/mL)",
+              "type": "obs",
+              "id": "estradiol_trigger_day",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "number",
+                "concept": "c0010001-0000-0000-0000-000000000199"
+              }
+            },
+            {
+              "label": "Progesterone on Trigger Day (ng/mL)",
+              "type": "obs",
+              "id": "progesterone_trigger_day",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "number",
+                "concept": "c0010001-0000-0000-0000-000000000200"
+              }
+            }
+          ]
+        },
+        {
+          "label": "Ovulation Trigger Administration",
+          "isExpanded": true,
+          "questions": [
+            {
+              "label": "Ovulation trigger",
+              "type": "obs",
+              "id": "ovulation_trigger",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "c0010001-0000-0000-0000-000000000201",
+                "answers": [
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000001000",
+                    "label": "Leuprolide"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000001001",
+                    "label": "Ovitrelle"
+                  }
+                ]
+              }
+            },
+            {
+              "label": "Ovulation trigger dose",
+              "type": "obs",
+              "id": "ovulation_trigger_dose",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "text",
+                "concept": "c0010001-0000-0000-0000-000000000202"
+              }
+            },
+            {
+              "label": "Date of trigger",
+              "type": "obs",
+              "id": "date_of_trigger",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "date",
+                "concept": "c0010001-0000-0000-0000-000000000203"
+              }
+            },
+            {
+              "label": "Time of trigger",
+              "type": "obs",
+              "id": "time_of_trigger",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "text",
+                "concept": "c0010001-0000-0000-0000-000000000204"
+              }
+            },
+            {
+              "label": "Remarks",
+              "type": "obs",
+              "id": "trigger_details_remarks",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "textarea",
+                "concept": "c0010001-0000-0000-0000-000000000205"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

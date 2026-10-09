@@ -149,6 +149,14 @@ FORMS_TO_PUBLISH = [
         "uuid": "80930653-7e80-4bfd-9e29-ec37c334d891",
         "encounter_type": "dd528487-82a5-4082-9c72-ed246bd49591",  # Consultation
     },
+    {
+        "name": "AIIMS Visit: Trigger Details",
+        "version": "1.0",
+        "description": "AIIMS Reproductive Medicine & IVF Trigger Details Sheet",
+        "schema_path": "forms/aiims_trigger_details.json",
+        "uuid": "80930653-7e80-4bfd-9e29-ec37c334d892",
+        "encounter_type": "dd528487-82a5-4082-9c72-ed246bd49591",  # Consultation
+    },
 ]
 
 def get_db_container():

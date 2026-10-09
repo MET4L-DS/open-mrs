@@ -425,6 +425,14 @@ investigation_male_semen_answers = [
     ("c0010002-0000-0000-0000-000000000996", "Immotile"),
 ]
 
+trigger_details_answers = [
+    ("c0010002-0000-0000-0000-000000000997", "Endometrial polyp"),
+    ("c0010002-0000-0000-0000-000000000998", "Early diffuse"),
+    ("c0010002-0000-0000-0000-000000000999", "Minimal fluid"),
+    ("c0010002-0000-0000-0000-000000001000", "Leuprolide"),
+    ("c0010002-0000-0000-0000-000000001001", "Ovitrelle"),
+]
+
 
 
 # We assemble the migration script wrapped in a stored procedure for IF/ELSE control flow
@@ -473,6 +481,9 @@ for u, name in female_procedure_biopsy_answers:
     full_script.append(add_concept_sql(u, name, datatype_id=4, class_id=11))
 
 for u, name in investigation_male_semen_answers:
+    full_script.append(add_concept_sql(u, name, datatype_id=4, class_id=11))
+
+for u, name in trigger_details_answers:
     full_script.append(add_concept_sql(u, name, datatype_id=4, class_id=11))
 
 
@@ -780,6 +791,19 @@ full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000192", "Inve
 # Previous OVI & IUI Form Enhancements (0193-0194)
 full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000193", "Prev In-Vitro Fertilization details", datatype_id=3, class_id=7))
 full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000194", "Prev In-Vitro Fertilization details Date", datatype_id=6, class_id=7))
+
+# Trigger Details Concepts (Form 19: 0195-0205)
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000195", "Number of Follicles on trigger day 14 to 22 mm", datatype_id=1, class_id=7, is_numeric=True, allow_decimal=0, low_abs=0, hi_abs=100))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000196", "Number of Follicles on trigger day 16 to 22 mm", datatype_id=1, class_id=7, is_numeric=True, allow_decimal=0, low_abs=0, hi_abs=100))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000197", "Endometrial thickness on trigger day", datatype_id=1, class_id=7, is_numeric=True, units="mm", allow_decimal=1, low_abs=0, hi_abs=30))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000198", "Endometrial thickness on trigger day Pattern", datatype_id=2, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000199", "Estradiol on Trigger Day", datatype_id=1, class_id=7, is_numeric=True, units="pg/mL", allow_decimal=1, low_abs=0, hi_abs=20000))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000200", "Progesterone on Trigger Day", datatype_id=1, class_id=7, is_numeric=True, units="ng/mL", allow_decimal=2, low_abs=0, hi_abs=100))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000201", "Ovulation trigger", datatype_id=2, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000202", "Ovulation trigger dose", datatype_id=3, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000203", "Date of trigger", datatype_id=6, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000204", "Time of trigger", datatype_id=3, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000205", "Trigger Details Remarks", datatype_id=3, class_id=7))
 
 # 3. Link Answers
 # Education Wife answers
@@ -1289,6 +1313,24 @@ for ans_uuid in [
     "c0010002-0000-0000-0000-000000000996",  # Immotile
 ]:
     full_script.append(add_answer_sql("c0010001-0000-0000-0000-000000000189", ans_uuid))
+
+# Trigger Details (Form 19)
+# Endometrial thickness on trigger day Pattern (0198)
+for ans_uuid in [
+    "c0010002-0000-0000-0000-000000000967",  # Trilaminar
+    "c0010002-0000-0000-0000-000000000997",  # Endometrial polyp
+    "c0010002-0000-0000-0000-000000000998",  # Early diffuse
+    "c0010002-0000-0000-0000-000000000959",  # Fluid in cavity
+    "c0010002-0000-0000-0000-000000000999",  # Minimal fluid
+]:
+    full_script.append(add_answer_sql("c0010001-0000-0000-0000-000000000198", ans_uuid))
+
+# Ovulation trigger (0201)
+for ans_uuid in [
+    "c0010002-0000-0000-0000-000000001000",  # Leuprolide
+    "c0010002-0000-0000-0000-000000001001",  # Ovitrelle
+]:
+    full_script.append(add_answer_sql("c0010001-0000-0000-0000-000000000201", ans_uuid))
 
 
 full_script.append("END$$")

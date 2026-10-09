@@ -1,4 +1,4 @@
-import { Identification, Events, ParentChild, Calendar, Activity, GenderMale, Scalpel, Medication, Cut, PedestrianFamily, Microscope, Waveform, Chemistry, ReportData } from '@carbon/react/icons';
+import { Identification, Events, ParentChild, Calendar, Activity, GenderMale, Scalpel, Medication, Cut, PedestrianFamily, Microscope, Waveform, Chemistry, ReportData, Timer } from '@carbon/react/icons';
 import { type FormRegistryEntry } from './shared/types';
 
 
@@ -75,6 +75,10 @@ export const AIIMS_INVESTIGATION_FEMALE_PROCEDURE_BIOPSY_FORM_NAME = 'AIIMS Visi
 // Form UUID for AIIMS Visit: Investigation Male Semen
 export const AIIMS_INVESTIGATION_MALE_SEMEN_FORM_UUID = '80930653-7e80-4bfd-9e29-ec37c334d891';
 export const AIIMS_INVESTIGATION_MALE_SEMEN_FORM_NAME = 'AIIMS Visit: Investigation Male Semen';
+
+// Form UUID for AIIMS Visit: Trigger Details
+export const AIIMS_TRIGGER_DETAILS_FORM_UUID = '80930653-7e80-4bfd-9e29-ec37c334d892';
+export const AIIMS_TRIGGER_DETAILS_FORM_NAME = 'AIIMS Visit: Trigger Details';
 
 // Form Registry: Centralized configuration for all current and future AIIMS forms
 
@@ -275,6 +279,17 @@ export const FORM_REGISTRY: FormRegistryEntry[] = [
     title: 'Investigation Male Semen',
     slot: 'aiims-investigation-male-semen-dashboard-slot',
     icon: Chemistry,
+    order: 1,
+  },
+  {
+    key: 'trigger-details',
+    uuid: AIIMS_TRIGGER_DETAILS_FORM_UUID,
+    name: AIIMS_TRIGGER_DETAILS_FORM_NAME,
+    path: 'aiims-trigger-details',
+    titleKey: 'aiimsTriggerDetailsTitle',
+    title: 'Trigger Details',
+    slot: 'aiims-trigger-details-dashboard-slot',
+    icon: Timer,
     order: 1,
   },
   // Additional forms (anthropometry, clinical history, semen analysis, etc.) will be registered here
@@ -570,6 +585,19 @@ export const CONCEPTS = {
   semenMotilityTotalProgressive: 'c0010001-0000-0000-0000-000000000190',
   spermMorphology: 'c0010001-0000-0000-0000-000000000191',
   investigationMaleSemenRemarks: 'c0010001-0000-0000-0000-000000000192',
+
+  // Trigger Details (Form 19)
+  numberOfFollicles14to22mm: 'c0010001-0000-0000-0000-000000000195',
+  numberOfFollicles16to22mm: 'c0010001-0000-0000-0000-000000000196',
+  endometrialThicknessTriggerDay: 'c0010001-0000-0000-0000-000000000197',
+  endometrialPatternTriggerDay: 'c0010001-0000-0000-0000-000000000198',
+  estradiolTriggerDay: 'c0010001-0000-0000-0000-000000000199',
+  progesteroneTriggerDay: 'c0010001-0000-0000-0000-000000000200',
+  ovulationTrigger: 'c0010001-0000-0000-0000-000000000201',
+  ovulationTriggerDose: 'c0010001-0000-0000-0000-000000000202',
+  dateOfTrigger: 'c0010001-0000-0000-0000-000000000203',
+  timeOfTrigger: 'c0010001-0000-0000-0000-000000000204',
+  triggerDetailsRemarks: 'c0010001-0000-0000-0000-000000000205',
 };
 
 

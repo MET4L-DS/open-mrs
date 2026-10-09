@@ -1,0 +1,18 @@
+slot_columns,
+Number_of_Follicles_on_trigger_day (14 mm - 22mm),
+Number_of_Follicles_on_trigger_day (16 mm - 22mm),
+Endometrial_thickness_on_trigger_day (mm),
+Endometrial_thickness_on_trigger_day (Pattern),
+,Trilaminar
+,Endometrial polyp
+,Early diffuse
+,Fluid in cavity
+,Minimal fluid 
+Estradiol on Trigger Day,
+Progesterone on Trigger Day,
+Ovulation_trigger,
+,Leuprolide
+,Ovitrelle
+Ovulation_trigger_dose,
+Date_of_trigger,
+Time_of_trigger,
