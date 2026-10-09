@@ -173,14 +173,6 @@ const maleFactorExtensions = createFormExtensions(
 export const aiimsMaleFactorDashboardLink = maleFactorExtensions.link;
 export const aiimsMaleFactorDashboard = maleFactorExtensions.dashboard;
 
-const maleHormoneSurgeryExtensions = createFormExtensions(
-  getFormRegistryEntry('male-hormone-surgery'),
-  () => import('./male-hormone-surgery/male-hormone-surgery-dashboard.component')
-);
-
-export const aiimsMaleHormoneSurgeryDashboardLink = maleHormoneSurgeryExtensions.link;
-export const aiimsMaleHormoneSurgeryDashboard = maleHormoneSurgeryExtensions.dashboard;
-
 const previousOiIuiExtensions = createFormExtensions(
   getFormRegistryEntry('previous-oi-iui'),
   () => import('./previous-oi-iui/previous-oi-iui-dashboard.component')
@@ -196,6 +188,14 @@ const previousSurgeryExtensions = createFormExtensions(
 
 export const aiimsPreviousSurgeryDashboardLink = previousSurgeryExtensions.link;
 export const aiimsPreviousSurgeryDashboard = previousSurgeryExtensions.dashboard;
+
+const maleHormoneSurgeryExtensions = createFormExtensions(
+  getFormRegistryEntry('male-hormone-surgery'),
+  () => import('./male-hormone-surgery/male-hormone-surgery-dashboard.component')
+);
+
+export const aiimsMaleHormoneSurgeryDashboardLink = maleHormoneSurgeryExtensions.link;
+export const aiimsMaleHormoneSurgeryDashboard = maleHormoneSurgeryExtensions.dashboard;
 
 const pastMedicalHistoryExtensions = createFormExtensions(
   getFormRegistryEntry('past-medical-history'),
@@ -276,9 +276,9 @@ export * from './obstetric-history';
 export * from './menstrual-history';
 export * from './female-factor';
 export * from './male-factor';
-export * from './male-hormone-surgery';
 export * from './previous-oi-iui';
 export * from './previous-surgery';
+export * from './male-hormone-surgery';
 export * from './past-medical-history';
 export * from './family-history';
 export * from './tuberculosis-history';

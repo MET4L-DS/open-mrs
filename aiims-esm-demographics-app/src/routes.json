@@ -129,26 +129,6 @@
       "offline": true
     },
     {
-      "name": "aiims-male-hormone-surgery-dashboard-link",
-      "component": "aiimsMaleHormoneSurgeryDashboardLink",
-      "slot": "patient-chart-dashboard-slot",
-      "order": 1,
-      "meta": {
-        "slot": "aiims-male-hormone-surgery-dashboard-slot",
-        "path": "aiims-male-hormone-surgery",
-        "title": "Male Hormone & Surgery"
-      },
-      "online": true,
-      "offline": true
-    },
-    {
-      "name": "aiims-male-hormone-surgery-dashboard",
-      "component": "aiimsMaleHormoneSurgeryDashboard",
-      "slot": "aiims-male-hormone-surgery-dashboard-slot",
-      "online": true,
-      "offline": true
-    },
-    {
       "name": "aiims-previous-oi-iui-dashboard-link",
       "component": "aiimsPreviousOiIuiDashboardLink",
       "slot": "patient-chart-dashboard-slot",
@@ -185,6 +165,26 @@
       "name": "aiims-previous-surgery-dashboard",
       "component": "aiimsPreviousSurgeryDashboard",
       "slot": "aiims-previous-surgery-dashboard-slot",
+      "online": true,
+      "offline": true
+    },
+    {
+      "name": "aiims-male-hormone-surgery-dashboard-link",
+      "component": "aiimsMaleHormoneSurgeryDashboardLink",
+      "slot": "patient-chart-dashboard-slot",
+      "order": 1,
+      "meta": {
+        "slot": "aiims-male-hormone-surgery-dashboard-slot",
+        "path": "aiims-male-hormone-surgery",
+        "title": "Male Hormone & Surgery"
+      },
+      "online": true,
+      "offline": true
+    },
+    {
+      "name": "aiims-male-hormone-surgery-dashboard",
+      "component": "aiimsMaleHormoneSurgeryDashboard",
+      "slot": "aiims-male-hormone-surgery-dashboard-slot",
       "online": true,
       "offline": true
     },
