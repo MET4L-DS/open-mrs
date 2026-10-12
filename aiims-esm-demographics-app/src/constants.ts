@@ -96,6 +96,10 @@ export const AIIMS_PROCEDURE_FORM_NAME = 'AIIMS Visit: Procedure';
 export const AIIMS_SPERM_QUALITY_ASSESSMENT_FORM_UUID = '80930653-7e80-4bfd-9e29-ec37c334d896';
 export const AIIMS_SPERM_QUALITY_ASSESSMENT_FORM_NAME = 'AIIMS Visit: Sperm Quality Assessment';
 
+// Form UUID for AIIMS Visit: Type of Ovarian Stimulation Protocol
+export const AIIMS_OVARIAN_STIMULATION_PROTOCOL_FORM_UUID = '80930653-7e80-4bfd-9e29-ec37c334d897';
+export const AIIMS_OVARIAN_STIMULATION_PROTOCOL_FORM_NAME = 'AIIMS Visit: Type of Ovarian Stimulation Protocol';
+
 // Form Registry: Centralized configuration for all current and future AIIMS forms
 
 export const FORM_REGISTRY: FormRegistryEntry[] = [
@@ -295,6 +299,17 @@ export const FORM_REGISTRY: FormRegistryEntry[] = [
     title: 'Investigation Male Semen',
     slot: 'aiims-investigation-male-semen-dashboard-slot',
     icon: Chemistry,
+    order: 1,
+  },
+  {
+    key: 'ovarian-stimulation-protocol',
+    uuid: AIIMS_OVARIAN_STIMULATION_PROTOCOL_FORM_UUID,
+    name: AIIMS_OVARIAN_STIMULATION_PROTOCOL_FORM_NAME,
+    path: 'aiims-ovarian-stimulation-protocol',
+    titleKey: 'aiimsOvarianStimulationProtocolTitle',
+    title: 'Type of Ovarian Stimulation Protocol',
+    slot: 'aiims-ovarian-stimulation-protocol-dashboard-slot',
+    icon: Medication,
     order: 1,
   },
   {
@@ -687,6 +702,10 @@ export const CONCEPTS = {
   postWashSpermConcentration: 'c0010001-0000-0000-0000-000000000228',
   spermMotilityOpuDay: 'c0010001-0000-0000-0000-000000000229',
   spermQualityAssessmentRemarks: 'c0010001-0000-0000-0000-000000000230',
+
+  // Type of Ovarian Stimulation Protocol
+  ovarianStimulationProtocol: 'c0010001-0000-0000-0000-000000000231',
+  ovarianStimulationProtocolRemarks: 'c0010001-0000-0000-0000-000000000232',
 };
 
 

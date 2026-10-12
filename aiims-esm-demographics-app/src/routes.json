@@ -369,6 +369,26 @@
       "offline": true
     },
     {
+      "name": "aiims-ovarian-stimulation-protocol-dashboard-link",
+      "component": "aiimsOvarianStimulationProtocolDashboardLink",
+      "slot": "patient-chart-dashboard-slot",
+      "order": 1,
+      "meta": {
+        "slot": "aiims-ovarian-stimulation-protocol-dashboard-slot",
+        "path": "aiims-ovarian-stimulation-protocol",
+        "title": "Type of Ovarian Stimulation Protocol"
+      },
+      "online": true,
+      "offline": true
+    },
+    {
+      "name": "aiims-ovarian-stimulation-protocol-dashboard",
+      "component": "aiimsOvarianStimulationProtocolDashboard",
+      "slot": "aiims-ovarian-stimulation-protocol-dashboard-slot",
+      "online": true,
+      "offline": true
+    },
+    {
       "name": "aiims-trigger-details-dashboard-link",
       "component": "aiimsTriggerDetailsDashboardLink",
       "slot": "patient-chart-dashboard-slot",

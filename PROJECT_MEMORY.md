@@ -90,11 +90,12 @@ This file serves as the persistent project-level memory and source of truth acro
   - Form 16 (`procedure-embryo-transfer`): `80930653-7e80-4bfd-9e29-ec37c334d88f` (`AIIMS Visit: Procedure Embryo Transfer`)
   - Form 17 (`investigation-female-procedure-biopsy`): `80930653-7e80-4bfd-9e29-ec37c334d890` (`AIIMS Visit: Investigation Female Procedure Biopsy`)
   - Form 18 (`investigation-male-semen`): `80930653-7e80-4bfd-9e29-ec37c334d891` (`AIIMS Visit: Investigation Male Semen`)
-  - Form 19 (`trigger-details`): `80930653-7e80-4bfd-9e29-ec37c334d892` (`AIIMS Visit: Trigger Details`)
-  - Form 20 (`ovum-pick-up-details`): `80930653-7e80-4bfd-9e29-ec37c334d893` (`AIIMS Visit: Ovum Pick Up Details`)
-  - Form 21 (`procedure`): `80930653-7e80-4bfd-9e29-ec37c334d895` (`AIIMS Visit: Procedure`)
-  - Form 22 (`lab-procedure-insemination`): `80930653-7e80-4bfd-9e29-ec37c334d894` (`AIIMS Visit: Lab Procedure of Insemination`)
-  - Form 23 (`sperm-quality-assessment`): `80930653-7e80-4bfd-9e29-ec37c334d896` (`AIIMS Visit: Sperm Quality Assessment`)
+  - Form 19 (`ovarian-stimulation-protocol`): `80930653-7e80-4bfd-9e29-ec37c334d897` (`AIIMS Visit: Type of Ovarian Stimulation Protocol`)
+  - Form 20 (`trigger-details`): `80930653-7e80-4bfd-9e29-ec37c334d892` (`AIIMS Visit: Trigger Details`)
+  - Form 21 (`ovum-pick-up-details`): `80930653-7e80-4bfd-9e29-ec37c334d893` (`AIIMS Visit: Ovum Pick Up Details`)
+  - Form 22 (`procedure`): `80930653-7e80-4bfd-9e29-ec37c334d895` (`AIIMS Visit: Procedure`)
+  - Form 23 (`lab-procedure-insemination`): `80930653-7e80-4bfd-9e29-ec37c334d894` (`AIIMS Visit: Lab Procedure of Insemination`)
+  - Form 24 (`sperm-quality-assessment`): `80930653-7e80-4bfd-9e29-ec37c334d896` (`AIIMS Visit: Sperm Quality Assessment`)
 - **Core Concept UUIDs (`src/constants.ts` & `docs/concept_registry.md`)**:
   - `consultantUnit`: `c0010001-0000-0000-0000-000000000001`
   - `consultantName`: `c0010001-0000-0000-0000-000000000002`
@@ -320,11 +321,12 @@ python scripts/publish_aiims_form.py
 - [x] Register Form 16: Procedure Embryo Transfer (`procedure-embryo-transfer`).
 - [x] Register Form 17: Investigation Female Procedure Biopsy (`investigation-female-procedure-biopsy`).
 - [x] Register Form 18: Investigation Male Semen (`investigation-male-semen`).
-- [x] Register Form 19: Trigger Details (`trigger-details`).
-- [x] Register Form 20: Ovum Pick Up Details (`ovum-pick-up-details`).
-- [x] Register Form 21: Procedure (`procedure`) - Unified Sperm Retrieval & Additional IVF Procedures.
-- [x] Register Form 22: Lab Procedure of Insemination (`lab-procedure-insemination`).
-- [x] Register Form 23: Sperm Quality Assessment (`sperm-quality-assessment`) - Post Wash Sperm Concentration & Motility on OPU Day.
+- [x] Register Form 19: Type of Ovarian Stimulation Protocol (`ovarian-stimulation-protocol`).
+- [x] Register Form 20: Trigger Details (`trigger-details`).
+- [x] Register Form 21: Ovum Pick Up Details (`ovum-pick-up-details`).
+- [x] Register Form 22: Procedure (`procedure`) - Unified Sperm Retrieval & Additional IVF Procedures.
+- [x] Register Form 23: Lab Procedure of Insemination (`lab-procedure-insemination`).
+- [x] Register Form 24: Sperm Quality Assessment (`sperm-quality-assessment`) - Post Wash Sperm Concentration & Motility on OPU Day.
 
 
 

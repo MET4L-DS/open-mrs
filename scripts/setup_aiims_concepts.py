@@ -462,6 +462,19 @@ additional_ivf_procedures_answers = [
     ("c0010002-0000-0000-0000-000000001018", "Artificial Oocyte Activation (AOA)"),
 ]
 
+ovarian_stimulation_protocol_answers = [
+    ("c0010002-0000-0000-0000-000000001019", "Agonist"),
+    ("c0010002-0000-0000-0000-000000001020", "Antagonist"),
+    ("c0010002-0000-0000-0000-000000001021", "Dual-stimulation"),
+    ("c0010002-0000-0000-0000-000000001022", "Human Menopausal Gonadotropin(HMG)-only stimulation"),
+    ("c0010002-0000-0000-0000-000000001023", "Letrozole based Antagonist protocol"),
+    ("c0010002-0000-0000-0000-000000001024", "Luteal Duo-stimulation"),
+    ("c0010002-0000-0000-0000-000000001025", "Microdose flare protocol"),
+    ("c0010002-0000-0000-0000-000000001026", "Progestin-primed ovarian stimulation"),
+    ("c0010002-0000-0000-0000-000000001027", "Random start protocol"),
+    ("c0010002-0000-0000-0000-000000001028", "Stop agonist"),
+]
+
 
 
 # We assemble the migration script wrapped in a stored procedure for IF/ELSE control flow
@@ -525,6 +538,9 @@ for u, name in sperm_quality_assessment_answers:
     full_script.append(add_concept_sql(u, name, datatype_id=4, class_id=11))
 
 for u, name in additional_ivf_procedures_answers:
+    full_script.append(add_concept_sql(u, name, datatype_id=4, class_id=11))
+
+for u, name in ovarian_stimulation_protocol_answers:
     full_script.append(add_concept_sql(u, name, datatype_id=4, class_id=11))
 
 
@@ -878,6 +894,10 @@ full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000227", "Addi
 full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000228", "Post wash Sperm concentration on Ovum Pick Up Day", datatype_id=1, class_id=7, is_numeric=True, units="million/mL", allow_decimal=1, low_abs=0, hi_abs=1000))
 full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000229", "Sperm motility on Ovum Pick Up Day", datatype_id=1, class_id=7, is_numeric=True, units="%", allow_decimal=1, low_abs=0, hi_abs=100))
 full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000230", "Sperm Quality Assessment Remarks", datatype_id=3, class_id=7))
+
+# Type of Ovarian Stimulation Protocol Concepts (0231-0232)
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000231", "Type of Ovarian Stimulation Protocol", datatype_id=2, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000232", "Ovarian Stimulation Protocol Remarks", datatype_id=3, class_id=7))
 
 # 3. Link Answers
 # Education Wife answers
@@ -1428,6 +1448,10 @@ for ans_uuid in [
     "c0010002-0000-0000-0000-000000001018",  # Artificial Oocyte Activation (AOA)
 ]:
     full_script.append(add_answer_sql("c0010001-0000-0000-0000-000000000227", ans_uuid))
+
+# Type of Ovarian Stimulation Protocol (0231)
+for ans_uuid, _ in ovarian_stimulation_protocol_answers:
+    full_script.append(add_answer_sql("c0010001-0000-0000-0000-000000000231", ans_uuid))
 
 
 full_script.append("END$$")

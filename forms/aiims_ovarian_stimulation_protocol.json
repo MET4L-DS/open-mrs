@@ -1,0 +1,92 @@
+{
+  "name": "AIIMS Visit: Type of Ovarian Stimulation Protocol",
+  "description": "AIIMS Department of Reproductive Medicine & IVF - Type of Ovarian Stimulation Protocol Sheet",
+  "version": "1.0",
+  "published": true,
+  "retired": false,
+  "encounter": "Consultation",
+  "processor": "EncounterFormProcessor",
+  "referencedForms": [],
+  "pages": [
+    {
+      "label": "Type of Ovarian Stimulation Protocol",
+      "sections": [
+        {
+          "label": "Stimulation Protocol Regimen",
+          "isExpanded": true,
+          "questions": [
+            {
+              "label": "Protocol",
+              "type": "obs",
+              "id": "ovarian_stimulation_protocol",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "c0010001-0000-0000-0000-000000000231",
+                "answers": [
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000001019",
+                    "label": "Agonist"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000001020",
+                    "label": "Antagonist"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000001021",
+                    "label": "Dual-stimulation"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000001022",
+                    "label": "Human Menopausal Gonadotropin(HMG)-only stimulation"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000001023",
+                    "label": "Letrozole based Antagonist protocol"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000001024",
+                    "label": "Luteal Duo-stimulation"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000001025",
+                    "label": "Microdose flare protocol"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000001026",
+                    "label": "Progestin-primed ovarian stimulation"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000001027",
+                    "label": "Random start protocol"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000001028",
+                    "label": "Stop agonist"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "label": "Clinical Notes & Remarks",
+          "isExpanded": true,
+          "questions": [
+            {
+              "label": "Remarks",
+              "type": "obs",
+              "id": "ovarian_stimulation_protocol_remarks",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "textarea",
+                "concept": "c0010001-0000-0000-0000-000000000232",
+                "rows": 4
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

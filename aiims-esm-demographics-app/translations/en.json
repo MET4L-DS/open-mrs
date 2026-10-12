@@ -434,5 +434,15 @@
   "noSpermQualityAssessmentHeader": "No Sperm Quality Assessment Recorded Yet",
   "noSpermQualityAssessmentBody": "Post wash sperm concentration and sperm motility on ovum pick up day have not been recorded for this patient yet.",
   "recordSpermQualityAssessment": "Record Sperm Quality Assessment",
-  "updateSpermQualityAssessment": "Update Sperm Quality Assessment"
+  "updateSpermQualityAssessment": "Update Sperm Quality Assessment",
+  "aiimsOvarianStimulationProtocolTitle": "Type of Ovarian Stimulation Protocol",
+  "ovarianStimulationProtocolCardTitle": "Ovarian Stimulation Protocol",
+  "ovarianStimulationProtocol": "Stimulation Protocol",
+  "ovarianStimulationProtocolRemarks": "Remarks / Notes",
+  "loadingOvarianStimulationProtocol": "Loading Ovarian Stimulation Protocol...",
+  "noRecordedOvarianStimulationProtocolEncounter": "No AIIMS Ovarian Stimulation Protocol encounter recorded yet",
+  "noOvarianStimulationProtocolHeader": "No Ovarian Stimulation Protocol Recorded Yet",
+  "noOvarianStimulationProtocolBody": "The ovarian stimulation protocol regimen and clinical notes have not been recorded for this patient yet.",
+  "recordOvarianStimulationProtocol": "Record Protocol",
+  "updateOvarianStimulationProtocol": "Update Protocol"
 }

@@ -183,6 +183,8 @@ To maintain agility and avoid blocking clinical deployment pending terminology l
 | `c0010001-0000-0000-0000-000000000228` | Post wash Sperm concentration on Ovum Pick Up Day | Numeric | Finding | Local / Sperm Quality | million/mL | — | Active | Form 23: Post wash sperm concentration |
 | `c0010001-0000-0000-0000-000000000229` | Sperm motility on Ovum Pick Up Day | Numeric | Finding | Local / Sperm Quality | % | — | Active | Form 23: Sperm motility percentage |
 | `c0010001-0000-0000-0000-000000000230` | Sperm Quality Assessment Remarks | Text | Misc | Local / Sperm Quality | — | — | Active | Form 23: Remarks & notes |
+| `c0010001-0000-0000-0000-000000000231` | Type of Ovarian Stimulation Protocol | Coded | Finding | Local / Stimulation | — | — | Active | Form 19: Agonist, Antagonist, Duo-stim, etc. |
+| `c0010001-0000-0000-0000-000000000232` | Ovarian Stimulation Protocol Remarks | Text | Misc | Local / Stimulation | — | — | Active | Form 19: Remarks & notes |
 
 ---
 
@@ -339,6 +341,23 @@ To maintain agility and avoid blocking clinical deployment pending terminology l
 | `c0010002-0000-0000-0000-000000001016` | Husband Semen | Local | — | — | Active |
 | `c0010002-0000-0000-0000-000000001017` | Laser Assisted Hatching (LAH) | SNOMED CT / Local | — | — | Active |
 | `c0010002-0000-0000-0000-000000001018` | Artificial Oocyte Activation (AOA) | SNOMED CT / Local | — | — | Active |
+
+---
+
+### 2.11 Ovarian Stimulation Protocol Answer Options (`c0010002-...`)
+
+| Placeholder UUID | Display Name | Target Standard | Target Code | ATHENA Verified | Status |
+|:---|:---|:---|:---:|:---:|:---:|
+| `c0010002-0000-0000-0000-000000001019` | Agonist | SNOMED CT / Local | — | — | Active |
+| `c0010002-0000-0000-0000-000000001020` | Antagonist | SNOMED CT / Local | — | — | Active |
+| `c0010002-0000-0000-0000-000000001021` | Dual-stimulation | Local / Clinical | — | — | Active |
+| `c0010002-0000-0000-0000-000000001022` | Human Menopausal Gonadotropin(HMG)-only stimulation | Local / Clinical | — | — | Active |
+| `c0010002-0000-0000-0000-000000001023` | Letrozole based Antagonist protocol | Local / Clinical | — | — | Active |
+| `c0010002-0000-0000-0000-000000001024` | Luteal Duo-stimulation | Local / Clinical | — | — | Active |
+| `c0010002-0000-0000-0000-000000001025` | Microdose flare protocol | Local / Clinical | — | — | Active |
+| `c0010002-0000-0000-0000-000000001026` | Progestin-primed ovarian stimulation | Local / Clinical | — | — | Active |
+| `c0010002-0000-0000-0000-000000001027` | Random start protocol | Local / Clinical | — | — | Active |
+| `c0010002-0000-0000-0000-000000001028` | Stop agonist | Local / Clinical | — | — | Active |
 
 ---
 

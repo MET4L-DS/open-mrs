@@ -309,6 +309,14 @@ const spermQualityAssessmentExtensions = createFormExtensions(
 export const aiimsSpermQualityAssessmentDashboardLink = spermQualityAssessmentExtensions.link;
 export const aiimsSpermQualityAssessmentDashboard = spermQualityAssessmentExtensions.dashboard;
 
+const ovarianStimulationProtocolExtensions = createFormExtensions(
+  getFormRegistryEntry('ovarian-stimulation-protocol'),
+  () => import('./ovarian-stimulation-protocol/ovarian-stimulation-protocol-dashboard.component')
+);
+
+export const aiimsOvarianStimulationProtocolDashboardLink = ovarianStimulationProtocolExtensions.link;
+export const aiimsOvarianStimulationProtocolDashboard = ovarianStimulationProtocolExtensions.dashboard;
+
 export { FORM_REGISTRY, getFormRegistryEntry, getFormUuid, getFormName } from './constants';
 export * from './shared';
 export * from './infertility-type';
@@ -328,6 +336,7 @@ export * from './investigation-female-surgical';
 export * from './procedure-embryo-transfer';
 export * from './investigation-female-procedure-biopsy';
 export * from './investigation-male-semen';
+export * from './ovarian-stimulation-protocol';
 export * from './trigger-details';
 export * from './ovum-pick-up-details';
 export * from './lab-procedure-insemination';
