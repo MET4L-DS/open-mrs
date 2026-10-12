@@ -88,9 +88,9 @@ export const AIIMS_OVUM_PICK_UP_DETAILS_FORM_NAME = 'AIIMS Visit: Ovum Pick Up D
 export const AIIMS_LAB_PROCEDURE_INSEMINATION_FORM_UUID = '80930653-7e80-4bfd-9e29-ec37c334d894';
 export const AIIMS_LAB_PROCEDURE_INSEMINATION_FORM_NAME = 'AIIMS Visit: Lab Procedure of Insemination';
 
-// Form UUID for AIIMS Visit: Sperm Quality Assessment
-export const AIIMS_SPERM_QUALITY_ASSESSMENT_FORM_UUID = '80930653-7e80-4bfd-9e29-ec37c334d895';
-export const AIIMS_SPERM_QUALITY_ASSESSMENT_FORM_NAME = 'AIIMS Visit: Sperm Quality Assessment';
+// Form UUID for AIIMS Visit: Procedure
+export const AIIMS_PROCEDURE_FORM_UUID = '80930653-7e80-4bfd-9e29-ec37c334d895';
+export const AIIMS_PROCEDURE_FORM_NAME = 'AIIMS Visit: Procedure';
 
 // Form Registry: Centralized configuration for all current and future AIIMS forms
 
@@ -327,13 +327,13 @@ export const FORM_REGISTRY: FormRegistryEntry[] = [
     order: 1,
   },
   {
-    key: 'sperm-quality-assessment',
-    uuid: AIIMS_SPERM_QUALITY_ASSESSMENT_FORM_UUID,
-    name: AIIMS_SPERM_QUALITY_ASSESSMENT_FORM_NAME,
-    path: 'aiims-sperm-quality-assessment',
-    titleKey: 'aiimsSpermQualityAssessmentTitle',
-    title: 'Sperm Quality Assessment',
-    slot: 'aiims-sperm-quality-assessment-dashboard-slot',
+    key: 'procedure',
+    uuid: AIIMS_PROCEDURE_FORM_UUID,
+    name: AIIMS_PROCEDURE_FORM_NAME,
+    path: 'aiims-procedure',
+    titleKey: 'aiimsProcedureTitle',
+    title: 'Procedure',
+    slot: 'aiims-procedure-dashboard-slot',
     icon: Microscope,
     order: 1,
   },
@@ -665,7 +665,8 @@ export const CONCEPTS = {
   timeOfInseminationInjection: 'c0010001-0000-0000-0000-000000000223',
   labProcedureInseminationRemarks: 'c0010001-0000-0000-0000-000000000224',
   spermRetrievalProcedure: 'c0010001-0000-0000-0000-000000000225',
-  spermQualityAssessmentRemarks: 'c0010001-0000-0000-0000-000000000226',
+  procedureRemarks: 'c0010001-0000-0000-0000-000000000226',
+  additionalIvfProcedures: 'c0010001-0000-0000-0000-000000000227',
 };
 
 

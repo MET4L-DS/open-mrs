@@ -177,8 +177,9 @@ To maintain agility and avoid blocking clinical deployment pending terminology l
 | `c0010001-0000-0000-0000-000000000222` | Method of Insemination | Coded | Finding | Local / Insemination | — | — | Active | Form 21: IVF, AOA, ICSI, PICSI |
 | `c0010001-0000-0000-0000-000000000223` | Time of Insemination or Injection | Text | Finding | Local / Insemination | — | — | Active | Form 21: Injection time |
 | `c0010001-0000-0000-0000-000000000224` | Lab Procedure of Insemination Remarks | Text | Misc | Local / Insemination | — | — | Active | Form 21: Remarks & notes |
-| `c0010001-0000-0000-0000-000000000225` | Sperm Retrieval Procedure | Coded | Finding | Local / Sperm Quality | — | — | Active | Form 22: PESA, TESA, Ejaculated, Frozen, Donor Semen, Husband Semen |
-| `c0010001-0000-0000-0000-000000000226` | Sperm Quality Assessment Remarks | Text | Misc | Local / Sperm Quality | — | — | Active | Form 22: Remarks & notes |
+| `c0010001-0000-0000-0000-000000000225` | Sperm Retrieval Procedure | Coded | Finding | Local / Procedure | — | — | Active | Form 22: PESA, TESA, Ejaculated, Frozen, Donor Semen, Husband Semen |
+| `c0010001-0000-0000-0000-000000000226` | Procedure Remarks | Text | Misc | Local / Procedure | — | — | Active | Form 22: Remarks & notes |
+| `c0010001-0000-0000-0000-000000000227` | Additional IVF Procedures | Coded | Finding | Local / Procedure | — | — | Active | Form 22: LAH, PICSI, AOA |
 
 ---
 
@@ -316,6 +317,25 @@ To maintain agility and avoid blocking clinical deployment pending terminology l
 | `c0010002-0000-0000-0000-000000001004` | Dysmorphic oocytes | SNOMED CT / Local | — | — | Active |
 | `c0010002-0000-0000-0000-000000001005` | Small size | SNOMED CT / Local | — | — | Active |
 | `c0010002-0000-0000-0000-000000001006` | Dark cumulus | SNOMED CT / Local | — | — | Active |
+
+---
+
+### 2.10 Procedure & Insemination Answer Options (`c0010002-...`)
+
+| Placeholder UUID | Display Name | Target Standard | Target Code | ATHENA Verified | Status |
+|:---|:---|:---|:---:|:---:|:---:|
+| `c0010002-0000-0000-0000-000000001007` | In Vitro Fertilization (IVF) | SNOMED CT / Local | — | — | Active |
+| `c0010002-0000-0000-0000-000000001008` | Intracytoplasmic Sperm Injection (ICSI) | SNOMED CT / Local | — | — | Active |
+| `c0010002-0000-0000-0000-000000001009` | Artificial Oocyte Activation (AOA) | SNOMED CT / Local | — | — | Active |
+| `c0010002-0000-0000-0000-000000001010` | Physiological Intracytoplasmic Sperm Injection (PICSI) | SNOMED CT / Local | — | — | Active |
+| `c0010002-0000-0000-0000-000000001011` | Percutaneous Epididymal Sperm Aspiration (PESA) | SNOMED CT / Local | — | — | Active |
+| `c0010002-0000-0000-0000-000000001012` | Testicular Sperm Aspiration (TESA) | SNOMED CT / Local | — | — | Active |
+| `c0010002-0000-0000-0000-000000001013` | Ejaculated | Local | — | — | Active |
+| `c0010002-0000-0000-0000-000000001014` | Frozen | Local | — | — | Active |
+| `c0010002-0000-0000-0000-000000001015` | Donor Semen | Local | — | — | Active |
+| `c0010002-0000-0000-0000-000000001016` | Husband Semen | Local | — | — | Active |
+| `c0010002-0000-0000-0000-000000001017` | Laser Assisted Hatching (LAH) | SNOMED CT / Local | — | — | Active |
+| `c0010002-0000-0000-0000-000000001018` | Artificial Oocyte Activation (AOA) | SNOMED CT / Local | — | — | Active |
 
 ---
 

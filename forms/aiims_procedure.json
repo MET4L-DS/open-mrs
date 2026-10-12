@@ -1,6 +1,6 @@
 {
-  "name": "AIIMS Visit: Sperm Quality Assessment",
-  "description": "AIIMS Department of Reproductive Medicine & IVF - Sperm Quality Assessment Sheet",
+  "name": "AIIMS Visit: Procedure",
+  "description": "AIIMS Department of Reproductive Medicine & IVF - Procedure Sheet",
   "version": "1.0",
   "published": true,
   "retired": false,
@@ -9,10 +9,10 @@
   "referencedForms": [],
   "pages": [
     {
-      "label": "Sperm Quality Assessment",
+      "label": "Procedure",
       "sections": [
         {
-          "label": "Sperm Retrieval & Source Procedure",
+          "label": "Sperm Retrieval Procedure",
           "isExpanded": true,
           "questions": [
             {
@@ -54,13 +54,43 @@
           ]
         },
         {
+          "label": "Additional IVF Procedures",
+          "isExpanded": true,
+          "questions": [
+            {
+              "label": "Additional IVF Procedures",
+              "type": "obs",
+              "id": "additional_ivf_procedures",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "checkbox",
+                "concept": "c0010001-0000-0000-0000-000000000227",
+                "answers": [
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000001017",
+                    "label": "Laser Assisted Hatching (LAH)"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000001010",
+                    "label": "Physiological Intracytoplasmic Sperm Injection (PICSI)"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000001018",
+                    "label": "Artificial Oocyte Activation (AOA)"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
           "label": "Laboratory Notes & Remarks",
           "isExpanded": true,
           "questions": [
             {
               "label": "Remarks",
               "type": "obs",
-              "id": "sperm_quality_assessment_remarks",
+              "id": "procedure_remarks",
               "required": "false",
               "questionOptions": {
                 "rendering": "textarea",

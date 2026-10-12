@@ -1,27 +1,29 @@
 import {
-  AIIMS_SPERM_QUALITY_ASSESSMENT_FORM_UUID,
+  AIIMS_PROCEDURE_FORM_UUID,
   CONCEPTS,
 } from '../constants';
 import { useFormEncounter } from '../shared/hooks/useFormEncounter';
 import type { EncounterItem } from '../shared/types';
 
-export interface AiimsSpermQualityAssessmentData {
+export interface AiimsProcedureData {
   hasData: boolean;
   encounterUuid?: string;
   encounterDatetime?: string;
   spermRetrievalProcedure: string[];
-  spermQualityAssessmentRemarks?: string;
+  additionalIvfProcedures: string[];
+  procedureRemarks?: string;
 }
 
-export const initialAiimsSpermQualityAssessmentData: Readonly<AiimsSpermQualityAssessmentData> =
+export const initialAiimsProcedureData: Readonly<AiimsProcedureData> =
   Object.freeze({
     hasData: false,
     spermRetrievalProcedure: [],
+    additionalIvfProcedures: [],
   });
 
-export function useSpermQualityAssessment(
+export function useProcedure(
   patientUuid: string | undefined,
-  formUuid: string = AIIMS_SPERM_QUALITY_ASSESSMENT_FORM_UUID
+  formUuid: string = AIIMS_PROCEDURE_FORM_UUID
 ) {
   const {
     latestEncounter,
@@ -34,7 +36,7 @@ export function useSpermQualityAssessment(
 
   if (!latestEncounter) {
     return {
-      spermQualityAssessmentData: initialAiimsSpermQualityAssessmentData,
+      procedureData: initialAiimsProcedureData,
       latestEncounter: null as EncounterItem | null,
       isLoading,
       error,
@@ -43,24 +45,25 @@ export function useSpermQualityAssessment(
   }
 
   const spermRetrievalProcedure = getObsValues(CONCEPTS.spermRetrievalProcedure);
-  const spermQualityAssessmentRemarks = getOptionalObsValue(
-    CONCEPTS.spermQualityAssessmentRemarks
-  );
+  const additionalIvfProcedures = getObsValues(CONCEPTS.additionalIvfProcedures);
+  const procedureRemarks = getOptionalObsValue(CONCEPTS.procedureRemarks);
 
   const hasData =
     spermRetrievalProcedure.length > 0 ||
-    spermQualityAssessmentRemarks !== undefined;
+    additionalIvfProcedures.length > 0 ||
+    procedureRemarks !== undefined;
 
-  const spermQualityAssessmentData: AiimsSpermQualityAssessmentData = {
+  const procedureData: AiimsProcedureData = {
     hasData,
     encounterUuid: latestEncounter.uuid,
     encounterDatetime: latestEncounter.encounterDatetime,
     spermRetrievalProcedure,
-    spermQualityAssessmentRemarks,
+    additionalIvfProcedures,
+    procedureRemarks,
   };
 
   return {
-    spermQualityAssessmentData,
+    procedureData,
     latestEncounter,
     isLoading,
     error,

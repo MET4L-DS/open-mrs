@@ -174,10 +174,10 @@ FORMS_TO_PUBLISH = [
         "encounter_type": "dd528487-82a5-4082-9c72-ed246bd49591",  # Consultation
     },
     {
-        "name": "AIIMS Visit: Sperm Quality Assessment",
+        "name": "AIIMS Visit: Procedure",
         "version": "1.0",
-        "description": "AIIMS Reproductive Medicine & IVF Sperm Quality Assessment Sheet",
-        "schema_path": "forms/aiims_sperm_quality_assessment.json",
+        "description": "AIIMS Reproductive Medicine & IVF Procedure Sheet",
+        "schema_path": "forms/aiims_procedure.json",
         "uuid": "80930653-7e80-4bfd-9e29-ec37c334d895",
         "encounter_type": "dd528487-82a5-4082-9c72-ed246bd49591",  # Consultation
     },
@@ -230,10 +230,28 @@ def publish_form(cfg):
     )
     forms = r.json().get("results", [])
     form_uuid = None
+    existing_name = None
     for f in forms:
-        if f["name"] == form_name:
+        if desired_uuid and f["uuid"] == desired_uuid:
             form_uuid = f["uuid"]
+            existing_name = f["name"]
             break
+        elif f["name"] == form_name:
+            form_uuid = f["uuid"]
+            existing_name = f["name"]
+            break
+
+    if form_uuid and existing_name != form_name:
+        print(f"Updating form name from '{existing_name}' to '{form_name}'...")
+        r_up = requests.post(
+            f"http://localhost/openmrs/ws/rest/v1/form/{form_uuid}",
+            auth=("admin", "Admin123"),
+            json={"name": form_name, "description": cfg["description"]}
+        )
+        if r_up.status_code not in (200, 201):
+            # Fallback to direct DB update if REST endpoint has constraints
+            run_sql(f"UPDATE form SET name = '{form_name}', description = '{cfg['description']}' WHERE uuid = '{form_uuid}';")
+            print("Updated form name via direct DB update.")
 
     if not form_uuid:
         print(f"Creating form '{form_name}' with UUID '{desired_uuid}'...")

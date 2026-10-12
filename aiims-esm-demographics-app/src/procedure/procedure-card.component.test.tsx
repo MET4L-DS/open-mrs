@@ -1,11 +1,11 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import { describe, it, expect, vi } from 'vitest';
-import { SpermQualityAssessmentCard } from './sperm-quality-assessment-card.component';
+import { ProcedureCard } from './procedure-card.component';
 import {
-  type AiimsSpermQualityAssessmentData,
-  initialAiimsSpermQualityAssessmentData,
-} from './sperm-quality-assessment.resource';
+  type AiimsProcedureData,
+  initialAiimsProcedureData,
+} from './procedure.resource';
 
 vi.mock('react-i18next', () => ({
   useTranslation: () => ({
@@ -13,17 +13,16 @@ vi.mock('react-i18next', () => ({
   }),
 }));
 
-describe('SpermQualityAssessmentCard', () => {
+describe('ProcedureCard', () => {
   it('renders card titles and question labels when empty', () => {
-    render(
-      <SpermQualityAssessmentCard
-        data={initialAiimsSpermQualityAssessmentData}
-      />
-    );
+    render(<ProcedureCard data={initialAiimsProcedureData} />);
 
     expect(
       screen.getByText('Sperm Retrieval & Source Procedure')
     ).toBeInTheDocument();
+    expect(
+      screen.getAllByText('Additional IVF Procedures')
+    ).toHaveLength(2);
     expect(
       screen.getByText('Laboratory Notes & Remarks')
     ).toBeInTheDocument();
@@ -32,21 +31,25 @@ describe('SpermQualityAssessmentCard', () => {
     expect(screen.getByText('Remarks / Notes')).toBeInTheDocument();
   });
 
-  it('renders recorded sperm quality assessment observations correctly', () => {
-    const data: AiimsSpermQualityAssessmentData = {
+  it('renders recorded procedure observations correctly', () => {
+    const data: AiimsProcedureData = {
       hasData: true,
-      encounterUuid: 'enc-sqa-1',
+      encounterUuid: 'enc-proc-1',
       encounterDatetime: '2026-10-12T11:45:00.000Z',
       spermRetrievalProcedure: [
         'Percutaneous Epididymal Sperm Aspiration (PESA)',
         'Frozen',
         'Husband Semen (HS)',
       ],
-      spermQualityAssessmentRemarks:
-        'Good motile sperm recovered after thaw, suitable for ICSI.',
+      additionalIvfProcedures: [
+        'Laser Assisted Hatching (LAH)',
+        'Physiological Intracytoplasmic Sperm Injection (PICSI)',
+      ],
+      procedureRemarks:
+        'Sperm thawed with good viability; LAH and PICSI performed.',
     };
 
-    render(<SpermQualityAssessmentCard data={data} />);
+    render(<ProcedureCard data={data} />);
 
     expect(
       screen.getByText(
@@ -55,7 +58,12 @@ describe('SpermQualityAssessmentCard', () => {
     ).toBeInTheDocument();
     expect(
       screen.getByText(
-        'Good motile sperm recovered after thaw, suitable for ICSI.'
+        'Laser Assisted Hatching (LAH), Physiological Intracytoplasmic Sperm Injection (PICSI)'
+      )
+    ).toBeInTheDocument();
+    expect(
+      screen.getByText(
+        'Sperm thawed with good viability; LAH and PICSI performed.'
       )
     ).toBeInTheDocument();
   });

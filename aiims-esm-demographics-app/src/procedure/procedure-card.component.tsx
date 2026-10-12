@@ -1,19 +1,17 @@
 import React from 'react';
-import { Microscope, ReportData } from '@carbon/react/icons';
+import { Microscope, Activity, ReportData } from '@carbon/react/icons';
 import { useTranslation } from 'react-i18next';
-import { type AiimsSpermQualityAssessmentData } from './sperm-quality-assessment.resource';
+import { type AiimsProcedureData } from './procedure.resource';
 import { ObservationCard, type ObservationRow } from '../shared/components';
 
-interface SpermQualityAssessmentCardProps {
-  data: AiimsSpermQualityAssessmentData;
+interface ProcedureCardProps {
+  data: AiimsProcedureData;
 }
 
-export const SpermQualityAssessmentCard: React.FC<
-  SpermQualityAssessmentCardProps
-> = ({ data }) => {
+export const ProcedureCard: React.FC<ProcedureCardProps> = ({ data }) => {
   const { t } = useTranslation();
 
-  const procedureRows: ObservationRow[] = React.useMemo(() => {
+  const spermRetrievalRows: ObservationRow[] = React.useMemo(() => {
     const list: ObservationRow[] = [];
 
     // Sperm Retrieval Procedure
@@ -30,19 +28,36 @@ export const SpermQualityAssessmentCard: React.FC<
     return list;
   }, [data.spermRetrievalProcedure, t]);
 
+  const additionalIvfRows: ObservationRow[] = React.useMemo(() => {
+    const list: ObservationRow[] = [];
+
+    // Additional IVF Procedures
+    list.push({
+      id: 'additional_ivf_procedures',
+      label: t('additionalIvfProcedures', 'Additional IVF Procedures'),
+      value:
+        data.additionalIvfProcedures.length > 0
+          ? data.additionalIvfProcedures.join(', ')
+          : undefined,
+      emptyPlaceholder: '—',
+    });
+
+    return list;
+  }, [data.additionalIvfProcedures, t]);
+
   const remarksRows: ObservationRow[] = React.useMemo(() => {
     const list: ObservationRow[] = [];
 
     // Remarks
     list.push({
-      id: 'sperm_quality_assessment_remarks',
+      id: 'procedure_remarks',
       label: t('remarks', 'Remarks / Notes'),
-      value: data.spermQualityAssessmentRemarks,
+      value: data.procedureRemarks,
       emptyPlaceholder: '—',
     });
 
     return list;
-  }, [data.spermQualityAssessmentRemarks, t]);
+  }, [data.procedureRemarks, t]);
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
@@ -52,7 +67,15 @@ export const SpermQualityAssessmentCard: React.FC<
           'Sperm Retrieval & Source Procedure'
         )}
         icon={Microscope}
-        rows={procedureRows}
+        rows={spermRetrievalRows}
+      />
+      <ObservationCard
+        title={t(
+          'additionalIvfProceduresCardTitle',
+          'Additional IVF Procedures'
+        )}
+        icon={Activity}
+        rows={additionalIvfRows}
       />
       <ObservationCard
         title={t('laboratoryNotesRemarks', 'Laboratory Notes & Remarks')}
