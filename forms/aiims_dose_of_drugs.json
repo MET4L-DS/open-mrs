@@ -1,0 +1,236 @@
+{
+  "name": "AIIMS Visit: Dose of Drugs",
+  "description": "AIIMS Department of Reproductive Medicine & IVF - Dose of Drugs Sheet",
+  "version": "1.0",
+  "published": true,
+  "retired": false,
+  "encounter": "Consultation",
+  "processor": "EncounterFormProcessor",
+  "referencedForms": [],
+  "pages": [
+    {
+      "label": "Dose of Drugs",
+      "sections": [
+        {
+          "label": "Duration of Regimen",
+          "isExpanded": true,
+          "questions": [
+            {
+              "label": "Total days of Leuprolide downregulation",
+              "type": "obs",
+              "id": "total_days_of_leuprolide_downregulation",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "number",
+                "concept": "c0010001-0000-0000-0000-000000000233",
+                "min": 0,
+                "max": 100
+              }
+            },
+            {
+              "label": "Total days of stimulation",
+              "type": "obs",
+              "id": "total_days_of_stimulation",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "number",
+                "concept": "c0010001-0000-0000-0000-000000000242",
+                "min": 0,
+                "max": 100
+              }
+            }
+          ]
+        },
+        {
+          "label": "Gonadotropin Dosages",
+          "isExpanded": true,
+          "questions": [
+            {
+              "label": "Starting dose Follicle-Stimulating Hormone (FSH)",
+              "type": "obs",
+              "id": "starting_dose_fsh",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "number",
+                "concept": "c0010001-0000-0000-0000-000000000234",
+                "min": 0,
+                "max": 5000
+              }
+            },
+            {
+              "label": "Total dose Follicle-Stimulating Hormone (FSH)",
+              "type": "obs",
+              "id": "total_dose_fsh",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "number",
+                "concept": "c0010001-0000-0000-0000-000000000237",
+                "min": 0,
+                "max": 50000
+              }
+            },
+            {
+              "label": "Starting dose Human Menopausal Gonadotropin (HMG)",
+              "type": "obs",
+              "id": "starting_dose_hmg",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "number",
+                "concept": "c0010001-0000-0000-0000-000000000235",
+                "min": 0,
+                "max": 5000
+              }
+            },
+            {
+              "label": "Total dose Human Menopausal Gonadotropin (HMG)",
+              "type": "obs",
+              "id": "total_dose_hmg",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "number",
+                "concept": "c0010001-0000-0000-0000-000000000238",
+                "min": 0,
+                "max": 50000
+              }
+            },
+            {
+              "label": "Starting dose Recombinant Luteinizing Hormone (rLH)",
+              "type": "obs",
+              "id": "starting_dose_rlh",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "number",
+                "concept": "c0010001-0000-0000-0000-000000000236",
+                "min": 0,
+                "max": 5000
+              }
+            },
+            {
+              "label": "Total dose Recombinant Luteinizing Hormone (rLH)",
+              "type": "obs",
+              "id": "total_dose_rlh",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "number",
+                "concept": "c0010001-0000-0000-0000-000000000239",
+                "min": 0,
+                "max": 50000
+              }
+            }
+          ]
+        },
+        {
+          "label": "Cetrotide Administration",
+          "isExpanded": true,
+          "questions": [
+            {
+              "label": "Day of start of Cetrotide",
+              "type": "obs",
+              "id": "day_of_start_of_cetrotide",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "select",
+                "concept": "c0010001-0000-0000-0000-000000000241",
+                "answers": [
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000001029",
+                    "label": "Day 1"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000001030",
+                    "label": "Day 2"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000001031",
+                    "label": "Day 3"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000001032",
+                    "label": "Day 4"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000001033",
+                    "label": "Day 5"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000001034",
+                    "label": "Day 6"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000001035",
+                    "label": "Day 7"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000001036",
+                    "label": "Day 8"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000001037",
+                    "label": "Day 9"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000001038",
+                    "label": "Day 10"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000001039",
+                    "label": "Day 11"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000001040",
+                    "label": "Day 12"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000001041",
+                    "label": "Day 13"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000001042",
+                    "label": "Day 14"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000001043",
+                    "label": "Day 15"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000001044",
+                    "label": "Day 16"
+                  }
+                ]
+              }
+            },
+            {
+              "label": "Total Cetrotide dose",
+              "type": "obs",
+              "id": "total_cetrotide_dose",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "number",
+                "concept": "c0010001-0000-0000-0000-000000000240",
+                "min": 0,
+                "max": 100
+              }
+            }
+          ]
+        },
+        {
+          "label": "Clinical Notes & Remarks",
+          "isExpanded": true,
+          "questions": [
+            {
+              "label": "Remarks",
+              "type": "obs",
+              "id": "dose_of_drugs_remarks",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "textarea",
+                "concept": "c0010001-0000-0000-0000-000000000243",
+                "rows": 4
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

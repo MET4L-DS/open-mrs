@@ -475,6 +475,25 @@ ovarian_stimulation_protocol_answers = [
     ("c0010002-0000-0000-0000-000000001028", "Stop agonist"),
 ]
 
+cetrotide_start_day_answers = [
+    ("c0010002-0000-0000-0000-000000001029", "Day 1"),
+    ("c0010002-0000-0000-0000-000000001030", "Day 2"),
+    ("c0010002-0000-0000-0000-000000001031", "Day 3"),
+    ("c0010002-0000-0000-0000-000000001032", "Day 4"),
+    ("c0010002-0000-0000-0000-000000001033", "Day 5"),
+    ("c0010002-0000-0000-0000-000000001034", "Day 6"),
+    ("c0010002-0000-0000-0000-000000001035", "Day 7"),
+    ("c0010002-0000-0000-0000-000000001036", "Day 8"),
+    ("c0010002-0000-0000-0000-000000001037", "Day 9"),
+    ("c0010002-0000-0000-0000-000000001038", "Day 10"),
+    ("c0010002-0000-0000-0000-000000001039", "Day 11"),
+    ("c0010002-0000-0000-0000-000000001040", "Day 12"),
+    ("c0010002-0000-0000-0000-000000001041", "Day 13"),
+    ("c0010002-0000-0000-0000-000000001042", "Day 14"),
+    ("c0010002-0000-0000-0000-000000001043", "Day 15"),
+    ("c0010002-0000-0000-0000-000000001044", "Day 16"),
+]
+
 
 
 # We assemble the migration script wrapped in a stored procedure for IF/ELSE control flow
@@ -541,6 +560,9 @@ for u, name in additional_ivf_procedures_answers:
     full_script.append(add_concept_sql(u, name, datatype_id=4, class_id=11))
 
 for u, name in ovarian_stimulation_protocol_answers:
+    full_script.append(add_concept_sql(u, name, datatype_id=4, class_id=11))
+
+for u, name in cetrotide_start_day_answers:
     full_script.append(add_concept_sql(u, name, datatype_id=4, class_id=11))
 
 
@@ -898,6 +920,19 @@ full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000230", "Sper
 # Type of Ovarian Stimulation Protocol Concepts (0231-0232)
 full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000231", "Type of Ovarian Stimulation Protocol", datatype_id=2, class_id=7))
 full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000232", "Ovarian Stimulation Protocol Remarks", datatype_id=3, class_id=7))
+
+# Dose of Drugs Concepts (0233-0243)
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000233", "Total days of Leuprolide downregulation", datatype_id=1, class_id=7, is_numeric=True, units="days", allow_decimal=0, low_abs=0, hi_abs=100))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000234", "Starting dose Follicle-Stimulating Hormone", datatype_id=1, class_id=7, is_numeric=True, units="IU", allow_decimal=1, low_abs=0, hi_abs=5000))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000235", "Starting dose Human Menopausal Gonadotropin", datatype_id=1, class_id=7, is_numeric=True, units="IU", allow_decimal=1, low_abs=0, hi_abs=5000))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000236", "Starting dose Recombinant Luteinizing Hormone", datatype_id=1, class_id=7, is_numeric=True, units="IU", allow_decimal=1, low_abs=0, hi_abs=5000))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000237", "Total dose Follicle-Stimulating Hormone", datatype_id=1, class_id=7, is_numeric=True, units="IU", allow_decimal=1, low_abs=0, hi_abs=50000))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000238", "Total dose Human Menopausal Gonadotropin", datatype_id=1, class_id=7, is_numeric=True, units="IU", allow_decimal=1, low_abs=0, hi_abs=50000))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000239", "Total dose Recombinant Luteinizing Hormone", datatype_id=1, class_id=7, is_numeric=True, units="IU", allow_decimal=1, low_abs=0, hi_abs=50000))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000240", "Total Cetrotide dose", datatype_id=1, class_id=7, is_numeric=True, units="mg", allow_decimal=2, low_abs=0, hi_abs=100))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000241", "Day of start of Cetrotide", datatype_id=2, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000242", "Total days of stimulation", datatype_id=1, class_id=7, is_numeric=True, units="days", allow_decimal=0, low_abs=0, hi_abs=100))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000243", "Dose of Drugs Remarks", datatype_id=3, class_id=7))
 
 # 3. Link Answers
 # Education Wife answers
@@ -1452,6 +1487,10 @@ for ans_uuid in [
 # Type of Ovarian Stimulation Protocol (0231)
 for ans_uuid, _ in ovarian_stimulation_protocol_answers:
     full_script.append(add_answer_sql("c0010001-0000-0000-0000-000000000231", ans_uuid))
+
+# Day of start of Cetrotide (0241)
+for ans_uuid, _ in cetrotide_start_day_answers:
+    full_script.append(add_answer_sql("c0010001-0000-0000-0000-000000000241", ans_uuid))
 
 
 full_script.append("END$$")

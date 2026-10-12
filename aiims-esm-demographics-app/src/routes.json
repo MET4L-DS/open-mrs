@@ -389,6 +389,26 @@
       "offline": true
     },
     {
+      "name": "aiims-dose-of-drugs-dashboard-link",
+      "component": "aiimsDoseOfDrugsDashboardLink",
+      "slot": "patient-chart-dashboard-slot",
+      "order": 1,
+      "meta": {
+        "slot": "aiims-dose-of-drugs-dashboard-slot",
+        "path": "aiims-dose-of-drugs",
+        "title": "Dose of Drugs"
+      },
+      "online": true,
+      "offline": true
+    },
+    {
+      "name": "aiims-dose-of-drugs-dashboard",
+      "component": "aiimsDoseOfDrugsDashboard",
+      "slot": "aiims-dose-of-drugs-dashboard-slot",
+      "online": true,
+      "offline": true
+    },
+    {
       "name": "aiims-trigger-details-dashboard-link",
       "component": "aiimsTriggerDetailsDashboardLink",
       "slot": "patient-chart-dashboard-slot",

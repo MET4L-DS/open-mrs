@@ -100,6 +100,10 @@ export const AIIMS_SPERM_QUALITY_ASSESSMENT_FORM_NAME = 'AIIMS Visit: Sperm Qual
 export const AIIMS_OVARIAN_STIMULATION_PROTOCOL_FORM_UUID = '80930653-7e80-4bfd-9e29-ec37c334d897';
 export const AIIMS_OVARIAN_STIMULATION_PROTOCOL_FORM_NAME = 'AIIMS Visit: Type of Ovarian Stimulation Protocol';
 
+// Form UUID for AIIMS Visit: Dose of Drugs
+export const AIIMS_DOSE_OF_DRUGS_FORM_UUID = '80930653-7e80-4bfd-9e29-ec37c334d898';
+export const AIIMS_DOSE_OF_DRUGS_FORM_NAME = 'AIIMS Visit: Dose of Drugs';
+
 // Form Registry: Centralized configuration for all current and future AIIMS forms
 
 export const FORM_REGISTRY: FormRegistryEntry[] = [
@@ -309,6 +313,17 @@ export const FORM_REGISTRY: FormRegistryEntry[] = [
     titleKey: 'aiimsOvarianStimulationProtocolTitle',
     title: 'Type of Ovarian Stimulation Protocol',
     slot: 'aiims-ovarian-stimulation-protocol-dashboard-slot',
+    icon: Medication,
+    order: 1,
+  },
+  {
+    key: 'dose-of-drugs',
+    uuid: AIIMS_DOSE_OF_DRUGS_FORM_UUID,
+    name: AIIMS_DOSE_OF_DRUGS_FORM_NAME,
+    path: 'aiims-dose-of-drugs',
+    titleKey: 'aiimsDoseOfDrugsTitle',
+    title: 'Dose of Drugs',
+    slot: 'aiims-dose-of-drugs-dashboard-slot',
     icon: Medication,
     order: 1,
   },
@@ -706,6 +721,19 @@ export const CONCEPTS = {
   // Type of Ovarian Stimulation Protocol
   ovarianStimulationProtocol: 'c0010001-0000-0000-0000-000000000231',
   ovarianStimulationProtocolRemarks: 'c0010001-0000-0000-0000-000000000232',
+
+  // Dose of Drugs
+  totalDaysOfLeuprolideDownregulation: 'c0010001-0000-0000-0000-000000000233',
+  startingDoseFsh: 'c0010001-0000-0000-0000-000000000234',
+  startingDoseHmg: 'c0010001-0000-0000-0000-000000000235',
+  startingDoseRlh: 'c0010001-0000-0000-0000-000000000236',
+  totalDoseFsh: 'c0010001-0000-0000-0000-000000000237',
+  totalDoseHmg: 'c0010001-0000-0000-0000-000000000238',
+  totalDoseRlh: 'c0010001-0000-0000-0000-000000000239',
+  totalCetrotideDose: 'c0010001-0000-0000-0000-000000000240',
+  dayOfStartOfCetrotide: 'c0010001-0000-0000-0000-000000000241',
+  totalDaysOfStimulation: 'c0010001-0000-0000-0000-000000000242',
+  doseOfDrugsRemarks: 'c0010001-0000-0000-0000-000000000243',
 };
 
 

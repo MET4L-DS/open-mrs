@@ -185,6 +185,17 @@ To maintain agility and avoid blocking clinical deployment pending terminology l
 | `c0010001-0000-0000-0000-000000000230` | Sperm Quality Assessment Remarks | Text | Misc | Local / Sperm Quality | — | — | Active | Form 23: Remarks & notes |
 | `c0010001-0000-0000-0000-000000000231` | Type of Ovarian Stimulation Protocol | Coded | Finding | Local / Stimulation | — | — | Active | Form 19: Agonist, Antagonist, Duo-stim, etc. |
 | `c0010001-0000-0000-0000-000000000232` | Ovarian Stimulation Protocol Remarks | Text | Misc | Local / Stimulation | — | — | Active | Form 19: Remarks & notes |
+| `c0010001-0000-0000-0000-000000000233` | Total days of Leuprolide downregulation | Numeric | Finding | Local / Dose of Drugs | days | — | Active | Form 20: Downregulation days |
+| `c0010001-0000-0000-0000-000000000234` | Starting dose Follicle-Stimulating Hormone | Numeric | Finding | Local / Dose of Drugs | IU | — | Active | Form 20: Starting FSH dose |
+| `c0010001-0000-0000-0000-000000000235` | Starting dose Human Menopausal Gonadotropin | Numeric | Finding | Local / Dose of Drugs | IU | — | Active | Form 20: Starting HMG dose |
+| `c0010001-0000-0000-0000-000000000236` | Starting dose Recombinant Luteinizing Hormone | Numeric | Finding | Local / Dose of Drugs | IU | — | Active | Form 20: Starting rLH dose |
+| `c0010001-0000-0000-0000-000000000237` | Total dose Follicle-Stimulating Hormone | Numeric | Finding | Local / Dose of Drugs | IU | — | Active | Form 20: Total FSH dose |
+| `c0010001-0000-0000-0000-000000000238` | Total dose Human Menopausal Gonadotropin | Numeric | Finding | Local / Dose of Drugs | IU | — | Active | Form 20: Total HMG dose |
+| `c0010001-0000-0000-0000-000000000239` | Total dose Recombinant Luteinizing Hormone | Numeric | Finding | Local / Dose of Drugs | IU | — | Active | Form 20: Total rLH dose |
+| `c0010001-0000-0000-0000-000000000240` | Total Cetrotide dose | Numeric | Finding | Local / Dose of Drugs | mg | — | Active | Form 20: Total Cetrotide dose |
+| `c0010001-0000-0000-0000-000000000241` | Day of start of Cetrotide | Coded | Finding | Local / Dose of Drugs | — | — | Active | Form 20: Start Day 1 to Day 16 |
+| `c0010001-0000-0000-0000-000000000242` | Total days of stimulation | Numeric | Finding | Local / Dose of Drugs | days | — | Active | Form 20: Stimulation duration |
+| `c0010001-0000-0000-0000-000000000243` | Dose of Drugs Remarks | Text | Misc | Local / Dose of Drugs | — | — | Active | Form 20: Remarks & notes |
 
 ---
 
