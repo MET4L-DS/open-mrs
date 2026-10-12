@@ -104,6 +104,10 @@ export const AIIMS_OVARIAN_STIMULATION_PROTOCOL_FORM_NAME = 'AIIMS Visit: Type o
 export const AIIMS_DOSE_OF_DRUGS_FORM_UUID = '80930653-7e80-4bfd-9e29-ec37c334d898';
 export const AIIMS_DOSE_OF_DRUGS_FORM_NAME = 'AIIMS Visit: Dose of Drugs';
 
+// Form UUID for AIIMS Visit: Adjuvant Drug
+export const AIIMS_ADJUVANT_DRUG_FORM_UUID = '80930653-7e80-4bfd-9e29-ec37c334d899';
+export const AIIMS_ADJUVANT_DRUG_FORM_NAME = 'AIIMS Visit: Adjuvant Drug';
+
 // Form Registry: Centralized configuration for all current and future AIIMS forms
 
 export const FORM_REGISTRY: FormRegistryEntry[] = [
@@ -324,6 +328,17 @@ export const FORM_REGISTRY: FormRegistryEntry[] = [
     titleKey: 'aiimsDoseOfDrugsTitle',
     title: 'Dose of Drugs',
     slot: 'aiims-dose-of-drugs-dashboard-slot',
+    icon: Medication,
+    order: 1,
+  },
+  {
+    key: 'adjuvant-drug',
+    uuid: AIIMS_ADJUVANT_DRUG_FORM_UUID,
+    name: AIIMS_ADJUVANT_DRUG_FORM_NAME,
+    path: 'aiims-adjuvant-drug',
+    titleKey: 'aiimsAdjuvantDrugTitle',
+    title: 'Adjuvant Drug',
+    slot: 'aiims-adjuvant-drug-dashboard-slot',
     icon: Medication,
     order: 1,
   },
@@ -734,6 +749,12 @@ export const CONCEPTS = {
   dayOfStartOfCetrotide: 'c0010001-0000-0000-0000-000000000241',
   totalDaysOfStimulation: 'c0010001-0000-0000-0000-000000000242',
   doseOfDrugsRemarks: 'c0010001-0000-0000-0000-000000000243',
+
+  // Adjuvant Drug
+  growthHormone: 'c0010001-0000-0000-0000-000000000244',
+  growthHormoneDose: 'c0010001-0000-0000-0000-000000000245',
+  growthHormoneDuration: 'c0010001-0000-0000-0000-000000000246',
+  adjuvantDrugRemarks: 'c0010001-0000-0000-0000-000000000247',
 };
 
 

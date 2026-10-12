@@ -1,0 +1,90 @@
+{
+  "name": "AIIMS Visit: Adjuvant Drug",
+  "description": "AIIMS Department of Reproductive Medicine & IVF - Adjuvant Drug Sheet",
+  "version": "1.0",
+  "published": true,
+  "retired": false,
+  "encounter": "Consultation",
+  "processor": "EncounterFormProcessor",
+  "referencedForms": [],
+  "pages": [
+    {
+      "label": "Adjuvant Drug",
+      "sections": [
+        {
+          "label": "Growth Hormone (GH) Adjuvant Therapy",
+          "isExpanded": true,
+          "questions": [
+            {
+              "label": "Growth hormone",
+              "type": "obs",
+              "id": "growth_hormone",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "c0010001-0000-0000-0000-000000000244",
+                "answers": [
+                  {
+                    "concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "No"
+                  }
+                ]
+              }
+            },
+            {
+              "label": "Growth hormone dose (IU)",
+              "type": "obs",
+              "id": "growth_hormone_dose",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "number",
+                "concept": "c0010001-0000-0000-0000-000000000245",
+                "min": 0,
+                "max": 100
+              },
+              "hide": {
+                "hideWhenExpression": "!growth_hormone || growth_hormone !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              }
+            },
+            {
+              "label": "Growth hormone duration (days)",
+              "type": "obs",
+              "id": "growth_hormone_duration",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "number",
+                "concept": "c0010001-0000-0000-0000-000000000246",
+                "min": 0,
+                "max": 365
+              },
+              "hide": {
+                "hideWhenExpression": "!growth_hormone || growth_hormone !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              }
+            }
+          ]
+        },
+        {
+          "label": "Clinical Notes & Remarks",
+          "isExpanded": true,
+          "questions": [
+            {
+              "label": "Remarks",
+              "type": "obs",
+              "id": "adjuvant_drug_remarks",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "textarea",
+                "concept": "c0010001-0000-0000-0000-000000000247",
+                "rows": 4
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

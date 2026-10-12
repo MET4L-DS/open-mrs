@@ -325,6 +325,14 @@ const doseOfDrugsExtensions = createFormExtensions(
 export const aiimsDoseOfDrugsDashboardLink = doseOfDrugsExtensions.link;
 export const aiimsDoseOfDrugsDashboard = doseOfDrugsExtensions.dashboard;
 
+const adjuvantDrugExtensions = createFormExtensions(
+  getFormRegistryEntry('adjuvant-drug'),
+  () => import('./adjuvant-drug/adjuvant-drug-dashboard.component')
+);
+
+export const aiimsAdjuvantDrugDashboardLink = adjuvantDrugExtensions.link;
+export const aiimsAdjuvantDrugDashboard = adjuvantDrugExtensions.dashboard;
+
 export { FORM_REGISTRY, getFormRegistryEntry, getFormUuid, getFormName } from './constants';
 export * from './shared';
 export * from './infertility-type';
@@ -346,6 +354,7 @@ export * from './investigation-female-procedure-biopsy';
 export * from './investigation-male-semen';
 export * from './ovarian-stimulation-protocol';
 export * from './dose-of-drugs';
+export * from './adjuvant-drug';
 export * from './trigger-details';
 export * from './ovum-pick-up-details';
 export * from './lab-procedure-insemination';

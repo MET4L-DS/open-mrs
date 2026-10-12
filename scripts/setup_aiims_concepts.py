@@ -934,6 +934,12 @@ full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000241", "Day 
 full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000242", "Total days of stimulation", datatype_id=1, class_id=7, is_numeric=True, units="days", allow_decimal=0, low_abs=0, hi_abs=100))
 full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000243", "Dose of Drugs Remarks", datatype_id=3, class_id=7))
 
+# Adjuvant Drug Concepts (0244-0247)
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000244", "Growth hormone", datatype_id=2, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000245", "Growth hormone dose", datatype_id=1, class_id=7, is_numeric=True, units="IU", allow_decimal=2, low_abs=0, hi_abs=100))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000246", "Growth hormone duration", datatype_id=1, class_id=7, is_numeric=True, units="days", allow_decimal=0, low_abs=0, hi_abs=365))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000247", "Adjuvant Drug Remarks", datatype_id=3, class_id=7))
+
 # 3. Link Answers
 # Education Wife answers
 for u, _ in education_answers:
@@ -1491,6 +1497,13 @@ for ans_uuid, _ in ovarian_stimulation_protocol_answers:
 # Day of start of Cetrotide (0241)
 for ans_uuid, _ in cetrotide_start_day_answers:
     full_script.append(add_answer_sql("c0010001-0000-0000-0000-000000000241", ans_uuid))
+
+# Growth hormone (0244)
+for ans_uuid in [
+    "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",  # Yes
+    "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",  # No
+]:
+    full_script.append(add_answer_sql("c0010001-0000-0000-0000-000000000244", ans_uuid))
 
 
 full_script.append("END$$")

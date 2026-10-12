@@ -409,6 +409,26 @@
       "offline": true
     },
     {
+      "name": "aiims-adjuvant-drug-dashboard-link",
+      "component": "aiimsAdjuvantDrugDashboardLink",
+      "slot": "patient-chart-dashboard-slot",
+      "order": 1,
+      "meta": {
+        "slot": "aiims-adjuvant-drug-dashboard-slot",
+        "path": "aiims-adjuvant-drug",
+        "title": "Adjuvant Drug"
+      },
+      "online": true,
+      "offline": true
+    },
+    {
+      "name": "aiims-adjuvant-drug-dashboard",
+      "component": "aiimsAdjuvantDrugDashboard",
+      "slot": "aiims-adjuvant-drug-dashboard-slot",
+      "online": true,
+      "offline": true
+    },
+    {
       "name": "aiims-trigger-details-dashboard-link",
       "component": "aiimsTriggerDetailsDashboardLink",
       "slot": "patient-chart-dashboard-slot",

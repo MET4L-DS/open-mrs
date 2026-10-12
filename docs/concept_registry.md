@@ -196,6 +196,10 @@ To maintain agility and avoid blocking clinical deployment pending terminology l
 | `c0010001-0000-0000-0000-000000000241` | Day of start of Cetrotide | Coded | Finding | Local / Dose of Drugs | — | — | Active | Form 20: Start Day 1 to Day 16 |
 | `c0010001-0000-0000-0000-000000000242` | Total days of stimulation | Numeric | Finding | Local / Dose of Drugs | days | — | Active | Form 20: Stimulation duration |
 | `c0010001-0000-0000-0000-000000000243` | Dose of Drugs Remarks | Text | Misc | Local / Dose of Drugs | — | — | Active | Form 20: Remarks & notes |
+| `c0010001-0000-0000-0000-000000000244` | Growth hormone | Coded | Finding | Local / Adjuvant Drug | — | — | Active | Form 21: Yes / No |
+| `c0010001-0000-0000-0000-000000000245` | Growth hormone dose | Numeric | Finding | Local / Adjuvant Drug | IU | — | Active | Form 21: Growth hormone dose |
+| `c0010001-0000-0000-0000-000000000246` | Growth hormone duration | Numeric | Finding | Local / Adjuvant Drug | days | — | Active | Form 21: Growth hormone duration |
+| `c0010001-0000-0000-0000-000000000247` | Adjuvant Drug Remarks | Text | Misc | Local / Adjuvant Drug | — | — | Active | Form 21: Remarks & notes |
 
 ---
 

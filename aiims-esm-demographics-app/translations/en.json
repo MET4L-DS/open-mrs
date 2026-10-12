@@ -469,5 +469,18 @@
   "noDoseOfDrugsHeader": "No Dose of Drugs Recorded Yet",
   "noDoseOfDrugsBody": "The medication dosages and stimulation duration have not been recorded for this patient yet.",
   "recordDoseOfDrugs": "Record Dose of Drugs",
-  "updateDoseOfDrugs": "Update Dose of Drugs"
+  "updateDoseOfDrugs": "Update Dose of Drugs",
+  "aiimsAdjuvantDrugTitle": "Adjuvant Drug",
+  "growthHormoneAdjuvantTherapyTitle": "Growth Hormone (GH) Adjuvant Therapy",
+  "adjuvantDrugRemarksTitle": "Clinical Notes & Remarks",
+  "growthHormone": "Growth Hormone Administered",
+  "growthHormoneDose": "Growth Hormone Dose",
+  "growthHormoneDuration": "Growth Hormone Duration",
+  "adjuvantDrugRemarks": "Remarks / Notes",
+  "loadingAdjuvantDrug": "Loading Adjuvant Drug...",
+  "noRecordedAdjuvantDrugEncounter": "No AIIMS Adjuvant Drug encounter recorded yet",
+  "noAdjuvantDrugHeader": "No Adjuvant Drug Recorded Yet",
+  "noAdjuvantDrugBody": "Growth hormone therapy and adjuvant medication details have not been recorded for this patient yet.",
+  "recordAdjuvantDrug": "Record Adjuvant Drug",
+  "updateAdjuvantDrug": "Update Adjuvant Drug"
 }
