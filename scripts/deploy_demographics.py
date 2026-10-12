@@ -72,7 +72,13 @@ def main():
     run_docker(["exec", CONTAINER_NAME, "mkdir", "-p", target_dir])
 
     print("3. Copying dist files to container ...")
-    run_docker(["cp", f"{MODULE_DIST}/.", f"{CONTAINER_NAME}:{target_dir}/"])
+    temp_tar = os.path.join(os.path.dirname(__file__), "dist_temp.tar")
+    subprocess.run(["tar", "-cf", temp_tar, "-C", MODULE_DIST, "."], check=True)
+    run_docker(["cp", temp_tar, f"{CONTAINER_NAME}:{target_dir}/"])
+    run_docker(["exec", CONTAINER_NAME, "tar", "-xf", f"{target_dir}/dist_temp.tar", "-C", target_dir])
+    run_docker(["exec", CONTAINER_NAME, "rm", "-f", f"{target_dir}/dist_temp.tar"])
+    if os.path.exists(temp_tar):
+        os.remove(temp_tar)
 
     print(f"4. Updating importmap.json with {target_subdir} ...")
     importmap["imports"][MODULE_NAME] = f"./{target_subdir}/{MAIN_JS}"

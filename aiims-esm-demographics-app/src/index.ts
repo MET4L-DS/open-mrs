@@ -277,6 +277,14 @@ const triggerDetailsExtensions = createFormExtensions(
 export const aiimsTriggerDetailsDashboardLink = triggerDetailsExtensions.link;
 export const aiimsTriggerDetailsDashboard = triggerDetailsExtensions.dashboard;
 
+const ovumPickUpDetailsExtensions = createFormExtensions(
+  getFormRegistryEntry('ovum-pick-up-details'),
+  () => import('./ovum-pick-up-details/ovum-pick-up-details-dashboard.component')
+);
+
+export const aiimsOvumPickUpDetailsDashboardLink = ovumPickUpDetailsExtensions.link;
+export const aiimsOvumPickUpDetailsDashboard = ovumPickUpDetailsExtensions.dashboard;
+
 export { FORM_REGISTRY, getFormRegistryEntry, getFormUuid, getFormName } from './constants';
 export * from './shared';
 export * from './infertility-type';
@@ -297,6 +305,7 @@ export * from './procedure-embryo-transfer';
 export * from './investigation-female-procedure-biopsy';
 export * from './investigation-male-semen';
 export * from './trigger-details';
+export * from './ovum-pick-up-details';
 
 
 

@@ -1,0 +1,217 @@
+{
+  "name": "AIIMS Visit: Ovum Pick Up Details",
+  "description": "AIIMS Department of Reproductive Medicine & IVF - Ovum Pick Up Details Sheet",
+  "version": "1.0",
+  "published": true,
+  "retired": false,
+  "encounter": "Consultation",
+  "processor": "EncounterFormProcessor",
+  "referencedForms": [],
+  "pages": [
+    {
+      "label": "Ovum Pick Up Details",
+      "sections": [
+        {
+          "label": "Procedure Timing & Oocytes Retrieval",
+          "isExpanded": true,
+          "questions": [
+            {
+              "label": "Date of Ovum Pick Up",
+              "type": "obs",
+              "id": "date_of_ovum_pick_up",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "date",
+                "concept": "c0010001-0000-0000-0000-000000000206"
+              }
+            },
+            {
+              "label": "Time of Ovum Pick Up",
+              "type": "obs",
+              "id": "time_of_ovum_pick_up",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "text",
+                "concept": "c0010001-0000-0000-0000-000000000207"
+              }
+            },
+            {
+              "label": "Interval between Trigger & Ovum pick up",
+              "type": "obs",
+              "id": "interval_trigger_ovum_pickup",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "text",
+                "concept": "c0010001-0000-0000-0000-000000000208"
+              }
+            },
+            {
+              "label": "Number of Oocytes Retrieved",
+              "type": "obs",
+              "id": "number_of_oocytes_retrieved",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "number",
+                "concept": "c0010001-0000-0000-0000-000000000209"
+              }
+            },
+            {
+              "label": "Number of Oocytes Retrieved comments",
+              "type": "obs",
+              "id": "number_of_oocytes_retrieved_comments",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "textarea",
+                "concept": "c0010001-0000-0000-0000-000000000210"
+              }
+            },
+            {
+              "label": "Fort Follicular Output Rate (FORT %)",
+              "type": "obs",
+              "id": "fort_follicular_output_rate",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "number",
+                "concept": "c0010001-0000-0000-0000-000000000211"
+              }
+            },
+            {
+              "label": "Follicle to Oocyte Index (FOI %)",
+              "type": "obs",
+              "id": "follicle_to_oocyte_index",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "number",
+                "concept": "c0010001-0000-0000-0000-000000000212"
+              }
+            }
+          ]
+        },
+        {
+          "label": "Oocyte Maturity & Grading",
+          "isExpanded": true,
+          "questions": [
+            {
+              "label": "Oocyte-Cumulus Complex Grade-I",
+              "type": "obs",
+              "id": "oocyte_cumulus_complex_grade_1",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "number",
+                "concept": "c0010001-0000-0000-0000-000000000213"
+              }
+            },
+            {
+              "label": "Oocyte-Cumulus Complex Grade-II",
+              "type": "obs",
+              "id": "oocyte_cumulus_complex_grade_2",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "number",
+                "concept": "c0010001-0000-0000-0000-000000000214"
+              }
+            },
+            {
+              "label": "Oocyte-Cumulus Complex Grade-III",
+              "type": "obs",
+              "id": "oocyte_cumulus_complex_grade_3",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "number",
+                "concept": "c0010001-0000-0000-0000-000000000215"
+              }
+            },
+            {
+              "label": "Metaphase II",
+              "type": "obs",
+              "id": "metaphase_2",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "number",
+                "concept": "c0010001-0000-0000-0000-000000000216"
+              }
+            },
+            {
+              "label": "Metaphase I",
+              "type": "obs",
+              "id": "metaphase_1",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "number",
+                "concept": "c0010001-0000-0000-0000-000000000217"
+              }
+            },
+            {
+              "label": "Germinal Vesicle",
+              "type": "obs",
+              "id": "germinal_vesicle",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "number",
+                "concept": "c0010001-0000-0000-0000-000000000218"
+              }
+            }
+          ]
+        },
+        {
+          "label": "Oocyte Abnormalities & Notes",
+          "isExpanded": true,
+          "questions": [
+            {
+              "label": "Abnormal oocytes number",
+              "type": "obs",
+              "id": "abnormal_oocytes_number",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "number",
+                "concept": "c0010001-0000-0000-0000-000000000219"
+              }
+            },
+            {
+              "label": "Abnormal oocytes",
+              "type": "obs",
+              "id": "abnormal_oocytes",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "checkbox",
+                "concept": "c0010001-0000-0000-0000-000000000220",
+                "answers": [
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000001002",
+                    "label": "Giant oocyte"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000001003",
+                    "label": "Degenerated oocyte"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000001004",
+                    "label": "Dysmorphic oocytes"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000001005",
+                    "label": "Small size"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000001006",
+                    "label": "Dark cumulus"
+                  }
+                ]
+              }
+            },
+            {
+              "label": "Remarks",
+              "type": "obs",
+              "id": "ovum_pick_up_details_remarks",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "textarea",
+                "concept": "c0010001-0000-0000-0000-000000000221"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

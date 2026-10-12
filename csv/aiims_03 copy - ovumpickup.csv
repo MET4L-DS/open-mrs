@@ -1,0 +1,21 @@
+slot_columns,
+Date of Ovum Pick Up,
+Time of Ovum Pick Up,
+Interval between Trigger & Ovum pick up,
+Number of Oocytes Retrieved,
+Number of Oocytes Retrieved comments,
+Fort_Follicullar_Output_Rate(FORT),
+Follicle_to_Oocyte_Index,
+Oocyte-Cumulus Complex Grade-l,
+Oocyte-Cumulus Complex Grade-lI,
+Oocyte-Cumulus Complex Grade-lII,
+Metaphase II,
+Metaphase I,
+Germinal Vesicle,
+Abnormal_oocytes_number,
+Abnormal_oocytes,
+,Giant oocyte
+,Degenerated oocyte
+,Dysmorphic oocytes
+,Small size
+,Dark cumulus

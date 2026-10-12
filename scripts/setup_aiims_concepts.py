@@ -433,6 +433,14 @@ trigger_details_answers = [
     ("c0010002-0000-0000-0000-000000001001", "Ovitrelle"),
 ]
 
+ovum_pick_up_answers = [
+    ("c0010002-0000-0000-0000-000000001002", "Giant oocyte"),
+    ("c0010002-0000-0000-0000-000000001003", "Degenerated oocyte"),
+    ("c0010002-0000-0000-0000-000000001004", "Dysmorphic oocytes"),
+    ("c0010002-0000-0000-0000-000000001005", "Small size"),
+    ("c0010002-0000-0000-0000-000000001006", "Dark cumulus"),
+]
+
 
 
 # We assemble the migration script wrapped in a stored procedure for IF/ELSE control flow
@@ -484,6 +492,9 @@ for u, name in investigation_male_semen_answers:
     full_script.append(add_concept_sql(u, name, datatype_id=4, class_id=11))
 
 for u, name in trigger_details_answers:
+    full_script.append(add_concept_sql(u, name, datatype_id=4, class_id=11))
+
+for u, name in ovum_pick_up_answers:
     full_script.append(add_concept_sql(u, name, datatype_id=4, class_id=11))
 
 
@@ -804,6 +815,24 @@ full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000202", "Ovul
 full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000203", "Date of trigger", datatype_id=6, class_id=7))
 full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000204", "Time of trigger", datatype_id=3, class_id=7))
 full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000205", "Trigger Details Remarks", datatype_id=3, class_id=7))
+
+# Ovum Pick Up Details Concepts (Form 20: 0206-0221)
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000206", "Date of Ovum Pick Up", datatype_id=6, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000207", "Time of Ovum Pick Up", datatype_id=3, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000208", "Interval between Trigger and Ovum Pick Up", datatype_id=3, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000209", "Number of Oocytes Retrieved", datatype_id=1, class_id=7, is_numeric=True, allow_decimal=0, low_abs=0, hi_abs=150))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000210", "Number of Oocytes Retrieved comments", datatype_id=3, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000211", "Fort Follicular Output Rate FORT", datatype_id=1, class_id=7, is_numeric=True, units="%", allow_decimal=1, low_abs=0, hi_abs=500))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000212", "Follicle to Oocyte Index", datatype_id=1, class_id=7, is_numeric=True, units="%", allow_decimal=1, low_abs=0, hi_abs=500))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000213", "Oocyte-Cumulus Complex Grade-I", datatype_id=1, class_id=7, is_numeric=True, allow_decimal=0, low_abs=0, hi_abs=150))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000214", "Oocyte-Cumulus Complex Grade-II", datatype_id=1, class_id=7, is_numeric=True, allow_decimal=0, low_abs=0, hi_abs=150))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000215", "Oocyte-Cumulus Complex Grade-III", datatype_id=1, class_id=7, is_numeric=True, allow_decimal=0, low_abs=0, hi_abs=150))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000216", "Metaphase II", datatype_id=1, class_id=7, is_numeric=True, allow_decimal=0, low_abs=0, hi_abs=150))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000217", "Metaphase I", datatype_id=1, class_id=7, is_numeric=True, allow_decimal=0, low_abs=0, hi_abs=150))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000218", "Germinal Vesicle", datatype_id=1, class_id=7, is_numeric=True, allow_decimal=0, low_abs=0, hi_abs=150))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000219", "Abnormal oocytes number", datatype_id=1, class_id=7, is_numeric=True, allow_decimal=0, low_abs=0, hi_abs=150))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000220", "Abnormal oocytes", datatype_id=2, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000221", "Ovum Pick Up Details Remarks", datatype_id=3, class_id=7))
 
 # 3. Link Answers
 # Education Wife answers
@@ -1331,6 +1360,11 @@ for ans_uuid in [
     "c0010002-0000-0000-0000-000000001001",  # Ovitrelle
 ]:
     full_script.append(add_answer_sql("c0010001-0000-0000-0000-000000000201", ans_uuid))
+
+# Ovum Pick Up Details (Form 20)
+# Abnormal oocytes (0220)
+for ans_uuid, _ in ovum_pick_up_answers:
+    full_script.append(add_answer_sql("c0010001-0000-0000-0000-000000000220", ans_uuid))
 
 
 full_script.append("END$$")

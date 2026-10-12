@@ -387,6 +387,26 @@
       "slot": "aiims-trigger-details-dashboard-slot",
       "online": true,
       "offline": true
+    },
+    {
+      "name": "aiims-ovum-pick-up-details-dashboard-link",
+      "component": "aiimsOvumPickUpDetailsDashboardLink",
+      "slot": "patient-chart-dashboard-slot",
+      "order": 1,
+      "meta": {
+        "slot": "aiims-ovum-pick-up-details-dashboard-slot",
+        "path": "aiims-ovum-pick-up-details",
+        "title": "Ovum Pick Up Details"
+      },
+      "online": true,
+      "offline": true
+    },
+    {
+      "name": "aiims-ovum-pick-up-details-dashboard",
+      "component": "aiimsOvumPickUpDetailsDashboard",
+      "slot": "aiims-ovum-pick-up-details-dashboard-slot",
+      "online": true,
+      "offline": true
     }
   ]
 }

@@ -4068,6 +4068,81 @@ BEGIN
     END IF;
     
 
+    SET @existing_id = (SELECT concept_id FROM concept WHERE uuid = 'c0010002-0000-0000-0000-000000001002');
+    IF @existing_id IS NULL THEN
+        INSERT INTO concept (retired, datatype_id, class_id, is_set, creator, date_created, uuid)
+        VALUES (0, 4, 11, 0, 1, NOW(), 'c0010002-0000-0000-0000-000000001002');
+        SET @new_id = LAST_INSERT_ID();
+        
+        INSERT INTO concept_name (concept_id, name, locale, locale_preferred, creator, date_created, concept_name_type, voided, uuid)
+        VALUES (@new_id, 'Giant oocyte', 'en', 1, 1, NOW(), 'FULLY_SPECIFIED', 0, UUID());
+        
+        
+    ELSE
+        SET @new_id = @existing_id;
+    END IF;
+    
+
+    SET @existing_id = (SELECT concept_id FROM concept WHERE uuid = 'c0010002-0000-0000-0000-000000001003');
+    IF @existing_id IS NULL THEN
+        INSERT INTO concept (retired, datatype_id, class_id, is_set, creator, date_created, uuid)
+        VALUES (0, 4, 11, 0, 1, NOW(), 'c0010002-0000-0000-0000-000000001003');
+        SET @new_id = LAST_INSERT_ID();
+        
+        INSERT INTO concept_name (concept_id, name, locale, locale_preferred, creator, date_created, concept_name_type, voided, uuid)
+        VALUES (@new_id, 'Degenerated oocyte', 'en', 1, 1, NOW(), 'FULLY_SPECIFIED', 0, UUID());
+        
+        
+    ELSE
+        SET @new_id = @existing_id;
+    END IF;
+    
+
+    SET @existing_id = (SELECT concept_id FROM concept WHERE uuid = 'c0010002-0000-0000-0000-000000001004');
+    IF @existing_id IS NULL THEN
+        INSERT INTO concept (retired, datatype_id, class_id, is_set, creator, date_created, uuid)
+        VALUES (0, 4, 11, 0, 1, NOW(), 'c0010002-0000-0000-0000-000000001004');
+        SET @new_id = LAST_INSERT_ID();
+        
+        INSERT INTO concept_name (concept_id, name, locale, locale_preferred, creator, date_created, concept_name_type, voided, uuid)
+        VALUES (@new_id, 'Dysmorphic oocytes', 'en', 1, 1, NOW(), 'FULLY_SPECIFIED', 0, UUID());
+        
+        
+    ELSE
+        SET @new_id = @existing_id;
+    END IF;
+    
+
+    SET @existing_id = (SELECT concept_id FROM concept WHERE uuid = 'c0010002-0000-0000-0000-000000001005');
+    IF @existing_id IS NULL THEN
+        INSERT INTO concept (retired, datatype_id, class_id, is_set, creator, date_created, uuid)
+        VALUES (0, 4, 11, 0, 1, NOW(), 'c0010002-0000-0000-0000-000000001005');
+        SET @new_id = LAST_INSERT_ID();
+        
+        INSERT INTO concept_name (concept_id, name, locale, locale_preferred, creator, date_created, concept_name_type, voided, uuid)
+        VALUES (@new_id, 'Small size', 'en', 1, 1, NOW(), 'FULLY_SPECIFIED', 0, UUID());
+        
+        
+    ELSE
+        SET @new_id = @existing_id;
+    END IF;
+    
+
+    SET @existing_id = (SELECT concept_id FROM concept WHERE uuid = 'c0010002-0000-0000-0000-000000001006');
+    IF @existing_id IS NULL THEN
+        INSERT INTO concept (retired, datatype_id, class_id, is_set, creator, date_created, uuid)
+        VALUES (0, 4, 11, 0, 1, NOW(), 'c0010002-0000-0000-0000-000000001006');
+        SET @new_id = LAST_INSERT_ID();
+        
+        INSERT INTO concept_name (concept_id, name, locale, locale_preferred, creator, date_created, concept_name_type, voided, uuid)
+        VALUES (@new_id, 'Dark cumulus', 'en', 1, 1, NOW(), 'FULLY_SPECIFIED', 0, UUID());
+        
+        
+    ELSE
+        SET @new_id = @existing_id;
+    END IF;
+    
+
     SET @existing_id = (SELECT concept_id FROM concept WHERE uuid = 'c0010001-0000-0000-0000-000000000001');
     IF @existing_id IS NULL THEN
         INSERT INTO concept (retired, datatype_id, class_id, is_set, creator, date_created, uuid)
@@ -7136,6 +7211,246 @@ BEGIN
         
         INSERT INTO concept_name (concept_id, name, locale, locale_preferred, creator, date_created, concept_name_type, voided, uuid)
         VALUES (@new_id, 'Trigger Details Remarks', 'en', 1, 1, NOW(), 'FULLY_SPECIFIED', 0, UUID());
+        
+        
+    ELSE
+        SET @new_id = @existing_id;
+    END IF;
+    
+
+    SET @existing_id = (SELECT concept_id FROM concept WHERE uuid = 'c0010001-0000-0000-0000-000000000206');
+    IF @existing_id IS NULL THEN
+        INSERT INTO concept (retired, datatype_id, class_id, is_set, creator, date_created, uuid)
+        VALUES (0, 6, 7, 0, 1, NOW(), 'c0010001-0000-0000-0000-000000000206');
+        SET @new_id = LAST_INSERT_ID();
+        
+        INSERT INTO concept_name (concept_id, name, locale, locale_preferred, creator, date_created, concept_name_type, voided, uuid)
+        VALUES (@new_id, 'Date of Ovum Pick Up', 'en', 1, 1, NOW(), 'FULLY_SPECIFIED', 0, UUID());
+        
+        
+    ELSE
+        SET @new_id = @existing_id;
+    END IF;
+    
+
+    SET @existing_id = (SELECT concept_id FROM concept WHERE uuid = 'c0010001-0000-0000-0000-000000000207');
+    IF @existing_id IS NULL THEN
+        INSERT INTO concept (retired, datatype_id, class_id, is_set, creator, date_created, uuid)
+        VALUES (0, 3, 7, 0, 1, NOW(), 'c0010001-0000-0000-0000-000000000207');
+        SET @new_id = LAST_INSERT_ID();
+        
+        INSERT INTO concept_name (concept_id, name, locale, locale_preferred, creator, date_created, concept_name_type, voided, uuid)
+        VALUES (@new_id, 'Time of Ovum Pick Up', 'en', 1, 1, NOW(), 'FULLY_SPECIFIED', 0, UUID());
+        
+        
+    ELSE
+        SET @new_id = @existing_id;
+    END IF;
+    
+
+    SET @existing_id = (SELECT concept_id FROM concept WHERE uuid = 'c0010001-0000-0000-0000-000000000208');
+    IF @existing_id IS NULL THEN
+        INSERT INTO concept (retired, datatype_id, class_id, is_set, creator, date_created, uuid)
+        VALUES (0, 3, 7, 0, 1, NOW(), 'c0010001-0000-0000-0000-000000000208');
+        SET @new_id = LAST_INSERT_ID();
+        
+        INSERT INTO concept_name (concept_id, name, locale, locale_preferred, creator, date_created, concept_name_type, voided, uuid)
+        VALUES (@new_id, 'Interval between Trigger and Ovum Pick Up', 'en', 1, 1, NOW(), 'FULLY_SPECIFIED', 0, UUID());
+        
+        
+    ELSE
+        SET @new_id = @existing_id;
+    END IF;
+    
+
+    SET @existing_id = (SELECT concept_id FROM concept WHERE uuid = 'c0010001-0000-0000-0000-000000000209');
+    IF @existing_id IS NULL THEN
+        INSERT INTO concept (retired, datatype_id, class_id, is_set, creator, date_created, uuid)
+        VALUES (0, 1, 7, 0, 1, NOW(), 'c0010001-0000-0000-0000-000000000209');
+        SET @new_id = LAST_INSERT_ID();
+        
+        INSERT INTO concept_name (concept_id, name, locale, locale_preferred, creator, date_created, concept_name_type, voided, uuid)
+        VALUES (@new_id, 'Number of Oocytes Retrieved', 'en', 1, 1, NOW(), 'FULLY_SPECIFIED', 0, UUID());
+        
+        INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@new_id, NULL, 0, 0, 150);
+    ELSE
+        SET @new_id = @existing_id;
+    END IF;
+    
+
+    SET @existing_id = (SELECT concept_id FROM concept WHERE uuid = 'c0010001-0000-0000-0000-000000000210');
+    IF @existing_id IS NULL THEN
+        INSERT INTO concept (retired, datatype_id, class_id, is_set, creator, date_created, uuid)
+        VALUES (0, 3, 7, 0, 1, NOW(), 'c0010001-0000-0000-0000-000000000210');
+        SET @new_id = LAST_INSERT_ID();
+        
+        INSERT INTO concept_name (concept_id, name, locale, locale_preferred, creator, date_created, concept_name_type, voided, uuid)
+        VALUES (@new_id, 'Number of Oocytes Retrieved comments', 'en', 1, 1, NOW(), 'FULLY_SPECIFIED', 0, UUID());
+        
+        
+    ELSE
+        SET @new_id = @existing_id;
+    END IF;
+    
+
+    SET @existing_id = (SELECT concept_id FROM concept WHERE uuid = 'c0010001-0000-0000-0000-000000000211');
+    IF @existing_id IS NULL THEN
+        INSERT INTO concept (retired, datatype_id, class_id, is_set, creator, date_created, uuid)
+        VALUES (0, 1, 7, 0, 1, NOW(), 'c0010001-0000-0000-0000-000000000211');
+        SET @new_id = LAST_INSERT_ID();
+        
+        INSERT INTO concept_name (concept_id, name, locale, locale_preferred, creator, date_created, concept_name_type, voided, uuid)
+        VALUES (@new_id, 'Fort Follicular Output Rate FORT', 'en', 1, 1, NOW(), 'FULLY_SPECIFIED', 0, UUID());
+        
+        INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@new_id, '%', 1, 0, 500);
+    ELSE
+        SET @new_id = @existing_id;
+    END IF;
+    
+
+    SET @existing_id = (SELECT concept_id FROM concept WHERE uuid = 'c0010001-0000-0000-0000-000000000212');
+    IF @existing_id IS NULL THEN
+        INSERT INTO concept (retired, datatype_id, class_id, is_set, creator, date_created, uuid)
+        VALUES (0, 1, 7, 0, 1, NOW(), 'c0010001-0000-0000-0000-000000000212');
+        SET @new_id = LAST_INSERT_ID();
+        
+        INSERT INTO concept_name (concept_id, name, locale, locale_preferred, creator, date_created, concept_name_type, voided, uuid)
+        VALUES (@new_id, 'Follicle to Oocyte Index', 'en', 1, 1, NOW(), 'FULLY_SPECIFIED', 0, UUID());
+        
+        INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@new_id, '%', 1, 0, 500);
+    ELSE
+        SET @new_id = @existing_id;
+    END IF;
+    
+
+    SET @existing_id = (SELECT concept_id FROM concept WHERE uuid = 'c0010001-0000-0000-0000-000000000213');
+    IF @existing_id IS NULL THEN
+        INSERT INTO concept (retired, datatype_id, class_id, is_set, creator, date_created, uuid)
+        VALUES (0, 1, 7, 0, 1, NOW(), 'c0010001-0000-0000-0000-000000000213');
+        SET @new_id = LAST_INSERT_ID();
+        
+        INSERT INTO concept_name (concept_id, name, locale, locale_preferred, creator, date_created, concept_name_type, voided, uuid)
+        VALUES (@new_id, 'Oocyte-Cumulus Complex Grade-I', 'en', 1, 1, NOW(), 'FULLY_SPECIFIED', 0, UUID());
+        
+        INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@new_id, NULL, 0, 0, 150);
+    ELSE
+        SET @new_id = @existing_id;
+    END IF;
+    
+
+    SET @existing_id = (SELECT concept_id FROM concept WHERE uuid = 'c0010001-0000-0000-0000-000000000214');
+    IF @existing_id IS NULL THEN
+        INSERT INTO concept (retired, datatype_id, class_id, is_set, creator, date_created, uuid)
+        VALUES (0, 1, 7, 0, 1, NOW(), 'c0010001-0000-0000-0000-000000000214');
+        SET @new_id = LAST_INSERT_ID();
+        
+        INSERT INTO concept_name (concept_id, name, locale, locale_preferred, creator, date_created, concept_name_type, voided, uuid)
+        VALUES (@new_id, 'Oocyte-Cumulus Complex Grade-II', 'en', 1, 1, NOW(), 'FULLY_SPECIFIED', 0, UUID());
+        
+        INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@new_id, NULL, 0, 0, 150);
+    ELSE
+        SET @new_id = @existing_id;
+    END IF;
+    
+
+    SET @existing_id = (SELECT concept_id FROM concept WHERE uuid = 'c0010001-0000-0000-0000-000000000215');
+    IF @existing_id IS NULL THEN
+        INSERT INTO concept (retired, datatype_id, class_id, is_set, creator, date_created, uuid)
+        VALUES (0, 1, 7, 0, 1, NOW(), 'c0010001-0000-0000-0000-000000000215');
+        SET @new_id = LAST_INSERT_ID();
+        
+        INSERT INTO concept_name (concept_id, name, locale, locale_preferred, creator, date_created, concept_name_type, voided, uuid)
+        VALUES (@new_id, 'Oocyte-Cumulus Complex Grade-III', 'en', 1, 1, NOW(), 'FULLY_SPECIFIED', 0, UUID());
+        
+        INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@new_id, NULL, 0, 0, 150);
+    ELSE
+        SET @new_id = @existing_id;
+    END IF;
+    
+
+    SET @existing_id = (SELECT concept_id FROM concept WHERE uuid = 'c0010001-0000-0000-0000-000000000216');
+    IF @existing_id IS NULL THEN
+        INSERT INTO concept (retired, datatype_id, class_id, is_set, creator, date_created, uuid)
+        VALUES (0, 1, 7, 0, 1, NOW(), 'c0010001-0000-0000-0000-000000000216');
+        SET @new_id = LAST_INSERT_ID();
+        
+        INSERT INTO concept_name (concept_id, name, locale, locale_preferred, creator, date_created, concept_name_type, voided, uuid)
+        VALUES (@new_id, 'Metaphase II', 'en', 1, 1, NOW(), 'FULLY_SPECIFIED', 0, UUID());
+        
+        INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@new_id, NULL, 0, 0, 150);
+    ELSE
+        SET @new_id = @existing_id;
+    END IF;
+    
+
+    SET @existing_id = (SELECT concept_id FROM concept WHERE uuid = 'c0010001-0000-0000-0000-000000000217');
+    IF @existing_id IS NULL THEN
+        INSERT INTO concept (retired, datatype_id, class_id, is_set, creator, date_created, uuid)
+        VALUES (0, 1, 7, 0, 1, NOW(), 'c0010001-0000-0000-0000-000000000217');
+        SET @new_id = LAST_INSERT_ID();
+        
+        INSERT INTO concept_name (concept_id, name, locale, locale_preferred, creator, date_created, concept_name_type, voided, uuid)
+        VALUES (@new_id, 'Metaphase I', 'en', 1, 1, NOW(), 'FULLY_SPECIFIED', 0, UUID());
+        
+        INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@new_id, NULL, 0, 0, 150);
+    ELSE
+        SET @new_id = @existing_id;
+    END IF;
+    
+
+    SET @existing_id = (SELECT concept_id FROM concept WHERE uuid = 'c0010001-0000-0000-0000-000000000218');
+    IF @existing_id IS NULL THEN
+        INSERT INTO concept (retired, datatype_id, class_id, is_set, creator, date_created, uuid)
+        VALUES (0, 1, 7, 0, 1, NOW(), 'c0010001-0000-0000-0000-000000000218');
+        SET @new_id = LAST_INSERT_ID();
+        
+        INSERT INTO concept_name (concept_id, name, locale, locale_preferred, creator, date_created, concept_name_type, voided, uuid)
+        VALUES (@new_id, 'Germinal Vesicle', 'en', 1, 1, NOW(), 'FULLY_SPECIFIED', 0, UUID());
+        
+        INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@new_id, NULL, 0, 0, 150);
+    ELSE
+        SET @new_id = @existing_id;
+    END IF;
+    
+
+    SET @existing_id = (SELECT concept_id FROM concept WHERE uuid = 'c0010001-0000-0000-0000-000000000219');
+    IF @existing_id IS NULL THEN
+        INSERT INTO concept (retired, datatype_id, class_id, is_set, creator, date_created, uuid)
+        VALUES (0, 1, 7, 0, 1, NOW(), 'c0010001-0000-0000-0000-000000000219');
+        SET @new_id = LAST_INSERT_ID();
+        
+        INSERT INTO concept_name (concept_id, name, locale, locale_preferred, creator, date_created, concept_name_type, voided, uuid)
+        VALUES (@new_id, 'Abnormal oocytes number', 'en', 1, 1, NOW(), 'FULLY_SPECIFIED', 0, UUID());
+        
+        INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@new_id, NULL, 0, 0, 150);
+    ELSE
+        SET @new_id = @existing_id;
+    END IF;
+    
+
+    SET @existing_id = (SELECT concept_id FROM concept WHERE uuid = 'c0010001-0000-0000-0000-000000000220');
+    IF @existing_id IS NULL THEN
+        INSERT INTO concept (retired, datatype_id, class_id, is_set, creator, date_created, uuid)
+        VALUES (0, 2, 7, 0, 1, NOW(), 'c0010001-0000-0000-0000-000000000220');
+        SET @new_id = LAST_INSERT_ID();
+        
+        INSERT INTO concept_name (concept_id, name, locale, locale_preferred, creator, date_created, concept_name_type, voided, uuid)
+        VALUES (@new_id, 'Abnormal oocytes', 'en', 1, 1, NOW(), 'FULLY_SPECIFIED', 0, UUID());
+        
+        
+    ELSE
+        SET @new_id = @existing_id;
+    END IF;
+    
+
+    SET @existing_id = (SELECT concept_id FROM concept WHERE uuid = 'c0010001-0000-0000-0000-000000000221');
+    IF @existing_id IS NULL THEN
+        INSERT INTO concept (retired, datatype_id, class_id, is_set, creator, date_created, uuid)
+        VALUES (0, 3, 7, 0, 1, NOW(), 'c0010001-0000-0000-0000-000000000221');
+        SET @new_id = LAST_INSERT_ID();
+        
+        INSERT INTO concept_name (concept_id, name, locale, locale_preferred, creator, date_created, concept_name_type, voided, uuid)
+        VALUES (@new_id, 'Ovum Pick Up Details Remarks', 'en', 1, 1, NOW(), 'FULLY_SPECIFIED', 0, UUID());
         
         
     ELSE
@@ -13279,6 +13594,56 @@ BEGIN
 
     SET @q_id = (SELECT concept_id FROM concept WHERE uuid = 'c0010001-0000-0000-0000-000000000201');
     SET @a_id = (SELECT concept_id FROM concept WHERE uuid = 'c0010002-0000-0000-0000-000000001001');
+    IF @q_id IS NOT NULL AND @a_id IS NOT NULL THEN
+        IF NOT EXISTS (SELECT 1 FROM concept_answer WHERE concept_id = @q_id AND answer_concept = @a_id) THEN
+            INSERT INTO concept_answer (concept_id, answer_concept, creator, date_created, uuid)
+            VALUES (@q_id, @a_id, 1, NOW(), UUID());
+        END IF;
+    END IF;
+    
+
+    SET @q_id = (SELECT concept_id FROM concept WHERE uuid = 'c0010001-0000-0000-0000-000000000220');
+    SET @a_id = (SELECT concept_id FROM concept WHERE uuid = 'c0010002-0000-0000-0000-000000001002');
+    IF @q_id IS NOT NULL AND @a_id IS NOT NULL THEN
+        IF NOT EXISTS (SELECT 1 FROM concept_answer WHERE concept_id = @q_id AND answer_concept = @a_id) THEN
+            INSERT INTO concept_answer (concept_id, answer_concept, creator, date_created, uuid)
+            VALUES (@q_id, @a_id, 1, NOW(), UUID());
+        END IF;
+    END IF;
+    
+
+    SET @q_id = (SELECT concept_id FROM concept WHERE uuid = 'c0010001-0000-0000-0000-000000000220');
+    SET @a_id = (SELECT concept_id FROM concept WHERE uuid = 'c0010002-0000-0000-0000-000000001003');
+    IF @q_id IS NOT NULL AND @a_id IS NOT NULL THEN
+        IF NOT EXISTS (SELECT 1 FROM concept_answer WHERE concept_id = @q_id AND answer_concept = @a_id) THEN
+            INSERT INTO concept_answer (concept_id, answer_concept, creator, date_created, uuid)
+            VALUES (@q_id, @a_id, 1, NOW(), UUID());
+        END IF;
+    END IF;
+    
+
+    SET @q_id = (SELECT concept_id FROM concept WHERE uuid = 'c0010001-0000-0000-0000-000000000220');
+    SET @a_id = (SELECT concept_id FROM concept WHERE uuid = 'c0010002-0000-0000-0000-000000001004');
+    IF @q_id IS NOT NULL AND @a_id IS NOT NULL THEN
+        IF NOT EXISTS (SELECT 1 FROM concept_answer WHERE concept_id = @q_id AND answer_concept = @a_id) THEN
+            INSERT INTO concept_answer (concept_id, answer_concept, creator, date_created, uuid)
+            VALUES (@q_id, @a_id, 1, NOW(), UUID());
+        END IF;
+    END IF;
+    
+
+    SET @q_id = (SELECT concept_id FROM concept WHERE uuid = 'c0010001-0000-0000-0000-000000000220');
+    SET @a_id = (SELECT concept_id FROM concept WHERE uuid = 'c0010002-0000-0000-0000-000000001005');
+    IF @q_id IS NOT NULL AND @a_id IS NOT NULL THEN
+        IF NOT EXISTS (SELECT 1 FROM concept_answer WHERE concept_id = @q_id AND answer_concept = @a_id) THEN
+            INSERT INTO concept_answer (concept_id, answer_concept, creator, date_created, uuid)
+            VALUES (@q_id, @a_id, 1, NOW(), UUID());
+        END IF;
+    END IF;
+    
+
+    SET @q_id = (SELECT concept_id FROM concept WHERE uuid = 'c0010001-0000-0000-0000-000000000220');
+    SET @a_id = (SELECT concept_id FROM concept WHERE uuid = 'c0010002-0000-0000-0000-000000001006');
     IF @q_id IS NOT NULL AND @a_id IS NOT NULL THEN
         IF NOT EXISTS (SELECT 1 FROM concept_answer WHERE concept_id = @q_id AND answer_concept = @a_id) THEN
             INSERT INTO concept_answer (concept_id, answer_concept, creator, date_created, uuid)

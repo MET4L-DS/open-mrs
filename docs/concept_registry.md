@@ -273,6 +273,17 @@ To maintain agility and avoid blocking clinical deployment pending terminology l
 | `c0010002-0000-0000-0000-000000001000` | Leuprolide | SNOMED CT / RxNorm | — | — | Active |
 | `c0010002-0000-0000-0000-000000001001` | Ovitrelle | SNOMED CT / RxNorm | — | — | Active |
 
+---
+
+### 2.9 Ovum Pick Up Details Answer Options (`c0010002-...`)
+
+| Placeholder UUID | Display Name | Target Standard | Target Code | ATHENA Verified | Status |
+|:---|:---|:---|:---:|:---:|:---:|
+| `c0010002-0000-0000-0000-000000001002` | Giant oocyte | SNOMED CT / Local | — | — | Active |
+| `c0010002-0000-0000-0000-000000001003` | Degenerated oocyte | SNOMED CT / Local | — | — | Active |
+| `c0010002-0000-0000-0000-000000001004` | Dysmorphic oocytes | SNOMED CT / Local | — | — | Active |
+| `c0010002-0000-0000-0000-000000001005` | Small size | SNOMED CT / Local | — | — | Active |
+| `c0010002-0000-0000-0000-000000001006` | Dark cumulus | SNOMED CT / Local | — | — | Active |
 
 ---
 

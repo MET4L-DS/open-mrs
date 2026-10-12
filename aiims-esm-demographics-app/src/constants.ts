@@ -80,6 +80,10 @@ export const AIIMS_INVESTIGATION_MALE_SEMEN_FORM_NAME = 'AIIMS Visit: Investigat
 export const AIIMS_TRIGGER_DETAILS_FORM_UUID = '80930653-7e80-4bfd-9e29-ec37c334d892';
 export const AIIMS_TRIGGER_DETAILS_FORM_NAME = 'AIIMS Visit: Trigger Details';
 
+// Form UUID for AIIMS Visit: Ovum Pick Up Details
+export const AIIMS_OVUM_PICK_UP_DETAILS_FORM_UUID = '80930653-7e80-4bfd-9e29-ec37c334d893';
+export const AIIMS_OVUM_PICK_UP_DETAILS_FORM_NAME = 'AIIMS Visit: Ovum Pick Up Details';
+
 // Form Registry: Centralized configuration for all current and future AIIMS forms
 
 export const FORM_REGISTRY: FormRegistryEntry[] = [
@@ -290,6 +294,17 @@ export const FORM_REGISTRY: FormRegistryEntry[] = [
     title: 'Trigger Details',
     slot: 'aiims-trigger-details-dashboard-slot',
     icon: Timer,
+    order: 1,
+  },
+  {
+    key: 'ovum-pick-up-details',
+    uuid: AIIMS_OVUM_PICK_UP_DETAILS_FORM_UUID,
+    name: AIIMS_OVUM_PICK_UP_DETAILS_FORM_NAME,
+    path: 'aiims-ovum-pick-up-details',
+    titleKey: 'aiimsOvumPickUpDetailsTitle',
+    title: 'Ovum Pick Up Details',
+    slot: 'aiims-ovum-pick-up-details-dashboard-slot',
+    icon: Microscope,
     order: 1,
   },
   // Additional forms (anthropometry, clinical history, semen analysis, etc.) will be registered here
@@ -598,6 +613,24 @@ export const CONCEPTS = {
   dateOfTrigger: 'c0010001-0000-0000-0000-000000000203',
   timeOfTrigger: 'c0010001-0000-0000-0000-000000000204',
   triggerDetailsRemarks: 'c0010001-0000-0000-0000-000000000205',
+
+  // Ovum Pick Up Details (Form 20)
+  dateOfOvumPickUp: 'c0010001-0000-0000-0000-000000000206',
+  timeOfOvumPickUp: 'c0010001-0000-0000-0000-000000000207',
+  intervalTriggerOvumPickup: 'c0010001-0000-0000-0000-000000000208',
+  numberOfOocytesRetrieved: 'c0010001-0000-0000-0000-000000000209',
+  numberOfOocytesRetrievedComments: 'c0010001-0000-0000-0000-000000000210',
+  fortFollicularOutputRate: 'c0010001-0000-0000-0000-000000000211',
+  follicleToOocyteIndex: 'c0010001-0000-0000-0000-000000000212',
+  oocyteCumulusComplexGrade1: 'c0010001-0000-0000-0000-000000000213',
+  oocyteCumulusComplexGrade2: 'c0010001-0000-0000-0000-000000000214',
+  oocyteCumulusComplexGrade3: 'c0010001-0000-0000-0000-000000000215',
+  metaphase2: 'c0010001-0000-0000-0000-000000000216',
+  metaphase1: 'c0010001-0000-0000-0000-000000000217',
+  germinalVesicle: 'c0010001-0000-0000-0000-000000000218',
+  abnormalOocytesNumber: 'c0010001-0000-0000-0000-000000000219',
+  abnormalOocytes: 'c0010001-0000-0000-0000-000000000220',
+  ovumPickUpDetailsRemarks: 'c0010001-0000-0000-0000-000000000221',
 };
 
 
