@@ -427,6 +427,26 @@
       "slot": "aiims-lab-procedure-insemination-dashboard-slot",
       "online": true,
       "offline": true
+    },
+    {
+      "name": "aiims-sperm-quality-assessment-dashboard-link",
+      "component": "aiimsSpermQualityAssessmentDashboardLink",
+      "slot": "patient-chart-dashboard-slot",
+      "order": 1,
+      "meta": {
+        "slot": "aiims-sperm-quality-assessment-dashboard-slot",
+        "path": "aiims-sperm-quality-assessment",
+        "title": "Sperm Quality Assessment"
+      },
+      "online": true,
+      "offline": true
+    },
+    {
+      "name": "aiims-sperm-quality-assessment-dashboard",
+      "component": "aiimsSpermQualityAssessmentDashboard",
+      "slot": "aiims-sperm-quality-assessment-dashboard-slot",
+      "online": true,
+      "offline": true
     }
   ]
 }

@@ -177,6 +177,8 @@ To maintain agility and avoid blocking clinical deployment pending terminology l
 | `c0010001-0000-0000-0000-000000000222` | Method of Insemination | Coded | Finding | Local / Insemination | — | — | Active | Form 21: IVF, AOA, ICSI, PICSI |
 | `c0010001-0000-0000-0000-000000000223` | Time of Insemination or Injection | Text | Finding | Local / Insemination | — | — | Active | Form 21: Injection time |
 | `c0010001-0000-0000-0000-000000000224` | Lab Procedure of Insemination Remarks | Text | Misc | Local / Insemination | — | — | Active | Form 21: Remarks & notes |
+| `c0010001-0000-0000-0000-000000000225` | Sperm Retrieval Procedure | Coded | Finding | Local / Sperm Quality | — | — | Active | Form 22: PESA, TESA, Ejaculated, Frozen, Donor Semen, Husband Semen |
+| `c0010001-0000-0000-0000-000000000226` | Sperm Quality Assessment Remarks | Text | Misc | Local / Sperm Quality | — | — | Active | Form 22: Remarks & notes |
 
 ---
 

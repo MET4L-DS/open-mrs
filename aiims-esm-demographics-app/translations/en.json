@@ -409,5 +409,15 @@
   "noLabProcedureInseminationHeader": "No Lab Procedure of Insemination Recorded Yet",
   "noLabProcedureInseminationBody": "Insemination method (IVF, ICSI, PICSI, AOA) and injection timing have not been recorded for this patient yet.",
   "recordLabProcedureInsemination": "Record Lab Procedure of Insemination",
-  "updateLabProcedureInsemination": "Update Lab Procedure of Insemination"
+  "updateLabProcedureInsemination": "Update Lab Procedure of Insemination",
+  "aiimsSpermQualityAssessmentTitle": "Sperm Quality Assessment",
+  "spermRetrievalCardTitle": "Sperm Retrieval & Source Procedure",
+  "spermRetrievalProcedure": "Sperm Retrieval Procedure",
+  "spermQualityAssessmentRemarks": "Remarks / Notes",
+  "loadingSpermQualityAssessment": "Loading Sperm Quality Assessment...",
+  "noRecordedSpermQualityAssessmentEncounter": "No AIIMS Sperm Quality Assessment encounter recorded yet",
+  "noSpermQualityAssessmentHeader": "No Sperm Quality Assessment Recorded Yet",
+  "noSpermQualityAssessmentBody": "Sperm retrieval procedures (PESA, TESA, ejaculated, frozen, donor/husband semen) have not been recorded for this patient yet.",
+  "recordSpermQualityAssessment": "Record Sperm Quality Assessment",
+  "updateSpermQualityAssessment": "Update Sperm Quality Assessment"
 }

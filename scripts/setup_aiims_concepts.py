@@ -448,6 +448,15 @@ lab_procedure_insemination_answers = [
     ("c0010002-0000-0000-0000-000000001010", "Physiological Intracytoplasmic Sperm Injection (PICSI)"),
 ]
 
+sperm_quality_assessment_answers = [
+    ("c0010002-0000-0000-0000-000000001011", "Percutaneous Epididymal Sperm Aspiration (PESA)"),
+    ("c0010002-0000-0000-0000-000000001012", "Testicular Sperm Aspiration (TESA)"),
+    ("c0010002-0000-0000-0000-000000001013", "Ejaculated"),
+    ("c0010002-0000-0000-0000-000000001014", "Frozen"),
+    ("c0010002-0000-0000-0000-000000001015", "Donor Semen"),
+    ("c0010002-0000-0000-0000-000000001016", "Husband Semen (HS)"),
+]
+
 
 
 # We assemble the migration script wrapped in a stored procedure for IF/ELSE control flow
@@ -505,6 +514,9 @@ for u, name in ovum_pick_up_answers:
     full_script.append(add_concept_sql(u, name, datatype_id=4, class_id=11))
 
 for u, name in lab_procedure_insemination_answers:
+    full_script.append(add_concept_sql(u, name, datatype_id=4, class_id=11))
+
+for u, name in sperm_quality_assessment_answers:
     full_script.append(add_concept_sql(u, name, datatype_id=4, class_id=11))
 
 
@@ -848,6 +860,10 @@ full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000221", "Ovum
 full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000222", "Method of Insemination", datatype_id=2, class_id=7))
 full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000223", "Time of Insemination or Injection", datatype_id=3, class_id=7))
 full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000224", "Lab Procedure of Insemination Remarks", datatype_id=3, class_id=7))
+
+# Sperm Quality Assessment Concepts (Form 22: 0225-0226)
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000225", "Sperm Retrieval Procedure", datatype_id=2, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000226", "Sperm Quality Assessment Remarks", datatype_id=3, class_id=7))
 
 # 3. Link Answers
 # Education Wife answers
@@ -1385,6 +1401,11 @@ for ans_uuid, _ in ovum_pick_up_answers:
 # Method of Insemination (0222)
 for ans_uuid, _ in lab_procedure_insemination_answers:
     full_script.append(add_answer_sql("c0010001-0000-0000-0000-000000000222", ans_uuid))
+
+# Sperm Quality Assessment (Form 22)
+# Sperm Retrieval Procedure (0225)
+for ans_uuid, _ in sperm_quality_assessment_answers:
+    full_script.append(add_answer_sql("c0010001-0000-0000-0000-000000000225", ans_uuid))
 
 
 full_script.append("END$$")

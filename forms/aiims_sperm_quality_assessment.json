@@ -1,0 +1,76 @@
+{
+  "name": "AIIMS Visit: Sperm Quality Assessment",
+  "description": "AIIMS Department of Reproductive Medicine & IVF - Sperm Quality Assessment Sheet",
+  "version": "1.0",
+  "published": true,
+  "retired": false,
+  "encounter": "Consultation",
+  "processor": "EncounterFormProcessor",
+  "referencedForms": [],
+  "pages": [
+    {
+      "label": "Sperm Quality Assessment",
+      "sections": [
+        {
+          "label": "Sperm Retrieval & Source Procedure",
+          "isExpanded": true,
+          "questions": [
+            {
+              "label": "Sperm Retrieval Procedure",
+              "type": "obs",
+              "id": "sperm_retrieval_procedure",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "checkbox",
+                "concept": "c0010001-0000-0000-0000-000000000225",
+                "answers": [
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000001011",
+                    "label": "Percutaneous Epididymal Sperm Aspiration (PESA)"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000001012",
+                    "label": "Testicular Sperm Aspiration (TESA)"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000001013",
+                    "label": "Ejaculated"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000001014",
+                    "label": "Frozen"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000001015",
+                    "label": "Donor Semen"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000001016",
+                    "label": "Husband Semen (HS)"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "label": "Laboratory Notes & Remarks",
+          "isExpanded": true,
+          "questions": [
+            {
+              "label": "Remarks",
+              "type": "obs",
+              "id": "sperm_quality_assessment_remarks",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "textarea",
+                "concept": "c0010001-0000-0000-0000-000000000226",
+                "rows": 4
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

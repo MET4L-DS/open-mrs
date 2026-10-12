@@ -293,6 +293,14 @@ const labProcedureInseminationExtensions = createFormExtensions(
 export const aiimsLabProcedureInseminationDashboardLink = labProcedureInseminationExtensions.link;
 export const aiimsLabProcedureInseminationDashboard = labProcedureInseminationExtensions.dashboard;
 
+const spermQualityAssessmentExtensions = createFormExtensions(
+  getFormRegistryEntry('sperm-quality-assessment'),
+  () => import('./sperm-quality-assessment/sperm-quality-assessment-dashboard.component')
+);
+
+export const aiimsSpermQualityAssessmentDashboardLink = spermQualityAssessmentExtensions.link;
+export const aiimsSpermQualityAssessmentDashboard = spermQualityAssessmentExtensions.dashboard;
+
 export { FORM_REGISTRY, getFormRegistryEntry, getFormUuid, getFormName } from './constants';
 export * from './shared';
 export * from './infertility-type';
@@ -315,6 +323,8 @@ export * from './investigation-male-semen';
 export * from './trigger-details';
 export * from './ovum-pick-up-details';
 export * from './lab-procedure-insemination';
+export * from './sperm-quality-assessment';
+
 
 
 
