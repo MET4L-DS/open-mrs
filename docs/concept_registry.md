@@ -147,6 +147,36 @@ To maintain agility and avoid blocking clinical deployment pending terminology l
 | `c0010001-0000-0000-0000-000000000192` | Investigation Male Semen Remarks | Text | Misc | Local / HSA | — | — | Active | Form 18: Remarks & notes |
 | `c0010001-0000-0000-0000-000000000193` | Prev In-Vitro Fertilization details | Text | Finding | Local / ART | — | — | Active | Form 8: Prior IVF clinical details |
 | `c0010001-0000-0000-0000-000000000194` | Prev In-Vitro Fertilization details Date | Date | Finding | Local / ART | — | — | Active | Form 8: Prior IVF procedure date |
+| `c0010001-0000-0000-0000-000000000195` | Number of Follicles on trigger day 14 to 22 mm | Numeric | Finding | Local / Trigger | — | — | Active | Form 19: Count (14-22mm) |
+| `c0010001-0000-0000-0000-000000000196` | Number of Follicles on trigger day 16 to 22 mm | Numeric | Finding | Local / Trigger | — | — | Active | Form 19: Count (16-22mm) |
+| `c0010001-0000-0000-0000-000000000197` | Endometrial thickness on trigger day | Numeric | Finding | Local / Trigger | mm | — | Active | Form 19: Thickness (mm) |
+| `c0010001-0000-0000-0000-000000000198` | Endometrial thickness on trigger day Pattern | Coded | Finding | Local / Trigger | — | — | Active | Form 19: Endometrial pattern |
+| `c0010001-0000-0000-0000-000000000199` | Estradiol on Trigger Day | Numeric | Finding | Local / Trigger | pg/mL | — | Active | Form 19: E2 level |
+| `c0010001-0000-0000-0000-000000000200` | Progesterone on Trigger Day | Numeric | Finding | Local / Trigger | ng/mL | — | Active | Form 19: P4 level |
+| `c0010001-0000-0000-0000-000000000201` | Ovulation trigger | Coded | Finding | Local / Trigger | — | — | Active | Form 19: Trigger drug |
+| `c0010001-0000-0000-0000-000000000202` | Ovulation trigger dose | Text | Finding | Local / Trigger | — | — | Active | Form 19: Trigger dose |
+| `c0010001-0000-0000-0000-000000000203` | Date of trigger | Date | Finding | Local / Trigger | — | — | Active | Form 19: Trigger date |
+| `c0010001-0000-0000-0000-000000000204` | Time of trigger | Text | Finding | Local / Trigger | — | — | Active | Form 19: Trigger time |
+| `c0010001-0000-0000-0000-000000000205` | Trigger Details Remarks | Text | Misc | Local / Trigger | — | — | Active | Form 19: Remarks & notes |
+| `c0010001-0000-0000-0000-000000000206` | Date of Ovum Pick Up | Date | Finding | Local / OPU | — | — | Active | Form 20: OPU date |
+| `c0010001-0000-0000-0000-000000000207` | Time of Ovum Pick Up | Text | Finding | Local / OPU | — | — | Active | Form 20: OPU time |
+| `c0010001-0000-0000-0000-000000000208` | Interval between Trigger and Ovum Pick Up | Text | Finding | Local / OPU | — | — | Active | Form 20: Trigger-OPU interval |
+| `c0010001-0000-0000-0000-000000000209` | Number of Oocytes Retrieved | Numeric | Finding | Local / OPU | — | — | Active | Form 20: Total oocytes |
+| `c0010001-0000-0000-0000-000000000210` | Number of Oocytes Retrieved comments | Text | Finding | Local / OPU | — | — | Active | Form 20: Oocytes comments |
+| `c0010001-0000-0000-0000-000000000211` | Fort Follicular Output Rate FORT | Numeric | Finding | Local / OPU | % | — | Active | Form 20: FORT index |
+| `c0010001-0000-0000-0000-000000000212` | Follicle to Oocyte Index | Numeric | Finding | Local / OPU | % | — | Active | Form 20: FOI index |
+| `c0010001-0000-0000-0000-000000000213` | Oocyte-Cumulus Complex Grade-I | Numeric | Finding | Local / OPU | — | — | Active | Form 20: Grade-I count |
+| `c0010001-0000-0000-0000-000000000214` | Oocyte-Cumulus Complex Grade-II | Numeric | Finding | Local / OPU | — | — | Active | Form 20: Grade-II count |
+| `c0010001-0000-0000-0000-000000000215` | Oocyte-Cumulus Complex Grade-III | Numeric | Finding | Local / OPU | — | — | Active | Form 20: Grade-III count |
+| `c0010001-0000-0000-0000-000000000216` | Metaphase II | Numeric | Finding | Local / OPU | — | — | Active | Form 20: MII oocytes count |
+| `c0010001-0000-0000-0000-000000000217` | Metaphase I | Numeric | Finding | Local / OPU | — | — | Active | Form 20: MI oocytes count |
+| `c0010001-0000-0000-0000-000000000218` | Germinal Vesicle | Numeric | Finding | Local / OPU | — | — | Active | Form 20: GV count |
+| `c0010001-0000-0000-0000-000000000219` | Abnormal oocytes number | Numeric | Finding | Local / OPU | — | — | Active | Form 20: Abnormal oocytes count |
+| `c0010001-0000-0000-0000-000000000220` | Abnormal oocytes | Coded | Finding | Local / OPU | — | — | Active | Form 20: Morphology abnormalities |
+| `c0010001-0000-0000-0000-000000000221` | Ovum Pick Up Details Remarks | Text | Misc | Local / OPU | — | — | Active | Form 20: Remarks & notes |
+| `c0010001-0000-0000-0000-000000000222` | Method of Insemination | Coded | Finding | Local / Insemination | — | — | Active | Form 21: IVF, AOA, ICSI, PICSI |
+| `c0010001-0000-0000-0000-000000000223` | Time of Insemination or Injection | Text | Finding | Local / Insemination | — | — | Active | Form 21: Injection time |
+| `c0010001-0000-0000-0000-000000000224` | Lab Procedure of Insemination Remarks | Text | Misc | Local / Insemination | — | — | Active | Form 21: Remarks & notes |
 
 ---
 

@@ -84,6 +84,10 @@ export const AIIMS_TRIGGER_DETAILS_FORM_NAME = 'AIIMS Visit: Trigger Details';
 export const AIIMS_OVUM_PICK_UP_DETAILS_FORM_UUID = '80930653-7e80-4bfd-9e29-ec37c334d893';
 export const AIIMS_OVUM_PICK_UP_DETAILS_FORM_NAME = 'AIIMS Visit: Ovum Pick Up Details';
 
+// Form UUID for AIIMS Visit: Lab Procedure of Insemination
+export const AIIMS_LAB_PROCEDURE_INSEMINATION_FORM_UUID = '80930653-7e80-4bfd-9e29-ec37c334d894';
+export const AIIMS_LAB_PROCEDURE_INSEMINATION_FORM_NAME = 'AIIMS Visit: Lab Procedure of Insemination';
+
 // Form Registry: Centralized configuration for all current and future AIIMS forms
 
 export const FORM_REGISTRY: FormRegistryEntry[] = [
@@ -305,6 +309,17 @@ export const FORM_REGISTRY: FormRegistryEntry[] = [
     title: 'Ovum Pick Up Details',
     slot: 'aiims-ovum-pick-up-details-dashboard-slot',
     icon: Microscope,
+    order: 1,
+  },
+  {
+    key: 'lab-procedure-insemination',
+    uuid: AIIMS_LAB_PROCEDURE_INSEMINATION_FORM_UUID,
+    name: AIIMS_LAB_PROCEDURE_INSEMINATION_FORM_NAME,
+    path: 'aiims-lab-procedure-insemination',
+    titleKey: 'aiimsLabProcedureInseminationTitle',
+    title: 'Lab Procedure of Insemination',
+    slot: 'aiims-lab-procedure-insemination-dashboard-slot',
+    icon: Chemistry,
     order: 1,
   },
   // Additional forms (anthropometry, clinical history, semen analysis, etc.) will be registered here
@@ -631,6 +646,9 @@ export const CONCEPTS = {
   abnormalOocytesNumber: 'c0010001-0000-0000-0000-000000000219',
   abnormalOocytes: 'c0010001-0000-0000-0000-000000000220',
   ovumPickUpDetailsRemarks: 'c0010001-0000-0000-0000-000000000221',
+  methodOfInsemination: 'c0010001-0000-0000-0000-000000000222',
+  timeOfInseminationInjection: 'c0010001-0000-0000-0000-000000000223',
+  labProcedureInseminationRemarks: 'c0010001-0000-0000-0000-000000000224',
 };
 
 

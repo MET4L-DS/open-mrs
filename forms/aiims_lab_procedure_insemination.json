@@ -1,0 +1,78 @@
+{
+  "name": "AIIMS Visit: Lab Procedure of Insemination",
+  "description": "AIIMS Department of Reproductive Medicine & IVF - Lab Procedure of Insemination Sheet",
+  "version": "1.0",
+  "published": true,
+  "retired": false,
+  "encounter": "Consultation",
+  "processor": "EncounterFormProcessor",
+  "referencedForms": [],
+  "pages": [
+    {
+      "label": "Lab Procedure of Insemination",
+      "sections": [
+        {
+          "label": "Insemination & Fertilization Method",
+          "isExpanded": true,
+          "questions": [
+            {
+              "label": "Method of Insemination",
+              "type": "obs",
+              "id": "method_of_insemination",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "checkbox",
+                "concept": "c0010001-0000-0000-0000-000000000222",
+                "answers": [
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000001007",
+                    "label": "In vitro Fertilisation (IVF)"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000001008",
+                    "label": "Assisted Oocyte Activation (AOA)"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000001009",
+                    "label": "IntraCytoplasmic Sperm Injection (ICSI)"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000001010",
+                    "label": "Physiological Intracytoplasmic Sperm Injection (PICSI)"
+                  }
+                ]
+              }
+            },
+            {
+              "label": "Time of Insemination or Injection",
+              "type": "obs",
+              "id": "time_of_insemination_injection",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "text",
+                "concept": "c0010001-0000-0000-0000-000000000223"
+              }
+            }
+          ]
+        },
+        {
+          "label": "Laboratory Notes & Remarks",
+          "isExpanded": true,
+          "questions": [
+            {
+              "label": "Remarks",
+              "type": "obs",
+              "id": "lab_procedure_insemination_remarks",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "textarea",
+                "concept": "c0010001-0000-0000-0000-000000000224",
+                "rows": 4
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -285,6 +285,14 @@ const ovumPickUpDetailsExtensions = createFormExtensions(
 export const aiimsOvumPickUpDetailsDashboardLink = ovumPickUpDetailsExtensions.link;
 export const aiimsOvumPickUpDetailsDashboard = ovumPickUpDetailsExtensions.dashboard;
 
+const labProcedureInseminationExtensions = createFormExtensions(
+  getFormRegistryEntry('lab-procedure-insemination'),
+  () => import('./lab-procedure-insemination/lab-procedure-insemination-dashboard.component')
+);
+
+export const aiimsLabProcedureInseminationDashboardLink = labProcedureInseminationExtensions.link;
+export const aiimsLabProcedureInseminationDashboard = labProcedureInseminationExtensions.dashboard;
+
 export { FORM_REGISTRY, getFormRegistryEntry, getFormUuid, getFormName } from './constants';
 export * from './shared';
 export * from './infertility-type';
@@ -306,6 +314,8 @@ export * from './investigation-female-procedure-biopsy';
 export * from './investigation-male-semen';
 export * from './trigger-details';
 export * from './ovum-pick-up-details';
+export * from './lab-procedure-insemination';
+
 
 
 

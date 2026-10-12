@@ -441,6 +441,13 @@ ovum_pick_up_answers = [
     ("c0010002-0000-0000-0000-000000001006", "Dark cumulus"),
 ]
 
+lab_procedure_insemination_answers = [
+    ("c0010002-0000-0000-0000-000000001007", "In vitro Fertilisation (IVF)"),
+    ("c0010002-0000-0000-0000-000000001008", "Assisted Oocyte Activation (AOA)"),
+    ("c0010002-0000-0000-0000-000000001009", "IntraCytoplasmic Sperm Injection (ICSI)"),
+    ("c0010002-0000-0000-0000-000000001010", "Physiological Intracytoplasmic Sperm Injection (PICSI)"),
+]
+
 
 
 # We assemble the migration script wrapped in a stored procedure for IF/ELSE control flow
@@ -495,6 +502,9 @@ for u, name in trigger_details_answers:
     full_script.append(add_concept_sql(u, name, datatype_id=4, class_id=11))
 
 for u, name in ovum_pick_up_answers:
+    full_script.append(add_concept_sql(u, name, datatype_id=4, class_id=11))
+
+for u, name in lab_procedure_insemination_answers:
     full_script.append(add_concept_sql(u, name, datatype_id=4, class_id=11))
 
 
@@ -833,6 +843,11 @@ full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000218", "Germ
 full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000219", "Abnormal oocytes number", datatype_id=1, class_id=7, is_numeric=True, allow_decimal=0, low_abs=0, hi_abs=150))
 full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000220", "Abnormal oocytes", datatype_id=2, class_id=7))
 full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000221", "Ovum Pick Up Details Remarks", datatype_id=3, class_id=7))
+
+# Lab Procedure of Insemination Concepts (Form 21: 0222-0224)
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000222", "Method of Insemination", datatype_id=2, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000223", "Time of Insemination or Injection", datatype_id=3, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000224", "Lab Procedure of Insemination Remarks", datatype_id=3, class_id=7))
 
 # 3. Link Answers
 # Education Wife answers
@@ -1365,6 +1380,11 @@ for ans_uuid in [
 # Abnormal oocytes (0220)
 for ans_uuid, _ in ovum_pick_up_answers:
     full_script.append(add_answer_sql("c0010001-0000-0000-0000-000000000220", ans_uuid))
+
+# Lab Procedure of Insemination (Form 21)
+# Method of Insemination (0222)
+for ans_uuid, _ in lab_procedure_insemination_answers:
+    full_script.append(add_answer_sql("c0010001-0000-0000-0000-000000000222", ans_uuid))
 
 
 full_script.append("END$$")

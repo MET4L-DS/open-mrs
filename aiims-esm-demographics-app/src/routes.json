@@ -407,6 +407,26 @@
       "slot": "aiims-ovum-pick-up-details-dashboard-slot",
       "online": true,
       "offline": true
+    },
+    {
+      "name": "aiims-lab-procedure-insemination-dashboard-link",
+      "component": "aiimsLabProcedureInseminationDashboardLink",
+      "slot": "patient-chart-dashboard-slot",
+      "order": 1,
+      "meta": {
+        "slot": "aiims-lab-procedure-insemination-dashboard-slot",
+        "path": "aiims-lab-procedure-insemination",
+        "title": "Lab Procedure of Insemination"
+      },
+      "online": true,
+      "offline": true
+    },
+    {
+      "name": "aiims-lab-procedure-insemination-dashboard",
+      "component": "aiimsLabProcedureInseminationDashboard",
+      "slot": "aiims-lab-procedure-insemination-dashboard-slot",
+      "online": true,
+      "offline": true
     }
   ]
 }

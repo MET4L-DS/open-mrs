@@ -398,5 +398,16 @@
   "noOvumPickUpDetailsHeader": "No Ovum Pick Up Details Recorded Yet",
   "noOvumPickUpDetailsBody": "Ovum pick up date and time, number of oocytes retrieved, FORT/FOI indices, maturity grading, and abnormal oocytes have not been recorded for this patient yet.",
   "recordOvumPickUpDetails": "Record Ovum Pick Up Details",
-  "updateOvumPickUpDetails": "Update Ovum Pick Up Details"
+  "updateOvumPickUpDetails": "Update Ovum Pick Up Details",
+  "aiimsLabProcedureInseminationTitle": "Lab Procedure of Insemination",
+  "inseminationFertilizationMethod": "Insemination & Fertilization Method",
+  "laboratoryNotesRemarks": "Laboratory Notes & Remarks",
+  "methodOfInsemination": "Method of Insemination",
+  "timeOfInseminationInjection": "Time of Insemination or Injection",
+  "loadingLabProcedureInsemination": "Loading Lab Procedure of Insemination...",
+  "noRecordedLabProcedureInseminationEncounter": "No AIIMS Lab Procedure of Insemination encounter recorded yet",
+  "noLabProcedureInseminationHeader": "No Lab Procedure of Insemination Recorded Yet",
+  "noLabProcedureInseminationBody": "Insemination method (IVF, ICSI, PICSI, AOA) and injection timing have not been recorded for this patient yet.",
+  "recordLabProcedureInsemination": "Record Lab Procedure of Insemination",
+  "updateLabProcedureInsemination": "Update Lab Procedure of Insemination"
 }
