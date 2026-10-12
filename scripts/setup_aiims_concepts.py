@@ -874,6 +874,11 @@ full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000225", "Sper
 full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000226", "Procedure Remarks", datatype_id=3, class_id=7))
 full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000227", "Additional IVF Procedures", datatype_id=2, class_id=7))
 
+# Sperm Quality Assessment Concepts (Form 23: 0228-0230)
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000228", "Post wash Sperm concentration on Ovum Pick Up Day", datatype_id=1, class_id=7, is_numeric=True, units="million/mL", allow_decimal=1, low_abs=0, hi_abs=1000))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000229", "Sperm motility on Ovum Pick Up Day", datatype_id=1, class_id=7, is_numeric=True, units="%", allow_decimal=1, low_abs=0, hi_abs=100))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000230", "Sperm Quality Assessment Remarks", datatype_id=3, class_id=7))
+
 # 3. Link Answers
 # Education Wife answers
 for u, _ in education_answers:

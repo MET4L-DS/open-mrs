@@ -92,8 +92,9 @@ This file serves as the persistent project-level memory and source of truth acro
   - Form 18 (`investigation-male-semen`): `80930653-7e80-4bfd-9e29-ec37c334d891` (`AIIMS Visit: Investigation Male Semen`)
   - Form 19 (`trigger-details`): `80930653-7e80-4bfd-9e29-ec37c334d892` (`AIIMS Visit: Trigger Details`)
   - Form 20 (`ovum-pick-up-details`): `80930653-7e80-4bfd-9e29-ec37c334d893` (`AIIMS Visit: Ovum Pick Up Details`)
-  - Form 21 (`lab-procedure-insemination`): `80930653-7e80-4bfd-9e29-ec37c334d894` (`AIIMS Visit: Lab Procedure of Insemination`)
-  - Form 22 (`procedure`): `80930653-7e80-4bfd-9e29-ec37c334d895` (`AIIMS Visit: Procedure`)
+  - Form 21 (`procedure`): `80930653-7e80-4bfd-9e29-ec37c334d895` (`AIIMS Visit: Procedure`)
+  - Form 22 (`lab-procedure-insemination`): `80930653-7e80-4bfd-9e29-ec37c334d894` (`AIIMS Visit: Lab Procedure of Insemination`)
+  - Form 23 (`sperm-quality-assessment`): `80930653-7e80-4bfd-9e29-ec37c334d896` (`AIIMS Visit: Sperm Quality Assessment`)
 - **Core Concept UUIDs (`src/constants.ts` & `docs/concept_registry.md`)**:
   - `consultantUnit`: `c0010001-0000-0000-0000-000000000001`
   - `consultantName`: `c0010001-0000-0000-0000-000000000002`
@@ -321,8 +322,9 @@ python scripts/publish_aiims_form.py
 - [x] Register Form 18: Investigation Male Semen (`investigation-male-semen`).
 - [x] Register Form 19: Trigger Details (`trigger-details`).
 - [x] Register Form 20: Ovum Pick Up Details (`ovum-pick-up-details`).
-- [x] Register Form 21: Lab Procedure of Insemination (`lab-procedure-insemination`).
-- [x] Register Form 22: Procedure (`procedure`) - Unified Sperm Retrieval & Additional IVF Procedures.
+- [x] Register Form 21: Procedure (`procedure`) - Unified Sperm Retrieval & Additional IVF Procedures.
+- [x] Register Form 22: Lab Procedure of Insemination (`lab-procedure-insemination`).
+- [x] Register Form 23: Sperm Quality Assessment (`sperm-quality-assessment`) - Post Wash Sperm Concentration & Motility on OPU Day.
 
 
 

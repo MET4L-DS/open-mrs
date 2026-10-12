@@ -409,6 +409,26 @@
       "offline": true
     },
     {
+      "name": "aiims-procedure-dashboard-link",
+      "component": "aiimsProcedureDashboardLink",
+      "slot": "patient-chart-dashboard-slot",
+      "order": 1,
+      "meta": {
+        "slot": "aiims-procedure-dashboard-slot",
+        "path": "aiims-procedure",
+        "title": "Procedure"
+      },
+      "online": true,
+      "offline": true
+    },
+    {
+      "name": "aiims-procedure-dashboard",
+      "component": "aiimsProcedureDashboard",
+      "slot": "aiims-procedure-dashboard-slot",
+      "online": true,
+      "offline": true
+    },
+    {
       "name": "aiims-lab-procedure-insemination-dashboard-link",
       "component": "aiimsLabProcedureInseminationDashboardLink",
       "slot": "patient-chart-dashboard-slot",
@@ -429,22 +449,22 @@
       "offline": true
     },
     {
-      "name": "aiims-procedure-dashboard-link",
-      "component": "aiimsProcedureDashboardLink",
+      "name": "aiims-sperm-quality-assessment-dashboard-link",
+      "component": "aiimsSpermQualityAssessmentDashboardLink",
       "slot": "patient-chart-dashboard-slot",
       "order": 1,
       "meta": {
-        "slot": "aiims-procedure-dashboard-slot",
-        "path": "aiims-procedure",
-        "title": "Procedure"
+        "slot": "aiims-sperm-quality-assessment-dashboard-slot",
+        "path": "aiims-sperm-quality-assessment",
+        "title": "Sperm Quality Assessment"
       },
       "online": true,
       "offline": true
     },
     {
-      "name": "aiims-procedure-dashboard",
-      "component": "aiimsProcedureDashboard",
-      "slot": "aiims-procedure-dashboard-slot",
+      "name": "aiims-sperm-quality-assessment-dashboard",
+      "component": "aiimsSpermQualityAssessmentDashboard",
+      "slot": "aiims-sperm-quality-assessment-dashboard-slot",
       "online": true,
       "offline": true
     }

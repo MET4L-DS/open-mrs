@@ -421,5 +421,18 @@
   "noProcedureHeader": "No Procedure Recorded Yet",
   "noProcedureBody": "Sperm retrieval procedures (PESA, TESA, ejaculated, frozen, donor/husband semen) and additional IVF procedures (LAH, PICSI, AOA) have not been recorded for this patient yet.",
   "recordProcedure": "Record Procedure",
-  "updateProcedure": "Update Procedure"
+  "updateProcedure": "Update Procedure",
+  "aiimsSpermQualityAssessmentTitle": "Sperm Quality Assessment",
+  "spermQualityOpuDayCardTitle": "Sperm Quality on Ovum Pick Up Day",
+  "postWashSpermConcentration": "Post wash Sperm concentration on Ovum Pick Up Day",
+  "spermMotilityOpuDay": "Sperm motility on Ovum Pick Up Day",
+  "spermQualityAssessmentRemarks": "Remarks / Notes",
+  "unitMillionPerMl": "million/mL",
+  "unitPercent": "%",
+  "loadingSpermQualityAssessment": "Loading Sperm Quality Assessment...",
+  "noRecordedSpermQualityAssessmentEncounter": "No AIIMS Sperm Quality Assessment encounter recorded yet",
+  "noSpermQualityAssessmentHeader": "No Sperm Quality Assessment Recorded Yet",
+  "noSpermQualityAssessmentBody": "Post wash sperm concentration and sperm motility on ovum pick up day have not been recorded for this patient yet.",
+  "recordSpermQualityAssessment": "Record Sperm Quality Assessment",
+  "updateSpermQualityAssessment": "Update Sperm Quality Assessment"
 }

@@ -1,0 +1,60 @@
+{
+  "name": "AIIMS Visit: Sperm Quality Assessment",
+  "description": "AIIMS Department of Reproductive Medicine & IVF - Sperm Quality Assessment on OPU Day",
+  "version": "1.0",
+  "published": true,
+  "retired": false,
+  "encounter": "Consultation",
+  "processor": "EncounterFormProcessor",
+  "referencedForms": [],
+  "pages": [
+    {
+      "label": "Sperm Quality Assessment",
+      "sections": [
+        {
+          "label": "Sperm Quality on Ovum Pick Up Day",
+          "isExpanded": true,
+          "questions": [
+            {
+              "label": "Post wash Sperm concentration on Ovum Pick Up Day (million/mL)",
+              "type": "obs",
+              "id": "post_wash_sperm_concentration",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "number",
+                "concept": "c0010001-0000-0000-0000-000000000228"
+              }
+            },
+            {
+              "label": "Sperm motility on Ovum Pick Up Day (percentage)",
+              "type": "obs",
+              "id": "sperm_motility_opu_day",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "number",
+                "concept": "c0010001-0000-0000-0000-000000000229"
+              }
+            }
+          ]
+        },
+        {
+          "label": "Laboratory Notes & Remarks",
+          "isExpanded": true,
+          "questions": [
+            {
+              "label": "Remarks",
+              "type": "obs",
+              "id": "sperm_quality_assessment_remarks",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "textarea",
+                "concept": "c0010001-0000-0000-0000-000000000230",
+                "rows": 4
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -180,6 +180,9 @@ To maintain agility and avoid blocking clinical deployment pending terminology l
 | `c0010001-0000-0000-0000-000000000225` | Sperm Retrieval Procedure | Coded | Finding | Local / Procedure | — | — | Active | Form 22: PESA, TESA, Ejaculated, Frozen, Donor Semen, Husband Semen |
 | `c0010001-0000-0000-0000-000000000226` | Procedure Remarks | Text | Misc | Local / Procedure | — | — | Active | Form 22: Remarks & notes |
 | `c0010001-0000-0000-0000-000000000227` | Additional IVF Procedures | Coded | Finding | Local / Procedure | — | — | Active | Form 22: LAH, PICSI, AOA |
+| `c0010001-0000-0000-0000-000000000228` | Post wash Sperm concentration on Ovum Pick Up Day | Numeric | Finding | Local / Sperm Quality | million/mL | — | Active | Form 23: Post wash sperm concentration |
+| `c0010001-0000-0000-0000-000000000229` | Sperm motility on Ovum Pick Up Day | Numeric | Finding | Local / Sperm Quality | % | — | Active | Form 23: Sperm motility percentage |
+| `c0010001-0000-0000-0000-000000000230` | Sperm Quality Assessment Remarks | Text | Misc | Local / Sperm Quality | — | — | Active | Form 23: Remarks & notes |
 
 ---
 
