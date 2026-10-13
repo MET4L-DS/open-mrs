@@ -34,19 +34,18 @@ This file serves as the persistent project-level memory and source of truth acro
 ## 3. Frontend Architecture (`@aiims/esm-demographics-app`)
 
 ### Configuration-Driven Registry Pattern
-- **Central Registry**: `FORM_REGISTRY` in `src/constants.ts` defines all form extensions:
-  - `key`: Internal identifier (e.g. `'demographics'`).
-  - `uuid`: OpenMRS Form UUID.
-  - `name`: Human-readable form name.
-  - `path`: SPA sub-route path (e.g. `'aiims-demographics'`).
-  - `titleKey`: Localization key for translations (`'aiimsDemographicsTitle'`).
-  - `title`: Default English title (`'AIIMS Demographics'`).
-  - `slot`: Target patient chart slot.
-  - `icon`: Carbon React icon component.
-  - `order`: Nav order priority.
-- **Extension Factory**: `createFormExtensions(entry, loadDashboard)` in `src/index.ts` automatically generates:
-  - `link`: Synchronous Single-SPA lifecycle for the left navigation link.
-  - `dashboard`: Asynchronous Single-SPA lifecycle for lazy-loading the form dashboard.
+- **Modular Config (`src/config/`)**:
+  - `src/config/form-uuids.ts`: Isolated form UUIDs and display names (SRP).
+  - `src/config/concepts.ts`: Concept UUID dictionary and type definitions (`KnownConceptUuid`, `ConceptUuid`).
+  - `src/config/form-registry.ts`: `FORM_REGISTRY` entries and lookup helpers (`getFormRegistryEntry`, `getFormUuid`, `getFormName`).
+  - `src/constants.ts`: Zero-breaking-change re-export shim preserving existing module imports.
+- **Form Extension Assembly (`src/index.ts`)**:
+  - `FORM_MODULES`: Manifest mapping form keys to lazy dashboard module loaders.
+  - Extension loop programmatically binds all registry entries via `createFormExtensions()`.
+  - Statically destructured named exports satisfy Single-SPA runtime and bundler tree-shaking requirements.
+- **Automated Route Synchronization (`scripts/generate-routes.ts`)**:
+  - Single Source of Truth: `src/routes.json` is generated directly from `FORM_REGISTRY`.
+  - Automated via `npm run generate-routes` and wired to the `prebuild` npm lifecycle hook. Manual editing is deprecated.
 
 ### Component Design System (`src/shared/components`)
 - **`ObservationCard`**: Standardized Carbon `Tile` component displaying grouped clinical observations with header icons and optional actions.

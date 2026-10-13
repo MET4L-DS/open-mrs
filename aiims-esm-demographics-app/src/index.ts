@@ -120,218 +120,112 @@ export function createFormExtensions(
   };
 }
 
-const demographicsExtensions = createFormExtensions(
-  getFormRegistryEntry('demographics'),
-  () => import('./demographics/demographics-dashboard.component')
-);
-
-export const aiimsDemographicsDashboardLink = demographicsExtensions.link;
-export const aiimsDemographicsDashboard = demographicsExtensions.dashboard;
-
 export const aiimsDemographicsSummaryWidget = getAsyncLifecycle(
   () => import('./demographics/demographics-summary-widget.component'),
   { featureName: 'aiims-demographics-summary', moduleName }
 );
 
-const infertilityTypeExtensions = createFormExtensions(
-  getFormRegistryEntry('infertility-type'),
-  () => import('./infertility-type/infertility-type-dashboard.component')
-);
+/** Manifest mapping each form key to its async dashboard loader */
+const FORM_MODULES: Record<string, () => Promise<{ default: React.ComponentType<any> }>> = {
+  'demographics': () => import('./demographics/demographics-dashboard.component'),
+  'infertility-type': () => import('./infertility-type/infertility-type-dashboard.component'),
+  'obstetric-history': () => import('./obstetric-history/obstetric-history-dashboard.component'),
+  'menstrual-history': () => import('./menstrual-history/menstrual-history-dashboard.component'),
+  'female-factor': () => import('./female-factor/female-factor-dashboard.component'),
+  'male-factor': () => import('./male-factor/male-factor-dashboard.component'),
+  'previous-oi-iui': () => import('./previous-oi-iui/previous-oi-iui-dashboard.component'),
+  'previous-surgery': () => import('./previous-surgery/previous-surgery-dashboard.component'),
+  'male-hormone-surgery': () => import('./male-hormone-surgery/male-hormone-surgery-dashboard.component'),
+  'past-medical-history': () => import('./past-medical-history/past-medical-history-dashboard.component'),
+  'family-history': () => import('./family-history/family-history-dashboard.component'),
+  'tuberculosis-history': () => import('./tuberculosis-history/tuberculosis-history-dashboard.component'),
+  'investigation-ultrasound': () => import('./investigation-ultrasound/investigation-ultrasound-dashboard.component'),
+  'female-blood-hormone': () => import('./investigation-female-blood/female-blood-hormone-dashboard.component'),
+  'female-surgical-procedure': () => import('./investigation-female-surgical/female-surgical-procedure-dashboard.component'),
+  'procedure-embryo-transfer': () => import('./procedure-embryo-transfer/procedure-embryo-transfer-dashboard.component'),
+  'investigation-female-procedure-biopsy': () => import('./investigation-female-procedure-biopsy/investigation-female-procedure-biopsy-dashboard.component'),
+  'investigation-male-semen': () => import('./investigation-male-semen/investigation-male-semen-dashboard.component'),
+  'ovarian-stimulation-protocol': () => import('./ovarian-stimulation-protocol/ovarian-stimulation-protocol-dashboard.component'),
+  'dose-of-drugs': () => import('./dose-of-drugs/dose-of-drugs-dashboard.component'),
+  'adjuvant-drug': () => import('./adjuvant-drug/adjuvant-drug-dashboard.component'),
+  'trigger-details': () => import('./trigger-details/trigger-details-dashboard.component'),
+  'ovum-pick-up-details': () => import('./ovum-pick-up-details/ovum-pick-up-details-dashboard.component'),
+  'procedure': () => import('./procedure/procedure-dashboard.component'),
+  'lab-procedure-insemination': () => import('./lab-procedure-insemination/lab-procedure-insemination-dashboard.component'),
+  'sperm-quality-assessment': () => import('./sperm-quality-assessment/sperm-quality-assessment-dashboard.component'),
+};
 
-export const aiimsInfertilityTypeDashboardLink = infertilityTypeExtensions.link;
-export const aiimsInfertilityTypeDashboard = infertilityTypeExtensions.dashboard;
+function toPascalCase(str: string): string {
+  return str.replace(/(^\w|-\w)/g, clear => clear.replace('-', '').toUpperCase());
+}
 
-const obstetricHistoryExtensions = createFormExtensions(
-  getFormRegistryEntry('obstetric-history'),
-  () => import('./obstetric-history/obstetric-history-dashboard.component')
-);
+// Generate extensions programmatically
+const _extensions: Record<string, any> = {};
+for (const entry of FORM_REGISTRY) {
+  const loader = FORM_MODULES[entry.key];
+  if (loader) {
+    const pascal = toPascalCase(entry.key);
+    const exts = createFormExtensions(entry, loader);
+    _extensions[`aiims${pascal}DashboardLink`] = exts.link;
+    _extensions[`aiims${pascal}Dashboard`] = exts.dashboard;
+  }
+}
 
-export const aiimsObstetricHistoryDashboardLink = obstetricHistoryExtensions.link;
-export const aiimsObstetricHistoryDashboard = obstetricHistoryExtensions.dashboard;
-
-const menstrualHistoryExtensions = createFormExtensions(
-  getFormRegistryEntry('menstrual-history'),
-  () => import('./menstrual-history/menstrual-history-dashboard.component')
-);
-
-export const aiimsMenstrualHistoryDashboardLink = menstrualHistoryExtensions.link;
-export const aiimsMenstrualHistoryDashboard = menstrualHistoryExtensions.dashboard;
-
-const femaleFactorExtensions = createFormExtensions(
-  getFormRegistryEntry('female-factor'),
-  () => import('./female-factor/female-factor-dashboard.component')
-);
-
-export const aiimsFemaleFactorDashboardLink = femaleFactorExtensions.link;
-export const aiimsFemaleFactorDashboard = femaleFactorExtensions.dashboard;
-
-const maleFactorExtensions = createFormExtensions(
-  getFormRegistryEntry('male-factor'),
-  () => import('./male-factor/male-factor-dashboard.component')
-);
-
-export const aiimsMaleFactorDashboardLink = maleFactorExtensions.link;
-export const aiimsMaleFactorDashboard = maleFactorExtensions.dashboard;
-
-const previousOiIuiExtensions = createFormExtensions(
-  getFormRegistryEntry('previous-oi-iui'),
-  () => import('./previous-oi-iui/previous-oi-iui-dashboard.component')
-);
-
-export const aiimsPreviousOiIuiDashboardLink = previousOiIuiExtensions.link;
-export const aiimsPreviousOiIuiDashboard = previousOiIuiExtensions.dashboard;
-
-const previousSurgeryExtensions = createFormExtensions(
-  getFormRegistryEntry('previous-surgery'),
-  () => import('./previous-surgery/previous-surgery-dashboard.component')
-);
-
-export const aiimsPreviousSurgeryDashboardLink = previousSurgeryExtensions.link;
-export const aiimsPreviousSurgeryDashboard = previousSurgeryExtensions.dashboard;
-
-const maleHormoneSurgeryExtensions = createFormExtensions(
-  getFormRegistryEntry('male-hormone-surgery'),
-  () => import('./male-hormone-surgery/male-hormone-surgery-dashboard.component')
-);
-
-export const aiimsMaleHormoneSurgeryDashboardLink = maleHormoneSurgeryExtensions.link;
-export const aiimsMaleHormoneSurgeryDashboard = maleHormoneSurgeryExtensions.dashboard;
-
-const pastMedicalHistoryExtensions = createFormExtensions(
-  getFormRegistryEntry('past-medical-history'),
-  () => import('./past-medical-history/past-medical-history-dashboard.component')
-);
-
-export const aiimsPastMedicalHistoryDashboardLink = pastMedicalHistoryExtensions.link;
-export const aiimsPastMedicalHistoryDashboard = pastMedicalHistoryExtensions.dashboard;
-
-const familyHistoryExtensions = createFormExtensions(
-  getFormRegistryEntry('family-history'),
-  () => import('./family-history/family-history-dashboard.component')
-);
-
-export const aiimsFamilyHistoryDashboardLink = familyHistoryExtensions.link;
-export const aiimsFamilyHistoryDashboard = familyHistoryExtensions.dashboard;
-
-const tuberculosisHistoryExtensions = createFormExtensions(
-  getFormRegistryEntry('tuberculosis-history'),
-  () => import('./tuberculosis-history/tuberculosis-history-dashboard.component')
-);
-
-export const aiimsTuberculosisHistoryDashboardLink = tuberculosisHistoryExtensions.link;
-export const aiimsTuberculosisHistoryDashboard = tuberculosisHistoryExtensions.dashboard;
-
-const investigationUltrasoundExtensions = createFormExtensions(
-  getFormRegistryEntry('investigation-ultrasound'),
-  () => import('./investigation-ultrasound/investigation-ultrasound-dashboard.component')
-);
-
-export const aiimsInvestigationUltrasoundDashboardLink = investigationUltrasoundExtensions.link;
-export const aiimsInvestigationUltrasoundDashboard = investigationUltrasoundExtensions.dashboard;
-
-const femaleBloodHormoneExtensions = createFormExtensions(
-  getFormRegistryEntry('female-blood-hormone'),
-  () => import('./investigation-female-blood/female-blood-hormone-dashboard.component')
-);
-
-export const aiimsFemaleBloodHormoneDashboardLink = femaleBloodHormoneExtensions.link;
-export const aiimsFemaleBloodHormoneDashboard = femaleBloodHormoneExtensions.dashboard;
-
-const femaleSurgicalProcedureExtensions = createFormExtensions(
-  getFormRegistryEntry('female-surgical-procedure'),
-  () => import('./investigation-female-surgical/female-surgical-procedure-dashboard.component')
-);
-
-export const aiimsFemaleSurgicalProcedureDashboardLink = femaleSurgicalProcedureExtensions.link;
-export const aiimsFemaleSurgicalProcedureDashboard = femaleSurgicalProcedureExtensions.dashboard;
-
-const procedureEmbryoTransferExtensions = createFormExtensions(
-  getFormRegistryEntry('procedure-embryo-transfer'),
-  () => import('./procedure-embryo-transfer/procedure-embryo-transfer-dashboard.component')
-);
-
-export const aiimsProcedureEmbryoTransferDashboardLink = procedureEmbryoTransferExtensions.link;
-export const aiimsProcedureEmbryoTransferDashboard = procedureEmbryoTransferExtensions.dashboard;
-
-const investigationFemaleProcedureBiopsyExtensions = createFormExtensions(
-  getFormRegistryEntry('investigation-female-procedure-biopsy'),
-  () => import('./investigation-female-procedure-biopsy/investigation-female-procedure-biopsy-dashboard.component')
-);
-
-export const aiimsInvestigationFemaleProcedureBiopsyDashboardLink = investigationFemaleProcedureBiopsyExtensions.link;
-export const aiimsInvestigationFemaleProcedureBiopsyDashboard = investigationFemaleProcedureBiopsyExtensions.dashboard;
-
-const investigationMaleSemenExtensions = createFormExtensions(
-  getFormRegistryEntry('investigation-male-semen'),
-  () => import('./investigation-male-semen/investigation-male-semen-dashboard.component')
-);
-
-export const aiimsInvestigationMaleSemenDashboardLink = investigationMaleSemenExtensions.link;
-export const aiimsInvestigationMaleSemenDashboard = investigationMaleSemenExtensions.dashboard;
-
-const triggerDetailsExtensions = createFormExtensions(
-  getFormRegistryEntry('trigger-details'),
-  () => import('./trigger-details/trigger-details-dashboard.component')
-);
-
-export const aiimsTriggerDetailsDashboardLink = triggerDetailsExtensions.link;
-export const aiimsTriggerDetailsDashboard = triggerDetailsExtensions.dashboard;
-
-const ovumPickUpDetailsExtensions = createFormExtensions(
-  getFormRegistryEntry('ovum-pick-up-details'),
-  () => import('./ovum-pick-up-details/ovum-pick-up-details-dashboard.component')
-);
-
-export const aiimsOvumPickUpDetailsDashboardLink = ovumPickUpDetailsExtensions.link;
-export const aiimsOvumPickUpDetailsDashboard = ovumPickUpDetailsExtensions.dashboard;
-
-const labProcedureInseminationExtensions = createFormExtensions(
-  getFormRegistryEntry('lab-procedure-insemination'),
-  () => import('./lab-procedure-insemination/lab-procedure-insemination-dashboard.component')
-);
-
-export const aiimsLabProcedureInseminationDashboardLink = labProcedureInseminationExtensions.link;
-export const aiimsLabProcedureInseminationDashboard = labProcedureInseminationExtensions.dashboard;
-
-const procedureExtensions = createFormExtensions(
-  getFormRegistryEntry('procedure'),
-  () => import('./procedure/procedure-dashboard.component')
-);
-
-export const aiimsProcedureDashboardLink = procedureExtensions.link;
-export const aiimsProcedureDashboard = procedureExtensions.dashboard;
-
-const spermQualityAssessmentExtensions = createFormExtensions(
-  getFormRegistryEntry('sperm-quality-assessment'),
-  () => import('./sperm-quality-assessment/sperm-quality-assessment-dashboard.component')
-);
-
-export const aiimsSpermQualityAssessmentDashboardLink = spermQualityAssessmentExtensions.link;
-export const aiimsSpermQualityAssessmentDashboard = spermQualityAssessmentExtensions.dashboard;
-
-const ovarianStimulationProtocolExtensions = createFormExtensions(
-  getFormRegistryEntry('ovarian-stimulation-protocol'),
-  () => import('./ovarian-stimulation-protocol/ovarian-stimulation-protocol-dashboard.component')
-);
-
-export const aiimsOvarianStimulationProtocolDashboardLink = ovarianStimulationProtocolExtensions.link;
-export const aiimsOvarianStimulationProtocolDashboard = ovarianStimulationProtocolExtensions.dashboard;
-
-const doseOfDrugsExtensions = createFormExtensions(
-  getFormRegistryEntry('dose-of-drugs'),
-  () => import('./dose-of-drugs/dose-of-drugs-dashboard.component')
-);
-
-export const aiimsDoseOfDrugsDashboardLink = doseOfDrugsExtensions.link;
-export const aiimsDoseOfDrugsDashboard = doseOfDrugsExtensions.dashboard;
-
-const adjuvantDrugExtensions = createFormExtensions(
-  getFormRegistryEntry('adjuvant-drug'),
-  () => import('./adjuvant-drug/adjuvant-drug-dashboard.component')
-);
-
-export const aiimsAdjuvantDrugDashboardLink = adjuvantDrugExtensions.link;
-export const aiimsAdjuvantDrugDashboard = adjuvantDrugExtensions.dashboard;
+// Named exports required by Single-SPA at bundle time
+export const {
+  aiimsDemographicsDashboardLink,
+  aiimsDemographicsDashboard,
+  aiimsInfertilityTypeDashboardLink,
+  aiimsInfertilityTypeDashboard,
+  aiimsObstetricHistoryDashboardLink,
+  aiimsObstetricHistoryDashboard,
+  aiimsMenstrualHistoryDashboardLink,
+  aiimsMenstrualHistoryDashboard,
+  aiimsFemaleFactorDashboardLink,
+  aiimsFemaleFactorDashboard,
+  aiimsMaleFactorDashboardLink,
+  aiimsMaleFactorDashboard,
+  aiimsPreviousOiIuiDashboardLink,
+  aiimsPreviousOiIuiDashboard,
+  aiimsPreviousSurgeryDashboardLink,
+  aiimsPreviousSurgeryDashboard,
+  aiimsMaleHormoneSurgeryDashboardLink,
+  aiimsMaleHormoneSurgeryDashboard,
+  aiimsPastMedicalHistoryDashboardLink,
+  aiimsPastMedicalHistoryDashboard,
+  aiimsFamilyHistoryDashboardLink,
+  aiimsFamilyHistoryDashboard,
+  aiimsTuberculosisHistoryDashboardLink,
+  aiimsTuberculosisHistoryDashboard,
+  aiimsInvestigationUltrasoundDashboardLink,
+  aiimsInvestigationUltrasoundDashboard,
+  aiimsFemaleBloodHormoneDashboardLink,
+  aiimsFemaleBloodHormoneDashboard,
+  aiimsFemaleSurgicalProcedureDashboardLink,
+  aiimsFemaleSurgicalProcedureDashboard,
+  aiimsProcedureEmbryoTransferDashboardLink,
+  aiimsProcedureEmbryoTransferDashboard,
+  aiimsInvestigationFemaleProcedureBiopsyDashboardLink,
+  aiimsInvestigationFemaleProcedureBiopsyDashboard,
+  aiimsInvestigationMaleSemenDashboardLink,
+  aiimsInvestigationMaleSemenDashboard,
+  aiimsOvarianStimulationProtocolDashboardLink,
+  aiimsOvarianStimulationProtocolDashboard,
+  aiimsDoseOfDrugsDashboardLink,
+  aiimsDoseOfDrugsDashboard,
+  aiimsAdjuvantDrugDashboardLink,
+  aiimsAdjuvantDrugDashboard,
+  aiimsTriggerDetailsDashboardLink,
+  aiimsTriggerDetailsDashboard,
+  aiimsOvumPickUpDetailsDashboardLink,
+  aiimsOvumPickUpDetailsDashboard,
+  aiimsProcedureDashboardLink,
+  aiimsProcedureDashboard,
+  aiimsLabProcedureInseminationDashboardLink,
+  aiimsLabProcedureInseminationDashboard,
+  aiimsSpermQualityAssessmentDashboardLink,
+  aiimsSpermQualityAssessmentDashboard,
+} = _extensions;
 
 export { FORM_REGISTRY, getFormRegistryEntry, getFormUuid, getFormName } from './constants';
 export * from './shared';

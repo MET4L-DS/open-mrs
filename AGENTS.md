@@ -7,7 +7,8 @@ Before performing any tasks in this repository, always read the project memory f
 
 1. **Architecture**:
    - The frontend module is `@aiims/esm-demographics-app` in `./aiims-esm-demographics-app`.
-   - All forms must be registered via `FORM_REGISTRY` in `src/constants.ts` and exported using the `createFormExtensions` factory in `src/index.ts`.
+   - All forms must be registered via `FORM_REGISTRY` in `src/config/form-registry.ts` (accessible via `src/constants.ts` shim) and mapped in `FORM_MODULES` in `src/index.ts`.
+   - `src/routes.json` is single-sourced and auto-generated via `npm run generate-routes` (executed automatically before `npm run build`). Never edit `src/routes.json` manually.
    - Never write redundant boilerplate or duplicate route synchronization logic across files.
 
 2. **Styling & CSS**:
