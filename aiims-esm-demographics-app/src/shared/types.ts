@@ -4,6 +4,7 @@ export interface FormRegistryEntry {
   key: string;
   uuid: string;
   name: string;
+  dir?: string;
   path: string;
   title: string;
   titleKey?: string;

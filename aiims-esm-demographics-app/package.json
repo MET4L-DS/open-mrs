@@ -10,6 +10,7 @@
   "scripts": {
     "generate-routes": "tsx scripts/generate-routes.ts",
     "prebuild": "npm run generate-routes",
+    "create-form": "tsx scripts/create-form.ts",
     "deploy:local": "python ../scripts/deploy_pipeline.py",
     "deploy:local:fast": "python ../scripts/deploy_pipeline.py --skip-tests",
     "start": "openmrs develop",

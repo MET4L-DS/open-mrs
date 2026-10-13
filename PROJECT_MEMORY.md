@@ -39,13 +39,18 @@ This file serves as the persistent project-level memory and source of truth acro
   - `src/config/concepts.ts`: Concept UUID dictionary and type definitions (`KnownConceptUuid`, `ConceptUuid`).
   - `src/config/form-registry.ts`: `FORM_REGISTRY` entries and lookup helpers (`getFormRegistryEntry`, `getFormUuid`, `getFormName`).
   - `src/constants.ts`: Zero-breaking-change re-export shim preserving existing module imports.
-- **Form Extension Assembly (`src/index.ts`)**:
-  - `FORM_MODULES`: Manifest mapping form keys to lazy dashboard module loaders.
-  - Extension loop programmatically binds all registry entries via `createFormExtensions()`.
-  - Statically destructured named exports satisfy Single-SPA runtime and bundler tree-shaking requirements.
-- **Automated Route Synchronization (`scripts/generate-routes.ts`)**:
-  - Single Source of Truth: `src/routes.json` is generated directly from `FORM_REGISTRY`.
+- **Form Extension Assembly (`src/generated-form-extensions.ts` & `src/index.ts`)**:
+  - `src/generated-form-extensions.ts`: Auto-generated alongside `src/routes.json` via `scripts/generate-routes.ts`. Builds lazy `FORM_MODULES` loaders, Single-SPA extension lifecycles (`createFormExtensions`), and static named exports required by Single-SPA.
+  - `src/index.ts`: Slim re-export module (`export * from './generated-form-extensions'`) with zero manual per-form boilerplate.
+- **Automated Route & Extension Synchronization (`scripts/generate-routes.ts`)**:
+  - Single Source of Truth: `src/routes.json` and `src/generated-form-extensions.ts` are generated directly from `FORM_REGISTRY`.
   - Automated via `npm run generate-routes` and wired to the `prebuild` npm lifecycle hook. Manual editing is deprecated.
+- **Form Scaffolding CLI (`scripts/create-form.ts`)**:
+  - `npm run create-form -- <key> "<Form Name>" [--icon=IconName] [--keep-on-fail]`:
+  - Automatically generates feature folder (`src/<key>/`) with 5 typed starter files (`resource`, `card`, `dashboard`, `test`, `index`).
+  - Appends UUID to `src/config/form-uuids.ts`, entry to `src/config/form-registry.ts`, and 8 localized keys to `translations/en.json`.
+  - Automatically regenerates routes and extensions via `generate-routes`.
+  - Runs transactional verification (`tsc` + `vitest`) with automatic rollback on error.
 
 ### Component Design System (`src/shared/components`)
 - **`ObservationCard`**: Standardized Carbon `Tile` component displaying grouped clinical observations with header icons and optional actions.

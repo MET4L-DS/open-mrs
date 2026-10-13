@@ -69,6 +69,7 @@ import {
   AIIMS_DOSE_OF_DRUGS_FORM_NAME,
   AIIMS_ADJUVANT_DRUG_FORM_UUID,
   AIIMS_ADJUVANT_DRUG_FORM_NAME,
+  // @create-form:imports-end
 } from './form-uuids';
 
 // Form Registry: Centralized configuration for all current and future AIIMS forms
@@ -220,6 +221,7 @@ export const FORM_REGISTRY: FormRegistryEntry[] = [
     key: 'female-blood-hormone',
     uuid: AIIMS_FEMALE_BLOOD_HORMONE_FORM_UUID,
     name: AIIMS_FEMALE_BLOOD_HORMONE_FORM_NAME,
+    dir: 'investigation-female-blood',
     path: 'aiims-female-blood-hormone',
     titleKey: 'aiimsFemaleBloodHormoneTitle',
     title: 'Female Blood Hormone',
@@ -231,6 +233,7 @@ export const FORM_REGISTRY: FormRegistryEntry[] = [
     key: 'female-surgical-procedure',
     uuid: AIIMS_FEMALE_SURGICAL_PROCEDURE_FORM_UUID,
     name: AIIMS_FEMALE_SURGICAL_PROCEDURE_FORM_NAME,
+    dir: 'investigation-female-surgical',
     path: 'aiims-female-surgical-procedure',
     titleKey: 'aiimsFemaleSurgicalProcedureTitle',
     title: 'Female Surgical Procedure',
@@ -359,6 +362,7 @@ export const FORM_REGISTRY: FormRegistryEntry[] = [
     icon: Microscope,
     order: 1,
   },
+  // @create-form:registry-end
 ];
 
 /**
