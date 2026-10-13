@@ -128,6 +128,15 @@ npm run test
 # Type check
 npm run typescript
 
+# End-to-end headless smoke test robot (verifies all 26 clinical dashboards in real chart)
+npm run test:e2e
+
+# Run E2E smoke test for a single form
+npm run test:e2e -- --form=aiims-adjuvant-drug
+
+# Run E2E smoke test with visible browser window
+npm run test:e2e -- --headed
+
 # Build production bundle (Rspack)
 npm run build
 
