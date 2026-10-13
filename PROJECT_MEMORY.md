@@ -140,6 +140,9 @@ npm run test:e2e -- --headed
 # Concept dictionary validation (verifies all 303 concept UUIDs against OpenMRS REST API)
 npm run validate:concepts
 
+# Translation completeness check (detects missing keys & empty values via i18next-parser)
+npm run audit:i18n
+
 # Build production bundle (Rspack)
 npm run build
 

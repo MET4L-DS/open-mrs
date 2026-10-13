@@ -482,5 +482,9 @@
   "noAdjuvantDrugHeader": "No Adjuvant Drug Recorded Yet",
   "noAdjuvantDrugBody": "Growth hormone therapy and adjuvant medication details have not been recorded for this patient yet.",
   "recordAdjuvantDrug": "Record Adjuvant Drug",
-  "updateAdjuvantDrug": "Update Adjuvant Drug"
+  "updateAdjuvantDrug": "Update Adjuvant Drug",
+  "genericError": "An unexpected error occurred while fetching details.",
+  "recordData": "Record",
+  "updateData": "Update",
+  "remarks": "Remarks / Notes"
 }
