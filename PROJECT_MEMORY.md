@@ -137,6 +137,9 @@ npm run test:e2e -- --form=aiims-adjuvant-drug
 # Run E2E smoke test with visible browser window
 npm run test:e2e -- --headed
 
+# Concept dictionary validation (verifies all 303 concept UUIDs against OpenMRS REST API)
+npm run validate:concepts
+
 # Build production bundle (Rspack)
 npm run build
 

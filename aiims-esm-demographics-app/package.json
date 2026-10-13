@@ -21,6 +21,7 @@
     "test": "vitest run --passWithNoTests",
     "test:watch": "vitest watch",
     "test:e2e": "tsx e2e/smoke-test.ts",
+    "validate:concepts": "python ../scripts/validate_concepts.py",
     "coverage": "vitest run --coverage --passWithNoTests",
     "typescript": "tsc",
     "lint": "eslint src",
