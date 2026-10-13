@@ -1,5 +1,4 @@
 import { chromium, type Browser, type Page } from 'playwright';
-import * as http from 'http';
 import * as fs from 'fs';
 import * as path from 'path';
 import { FORM_REGISTRY } from '../src/config/form-registry';
@@ -40,57 +39,26 @@ function parseArgs(): SmokeTestOptions {
   return options;
 }
 
-function checkUrlLive(urlStr: string): Promise<boolean> {
-  return new Promise((resolve) => {
-    try {
-      const url = new URL(urlStr);
-      const req = http.request(
-        {
-          hostname: url.hostname,
-          port: url.port || 80,
-          path: url.pathname,
-          method: 'GET',
-          timeout: 4000,
-        },
-        (res) => {
-          resolve((res.statusCode ?? 500) < 500);
-        }
-      );
-      req.on('error', () => resolve(false));
-      req.on('timeout', () => {
-        req.destroy();
-        resolve(false);
-      });
-      req.end();
-    } catch {
-      resolve(false);
-    }
-  });
+async function checkUrlLive(urlStr: string): Promise<boolean> {
+  try {
+    const res = await fetch(urlStr, { signal: AbortSignal.timeout(4000) });
+    return res.status < 500;
+  } catch {
+    return false;
+  }
 }
 
 async function verifyPatientExists(patientUuid: string): Promise<boolean> {
-  return new Promise((resolve) => {
+  try {
     const authHeader = 'Basic ' + Buffer.from('admin:Admin123').toString('base64');
-    const req = http.request(
-      {
-        hostname: 'localhost',
-        port: 80,
-        path: `/openmrs/ws/rest/v1/patient/${patientUuid}?v=default`,
-        method: 'GET',
-        headers: { Authorization: authHeader },
-        timeout: 5000,
-      },
-      (res) => {
-        resolve(res.statusCode === 200);
-      }
-    );
-    req.on('error', () => resolve(false));
-    req.on('timeout', () => {
-      req.destroy();
-      resolve(false);
+    const res = await fetch(`http://localhost/openmrs/ws/rest/v1/patient/${patientUuid}?v=default`, {
+      headers: { Authorization: authHeader },
+      signal: AbortSignal.timeout(5000),
     });
-    req.end();
-  });
+    return res.status === 200;
+  } catch {
+    return false;
+  }
 }
 
 async function login(page: Page, baseUrl: string) {

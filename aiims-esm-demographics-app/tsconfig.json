@@ -28,5 +28,5 @@
       "tools": ["./tools"]
     }
   },
-  "include": ["src/**/*", "scripts/**/*", "tools/setup-tests.ts", "vitest.config.ts"]
+  "include": ["src/**/*", "scripts/**/*", "e2e/**/*", "tools/setup-tests.ts", "vitest.config.ts"]
 }
