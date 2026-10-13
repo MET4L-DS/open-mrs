@@ -10,6 +10,8 @@
   "scripts": {
     "generate-routes": "tsx scripts/generate-routes.ts",
     "prebuild": "npm run generate-routes",
+    "deploy:local": "python ../scripts/deploy_pipeline.py",
+    "deploy:local:fast": "python ../scripts/deploy_pipeline.py --skip-tests",
     "start": "openmrs develop",
     "build": "rspack --mode production",
     "build:development": "rspack --mode development",

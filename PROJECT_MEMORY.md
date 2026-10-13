@@ -125,17 +125,28 @@ npm run typescript
 
 # Build production bundle (Rspack)
 npm run build
+
+# One-Click Deploy & Verify Pipeline (runs docker check, tsc, vitest, build, deploy, & HTTP probe)
+npm run deploy:local
+
+# Fast deploy (skipping unit tests for rapid CSS/styling iterations)
+npm run deploy:local:fast
 ```
 
-### Hot Deployment to Running Docker Environment (run in workspace root)
+### Hot Deployment to Running Docker Environment
 ```bash
+# Recommended: Full automated pipeline (pre-flight + quality gates + deploy + probe)
+python scripts/deploy_pipeline.py
+
+# Low-level hot-deploy script (invoked automatically by deploy_pipeline.py)
 python scripts/deploy_demographics.py
 ```
-*What this script does:*
-1. Generates/uses versioned bundle directory in frontend container (`/usr/share/nginx/html/openmrs-esm-aiims-demographics-app-1.0.x/`).
-2. Copies Rspack `dist/` files into container.
-3. Updates `/usr/share/nginx/html/importmap.json` mapping `@aiims/esm-demographics-app` to the new bundle.
-4. Updates `/usr/share/nginx/html/routes.registry.json` registering extension slots.
+*What the pipeline script does:*
+1. **Docker Pre-flight**: Verifies `frontend`, `backend`, `gateway`, and `db` containers are active and healthy.
+2. **Quality Gates**: Runs `npm run typescript` and `npm run test` (Vitest), aborting if errors are detected.
+3. **Production Build**: Triggers `generate-routes` (53 Single-SPA extensions into `src/routes.json`) and compiles via Rspack.
+4. **Hot-Deployment**: Increments version (e.g. `1.0.x`), transfers tar bundle to frontend container, updates `importmap.json` and `routes.registry.json`, and reloads Nginx.
+5. **Live Verification Probe**: Sends HTTP probe to `http://localhost/openmrs/spa/importmap.json` to confirm HTTP 200 OK.
 
 ### Publishing Form Schemas
 ```bash
