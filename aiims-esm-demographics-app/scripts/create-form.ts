@@ -122,10 +122,10 @@ function main() {
   console.log(`• UUID:       ${formUuid}`);
   console.log(`• PascalCase: ${pascal}`);
 
-  // Dynamic order calculation: max existing order + 1
-  const maxOrder = Math.max(...FORM_REGISTRY.map(e => e.order || 0), 0);
-  const nextOrder = maxOrder + 1;
-  console.log(`• Order:      ${nextOrder}`);
+  // All clinical intake forms belong to order: 1 in patient-chart-dashboard-slot
+  // to prevent interleaving with core OpenMRS links (vitals order: 2, medications order: 3)
+  const order = 1;
+  console.log(`• Order:      ${order}`);
 
   // Paths
   const featureDir = path.join(ROOT_DIR, 'src', key);
@@ -425,7 +425,7 @@ ${uuidMarker}`;
     title: '${name.replace(/^AIIMS Visit:\s*/, '')}',
     slot: 'aiims-${key}-dashboard-slot',
     icon: ${icon},
-    order: ${nextOrder},
+    order: ${order},
   },
   ${registryMarker}`;
     registryContent = registryContent.replace(registryMarker, newRegistryEntry);

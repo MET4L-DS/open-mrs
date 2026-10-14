@@ -533,7 +533,7 @@
       "name": "aiims-embryo-assessment-dashboard-link",
       "component": "aiimsEmbryoAssessmentDashboardLink",
       "slot": "patient-chart-dashboard-slot",
-      "order": 2,
+      "order": 1,
       "meta": {
         "slot": "aiims-embryo-assessment-dashboard-slot",
         "path": "aiims-embryo-assessment",
@@ -546,6 +546,26 @@
       "name": "aiims-embryo-assessment-dashboard",
       "component": "aiimsEmbryoAssessmentDashboard",
       "slot": "aiims-embryo-assessment-dashboard-slot",
+      "online": true,
+      "offline": true
+    },
+    {
+      "name": "aiims-fertilisation-details-dashboard-link",
+      "component": "aiimsFertilisationDetailsDashboardLink",
+      "slot": "patient-chart-dashboard-slot",
+      "order": 1,
+      "meta": {
+        "slot": "aiims-fertilisation-details-dashboard-slot",
+        "path": "aiims-fertilisation-details",
+        "title": "Fertilisation Details"
+      },
+      "online": true,
+      "offline": true
+    },
+    {
+      "name": "aiims-fertilisation-details-dashboard",
+      "component": "aiimsFertilisationDetailsDashboard",
+      "slot": "aiims-fertilisation-details-dashboard-slot",
       "online": true,
       "offline": true
     }

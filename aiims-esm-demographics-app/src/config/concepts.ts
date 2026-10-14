@@ -368,6 +368,15 @@ export const CONCEPTS = {
   numberEmbryosDay6: 'c0010001-0000-0000-0000-000000000258',
   gradeEmbryosDay6: 'c0010001-0000-0000-0000-000000000259',
   embryoAssessmentRemarks: 'c0010001-0000-0000-0000-000000000260',
+
+  // Fertilisation Details (Form 28)
+  numberOocytesFertilised: 'c0010001-0000-0000-0000-000000000261',
+  fertilisationRate: 'c0010001-0000-0000-0000-000000000262',
+  embryosCleavedDay2: 'c0010001-0000-0000-0000-000000000263',
+  cleavageRate: 'c0010001-0000-0000-0000-000000000264',
+  embryosCleavedDay3: 'c0010001-0000-0000-0000-000000000265',
+  embryosCleavedDay5: 'c0010001-0000-0000-0000-000000000266',
+  fertilisationDetailsRemarks: 'c0010001-0000-0000-0000-000000000267',
 };
 
 // Person Attribute Type UUID for Patient Telephone Number

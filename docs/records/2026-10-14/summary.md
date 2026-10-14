@@ -23,6 +23,18 @@
   - Added localized strings (`patientBmi: "BMI"`, `wifeBmi: "Wife's BMI"`) in `translations/en.json` (verified via `audit:i18n`).
   - Hot-deployed bundle `openmrs-esm-aiims-demographics-app-1.0.72` via `deploy:local`.
 
+### Form 28: Fertilisation Details
+- **Concept Modeling**: Registered 7 concepts in MariaDB (`c0010001-0000-0000-0000-000000000261` through `0267`), including 6 numeric concepts with full `concept_numeric` parameters (Oocytes Fertilised, Fertilisation Rate %, Embryos Cleaved Day 2, Cleavage Rate %, Embryos Cleaved Day 3, Embryos Cleaved Day 5) and clinical notes remarks.
+- **AMPATH Schema**: Created `forms/aiims_fertilisation_details.json` and published to OpenMRS backend (`37e59734-dac9-4332-ba27-f1053d189090`).
+- **Frontend Architecture**:
+  - Scaffolded feature module `src/fertilisation-details/` via `npm run create-form`.
+  - Implemented typed resource hook (`fertilisation-details.resource.ts`) extracting all 7 observation concepts.
+  - Implemented Carbon `ObservationCard` component (`fertilisation-details-card.component.tsx`) with 3 structured sections: Fertilisation & Insemination Outcome, Cleavage Stage Assessment, and Laboratory Remarks.
+  - Added full i18n localization keys in `translations/en.json` (verified via `audit:i18n` with 0 missing keys).
+  - Added unit test suite in `fertilisation-details.test.tsx` (all 3 tests passing).
+  - Verified via 9-stage deployment pipeline (`npm run deploy:local`) and E2E smoke test robot (`npm run test:e2e -- --form=aiims-fertilisation-details`). Hot-deployed bundle `openmrs-esm-aiims-demographics-app-1.0.74`.
+
+
 ---
 
 ## 3. Post-Mortem & Bug Resolutions
@@ -38,6 +50,11 @@
 - **Permanent Guardrail**: 
   1. Enhanced `scripts/validate_concepts.py` to query `allowDecimal` and fail immediately if any numeric concept lacks `concept_numeric`.
   2. Made `scripts/setup_aiims_concepts.py` self-healing on existing concepts via `IF NOT EXISTS (SELECT 1 FROM concept_numeric ...)`.
+
+### Bug 3: Interleaved Sidebar Navigation Links (Core OpenMRS Links Injected Between IVF Forms)
+- **Root Cause**: In `scripts/create-form.ts`, newly scaffolded forms computed `order = maxOrder + 1`, assigning `order: 2` to `embryo-assessment` and `order: 3` to `fertilisation-details`. In OpenMRS 3.x, `patient-chart-dashboard-slot` orders extensions numerically across *all* installed modules (core modules define Vitals at order 2 and Medications at order 3). Consequently, core links were interleaved directly between the AIIMS IVF forms.
+- **Fix**: Changed `order` to `1` for all AIIMS clinical intake forms in `src/config/form-registry.ts` and locked `order: 1` in `scripts/create-form.ts`.
+- **Permanent Guardrail**: Hardcoded `order: 1` in the CLI scaffolder and updated `src/routes.json` via `generate-routes`. All 28 AIIMS clinical forms now remain strictly grouped in contiguous clinical sequence.
 
 ---
 
@@ -79,10 +96,10 @@ Upgraded deployment pipeline to run 9 sequential quality gates with zero downtim
 
 | Metric | Target | Result | Status |
 |---|---|---|---|
-| Registered Clinical Forms | 27 | 27 Published & Active | ✓ 100% |
-| Unique Concept Definitions | 317 | 317 Active & Verified | ✓ 100% |
-| Numeric Concepts with `concept_numeric` | 85 | 85 Verified | ✓ 100% |
-| Unit Test Suite | 74 | 74 Passing (30 files) | ✓ 100% |
+| Registered Clinical Forms | 28 | 28 Published & Active | ✓ 100% |
+| Unique Concept Definitions | 324 | 324 Active & Verified | ✓ 100% |
+| Numeric Concepts with `concept_numeric` | 91 | 91 Verified | ✓ 100% |
+| Unit Test Suite | 77 | 77 Passing (31 files) | ✓ 100% |
 | i18n Translation Health | 100% | 0 Missing Keys (`audit:i18n`) | ✓ Clean |
 | TypeScript Compiler Errors | 0 | 0 Errors | ✓ Clean |
-| Active Frontend Bundle | — | `openmrs-esm-aiims-demographics-app-1.0.73` | ✓ Active |
+| Active Frontend Bundle | — | `openmrs-esm-aiims-demographics-app-1.0.74` | ✓ Active |

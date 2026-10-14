@@ -106,4 +106,8 @@ export const AIIMS_ADJUVANT_DRUG_FORM_NAME = 'AIIMS Visit: Adjuvant Drug';
 export const AIIMS_EMBRYO_ASSESSMENT_FORM_UUID = '37e59734-dac9-4332-ba27-f1053d189089';
 export const AIIMS_EMBRYO_ASSESSMENT_FORM_NAME = 'AIIMS Visit: Assessment of Fertilization, Embryo & Blastocyst';
 
+// Form UUID for AIIMS Visit: Fertilisation Details
+export const AIIMS_FERTILISATION_DETAILS_FORM_UUID = '37e59734-dac9-4332-ba27-f1053d189090';
+export const AIIMS_FERTILISATION_DETAILS_FORM_NAME = 'AIIMS Visit: Fertilisation Details';
+
 // @create-form:uuids-end

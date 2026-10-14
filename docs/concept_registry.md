@@ -201,6 +201,26 @@ To maintain agility and avoid blocking clinical deployment pending terminology l
 | `c0010001-0000-0000-0000-000000000245` | Growth hormone dose | Numeric | Finding | Local / Adjuvant Drug | IU | — | Active | Form 21: Growth hormone dose |
 | `c0010001-0000-0000-0000-000000000246` | Growth hormone duration | Numeric | Finding | Local / Adjuvant Drug | days | — | Active | Form 21: Growth hormone duration |
 | `c0010001-0000-0000-0000-000000000247` | Adjuvant Drug Remarks | Text | Misc | Local / Adjuvant Drug | — | — | Active | Form 21: Remarks & notes |
+| `c0010001-0000-0000-0000-000000000248` | Number of Embryos Day 1 (2PN) | Numeric | Finding | Local / Embryo Assessment | embryos | — | Active | Form 27: 2PN count |
+| `c0010001-0000-0000-0000-000000000249` | Grade of Embryos Day 1 (2PN) | Text | Finding | Local / Embryo Assessment | — | — | Active | Form 27: Day 1 grade |
+| `c0010001-0000-0000-0000-000000000250` | Number of Embryos Day 2 | Numeric | Finding | Local / Embryo Assessment | embryos | — | Active | Form 27: Day 2 count |
+| `c0010001-0000-0000-0000-000000000251` | Grade of Embryos Day 2 | Text | Finding | Local / Embryo Assessment | — | — | Active | Form 27: Day 2 grade |
+| `c0010001-0000-0000-0000-000000000252` | Number of Embryos Day 3 | Numeric | Finding | Local / Embryo Assessment | embryos | — | Active | Form 27: Day 3 count |
+| `c0010001-0000-0000-0000-000000000253` | Grade of Embryos Day 3 | Text | Finding | Local / Embryo Assessment | — | — | Active | Form 27: Day 3 grade |
+| `c0010001-0000-0000-0000-000000000254` | Number of Embryos Day 4 | Numeric | Finding | Local / Embryo Assessment | embryos | — | Active | Form 27: Day 4 count |
+| `c0010001-0000-0000-0000-000000000255` | Grade of Embryos Day 4 | Text | Finding | Local / Embryo Assessment | — | — | Active | Form 27: Day 4 grade |
+| `c0010001-0000-0000-0000-000000000256` | Number of Embryos Day 5 | Numeric | Finding | Local / Embryo Assessment | embryos | — | Active | Form 27: Day 5 count |
+| `c0010001-0000-0000-0000-000000000257` | Grade of Embryos Day 5 | Text | Finding | Local / Embryo Assessment | — | — | Active | Form 27: Day 5 grade |
+| `c0010001-0000-0000-0000-000000000258` | Number of Embryos Day 6 | Numeric | Finding | Local / Embryo Assessment | embryos | — | Active | Form 27: Day 6 count |
+| `c0010001-0000-0000-0000-000000000259` | Grade of Embryos Day 6 | Text | Finding | Local / Embryo Assessment | — | — | Active | Form 27: Day 6 grade |
+| `c0010001-0000-0000-0000-000000000260` | Embryo Assessment Remarks | Text | Misc | Local / Embryo Assessment | — | — | Active | Form 27: Remarks & notes |
+| `c0010001-0000-0000-0000-000000000261` | Number of Oocytes Fertilised | Numeric | Finding | Local / Fertilisation Details | oocytes | — | Active | Form 28: Count of fertilized oocytes |
+| `c0010001-0000-0000-0000-000000000262` | Fertilisation Rate | Numeric | Finding | Local / Fertilisation Details | % | — | Active | Form 28: Fertilisation rate % |
+| `c0010001-0000-0000-0000-000000000263` | Embryos Cleaved on Day 2 | Numeric | Finding | Local / Fertilisation Details | embryos | — | Active | Form 28: Day 2 cleaved embryos |
+| `c0010001-0000-0000-0000-000000000264` | Cleavage Rate | Numeric | Finding | Local / Fertilisation Details | % | — | Active | Form 28: Cleavage rate % |
+| `c0010001-0000-0000-0000-000000000265` | Embryos Cleaved on Day 3 | Numeric | Finding | Local / Fertilisation Details | embryos | — | Active | Form 28: Day 3 cleaved embryos |
+| `c0010001-0000-0000-0000-000000000266` | Number of Embryos Cleaved on Day 5 | Numeric | Finding | Local / Fertilisation Details | embryos | — | Active | Form 28: Day 5 cleaved embryos |
+| `c0010001-0000-0000-0000-000000000267` | Fertilisation Details Remarks | Text | Misc | Local / Fertilisation Details | — | — | Active | Form 28: Clinical notes & remarks |
 
 ---
 

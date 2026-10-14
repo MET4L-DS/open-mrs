@@ -958,6 +958,15 @@ full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000258", "Numb
 full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000259", "Grade of Embryos Day 6", datatype_id=3, class_id=7))
 full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000260", "Embryo Assessment Remarks", datatype_id=3, class_id=7))
 
+# Fertilisation Details Concepts (Form 28: 0261-0267)
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000261", "Number of Oocytes Fertilised", datatype_id=1, class_id=7, is_numeric=True, units="oocytes", allow_decimal=0, low_abs=0, hi_abs=100))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000262", "Fertilisation Rate", datatype_id=1, class_id=7, is_numeric=True, units="%", allow_decimal=1, low_abs=0, hi_abs=100))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000263", "Embryos Cleaved on Day 2", datatype_id=1, class_id=7, is_numeric=True, units="embryos", allow_decimal=0, low_abs=0, hi_abs=100))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000264", "Cleavage Rate", datatype_id=1, class_id=7, is_numeric=True, units="%", allow_decimal=1, low_abs=0, hi_abs=100))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000265", "Embryos Cleaved on Day 3", datatype_id=1, class_id=7, is_numeric=True, units="embryos", allow_decimal=0, low_abs=0, hi_abs=100))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000266", "Number of Embryos Cleaved on Day 5", datatype_id=1, class_id=7, is_numeric=True, units="embryos", allow_decimal=0, low_abs=0, hi_abs=100))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000267", "Fertilisation Details Remarks", datatype_id=3, class_id=7))
+
 # 3. Link Answers
 # Education Wife answers
 for u, _ in education_answers:
