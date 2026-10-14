@@ -160,17 +160,32 @@ Upgraded deployment pipeline to run 9 sequential quality gates with zero downtim
 - Added interactive form workspace testing (`--workspace` flag or automatically when `--form` is passed).
 - Clicks the primary action button ("Record" / "Update"), asserts that the form workspace opens without "There was an error with this form", and gracefully closes the workspace.
 
+### Form 32: Additional Procedures in Assisted Reproductive Technology
+- **Clinical CSV Specification**: [`csv/aiims_ivf_04 copy - add_procedure_art.csv`](file:///c:/Met4l.DSCode/Projects/open-mrs/csv/aiims_ivf_04%20copy%20-%20add_procedure_art.csv) (Adjuvant ART procedures).
+- **Concept Modeling**: Registered 3 question concepts (`c0010001-0000-0000-0000-000000000291` through `0293`) and 4 answer concepts (`c0010002-...1132` through `1135`):
+  - `0291`: Additional Procedures in Assisted Reproductive Technology (Coded checkbox: Platelet Rich Plasma (PRP), Endometrial Injury, G-CSF, Embryo Glue)
+  - `0292`: Date of Additional Procedures in Assisted Reproductive Technology (Date)
+  - `0293`: Additional Procedures in Assisted Reproductive Technology Remarks (Text)
+- **AMPATH Schema**: Authored `forms/aiims_add_procedure_art.json` with multi-select checkboxes, date of procedure, and clinical remarks textarea. Published to OpenMRS backend (`37e59734-dac9-4332-ba27-f1053d189094`).
+- **Frontend Architecture**:
+  - Scaffolded feature module `src/add-procedure-art/` with `order: 1` and `Activity` icon.
+  - Implemented typed resource hook (`add-procedure-art.resource.ts`) extracting multi-select observations via `getObsValues`.
+  - Implemented Carbon `ObservationCard` component (`add-procedure-art-card.component.tsx`) with 2 structured sections: Additional Procedures in ART and Clinical Notes & Remarks.
+  - Added full i18n localization keys in `translations/en.json` (verified via `audit:i18n` with 0 missing keys).
+  - Implemented unit test suite in `add-procedure-art.test.tsx` (3 tests passing).
+  - Verified via 9-stage deployment pipeline (`npm run deploy:local`) and E2E smoke test robot (`npm run test:e2e -- --form=aiims-add-procedure-art`). Hot-deployed bundle `openmrs-esm-aiims-demographics-app-1.0.82`.
+
 ---
 
 ## 5. Quality & Health Metrics
 
 | Metric | Target | Result | Status |
 |---|---|---|---|
-| Registered Clinical Forms | 31 | 31 Published & Active | ✓ 100% |
-| Unique Concept Definitions | 347 | 347 Active & Verified | ✓ 100% |
+| Registered Clinical Forms | 32 | 32 Published & Active | ✓ 100% |
+| Unique Concept Definitions | 350 | 350 Active & Verified | ✓ 100% |
 | Numeric Concepts with `concept_numeric` | 95 | 95 Verified | ✓ 100% |
-| Unit Test Suite | 89 | 89 Passing (34 files) | ✓ 100% |
+| Unit Test Suite | 92 | 92 Passing (35 files) | ✓ 100% |
 | i18n Translation Health | 100% | 0 Missing Keys (`audit:i18n`) | ✓ Clean |
 | TypeScript Compiler Errors | 0 | 0 Errors | ✓ Clean |
-| Active Frontend Bundle | — | `openmrs-esm-aiims-demographics-app-1.0.81` | ✓ Active |
+| Active Frontend Bundle | — | `openmrs-esm-aiims-demographics-app-1.0.82` | ✓ Active |
 

@@ -255,6 +255,14 @@ FORMS_TO_PUBLISH = [
         "uuid": "37e59734-dac9-4332-ba27-f1053d189093",
         "encounter_type": "dd528487-82a5-4082-9c72-ed246bd49591",  # Consultation
     },
+    {
+        "name": "AIIMS Visit: Additional Procedures in Assisted Reproductive Technology",
+        "version": "1.0",
+        "description": "AIIMS Reproductive Medicine & IVF Additional Procedures in ART Sheet",
+        "schema_path": "forms/aiims_add_procedure_art.json",
+        "uuid": "37e59734-dac9-4332-ba27-f1053d189094",
+        "encounter_type": "dd528487-82a5-4082-9c72-ed246bd49591",  # Consultation
+    },
 ]
 
 def get_db_container():

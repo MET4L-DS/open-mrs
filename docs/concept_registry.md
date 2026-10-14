@@ -233,6 +233,20 @@ To maintain agility and avoid blocking clinical deployment pending terminology l
 | `c0010001-0000-0000-0000-000000000277` | Number of Day 5 Embryos Vitrified | Numeric | Finding | Local / Embryos Frozen | embryos | — | Active | Form 30: Total Day 5 blastocysts vitrified |
 | `c0010001-0000-0000-0000-000000000278` | Grade of Day 5 Embryos Vitrified | Text | Finding | Local / Embryos Frozen | — | — | Active | Form 30: Gardner grade of vitrified blastocysts |
 | `c0010001-0000-0000-0000-000000000279` | Embryos Frozen Remarks | Text | Misc | Local / Embryos Frozen | — | — | Active | Form 30: Cryopreservation notes & remarks |
+| `c0010001-0000-0000-0000-000000000280` | Fresh Embryo Transfer Performed | Coded | Finding | Local / Fresh ET | — | — | Active | Form 31: Fresh embryo transfer performed (Yes/No) |
+| `c0010001-0000-0000-0000-000000000281` | Reason Fresh Embryo Transfer Not Performed | Coded | Finding | Local / Fresh ET | — | — | Active | Form 31: Cancellation reason |
+| `c0010001-0000-0000-0000-000000000282` | Other Reason Fresh Embryo Transfer Not Performed | Text | Finding | Local / Fresh ET | — | — | Active | Form 31: Free-text other cancellation reason |
+| `c0010001-0000-0000-0000-000000000283` | Number of Fresh Embryos Transferred | Numeric | Finding | Local / Fresh ET | embryos | — | Active | Form 31: Total embryos transferred (0–10) |
+| `c0010001-0000-0000-0000-000000000284` | Grade of Fresh Embryos Transferred | Text | Finding | Local / Fresh ET | — | — | Active | Form 31: Transferred embryo grades |
+| `c0010001-0000-0000-0000-000000000285` | Day of Fresh Embryo Transfer | Coded | Finding | Local / Fresh ET | — | — | Active | Form 31: Cleavage or blastocyst transfer day |
+| `c0010001-0000-0000-0000-000000000286` | Fresh Embryo Transfer Endometrial Thickness | Numeric | Finding | Local / Fresh ET | mm | — | Active | Form 31: Endometrial thickness on ET day |
+| `c0010001-0000-0000-0000-000000000287` | Fresh Embryo Transfer Difficulty | Coded | Finding | Local / Fresh ET | — | — | Active | Form 31: Transfer difficulty (Easy/Difficult) |
+| `c0010001-0000-0000-0000-000000000288` | Blood on Tip of Catheter | Coded | Finding | Local / Fresh ET | — | — | Active | Form 31: Catheter tip blood check (Yes/No) |
+| `c0010001-0000-0000-0000-000000000289` | Fresh Embryo Transfer Date | Date | Observable entity | Local / Fresh ET | — | — | Active | Form 31: Date of embryo transfer |
+| `c0010001-0000-0000-0000-000000000290` | Fresh Embryo Transfer Remarks | Text | Misc | Local / Fresh ET | — | — | Active | Form 31: Procedure notes & remarks |
+| `c0010001-0000-0000-0000-000000000291` | Additional Procedures in Assisted Reproductive Technology | Coded | Finding | Local / Additional ART | — | — | Active | Form 32: Adjuvant procedures in ART (PRP, Endo Injury, G-CSF, Embryo Glue) |
+| `c0010001-0000-0000-0000-000000000292` | Date of Additional Procedures in Assisted Reproductive Technology | Date | Observable entity | Local / Additional ART | — | — | Active | Form 32: Procedure date |
+| `c0010001-0000-0000-0000-000000000293` | Additional Procedures in Assisted Reproductive Technology Remarks | Text | Misc | Local / Additional ART | — | — | Active | Form 32: Clinical notes & procedural remarks |
 
 ---
 
@@ -479,6 +493,14 @@ To maintain agility and avoid blocking clinical deployment pending terminology l
 | `c0010002-0000-0000-0000-000000001104` | 5BC | Gardner scale | — | — | Active |
 | `c0010002-0000-0000-0000-000000001105` | 6AA | Gardner scale | — | — | Active |
 | `c0010002-0000-0000-0000-000000001106` | 6CC | Gardner scale | — | — | Active |
+
+### 2.22 Additional Procedures in ART Answer Options (`c0010002-...`)
+| Placeholder UUID | Display Name | Target Standard | Target Code | ATHENA Verified | Status |
+|:---|:---|:---|:---:|:---:|:---:|
+| `c0010002-0000-0000-0000-000000001132` | Platelet Rich Plasma (PRP) | SNOMED CT | `718105001` | Yes | Active |
+| `c0010002-0000-0000-0000-000000001133` | Endometrial Injury (Endo Injury) | Local / ART | — | — | Active |
+| `c0010002-0000-0000-0000-000000001134` | Granulocyte Colony Stimulating Factor (G-CSF) | SNOMED CT | `386927008` | Yes | Active |
+| `c0010002-0000-0000-0000-000000001135` | Embryo Glue | Local / ART | — | — | Active |
 
 ---
 

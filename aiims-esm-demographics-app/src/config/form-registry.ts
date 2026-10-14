@@ -80,6 +80,8 @@ import {
   AIIMS_EMBRYOS_FROZEN_FORM_NAME,
     AIIMS_FRESH_ET_DETAILS_FORM_UUID,
   AIIMS_FRESH_ET_DETAILS_FORM_NAME,
+    AIIMS_ADD_PROCEDURE_ART_FORM_UUID,
+  AIIMS_ADD_PROCEDURE_ART_FORM_NAME,
   // @create-form:imports-end
 } from './form-uuids';
 
@@ -426,6 +428,17 @@ export const FORM_REGISTRY: FormRegistryEntry[] = [
     title: 'Fresh Embryo Transfer Details',
     slot: 'aiims-fresh-et-details-dashboard-slot',
     icon: EventSchedule,
+    order: 1,
+  },
+    {
+    key: 'add-procedure-art',
+    uuid: AIIMS_ADD_PROCEDURE_ART_FORM_UUID,
+    name: AIIMS_ADD_PROCEDURE_ART_FORM_NAME,
+    path: 'aiims-add-procedure-art',
+    titleKey: 'aiimsAddProcedureArtTitle',
+    title: 'Additional Procedures in ART',
+    slot: 'aiims-add-procedure-art-dashboard-slot',
+    icon: Activity,
     order: 1,
   },
   // @create-form:registry-end

@@ -628,6 +628,26 @@
       "slot": "aiims-fresh-et-details-dashboard-slot",
       "online": true,
       "offline": true
+    },
+    {
+      "name": "aiims-add-procedure-art-dashboard-link",
+      "component": "aiimsAddProcedureArtDashboardLink",
+      "slot": "patient-chart-dashboard-slot",
+      "order": 1,
+      "meta": {
+        "slot": "aiims-add-procedure-art-dashboard-slot",
+        "path": "aiims-add-procedure-art",
+        "title": "Additional Procedures in ART"
+      },
+      "online": true,
+      "offline": true
+    },
+    {
+      "name": "aiims-add-procedure-art-dashboard",
+      "component": "aiimsAddProcedureArtDashboard",
+      "slot": "aiims-add-procedure-art-dashboard-slot",
+      "online": true,
+      "offline": true
     }
   ]
 }

@@ -595,6 +595,13 @@ fresh_et_day_answers = [
     ("c0010002-0000-0000-0000-000000001131", "Day 6"),
 ]
 
+additional_art_procedure_answers = [
+    ("c0010002-0000-0000-0000-000000001132", "Platelet Rich Plasma (PRP)"),
+    ("c0010002-0000-0000-0000-000000001133", "Endometrial Injury (Endo Injury)"),
+    ("c0010002-0000-0000-0000-000000001134", "Granulocyte Colony Stimulating Factor (G-CSF)"),
+    ("c0010002-0000-0000-0000-000000001135", "Embryo Glue"),
+]
+
 
 
 
@@ -680,6 +687,9 @@ for u, name in fresh_et_cancellation_reason_answers:
     full_script.append(add_concept_sql(u, name, datatype_id=4, class_id=11))
 
 for u, name in fresh_et_day_answers:
+    full_script.append(add_concept_sql(u, name, datatype_id=4, class_id=11))
+
+for u, name in additional_art_procedure_answers:
     full_script.append(add_concept_sql(u, name, datatype_id=4, class_id=11))
 
 
@@ -1111,6 +1121,11 @@ full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000287", "Fres
 full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000288", "Blood on Tip of Catheter", datatype_id=2, class_id=7))
 full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000289", "Fresh Embryo Transfer Date", datatype_id=6, class_id=7))
 full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000290", "Fresh Embryo Transfer Remarks", datatype_id=3, class_id=7))
+
+# Additional Procedures in ART Concepts (Form 32: 0291-0293)
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000291", "Additional Procedures in Assisted Reproductive Technology", datatype_id=2, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000292", "Date of Additional Procedures in Assisted Reproductive Technology", datatype_id=6, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000293", "Additional Procedures in Assisted Reproductive Technology Remarks", datatype_id=3, class_id=7))
 
 
 # 3. Link Answers
@@ -1739,6 +1754,10 @@ for ans_uuid in [
     "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",  # No
 ]:
     full_script.append(add_answer_sql("c0010001-0000-0000-0000-000000000288", ans_uuid))
+
+# Additional Procedures in ART (0291)
+for ans_uuid, _ in additional_art_procedure_answers:
+    full_script.append(add_answer_sql("c0010001-0000-0000-0000-000000000291", ans_uuid))
 
 
 

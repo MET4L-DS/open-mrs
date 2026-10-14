@@ -122,4 +122,8 @@ export const AIIMS_EMBRYOS_FROZEN_FORM_NAME = 'AIIMS Visit: Embryos Frozen';
 export const AIIMS_FRESH_ET_DETAILS_FORM_UUID = '37e59734-dac9-4332-ba27-f1053d189093';
 export const AIIMS_FRESH_ET_DETAILS_FORM_NAME = 'Fresh Embryo Transfer Details';
 
+// Form UUID for AIIMS Visit: Additional Procedures in Assisted Reproductive Technology
+export const AIIMS_ADD_PROCEDURE_ART_FORM_UUID = '37e59734-dac9-4332-ba27-f1053d189094';
+export const AIIMS_ADD_PROCEDURE_ART_FORM_NAME = 'AIIMS Visit: Additional Procedures in Assisted Reproductive Technology';
+
 // @create-form:uuids-end

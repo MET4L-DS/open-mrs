@@ -593,4 +593,18 @@
   "bloodOnTipOfCatheter": "Blood on Tip of Catheter",
   "freshEtRemarks": "Fresh Embryo Transfer Remarks",
   "mm": "mm"
+,
+  "aiimsAddProcedureArtTitle": "Additional Procedures in ART",
+  "addProcedureArtDetails": "Additional Procedures in ART Details",
+  "loadingAddProcedureArt": "Loading Additional Procedures in ART...",
+  "noRecordedAddProcedureArtEncounter": "No Additional Procedures in ART encounter recorded yet",
+  "noAddProcedureArtBody": "Additional procedures in ART have not been recorded for this patient yet.",
+  "noAddProcedureArtRecorded": "No Additional Procedures in ART recorded",
+  "recordAddProcedureArt": "Record Additional Procedures in ART",
+  "updateAddProcedureArt": "Update Additional Procedures in ART",
+  "additionalProceduresArtCardTitle": "Additional Procedures in ART",
+  "additionalArtRemarksCardTitle": "Clinical Notes & Remarks",
+  "additionalProceduresArt": "Additional Procedures in ART",
+  "dateOfAdditionalArtProcedure": "Date of Procedure",
+  "additionalArtRemarks": "Remarks / Notes"
 }

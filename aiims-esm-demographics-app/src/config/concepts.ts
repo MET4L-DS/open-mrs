@@ -406,6 +406,11 @@ export const CONCEPTS = {
   bloodOnTipOfCatheter: 'c0010001-0000-0000-0000-000000000288',
   freshEtDate: 'c0010001-0000-0000-0000-000000000289',
   freshEtRemarks: 'c0010001-0000-0000-0000-000000000290',
+
+  // Additional Procedures in ART (Form 32)
+  additionalProceduresArt: 'c0010001-0000-0000-0000-000000000291',
+  dateOfAdditionalArtProcedure: 'c0010001-0000-0000-0000-000000000292',
+  additionalArtRemarks: 'c0010001-0000-0000-0000-000000000293',
 };
 
 // Person Attribute Type UUID for Patient Telephone Number
