@@ -9,6 +9,7 @@ interface SmokeTestOptions {
   formKey?: string;
   headed: boolean;
   timeoutMs: number;
+  testWorkspace: boolean;
 }
 
 const DEFAULT_OPTIONS: SmokeTestOptions = {
@@ -16,6 +17,7 @@ const DEFAULT_OPTIONS: SmokeTestOptions = {
   patientUuid: process.env.TEST_PATIENT_UUID || '1d678f66-801a-4a52-b47f-29854389c09f',
   headed: false,
   timeoutMs: 30000,
+  testWorkspace: false,
 };
 
 function parseArgs(): SmokeTestOptions {
@@ -25,6 +27,8 @@ function parseArgs(): SmokeTestOptions {
   for (const arg of args) {
     if (arg === '--headed') {
       options.headed = true;
+    } else if (arg === '--workspace' || arg === '--test-workspace') {
+      options.testWorkspace = true;
     } else if (arg.startsWith('--form=')) {
       options.formKey = arg.split('=')[1];
     } else if (arg === '-f' && args[args.indexOf(arg) + 1]) {
@@ -219,6 +223,27 @@ async function runSmokeTests() {
 
       if (!hasHeading && !hasMainContent) {
         throw new Error('Neither dashboard headings nor main extension container could be found.');
+      }
+
+      // 4. Optionally test form entry workspace launch (catches 404/schema load failures)
+      if (options.testWorkspace || options.formKey) {
+        const actionButton = page.locator('button:has-text("Record"), button:has-text("Update")').first();
+        if (await actionButton.isVisible()) {
+          await actionButton.click();
+          await page.waitForTimeout(1500);
+
+          const panelText = await page.innerText('body');
+          if (panelText.includes('There was an error with this form')) {
+            throw new Error('Form entry workspace failed to load form schema (404 / Invalid Schema error).');
+          }
+
+          // Close workspace panel so subsequent tests start from a clean state
+          const discardBtn = page.locator('button:has-text("Discard"), button:has-text("Close this panel"), button[aria-label="Close"]').first();
+          if (await discardBtn.isVisible()) {
+            await discardBtn.click().catch(() => {});
+            await page.waitForTimeout(500);
+          }
+        }
       }
 
       const elapsed = ((Date.now() - startTime) / 1000).toFixed(2);

@@ -22,6 +22,7 @@
     "test:watch": "vitest watch",
     "test:e2e": "tsx e2e/smoke-test.ts",
     "validate:concepts": "python ../scripts/validate_concepts.py",
+    "validate:forms": "python ../scripts/validate_forms.py",
     "audit:i18n": "tsx scripts/audit-i18n.ts",
     "coverage": "vitest run --coverage --passWithNoTests",
     "typescript": "tsc",

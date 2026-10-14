@@ -213,6 +213,14 @@ FORMS_TO_PUBLISH = [
         "uuid": "80930653-7e80-4bfd-9e29-ec37c334d899",
         "encounter_type": "dd528487-82a5-4082-9c72-ed246bd49591",  # Consultation
     },
+    {
+        "name": "AIIMS Visit: Assessment of Fertilization, Embryo & Blastocyst",
+        "version": "1.0",
+        "description": "AIIMS Reproductive Medicine & IVF Assessment of Fertilization, Embryo & Blastocyst Sheet",
+        "schema_path": "forms/aiims_embryo_assessment.json",
+        "uuid": "37e59734-dac9-4332-ba27-f1053d189089",
+        "encounter_type": "dd528487-82a5-4082-9c72-ed246bd49591",  # Consultation
+    },
 ]
 
 def get_db_container():
@@ -234,7 +242,9 @@ def run_sql(sql_commands):
         shell=True,
         input=sql_commands,
         capture_output=True,
-        text=True
+        text=True,
+        encoding="utf-8",
+        errors="replace"
     )
     if proc.returncode != 0:
         print("SQL Error:", proc.stderr)

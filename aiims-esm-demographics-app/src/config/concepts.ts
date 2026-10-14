@@ -352,6 +352,21 @@ export const CONCEPTS = {
   growthHormoneDose: 'c0010001-0000-0000-0000-000000000245',
   growthHormoneDuration: 'c0010001-0000-0000-0000-000000000246',
   adjuvantDrugRemarks: 'c0010001-0000-0000-0000-000000000247',
+
+  // Assessment of Fertilization / Embryo / Blastocyst
+  numberEmbryosDay1: 'c0010001-0000-0000-0000-000000000248',
+  gradeEmbryosDay1: 'c0010001-0000-0000-0000-000000000249',
+  numberEmbryosDay2: 'c0010001-0000-0000-0000-000000000250',
+  gradeEmbryosDay2: 'c0010001-0000-0000-0000-000000000251',
+  numberEmbryosDay3: 'c0010001-0000-0000-0000-000000000252',
+  gradeEmbryosDay3: 'c0010001-0000-0000-0000-000000000253',
+  numberEmbryosDay4: 'c0010001-0000-0000-0000-000000000254',
+  gradeEmbryosDay4: 'c0010001-0000-0000-0000-000000000255',
+  numberEmbryosDay5: 'c0010001-0000-0000-0000-000000000256',
+  gradeEmbryosDay5: 'c0010001-0000-0000-0000-000000000257',
+  numberEmbryosDay6: 'c0010001-0000-0000-0000-000000000258',
+  gradeEmbryosDay6: 'c0010001-0000-0000-0000-000000000259',
+  embryoAssessmentRemarks: 'c0010001-0000-0000-0000-000000000260',
 };
 
 // Person Attribute Type UUID for Patient Telephone Number

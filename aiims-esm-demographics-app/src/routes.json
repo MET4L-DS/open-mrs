@@ -528,6 +528,26 @@
       "slot": "aiims-sperm-quality-assessment-dashboard-slot",
       "online": true,
       "offline": true
+    },
+    {
+      "name": "aiims-embryo-assessment-dashboard-link",
+      "component": "aiimsEmbryoAssessmentDashboardLink",
+      "slot": "patient-chart-dashboard-slot",
+      "order": 2,
+      "meta": {
+        "slot": "aiims-embryo-assessment-dashboard-slot",
+        "path": "aiims-embryo-assessment",
+        "title": "Assessment of Fertilization, Embryo & Blastocyst"
+      },
+      "online": true,
+      "offline": true
+    },
+    {
+      "name": "aiims-embryo-assessment-dashboard",
+      "component": "aiimsEmbryoAssessmentDashboard",
+      "slot": "aiims-embryo-assessment-dashboard-slot",
+      "online": true,
+      "offline": true
     }
   ]
 }

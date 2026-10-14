@@ -1,0 +1,172 @@
+{
+  "name": "AIIMS Visit: Assessment of Fertilization, Embryo & Blastocyst",
+  "description": "AIIMS Department of Reproductive Medicine & IVF - Assessment of Fertilization, Embryo & Blastocyst Sheet",
+  "version": "1.0",
+  "published": true,
+  "retired": false,
+  "encounter": "Consultation",
+  "processor": "EncounterFormProcessor",
+  "referencedForms": [],
+  "pages": [
+    {
+      "label": "Embryo Assessment",
+      "sections": [
+        {
+          "label": "Fertilization & Cleavage Stage (Days 1-3)",
+          "isExpanded": true,
+          "questions": [
+            {
+              "label": "Number of Embryos Day 1 (2PN)",
+              "type": "obs",
+              "id": "number_embryos_day1",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "number",
+                "concept": "c0010001-0000-0000-0000-000000000248",
+                "min": 0
+              }
+            },
+            {
+              "label": "Grade of Embryos Day 1 (2PN)",
+              "type": "obs",
+              "id": "grade_embryos_day1",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "text",
+                "concept": "c0010001-0000-0000-0000-000000000249"
+              }
+            },
+            {
+              "label": "Number of Embryos Day 2",
+              "type": "obs",
+              "id": "number_embryos_day2",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "number",
+                "concept": "c0010001-0000-0000-0000-000000000250",
+                "min": 0
+              }
+            },
+            {
+              "label": "Grade of Embryos Day 2",
+              "type": "obs",
+              "id": "grade_embryos_day2",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "text",
+                "concept": "c0010001-0000-0000-0000-000000000251"
+              }
+            },
+            {
+              "label": "Number of Embryos Day 3",
+              "type": "obs",
+              "id": "number_embryos_day3",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "number",
+                "concept": "c0010001-0000-0000-0000-000000000252",
+                "min": 0
+              }
+            },
+            {
+              "label": "Grade of Embryos Day 3",
+              "type": "obs",
+              "id": "grade_embryos_day3",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "text",
+                "concept": "c0010001-0000-0000-0000-000000000253"
+              }
+            }
+          ]
+        },
+        {
+          "label": "Blastocyst Progression (Days 4-6)",
+          "isExpanded": true,
+          "questions": [
+            {
+              "label": "Number of Embryos Day 4",
+              "type": "obs",
+              "id": "number_embryos_day4",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "number",
+                "concept": "c0010001-0000-0000-0000-000000000254",
+                "min": 0
+              }
+            },
+            {
+              "label": "Grade of Embryos Day 4",
+              "type": "obs",
+              "id": "grade_embryos_day4",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "text",
+                "concept": "c0010001-0000-0000-0000-000000000255"
+              }
+            },
+            {
+              "label": "Number of Embryos Day 5",
+              "type": "obs",
+              "id": "number_embryos_day5",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "number",
+                "concept": "c0010001-0000-0000-0000-000000000256",
+                "min": 0
+              }
+            },
+            {
+              "label": "Grade of Embryos Day 5",
+              "type": "obs",
+              "id": "grade_embryos_day5",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "text",
+                "concept": "c0010001-0000-0000-0000-000000000257"
+              }
+            },
+            {
+              "label": "Number of Embryos Day 6",
+              "type": "obs",
+              "id": "number_embryos_day6",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "number",
+                "concept": "c0010001-0000-0000-0000-000000000258",
+                "min": 0
+              }
+            },
+            {
+              "label": "Grade of Embryos Day 6",
+              "type": "obs",
+              "id": "grade_embryos_day6",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "text",
+                "concept": "c0010001-0000-0000-0000-000000000259"
+              }
+            }
+          ]
+        },
+        {
+          "label": "Laboratory Notes & Remarks",
+          "isExpanded": true,
+          "questions": [
+            {
+              "label": "Remarks",
+              "type": "obs",
+              "id": "embryo_assessment_remarks",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "textarea",
+                "concept": "c0010001-0000-0000-0000-000000000260",
+                "rows": 4
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

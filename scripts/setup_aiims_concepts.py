@@ -56,6 +56,7 @@ def add_concept_sql(c_uuid, name, datatype_id, class_id=7, is_numeric=False, uni
         {"INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@new_id, " + (f"'{units}'" if units else "NULL") + f", {allow_decimal}, " + (str(low_abs) if low_abs is not None else "NULL") + f", " + (str(hi_abs) if hi_abs is not None else "NULL") + ");" if is_numeric else ""}
     ELSE
         SET @new_id = @existing_id;
+        {"IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, " + (f"'{units}'" if units else "NULL") + f", {allow_decimal}, " + (str(low_abs) if low_abs is not None else "NULL") + f", " + (str(hi_abs) if hi_abs is not None else "NULL") + "); END IF;" if is_numeric else ""}
     END IF;
     """
     return sql
@@ -939,6 +940,21 @@ full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000244", "Grow
 full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000245", "Growth hormone dose", datatype_id=1, class_id=7, is_numeric=True, units="IU", allow_decimal=2, low_abs=0, hi_abs=100))
 full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000246", "Growth hormone duration", datatype_id=1, class_id=7, is_numeric=True, units="days", allow_decimal=0, low_abs=0, hi_abs=365))
 full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000247", "Adjuvant Drug Remarks", datatype_id=3, class_id=7))
+
+# Assessment of Fertilization, Embryo & Blastocyst Concepts (Form 27: 0248-0260)
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000248", "Number of Embryos Day 1 (2PN)", datatype_id=1, class_id=7, is_numeric=True, allow_decimal=0, low_abs=0, hi_abs=100))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000249", "Grade of Embryos Day 1 (2PN)", datatype_id=3, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000250", "Number of Embryos Day 2", datatype_id=1, class_id=7, is_numeric=True, allow_decimal=0, low_abs=0, hi_abs=100))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000251", "Grade of Embryos Day 2", datatype_id=3, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000252", "Number of Embryos Day 3", datatype_id=1, class_id=7, is_numeric=True, allow_decimal=0, low_abs=0, hi_abs=100))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000253", "Grade of Embryos Day 3", datatype_id=3, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000254", "Number of Embryos Day 4", datatype_id=1, class_id=7, is_numeric=True, allow_decimal=0, low_abs=0, hi_abs=100))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000255", "Grade of Embryos Day 4", datatype_id=3, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000256", "Number of Embryos Day 5", datatype_id=1, class_id=7, is_numeric=True, allow_decimal=0, low_abs=0, hi_abs=100))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000257", "Grade of Embryos Day 5", datatype_id=3, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000258", "Number of Embryos Day 6", datatype_id=1, class_id=7, is_numeric=True, allow_decimal=0, low_abs=0, hi_abs=100))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000259", "Grade of Embryos Day 6", datatype_id=3, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000260", "Embryo Assessment Remarks", datatype_id=3, class_id=7))
 
 # 3. Link Answers
 # Education Wife answers

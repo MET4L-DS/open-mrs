@@ -78,7 +78,7 @@ def validate_single_concept(
     base_url: str, auth_header: str, uuid_val: str, var_names: List[str]
 ) -> Dict[str, Any]:
     """Queries OpenMRS REST API for concept metadata."""
-    url = f"{base_url}/ws/rest/v1/concept/{uuid_val}?v=custom:(uuid,display,datatype:(name),conceptClass:(name),retired)"
+    url = f"{base_url}/ws/rest/v1/concept/{uuid_val}?v=custom:(uuid,display,datatype:(name),conceptClass:(name),retired,allowDecimal)"
     req = urllib.request.Request(url, headers={"Authorization": auth_header})
 
     result: Dict[str, Any] = {
@@ -98,11 +98,18 @@ def validate_single_concept(
             result["status_code"] = res.getcode()
             if res.getcode() == 200:
                 data = json.loads(res.read().decode("utf-8"))
-                result["valid"] = True
                 result["display"] = data.get("display")
                 result["datatype"] = (data.get("datatype") or {}).get("name")
                 result["concept_class"] = (data.get("conceptClass") or {}).get("name")
                 result["retired"] = bool(data.get("retired"))
+
+                # In OpenMRS, Numeric concepts MUST have a corresponding concept_numeric row.
+                # If concept_numeric is missing, allowDecimal is None and ObsValidator throws NPE on save.
+                if result["datatype"] == "Numeric" and data.get("allowDecimal") is None:
+                    result["valid"] = False
+                    result["error"] = "Numeric concept is missing concept_numeric record in DB (will cause HTTP 500 NPE on save)"
+                else:
+                    result["valid"] = True
     except urllib.error.HTTPError as e:
         result["status_code"] = e.code
         result["error"] = f"HTTP {e.code}"

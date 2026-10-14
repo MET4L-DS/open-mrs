@@ -137,8 +137,11 @@ npm run test:e2e -- --form=aiims-adjuvant-drug
 # Run E2E smoke test with visible browser window
 npm run test:e2e -- --headed
 
-# Concept dictionary validation (verifies all 303 concept UUIDs against OpenMRS REST API)
+# Concept dictionary validation (verifies all 316 concept UUIDs and concept_numeric metadata)
 npm run validate:concepts
+
+# Clinical form validation (verifies all 27 form schemas exist on backend and in forms/)
+npm run validate:forms
 
 # Translation completeness check (detects missing keys & empty values via i18next-parser)
 npm run audit:i18n
@@ -146,7 +149,7 @@ npm run audit:i18n
 # Build production bundle (Rspack)
 npm run build
 
-# One-Click Deploy & Verify Pipeline (runs docker check, tsc, vitest, build, deploy, & HTTP probe)
+# One-Click Deploy & Verify Pipeline (docker check, validate:forms, tsc, vitest, build, deploy, & HTTP probe)
 npm run deploy:local
 
 # Fast deploy (skipping unit tests for rapid CSS/styling iterations)
@@ -163,15 +166,70 @@ python scripts/deploy_demographics.py
 ```
 *What the pipeline script does:*
 1. **Docker Pre-flight**: Verifies `frontend`, `backend`, `gateway`, and `db` containers are active and healthy.
-2. **Quality Gates**: Runs `npm run typescript` and `npm run test` (Vitest), aborting if errors are detected.
-3. **Production Build**: Triggers `generate-routes` (53 Single-SPA extensions into `src/routes.json`) and compiles via Rspack.
-4. **Hot-Deployment**: Increments version (e.g. `1.0.x`), transfers tar bundle to frontend container, updates `importmap.json` and `routes.registry.json`, and reloads Nginx.
-5. **Live Verification Probe**: Sends HTTP probe to `http://localhost/openmrs/spa/importmap.json` to confirm HTTP 200 OK.
+2. **Quality Gate (Form Schemas)**: Runs `npm run validate:forms` ensuring every registered form has an active schema published on the backend.
+3. **Quality Gate (Type Check)**: Runs `npm run typescript` (tsc), failing on any compilation error.
+4. **Quality Gate (Unit Tests)**: Runs `npm run test` (Vitest), aborting if regressions occur.
+5. **Production Build**: Triggers `generate-routes` (55 Single-SPA extensions into `src/routes.json`) and compiles via Rspack.
+6. **Hot-Deployment**: Increments version (e.g. `1.0.x`), transfers tar bundle to frontend container, updates `importmap.json` and `routes.registry.json`, and reloads Nginx.
+7. **Live Verification Probe**: Sends HTTP probe to `http://localhost/openmrs/spa/importmap.json` to confirm HTTP 200 OK.
 
-### Publishing Form Schemas
-```bash
-python scripts/publish_aiims_form.py
-```
+---
+
+### Standard End-to-End Workflow for Adding a New Clinical Form
+
+Every clinical form in the AIIMS OpenMRS 3.x distribution consists of **two distinct subsystems**:
+1. **The AMPATH Form Schema** (backend JSON schema in `forms/`, registered in `openmrs.form` and `clob_datatype_storage`, loaded by `openmrs-esm-form-engine-app` when clicking "Record" / "Update").
+2. **The Microfrontend Summary Dashboard** (frontend React card in `src/<form-key>/`, Single-SPA dashboard extension in `src/routes.json`, reading encounters/obs via `useFormEncounter`).
+
+Follow this 6-stage lifecycle to add new clinical forms without errors:
+
+#### Stage 1: Concept Dictionary Modeling & MariaDB Registration
+1. Define concepts and answers in `scripts/setup_aiims_concepts.py`.
+2. **CRITICAL OpenMRS Rule**: Every concept with `datatype_id = 1` (`Numeric`) **MUST** have a corresponding entry in `concept_numeric` (`allow_decimal`, `low_absolute`, `hi_absolute`, `units`). If omitted, `ObsValidator` throws `NullPointerException` (HTTP 500) upon saving observations.
+3. Run `python scripts/setup_aiims_concepts.py` to sync MariaDB and regenerate `scripts/register_aiims_concepts.sql`.
+4. Add concept UUIDs to `src/config/concepts.ts`.
+5. Run `npm run validate:concepts` to verify all UUIDs and `concept_numeric` metadata against the backend.
+
+#### Stage 2: AMPATH Form Schema Creation (`forms/`)
+1. Create `forms/aiims_<form_key>.json` with clinical sections, pages, and questions mapped to concept UUIDs.
+2. Ensure rendering types match datatypes (`number`, `text`, `textarea`, `radio`, `select`).
+3. Use standard ASCII hyphens `-` for section and question labels (avoid Unicode dashes `–` which break on Windows cp1252 SQL pipes).
+
+#### Stage 3: Backend Form Publishing (`publish_aiims_form.py`)
+1. Register the new form in `FORMS_TO_PUBLISH` in `scripts/publish_aiims_form.py` with its schema path and target UUID.
+2. Run `python scripts/publish_aiims_form.py`.
+3. Run `npm run validate:forms` to confirm `GET /openmrs/ws/rest/v1/o3/forms/<uuid>` returns HTTP 200 with valid pages.
+
+#### Stage 4: Frontend Microfrontend Scaffolding (`create-form`)
+1. Run scaffolding CLI:
+   ```bash
+   npm run create-form -- <form-key> "<Form Display Name>" --icon=<CarbonIconName>
+   ```
+2. The CLI automatically:
+   - Registers form UUID in `src/config/form-uuids.ts`.
+   - Appends entry to `FORM_REGISTRY` in `src/config/form-registry.ts`.
+   - Regenerates `src/routes.json` and `src/generated-form-extensions.ts`.
+   - Scaffolds `src/<form-key>/` with 5 typed starter files (`resource`, `card`, `dashboard`, `test`, `index`).
+   - Appends baseline translation keys to `translations/en.json`.
+
+#### Stage 5: Frontend Customization & Localization
+1. **Hook (`<form-key>.resource.ts`)**: Implement typed data interface and extraction logic using `useFormEncounter` and `getOptionalObsValue`.
+2. **Card (`<form-key>-card.component.tsx`)**: Implement Carbon `ObservationCard` sections with localized labels and units.
+3. **Translations (`translations/en.json`)**: Add all display strings and run `npm run audit:i18n` to ensure 100% completeness.
+4. **Unit Tests (`<form-key>.test.tsx`)**: Verify empty state, recorded observation rendering, and type contracts.
+
+#### Stage 6: Quality Gates, Deployment & Interactive E2E Verification
+1. Run automated pipeline:
+   ```bash
+   npm run deploy:local
+   ```
+   *(Executes Docker pre-flight -> `validate:forms` -> `tsc` -> `vitest` -> Rspack build -> hot-deploy -> HTTP 200 probe)*.
+2. Run E2E smoke test robot to verify live mounting in patient chart:
+   ```bash
+   npm run test:e2e -- --form=aiims-<form-key>
+   ```
+3. Open live patient chart, click **"Record"**, fill sample data, and click **"Save"** to verify complete round-trip intake.
+
 
 ---
 
@@ -359,9 +417,6 @@ python scripts/publish_aiims_form.py
 - [x] Register Form 22: Procedure (`procedure`) - Unified Sperm Retrieval & Additional IVF Procedures.
 - [x] Register Form 23: Lab Procedure of Insemination (`lab-procedure-insemination`).
 - [x] Register Form 24: Sperm Quality Assessment (`sperm-quality-assessment`) - Post Wash Sperm Concentration & Motility on OPU Day.
-
-
-
-
-
-
+- [x] Register Form 25: Dose of Drugs (`dose-of-drugs`).
+- [x] Register Form 26: Adjuvant Drug (`adjuvant-drug`).
+- [x] Register Form 27: Assessment of Fertilization, Embryo & Blastocyst (`embryo-assessment`).

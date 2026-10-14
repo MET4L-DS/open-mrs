@@ -69,6 +69,8 @@ import {
   AIIMS_DOSE_OF_DRUGS_FORM_NAME,
   AIIMS_ADJUVANT_DRUG_FORM_UUID,
   AIIMS_ADJUVANT_DRUG_FORM_NAME,
+    AIIMS_EMBRYO_ASSESSMENT_FORM_UUID,
+  AIIMS_EMBRYO_ASSESSMENT_FORM_NAME,
   // @create-form:imports-end
 } from './form-uuids';
 
@@ -361,6 +363,17 @@ export const FORM_REGISTRY: FormRegistryEntry[] = [
     slot: 'aiims-sperm-quality-assessment-dashboard-slot',
     icon: Microscope,
     order: 1,
+  },
+    {
+    key: 'embryo-assessment',
+    uuid: AIIMS_EMBRYO_ASSESSMENT_FORM_UUID,
+    name: AIIMS_EMBRYO_ASSESSMENT_FORM_NAME,
+    path: 'aiims-embryo-assessment',
+    titleKey: 'aiimsEmbryoAssessmentTitle',
+    title: 'Assessment of Fertilization, Embryo & Blastocyst',
+    slot: 'aiims-embryo-assessment-dashboard-slot',
+    icon: Microscope,
+    order: 2,
   },
   // @create-form:registry-end
 ];

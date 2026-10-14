@@ -59,6 +59,7 @@ export const FORM_MODULES: Record<string, DashboardLoader> = {
   'procedure': () => import('./procedure/procedure-dashboard.component'),
   'lab-procedure-insemination': () => import('./lab-procedure-insemination/lab-procedure-insemination-dashboard.component'),
   'sperm-quality-assessment': () => import('./sperm-quality-assessment/sperm-quality-assessment-dashboard.component'),
+  'embryo-assessment': () => import('./embryo-assessment/embryo-assessment-dashboard.component'),
 };
 
 // Generate Single-SPA extension lifecycles
@@ -127,6 +128,8 @@ export const {
   aiimsLabProcedureInseminationDashboard,
   aiimsSpermQualityAssessmentDashboardLink,
   aiimsSpermQualityAssessmentDashboard,
+  aiimsEmbryoAssessmentDashboardLink,
+  aiimsEmbryoAssessmentDashboard,
 } = _extensions;
 
 // Feature module re-exports
@@ -155,3 +158,4 @@ export * from './ovum-pick-up-details';
 export * from './procedure';
 export * from './lab-procedure-insemination';
 export * from './sperm-quality-assessment';
+export * from './embryo-assessment';

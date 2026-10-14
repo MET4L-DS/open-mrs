@@ -15,6 +15,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -30,6 +31,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -45,6 +47,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -60,6 +63,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -75,6 +79,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -90,6 +95,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -105,6 +111,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -120,6 +127,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -135,6 +143,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -150,6 +159,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -165,6 +175,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -180,6 +191,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -195,6 +207,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -210,6 +223,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -225,6 +239,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -240,6 +255,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -255,6 +271,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -270,6 +287,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -285,6 +303,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -300,6 +319,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -315,6 +335,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -330,6 +351,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -345,6 +367,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -360,6 +383,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -375,6 +399,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -390,6 +415,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -405,6 +431,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -420,6 +447,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -435,6 +463,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -450,6 +479,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -465,6 +495,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -480,6 +511,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -495,6 +527,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -510,6 +543,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -525,6 +559,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -540,6 +575,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -555,6 +591,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -570,6 +607,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -585,6 +623,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -600,6 +639,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -615,6 +655,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -630,6 +671,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -645,6 +687,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -660,6 +703,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -675,6 +719,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -690,6 +735,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -705,6 +751,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -720,6 +767,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -735,6 +783,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -750,6 +799,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -765,6 +815,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -780,6 +831,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -795,6 +847,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -810,6 +863,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -825,6 +879,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -840,6 +895,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -855,6 +911,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -870,6 +927,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -885,6 +943,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -900,6 +959,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -915,6 +975,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -930,6 +991,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -945,6 +1007,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -960,6 +1023,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -975,6 +1039,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -990,6 +1055,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -1005,6 +1071,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -1020,6 +1087,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -1035,6 +1103,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -1050,6 +1119,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -1065,6 +1135,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -1080,6 +1151,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -1095,6 +1167,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -1110,6 +1183,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -1125,6 +1199,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -1140,6 +1215,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -1155,6 +1231,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -1170,6 +1247,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -1185,6 +1263,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -1200,6 +1279,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -1215,6 +1295,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -1230,6 +1311,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -1245,6 +1327,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -1260,6 +1343,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -1275,6 +1359,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -1290,6 +1375,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -1305,6 +1391,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -1320,6 +1407,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -1335,6 +1423,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -1350,6 +1439,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -1365,6 +1455,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -1380,6 +1471,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -1395,6 +1487,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -1410,6 +1503,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -1425,6 +1519,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -1440,6 +1535,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -1455,6 +1551,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -1470,6 +1567,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -1485,6 +1583,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -1500,6 +1599,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -1515,6 +1615,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -1530,6 +1631,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -1545,6 +1647,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -1560,6 +1663,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -1575,6 +1679,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -1590,6 +1695,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -1605,6 +1711,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -1620,6 +1727,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -1635,6 +1743,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -1650,6 +1759,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -1665,6 +1775,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -1680,6 +1791,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -1695,6 +1807,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -1710,6 +1823,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -1725,6 +1839,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -1740,6 +1855,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -1755,6 +1871,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -1770,6 +1887,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -1785,6 +1903,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -1800,6 +1919,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -1815,6 +1935,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -1830,6 +1951,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -1845,6 +1967,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -1860,6 +1983,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -1875,6 +1999,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -1890,6 +2015,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -1905,6 +2031,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -1920,6 +2047,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -1935,6 +2063,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -1950,6 +2079,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -1965,6 +2095,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -1980,6 +2111,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -1995,6 +2127,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -2010,6 +2143,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -2025,6 +2159,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -2040,6 +2175,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -2055,6 +2191,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -2070,6 +2207,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -2085,6 +2223,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -2100,6 +2239,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -2115,6 +2255,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -2130,6 +2271,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -2145,6 +2287,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -2160,6 +2303,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -2175,6 +2319,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -2190,6 +2335,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -2205,6 +2351,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -2220,6 +2367,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -2235,6 +2383,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -2250,6 +2399,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -2265,6 +2415,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -2280,6 +2431,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -2295,6 +2447,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -2310,6 +2463,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -2325,6 +2479,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -2340,6 +2495,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -2355,6 +2511,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -2370,6 +2527,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -2385,6 +2543,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -2400,6 +2559,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -2415,6 +2575,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -2430,6 +2591,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -2445,6 +2607,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -2460,6 +2623,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -2475,6 +2639,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -2490,6 +2655,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -2505,6 +2671,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -2520,6 +2687,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -2535,6 +2703,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -2550,6 +2719,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -2565,6 +2735,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -2580,6 +2751,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -2595,6 +2767,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -2610,6 +2783,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -2625,6 +2799,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -2640,6 +2815,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -2655,6 +2831,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -2670,6 +2847,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -2685,6 +2863,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -2700,6 +2879,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -2715,6 +2895,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -2730,6 +2911,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -2745,6 +2927,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -2760,6 +2943,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -2775,6 +2959,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -2790,6 +2975,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -2805,6 +2991,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -2820,6 +3007,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -2835,6 +3023,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -2850,6 +3039,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -2865,6 +3055,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -2880,6 +3071,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -2895,6 +3087,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -2910,6 +3103,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -2925,6 +3119,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -2940,6 +3135,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -2955,6 +3151,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -2970,6 +3167,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -2985,6 +3183,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -3000,6 +3199,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -3015,6 +3215,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -3030,6 +3231,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -3045,6 +3247,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -3060,6 +3263,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -3075,6 +3279,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -3090,6 +3295,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -3105,6 +3311,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -3120,6 +3327,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -3135,6 +3343,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -3150,6 +3359,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -3165,6 +3375,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -3180,6 +3391,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -3195,6 +3407,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -3210,6 +3423,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -3225,6 +3439,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -3240,6 +3455,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -3255,6 +3471,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -3270,6 +3487,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -3285,6 +3503,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -3300,6 +3519,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -3315,6 +3535,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -3330,6 +3551,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -3345,6 +3567,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -3360,6 +3583,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -3375,6 +3599,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -3390,6 +3615,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -3405,6 +3631,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -3420,6 +3647,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -3435,6 +3663,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -3450,6 +3679,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -3465,6 +3695,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -3480,6 +3711,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -3495,6 +3727,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -3510,6 +3743,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -3525,6 +3759,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -3540,6 +3775,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -3555,6 +3791,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -3570,6 +3807,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -3585,6 +3823,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -3600,6 +3839,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -3615,6 +3855,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -3630,6 +3871,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -3645,6 +3887,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -3660,6 +3903,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -3675,6 +3919,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -3690,6 +3935,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -3705,6 +3951,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -3720,6 +3967,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -3735,6 +3983,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -3750,6 +3999,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -3765,6 +4015,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -3780,6 +4031,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -3795,6 +4047,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -3810,6 +4063,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -3825,6 +4079,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -3840,6 +4095,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -3855,6 +4111,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -3870,6 +4127,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -3885,6 +4143,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -3900,6 +4159,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -3915,6 +4175,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -3930,6 +4191,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -3945,6 +4207,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -3960,6 +4223,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -3975,6 +4239,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -3990,6 +4255,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -4005,6 +4271,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -4020,6 +4287,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -4035,6 +4303,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -4050,6 +4319,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -4065,6 +4335,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -4080,6 +4351,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -4095,6 +4367,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -4110,6 +4383,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -4125,6 +4399,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -4140,6 +4415,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -4155,6 +4431,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -4170,6 +4447,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -4185,6 +4463,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -4200,6 +4479,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -4215,6 +4495,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -4230,6 +4511,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -4245,6 +4527,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -4260,6 +4543,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -4275,6 +4559,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -4290,6 +4575,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -4305,6 +4591,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -4320,6 +4607,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -4335,6 +4623,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -4350,6 +4639,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -4365,6 +4655,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -4380,6 +4671,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -4395,6 +4687,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -4410,6 +4703,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -4425,6 +4719,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -4440,6 +4735,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -4455,6 +4751,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -4470,6 +4767,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -4485,6 +4783,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -4500,6 +4799,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -4515,6 +4815,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -4530,6 +4831,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -4545,6 +4847,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -4560,6 +4863,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -4575,6 +4879,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -4590,6 +4895,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -4605,6 +4911,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -4620,6 +4927,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -4635,6 +4943,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -4650,6 +4959,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -4665,6 +4975,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -4680,6 +4991,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -4695,6 +5007,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -4710,6 +5023,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -4725,6 +5039,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -4740,6 +5055,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -4755,6 +5071,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -4770,6 +5087,7 @@ BEGIN
         INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@new_id, 'years', 0, 0, 130);
     ELSE
         SET @new_id = @existing_id;
+        IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, 'years', 0, 0, 130); END IF;
     END IF;
     
 
@@ -4785,6 +5103,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -4800,6 +5119,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -4815,6 +5135,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -4830,6 +5151,7 @@ BEGIN
         INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@new_id, 'years', 0, 0, 130);
     ELSE
         SET @new_id = @existing_id;
+        IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, 'years', 0, 0, 130); END IF;
     END IF;
     
 
@@ -4845,6 +5167,7 @@ BEGIN
         INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@new_id, 'kg/m2', 1, 5, 90);
     ELSE
         SET @new_id = @existing_id;
+        IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, 'kg/m2', 1, 5, 90); END IF;
     END IF;
     
 
@@ -4860,6 +5183,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -4875,6 +5199,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -4890,6 +5215,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -4905,6 +5231,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -4920,6 +5247,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -4935,6 +5263,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -4950,6 +5279,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -4965,6 +5295,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -4980,6 +5311,7 @@ BEGIN
         INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@new_id, 'years', 0, 0, 80);
     ELSE
         SET @new_id = @existing_id;
+        IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, 'years', 0, 0, 80); END IF;
     END IF;
     
 
@@ -4995,6 +5327,7 @@ BEGIN
         INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@new_id, 'years', 0, 0, 80);
     ELSE
         SET @new_id = @existing_id;
+        IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, 'years', 0, 0, 80); END IF;
     END IF;
     
 
@@ -5010,6 +5343,7 @@ BEGIN
         INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@new_id, NULL, 0, 0, 30);
     ELSE
         SET @new_id = @existing_id;
+        IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, NULL, 0, 0, 30); END IF;
     END IF;
     
 
@@ -5025,6 +5359,7 @@ BEGIN
         INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@new_id, NULL, 0, 0, 30);
     ELSE
         SET @new_id = @existing_id;
+        IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, NULL, 0, 0, 30); END IF;
     END IF;
     
 
@@ -5040,6 +5375,7 @@ BEGIN
         INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@new_id, NULL, 0, 0, 30);
     ELSE
         SET @new_id = @existing_id;
+        IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, NULL, 0, 0, 30); END IF;
     END IF;
     
 
@@ -5055,6 +5391,7 @@ BEGIN
         INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@new_id, NULL, 0, 0, 30);
     ELSE
         SET @new_id = @existing_id;
+        IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, NULL, 0, 0, 30); END IF;
     END IF;
     
 
@@ -5070,6 +5407,7 @@ BEGIN
         INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@new_id, NULL, 0, 0, 30);
     ELSE
         SET @new_id = @existing_id;
+        IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, NULL, 0, 0, 30); END IF;
     END IF;
     
 
@@ -5085,6 +5423,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -5100,6 +5439,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -5115,6 +5455,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -5130,6 +5471,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -5145,6 +5487,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -5160,6 +5503,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -5175,6 +5519,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -5190,6 +5535,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -5205,6 +5551,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -5220,6 +5567,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -5235,6 +5583,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -5250,6 +5599,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -5265,6 +5615,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -5280,6 +5631,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -5295,6 +5647,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -5310,6 +5663,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -5325,6 +5679,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -5340,6 +5695,7 @@ BEGIN
         INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@new_id, 'mIU/mL', 1, 0, 100);
     ELSE
         SET @new_id = @existing_id;
+        IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, 'mIU/mL', 1, 0, 100); END IF;
     END IF;
     
 
@@ -5355,6 +5711,7 @@ BEGIN
         INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@new_id, 'ng/dL', 1, 0, 2000);
     ELSE
         SET @new_id = @existing_id;
+        IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, 'ng/dL', 1, 0, 2000); END IF;
     END IF;
     
 
@@ -5370,6 +5727,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -5385,6 +5743,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -5400,6 +5759,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -5415,6 +5775,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -5430,6 +5791,7 @@ BEGIN
         INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@new_id, NULL, 0, 0, 50);
     ELSE
         SET @new_id = @existing_id;
+        IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, NULL, 0, 0, 50); END IF;
     END IF;
     
 
@@ -5445,6 +5807,7 @@ BEGIN
         INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@new_id, NULL, 0, NULL, NULL);
     ELSE
         SET @new_id = @existing_id;
+        IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, NULL, 0, NULL, NULL); END IF;
     END IF;
     
 
@@ -5460,6 +5823,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -5475,6 +5839,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -5490,6 +5855,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -5505,6 +5871,7 @@ BEGIN
         INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@new_id, NULL, 0, 0, 50);
     ELSE
         SET @new_id = @existing_id;
+        IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, NULL, 0, 0, 50); END IF;
     END IF;
     
 
@@ -5520,6 +5887,7 @@ BEGIN
         INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@new_id, NULL, 0, NULL, NULL);
     ELSE
         SET @new_id = @existing_id;
+        IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, NULL, 0, NULL, NULL); END IF;
     END IF;
     
 
@@ -5535,6 +5903,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -5550,6 +5919,7 @@ BEGIN
         INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@new_id, NULL, 0, 0, 50);
     ELSE
         SET @new_id = @existing_id;
+        IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, NULL, 0, 0, 50); END IF;
     END IF;
     
 
@@ -5565,6 +5935,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -5580,6 +5951,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -5595,6 +5967,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -5610,6 +5983,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -5625,6 +5999,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -5640,6 +6015,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -5655,6 +6031,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -5670,6 +6047,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -5685,6 +6063,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -5700,6 +6079,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -5715,6 +6095,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -5730,6 +6111,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -5745,6 +6127,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -5760,6 +6143,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -5775,6 +6159,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -5790,6 +6175,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -5805,6 +6191,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -5820,6 +6207,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -5835,6 +6223,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -5850,6 +6239,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -5865,6 +6255,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -5880,6 +6271,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -5895,6 +6287,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -5910,6 +6303,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -5925,6 +6319,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -5940,6 +6335,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -5955,6 +6351,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -5970,6 +6367,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -5985,6 +6383,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -6000,6 +6399,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -6015,6 +6415,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -6030,6 +6431,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -6045,6 +6447,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -6060,6 +6463,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -6075,6 +6479,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -6090,6 +6495,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -6105,6 +6511,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -6120,6 +6527,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -6135,6 +6543,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -6150,6 +6559,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -6165,6 +6575,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -6180,6 +6591,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -6195,6 +6607,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -6210,6 +6623,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -6225,6 +6639,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -6240,6 +6655,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -6255,6 +6671,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -6270,6 +6687,7 @@ BEGIN
         INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@new_id, NULL, 0, 0, 50);
     ELSE
         SET @new_id = @existing_id;
+        IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, NULL, 0, 0, 50); END IF;
     END IF;
     
 
@@ -6285,6 +6703,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -6300,6 +6719,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -6315,6 +6735,7 @@ BEGIN
         INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@new_id, NULL, 0, 0, 150);
     ELSE
         SET @new_id = @existing_id;
+        IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, NULL, 0, 0, 150); END IF;
     END IF;
     
 
@@ -6330,6 +6751,7 @@ BEGIN
         INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@new_id, 'cm3', 2, 0, 200);
     ELSE
         SET @new_id = @existing_id;
+        IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, 'cm3', 2, 0, 200); END IF;
     END IF;
     
 
@@ -6345,6 +6767,7 @@ BEGIN
         INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@new_id, 'cm3', 2, 0, 200);
     ELSE
         SET @new_id = @existing_id;
+        IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, 'cm3', 2, 0, 200); END IF;
     END IF;
     
 
@@ -6360,6 +6783,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -6375,6 +6799,7 @@ BEGIN
         INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@new_id, 'ng/mL', 1, NULL, NULL);
     ELSE
         SET @new_id = @existing_id;
+        IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, 'ng/mL', 1, NULL, NULL); END IF;
     END IF;
     
 
@@ -6390,6 +6815,7 @@ BEGIN
         INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@new_id, 'mIU/mL', 1, NULL, NULL);
     ELSE
         SET @new_id = @existing_id;
+        IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, 'mIU/mL', 1, NULL, NULL); END IF;
     END IF;
     
 
@@ -6405,6 +6831,7 @@ BEGIN
         INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@new_id, 'mIU/mL', 1, NULL, NULL);
     ELSE
         SET @new_id = @existing_id;
+        IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, 'mIU/mL', 1, NULL, NULL); END IF;
     END IF;
     
 
@@ -6420,6 +6847,7 @@ BEGIN
         INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@new_id, 'uIU/mL', 1, NULL, NULL);
     ELSE
         SET @new_id = @existing_id;
+        IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, 'uIU/mL', 1, NULL, NULL); END IF;
     END IF;
     
 
@@ -6435,6 +6863,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -6450,6 +6879,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -6465,6 +6895,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -6480,6 +6911,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -6495,6 +6927,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -6510,6 +6943,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -6525,6 +6959,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -6540,6 +6975,7 @@ BEGIN
         INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@new_id, 'cm', 1, NULL, NULL);
     ELSE
         SET @new_id = @existing_id;
+        IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, 'cm', 1, NULL, NULL); END IF;
     END IF;
     
 
@@ -6555,6 +6991,7 @@ BEGIN
         INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@new_id, 'cm', 1, NULL, NULL);
     ELSE
         SET @new_id = @existing_id;
+        IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, 'cm', 1, NULL, NULL); END IF;
     END IF;
     
 
@@ -6570,6 +7007,7 @@ BEGIN
         INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@new_id, 'cm', 1, NULL, NULL);
     ELSE
         SET @new_id = @existing_id;
+        IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, 'cm', 1, NULL, NULL); END IF;
     END IF;
     
 
@@ -6585,6 +7023,7 @@ BEGIN
         INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@new_id, 'cm3', 2, NULL, NULL);
     ELSE
         SET @new_id = @existing_id;
+        IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, 'cm3', 2, NULL, NULL); END IF;
     END IF;
     
 
@@ -6600,6 +7039,7 @@ BEGIN
         INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@new_id, NULL, 0, NULL, NULL);
     ELSE
         SET @new_id = @existing_id;
+        IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, NULL, 0, NULL, NULL); END IF;
     END IF;
     
 
@@ -6615,6 +7055,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -6630,6 +7071,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -6645,6 +7087,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -6660,6 +7103,7 @@ BEGIN
         INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@new_id, NULL, 0, NULL, NULL);
     ELSE
         SET @new_id = @existing_id;
+        IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, NULL, 0, NULL, NULL); END IF;
     END IF;
     
 
@@ -6675,6 +7119,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -6690,6 +7135,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -6705,6 +7151,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -6720,6 +7167,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -6735,6 +7183,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -6750,6 +7199,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -6765,6 +7215,7 @@ BEGIN
         INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@new_id, 'degrees', 1, NULL, NULL);
     ELSE
         SET @new_id = @existing_id;
+        IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, 'degrees', 1, NULL, NULL); END IF;
     END IF;
     
 
@@ -6780,6 +7231,7 @@ BEGIN
         INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@new_id, 'cm', 2, NULL, NULL);
     ELSE
         SET @new_id = @existing_id;
+        IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, 'cm', 2, NULL, NULL); END IF;
     END IF;
     
 
@@ -6795,6 +7247,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -6810,6 +7263,7 @@ BEGIN
         INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@new_id, 'cm3', 2, NULL, NULL);
     ELSE
         SET @new_id = @existing_id;
+        IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, 'cm3', 2, NULL, NULL); END IF;
     END IF;
     
 
@@ -6825,6 +7279,7 @@ BEGIN
         INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@new_id, 'cm3', 2, NULL, NULL);
     ELSE
         SET @new_id = @existing_id;
+        IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, 'cm3', 2, NULL, NULL); END IF;
     END IF;
     
 
@@ -6840,6 +7295,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -6855,6 +7311,7 @@ BEGIN
         INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@new_id, 'cm3', 2, NULL, NULL);
     ELSE
         SET @new_id = @existing_id;
+        IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, 'cm3', 2, NULL, NULL); END IF;
     END IF;
     
 
@@ -6870,6 +7327,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -6885,6 +7343,7 @@ BEGIN
         INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@new_id, NULL, 0, NULL, NULL);
     ELSE
         SET @new_id = @existing_id;
+        IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, NULL, 0, NULL, NULL); END IF;
     END IF;
     
 
@@ -6900,6 +7359,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -6915,6 +7375,7 @@ BEGIN
         INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@new_id, NULL, 0, NULL, NULL);
     ELSE
         SET @new_id = @existing_id;
+        IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, NULL, 0, NULL, NULL); END IF;
     END IF;
     
 
@@ -6930,6 +7391,7 @@ BEGIN
         INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@new_id, NULL, 0, NULL, NULL);
     ELSE
         SET @new_id = @existing_id;
+        IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, NULL, 0, NULL, NULL); END IF;
     END IF;
     
 
@@ -6945,6 +7407,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -6960,6 +7423,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -6975,6 +7439,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -6990,6 +7455,7 @@ BEGIN
         INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@new_id, NULL, 0, NULL, NULL);
     ELSE
         SET @new_id = @existing_id;
+        IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, NULL, 0, NULL, NULL); END IF;
     END IF;
     
 
@@ -7005,6 +7471,7 @@ BEGIN
         INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@new_id, NULL, 0, NULL, NULL);
     ELSE
         SET @new_id = @existing_id;
+        IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, NULL, 0, NULL, NULL); END IF;
     END IF;
     
 
@@ -7020,6 +7487,7 @@ BEGIN
         INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@new_id, NULL, 0, NULL, NULL);
     ELSE
         SET @new_id = @existing_id;
+        IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, NULL, 0, NULL, NULL); END IF;
     END IF;
     
 
@@ -7035,6 +7503,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -7050,6 +7519,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -7065,6 +7535,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -7080,6 +7551,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -7095,6 +7567,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -7110,6 +7583,7 @@ BEGIN
         INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@new_id, 'mm', 2, NULL, NULL);
     ELSE
         SET @new_id = @existing_id;
+        IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, 'mm', 2, NULL, NULL); END IF;
     END IF;
     
 
@@ -7125,6 +7599,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -7140,6 +7615,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -7155,6 +7631,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -7170,6 +7647,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -7185,6 +7663,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -7200,6 +7679,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -7215,6 +7695,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -7230,6 +7711,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -7245,6 +7727,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -7260,6 +7743,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -7275,6 +7759,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -7290,6 +7775,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -7305,6 +7791,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -7320,6 +7807,7 @@ BEGIN
         INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@new_id, 'cm', 2, NULL, NULL);
     ELSE
         SET @new_id = @existing_id;
+        IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, 'cm', 2, NULL, NULL); END IF;
     END IF;
     
 
@@ -7335,6 +7823,7 @@ BEGIN
         INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@new_id, 'cm', 2, NULL, NULL);
     ELSE
         SET @new_id = @existing_id;
+        IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, 'cm', 2, NULL, NULL); END IF;
     END IF;
     
 
@@ -7350,6 +7839,7 @@ BEGIN
         INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@new_id, 'cm', 2, NULL, NULL);
     ELSE
         SET @new_id = @existing_id;
+        IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, 'cm', 2, NULL, NULL); END IF;
     END IF;
     
 
@@ -7365,6 +7855,7 @@ BEGIN
         INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@new_id, 'cm', 2, NULL, NULL);
     ELSE
         SET @new_id = @existing_id;
+        IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, 'cm', 2, NULL, NULL); END IF;
     END IF;
     
 
@@ -7380,6 +7871,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -7395,6 +7887,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -7410,6 +7903,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -7425,6 +7919,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -7440,6 +7935,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -7455,6 +7951,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -7470,6 +7967,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -7485,6 +7983,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -7500,6 +7999,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -7515,6 +8015,7 @@ BEGIN
         INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@new_id, 'mL', 1, 0, 20);
     ELSE
         SET @new_id = @existing_id;
+        IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, 'mL', 1, 0, 20); END IF;
     END IF;
     
 
@@ -7530,6 +8031,7 @@ BEGIN
         INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@new_id, 'million/mL', 1, 0, 1000);
     ELSE
         SET @new_id = @existing_id;
+        IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, 'million/mL', 1, 0, 1000); END IF;
     END IF;
     
 
@@ -7545,6 +8047,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -7560,6 +8063,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -7575,6 +8079,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -7590,6 +8095,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -7605,6 +8111,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -7620,6 +8127,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -7635,6 +8143,7 @@ BEGIN
         INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@new_id, NULL, 0, 0, 100);
     ELSE
         SET @new_id = @existing_id;
+        IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, NULL, 0, 0, 100); END IF;
     END IF;
     
 
@@ -7650,6 +8159,7 @@ BEGIN
         INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@new_id, NULL, 0, 0, 100);
     ELSE
         SET @new_id = @existing_id;
+        IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, NULL, 0, 0, 100); END IF;
     END IF;
     
 
@@ -7665,6 +8175,7 @@ BEGIN
         INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@new_id, 'mm', 1, 0, 30);
     ELSE
         SET @new_id = @existing_id;
+        IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, 'mm', 1, 0, 30); END IF;
     END IF;
     
 
@@ -7680,6 +8191,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -7695,6 +8207,7 @@ BEGIN
         INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@new_id, 'pg/mL', 1, 0, 20000);
     ELSE
         SET @new_id = @existing_id;
+        IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, 'pg/mL', 1, 0, 20000); END IF;
     END IF;
     
 
@@ -7710,6 +8223,7 @@ BEGIN
         INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@new_id, 'ng/mL', 2, 0, 100);
     ELSE
         SET @new_id = @existing_id;
+        IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, 'ng/mL', 2, 0, 100); END IF;
     END IF;
     
 
@@ -7725,6 +8239,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -7740,6 +8255,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -7755,6 +8271,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -7770,6 +8287,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -7785,6 +8303,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -7800,6 +8319,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -7815,6 +8335,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -7830,6 +8351,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -7845,6 +8367,7 @@ BEGIN
         INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@new_id, NULL, 0, 0, 150);
     ELSE
         SET @new_id = @existing_id;
+        IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, NULL, 0, 0, 150); END IF;
     END IF;
     
 
@@ -7860,6 +8383,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -7875,6 +8399,7 @@ BEGIN
         INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@new_id, '%', 1, 0, 500);
     ELSE
         SET @new_id = @existing_id;
+        IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, '%', 1, 0, 500); END IF;
     END IF;
     
 
@@ -7890,6 +8415,7 @@ BEGIN
         INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@new_id, '%', 1, 0, 500);
     ELSE
         SET @new_id = @existing_id;
+        IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, '%', 1, 0, 500); END IF;
     END IF;
     
 
@@ -7905,6 +8431,7 @@ BEGIN
         INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@new_id, NULL, 0, 0, 150);
     ELSE
         SET @new_id = @existing_id;
+        IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, NULL, 0, 0, 150); END IF;
     END IF;
     
 
@@ -7920,6 +8447,7 @@ BEGIN
         INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@new_id, NULL, 0, 0, 150);
     ELSE
         SET @new_id = @existing_id;
+        IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, NULL, 0, 0, 150); END IF;
     END IF;
     
 
@@ -7935,6 +8463,7 @@ BEGIN
         INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@new_id, NULL, 0, 0, 150);
     ELSE
         SET @new_id = @existing_id;
+        IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, NULL, 0, 0, 150); END IF;
     END IF;
     
 
@@ -7950,6 +8479,7 @@ BEGIN
         INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@new_id, NULL, 0, 0, 150);
     ELSE
         SET @new_id = @existing_id;
+        IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, NULL, 0, 0, 150); END IF;
     END IF;
     
 
@@ -7965,6 +8495,7 @@ BEGIN
         INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@new_id, NULL, 0, 0, 150);
     ELSE
         SET @new_id = @existing_id;
+        IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, NULL, 0, 0, 150); END IF;
     END IF;
     
 
@@ -7980,6 +8511,7 @@ BEGIN
         INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@new_id, NULL, 0, 0, 150);
     ELSE
         SET @new_id = @existing_id;
+        IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, NULL, 0, 0, 150); END IF;
     END IF;
     
 
@@ -7995,6 +8527,7 @@ BEGIN
         INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@new_id, NULL, 0, 0, 150);
     ELSE
         SET @new_id = @existing_id;
+        IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, NULL, 0, 0, 150); END IF;
     END IF;
     
 
@@ -8010,6 +8543,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -8025,6 +8559,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -8040,6 +8575,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -8055,6 +8591,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -8070,6 +8607,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -8085,6 +8623,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -8100,6 +8639,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -8115,6 +8655,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -8130,6 +8671,7 @@ BEGIN
         INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@new_id, 'million/mL', 1, 0, 1000);
     ELSE
         SET @new_id = @existing_id;
+        IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, 'million/mL', 1, 0, 1000); END IF;
     END IF;
     
 
@@ -8145,6 +8687,7 @@ BEGIN
         INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@new_id, '%', 1, 0, 100);
     ELSE
         SET @new_id = @existing_id;
+        IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, '%', 1, 0, 100); END IF;
     END IF;
     
 
@@ -8160,6 +8703,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -8175,6 +8719,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -8190,6 +8735,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -8205,6 +8751,7 @@ BEGIN
         INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@new_id, 'days', 0, 0, 100);
     ELSE
         SET @new_id = @existing_id;
+        IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, 'days', 0, 0, 100); END IF;
     END IF;
     
 
@@ -8220,6 +8767,7 @@ BEGIN
         INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@new_id, 'IU', 1, 0, 5000);
     ELSE
         SET @new_id = @existing_id;
+        IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, 'IU', 1, 0, 5000); END IF;
     END IF;
     
 
@@ -8235,6 +8783,7 @@ BEGIN
         INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@new_id, 'IU', 1, 0, 5000);
     ELSE
         SET @new_id = @existing_id;
+        IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, 'IU', 1, 0, 5000); END IF;
     END IF;
     
 
@@ -8250,6 +8799,7 @@ BEGIN
         INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@new_id, 'IU', 1, 0, 5000);
     ELSE
         SET @new_id = @existing_id;
+        IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, 'IU', 1, 0, 5000); END IF;
     END IF;
     
 
@@ -8265,6 +8815,7 @@ BEGIN
         INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@new_id, 'IU', 1, 0, 50000);
     ELSE
         SET @new_id = @existing_id;
+        IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, 'IU', 1, 0, 50000); END IF;
     END IF;
     
 
@@ -8280,6 +8831,7 @@ BEGIN
         INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@new_id, 'IU', 1, 0, 50000);
     ELSE
         SET @new_id = @existing_id;
+        IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, 'IU', 1, 0, 50000); END IF;
     END IF;
     
 
@@ -8295,6 +8847,7 @@ BEGIN
         INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@new_id, 'IU', 1, 0, 50000);
     ELSE
         SET @new_id = @existing_id;
+        IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, 'IU', 1, 0, 50000); END IF;
     END IF;
     
 
@@ -8310,6 +8863,7 @@ BEGIN
         INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@new_id, 'mg', 2, 0, 100);
     ELSE
         SET @new_id = @existing_id;
+        IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, 'mg', 2, 0, 100); END IF;
     END IF;
     
 
@@ -8325,6 +8879,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -8340,6 +8895,7 @@ BEGIN
         INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@new_id, 'days', 0, 0, 100);
     ELSE
         SET @new_id = @existing_id;
+        IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, 'days', 0, 0, 100); END IF;
     END IF;
     
 
@@ -8355,6 +8911,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -8370,6 +8927,7 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
     END IF;
     
 
@@ -8385,6 +8943,7 @@ BEGIN
         INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@new_id, 'IU', 2, 0, 100);
     ELSE
         SET @new_id = @existing_id;
+        IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, 'IU', 2, 0, 100); END IF;
     END IF;
     
 
@@ -8400,6 +8959,7 @@ BEGIN
         INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@new_id, 'days', 0, 0, 365);
     ELSE
         SET @new_id = @existing_id;
+        IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, 'days', 0, 0, 365); END IF;
     END IF;
     
 
@@ -8415,6 +8975,215 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
+        
+    END IF;
+    
+
+    SET @existing_id = (SELECT concept_id FROM concept WHERE uuid = 'c0010001-0000-0000-0000-000000000248');
+    IF @existing_id IS NULL THEN
+        INSERT INTO concept (retired, datatype_id, class_id, is_set, creator, date_created, uuid)
+        VALUES (0, 1, 7, 0, 1, NOW(), 'c0010001-0000-0000-0000-000000000248');
+        SET @new_id = LAST_INSERT_ID();
+        
+        INSERT INTO concept_name (concept_id, name, locale, locale_preferred, creator, date_created, concept_name_type, voided, uuid)
+        VALUES (@new_id, 'Number of Embryos Day 1 (2PN)', 'en', 1, 1, NOW(), 'FULLY_SPECIFIED', 0, UUID());
+        
+        INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@new_id, NULL, 0, 0, 100);
+    ELSE
+        SET @new_id = @existing_id;
+        IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, NULL, 0, 0, 100); END IF;
+    END IF;
+    
+
+    SET @existing_id = (SELECT concept_id FROM concept WHERE uuid = 'c0010001-0000-0000-0000-000000000249');
+    IF @existing_id IS NULL THEN
+        INSERT INTO concept (retired, datatype_id, class_id, is_set, creator, date_created, uuid)
+        VALUES (0, 3, 7, 0, 1, NOW(), 'c0010001-0000-0000-0000-000000000249');
+        SET @new_id = LAST_INSERT_ID();
+        
+        INSERT INTO concept_name (concept_id, name, locale, locale_preferred, creator, date_created, concept_name_type, voided, uuid)
+        VALUES (@new_id, 'Grade of Embryos Day 1 (2PN)', 'en', 1, 1, NOW(), 'FULLY_SPECIFIED', 0, UUID());
+        
+        
+    ELSE
+        SET @new_id = @existing_id;
+        
+    END IF;
+    
+
+    SET @existing_id = (SELECT concept_id FROM concept WHERE uuid = 'c0010001-0000-0000-0000-000000000250');
+    IF @existing_id IS NULL THEN
+        INSERT INTO concept (retired, datatype_id, class_id, is_set, creator, date_created, uuid)
+        VALUES (0, 1, 7, 0, 1, NOW(), 'c0010001-0000-0000-0000-000000000250');
+        SET @new_id = LAST_INSERT_ID();
+        
+        INSERT INTO concept_name (concept_id, name, locale, locale_preferred, creator, date_created, concept_name_type, voided, uuid)
+        VALUES (@new_id, 'Number of Embryos Day 2', 'en', 1, 1, NOW(), 'FULLY_SPECIFIED', 0, UUID());
+        
+        INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@new_id, NULL, 0, 0, 100);
+    ELSE
+        SET @new_id = @existing_id;
+        IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, NULL, 0, 0, 100); END IF;
+    END IF;
+    
+
+    SET @existing_id = (SELECT concept_id FROM concept WHERE uuid = 'c0010001-0000-0000-0000-000000000251');
+    IF @existing_id IS NULL THEN
+        INSERT INTO concept (retired, datatype_id, class_id, is_set, creator, date_created, uuid)
+        VALUES (0, 3, 7, 0, 1, NOW(), 'c0010001-0000-0000-0000-000000000251');
+        SET @new_id = LAST_INSERT_ID();
+        
+        INSERT INTO concept_name (concept_id, name, locale, locale_preferred, creator, date_created, concept_name_type, voided, uuid)
+        VALUES (@new_id, 'Grade of Embryos Day 2', 'en', 1, 1, NOW(), 'FULLY_SPECIFIED', 0, UUID());
+        
+        
+    ELSE
+        SET @new_id = @existing_id;
+        
+    END IF;
+    
+
+    SET @existing_id = (SELECT concept_id FROM concept WHERE uuid = 'c0010001-0000-0000-0000-000000000252');
+    IF @existing_id IS NULL THEN
+        INSERT INTO concept (retired, datatype_id, class_id, is_set, creator, date_created, uuid)
+        VALUES (0, 1, 7, 0, 1, NOW(), 'c0010001-0000-0000-0000-000000000252');
+        SET @new_id = LAST_INSERT_ID();
+        
+        INSERT INTO concept_name (concept_id, name, locale, locale_preferred, creator, date_created, concept_name_type, voided, uuid)
+        VALUES (@new_id, 'Number of Embryos Day 3', 'en', 1, 1, NOW(), 'FULLY_SPECIFIED', 0, UUID());
+        
+        INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@new_id, NULL, 0, 0, 100);
+    ELSE
+        SET @new_id = @existing_id;
+        IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, NULL, 0, 0, 100); END IF;
+    END IF;
+    
+
+    SET @existing_id = (SELECT concept_id FROM concept WHERE uuid = 'c0010001-0000-0000-0000-000000000253');
+    IF @existing_id IS NULL THEN
+        INSERT INTO concept (retired, datatype_id, class_id, is_set, creator, date_created, uuid)
+        VALUES (0, 3, 7, 0, 1, NOW(), 'c0010001-0000-0000-0000-000000000253');
+        SET @new_id = LAST_INSERT_ID();
+        
+        INSERT INTO concept_name (concept_id, name, locale, locale_preferred, creator, date_created, concept_name_type, voided, uuid)
+        VALUES (@new_id, 'Grade of Embryos Day 3', 'en', 1, 1, NOW(), 'FULLY_SPECIFIED', 0, UUID());
+        
+        
+    ELSE
+        SET @new_id = @existing_id;
+        
+    END IF;
+    
+
+    SET @existing_id = (SELECT concept_id FROM concept WHERE uuid = 'c0010001-0000-0000-0000-000000000254');
+    IF @existing_id IS NULL THEN
+        INSERT INTO concept (retired, datatype_id, class_id, is_set, creator, date_created, uuid)
+        VALUES (0, 1, 7, 0, 1, NOW(), 'c0010001-0000-0000-0000-000000000254');
+        SET @new_id = LAST_INSERT_ID();
+        
+        INSERT INTO concept_name (concept_id, name, locale, locale_preferred, creator, date_created, concept_name_type, voided, uuid)
+        VALUES (@new_id, 'Number of Embryos Day 4', 'en', 1, 1, NOW(), 'FULLY_SPECIFIED', 0, UUID());
+        
+        INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@new_id, NULL, 0, 0, 100);
+    ELSE
+        SET @new_id = @existing_id;
+        IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, NULL, 0, 0, 100); END IF;
+    END IF;
+    
+
+    SET @existing_id = (SELECT concept_id FROM concept WHERE uuid = 'c0010001-0000-0000-0000-000000000255');
+    IF @existing_id IS NULL THEN
+        INSERT INTO concept (retired, datatype_id, class_id, is_set, creator, date_created, uuid)
+        VALUES (0, 3, 7, 0, 1, NOW(), 'c0010001-0000-0000-0000-000000000255');
+        SET @new_id = LAST_INSERT_ID();
+        
+        INSERT INTO concept_name (concept_id, name, locale, locale_preferred, creator, date_created, concept_name_type, voided, uuid)
+        VALUES (@new_id, 'Grade of Embryos Day 4', 'en', 1, 1, NOW(), 'FULLY_SPECIFIED', 0, UUID());
+        
+        
+    ELSE
+        SET @new_id = @existing_id;
+        
+    END IF;
+    
+
+    SET @existing_id = (SELECT concept_id FROM concept WHERE uuid = 'c0010001-0000-0000-0000-000000000256');
+    IF @existing_id IS NULL THEN
+        INSERT INTO concept (retired, datatype_id, class_id, is_set, creator, date_created, uuid)
+        VALUES (0, 1, 7, 0, 1, NOW(), 'c0010001-0000-0000-0000-000000000256');
+        SET @new_id = LAST_INSERT_ID();
+        
+        INSERT INTO concept_name (concept_id, name, locale, locale_preferred, creator, date_created, concept_name_type, voided, uuid)
+        VALUES (@new_id, 'Number of Embryos Day 5', 'en', 1, 1, NOW(), 'FULLY_SPECIFIED', 0, UUID());
+        
+        INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@new_id, NULL, 0, 0, 100);
+    ELSE
+        SET @new_id = @existing_id;
+        IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, NULL, 0, 0, 100); END IF;
+    END IF;
+    
+
+    SET @existing_id = (SELECT concept_id FROM concept WHERE uuid = 'c0010001-0000-0000-0000-000000000257');
+    IF @existing_id IS NULL THEN
+        INSERT INTO concept (retired, datatype_id, class_id, is_set, creator, date_created, uuid)
+        VALUES (0, 3, 7, 0, 1, NOW(), 'c0010001-0000-0000-0000-000000000257');
+        SET @new_id = LAST_INSERT_ID();
+        
+        INSERT INTO concept_name (concept_id, name, locale, locale_preferred, creator, date_created, concept_name_type, voided, uuid)
+        VALUES (@new_id, 'Grade of Embryos Day 5', 'en', 1, 1, NOW(), 'FULLY_SPECIFIED', 0, UUID());
+        
+        
+    ELSE
+        SET @new_id = @existing_id;
+        
+    END IF;
+    
+
+    SET @existing_id = (SELECT concept_id FROM concept WHERE uuid = 'c0010001-0000-0000-0000-000000000258');
+    IF @existing_id IS NULL THEN
+        INSERT INTO concept (retired, datatype_id, class_id, is_set, creator, date_created, uuid)
+        VALUES (0, 1, 7, 0, 1, NOW(), 'c0010001-0000-0000-0000-000000000258');
+        SET @new_id = LAST_INSERT_ID();
+        
+        INSERT INTO concept_name (concept_id, name, locale, locale_preferred, creator, date_created, concept_name_type, voided, uuid)
+        VALUES (@new_id, 'Number of Embryos Day 6', 'en', 1, 1, NOW(), 'FULLY_SPECIFIED', 0, UUID());
+        
+        INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@new_id, NULL, 0, 0, 100);
+    ELSE
+        SET @new_id = @existing_id;
+        IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, NULL, 0, 0, 100); END IF;
+    END IF;
+    
+
+    SET @existing_id = (SELECT concept_id FROM concept WHERE uuid = 'c0010001-0000-0000-0000-000000000259');
+    IF @existing_id IS NULL THEN
+        INSERT INTO concept (retired, datatype_id, class_id, is_set, creator, date_created, uuid)
+        VALUES (0, 3, 7, 0, 1, NOW(), 'c0010001-0000-0000-0000-000000000259');
+        SET @new_id = LAST_INSERT_ID();
+        
+        INSERT INTO concept_name (concept_id, name, locale, locale_preferred, creator, date_created, concept_name_type, voided, uuid)
+        VALUES (@new_id, 'Grade of Embryos Day 6', 'en', 1, 1, NOW(), 'FULLY_SPECIFIED', 0, UUID());
+        
+        
+    ELSE
+        SET @new_id = @existing_id;
+        
+    END IF;
+    
+
+    SET @existing_id = (SELECT concept_id FROM concept WHERE uuid = 'c0010001-0000-0000-0000-000000000260');
+    IF @existing_id IS NULL THEN
+        INSERT INTO concept (retired, datatype_id, class_id, is_set, creator, date_created, uuid)
+        VALUES (0, 3, 7, 0, 1, NOW(), 'c0010001-0000-0000-0000-000000000260');
+        SET @new_id = LAST_INSERT_ID();
+        
+        INSERT INTO concept_name (concept_id, name, locale, locale_preferred, creator, date_created, concept_name_type, voided, uuid)
+        VALUES (@new_id, 'Embryo Assessment Remarks', 'en', 1, 1, NOW(), 'FULLY_SPECIFIED', 0, UUID());
+        
+        
+    ELSE
+        SET @new_id = @existing_id;
+        
     END IF;
     
 

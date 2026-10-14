@@ -1,0 +1,65 @@
+slot_columns,
+Number of Embryo Day I (2Pronuclei),
+Grade of Embryo Day I (2Pronuclei),
+Number_of_Embryo_Day II,
+Grade_of_embryo_Day II,
+,2PN-arrest
+,2C/A
+,2C/B
+,2C/C
+,3C/A
+,3C/B
+,3C/C
+,4C/A
+,4C/B
+,4C/C
+,5C/A
+,5C/B
+,5C/C
+,6C/A
+,6C/B
+,6C/C
+,8C/A
+,8C/B
+,8C/C
+,10-12Cells
+Number_of_Embryo_Day III,
+Grade_of_embryo_Day III,same as day 2
+Number_of_Embryo_Day IV,
+Grade_of_embryo_Day IV,
+Number_of_Embryo_Day V,
+Grade_of_embryo_Day V,1AA
+,1AB
+,1BB
+,1BC
+,1CC
+,2AA
+,2AB
+,2BB
+,2BC
+,2CC
+,3AA
+,3AB
+,3BB
+,3BC
+,3CC
+,4AA
+,4AB
+,4BB
+,4BC
+,4CC
+,5AA
+,5AB
+,5BB
+,5BC
+,5CC
+,6AA
+,6AB
+,6BB
+,6BC
+,6CC
+,Morula
+,Arrest
+,Pre-blast
+Number_of_Embryo_Day VI,
+Grade_of_embryo_Day VI,same as day 5

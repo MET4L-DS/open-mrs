@@ -187,10 +187,28 @@ def main():
         action="store_true",
         help="Skip TypeScript compiler type check",
     )
+    parser.add_argument(
+        "--skip-form-validation",
+        action="store_true",
+        help="Skip backend clinical form schema validation",
+    )
+    parser.add_argument(
+        "--skip-concept-validation",
+        action="store_true",
+        help="Skip concept dictionary validation against OpenMRS",
+    )
     args = parser.parse_args()
 
     pipeline_start = time.perf_counter()
-    total_steps = 5 if args.skip_tests else 6
+    active_steps = [True]  # Docker check always
+    active_steps.append(not args.skip_form_validation)
+    active_steps.append(not args.skip_concept_validation)
+    active_steps.append(not args.skip_typecheck)
+    active_steps.append(not args.skip_tests)
+    active_steps.append(True)  # Build
+    active_steps.append(True)  # Deploy
+    active_steps.append(True)  # Probe
+    total_steps = sum(active_steps)
 
     log("=" * 65, "cyan")
     log(" AIIMS OpenMRS 3.x Frontend Deployment Pipeline", "cyan", bold=True)
@@ -203,7 +221,23 @@ def main():
     check_docker_environment()
     step += 1
 
-    # Step 2: Quality Gate: Type check
+    # Step 2: Quality Gate: Form Schema Validation
+    if not args.skip_form_validation:
+        print_step(step, total_steps, "Clinical Form Schema Verification")
+        run_npm_command(["run", "validate:forms"], "Form schema verification")
+        step += 1
+    else:
+        log("\n[SKIPPED] Form schema verification (--skip-form-validation)", "yellow")
+
+    # Step 3: Quality Gate: Concept Dictionary Validation
+    if not args.skip_concept_validation:
+        print_step(step, total_steps, "Concept Dictionary Verification")
+        run_npm_command(["run", "validate:concepts"], "Concept dictionary verification")
+        step += 1
+    else:
+        log("\n[SKIPPED] Concept dictionary verification (--skip-concept-validation)", "yellow")
+
+    # Step 4: Quality Gate: Type check
     if not args.skip_typecheck:
         print_step(step, total_steps, "TypeScript Type Check (tsc)")
         run_npm_command(["run", "typescript"], "TypeScript type check")
