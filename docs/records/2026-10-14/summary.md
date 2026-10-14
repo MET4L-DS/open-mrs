@@ -49,17 +49,27 @@
 - Verifies that numeric questions have valid `concept_numeric` database records.
 - Available via `npm run validate:forms`.
 
-### 2. Seven-Stage Deployment Pipeline (`scripts/deploy_pipeline.py`)
-Upgraded deployment pipeline to run 7 sequential quality gates:
+### 2. Nine-Stage Deployment Pipeline (`scripts/deploy_pipeline.py`)
+Upgraded deployment pipeline to run 9 sequential quality gates with zero downtime:
 1. Docker Pre-flight Check
 2. Clinical Form Schema Verification (`validate:forms`)
-3. Concept Dictionary Verification (`validate:concepts`)
-4. TypeScript Type Check (`tsc`)
-5. Unit Test Suite (`vitest`)
-6. Production Build (Rspack + `generate-routes`)
-7. Hot-Deployment & Live Probe (`/openmrs/spa/importmap.json`)
+3. Concept Dictionary Verification (`validate:concepts` with dynamic count reporting)
+4. Localization Key Audit (`audit:i18n` to prevent runtime missing strings; toggleable via `--skip-i18n-audit`)
+5. TypeScript Type Check (`tsc` with `noImplicitAny: true`)
+6. Unit Test Suite (`vitest` - 74 tests across 30 files)
+7. Single-sourced Route Generation (`generate-routes`)
+8. Production Microfrontend Build (Rspack optimized bundle)
+9. Hot-Deployment & Live Probe (`/openmrs/spa/importmap.json` HTTP 200 verification)
 
-### 3. Interactive Smoke Test Robot (`aiims-esm-demographics-app/e2e/smoke-test.ts`)
+### 3. Targeted Single-Form Publishing (`scripts/publish_aiims_form.py`)
+- Added CLI argument parser supporting `--form=<name_or_key_or_uuid>` and `--all`.
+- Allows instant sub-second publishing of individual updated forms without reprocessing all 27 forms.
+
+### 4. Workflow & Skill Optimization
+- **`clinical-form-workflow` Bifurcation**: Partitioned into **Track A** (Adding a Brand New Clinical Form, 6 stages) and **Track B** (Modifying Existing Form / Adding Fields, 4 stages) for rapid iterations.
+- **Git Commit Workflow**: Populated `.agents/workflows/git-message.md` with conventional commit standards, scopes, and OpenMRS examples.
+
+### 5. Interactive Smoke Test Robot (`aiims-esm-demographics-app/e2e/smoke-test.ts`)
 - Added interactive form workspace testing (`--workspace` flag or automatically when `--form` is passed).
 - Clicks the primary action button ("Record" / "Update"), asserts that the form workspace opens without "There was an error with this form", and gracefully closes the workspace.
 
@@ -73,5 +83,6 @@ Upgraded deployment pipeline to run 7 sequential quality gates:
 | Unique Concept Definitions | 317 | 317 Active & Verified | ✓ 100% |
 | Numeric Concepts with `concept_numeric` | 85 | 85 Verified | ✓ 100% |
 | Unit Test Suite | 74 | 74 Passing (30 files) | ✓ 100% |
+| i18n Translation Health | 100% | 0 Missing Keys (`audit:i18n`) | ✓ Clean |
 | TypeScript Compiler Errors | 0 | 0 Errors | ✓ Clean |
-| Active Frontend Bundle | — | `openmrs-esm-aiims-demographics-app-1.0.72` | ✓ Active |
+| Active Frontend Bundle | — | `openmrs-esm-aiims-demographics-app-1.0.73` | ✓ Active |

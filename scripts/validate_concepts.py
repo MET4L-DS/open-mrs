@@ -270,7 +270,7 @@ def main():
         print("❌ Concept validation failed. Please check the reported discrepancies above.\n")
         sys.exit(1)
     else:
-        print("🎉 All 303 concept definitions exist, are active, and validated successfully!\n")
+        print(f"🎉 All {len(valid_concepts)} concept definitions exist, are active, and validated successfully!\n")
         sys.exit(0)
 
 

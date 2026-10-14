@@ -1,6 +1,8 @@
+import argparse
 import json
 import os
 import subprocess
+import sys
 import uuid
 import requests
 
@@ -361,5 +363,47 @@ VALUES (@form_id, 'JSON schema', '{clob_uuid}', 'AmpathJsonSchema', '{resource_u
         print("Warning: No form resources found after SQL insert.")
 
 if __name__ == "__main__":
-    for form_cfg in FORMS_TO_PUBLISH:
+    parser = argparse.ArgumentParser(description="Publish AIIMS AMPATH form schemas to OpenMRS")
+    parser.add_argument(
+        "--form",
+        type=str,
+        default=None,
+        help="Target form key, name, schema filename, or UUID to publish (e.g., 'aiims-personal-information' or '80930653-...'). If omitted, all forms are published."
+    )
+    parser.add_argument(
+        "--all",
+        action="store_true",
+        help="Publish all registered forms."
+    )
+    args = parser.parse_args()
+
+    target = args.form.lower() if args.form else None
+
+    forms_to_run = []
+    if target:
+        for cfg in FORMS_TO_PUBLISH:
+            cfg_name = cfg["name"].lower()
+            cfg_uuid = cfg["uuid"].lower()
+            cfg_schema = cfg["schema_path"].lower()
+            # Match by uuid, filename without path, or fuzzy name match
+            if (
+                target == cfg_uuid
+                or target in cfg_schema
+                or target.replace("-", "_") in cfg_schema
+                or target.replace("_", "-") in cfg_schema
+                or target in cfg_name
+            ):
+                forms_to_run.append(cfg)
+
+        if not forms_to_run:
+            print(f"[ERROR] No form matching '{args.form}' found in FORMS_TO_PUBLISH.")
+            print("Available forms:")
+            for cfg in FORMS_TO_PUBLISH:
+                print(f"  - {cfg['name']} ({cfg['schema_path']}, {cfg['uuid']})")
+            sys.exit(1)
+    else:
+        forms_to_run = FORMS_TO_PUBLISH
+
+    print(f"Publishing {len(forms_to_run)} form(s)...")
+    for form_cfg in forms_to_run:
         publish_form(form_cfg)

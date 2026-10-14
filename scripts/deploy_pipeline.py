@@ -197,12 +197,18 @@ def main():
         action="store_true",
         help="Skip concept dictionary validation against OpenMRS",
     )
+    parser.add_argument(
+        "--skip-i18n-audit",
+        action="store_true",
+        help="Skip translation key health check",
+    )
     args = parser.parse_args()
 
     pipeline_start = time.perf_counter()
     active_steps = [True]  # Docker check always
     active_steps.append(not args.skip_form_validation)
     active_steps.append(not args.skip_concept_validation)
+    active_steps.append(not args.skip_i18n_audit)
     active_steps.append(not args.skip_typecheck)
     active_steps.append(not args.skip_tests)
     active_steps.append(True)  # Build
@@ -237,7 +243,15 @@ def main():
     else:
         log("\n[SKIPPED] Concept dictionary verification (--skip-concept-validation)", "yellow")
 
-    # Step 4: Quality Gate: Type check
+    # Step 4: Quality Gate: i18n Translation Health Check
+    if not args.skip_i18n_audit:
+        print_step(step, total_steps, "i18n Translation Health Check (audit:i18n)")
+        run_npm_command(["run", "audit:i18n"], "Translation health check")
+        step += 1
+    else:
+        log("\n[SKIPPED] i18n translation health check (--skip-i18n-audit)", "yellow")
+
+    # Step 5: Quality Gate: Type check
     if not args.skip_typecheck:
         print_step(step, total_steps, "TypeScript Type Check (tsc)")
         run_npm_command(["run", "typescript"], "TypeScript type check")
@@ -245,7 +259,7 @@ def main():
     else:
         log("\n[SKIPPED] TypeScript type check (--skip-typecheck)", "yellow")
 
-    # Step 3: Quality Gate: Unit tests
+    # Step 6: Quality Gate: Unit tests
     if not args.skip_tests:
         print_step(step, total_steps, "Unit Test Suite (vitest)")
         run_npm_command(["run", "test"], "Unit test suite")
