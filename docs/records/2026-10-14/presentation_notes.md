@@ -1,63 +1,74 @@
 # Presentation Notes: 2026-10-14
-## Topic: Quality Gate Armor & Form 27 (Assessment of Fertilization, Embryo & Blastocyst)
+## Topic: Quality Gate Armor, Patient BMI, Form 27 & Form 28 (Fertilisation Details)
 
 ---
 
 ### Slide 1: Executive Summary & Milestone Achievement
-* **Core Achievement**: Completed full end-to-end delivery of Form 27 (Assessment of Fertilization, Embryo & Blastocyst).
-* **Clinical Significance**: Provides embryologists with structured digital documentation for daily cleavage stages (Days 1–3) and blastocyst progression (Days 4–6), replacing manual paper embryology cards.
-* **Engineering Hardening**: Closed all boundary gaps between the Single-SPA frontend microfrontend and the OpenMRS Form Engine with automated 7-gate quality checks.
+* **Core Achievements**:
+  - Full end-to-end delivery of Form 27 (*Assessment of Fertilization, Embryo & Blastocyst*) and Form 28 (*Fertilisation Details*).
+  - Added Wife/Patient Body Mass Index (BMI) to Demographics Intake, PatientCard, and sticky DemographicsSummaryWidget.
+  - Closed all boundary gaps with an automated **9-stage quality deployment pipeline** and targeted sub-second form publishing.
+* **Clinical Significance**: Provides embryologists and fertility specialists with structured digital tracking for oocyte fertilization, cleavage rates (Days 2, 3, 5), and blastocyst grading (Days 4–6), completely eliminating manual paper embryology records.
 
 ---
 
-### Slide 2: Clinical Workflow Impact (The Embryology Lifecycle)
+### Slide 2: Clinical Workflow Impact (The IVF Laboratory & Embryology Lifecycle)
 
 ```mermaid
 flowchart LR
-    A[Day 0: OPU & Insemination] --> B[Day 1: 2PN Fertilization Check]
-    B --> C[Days 2–3: Cleavage & Grading 2C–8C / A–D]
-    C --> D[Day 4: Morula Assessment]
-    D --> E[Days 5–6: Blastocyst Expansion 1AA–6CC]
-    E --> F[Embryo Transfer / Cryopreservation]
+    A[Day 0: OPU & Insemination] --> B[Day 1: 2PN Fertilization & Rates Form 28]
+    B --> C[Days 2–3: Cleavage Counts & Rates Forms 27-28]
+    C --> D[Day 4: Morula Assessment Form 27]
+    D --> E[Days 5–6: Blastocyst Grading 1AA–6CC Forms 27-28]
+    E --> F[Embryo Transfer / Cryopreservation Form 16]
 ```
 
 #### What Clinicians & Embryologists See:
-1. **At-a-Glance Dashboard**:
-   - Day 1 Fertilization summary (2PN count and grades).
-   - Day 2 & Day 3 cleavage progression with cell stage and morphological grade.
-   - Day 4–6 blastocyst development and Gardner grading scale (1AA to 6CC).
-2. **Interactive Form Intake**:
-   - Direct "Record" / "Update" button on patient chart.
-   - Mobile and tablet responsive for clean lab bench data entry.
+1. **At-a-Glance Dashboards**:
+   - Number of Oocytes Fertilised and Fertilisation Rate (%).
+   - Cleaved embryos on Day 2, Cleavage Rate (%), Day 3, and Day 5 blastocyst counts.
+   - Day 1–6 morphological grading (Gardner scale 1AA to 6CC) and embryology remarks.
+2. **Patient Demographics Overview**:
+   - Wife's BMI displayed alongside Husband's BMI on the patient card and top header widget.
+3. **Contiguous Clinical Navigation**:
+   - Locked sidebar sorting (`order: 1`) ensures all 28 AIIMS clinical intake forms appear in unified clinical sequence without interruption from core OpenMRS links.
 
 ---
 
 ### Slide 3: Engineering Post-Mortem & Preventive Architecture
 
-#### The Problem Solved:
-* In OpenMRS 3.x, frontend dashboards and backend form engine schemas are decoupled.
-* A form could compile cleanly in TypeScript but fail when saving observations due to relational database rules (`concept_numeric`).
+#### The Problems Solved:
+1. **Relational Concept Database Rule (`concept_numeric`)**:
+   - Catching missing `concept_numeric` rows before observation save (prevented OpenMRS `ConceptNumeric.getAllowDecimal()` NPEs).
+2. **Sidebar Interleaving (`order` defect)**:
+   - Fixed automated scaffolder to prevent incrementing `order` beyond 1, keeping all custom forms grouped contiguously ahead of core OpenMRS chart links.
+3. **i18n String Safety**:
+   - Added pre-flight `audit:i18n` gate to ensure zero runtime missing translation keys.
 
-#### The Automated Armor:
+#### The 9-Stage Automated Pipeline:
 ```mermaid
 flowchart TD
     Pre[Docker Pre-Flight] --> Gate1[1. Form Schema Validator: validate:forms]
-    Gate1 --> Gate2[2. Concept Dictionary & Numeric Validator: validate:concepts]
-    Gate2 --> Gate3[3. TypeScript Typecheck: tsc]
-    Gate3 --> Gate4[4. Unit Test Suite: vitest]
-    Gate4 --> Build[5. Rspack Production Build & Route Generation]
-    Build --> Deploy[6. Hot-Deploy to Running Container]
-    Deploy --> Probe[7. Live Endpoint Probe: importmap.json]
+    Gate1 --> Gate2[2. Concept Dictionary: validate:concepts]
+    Gate2 --> Gate3[3. Translation Health Check: audit:i18n]
+    Gate3 --> Gate4[4. TypeScript Typecheck: tsc]
+    Gate4 --> Gate5[5. Unit Test Suite: vitest]
+    Gate5 --> Build[6. Single-Sourced Route Generation & Rspack Build]
+    Build --> Deploy[7. Hot-Deploy to Running Docker Container]
+    Deploy --> Probe[8. Live Endpoint Probe: importmap.json]
+    Probe --> E2E[9. Headless Smoke Test Robot: test:e2e]
 ```
-
-1. **Zero Silent Failures**: Every deployment automatically checks that all 27 form schemas are published and valid.
-2. **Deep Relational Validation**: Checks every question concept and answer concept across 4,828 database entries in under 4 seconds.
-3. **Interactive Smoke Test Robot**: Headless Chromium clicks "Record" in the live patient chart to ensure the workspace loads without error.
 
 ---
 
 ### Slide 4: Key Platform Metrics
-* **Total Active Forms**: 27 Forms across the entire fertility journey (intake -> stim -> OPU -> lab -> ET).
-* **Concept Registry Coverage**: 316 unique medical concepts, 100% active and validated.
-* **Unit Tests**: 74 automated unit tests running in Vitest.
-* **Deployment Speed**: Complete 7-stage quality pipeline builds, validates, and hot-deploys in **under 40 seconds**.
+
+| Metric | Previous (Morning) | Current (Form 28 Live) |
+|---|---|---|
+| **Total Registered Clinical Forms** | 26 | **28 Forms Active & Published** |
+| **Concept Registry Coverage** | 303 | **324 Unique Medical Concepts** |
+| **Numeric Concepts with Metadata** | 79 | **91 Fully Verified** |
+| **Automated Unit Tests** | 70 | **77 Passing Tests (31 test suites)** |
+| **i18n Translation Health** | Unchecked | **100% Populated (0 missing)** |
+| **Active Frontend Bundle** | `1.0.71` | **`1.0.75` (HTTP 200 Live Verified)** |
+

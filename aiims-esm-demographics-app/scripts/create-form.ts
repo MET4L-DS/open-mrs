@@ -37,6 +37,7 @@ interface ParsedArgs {
   key: string;
   name: string;
   icon: string;
+  uuid?: string;
   concepts: string[];
   keepOnFail: boolean;
 }
@@ -45,12 +46,15 @@ function parseArguments(): ParsedArgs {
   const args = process.argv.slice(2);
   const positionals: string[] = [];
   let icon = 'ReportData';
+  let uuid: string | undefined;
   let concepts: string[] = [];
   let keepOnFail = false;
 
   for (const arg of args) {
     if (arg.startsWith('--icon=')) {
       icon = arg.split('=')[1].trim();
+    } else if (arg.startsWith('--uuid=')) {
+      uuid = arg.split('=')[1].trim();
     } else if (arg.startsWith('--concepts=')) {
       concepts = arg
         .split('=')[1]
@@ -92,7 +96,7 @@ function parseArguments(): ParsedArgs {
     process.exit(1);
   }
 
-  return { key, name, icon, concepts, keepOnFail };
+  return { key, name, icon, uuid, concepts, keepOnFail };
 }
 
 // Generate new random UUIDv4 or predictable OpenMRS test format
@@ -106,12 +110,12 @@ function generateFormUuid(): string {
 }
 
 function main() {
-  const { key, name, icon, concepts, keepOnFail } = parseArguments();
+  const { key, name, icon, uuid, concepts, keepOnFail } = parseArguments();
 
   const pascal = toPascalCase(key);
   const camel = toCamelCase(key);
   const upperSnake = toUpperSnakeCase(key);
-  const formUuid = generateFormUuid();
+  const formUuid = uuid || generateFormUuid();
 
   console.log(`\x1b[36m=================================================================\x1b[0m`);
   console.log(`\x1b[36m AIIMS Form Scaffolder: ${key}\x1b[0m`);
@@ -324,7 +328,13 @@ import * as resource from './${key}.resource';
 
 vi.mock('react-i18next', () => ({
   useTranslation: () => ({
-    t: (_key: string, defaultValue?: string) => defaultValue || _key,
+    t: (_key: string, defaultValue?: string, options?: any) => {
+      let result = defaultValue || _key;
+      if (options?.value !== undefined && options?.unit !== undefined) {
+        return \`\${options.value} \${options.unit}\`;
+      }
+      return result;
+    },
   }),
 }));
 

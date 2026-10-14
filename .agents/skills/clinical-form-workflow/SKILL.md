@@ -37,15 +37,18 @@ Choose the appropriate track based on your task:
 ### Stage 4: Frontend Microfrontend Scaffolding (`create-form`)
 1. Run scaffolding CLI in `aiims-esm-demographics-app`:
    ```bash
-   npm run create-form -- <form-key> "<Form Display Name>" --icon=<CarbonIconName>
+   npm run create-form -- <form-key> "<Form Display Name>" --uuid=<form_uuid> --icon=<CarbonIconName>
    ```
-2. The CLI automatically registers form UUID, updates `FORM_REGISTRY`, regenerates routes and extensions, and scaffolds feature files.
+2. **Golden Rules for Scaffolding**:
+   - Always supply `--uuid=<form_uuid>` matching Stage 2/3 so frontend and backend remain strictly synchronized.
+   - All clinical intake dashboards **MUST** use `order: 1` in `patient-chart-dashboard-slot`. Never increment `order` (e.g. order 2, 3), as OpenMRS core registers Vitals at `order: 2` and Medications at `order: 3`. Keeping `order: 1` guarantees that all AIIMS clinical forms remain together in contiguous sidebar sequence.
+   - The CLI automatically updates `src/config/form-uuids.ts`, `src/config/form-registry.ts`, generates `src/routes.json` & extensions, and creates starter files.
 
 ### Stage 5: Frontend Customization & Localization
 1. **Hook (`<form-key>.resource.ts`)**: Implement typed interface and observation extraction using `useFormEncounter` and `getOptionalObsValue`.
 2. **Card (`<form-key>-card.component.tsx`)**: Implement Carbon `ObservationCard` sections with localized labels and units.
 3. **Translations (`translations/en.json`)**: Add all display strings and run `npm run audit:i18n` (must achieve 0 missing, 0 empty).
-4. **Unit Tests (`<form-key>.test.tsx`)**: Verify empty state, recorded observation rendering, and type contracts.
+4. **Unit Tests (`<form-key>.test.tsx`)**: Verify empty state, recorded observation rendering, and type contracts. Ensure the `useTranslation` mock handles `options` interpolation (`{ value, unit }`) if testing formatted `DataRow` units.
 
 ### Stage 6: Quality Gates, Deployment & Interactive E2E Verification
 1. Run automated deployment pipeline:
