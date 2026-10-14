@@ -43,24 +43,25 @@ describe('EmbryoGradingDay3Card', () => {
     expect(screen.getByText('Laboratory Notes & Remarks')).toBeInTheDocument();
   });
 
-  it('renders all grade counts and total correctly when data is provided', () => {
+  it('renders all alphanumeric grade values correctly when data is provided', () => {
     const mockData: resource.AiimsEmbryoGradingDay3Data = {
       hasData: true,
-      grade1EmbryosDay3: '4',
-      grade2EmbryosDay3: '3',
-      grade3EmbryosDay3: '1',
-      grade4EmbryosDay3: '0',
-      totalGradedEmbryosDay3: 8,
+      grade1EmbryosDay3: '8C/A, 8C/B',
+      grade2EmbryosDay3: '6C/B',
+      grade3EmbryosDay3: '4C/C',
+      grade4EmbryosDay3: '2PN-arrest',
       embryoGradingDay3Remarks: 'Uniform cleavage, minimal fragmentation',
     };
 
     render(<EmbryoGradingDay3Card data={mockData} />);
     expect(screen.getByText('Grade 1 Embryos (Day 3)')).toBeInTheDocument();
-    expect(screen.getByText(/4\s+embryos/)).toBeInTheDocument();
+    expect(screen.getByText('8C/A, 8C/B')).toBeInTheDocument();
     expect(screen.getByText('Grade 2 Embryos (Day 3)')).toBeInTheDocument();
-    expect(screen.getByText(/3\s+embryos/)).toBeInTheDocument();
-    expect(screen.getByText('Total Graded Embryos (Day 3)')).toBeInTheDocument();
-    expect(screen.getByText(/8\s+embryos/)).toBeInTheDocument();
+    expect(screen.getByText('6C/B')).toBeInTheDocument();
+    expect(screen.getByText('Grade 3 Embryos (Day 3)')).toBeInTheDocument();
+    expect(screen.getByText('4C/C')).toBeInTheDocument();
+    expect(screen.getByText('Grade 4 Embryos (Day 3)')).toBeInTheDocument();
+    expect(screen.getByText('2PN-arrest')).toBeInTheDocument();
     expect(screen.getByText('Uniform cleavage, minimal fragmentation')).toBeInTheDocument();
   });
 });

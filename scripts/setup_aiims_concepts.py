@@ -41,6 +41,7 @@ print("Connected to:", res.strip())
 sql_statements = []
 
 def add_concept_sql(c_uuid, name, datatype_id, class_id=7, is_numeric=False, units=None, allow_decimal=0, low_abs=None, hi_abs=None):
+    is_numeric = is_numeric or (datatype_id == 1)
     safe_name = name.replace("'", "''")
     # Check if concept already exists by UUID
     sql = f"""
@@ -57,7 +58,7 @@ def add_concept_sql(c_uuid, name, datatype_id, class_id=7, is_numeric=False, uni
     ELSE
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = {datatype_id}, class_id = {class_id} WHERE concept_id = @existing_id;
-        {"IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, " + (f"'{units}'" if units else "NULL") + f", {allow_decimal}, " + (str(low_abs) if low_abs is not None else "NULL") + f", " + (str(hi_abs) if hi_abs is not None else "NULL") + "); END IF;" if is_numeric else ""}
+        {"IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, " + (f"'{units}'" if units else "NULL") + f", {allow_decimal}, " + (str(low_abs) if low_abs is not None else "NULL") + f", " + (str(hi_abs) if hi_abs is not None else "NULL") + "); END IF;" if is_numeric else "DELETE FROM concept_numeric WHERE concept_id = @existing_id;"}
     END IF;
     """
     return sql
@@ -853,7 +854,7 @@ full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000111", "Anti
 full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000112", "Day 2 Follicle-Stimulating Hormone", datatype_id=1, class_id=7, is_numeric=True, units="mIU/mL", allow_decimal=1))
 full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000113", "Day 2 Luteinizing Hormone", datatype_id=1, class_id=7, is_numeric=True, units="mIU/mL", allow_decimal=1))
 full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000114", "Thyroid-Stimulating Hormone", datatype_id=1, class_id=7, is_numeric=True, units="uIU/mL", allow_decimal=1))
-full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000115", "Serum Prolactin", datatype_id=1, class_id=7, units="ng/mL", allow_decimal=1))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000115", "Serum Prolactin", datatype_id=1, class_id=7, is_numeric=True, units="ng/mL", allow_decimal=1))
 
 # Investigation Female Surgical Procedure Concepts (Form 15)
 # Hysteroscopy (0116-0121)
@@ -1045,10 +1046,10 @@ full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000266", "Numb
 full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000267", "Fertilisation Details Remarks", datatype_id=3, class_id=7))
 
 # Embryo Grading Day 3 Concepts (Form 29: 0268-0272)
-full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000268", "Grade 1 Embryos Day 3", datatype_id=1, class_id=7, is_numeric=True, units="embryos", allow_decimal=0, low_abs=0, hi_abs=100))
-full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000269", "Grade 2 Embryos Day 3", datatype_id=1, class_id=7, is_numeric=True, units="embryos", allow_decimal=0, low_abs=0, hi_abs=100))
-full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000270", "Grade 3 Embryos Day 3", datatype_id=1, class_id=7, is_numeric=True, units="embryos", allow_decimal=0, low_abs=0, hi_abs=100))
-full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000271", "Grade 4 Embryos Day 3", datatype_id=1, class_id=7, is_numeric=True, units="embryos", allow_decimal=0, low_abs=0, hi_abs=100))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000268", "Grade 1 Embryos Day 3", datatype_id=3, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000269", "Grade 2 Embryos Day 3", datatype_id=3, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000270", "Grade 3 Embryos Day 3", datatype_id=3, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000271", "Grade 4 Embryos Day 3", datatype_id=3, class_id=7))
 full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000272", "Embryo Grading Day 3 Remarks", datatype_id=3, class_id=7))
 
 # 3. Link Answers

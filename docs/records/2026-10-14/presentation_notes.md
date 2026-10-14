@@ -69,8 +69,8 @@ flowchart TD
 |---|---|---|
 | **Total Registered Clinical Forms** | 26 | **29 Forms Active & Published** |
 | **Concept Registry Coverage** | 303 | **329 Unique Medical Concepts** |
-| **Numeric Concepts with Metadata** | 79 | **95 Fully Verified** |
+| **Numeric Concepts with Metadata** | 79 | **91 Fully Verified** |
 | **Automated Unit Tests** | 70 | **81 Passing Tests (32 test suites)** |
 | **i18n Translation Health** | Unchecked | **100% Populated (0 missing)** |
-| **Active Frontend Bundle** | `1.0.71` | **`1.0.78` (HTTP 200 Live Verified)** |
+| **Active Frontend Bundle** | `1.0.71` | **`1.0.79` (HTTP 200 Live Verified)** |
 

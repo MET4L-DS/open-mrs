@@ -221,10 +221,10 @@ To maintain agility and avoid blocking clinical deployment pending terminology l
 | `c0010001-0000-0000-0000-000000000265` | Embryos Cleaved on Day 3 | Numeric | Finding | Local / Fertilisation Details | embryos | — | Active | Form 28: Day 3 cleaved embryos |
 | `c0010001-0000-0000-0000-000000000266` | Number of Embryos Cleaved on Day 5 | Numeric | Finding | Local / Fertilisation Details | embryos | — | Active | Form 28: Day 5 cleaved embryos |
 | `c0010001-0000-0000-0000-000000000267` | Fertilisation Details Remarks | Text | Misc | Local / Fertilisation Details | — | — | Active | Form 28: Clinical notes & remarks |
-| `c0010001-0000-0000-0000-000000000268` | Grade 1 Embryos Day 3 | Numeric | Finding | Local / Embryo Grading | embryos | — | Active | Form 29: Grade 1 embryo count |
-| `c0010001-0000-0000-0000-000000000269` | Grade 2 Embryos Day 3 | Numeric | Finding | Local / Embryo Grading | embryos | — | Active | Form 29: Grade 2 embryo count |
-| `c0010001-0000-0000-0000-000000000270` | Grade 3 Embryos Day 3 | Numeric | Finding | Local / Embryo Grading | embryos | — | Active | Form 29: Grade 3 embryo count |
-| `c0010001-0000-0000-0000-000000000271` | Grade 4 Embryos Day 3 | Numeric | Finding | Local / Embryo Grading | embryos | — | Active | Form 29: Grade 4 embryo count |
+| `c0010001-0000-0000-0000-000000000268` | Grade 1 Embryos Day 3 | Text | Finding | Local / Embryo Grading | — | — | Active | Form 29: Grade 1 embryo description (alphanumeric freetext) |
+| `c0010001-0000-0000-0000-000000000269` | Grade 2 Embryos Day 3 | Text | Finding | Local / Embryo Grading | — | — | Active | Form 29: Grade 2 embryo description (alphanumeric freetext) |
+| `c0010001-0000-0000-0000-000000000270` | Grade 3 Embryos Day 3 | Text | Finding | Local / Embryo Grading | — | — | Active | Form 29: Grade 3 embryo description (alphanumeric freetext) |
+| `c0010001-0000-0000-0000-000000000271` | Grade 4 Embryos Day 3 | Text | Finding | Local / Embryo Grading | — | — | Active | Form 29: Grade 4 embryo description (alphanumeric freetext) |
 | `c0010001-0000-0000-0000-000000000272` | Embryo Grading Day 3 Remarks | Text | Misc | Local / Embryo Grading | — | — | Active | Form 29: Clinical notes & remarks |
 
 ---

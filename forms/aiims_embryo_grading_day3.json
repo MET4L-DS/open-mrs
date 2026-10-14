@@ -21,10 +21,8 @@
               "id": "grade_1_embryos_day3",
               "required": "false",
               "questionOptions": {
-                "rendering": "number",
-                "concept": "c0010001-0000-0000-0000-000000000268",
-                "min": 0,
-                "max": 100
+                "rendering": "text",
+                "concept": "c0010001-0000-0000-0000-000000000268"
               }
             },
             {
@@ -33,10 +31,8 @@
               "id": "grade_2_embryos_day3",
               "required": "false",
               "questionOptions": {
-                "rendering": "number",
-                "concept": "c0010001-0000-0000-0000-000000000269",
-                "min": 0,
-                "max": 100
+                "rendering": "text",
+                "concept": "c0010001-0000-0000-0000-000000000269"
               }
             },
             {
@@ -45,10 +41,8 @@
               "id": "grade_3_embryos_day3",
               "required": "false",
               "questionOptions": {
-                "rendering": "number",
-                "concept": "c0010001-0000-0000-0000-000000000270",
-                "min": 0,
-                "max": 100
+                "rendering": "text",
+                "concept": "c0010001-0000-0000-0000-000000000270"
               }
             },
             {
@@ -57,10 +51,8 @@
               "id": "grade_4_embryos_day3",
               "required": "false",
               "questionOptions": {
-                "rendering": "number",
-                "concept": "c0010001-0000-0000-0000-000000000271",
-                "min": 0,
-                "max": 100
+                "rendering": "text",
+                "concept": "c0010001-0000-0000-0000-000000000271"
               }
             }
           ]

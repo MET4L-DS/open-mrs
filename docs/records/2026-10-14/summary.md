@@ -47,16 +47,16 @@
 ### Form 29: Embryo Grading Day 3
 - **Clinical CSV Specification**: [`csv/aiims_ivf_04 copy - embryo_grading_day3.csv`](file:///c:/Met4l.DSCode/Projects/open-mrs/csv/aiims_ivf_04%20copy%20-%20embryo_grading_day3.csv) (Veeck / Istanbul Day 3 Cleavage Embryo Grading).
 - **Concept Modeling**: Registered 5 concepts in MariaDB (`c0010001-0000-0000-0000-000000000268` through `0272`):
-  - 4 Numeric concepts with complete `concept_numeric` metadata (`units='embryos'`, `allow_decimal=0`, range 0-100) for Grade 1, Grade 2, Grade 3, and Grade 4 embryo counts.
+  - 4 Text concepts for Grade 1, Grade 2, Grade 3, and Grade 4 embryo descriptions (alphanumeric freetext for embryology notations).
   - 1 Text concept for Day 3 Laboratory Remarks.
-- **AMPATH Schema**: Authored `forms/aiims_embryo_grading_day3.json` and published to OpenMRS backend (`37e59734-dac9-4332-ba27-f1053d189091`).
+- **AMPATH Schema**: Authored `forms/aiims_embryo_grading_day3.json` with `"rendering": "text"` for Grade 1–4 and published to OpenMRS backend (`37e59734-dac9-4332-ba27-f1053d189091`).
 - **Frontend Architecture**:
   - Scaffolded feature module `src/embryo-grading-day3/` with `order: 1` and `Microscope` icon.
-  - Implemented typed resource hook (`embryo-grading-day3.resource.ts`) extracting counts and automatically calculating `totalGradedEmbryosDay3`.
+  - Implemented typed resource hook (`embryo-grading-day3.resource.ts`) extracting alphanumeric values for Grade 1–4 and remarks.
   - Implemented Carbon `ObservationCard` component (`embryo-grading-day3-card.component.tsx`) with 2 structured sections: Day 3 Cleavage Stage Embryo Grading and Laboratory Notes & Remarks.
   - Added full i18n localization keys in `translations/en.json` (verified via `audit:i18n` with 0 missing keys).
   - Implemented unit test suite in `embryo-grading-day3.test.tsx` (4 tests passing).
-  - Verified via 9-stage deployment pipeline (`npm run deploy:local`) and E2E smoke test robot (`npm run test:e2e`). Hot-deployed bundle `openmrs-esm-aiims-demographics-app-1.0.78`.
+  - Verified via 9-stage deployment pipeline (`npm run deploy:local`) and E2E smoke test robot (`npm run test:e2e`). Hot-deployed bundle `openmrs-esm-aiims-demographics-app-1.0.79`.
 
 ---
 
@@ -121,8 +121,8 @@ Upgraded deployment pipeline to run 9 sequential quality gates with zero downtim
 |---|---|---|---|
 | Registered Clinical Forms | 29 | 29 Published & Active | ✓ 100% |
 | Unique Concept Definitions | 329 | 329 Active & Verified | ✓ 100% |
-| Numeric Concepts with `concept_numeric` | 95 | 95 Verified | ✓ 100% |
+| Numeric Concepts with `concept_numeric` | 91 | 91 Verified | ✓ 100% |
 | Unit Test Suite | 81 | 81 Passing (32 files) | ✓ 100% |
 | i18n Translation Health | 100% | 0 Missing Keys (`audit:i18n`) | ✓ Clean |
 | TypeScript Compiler Errors | 0 | 0 Errors | ✓ Clean |
-| Active Frontend Bundle | — | `openmrs-esm-aiims-demographics-app-1.0.78` | ✓ Active |
+| Active Frontend Bundle | — | `openmrs-esm-aiims-demographics-app-1.0.79` | ✓ Active |
