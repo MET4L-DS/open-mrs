@@ -1044,6 +1044,13 @@ full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000265", "Embr
 full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000266", "Number of Embryos Cleaved on Day 5", datatype_id=1, class_id=7, is_numeric=True, units="embryos", allow_decimal=0, low_abs=0, hi_abs=100))
 full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000267", "Fertilisation Details Remarks", datatype_id=3, class_id=7))
 
+# Embryo Grading Day 3 Concepts (Form 29: 0268-0272)
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000268", "Grade 1 Embryos Day 3", datatype_id=1, class_id=7, is_numeric=True, units="embryos", allow_decimal=0, low_abs=0, hi_abs=100))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000269", "Grade 2 Embryos Day 3", datatype_id=1, class_id=7, is_numeric=True, units="embryos", allow_decimal=0, low_abs=0, hi_abs=100))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000270", "Grade 3 Embryos Day 3", datatype_id=1, class_id=7, is_numeric=True, units="embryos", allow_decimal=0, low_abs=0, hi_abs=100))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000271", "Grade 4 Embryos Day 3", datatype_id=1, class_id=7, is_numeric=True, units="embryos", allow_decimal=0, low_abs=0, hi_abs=100))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000272", "Embryo Grading Day 3 Remarks", datatype_id=3, class_id=7))
+
 # 3. Link Answers
 # Education Wife answers
 for u, _ in education_answers:

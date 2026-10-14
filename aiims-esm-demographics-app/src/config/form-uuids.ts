@@ -110,4 +110,8 @@ export const AIIMS_EMBRYO_ASSESSMENT_FORM_NAME = 'AIIMS Visit: Assessment of Fer
 export const AIIMS_FERTILISATION_DETAILS_FORM_UUID = '37e59734-dac9-4332-ba27-f1053d189090';
 export const AIIMS_FERTILISATION_DETAILS_FORM_NAME = 'AIIMS Visit: Fertilisation Details';
 
+// Form UUID for AIIMS Visit: Embryo Grading Day 3
+export const AIIMS_EMBRYO_GRADING_DAY3_FORM_UUID = '37e59734-dac9-4332-ba27-f1053d189091';
+export const AIIMS_EMBRYO_GRADING_DAY3_FORM_NAME = 'AIIMS Visit: Embryo Grading Day 3';
+
 // @create-form:uuids-end

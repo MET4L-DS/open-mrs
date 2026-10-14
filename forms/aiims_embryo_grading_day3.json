@@ -1,0 +1,88 @@
+{
+  "name": "AIIMS Visit: Embryo Grading Day 3",
+  "description": "AIIMS Department of Reproductive Medicine & IVF - Day 3 Cleavage Embryo Grading Sheet",
+  "version": "1.0",
+  "published": true,
+  "retired": false,
+  "encounter": "Consultation",
+  "processor": "EncounterFormProcessor",
+  "referencedForms": [],
+  "pages": [
+    {
+      "label": "Embryo Grading Day 3",
+      "sections": [
+        {
+          "label": "Day 3 Cleavage Stage Embryo Grading",
+          "isExpanded": true,
+          "questions": [
+            {
+              "label": "Grade 1 Embryos (Day 3)",
+              "type": "obs",
+              "id": "grade_1_embryos_day3",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "number",
+                "concept": "c0010001-0000-0000-0000-000000000268",
+                "min": 0,
+                "max": 100
+              }
+            },
+            {
+              "label": "Grade 2 Embryos (Day 3)",
+              "type": "obs",
+              "id": "grade_2_embryos_day3",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "number",
+                "concept": "c0010001-0000-0000-0000-000000000269",
+                "min": 0,
+                "max": 100
+              }
+            },
+            {
+              "label": "Grade 3 Embryos (Day 3)",
+              "type": "obs",
+              "id": "grade_3_embryos_day3",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "number",
+                "concept": "c0010001-0000-0000-0000-000000000270",
+                "min": 0,
+                "max": 100
+              }
+            },
+            {
+              "label": "Grade 4 Embryos (Day 3)",
+              "type": "obs",
+              "id": "grade_4_embryos_day3",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "number",
+                "concept": "c0010001-0000-0000-0000-000000000271",
+                "min": 0,
+                "max": 100
+              }
+            }
+          ]
+        },
+        {
+          "label": "Laboratory Notes & Remarks",
+          "isExpanded": true,
+          "questions": [
+            {
+              "label": "Remarks",
+              "type": "obs",
+              "id": "embryo_grading_day3_remarks",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "textarea",
+                "concept": "c0010001-0000-0000-0000-000000000272",
+                "rows": 4
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

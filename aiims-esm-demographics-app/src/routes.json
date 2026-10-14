@@ -568,6 +568,26 @@
       "slot": "aiims-fertilisation-details-dashboard-slot",
       "online": true,
       "offline": true
+    },
+    {
+      "name": "aiims-embryo-grading-day3-dashboard-link",
+      "component": "aiimsEmbryoGradingDay3DashboardLink",
+      "slot": "patient-chart-dashboard-slot",
+      "order": 1,
+      "meta": {
+        "slot": "aiims-embryo-grading-day3-dashboard-slot",
+        "path": "aiims-embryo-grading-day3",
+        "title": "Embryo Grading Day 3"
+      },
+      "online": true,
+      "offline": true
+    },
+    {
+      "name": "aiims-embryo-grading-day3-dashboard",
+      "component": "aiimsEmbryoGradingDay3Dashboard",
+      "slot": "aiims-embryo-grading-day3-dashboard-slot",
+      "online": true,
+      "offline": true
     }
   ]
 }

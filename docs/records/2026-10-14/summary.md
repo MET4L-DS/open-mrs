@@ -44,6 +44,20 @@
 - **Quality Gates**: Verified with `npm run validate:forms`, `npm run validate:concepts`, 31 Vitest suites (77 tests passing), automated deployment pipeline (bundle `1.0.76`), and headless E2E dashboard smoke test robot.
 
 
+### Form 29: Embryo Grading Day 3
+- **Clinical CSV Specification**: [`csv/aiims_ivf_04 copy - embryo_grading_day3.csv`](file:///c:/Met4l.DSCode/Projects/open-mrs/csv/aiims_ivf_04%20copy%20-%20embryo_grading_day3.csv) (Veeck / Istanbul Day 3 Cleavage Embryo Grading).
+- **Concept Modeling**: Registered 5 concepts in MariaDB (`c0010001-0000-0000-0000-000000000268` through `0272`):
+  - 4 Numeric concepts with complete `concept_numeric` metadata (`units='embryos'`, `allow_decimal=0`, range 0-100) for Grade 1, Grade 2, Grade 3, and Grade 4 embryo counts.
+  - 1 Text concept for Day 3 Laboratory Remarks.
+- **AMPATH Schema**: Authored `forms/aiims_embryo_grading_day3.json` and published to OpenMRS backend (`37e59734-dac9-4332-ba27-f1053d189091`).
+- **Frontend Architecture**:
+  - Scaffolded feature module `src/embryo-grading-day3/` with `order: 1` and `Microscope` icon.
+  - Implemented typed resource hook (`embryo-grading-day3.resource.ts`) extracting counts and automatically calculating `totalGradedEmbryosDay3`.
+  - Implemented Carbon `ObservationCard` component (`embryo-grading-day3-card.component.tsx`) with 2 structured sections: Day 3 Cleavage Stage Embryo Grading and Laboratory Notes & Remarks.
+  - Added full i18n localization keys in `translations/en.json` (verified via `audit:i18n` with 0 missing keys).
+  - Implemented unit test suite in `embryo-grading-day3.test.tsx` (4 tests passing).
+  - Verified via 9-stage deployment pipeline (`npm run deploy:local`) and E2E smoke test robot (`npm run test:e2e`). Hot-deployed bundle `openmrs-esm-aiims-demographics-app-1.0.78`.
+
 ---
 
 ## 3. Post-Mortem & Bug Resolutions
@@ -63,15 +77,15 @@
 ### Bug 3: Interleaved Sidebar Navigation Links (Core OpenMRS Links Injected Between IVF Forms)
 - **Root Cause**: In `scripts/create-form.ts`, newly scaffolded forms computed `order = maxOrder + 1`, assigning `order: 2` to `embryo-assessment` and `order: 3` to `fertilisation-details`. In OpenMRS 3.x, `patient-chart-dashboard-slot` orders extensions numerically across *all* installed modules (core modules define Vitals at order 2 and Medications at order 3). Consequently, core links were interleaved directly between the AIIMS IVF forms.
 - **Fix**: Changed `order` to `1` for all AIIMS clinical intake forms in `src/config/form-registry.ts` and locked `order: 1` in `scripts/create-form.ts`.
-- **Permanent Guardrail**: Hardcoded `order: 1` in the CLI scaffolder and updated `src/routes.json` via `generate-routes`. All 28 AIIMS clinical forms now remain strictly grouped in contiguous clinical sequence.
+- **Permanent Guardrail**: Hardcoded `order: 1` in the CLI scaffolder and updated `src/routes.json` via `generate-routes`. All 29 AIIMS clinical forms now remain strictly grouped in contiguous clinical sequence.
 
 ---
 
 ## 4. Architectural & Tooling Enhancements
 
 ### 1. Clinical Form Validator (`scripts/validate_forms.py`)
-- Automatically validates all 27 forms registered in `src/config/form-uuids.ts`.
-- Deeply inspects every question and answer concept against the live MariaDB dictionary (4,828 concepts).
+- Automatically validates all 29 forms registered in `src/config/form-uuids.ts`.
+- Deeply inspects every question and answer concept against the live MariaDB dictionary (4,885 concepts).
 - Verifies that numeric questions have valid `concept_numeric` database records.
 - Available via `npm run validate:forms`.
 
@@ -82,14 +96,14 @@ Upgraded deployment pipeline to run 9 sequential quality gates with zero downtim
 3. Concept Dictionary Verification (`validate:concepts` with dynamic count reporting)
 4. Localization Key Audit (`audit:i18n` to prevent runtime missing strings; toggleable via `--skip-i18n-audit`)
 5. TypeScript Type Check (`tsc` with `noImplicitAny: true`)
-6. Unit Test Suite (`vitest` - 74 tests across 30 files)
+6. Unit Test Suite (`vitest` - 81 tests across 32 files)
 7. Single-sourced Route Generation (`generate-routes`)
 8. Production Microfrontend Build (Rspack optimized bundle)
 9. Hot-Deployment & Live Probe (`/openmrs/spa/importmap.json` HTTP 200 verification)
 
 ### 3. Targeted Single-Form Publishing (`scripts/publish_aiims_form.py`)
 - Added CLI argument parser supporting `--form=<name_or_key_or_uuid>` and `--all`.
-- Allows instant sub-second publishing of individual updated forms without reprocessing all 27 forms.
+- Allows instant sub-second publishing of individual updated forms without reprocessing all forms.
 
 ### 4. Workflow & Skill Optimization
 - **`clinical-form-workflow` Bifurcation**: Partitioned into **Track A** (Adding a Brand New Clinical Form, 6 stages) and **Track B** (Modifying Existing Form / Adding Fields, 4 stages) for rapid iterations.
@@ -105,10 +119,10 @@ Upgraded deployment pipeline to run 9 sequential quality gates with zero downtim
 
 | Metric | Target | Result | Status |
 |---|---|---|---|
-| Registered Clinical Forms | 28 | 28 Published & Active | ✓ 100% |
-| Unique Concept Definitions | 324 | 324 Active & Verified | ✓ 100% |
-| Numeric Concepts with `concept_numeric` | 91 | 91 Verified | ✓ 100% |
-| Unit Test Suite | 77 | 77 Passing (31 files) | ✓ 100% |
+| Registered Clinical Forms | 29 | 29 Published & Active | ✓ 100% |
+| Unique Concept Definitions | 329 | 329 Active & Verified | ✓ 100% |
+| Numeric Concepts with `concept_numeric` | 95 | 95 Verified | ✓ 100% |
+| Unit Test Suite | 81 | 81 Passing (32 files) | ✓ 100% |
 | i18n Translation Health | 100% | 0 Missing Keys (`audit:i18n`) | ✓ Clean |
 | TypeScript Compiler Errors | 0 | 0 Errors | ✓ Clean |
-| Active Frontend Bundle | — | `openmrs-esm-aiims-demographics-app-1.0.76` | ✓ Active |
+| Active Frontend Bundle | — | `openmrs-esm-aiims-demographics-app-1.0.78` | ✓ Active |

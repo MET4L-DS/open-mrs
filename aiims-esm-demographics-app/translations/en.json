@@ -532,4 +532,21 @@
   "fertilisationDetailsRemarks": "Fertilisation Details Remarks",
   "oocytes": "oocytes",
   "embryos": "embryos"
+,
+  "aiimsEmbryoGradingDay3Title": "Embryo Grading Day 3",
+  "embryoGradingDay3Details": "Embryo Grading Day 3 Details",
+  "loadingEmbryoGradingDay3": "Loading Embryo Grading Day 3...",
+  "noRecordedEmbryoGradingDay3Encounter": "No AIIMS Visit: Embryo Grading Day 3 encounter recorded yet",
+  "noEmbryoGradingDay3Body": "Veeck / Istanbul Day 3 cleavage stage embryo grading counts (Grade 1 to 4) have not been recorded for this patient yet.",
+  "noEmbryoGradingDay3Recorded": "No Embryo Grading Day 3 Recorded Yet",
+  "recordEmbryoGradingDay3": "Record Embryo Grading Day 3",
+  "updateEmbryoGradingDay3": "Update Embryo Grading Day 3",
+  "embryoGradingDay3Title": "Day 3 Cleavage Stage Embryo Grading",
+  "embryoGradingDay3RemarksTitle": "Laboratory Notes & Remarks",
+  "grade1EmbryosDay3": "Grade 1 Embryos (Day 3)",
+  "grade2EmbryosDay3": "Grade 2 Embryos (Day 3)",
+  "grade3EmbryosDay3": "Grade 3 Embryos (Day 3)",
+  "grade4EmbryosDay3": "Grade 4 Embryos (Day 3)",
+  "totalGradedEmbryosDay3": "Total Graded Embryos (Day 3)",
+  "embryoGradingDay3Remarks": "Embryo Grading Day 3 Remarks"
 }

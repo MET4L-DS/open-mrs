@@ -73,6 +73,8 @@ import {
   AIIMS_EMBRYO_ASSESSMENT_FORM_NAME,
     AIIMS_FERTILISATION_DETAILS_FORM_UUID,
   AIIMS_FERTILISATION_DETAILS_FORM_NAME,
+    AIIMS_EMBRYO_GRADING_DAY3_FORM_UUID,
+  AIIMS_EMBRYO_GRADING_DAY3_FORM_NAME,
   // @create-form:imports-end
 } from './form-uuids';
 
@@ -386,6 +388,17 @@ export const FORM_REGISTRY: FormRegistryEntry[] = [
     title: 'Fertilisation Details',
     slot: 'aiims-fertilisation-details-dashboard-slot',
     icon: Chemistry,
+    order: 1,
+  },
+    {
+    key: 'embryo-grading-day3',
+    uuid: AIIMS_EMBRYO_GRADING_DAY3_FORM_UUID,
+    name: AIIMS_EMBRYO_GRADING_DAY3_FORM_NAME,
+    path: 'aiims-embryo-grading-day3',
+    titleKey: 'aiimsEmbryoGradingDay3Title',
+    title: 'Embryo Grading Day 3',
+    slot: 'aiims-embryo-grading-day3-dashboard-slot',
+    icon: ReportData,
     order: 1,
   },
   // @create-form:registry-end
