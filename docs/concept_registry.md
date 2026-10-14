@@ -204,15 +204,15 @@ To maintain agility and avoid blocking clinical deployment pending terminology l
 | `c0010001-0000-0000-0000-000000000248` | Number of Embryos Day 1 (2PN) | Numeric | Finding | Local / Embryo Assessment | embryos | — | Active | Form 27: 2PN count |
 | `c0010001-0000-0000-0000-000000000249` | Grade of Embryos Day 1 (2PN) | Text | Finding | Local / Embryo Assessment | — | — | Active | Form 27: Day 1 grade |
 | `c0010001-0000-0000-0000-000000000250` | Number of Embryos Day 2 | Numeric | Finding | Local / Embryo Assessment | embryos | — | Active | Form 27: Day 2 count |
-| `c0010001-0000-0000-0000-000000000251` | Grade of Embryos Day 2 | Text | Finding | Local / Embryo Assessment | — | — | Active | Form 27: Day 2 grade |
+| `c0010001-0000-0000-0000-000000000251` | Grade of Embryos Day 2 | Coded | Finding | Local / Embryo Assessment | — | — | Active | Form 27: Day 2 grade (Cleavage answers) |
 | `c0010001-0000-0000-0000-000000000252` | Number of Embryos Day 3 | Numeric | Finding | Local / Embryo Assessment | embryos | — | Active | Form 27: Day 3 count |
-| `c0010001-0000-0000-0000-000000000253` | Grade of Embryos Day 3 | Text | Finding | Local / Embryo Assessment | — | — | Active | Form 27: Day 3 grade |
+| `c0010001-0000-0000-0000-000000000253` | Grade of Embryos Day 3 | Coded | Finding | Local / Embryo Assessment | — | — | Active | Form 27: Day 3 grade (Cleavage answers) |
 | `c0010001-0000-0000-0000-000000000254` | Number of Embryos Day 4 | Numeric | Finding | Local / Embryo Assessment | embryos | — | Active | Form 27: Day 4 count |
-| `c0010001-0000-0000-0000-000000000255` | Grade of Embryos Day 4 | Text | Finding | Local / Embryo Assessment | — | — | Active | Form 27: Day 4 grade |
+| `c0010001-0000-0000-0000-000000000255` | Grade of Embryos Day 4 | Coded | Finding | Local / Embryo Assessment | — | — | Active | Form 27: Day 4 grade (Morula answers) |
 | `c0010001-0000-0000-0000-000000000256` | Number of Embryos Day 5 | Numeric | Finding | Local / Embryo Assessment | embryos | — | Active | Form 27: Day 5 count |
-| `c0010001-0000-0000-0000-000000000257` | Grade of Embryos Day 5 | Text | Finding | Local / Embryo Assessment | — | — | Active | Form 27: Day 5 grade |
+| `c0010001-0000-0000-0000-000000000257` | Grade of Embryos Day 5 | Coded | Finding | Local / Embryo Assessment | — | — | Active | Form 27: Day 5 grade (Blastocyst answers) |
 | `c0010001-0000-0000-0000-000000000258` | Number of Embryos Day 6 | Numeric | Finding | Local / Embryo Assessment | embryos | — | Active | Form 27: Day 6 count |
-| `c0010001-0000-0000-0000-000000000259` | Grade of Embryos Day 6 | Text | Finding | Local / Embryo Assessment | — | — | Active | Form 27: Day 6 grade |
+| `c0010001-0000-0000-0000-000000000259` | Grade of Embryos Day 6 | Coded | Finding | Local / Embryo Assessment | — | — | Active | Form 27: Day 6 grade (Blastocyst answers) |
 | `c0010001-0000-0000-0000-000000000260` | Embryo Assessment Remarks | Text | Misc | Local / Embryo Assessment | — | — | Active | Form 27: Remarks & notes |
 | `c0010001-0000-0000-0000-000000000261` | Number of Oocytes Fertilised | Numeric | Finding | Local / Fertilisation Details | oocytes | — | Active | Form 28: Count of fertilized oocytes |
 | `c0010001-0000-0000-0000-000000000262` | Fertilisation Rate | Numeric | Finding | Local / Fertilisation Details | % | — | Active | Form 28: Fertilisation rate % |
@@ -394,6 +394,79 @@ To maintain agility and avoid blocking clinical deployment pending terminology l
 | `c0010002-0000-0000-0000-000000001026` | Progestin-primed ovarian stimulation | Local / Clinical | — | — | Active |
 | `c0010002-0000-0000-0000-000000001027` | Random start protocol | Local / Clinical | — | — | Active |
 | `c0010002-0000-0000-0000-000000001028` | Stop agonist | Local / Clinical | — | — | Active |
+
+---
+
+### 2.12 Embryo & Blastocyst Assessment Answer Options (`c0010002-...`)
+
+#### Cleavage Stage (Days 2 & 3)
+| Placeholder UUID | Display Name | Target Standard | Target Code | ATHENA Verified | Status |
+|:---|:---|:---|:---:|:---:|:---:|
+| `c0010002-0000-0000-0000-000000001050` | 2PN-arrest | Local / Clinical | — | — | Active |
+| `c0010002-0000-0000-0000-000000001051` | 2C/A | Local / Clinical | — | — | Active |
+| `c0010002-0000-0000-0000-000000001052` | 2C/B | Local / Clinical | — | — | Active |
+| `c0010002-0000-0000-0000-000000001053` | 2C/C | Local / Clinical | — | — | Active |
+| `c0010002-0000-0000-0000-000000001054` | 3C/A | Local / Clinical | — | — | Active |
+| `c0010002-0000-0000-0000-000000001055` | 3C/B | Local / Clinical | — | — | Active |
+| `c0010002-0000-0000-0000-000000001056` | 3C/C | Local / Clinical | — | — | Active |
+| `c0010002-0000-0000-0000-000000001057` | 4C/A | Local / Clinical | — | — | Active |
+| `c0010002-0000-0000-0000-000000001058` | 4C/B | Local / Clinical | — | — | Active |
+| `c0010002-0000-0000-0000-000000001059` | 4C/C | Local / Clinical | — | — | Active |
+| `c0010002-0000-0000-0000-000000001060` | 5C/A | Local / Clinical | — | — | Active |
+| `c0010002-0000-0000-0000-000000001061` | 5C/B | Local / Clinical | — | — | Active |
+| `c0010002-0000-0000-0000-000000001062` | 5C/C | Local / Clinical | — | — | Active |
+| `c0010002-0000-0000-0000-000000001063` | 6C/A | Local / Clinical | — | — | Active |
+| `c0010002-0000-0000-0000-000000001064` | 6C/B | Local / Clinical | — | — | Active |
+| `c0010002-0000-0000-0000-000000001065` | 6C/C | Local / Clinical | — | — | Active |
+| `c0010002-0000-0000-0000-000000001066` | 8C/A | Local / Clinical | — | — | Active |
+| `c0010002-0000-0000-0000-000000001067` | 8C/B | Local / Clinical | — | — | Active |
+| `c0010002-0000-0000-0000-000000001068` | 8C/C | Local / Clinical | — | — | Active |
+| `c0010002-0000-0000-0000-000000001069` | 10-12Cells | Local / Clinical | — | — | Active |
+
+#### Day 4 (Morula Stage)
+| Placeholder UUID | Display Name | Target Standard | Target Code | ATHENA Verified | Status |
+|:---|:---|:---|:---:|:---:|:---:|
+| `c0010002-0000-0000-0000-000000001070` | Morula | Local / Clinical | — | — | Active |
+| `c0010002-0000-0000-0000-000000001071` | Compacted Morula | Local / Clinical | — | — | Active |
+| `c0010002-0000-0000-0000-000000001072` | Early Blastocyst | Local / Clinical | — | — | Active |
+| `c0010002-0000-0000-0000-000000001073` | Arrest | Local / Clinical | — | — | Active |
+
+#### Blastocyst Stage (Days 5 & 6)
+| Placeholder UUID | Display Name | Target Standard | Target Code | ATHENA Verified | Status |
+|:---|:---|:---|:---:|:---:|:---:|
+| `c0010002-0000-0000-0000-000000001074` | Morula | Gardner / Local | — | — | Active |
+| `c0010002-0000-0000-0000-000000001075` | Arrest | Gardner / Local | — | — | Active |
+| `c0010002-0000-0000-0000-000000001076` | Pre-blast | Gardner / Local | — | — | Active |
+| `c0010002-0000-0000-0000-000000001077` | 1AA | Gardner scale | — | — | Active |
+| `c0010002-0000-0000-0000-000000001078` | 1AB | Gardner scale | — | — | Active |
+| `c0010002-0000-0000-0000-000000001079` | 1BA | Gardner scale | — | — | Active |
+| `c0010002-0000-0000-0000-000000001080` | 1BB | Gardner scale | — | — | Active |
+| `c0010002-0000-0000-0000-000000001081` | 1BC | Gardner scale | — | — | Active |
+| `c0010002-0000-0000-0000-000000001082` | 2AA | Gardner scale | — | — | Active |
+| `c0010002-0000-0000-0000-000000001083` | 2AB | Gardner scale | — | — | Active |
+| `c0010002-0000-0000-0000-000000001084` | 2BA | Gardner scale | — | — | Active |
+| `c0010002-0000-0000-0000-000000001085` | 2BB | Gardner scale | — | — | Active |
+| `c0010002-0000-0000-0000-000000001086` | 2BC | Gardner scale | — | — | Active |
+| `c0010002-0000-0000-0000-000000001087` | 3AA | Gardner scale | — | — | Active |
+| `c0010002-0000-0000-0000-000000001088` | 3AB | Gardner scale | — | — | Active |
+| `c0010002-0000-0000-0000-000000001089` | 3BA | Gardner scale | — | — | Active |
+| `c0010002-0000-0000-0000-000000001090` | 3BB | Gardner scale | — | — | Active |
+| `c0010002-0000-0000-0000-000000001091` | 3BC | Gardner scale | — | — | Active |
+| `c0010002-0000-0000-0000-000000001092` | 4AA | Gardner scale | — | — | Active |
+| `c0010002-0000-0000-0000-000000001093` | 4AB | Gardner scale | — | — | Active |
+| `c0010002-0000-0000-0000-000000001094` | 4BA | Gardner scale | — | — | Active |
+| `c0010002-0000-0000-0000-000000001095` | 4BB | Gardner scale | — | — | Active |
+| `c0010002-0000-0000-0000-000000001096` | 4BC | Gardner scale | — | — | Active |
+| `c0010002-0000-0000-0000-000000001097` | 4CA | Gardner scale | — | — | Active |
+| `c0010002-0000-0000-0000-000000001098` | 4CB | Gardner scale | — | — | Active |
+| `c0010002-0000-0000-0000-000000001099` | 4CC | Gardner scale | — | — | Active |
+| `c0010002-0000-0000-0000-000000001100` | 5AA | Gardner scale | — | — | Active |
+| `c0010002-0000-0000-0000-000000001101` | 5AB | Gardner scale | — | — | Active |
+| `c0010002-0000-0000-0000-000000001102` | 5BA | Gardner scale | — | — | Active |
+| `c0010002-0000-0000-0000-000000001103` | 5BB | Gardner scale | — | — | Active |
+| `c0010002-0000-0000-0000-000000001104` | 5BC | Gardner scale | — | — | Active |
+| `c0010002-0000-0000-0000-000000001105` | 6AA | Gardner scale | — | — | Active |
+| `c0010002-0000-0000-0000-000000001106` | 6CC | Gardner scale | — | — | Active |
 
 ---
 

@@ -495,6 +495,73 @@ cetrotide_start_day_answers = [
     ("c0010002-0000-0000-0000-000000001044", "Day 16"),
 ]
 
+# Form 27: Assessment of Fertilization, Embryo & Blastocyst - Grade Answers
+cleavage_embryo_grade_answers = [
+    ("c0010002-0000-0000-0000-000000001050", "2PN-arrest"),
+    ("c0010002-0000-0000-0000-000000001051", "2C/A"),
+    ("c0010002-0000-0000-0000-000000001052", "2C/B"),
+    ("c0010002-0000-0000-0000-000000001053", "2C/C"),
+    ("c0010002-0000-0000-0000-000000001054", "3C/A"),
+    ("c0010002-0000-0000-0000-000000001055", "3C/B"),
+    ("c0010002-0000-0000-0000-000000001056", "3C/C"),
+    ("c0010002-0000-0000-0000-000000001057", "4C/A"),
+    ("c0010002-0000-0000-0000-000000001058", "4C/B"),
+    ("c0010002-0000-0000-0000-000000001059", "4C/C"),
+    ("c0010002-0000-0000-0000-000000001060", "5C/A"),
+    ("c0010002-0000-0000-0000-000000001061", "5C/B"),
+    ("c0010002-0000-0000-0000-000000001062", "5C/C"),
+    ("c0010002-0000-0000-0000-000000001063", "6C/A"),
+    ("c0010002-0000-0000-0000-000000001064", "6C/B"),
+    ("c0010002-0000-0000-0000-000000001065", "6C/C"),
+    ("c0010002-0000-0000-0000-000000001066", "8C/A"),
+    ("c0010002-0000-0000-0000-000000001067", "8C/B"),
+    ("c0010002-0000-0000-0000-000000001068", "8C/C"),
+    ("c0010002-0000-0000-0000-000000001069", "10-12Cells"),
+]
+
+day4_embryo_grade_answers = [
+    ("c0010002-0000-0000-0000-000000001070", "Morula"),
+    ("c0010002-0000-0000-0000-000000001071", "Compacted Morula"),
+    ("c0010002-0000-0000-0000-000000001072", "Early Blastocyst"),
+    ("c0010002-0000-0000-0000-000000001073", "Arrest"),
+]
+
+blastocyst_embryo_grade_answers = [
+    ("c0010002-0000-0000-0000-000000001074", "Morula"),
+    ("c0010002-0000-0000-0000-000000001075", "Arrest"),
+    ("c0010002-0000-0000-0000-000000001076", "Pre-blast"),
+    ("c0010002-0000-0000-0000-000000001077", "1AA"),
+    ("c0010002-0000-0000-0000-000000001078", "1AB"),
+    ("c0010002-0000-0000-0000-000000001079", "1BA"),
+    ("c0010002-0000-0000-0000-000000001080", "1BB"),
+    ("c0010002-0000-0000-0000-000000001081", "1BC"),
+    ("c0010002-0000-0000-0000-000000001082", "2AA"),
+    ("c0010002-0000-0000-0000-000000001083", "2AB"),
+    ("c0010002-0000-0000-0000-000000001084", "2BA"),
+    ("c0010002-0000-0000-0000-000000001085", "2BB"),
+    ("c0010002-0000-0000-0000-000000001086", "2BC"),
+    ("c0010002-0000-0000-0000-000000001087", "3AA"),
+    ("c0010002-0000-0000-0000-000000001088", "3AB"),
+    ("c0010002-0000-0000-0000-000000001089", "3BA"),
+    ("c0010002-0000-0000-0000-000000001090", "3BB"),
+    ("c0010002-0000-0000-0000-000000001091", "3BC"),
+    ("c0010002-0000-0000-0000-000000001092", "4AA"),
+    ("c0010002-0000-0000-0000-000000001093", "4AB"),
+    ("c0010002-0000-0000-0000-000000001094", "4BA"),
+    ("c0010002-0000-0000-0000-000000001095", "4BB"),
+    ("c0010002-0000-0000-0000-000000001096", "4BC"),
+    ("c0010002-0000-0000-0000-000000001097", "4CA"),
+    ("c0010002-0000-0000-0000-000000001098", "4CB"),
+    ("c0010002-0000-0000-0000-000000001099", "4CC"),
+    ("c0010002-0000-0000-0000-000000001100", "5AA"),
+    ("c0010002-0000-0000-0000-000000001101", "5AB"),
+    ("c0010002-0000-0000-0000-000000001102", "5BA"),
+    ("c0010002-0000-0000-0000-000000001103", "5BB"),
+    ("c0010002-0000-0000-0000-000000001104", "5BC"),
+    ("c0010002-0000-0000-0000-000000001105", "6AA"),
+    ("c0010002-0000-0000-0000-000000001106", "6CC"),
+]
+
 
 
 # We assemble the migration script wrapped in a stored procedure for IF/ELSE control flow
@@ -564,6 +631,15 @@ for u, name in ovarian_stimulation_protocol_answers:
     full_script.append(add_concept_sql(u, name, datatype_id=4, class_id=11))
 
 for u, name in cetrotide_start_day_answers:
+    full_script.append(add_concept_sql(u, name, datatype_id=4, class_id=11))
+
+for u, name in cleavage_embryo_grade_answers:
+    full_script.append(add_concept_sql(u, name, datatype_id=4, class_id=11))
+
+for u, name in day4_embryo_grade_answers:
+    full_script.append(add_concept_sql(u, name, datatype_id=4, class_id=11))
+
+for u, name in blastocyst_embryo_grade_answers:
     full_script.append(add_concept_sql(u, name, datatype_id=4, class_id=11))
 
 
@@ -947,15 +1023,15 @@ full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000247", "Adju
 full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000248", "Number of Embryos Day 1 (2PN)", datatype_id=1, class_id=7, is_numeric=True, allow_decimal=0, low_abs=0, hi_abs=100))
 full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000249", "Grade of Embryos Day 1 (2PN)", datatype_id=3, class_id=7))
 full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000250", "Number of Embryos Day 2", datatype_id=1, class_id=7, is_numeric=True, allow_decimal=0, low_abs=0, hi_abs=100))
-full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000251", "Grade of Embryos Day 2", datatype_id=3, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000251", "Grade of Embryos Day 2", datatype_id=2, class_id=7))
 full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000252", "Number of Embryos Day 3", datatype_id=1, class_id=7, is_numeric=True, allow_decimal=0, low_abs=0, hi_abs=100))
-full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000253", "Grade of Embryos Day 3", datatype_id=3, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000253", "Grade of Embryos Day 3", datatype_id=2, class_id=7))
 full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000254", "Number of Embryos Day 4", datatype_id=1, class_id=7, is_numeric=True, allow_decimal=0, low_abs=0, hi_abs=100))
-full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000255", "Grade of Embryos Day 4", datatype_id=3, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000255", "Grade of Embryos Day 4", datatype_id=2, class_id=7))
 full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000256", "Number of Embryos Day 5", datatype_id=1, class_id=7, is_numeric=True, allow_decimal=0, low_abs=0, hi_abs=100))
-full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000257", "Grade of Embryos Day 5", datatype_id=3, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000257", "Grade of Embryos Day 5", datatype_id=2, class_id=7))
 full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000258", "Number of Embryos Day 6", datatype_id=1, class_id=7, is_numeric=True, allow_decimal=0, low_abs=0, hi_abs=100))
-full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000259", "Grade of Embryos Day 6", datatype_id=3, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000259", "Grade of Embryos Day 6", datatype_id=2, class_id=7))
 full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000260", "Embryo Assessment Remarks", datatype_id=3, class_id=7))
 
 # Fertilisation Details Concepts (Form 28: 0261-0267)
@@ -1531,6 +1607,38 @@ for ans_uuid in [
     "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",  # No
 ]:
     full_script.append(add_answer_sql("c0010001-0000-0000-0000-000000000244", ans_uuid))
+
+# Assessment of Fertilization, Embryo & Blastocyst (Form 27)
+# Ensure question concepts are updated to datatype_id = 2 (Coded) in case they already exist as Text
+full_script.append("""
+UPDATE concept SET datatype_id = 2 WHERE uuid IN (
+    'c0010001-0000-0000-0000-000000000251',
+    'c0010001-0000-0000-0000-000000000253',
+    'c0010001-0000-0000-0000-000000000255',
+    'c0010001-0000-0000-0000-000000000257',
+    'c0010001-0000-0000-0000-000000000259'
+);
+""")
+
+# Grade of Embryos Day 2 (0251)
+for ans_uuid, _ in cleavage_embryo_grade_answers:
+    full_script.append(add_answer_sql("c0010001-0000-0000-0000-000000000251", ans_uuid))
+
+# Grade of Embryos Day 3 (0253)
+for ans_uuid, _ in cleavage_embryo_grade_answers:
+    full_script.append(add_answer_sql("c0010001-0000-0000-0000-000000000253", ans_uuid))
+
+# Grade of Embryos Day 4 (0255)
+for ans_uuid, _ in day4_embryo_grade_answers:
+    full_script.append(add_answer_sql("c0010001-0000-0000-0000-000000000255", ans_uuid))
+
+# Grade of Embryos Day 5 (0257)
+for ans_uuid, _ in blastocyst_embryo_grade_answers:
+    full_script.append(add_answer_sql("c0010001-0000-0000-0000-000000000257", ans_uuid))
+
+# Grade of Embryos Day 6 (0259)
+for ans_uuid, _ in blastocyst_embryo_grade_answers:
+    full_script.append(add_answer_sql("c0010001-0000-0000-0000-000000000259", ans_uuid))
 
 
 full_script.append("END$$")

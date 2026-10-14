@@ -34,6 +34,15 @@
   - Added unit test suite in `fertilisation-details.test.tsx` (all 3 tests passing).
   - Verified via 9-stage deployment pipeline (`npm run deploy:local`) and E2E smoke test robot (`npm run test:e2e -- --form=aiims-fertilisation-details`). Hot-deployed bundle `openmrs-esm-aiims-demographics-app-1.0.74`.
 
+### Form 27 Fix: Assessment of Fertilization, Embryo & Blastocyst (Grading Dropdowns)
+- **Concept Modeling**: Converted Days 2, 3, 4, 5, 6 question concepts (`0251`, `0253`, `0255`, `0257`, `0259`) from free text (`datatype_id=3`) to coded questions (`datatype_id=2`).
+- **Answer Concepts Registered**:
+  - Cleavage stage answers (`c0010002-...1050` to `1069`): 20 clinical options (`2PN-arrest`, `2C/A`–`8C/C`, `10-12Cells`). Linked to Days 2 & 3.
+  - Day 4 morula stage answers (`c0010002-...1070` to `1073`): 4 clinical options (`Morula`, `Compacted Morula`, `Early Blastocyst`, `Arrest`). Linked to Day 4.
+  - Blastocyst stage answers (`c0010002-...1074` to `1106`): 33 clinical Gardner scale options (`1AA`–`6CC`, `Morula`, `Arrest`, `Pre-blast`). Linked to Days 5 & 6.
+- **AMPATH Form Schema**: Updated `forms/aiims_embryo_assessment.json` to `"rendering": "select"` with embedded `answers` arrays for Days 2, 3, 4, 5, and 6. Re-published to OpenMRS backend via `scripts/publish_aiims_form.py`.
+- **Quality Gates**: Verified with `npm run validate:forms`, `npm run validate:concepts`, 31 Vitest suites (77 tests passing), automated deployment pipeline (bundle `1.0.76`), and headless E2E dashboard smoke test robot.
+
 
 ---
 
@@ -102,4 +111,4 @@ Upgraded deployment pipeline to run 9 sequential quality gates with zero downtim
 | Unit Test Suite | 77 | 77 Passing (31 files) | ✓ 100% |
 | i18n Translation Health | 100% | 0 Missing Keys (`audit:i18n`) | ✓ Clean |
 | TypeScript Compiler Errors | 0 | 0 Errors | ✓ Clean |
-| Active Frontend Bundle | — | `openmrs-esm-aiims-demographics-app-1.0.74` | ✓ Active |
+| Active Frontend Bundle | — | `openmrs-esm-aiims-demographics-app-1.0.76` | ✓ Active |
