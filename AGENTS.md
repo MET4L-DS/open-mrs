@@ -24,6 +24,16 @@ Before performing any tasks in this repository, always read the project memory f
    - All user-facing strings and units (including `'years'`, `'kg/m²'`, etc.) must be localized using `useTranslation` and stored in `translations/en.json`.
    - Use `formatDatetime` from `@openmrs/esm-framework` for locale-aware dates; do not hardcode date format strings.
 
-5. **Deployment**:
-   - After building with `npm run build`, hot-deploy the bundle to the Docker environment using `python scripts/deploy_demographics.py`.
-   - Always verify that all tests pass (`npm run test`) and type checking succeeds (`npm run typescript`) before deploying.
+5. **Deployment & Quality Gates**:
+   - Always run the 7-stage automated deployment pipeline: `npm run deploy:local` (or `python scripts/deploy_pipeline.py`).
+   - The pipeline enforces Docker pre-flight, `validate:forms`, `validate:concepts`, `tsc`, `vitest`, Rspack build, and live probe verification.
+   - For single-form or dashboard smoke testing, run `npm run test:e2e -- --form=aiims-<key>`.
+
+6. **Relational Concept & Form Schema Integrity**:
+   - Any concept with `datatype_id = 1` (`Numeric`) **MUST** have a corresponding `concept_numeric` row (`allow_decimal`, `low_absolute`, `hi_absolute`, `units`). Never register a numeric concept without it.
+   - Every clinical form must have a published AMPATH JSON schema in `forms/` registered via `scripts/publish_aiims_form.py`.
+   - Never use non-ASCII Unicode dashes (`–`, `—`) in form schemas or SQL commands; use standard ASCII hyphens `-`.
+
+7. **Record Keeping & Documentation**:
+   - Document completed sessions and milestones date-wise in `docs/records/YYYY-MM-DD/` (`summary.md` and `presentation_notes.md`).
+   - Keep the master index `docs/records/README.md` up to date with new deliverables and health metrics.
