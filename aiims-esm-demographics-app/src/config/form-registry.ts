@@ -14,6 +14,7 @@ import {
   Chemistry,
   ReportData,
   Timer,
+  EventSchedule,
 } from '@carbon/react/icons';
 import { type FormRegistryEntry } from '../shared/types';
 import {
@@ -77,6 +78,8 @@ import {
   AIIMS_EMBRYO_GRADING_DAY3_FORM_NAME,
     AIIMS_EMBRYOS_FROZEN_FORM_UUID,
   AIIMS_EMBRYOS_FROZEN_FORM_NAME,
+    AIIMS_FRESH_ET_DETAILS_FORM_UUID,
+  AIIMS_FRESH_ET_DETAILS_FORM_NAME,
   // @create-form:imports-end
 } from './form-uuids';
 
@@ -412,6 +415,17 @@ export const FORM_REGISTRY: FormRegistryEntry[] = [
     title: 'Embryos Frozen',
     slot: 'aiims-embryos-frozen-dashboard-slot',
     icon: Chemistry,
+    order: 1,
+  },
+    {
+    key: 'fresh-et-details',
+    uuid: AIIMS_FRESH_ET_DETAILS_FORM_UUID,
+    name: AIIMS_FRESH_ET_DETAILS_FORM_NAME,
+    path: 'aiims-fresh-et-details',
+    titleKey: 'aiimsFreshEtDetailsTitle',
+    title: 'Fresh Embryo Transfer Details',
+    slot: 'aiims-fresh-et-details-dashboard-slot',
+    icon: EventSchedule,
     order: 1,
   },
   // @create-form:registry-end

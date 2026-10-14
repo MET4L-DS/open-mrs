@@ -1,0 +1,318 @@
+{
+  "name": "AIIMS Visit: Fresh Embryo Transfer Details",
+  "description": "AIIMS Reproductive Medicine & IVF - Fresh Embryo Transfer Details Sheet",
+  "version": "1.0",
+  "published": true,
+  "retired": false,
+  "encounter": "Consultation",
+  "processor": "EncounterFormProcessor",
+  "referencedForms": [],
+  "pages": [
+    {
+      "label": "Fresh Embryo Transfer Details",
+      "sections": [
+        {
+          "label": "Fresh Embryo Transfer Details",
+          "isExpanded": true,
+          "questions": [
+            {
+              "label": "Fresh Embryo Transfer Done",
+              "type": "obs",
+              "id": "fresh_embryo_transfer",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "c0010001-0000-0000-0000-000000000280",
+                "answers": [
+                  {
+                    "concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "No"
+                  }
+                ]
+              }
+            },
+            {
+              "label": "Reason why Fresh Embryo Transfer Not Done",
+              "type": "obs",
+              "id": "reason_fresh_et_not_done",
+              "required": "false",
+              "hide": {
+                "hideWhenExpression": "!fresh_embryo_transfer || fresh_embryo_transfer !== '1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              },
+              "questionOptions": {
+                "rendering": "select",
+                "concept": "c0010001-0000-0000-0000-000000000281",
+                "answers": [
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000001107",
+                    "label": "Risk of Ovarian Hyperstimulation"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000001108",
+                    "label": "Thick Endometrium"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000001109",
+                    "label": "Thin Endometrium"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000001110",
+                    "label": "Difficult Endometrium"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000001111",
+                    "label": "Fluid in Endometrial cavity"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000001112",
+                    "label": "Uterine Bleeding"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000001113",
+                    "label": "Dual stimulation"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000001114",
+                    "label": "Fibroid"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000001115",
+                    "label": "Adenomyosis"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000001116",
+                    "label": "Oocyte freezing"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000001117",
+                    "label": "Hydrosalpinx"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000001118",
+                    "label": "Endometriosis"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000001119",
+                    "label": "Oncofertility"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000001120",
+                    "label": "Fever"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000001121",
+                    "label": "Elevated progesterone"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000001122",
+                    "label": "Agonist trigger"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000001123",
+                    "label": "Polyp"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000001124",
+                    "label": "Prolonged stimulation"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000001125",
+                    "label": "Ovarian Hyperstimulation"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000001126",
+                    "label": "Elective"
+                  }
+                ]
+              }
+            },
+            {
+              "label": "Other Reason why Fresh Embryo Transfer Not Done",
+              "type": "obs",
+              "id": "other_reason_fresh_et_not_done",
+              "required": "false",
+              "hide": {
+                "hideWhenExpression": "!fresh_embryo_transfer || fresh_embryo_transfer !== '1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              },
+              "questionOptions": {
+                "rendering": "textarea",
+                "concept": "c0010001-0000-0000-0000-000000000282"
+              }
+            },
+            {
+              "label": "Embryo Transfer Date",
+              "type": "obs",
+              "id": "fresh_et_date",
+              "required": "false",
+              "hide": {
+                "hideWhenExpression": "!fresh_embryo_transfer || fresh_embryo_transfer !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              },
+              "questionOptions": {
+                "rendering": "date",
+                "concept": "c0010001-0000-0000-0000-000000000289"
+              }
+            },
+            {
+              "label": "Day of Embryo",
+              "type": "obs",
+              "id": "day_of_fresh_embryo_transfer",
+              "required": "false",
+              "hide": {
+                "hideWhenExpression": "!fresh_embryo_transfer || fresh_embryo_transfer !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              },
+              "questionOptions": {
+                "rendering": "select",
+                "concept": "c0010001-0000-0000-0000-000000000285",
+                "answers": [
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000001127",
+                    "label": "Day 2"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000001128",
+                    "label": "Day 3"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000001129",
+                    "label": "Day 4"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000001130",
+                    "label": "Day 5"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000001131",
+                    "label": "Day 6"
+                  }
+                ]
+              }
+            },
+            {
+              "label": "Number of Embryos Transferred",
+              "type": "obs",
+              "id": "number_fresh_embryos_transferred",
+              "required": "false",
+              "hide": {
+                "hideWhenExpression": "!fresh_embryo_transfer || fresh_embryo_transfer !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              },
+              "questionOptions": {
+                "rendering": "number",
+                "concept": "c0010001-0000-0000-0000-000000000283",
+                "min": "0",
+                "max": "10"
+              },
+              "validators": [
+                {
+                  "type": "js_expression",
+                  "failsWhenExpression": "myValue < 0 || myValue > 10",
+                  "message": "Number of embryos transferred must be between 0 and 10."
+                }
+              ]
+            },
+            {
+              "label": "Grade of Embryos",
+              "type": "obs",
+              "id": "grade_fresh_embryos_transferred",
+              "required": "false",
+              "hide": {
+                "hideWhenExpression": "!fresh_embryo_transfer || fresh_embryo_transfer !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              },
+              "questionOptions": {
+                "rendering": "text",
+                "concept": "c0010001-0000-0000-0000-000000000284"
+              }
+            },
+            {
+              "label": "Endometrial Thickness (mm)",
+              "type": "obs",
+              "id": "fresh_et_endometrial_thickness",
+              "required": "false",
+              "hide": {
+                "hideWhenExpression": "!fresh_embryo_transfer || fresh_embryo_transfer !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              },
+              "questionOptions": {
+                "rendering": "number",
+                "concept": "c0010001-0000-0000-0000-000000000286",
+                "min": "1.0",
+                "max": "30.0"
+              },
+              "validators": [
+                {
+                  "type": "js_expression",
+                  "failsWhenExpression": "myValue < 1.0 || myValue > 30.0",
+                  "message": "Endometrial thickness must be between 1.0 and 30.0 mm."
+                }
+              ]
+            },
+            {
+              "label": "Embryo Transfer (Easy / Difficult)",
+              "type": "obs",
+              "id": "fresh_et_difficulty",
+              "required": "false",
+              "hide": {
+                "hideWhenExpression": "!fresh_embryo_transfer || fresh_embryo_transfer !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              },
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "c0010001-0000-0000-0000-000000000287",
+                "answers": [
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000970",
+                    "label": "Easy"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000971",
+                    "label": "Difficult"
+                  }
+                ]
+              }
+            },
+            {
+              "label": "Blood on Tip of Catheter",
+              "type": "obs",
+              "id": "blood_on_catheter_tip",
+              "required": "false",
+              "hide": {
+                "hideWhenExpression": "!fresh_embryo_transfer || fresh_embryo_transfer !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              },
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "c0010001-0000-0000-0000-000000000288",
+                "answers": [
+                  {
+                    "concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "No"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "label": "Laboratory Remarks",
+          "isExpanded": true,
+          "questions": [
+            {
+              "label": "Fresh Embryo Transfer Remarks",
+              "type": "obs",
+              "id": "fresh_et_remarks",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "textarea",
+                "concept": "c0010001-0000-0000-0000-000000000290"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

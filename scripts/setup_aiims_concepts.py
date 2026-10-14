@@ -564,6 +564,38 @@ blastocyst_embryo_grade_answers = [
     ("c0010002-0000-0000-0000-000000001106", "6CC"),
 ]
 
+fresh_et_cancellation_reason_answers = [
+    ("c0010002-0000-0000-0000-000000001107", "Risk of Ovarian Hyperstimulation"),
+    ("c0010002-0000-0000-0000-000000001108", "Thick Endometrium"),
+    ("c0010002-0000-0000-0000-000000001109", "Thin Endometrium"),
+    ("c0010002-0000-0000-0000-000000001110", "Difficult Endometrium"),
+    ("c0010002-0000-0000-0000-000000001111", "Fluid in Endometrial cavity"),
+    ("c0010002-0000-0000-0000-000000001112", "Uterine Bleeding"),
+    ("c0010002-0000-0000-0000-000000001113", "Dual stimulation"),
+    ("c0010002-0000-0000-0000-000000001114", "Fibroid"),
+    ("c0010002-0000-0000-0000-000000001115", "Adenomyosis"),
+    ("c0010002-0000-0000-0000-000000001116", "Oocyte freezing"),
+    ("c0010002-0000-0000-0000-000000001117", "Hydrosalpinx"),
+    ("c0010002-0000-0000-0000-000000001118", "Endometriosis"),
+    ("c0010002-0000-0000-0000-000000001119", "Oncofertility"),
+    ("c0010002-0000-0000-0000-000000001120", "Fever"),
+    ("c0010002-0000-0000-0000-000000001121", "Elevated progesterone"),
+    ("c0010002-0000-0000-0000-000000001122", "Agonist trigger"),
+    ("c0010002-0000-0000-0000-000000001123", "Polyp"),
+    ("c0010002-0000-0000-0000-000000001124", "Prolonged stimulation"),
+    ("c0010002-0000-0000-0000-000000001125", "Ovarian Hyperstimulation"),
+    ("c0010002-0000-0000-0000-000000001126", "Elective"),
+]
+
+fresh_et_day_answers = [
+    ("c0010002-0000-0000-0000-000000001127", "Day 2"),
+    ("c0010002-0000-0000-0000-000000001128", "Day 3"),
+    ("c0010002-0000-0000-0000-000000001129", "Day 4"),
+    ("c0010002-0000-0000-0000-000000001130", "Day 5"),
+    ("c0010002-0000-0000-0000-000000001131", "Day 6"),
+]
+
+
 
 
 # We assemble the migration script wrapped in a stored procedure for IF/ELSE control flow
@@ -642,6 +674,12 @@ for u, name in day4_embryo_grade_answers:
     full_script.append(add_concept_sql(u, name, datatype_id=4, class_id=11))
 
 for u, name in blastocyst_embryo_grade_answers:
+    full_script.append(add_concept_sql(u, name, datatype_id=4, class_id=11))
+
+for u, name in fresh_et_cancellation_reason_answers:
+    full_script.append(add_concept_sql(u, name, datatype_id=4, class_id=11))
+
+for u, name in fresh_et_day_answers:
     full_script.append(add_concept_sql(u, name, datatype_id=4, class_id=11))
 
 
@@ -1060,6 +1098,20 @@ full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000276", "Grad
 full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000277", "Number of Day 5 Embryos Vitrified", datatype_id=1, class_id=7, is_numeric=True, units="embryos", allow_decimal=0, low_abs=0, hi_abs=100))
 full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000278", "Grade of Day 5 Embryos Vitrified", datatype_id=3, class_id=7))
 full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000279", "Embryos Frozen Remarks", datatype_id=3, class_id=7))
+
+# Fresh Embryo Transfer Details Concepts (Form 31: 0280-0290)
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000280", "Fresh Embryo Transfer Performed", datatype_id=2, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000281", "Reason Fresh Embryo Transfer Not Performed", datatype_id=2, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000282", "Other Reason Fresh Embryo Transfer Not Performed", datatype_id=3, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000283", "Number of Fresh Embryos Transferred", datatype_id=1, class_id=7, is_numeric=True, units="embryos", allow_decimal=0, low_abs=0, hi_abs=10))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000284", "Grade of Fresh Embryos Transferred", datatype_id=3, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000285", "Day of Fresh Embryo Transfer", datatype_id=2, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000286", "Fresh Embryo Transfer Endometrial Thickness", datatype_id=1, class_id=7, is_numeric=True, units="mm", allow_decimal=1, low_abs=1.0, hi_abs=30.0))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000287", "Fresh Embryo Transfer Difficulty", datatype_id=2, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000288", "Blood on Tip of Catheter", datatype_id=2, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000289", "Fresh Embryo Transfer Date", datatype_id=6, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000290", "Fresh Embryo Transfer Remarks", datatype_id=3, class_id=7))
+
 
 # 3. Link Answers
 # Education Wife answers
@@ -1657,6 +1709,37 @@ for ans_uuid, _ in blastocyst_embryo_grade_answers:
 # Grade of Embryos Day 6 (0259)
 for ans_uuid, _ in blastocyst_embryo_grade_answers:
     full_script.append(add_answer_sql("c0010001-0000-0000-0000-000000000259", ans_uuid))
+
+# Fresh Embryo Transfer Details (Form 31)
+# Fresh Embryo Transfer Performed (0280)
+for ans_uuid in [
+    "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",  # Yes
+    "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",  # No
+]:
+    full_script.append(add_answer_sql("c0010001-0000-0000-0000-000000000280", ans_uuid))
+
+# Reason Fresh Embryo Transfer Not Performed (0281)
+for ans_uuid, _ in fresh_et_cancellation_reason_answers:
+    full_script.append(add_answer_sql("c0010001-0000-0000-0000-000000000281", ans_uuid))
+
+# Day of Fresh Embryo Transfer (0285)
+for ans_uuid, _ in fresh_et_day_answers:
+    full_script.append(add_answer_sql("c0010001-0000-0000-0000-000000000285", ans_uuid))
+
+# Fresh Embryo Transfer Difficulty (0287)
+for ans_uuid in [
+    "c0010002-0000-0000-0000-000000000970",  # Easy
+    "c0010002-0000-0000-0000-000000000971",  # Difficult
+]:
+    full_script.append(add_answer_sql("c0010001-0000-0000-0000-000000000287", ans_uuid))
+
+# Blood on Tip of Catheter (0288)
+for ans_uuid in [
+    "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",  # Yes
+    "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",  # No
+]:
+    full_script.append(add_answer_sql("c0010001-0000-0000-0000-000000000288", ans_uuid))
+
 
 
 full_script.append("END$$")

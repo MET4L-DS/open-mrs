@@ -247,6 +247,14 @@ FORMS_TO_PUBLISH = [
         "uuid": "37e59734-dac9-4332-ba27-f1053d189092",
         "encounter_type": "dd528487-82a5-4082-9c72-ed246bd49591",  # Consultation
     },
+    {
+        "name": "AIIMS Visit: Fresh Embryo Transfer Details",
+        "version": "1.0",
+        "description": "AIIMS Reproductive Medicine & IVF Fresh Embryo Transfer Details Sheet",
+        "schema_path": "forms/aiims_fresh_et_details.json",
+        "uuid": "37e59734-dac9-4332-ba27-f1053d189093",
+        "encounter_type": "dd528487-82a5-4082-9c72-ed246bd49591",  # Consultation
+    },
 ]
 
 def get_db_container():

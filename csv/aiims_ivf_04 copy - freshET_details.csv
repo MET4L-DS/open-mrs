@@ -1,0 +1,33 @@
+slot_columns,
+Fresh Embryo Transfer,
+,yes
+,no
+Reason why Fresh Embryo Transfer Not done,
+,Risk of Ovarian Hyperstimulation
+,Thick Endometrium
+,Thin  Endometrium
+,Difficult  Endometrium
+,Fluid in Endometrial cavity
+,Uterine Bleeding
+,Dual stimulation
+,Fibroid
+,Adenomyosis
+,Oocyte freezing
+,Hydrosalpinx
+,Endometriosis
+,Oncofertility
+,Fever
+,Elevated progesterone
+,Agonist trigger
+,Polyp
+,Prolonged stimulation
+,Ovarian Hyperstimulation
+,Elective
+Other Reason why Fresh Embryo Transfer Not done,
+Number of Embryos Transferred,
+Grade of Embryos,
+Day of Embryo,
+Endometrial Thickness,
+Embryo Transfer(easy/difficult),
+Blood on Tip of Catheter,
+Embryo Transfer Date,

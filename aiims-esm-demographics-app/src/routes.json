@@ -608,6 +608,26 @@
       "slot": "aiims-embryos-frozen-dashboard-slot",
       "online": true,
       "offline": true
+    },
+    {
+      "name": "aiims-fresh-et-details-dashboard-link",
+      "component": "aiimsFreshEtDetailsDashboardLink",
+      "slot": "patient-chart-dashboard-slot",
+      "order": 1,
+      "meta": {
+        "slot": "aiims-fresh-et-details-dashboard-slot",
+        "path": "aiims-fresh-et-details",
+        "title": "Fresh Embryo Transfer Details"
+      },
+      "online": true,
+      "offline": true
+    },
+    {
+      "name": "aiims-fresh-et-details-dashboard",
+      "component": "aiimsFreshEtDetailsDashboard",
+      "slot": "aiims-fresh-et-details-dashboard-slot",
+      "online": true,
+      "offline": true
     }
   ]
 }

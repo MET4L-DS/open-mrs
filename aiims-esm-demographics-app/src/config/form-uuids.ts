@@ -118,4 +118,8 @@ export const AIIMS_EMBRYO_GRADING_DAY3_FORM_NAME = 'AIIMS Visit: Embryo Grading 
 export const AIIMS_EMBRYOS_FROZEN_FORM_UUID = '37e59734-dac9-4332-ba27-f1053d189092';
 export const AIIMS_EMBRYOS_FROZEN_FORM_NAME = 'AIIMS Visit: Embryos Frozen';
 
+// Form UUID for Fresh Embryo Transfer Details
+export const AIIMS_FRESH_ET_DETAILS_FORM_UUID = '37e59734-dac9-4332-ba27-f1053d189093';
+export const AIIMS_FRESH_ET_DETAILS_FORM_NAME = 'Fresh Embryo Transfer Details';
+
 // @create-form:uuids-end

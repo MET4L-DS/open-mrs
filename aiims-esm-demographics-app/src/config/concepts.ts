@@ -393,6 +393,19 @@ export const CONCEPTS = {
   numberDay5EmbryosVitrified: 'c0010001-0000-0000-0000-000000000277',
   gradeDay5EmbryosVitrified: 'c0010001-0000-0000-0000-000000000278',
   embryosFrozenRemarks: 'c0010001-0000-0000-0000-000000000279',
+
+  // Fresh Embryo Transfer Details (Form 31)
+  freshEmbryoTransfer: 'c0010001-0000-0000-0000-000000000280',
+  reasonFreshEtNotDone: 'c0010001-0000-0000-0000-000000000281',
+  otherReasonFreshEtNotDone: 'c0010001-0000-0000-0000-000000000282',
+  numberFreshEmbryosTransferred: 'c0010001-0000-0000-0000-000000000283',
+  gradeFreshEmbryosTransferred: 'c0010001-0000-0000-0000-000000000284',
+  dayOfFreshEmbryoTransfer: 'c0010001-0000-0000-0000-000000000285',
+  freshEtEndometrialThickness: 'c0010001-0000-0000-0000-000000000286',
+  freshEtDifficulty: 'c0010001-0000-0000-0000-000000000287',
+  bloodOnTipOfCatheter: 'c0010001-0000-0000-0000-000000000288',
+  freshEtDate: 'c0010001-0000-0000-0000-000000000289',
+  freshEtRemarks: 'c0010001-0000-0000-0000-000000000290',
 };
 
 // Person Attribute Type UUID for Patient Telephone Number

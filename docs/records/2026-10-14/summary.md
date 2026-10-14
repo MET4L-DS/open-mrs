@@ -73,6 +73,32 @@
   - Implemented unit test suite in `embryos-frozen.test.tsx` (4 tests passing).
   - Verified via 9-stage deployment pipeline (`npm run deploy:local`) and E2E smoke test robot (`npm run test:e2e`). Hot-deployed bundle `openmrs-esm-aiims-demographics-app-1.0.80`.
 
+### Form 31: Fresh Embryo Transfer Details
+- **Clinical CSV Specification**: [`csv/aiims_ivf_04 copy - freshET_details.csv`](file:///c:/Met4l.DSCode/Projects/open-mrs/csv/aiims_ivf_04%20copy%20-%20freshET_details.csv) (Fresh Embryo Transfer procedure, cancellation reasons, and embryo metrics).
+- **Concept Modeling**: Registered 11 question concepts in MariaDB (`c0010001-0000-0000-0000-000000000280` through `0290`) and 25 answer concepts (`c0010002-...1107` through `1131`):
+  - `0280`: Fresh Embryo Transfer Performed (Coded: Yes/No)
+  - `0281`: Reason Fresh Embryo Transfer Not Performed (Coded: 20 clinical etiologies)
+  - `0282`: Other Reason Fresh Embryo Transfer Not Performed (Text)
+  - `0283`: Number of Fresh Embryos Transferred (Numeric with `concept_numeric`: `units='embryos'`, `allow_decimal=0`, range 0-10)
+  - `0284`: Grade of Fresh Embryos Transferred (Text)
+  - `0285`: Day of Fresh Embryo Transfer (Coded: Day 2 to Day 6)
+  - `0286`: Fresh Embryo Transfer Endometrial Thickness (Numeric with `concept_numeric`: `units='mm'`, `allow_decimal=1`, range 1.0-30.0)
+  - `0287`: Fresh Embryo Transfer Difficulty (Coded: Easy/Difficult)
+  - `0288`: Blood on Tip of Catheter (Coded: Yes/No)
+  - `0289`: Fresh Embryo Transfer Date (Date)
+  - `0290`: Fresh Embryo Transfer Remarks (Text)
+- **AMPATH Schema**: Authored `forms/aiims_fresh_et_details.json` with conditional skip logic:
+  - If Fresh ET = No: Reveals cancellation dropdown and custom free-text notes.
+  - If Fresh ET = Yes: Reveals transfer date, day, count, grade, endometrial thickness, difficulty, and catheter blood status.
+  - Published to OpenMRS backend (`37e59734-dac9-4332-ba27-f1053d189093`).
+- **Frontend Architecture**:
+  - Scaffolded feature module `src/fresh-et-details/` with `order: 1` and `EventSchedule` icon.
+  - Implemented typed resource hook (`fresh-et-details.resource.ts`) extracting all 11 observation concepts.
+  - Implemented Carbon `ObservationCard` component (`fresh-et-details-card.component.tsx`) with 4 structured sections: Clinical Decision, Cancellation Rationale, Procedure Details, and Remarks.
+  - Added full i18n localization keys in `translations/en.json` (verified via `audit:i18n` with 0 missing keys).
+  - Implemented unit test suite in `fresh-et-details.test.tsx` (4 tests passing).
+  - Verified via 9-stage deployment pipeline (`npm run deploy:local`) and E2E smoke test robot (`npm run test:e2e`). Hot-deployed bundle `openmrs-esm-aiims-demographics-app-1.0.81`.
+
 ---
 
 ## 3. Post-Mortem & Bug Resolutions
@@ -94,13 +120,19 @@
 - **Fix**: Changed `order` to `1` for all AIIMS clinical intake forms in `src/config/form-registry.ts` and locked `order: 1` in `scripts/create-form.ts`.
 - **Permanent Guardrail**: Hardcoded `order: 1` in the CLI scaffolder and updated `src/routes.json` via `generate-routes`. All 29 AIIMS clinical forms now remain strictly grouped in contiguous clinical sequence.
 
+### Bug 4: Initial Radio Button Transition from Null State Failing to Render Conditional Section
+- **Root Cause**: In `forms/aiims_fresh_et_details.json`, `hideWhenExpression` was placed directly on the `<section>` elements ("Reason Fresh Embryo Transfer Not Done", "Fresh Embryo Transfer Procedure Details") rather than on the questions themselves. In OpenMRS 3.x `@openmrs/esm-form-engine-lib`, section-level visibility observers do not re-evaluate when a radio button in a separate section transitions from `null` / unselected to a selected value on the first click. Only subsequent transitions (e.g. Yes -> No) forced a dirty re-render.
+- **Fix**: Re-structured `forms/aiims_fresh_et_details.json` so all conditional questions reside in the active section and have individual `hideWhenExpression` expressions (`!fresh_embryo_transfer || fresh_embryo_transfer !== '...'`).
+- **Permanent Guardrail**: Documented and verified via `SKILL.md` (ampath-form-schema-guide Section 4 Rule 4): Always attach `hideWhenExpression` to questions rather than section objects. Published updated schema to MariaDB backend and verified live via headless E2E workspace robot.
+
+
 ---
 
 ## 4. Architectural & Tooling Enhancements
 
 ### 1. Clinical Form Validator (`scripts/validate_forms.py`)
-- Automatically validates all 30 forms registered in `src/config/form-uuids.ts`.
-- Deeply inspects every question and answer concept against the live MariaDB dictionary (4,905 concepts).
+- Automatically validates all 31 forms registered in `src/config/form-uuids.ts`.
+- Deeply inspects every question and answer concept against the live MariaDB dictionary (4,941 concepts).
 - Verifies that numeric questions have valid `concept_numeric` database records.
 - Available via `npm run validate:forms`.
 
@@ -111,7 +143,7 @@ Upgraded deployment pipeline to run 9 sequential quality gates with zero downtim
 3. Concept Dictionary Verification (`validate:concepts` with dynamic count reporting)
 4. Localization Key Audit (`audit:i18n` to prevent runtime missing strings; toggleable via `--skip-i18n-audit`)
 5. TypeScript Type Check (`tsc` with `noImplicitAny: true`)
-6. Unit Test Suite (`vitest` - 85 tests across 33 files)
+6. Unit Test Suite (`vitest` - 89 tests across 34 files)
 7. Single-sourced Route Generation (`generate-routes`)
 8. Production Microfrontend Build (Rspack optimized bundle)
 9. Hot-Deployment & Live Probe (`/openmrs/spa/importmap.json` HTTP 200 verification)
@@ -134,10 +166,11 @@ Upgraded deployment pipeline to run 9 sequential quality gates with zero downtim
 
 | Metric | Target | Result | Status |
 |---|---|---|---|
-| Registered Clinical Forms | 30 | 30 Published & Active | ✓ 100% |
-| Unique Concept Definitions | 336 | 336 Active & Verified | ✓ 100% |
-| Numeric Concepts with `concept_numeric` | 93 | 93 Verified | ✓ 100% |
-| Unit Test Suite | 85 | 85 Passing (33 files) | ✓ 100% |
+| Registered Clinical Forms | 31 | 31 Published & Active | ✓ 100% |
+| Unique Concept Definitions | 347 | 347 Active & Verified | ✓ 100% |
+| Numeric Concepts with `concept_numeric` | 95 | 95 Verified | ✓ 100% |
+| Unit Test Suite | 89 | 89 Passing (34 files) | ✓ 100% |
 | i18n Translation Health | 100% | 0 Missing Keys (`audit:i18n`) | ✓ Clean |
 | TypeScript Compiler Errors | 0 | 0 Errors | ✓ Clean |
-| Active Frontend Bundle | — | `openmrs-esm-aiims-demographics-app-1.0.80` | ✓ Active |
+| Active Frontend Bundle | — | `openmrs-esm-aiims-demographics-app-1.0.81` | ✓ Active |
+
