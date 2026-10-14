@@ -55,4 +55,4 @@ npm run deploy:local
 npm run test:e2e -- --form=aiims-<form-key>
 ```
 Manually open the live patient chart → click **Record** → fill sample data → **Save**.
-Record completed tasks in `docs/records/YYYY-MM-DD/summary.md`.
+Record completed tasks in `docs/records/YYYY-MM-DD/summary.md` and synchronize `PROJECT_MEMORY.md` (add Form UUID, description in Forms Implemented, and check off the roadmap item).

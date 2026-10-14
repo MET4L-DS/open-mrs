@@ -15,11 +15,12 @@ These rules govern all engineering, form creation, and record keeping in this wo
 - `src/routes.json` and `src/generated-form-extensions.ts` are single-sourced and auto-generated from `src/config/form-registry.ts`.
 - Never edit `src/routes.json` or `src/generated-form-extensions.ts` manually; always run `npm run generate-routes`.
 
-## 4. Daily Record Keeping & Presentation Ledger
+## 4. Daily Record Keeping & Project Memory
 - After completing tasks, features, or bugfixes, update or create the date-wise record in `docs/records/YYYY-MM-DD/`:
   - `summary.md`: Engineering summary, post-mortems, and metrics.
   - `presentation_notes.md`: Slide-ready clinical workflow notes and diagrams.
 - Update `docs/records/README.md` with the new milestone row.
+- Synchronize `PROJECT_MEMORY.md` (form UUIDs, implemented form summaries, roadmap checkoffs, and health counts) to prevent long-term memory drift.
 
 ## 5. Pre-Deployment Sanity Check
 - Before running the full `deploy:local` pipeline, use `npm run pre-flight` to assert schema

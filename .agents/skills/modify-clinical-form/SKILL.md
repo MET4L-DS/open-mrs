@@ -42,7 +42,7 @@ Choose the relevant sub-track:
 2. Update unit tests if obs structure changed.
 3. `npm run deploy:local`
 4. `npm run test:e2e -- --form=aiims-<form-key>`
-5. Record in `docs/records/YYYY-MM-DD/summary.md`.
+5. Record in `docs/records/YYYY-MM-DD/summary.md` and synchronize `PROJECT_MEMORY.md` if form capabilities or core concepts changed.
 
 ---
 
@@ -70,4 +70,4 @@ In `forms/aiims_<form_key>.json`:
 ### Step 3: Frontend & Deployment
 1. Verify card displays coded answer labels cleanly (auto-resolved by `useFormEncounter`).
 2. `npm test` → `npm run deploy:local` → `npm run test:e2e -- --form=aiims-<form-key>`
-3. Record in `docs/records/YYYY-MM-DD/summary.md`.
+3. Record in `docs/records/YYYY-MM-DD/summary.md` and synchronize `PROJECT_MEMORY.md`.

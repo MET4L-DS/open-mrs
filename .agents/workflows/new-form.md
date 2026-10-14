@@ -61,3 +61,4 @@ Use this workflow whenever adding a brand new clinical intake form to the AIIMS 
    npm run test:e2e -- --form=aiims-<form-key>
    ```
 3. Update daily engineering record: `docs/records/YYYY-MM-DD/summary.md`.
+4. Synchronize `PROJECT_MEMORY.md` (add Form UUID, brief summary under Forms Implemented, and check off the roadmap item).

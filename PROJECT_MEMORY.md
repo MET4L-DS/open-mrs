@@ -8,7 +8,7 @@ This file serves as the persistent project-level memory and source of truth acro
 
 - **Objective**: Develop and maintain clinical intake and specialty encounter microfrontends for AIIMS on OpenMRS 3.x (O3).
 - **Core Frontend Module**: `@aiims/esm-demographics-app` (located in `./aiims-esm-demographics-app`).
-- **Goal**: Scalable, configuration-driven architecture supporting 8+ clinical forms with zero boilerplate for new dashboards and extension points.
+- **Goal**: Scalable, configuration-driven architecture supporting 32+ clinical forms with zero boilerplate for new dashboards and extension points.
 
 ---
 
@@ -104,6 +104,10 @@ This file serves as the persistent project-level memory and source of truth acro
   - Form 26 (`sperm-quality-assessment`): `80930653-7e80-4bfd-9e29-ec37c334d896` (`AIIMS Visit: Sperm Quality Assessment`)
   - Form 27 (`embryo-assessment`): `37e59734-dac9-4332-ba27-f1053d189089` (`AIIMS Visit: Assessment of Fertilization, Embryo & Blastocyst`)
   - Form 28 (`fertilisation-details`): `37e59734-dac9-4332-ba27-f1053d189090` (`AIIMS Visit: Fertilisation Details`)
+  - Form 29 (`embryo-grading-day3`): `37e59734-dac9-4332-ba27-f1053d189091` (`AIIMS Visit: Embryo Grading Day 3`)
+  - Form 30 (`embryos-frozen`): `37e59734-dac9-4332-ba27-f1053d189092` (`AIIMS Visit: Embryos Frozen`)
+  - Form 31 (`fresh-et-details`): `37e59734-dac9-4332-ba27-f1053d189093` (`AIIMS Visit: Fresh Embryo Transfer Details`)
+  - Form 32 (`add-procedure-art`): `37e59734-dac9-4332-ba27-f1053d189094` (`AIIMS Visit: Additional Procedures in Assisted Reproductive Technology`)
 - **Core Concept UUIDs (`src/constants.ts` & `docs/concept_registry.md`)**:
   - `consultantUnit`: `c0010001-0000-0000-0000-000000000001`
   - `consultantName`: `c0010001-0000-0000-0000-000000000002`
@@ -131,19 +135,22 @@ npm run test
 # Type check
 npm run typescript
 
-# End-to-end headless smoke test robot (verifies all 26 clinical dashboards in real chart)
+# Fast sanity check (verifies form schemas, concept dictionary, i18n audit, tsc in ~10s)
+npm run pre-flight
+
+# End-to-end headless smoke test robot (verifies all registered AIIMS clinical dashboards in real chart)
 npm run test:e2e
 
 # Run E2E smoke test for a single form
-npm run test:e2e -- --form=aiims-adjuvant-drug
+npm run test:e2e -- --form=aiims-add-procedure-art
 
 # Run E2E smoke test with visible browser window
 npm run test:e2e -- --headed
 
-# Concept dictionary validation (verifies all 324 concept UUIDs and concept_numeric metadata)
+# Concept dictionary validation (verifies all unique clinical concept UUIDs and concept_numeric metadata)
 npm run validate:concepts
 
-# Clinical form validation (verifies all 28 form schemas exist on backend and in forms/)
+# Clinical form validation (verifies all registered form schemas exist on backend and in forms/)
 npm run validate:forms
 
 # Translation completeness check (detects missing keys & empty values via i18next-parser)
@@ -392,6 +399,49 @@ Follow this 6-stage lifecycle to add new clinical forms without errors:
       - **Remarks**: Textarea for semen analysis clinical notes and interpretations.
     - Observation card with Carbon `Chemistry` icon and localized units (`mL`, `million/mL`).
 
+19. **Form 19: AIIMS Visit: Type of Ovarian Stimulation Protocol** (`80930653-7e80-4bfd-9e29-ec37c334d897`)
+    - Path: `aiims-ovarian-stimulation-protocol`
+    - Ovarian stimulation protocol selection (Antagonist, Agonist Long, Agonist Short, Microdose Flare, Modified Natural, Mild Stimulation, PPOS, DuoStim) and clinical notes.
+20. **Form 20: AIIMS Visit: Dose of Drugs** (`80930653-7e80-4bfd-9e29-ec37c334d898`)
+    - Path: `aiims-dose-of-drugs`
+    - Gonadotropin dosages (FSH, hMG, rLH starting and total doses in IU), downregulation days, Cetrotide start day and total dose (mg), total stimulation days, and remarks.
+21. **Form 21: AIIMS Visit: Adjuvant Drug** (`80930653-7e80-4bfd-9e29-ec37c334d899`)
+    - Path: `aiims-adjuvant-drug`
+    - Growth hormone co-treatment (Yes/No), daily dose (IU), duration (days), and clinical notes.
+22. **Form 22: AIIMS Visit: Trigger Details** (`80930653-7e80-4bfd-9e29-ec37c334d892`)
+    - Path: `aiims-trigger-details`
+    - Ovulation trigger agents (rhCG, urinary hCG, GnRH agonist, dual trigger), trigger dose, date and time, follicle counts on trigger day (14-22mm, 16-22mm), endometrial thickness (mm) and pattern, estradiol (pg/mL), progesterone (ng/mL).
+23. **Form 23: AIIMS Visit: Ovum Pick Up Details** (`80930653-7e80-4bfd-9e29-ec37c334d893`)
+    - Path: `aiims-ovum-pick-up-details`
+    - Date and time of OPU, interval between trigger and OPU, total oocytes retrieved, FORT and FOI indices, oocyte-cumulus complex grades (I, II, III), maturity distribution (MII, MI, GV), abnormal oocyte count/types, and remarks.
+24. **Form 24: AIIMS Visit: Procedure** (`80930653-7e80-4bfd-9e29-ec37c334d895`)
+    - Path: `aiims-procedure`
+    - Surgical sperm retrieval procedures (PESA, TESA, Ejaculated, Frozen, Donor Semen, Husband Semen) and additional IVF procedures (Laser Assisted Hatching LAH, PICSI, Artificial Oocyte Activation AOA) with clinical remarks.
+25. **Form 25: AIIMS Visit: Lab Procedure of Insemination** (`80930653-7e80-4bfd-9e29-ec37c334d894`)
+    - Path: `aiims-lab-procedure-insemination`
+    - Insemination methodology (Conventional IVF, ICSI, Half IVF + Half ICSI), injection/insemination time, and remarks.
+26. **Form 26: AIIMS Visit: Sperm Quality Assessment** (`80930653-7e80-4bfd-9e29-ec37c334d896`)
+    - Path: `aiims-sperm-quality-assessment`
+    - Post-wash semen parameters on OPU day: sperm concentration (million/mL), progressive motility (%), and clinical remarks.
+27. **Form 27: AIIMS Visit: Assessment of Fertilization, Embryo & Blastocyst** (`37e59734-dac9-4332-ba27-f1053d189089`)
+    - Path: `aiims-embryo-assessment`
+    - Longitudinal embryology tracking from Day 1 to Day 6: 2PN fertilization count/grade, cleavage counts and Istanbul/Veeck coded grades for Days 2-3, Day 4 morula grades, and Days 5-6 blastocyst counts with standard Gardner scale coded grades (`1AA`-`6CC`).
+28. **Form 28: AIIMS Visit: Fertilisation Details** (`37e59734-dac9-4332-ba27-f1053d189090`)
+    - Path: `aiims-fertilisation-details`
+    - Total oocytes fertilised, fertilisation rate (%), Day 2 cleaved embryos, cleavage rate (%), Day 3 cleaved embryos, Day 5 blastocyst count, and embryology notes.
+29. **Form 29: AIIMS Visit: Embryo Grading Day 3** (`37e59734-dac9-4332-ba27-f1053d189091`)
+    - Path: `aiims-embryo-grading-day3`
+    - Day 3 cleavage stage grading breakdown for Grade 1, Grade 2, Grade 3, and Grade 4 embryos with embryology notations and laboratory remarks.
+30. **Form 30: AIIMS Visit: Embryos Frozen** (`37e59734-dac9-4332-ba27-f1053d189092`)
+    - Path: `aiims-embryos-frozen`
+    - Cryopreservation and vitrification records: Day 3 vitrified embryos with straw/grade breakdown (Grade A, B, C), Day 5 blastocysts vitrified with Gardner grades, and vitrification notes.
+31. **Form 31: AIIMS Visit: Fresh Embryo Transfer Details** (`37e59734-dac9-4332-ba27-f1053d189093`)
+    - Path: `aiims-fresh-et-details`
+    - Fresh ET decision (Yes/No), conditional cancellation etiology (20 clinical indications including OHSS risk, thin/thick endometrium, elevated P4) with free-text other notes, or transfer metrics (transfer date, embryo day, number of embryos, grades, endometrial thickness in mm, transfer difficulty Easy/Difficult, catheter tip blood, and clinical remarks).
+32. **Form 32: AIIMS Visit: Additional Procedures in Assisted Reproductive Technology** (`37e59734-dac9-4332-ba27-f1053d189094`)
+    - Path: `aiims-add-procedure-art`
+    - Adjuvant and add-on procedures in ART: multi-select checkboxes for Platelet Rich Plasma (PRP), Endometrial Injury (Endo Injury), Granulocyte Colony Stimulating Factor (G-CSF), and Embryo Glue, with procedure date and clinical notes/remarks.
+
 ---
 
 ## 7. Next Steps & Extension Roadmap
@@ -423,3 +473,8 @@ Follow this 6-stage lifecycle to add new clinical forms without errors:
 - [x] Register Form 25: Dose of Drugs (`dose-of-drugs`).
 - [x] Register Form 26: Adjuvant Drug (`adjuvant-drug`).
 - [x] Register Form 27: Assessment of Fertilization, Embryo & Blastocyst (`embryo-assessment`).
+- [x] Register Form 28: Fertilisation Details (`fertilisation-details`).
+- [x] Register Form 29: Embryo Grading Day 3 (`embryo-grading-day3`).
+- [x] Register Form 30: Embryos Frozen (`embryos-frozen`).
+- [x] Register Form 31: Fresh Embryo Transfer Details (`fresh-et-details`).
+- [x] Register Form 32: Additional Procedures in Assisted Reproductive Technology (`add-procedure-art`).

@@ -37,3 +37,4 @@ Before performing any tasks in this repository, always read the project memory f
 7. **Record Keeping & Documentation**:
    - Document completed sessions and milestones date-wise in `docs/records/YYYY-MM-DD/` (`summary.md` and `presentation_notes.md`).
    - Keep the master index `docs/records/README.md` up to date with new deliverables and health metrics.
+   - Synchronize `PROJECT_MEMORY.md` whenever new clinical forms, concept definitions, architecture patterns, or roadmap milestones are completed.

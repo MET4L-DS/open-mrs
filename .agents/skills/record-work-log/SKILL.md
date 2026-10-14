@@ -59,3 +59,7 @@ Create a clean, slide-ready document:
 - Add or update the row for `<YYYY-MM-DD>` in the Master Development Timeline table in `docs/records/README.md`.
 - Ensure Git commit counts and verified quality metrics match the date summary.
 - Ensure links to `summary.md` and `presentation_notes.md` are valid.
+
+### Step 5: Synchronize Project Memory (`PROJECT_MEMORY.md`)
+- Verify that `PROJECT_MEMORY.md` reflects all newly published form UUIDs (Section 4), updated forms implemented list (Section 5), and checked-off roadmap items (Section 7).
+- Update current platform totals (e.g. total active forms, verified concepts, pipeline stages) to prevent memory drift.
