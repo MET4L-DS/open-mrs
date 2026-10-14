@@ -549,4 +549,23 @@
   "grade4EmbryosDay3": "Grade 4 Embryos (Day 3)",
   "totalGradedEmbryosDay3": "Total Graded Embryos (Day 3)",
   "embryoGradingDay3Remarks": "Embryo Grading Day 3 Remarks"
+,
+  "aiimsEmbryosFrozenTitle": "Embryos Frozen",
+  "embryosFrozenDetails": "Embryos Frozen Details",
+  "loadingEmbryosFrozen": "Loading Embryos Frozen...",
+  "noRecordedEmbryosFrozenEncounter": "No AIIMS Visit: Embryos Frozen encounter recorded yet",
+  "noEmbryosFrozenBody": "Cryopreservation and vitrification details for Day 3 cleavage-stage embryos and Day 5 blastocysts have not been recorded for this patient yet.",
+  "noEmbryosFrozenRecorded": "No Embryos Frozen Recorded Yet",
+  "recordEmbryosFrozen": "Record Embryos Frozen",
+  "updateEmbryosFrozen": "Update Embryos Frozen",
+  "day3EmbryoVitrificationTitle": "Day 3 Embryo Vitrification (Cleavage Stage)",
+  "day5BlastocystVitrificationTitle": "Day 5 Blastocyst Vitrification",
+  "embryosFrozenRemarksTitle": "Cryopreservation Notes & Remarks",
+  "numberDay3EmbryosVitrified": "Number of Day 3 Embryos Vitrified",
+  "gradeAEmbryosVitrified": "Grade A Embryos Vitrified",
+  "gradeBEmbryosVitrified": "Grade B Embryos Vitrified",
+  "gradeCEmbryosVitrified": "Grade C Embryos Vitrified",
+  "numberDay5EmbryosVitrified": "Number of Day 5 Embryos Vitrified",
+  "gradeDay5EmbryosVitrified": "Grade of Day 5 Embryos Vitrified",
+  "embryosFrozenRemarks": "Embryos Frozen Remarks"
 }

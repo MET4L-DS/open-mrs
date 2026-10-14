@@ -1052,6 +1052,15 @@ full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000270", "Grad
 full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000271", "Grade 4 Embryos Day 3", datatype_id=3, class_id=7))
 full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000272", "Embryo Grading Day 3 Remarks", datatype_id=3, class_id=7))
 
+# Embryos Frozen Concepts (Form 30: 0273-0279)
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000273", "Number of Day 3 Embryos Vitrified", datatype_id=1, class_id=7, is_numeric=True, units="embryos", allow_decimal=0, low_abs=0, hi_abs=100))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000274", "Grade A Embryos Vitrified", datatype_id=3, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000275", "Grade B Embryos Vitrified", datatype_id=3, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000276", "Grade C Embryos Vitrified", datatype_id=3, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000277", "Number of Day 5 Embryos Vitrified", datatype_id=1, class_id=7, is_numeric=True, units="embryos", allow_decimal=0, low_abs=0, hi_abs=100))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000278", "Grade of Day 5 Embryos Vitrified", datatype_id=3, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000279", "Embryos Frozen Remarks", datatype_id=3, class_id=7))
+
 # 3. Link Answers
 # Education Wife answers
 for u, _ in education_answers:

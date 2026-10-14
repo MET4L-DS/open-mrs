@@ -58,6 +58,21 @@
   - Implemented unit test suite in `embryo-grading-day3.test.tsx` (4 tests passing).
   - Verified via 9-stage deployment pipeline (`npm run deploy:local`) and E2E smoke test robot (`npm run test:e2e`). Hot-deployed bundle `openmrs-esm-aiims-demographics-app-1.0.79`.
 
+### Form 30: Embryos Frozen
+- **Clinical CSV Specification**: [`csv/aiims_ivf_04 copy - embryo frozen.csv`](file:///c:/Met4l.DSCode/Projects/open-mrs/csv/aiims_ivf_04%20copy%20-%20embryo%20frozen.csv) (Day 3 & Day 5 Embryo Vitrification and Cryopreservation).
+- **Concept Modeling**: Registered 7 concepts in MariaDB (`c0010001-0000-0000-0000-000000000273` through `0279`):
+  - 2 Numeric concepts with complete `concept_numeric` metadata (`units='embryos'`, `allow_decimal=0`, range 0-100) for Number of Day 3 Embryos Vitrified and Number of Day 5 Embryos Vitrified.
+  - 4 Text concepts for Grade A, Grade B, Grade C Day 3 Embryos Vitrified, and Grade of Day 5 Embryos Vitrified (alphanumeric freetext for straw numbers, cell counts, and Gardner grades).
+  - 1 Text concept for Embryos Frozen Remarks.
+- **AMPATH Schema**: Authored `forms/aiims_embryos_frozen.json` with 3 clinical sections (Day 3 Vitrification, Day 5 Vitrification, Remarks) and published to OpenMRS backend (`37e59734-dac9-4332-ba27-f1053d189092`).
+- **Frontend Architecture**:
+  - Scaffolded feature module `src/embryos-frozen/` with `order: 1` and `Chemistry` icon.
+  - Implemented typed resource hook (`embryos-frozen.resource.ts`) extracting all 7 observation concepts.
+  - Implemented Carbon `ObservationCard` component (`embryos-frozen-card.component.tsx`) with 3 structured sections: Day 3 Embryo Vitrification (Cleavage Stage), Day 5 Blastocyst Vitrification, and Cryopreservation Notes & Remarks.
+  - Added full i18n localization keys in `translations/en.json` (verified via `audit:i18n` with 0 missing keys).
+  - Implemented unit test suite in `embryos-frozen.test.tsx` (4 tests passing).
+  - Verified via 9-stage deployment pipeline (`npm run deploy:local`) and E2E smoke test robot (`npm run test:e2e`). Hot-deployed bundle `openmrs-esm-aiims-demographics-app-1.0.80`.
+
 ---
 
 ## 3. Post-Mortem & Bug Resolutions
@@ -84,8 +99,8 @@
 ## 4. Architectural & Tooling Enhancements
 
 ### 1. Clinical Form Validator (`scripts/validate_forms.py`)
-- Automatically validates all 29 forms registered in `src/config/form-uuids.ts`.
-- Deeply inspects every question and answer concept against the live MariaDB dictionary (4,885 concepts).
+- Automatically validates all 30 forms registered in `src/config/form-uuids.ts`.
+- Deeply inspects every question and answer concept against the live MariaDB dictionary (4,905 concepts).
 - Verifies that numeric questions have valid `concept_numeric` database records.
 - Available via `npm run validate:forms`.
 
@@ -96,7 +111,7 @@ Upgraded deployment pipeline to run 9 sequential quality gates with zero downtim
 3. Concept Dictionary Verification (`validate:concepts` with dynamic count reporting)
 4. Localization Key Audit (`audit:i18n` to prevent runtime missing strings; toggleable via `--skip-i18n-audit`)
 5. TypeScript Type Check (`tsc` with `noImplicitAny: true`)
-6. Unit Test Suite (`vitest` - 81 tests across 32 files)
+6. Unit Test Suite (`vitest` - 85 tests across 33 files)
 7. Single-sourced Route Generation (`generate-routes`)
 8. Production Microfrontend Build (Rspack optimized bundle)
 9. Hot-Deployment & Live Probe (`/openmrs/spa/importmap.json` HTTP 200 verification)
@@ -119,10 +134,10 @@ Upgraded deployment pipeline to run 9 sequential quality gates with zero downtim
 
 | Metric | Target | Result | Status |
 |---|---|---|---|
-| Registered Clinical Forms | 29 | 29 Published & Active | ✓ 100% |
-| Unique Concept Definitions | 329 | 329 Active & Verified | ✓ 100% |
-| Numeric Concepts with `concept_numeric` | 91 | 91 Verified | ✓ 100% |
-| Unit Test Suite | 81 | 81 Passing (32 files) | ✓ 100% |
+| Registered Clinical Forms | 30 | 30 Published & Active | ✓ 100% |
+| Unique Concept Definitions | 336 | 336 Active & Verified | ✓ 100% |
+| Numeric Concepts with `concept_numeric` | 93 | 93 Verified | ✓ 100% |
+| Unit Test Suite | 85 | 85 Passing (33 files) | ✓ 100% |
 | i18n Translation Health | 100% | 0 Missing Keys (`audit:i18n`) | ✓ Clean |
 | TypeScript Compiler Errors | 0 | 0 Errors | ✓ Clean |
-| Active Frontend Bundle | — | `openmrs-esm-aiims-demographics-app-1.0.79` | ✓ Active |
+| Active Frontend Bundle | — | `openmrs-esm-aiims-demographics-app-1.0.80` | ✓ Active |

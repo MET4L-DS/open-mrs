@@ -384,6 +384,15 @@ export const CONCEPTS = {
   grade3EmbryosDay3: 'c0010001-0000-0000-0000-000000000270',
   grade4EmbryosDay3: 'c0010001-0000-0000-0000-000000000271',
   embryoGradingDay3Remarks: 'c0010001-0000-0000-0000-000000000272',
+
+  // Embryos Frozen (Form 30)
+  numberDay3EmbryosVitrified: 'c0010001-0000-0000-0000-000000000273',
+  gradeAEmbryosVitrified: 'c0010001-0000-0000-0000-000000000274',
+  gradeBEmbryosVitrified: 'c0010001-0000-0000-0000-000000000275',
+  gradeCEmbryosVitrified: 'c0010001-0000-0000-0000-000000000276',
+  numberDay5EmbryosVitrified: 'c0010001-0000-0000-0000-000000000277',
+  gradeDay5EmbryosVitrified: 'c0010001-0000-0000-0000-000000000278',
+  embryosFrozenRemarks: 'c0010001-0000-0000-0000-000000000279',
 };
 
 // Person Attribute Type UUID for Patient Telephone Number

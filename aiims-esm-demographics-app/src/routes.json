@@ -588,6 +588,26 @@
       "slot": "aiims-embryo-grading-day3-dashboard-slot",
       "online": true,
       "offline": true
+    },
+    {
+      "name": "aiims-embryos-frozen-dashboard-link",
+      "component": "aiimsEmbryosFrozenDashboardLink",
+      "slot": "patient-chart-dashboard-slot",
+      "order": 1,
+      "meta": {
+        "slot": "aiims-embryos-frozen-dashboard-slot",
+        "path": "aiims-embryos-frozen",
+        "title": "Embryos Frozen"
+      },
+      "online": true,
+      "offline": true
+    },
+    {
+      "name": "aiims-embryos-frozen-dashboard",
+      "component": "aiimsEmbryosFrozenDashboard",
+      "slot": "aiims-embryos-frozen-dashboard-slot",
+      "online": true,
+      "offline": true
     }
   ]
 }

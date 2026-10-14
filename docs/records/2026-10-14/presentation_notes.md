@@ -65,12 +65,12 @@ flowchart TD
 
 ### Slide 4: Key Platform Metrics
 
-| Metric | Previous (Morning) | Current (Form 29 Live) |
+| Metric | Previous (Morning) | Current (Form 30 Live) |
 |---|---|---|
-| **Total Registered Clinical Forms** | 26 | **29 Forms Active & Published** |
-| **Concept Registry Coverage** | 303 | **329 Unique Medical Concepts** |
-| **Numeric Concepts with Metadata** | 79 | **91 Fully Verified** |
-| **Automated Unit Tests** | 70 | **81 Passing Tests (32 test suites)** |
+| **Total Registered Clinical Forms** | 26 | **30 Forms Active & Published** |
+| **Concept Registry Coverage** | 303 | **336 Unique Medical Concepts** |
+| **Numeric Concepts with Metadata** | 79 | **93 Fully Verified** |
+| **Automated Unit Tests** | 70 | **85 Passing Tests (33 test suites)** |
 | **i18n Translation Health** | Unchecked | **100% Populated (0 missing)** |
-| **Active Frontend Bundle** | `1.0.71` | **`1.0.79` (HTTP 200 Live Verified)** |
+| **Active Frontend Bundle** | `1.0.71` | **`1.0.80` (HTTP 200 Live Verified)** |
 

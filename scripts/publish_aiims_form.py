@@ -239,6 +239,14 @@ FORMS_TO_PUBLISH = [
         "uuid": "37e59734-dac9-4332-ba27-f1053d189091",
         "encounter_type": "dd528487-82a5-4082-9c72-ed246bd49591",  # Consultation
     },
+    {
+        "name": "AIIMS Visit: Embryos Frozen",
+        "version": "1.0",
+        "description": "AIIMS Reproductive Medicine & IVF Day 3 & Day 5 Embryo Vitrification and Cryopreservation Sheet",
+        "schema_path": "forms/aiims_embryos_frozen.json",
+        "uuid": "37e59734-dac9-4332-ba27-f1053d189092",
+        "encounter_type": "dd528487-82a5-4082-9c72-ed246bd49591",  # Consultation
+    },
 ]
 
 def get_db_container():

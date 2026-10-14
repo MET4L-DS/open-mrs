@@ -226,6 +226,13 @@ To maintain agility and avoid blocking clinical deployment pending terminology l
 | `c0010001-0000-0000-0000-000000000270` | Grade 3 Embryos Day 3 | Text | Finding | Local / Embryo Grading | — | — | Active | Form 29: Grade 3 embryo description (alphanumeric freetext) |
 | `c0010001-0000-0000-0000-000000000271` | Grade 4 Embryos Day 3 | Text | Finding | Local / Embryo Grading | — | — | Active | Form 29: Grade 4 embryo description (alphanumeric freetext) |
 | `c0010001-0000-0000-0000-000000000272` | Embryo Grading Day 3 Remarks | Text | Misc | Local / Embryo Grading | — | — | Active | Form 29: Clinical notes & remarks |
+| `c0010001-0000-0000-0000-000000000273` | Number of Day 3 Embryos Vitrified | Numeric | Finding | Local / Embryos Frozen | embryos | — | Active | Form 30: Total Day 3 embryos vitrified |
+| `c0010001-0000-0000-0000-000000000274` | Grade A Embryos Vitrified | Text | Finding | Local / Embryos Frozen | — | — | Active | Form 30: Grade A embryo vitrification details/notations |
+| `c0010001-0000-0000-0000-000000000275` | Grade B Embryos Vitrified | Text | Finding | Local / Embryos Frozen | — | — | Active | Form 30: Grade B embryo vitrification details/notations |
+| `c0010001-0000-0000-0000-000000000276` | Grade C Embryos Vitrified | Text | Finding | Local / Embryos Frozen | — | — | Active | Form 30: Grade C embryo vitrification details/notations |
+| `c0010001-0000-0000-0000-000000000277` | Number of Day 5 Embryos Vitrified | Numeric | Finding | Local / Embryos Frozen | embryos | — | Active | Form 30: Total Day 5 blastocysts vitrified |
+| `c0010001-0000-0000-0000-000000000278` | Grade of Day 5 Embryos Vitrified | Text | Finding | Local / Embryos Frozen | — | — | Active | Form 30: Gardner grade of vitrified blastocysts |
+| `c0010001-0000-0000-0000-000000000279` | Embryos Frozen Remarks | Text | Misc | Local / Embryos Frozen | — | — | Active | Form 30: Cryopreservation notes & remarks |
 
 ---
 
