@@ -1,0 +1,17 @@
+{
+  "name": "aiims-openmrs-workspace",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AIIMS Department of Reproductive Medicine & IVF - OpenMRS 3.x Workspace",
+  "scripts": {
+    "deploy:local": "npm --prefix aiims-esm-demographics-app run deploy:local",
+    "validate:forms": "npm --prefix aiims-esm-demographics-app run validate:forms",
+    "validate:concepts": "npm --prefix aiims-esm-demographics-app run validate:concepts",
+    "audit:i18n": "npm --prefix aiims-esm-demographics-app run audit:i18n",
+    "test": "npm --prefix aiims-esm-demographics-app test",
+    "test:e2e": "npm --prefix aiims-esm-demographics-app run test:e2e",
+    "build": "npm --prefix aiims-esm-demographics-app run build",
+    "generate-routes": "npm --prefix aiims-esm-demographics-app run generate-routes",
+    "create-form": "npm --prefix aiims-esm-demographics-app run create-form"
+  }
+}

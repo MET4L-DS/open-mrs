@@ -65,19 +65,24 @@ Choose the appropriate track based on your task:
 
 ---
 
-## Track B: Modifying an Existing Form / Adding Fields
+## Track B: Modifying an Existing Form / Field Tweaks
 
-Use this track when adding new fields, modifying questions, or tuning validation logic in an existing clinical intake form:
+Choose the relevant modification workflow:
+- **[Sub-Track B1: Adding New Clinical Fields](#sub-track-b1-adding-new-clinical-fields)**
+- **[Sub-Track B2: Converting Fields to Coded Dropdowns (`select`/`radio`)](#sub-track-b2-converting-fields-to-coded-dropdowns-selectradio)**
 
-### Step 1: Concept Verification or Creation
-- If new concepts are needed:
-  1. Add concept definition in `scripts/setup_aiims_concepts.py` (ensure `concept_numeric` for numeric datatypes).
-  2. Run `python scripts/setup_aiims_concepts.py` to update MariaDB and `scripts/register_aiims_concepts.sql`.
-  3. Add UUID to `src/config/concepts.ts`.
-  4. Document in `configuration/concepts/aiims/aiims_concepts.csv` and `docs/concept_registry.md`.
-  5. Run `npm run validate:concepts`.
+---
 
-### Step 2: Form Schema Update & Targeted Publishing
+### Sub-Track B1: Adding New Clinical Fields
+
+#### Step 1: Concept Modeling & MariaDB Setup
+1. Define the concept in `scripts/setup_aiims_concepts.py` (ensure `concept_numeric` for numeric datatypes).
+2. Run `python scripts/setup_aiims_concepts.py` to update MariaDB and `scripts/register_aiims_concepts.sql`.
+3. Add UUID to `src/config/concepts.ts`.
+4. Document in `configuration/concepts/aiims/aiims_concepts.csv` and `docs/concept_registry.md`.
+5. Run `npm run validate:concepts`.
+
+#### Step 2: Form Schema Update & Targeted Publishing
 1. Edit the form schema in `forms/aiims_<form_key>.json`.
    - Add/modify the question block with concept UUID, rendering type, placeholder, and validation rules.
    - Guard `failsWhenExpression` against 0 and empty inputs for optional numeric fields.
@@ -87,7 +92,7 @@ Use this track when adding new fields, modifying questions, or tuning validation
    ```
 3. Run `npm run validate:forms` to confirm schema integrity.
 
-### Step 3: Frontend Model & Component Update
+#### Step 3: Frontend Model & Component Update
 1. **Resource Hook (`src/<feature>/<feature>.resource.ts`)**:
    - Update data interface (`Aiims<Name>Data`) with the new field.
    - Extract observation via `getObsValue(CONCEPTS.<field>)` or `getOptionalObsValue(CONCEPTS.<field>)`.
@@ -96,16 +101,58 @@ Use this track when adding new fields, modifying questions, or tuning validation
 3. **Summary Widget (if applicable)**:
    - If field belongs to demographics or high-level clinical summary, update `demographics-summary-widget.component.tsx`.
 
-### Step 4: Localization & Quality Gates
+#### Step 4: Localization & Quality Gates
 1. Add new keys in `translations/en.json`.
 2. Run `npm run audit:i18n` (must achieve 0 missing, 0 empty).
 3. Update unit tests if observation structures or assertions changed.
-4. Run full deployment pipeline:
-   ```bash
-   npm run deploy:local
-   ```
-5. Run targeted smoke test:
-   ```bash
-   npm run test:e2e -- --form=aiims-<form-key>
-   ```
+4. Run full deployment pipeline: `npm run deploy:local`.
+5. Run targeted smoke test: `npm run test:e2e -- --form=aiims-<form-key>`.
 6. Record updates in `docs/records/YYYY-MM-DD/summary.md`.
+
+---
+
+### Sub-Track B2: Converting Fields to Coded Dropdowns (`select`/`radio`)
+
+Follow these steps when converting an existing free-text or numeric question into a coded select dropdown:
+
+#### Step 1: Answer Modeling & Question Datatype Migration
+1. In `scripts/setup_aiims_concepts.py`:
+   - Define answer concepts array: `[("<uuid>", "<Display Name>"), ...]`.
+   - Answers must use `datatype_id = 4` (`N/A`) and `class_id = 11` (`Misc`).
+   - Register answers in `full_script` via `add_concept_sql(u, name, datatype_id=4, class_id=11)`.
+   - Change question concept `datatype_id` to `2` (`Coded`) in its `add_concept_sql` call.
+   - Link each answer to the question using `add_answer_sql(question_uuid, answer_uuid)`.
+2. Execute migration:
+   ```bash
+   python scripts/setup_aiims_concepts.py
+   ```
+3. Update `docs/concept_registry.md` with the new answer options section and update the question's datatype to `Coded`.
+4. Run `npm run validate:concepts`.
+
+#### Step 2: AMPATH Schema Update with Embedded Answers
+1. In `forms/aiims_<form_key>.json`:
+   - Change `"rendering": "text"` (or `"number"`) to `"rendering": "select"` (or `"radio"`).
+   - Add the `"answers"` array directly inside `"questionOptions"`:
+     ```json
+     "questionOptions": {
+       "rendering": "select",
+       "concept": "c0010001-0000-0000-0000-000000000XXX",
+       "answers": [
+         { "concept": "c0010002-0000-0000-0000-000000001YYY", "label": "Option A" },
+         { "concept": "c0010002-0000-0000-0000-000000001ZZZ", "label": "Option B" }
+       ]
+     }
+     ```
+2. Re-publish the form using targeted publishing:
+   ```bash
+   python scripts/publish_aiims_form.py --form=aiims_<form_key>
+   ```
+3. Run `npm run validate:forms` (enforces that all `select`/`radio` renderings match `Coded` concepts in MariaDB).
+
+#### Step 3: Frontend Validation & Deployment
+1. Verify the frontend card displays the string/label cleanly (`useFormEncounter` resolves coded answer display names automatically).
+2. Run unit tests (`npm test`).
+3. Run full deployment pipeline: `npm run deploy:local`.
+4. Run E2E smoke test robot: `npm run test:e2e -- --form=aiims-<form-key>`.
+5. Document changes in `docs/records/YYYY-MM-DD/summary.md`.
+

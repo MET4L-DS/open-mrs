@@ -26,3 +26,13 @@ replay_pid*
 # Reference Application distribution submodule/clone
 openmrs-distro-referenceapplication/
 
+# Temporary Deployment & Build Artifacts
+*.tar
+scripts/*_temp.*
+scripts/temp_*.json
+dist_temp.tar
+
+# Node
+node_modules/
+.turbo/
+

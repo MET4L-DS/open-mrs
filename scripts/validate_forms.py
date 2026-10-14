@@ -81,15 +81,28 @@ def parse_form_uuids(filepath: str) -> List[Dict[str, str]]:
     return forms
 
 
+def get_db_container():
+    try:
+        proc = subprocess.run(["docker", "ps", "--filter", "name=db", "--format", "{{.Names}}"], capture_output=True, text=True)
+        for name in proc.stdout.splitlines():
+            name = name.strip()
+            if "db" in name and "backend" not in name:
+                return name
+    except Exception:
+        pass
+    return "openmrs-distro-referenceapplication-db-1"
+
+
 def load_db_concept_map() -> Dict[str, Dict[str, Any]]:
     """Loads concept metadata directly from MariaDB container for instant deep verification."""
+    container = get_db_container()
     try:
         cmd = [
-            "docker", "exec", "-i", "openmrs-distro-referenceapplication-db-1",
+            "docker", "exec", "-i", container,
             "mariadb", "-uopenmrs", "-popenmrs", "openmrs", "-e",
             "SELECT c.uuid, cd.name as datatype, (cn2.concept_id IS NOT NULL) as has_numeric FROM concept c JOIN concept_datatype cd ON c.datatype_id = cd.concept_datatype_id LEFT JOIN concept_numeric cn2 ON c.concept_id = cn2.concept_id;"
         ]
-        proc = subprocess.run(cmd, capture_output=True, text=True, timeout=5)
+        proc = subprocess.run(cmd, capture_output=True, text=True, timeout=20)
         if proc.returncode == 0:
             lines = proc.stdout.strip().splitlines()[1:]
             return {
@@ -123,6 +136,8 @@ def inspect_schema_questions(data: dict, db_concepts: Dict[str, Dict[str, Any]])
                         if rendering == "number" or c_meta["datatype"] == "Numeric":
                             if not c_meta["has_numeric"]:
                                 errors.append(f"Question '{q_id}' has Numeric concept {c_uuid} missing concept_numeric entry")
+                        elif rendering in ["select", "radio"] and c_meta["datatype"] != "Coded":
+                            errors.append(f"Question '{q_id}' has rendering '{rendering}' but its concept {c_uuid} datatype is '{c_meta['datatype']}' (expected 'Coded')")
 
                 # Check answer options
                 answers = q_options.get("answers")

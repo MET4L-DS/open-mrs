@@ -15,7 +15,7 @@
 
 param (
     [Parameter(Position=0)]
-    [ValidateSet("start", "stop", "restart", "status", "logs", "open", "pull", "down", "setup")]
+    [ValidateSet("start", "stop", "restart", "status", "logs", "open", "pull", "down", "setup", "deploy", "test")]
     [string]$Action = "status",
 
     [Parameter(Position=1)]
@@ -94,5 +94,14 @@ switch ($Action) {
         Write-Host "Running OpenMRS AIIMS Complete Environment Setup..." -ForegroundColor Cyan
         $SetupScript = Join-Path $PSScriptRoot "scripts\setup_environment.py"
         python $SetupScript
+    }
+    "deploy" {
+        Write-Host "Running 9-Stage Automated Microfrontend Deployment Pipeline..." -ForegroundColor Cyan
+        $DeployScript = Join-Path $PSScriptRoot "scripts\deploy_pipeline.py"
+        python $DeployScript
+    }
+    "test" {
+        Write-Host "Running AIIMS Frontend Test Suites..." -ForegroundColor Cyan
+        npm --prefix (Join-Path $PSScriptRoot "aiims-esm-demographics-app") test
     }
 }

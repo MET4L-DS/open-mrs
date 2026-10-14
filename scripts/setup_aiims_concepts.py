@@ -56,6 +56,7 @@ def add_concept_sql(c_uuid, name, datatype_id, class_id=7, is_numeric=False, uni
         {"INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@new_id, " + (f"'{units}'" if units else "NULL") + f", {allow_decimal}, " + (str(low_abs) if low_abs is not None else "NULL") + f", " + (str(hi_abs) if hi_abs is not None else "NULL") + ");" if is_numeric else ""}
     ELSE
         SET @new_id = @existing_id;
+        UPDATE concept SET datatype_id = {datatype_id}, class_id = {class_id} WHERE concept_id = @existing_id;
         {"IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, " + (f"'{units}'" if units else "NULL") + f", {allow_decimal}, " + (str(low_abs) if low_abs is not None else "NULL") + f", " + (str(hi_abs) if hi_abs is not None else "NULL") + "); END IF;" if is_numeric else ""}
     END IF;
     """
