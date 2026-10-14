@@ -32,6 +32,7 @@ To maintain agility and avoid blocking clinical deployment pending terminology l
 | `c0010001-0000-0000-0000-000000000007` | Husband Name | Text | Misc | Local / Partner Obs | — | — | Active | Partner identification |
 | `c0010001-0000-0000-0000-000000000008` | Husband Age | Numeric | Finding | SNOMED CT | `424144002` | Yes | Active | Partner chronological age |
 | `c0010001-0000-0000-0000-000000000011` | Phone Number Husband | Text | Misc | Local / Partner Obs | — | — | Active | Partner contact number |
+| `c0010001-0000-0000-0000-000000000012` | Patient Body Mass Index | Numeric | Observable entity | SNOMED CT | `60621009` | Yes | Active | Patient (Wife) Body Mass Index (kg/m²) |
 | `c0010001-0000-0000-0000-000000000014` | Occupation Wife | Coded | Finding | SNOMED CT | `105429006` | Yes | Active | Concept answers: `c0010002-...` |
 | `c0010001-0000-0000-0000-000000000015` | Occupation Husband | Coded | Finding | SNOMED CT | `105429006` | Yes | Active | Concept answers: `c0010002-...` |
 | `c0010001-0000-0000-0000-000000000016` | Socioeconomic Status | Coded | Finding | SNOMED CT | `73831000` | Yes | Active | Concept answers: `c0010003-...` |

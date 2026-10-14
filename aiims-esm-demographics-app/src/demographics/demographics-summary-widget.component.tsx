@@ -89,6 +89,16 @@ export default function DemographicsSummaryWidget({
         : undefined,
     },
     {
+      label: t('wifeBmi', "Wife's BMI"),
+      value: demographics.patientBmi
+        ? t('valueWithUnit', '{{value}} {{unit}}', {
+            value: demographics.patientBmi,
+            unit: t('kgPerMSq', 'kg/m²'),
+            interpolation: { escapeValue: false },
+          })
+        : undefined,
+    },
+    {
       label: t('husbandNameLabel', 'Husband'),
       value: demographics.husbandName,
     },

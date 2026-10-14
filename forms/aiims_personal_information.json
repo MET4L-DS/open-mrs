@@ -63,6 +63,24 @@
               ]
             },
             {
+              "label": "Body Mass Index (BMI)",
+              "type": "obs",
+              "id": "wife_bmi",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "number",
+                "concept": "c0010001-0000-0000-0000-000000000012",
+                "placeholder": "kg/m2"
+              },
+              "validators": [
+                {
+                  "type": "js_expression",
+                  "failsWhenExpression": "myValue && myValue != 0 && (Number(myValue) < 10.0 || Number(myValue) > 60.0)",
+                  "message": "BMI must be between 10.0 and 60.0 kg/m2."
+                }
+              ]
+            },
+            {
               "label": "Phone Number (Wife)",
               "type": "personAttribute",
               "id": "wife_phone",

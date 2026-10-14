@@ -10,6 +10,7 @@ export interface AiimsDemographicsData {
   consultantUnit?: string;
   consultantName?: string;
   patientAge?: string;
+  patientBmi?: string;
   patientPhone?: string;
   wifeEducation?: string;
   wifeOccupation?: string;
@@ -72,6 +73,7 @@ export function useAiimsDemographics(
     consultantUnit: getObsValue(CONCEPTS.consultantUnit),
     consultantName: getObsValue(CONCEPTS.consultantName),
     patientAge: getObsValue(CONCEPTS.patientAge) || fallbackAge,
+    patientBmi: getObsValue(CONCEPTS.patientBmi),
     patientPhone: fallbackPhone,
     wifeEducation,
     wifeOccupation: getObsValue(CONCEPTS.occupationWife),

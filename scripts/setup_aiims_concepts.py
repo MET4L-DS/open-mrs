@@ -590,6 +590,8 @@ full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000009", "Husb
 full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000010", "Phone Number Wife", datatype_id=3, class_id=7))
 # Phone Husband
 full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000011", "Phone Number Husband", datatype_id=3, class_id=7))
+# Patient (Wife) BMI
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000012", "Patient Body Mass Index", datatype_id=1, class_id=7, is_numeric=True, units="kg/m2", allow_decimal=1, low_abs=5, hi_abs=90))
 
 # Education Wife: 1712AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 full_script.append(add_concept_sql("1712AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "Education Wife", datatype_id=2, class_id=7))

@@ -13,6 +13,16 @@
 - **Backend Publishing**: Added to `FORMS_TO_PUBLISH` in `scripts/publish_aiims_form.py` and published to `openmrs.form` and `clob_datatype_storage` (UUID: `37e59734-dac9-4332-ba27-f1053d189089`).
 - **Encounter Round-Trip Verification**: Verified encounter submission via REST API (`POST /openmrs/ws/rest/v1/encounter` -> HTTP 201 Created).
 
+### Form 1: Patient (Wife) Body Mass Index (BMI) Field Addition
+- **Concept Registration**: Registered new numeric concept `c0010001-0000-0000-0000-000000000012` (`Patient Body Mass Index`) with `concept_numeric` (`units='kg/m2'`, `allow_decimal=1`, `low_absolute=5`, `hi_absolute=90`).
+- **AMPATH Schema Update**: Updated `forms/aiims_personal_information.json` to include Body Mass Index (BMI) under the Patient (Wife) section with numeric validator (10.0 - 60.0 kg/m²). Published schema to backend.
+- **Frontend UI & Components**:
+  - Added `patientBmi` to `AiimsDemographicsData` interface and extraction in `demographics.resource.ts`.
+  - Added BMI row to `PatientCard` (`patient-card.component.tsx`).
+  - Added `Wife's BMI` item to `DemographicsSummaryWidget` (`demographics-summary-widget.component.tsx`).
+  - Added localized strings (`patientBmi: "BMI"`, `wifeBmi: "Wife's BMI"`) in `translations/en.json` (verified via `audit:i18n`).
+  - Hot-deployed bundle `openmrs-esm-aiims-demographics-app-1.0.72` via `deploy:local`.
+
 ---
 
 ## 3. Post-Mortem & Bug Resolutions
@@ -60,9 +70,8 @@ Upgraded deployment pipeline to run 7 sequential quality gates:
 | Metric | Target | Result | Status |
 |---|---|---|---|
 | Registered Clinical Forms | 27 | 27 Published & Active | ✓ 100% |
-| Unique Concept Definitions | 316 | 316 Active & Verified | ✓ 100% |
-| Numeric Concepts with `concept_numeric` | 84 | 84 Verified | ✓ 100% |
+| Unique Concept Definitions | 317 | 317 Active & Verified | ✓ 100% |
+| Numeric Concepts with `concept_numeric` | 85 | 85 Verified | ✓ 100% |
 | Unit Test Suite | 74 | 74 Passing (30 files) | ✓ 100% |
 | TypeScript Compiler Errors | 0 | 0 Errors | ✓ Clean |
-| Pipeline Execution Duration | < 60s | 38.98s | ✓ Fast |
-| Active Frontend Bundle | — | `openmrs-esm-aiims-demographics-app-1.0.71` | ✓ Active |
+| Active Frontend Bundle | — | `openmrs-esm-aiims-demographics-app-1.0.72` | ✓ Active |
