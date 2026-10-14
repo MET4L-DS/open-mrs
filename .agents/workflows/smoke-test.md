@@ -1,5 +1,5 @@
 ---
-description: Execute headless browser smoke tests for individual clinical intake forms or the complete suite of 28 AIIMS dashboards.
+description: Execute headless browser smoke tests for individual clinical intake forms or the complete suite of all registered AIIMS dashboards.
 ---
 
 # E2E Dashboard Smoke Testing Workflow
@@ -16,7 +16,7 @@ npm run test:e2e -- --form=aiims-<form_key>
 *Example*: `npm run test:e2e -- --form=aiims-embryo-assessment`
 
 ### Option 2: Full Suite Smoke Test
-To verify all 28 registered AIIMS clinical forms across the live patient chart:
+To verify all registered AIIMS clinical forms across the live patient chart:
 ```bash
 npm run test:e2e
 ```

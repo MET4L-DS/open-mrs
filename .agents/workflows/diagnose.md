@@ -20,13 +20,13 @@ Use this workflow to quickly assess the operational status of the entire OpenMRS
    - `openmrs-distro-referenceapplication-db-1`
 
 2. **Run Form Schema Diagnostics**:
-   Verify that all 28 registered clinical forms exist on disk, are published in OpenMRS, and have valid question concepts:
+   Verify that all registered clinical forms exist on disk, are published in OpenMRS, and have valid question concepts:
    ```bash
    npm run validate:forms
    ```
 
 3. **Run Concept Dictionary Diagnostics**:
-   Verify that all 324 unique clinical concepts exist, are active, and all numeric concepts have valid `concept_numeric` entries:
+   Verify that all registered unique clinical concepts exist, are active, and all numeric concepts have valid `concept_numeric` entries:
    ```bash
    npm run validate:concepts
    ```
@@ -45,8 +45,8 @@ Use this workflow to quickly assess the operational status of the entire OpenMRS
 
 6. **Summary Health Matrix**:
    Output a diagnostic report summarizing:
-   - Stack Health (Containers)
-   - Form Schema Status (28/28)
-   - Concept Health (324/324)
-   - i18n Completeness (0 missing)
-   - Vitest Test Results (77/77 passing)
+   - Stack Health (Containers: 4/4 active)
+   - Form Schema Status (N/N valid & published from `validate:forms`)
+   - Concept Health (N/N active with valid `concept_numeric` from `validate:concepts`)
+   - i18n Completeness (0 missing, 0 untranslated)
+   - Vitest Test Results (All test suites and unit tests passing)

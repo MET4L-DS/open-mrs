@@ -8,6 +8,7 @@
     "validate:forms": "npm --prefix aiims-esm-demographics-app run validate:forms",
     "validate:concepts": "npm --prefix aiims-esm-demographics-app run validate:concepts",
     "audit:i18n": "npm --prefix aiims-esm-demographics-app run audit:i18n",
+    "pre-flight": "npm --prefix aiims-esm-demographics-app run pre-flight",
     "test": "npm --prefix aiims-esm-demographics-app test",
     "test:e2e": "npm --prefix aiims-esm-demographics-app run test:e2e",
     "build": "npm --prefix aiims-esm-demographics-app run build",

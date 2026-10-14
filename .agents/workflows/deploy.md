@@ -8,6 +8,12 @@ Use this workflow to execute a safe, zero-downtime hot deployment of `@aiims/esm
 
 ## Execution Steps
 
+0. **Fast Sanity Pre-Flight (Optional for Iteration)**:
+   Quickly assert schema validity, concept relational integrity, i18n keys, and TypeScript compilation in ~10 seconds before running the full build/deploy pipeline:
+   ```bash
+   npm run pre-flight
+   ```
+
 1. **Run Deployment Pipeline**:
    Execute the automated 9-stage pipeline from the workspace root:
    ```bash
@@ -17,8 +23,8 @@ Use this workflow to execute a safe, zero-downtime hot deployment of `@aiims/esm
 
 2. **Pipeline Quality Gates Enforced**:
    - **Gate 1**: Docker Pre-flight Check (verifies `frontend`, `backend`, `gateway`, `db` containers are active).
-   - **Gate 2**: Clinical Form Schema Verification (`validate:forms` across all 28 forms).
-   - **Gate 3**: Concept Dictionary Verification (`validate:concepts` for 324 concepts).
+   - **Gate 2**: Clinical Form Schema Verification (`validate:forms` across all registered forms).
+   - **Gate 3**: Concept Dictionary Verification (`validate:concepts` for all registered concepts & numeric metadata).
    - **Gate 4**: i18n Translation Health Check (`audit:i18n`).
    - **Gate 5**: TypeScript Compilation (`tsc` with `noImplicitAny: true`).
    - **Gate 6**: Unit Test Suite (`vitest` across all test files).

@@ -20,3 +20,8 @@ These rules govern all engineering, form creation, and record keeping in this wo
   - `summary.md`: Engineering summary, post-mortems, and metrics.
   - `presentation_notes.md`: Slide-ready clinical workflow notes and diagrams.
 - Update `docs/records/README.md` with the new milestone row.
+
+## 5. Pre-Deployment Sanity Check
+- Before running the full `deploy:local` pipeline, use `npm run pre-flight` to assert schema
+  validity, concept relational integrity, i18n completeness, and TypeScript correctness in ~10s.
+- `pre-flight` runs: `validate:forms` → `validate:concepts` → `audit:i18n` → `tsc --noEmit`.

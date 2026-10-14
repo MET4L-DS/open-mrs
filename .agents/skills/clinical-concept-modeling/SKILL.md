@@ -72,6 +72,14 @@ Before generating a placeholder UUID, check if standard OpenMRS/CIEL concepts ex
        hi_abs=100
    ))
    ```
+
+   > ⚠️ **Pre-Registration Checklist for Numeric Concepts**:
+   > - [ ] `is_numeric=True` is explicitly passed.
+   > - [ ] `units` is a non-empty string with valid units (e.g. `"IU"`, `"days"`, `"mm"`).
+   > - [ ] `allow_decimal` is integer `0` or `1` (never pass Python booleans `True`/`False`, which can map inappropriately in raw SQL generation).
+   > - [ ] `low_abs` and `hi_abs` are set to valid absolute numbers (never leave as `None`).
+   > *Omitting any of the above causes `ObsValidator` HTTP 500 NullPointerException during form submission.*
+
 2. For coded dropdown questions and answers:
    ```python
    my_feature_answers = [

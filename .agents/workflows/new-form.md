@@ -23,12 +23,13 @@ Use this workflow whenever adding a brand new clinical intake form to the AIIMS 
 1. Consult skill `ampath-form-schema-guide`.
 2. Create `forms/aiims_<form_key>.json` with ASCII-only hyphens.
 3. Map each question to its concept UUID and appropriate rendering (`number`, `text`, `textarea`, `select`, `radio`, `date`).
-4. Register the new form in `scripts/publish_aiims_form.py` (`FORMS_TO_PUBLISH`).
-5. Publish form:
+4. **Conditional Visibility Rule**: For any conditional fields triggered by radio or select inputs, always attach `hideWhenExpression` directly to **each question** inside the conditional section (never to the section container) and guard with `!trigger || trigger !== 'target-uuid'`. Section-level hiding fails on initial transition from `null`.
+5. Register the new form in `scripts/publish_aiims_form.py` (`FORMS_TO_PUBLISH`).
+6. Publish form:
    ```bash
    python scripts/publish_aiims_form.py --form=aiims_<form_key>
    ```
-6. Verify schema: `npm run validate:forms`.
+7. Verify schema: `npm run validate:forms`.
 
 ### Stage 3: Microfrontend Scaffolding
 1. Scaffold feature module using the CLI:

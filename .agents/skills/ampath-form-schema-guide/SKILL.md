@@ -106,7 +106,41 @@ Conditional logic dynamically shows or hides questions based on user answers in 
      }
    }
    ```
-4. **Section Hiding**: In the OpenMRS 3.x form engine, `hideWhenExpression` applies to individual questions, not to `<sections>`. To hide an entire section, attach the identical `hideWhenExpression` to each question within that section.
+4. **Section Hiding & Question-Level Rule**: In the OpenMRS 3.x form engine, `hideWhenExpression` applies reliably to individual questions, not to section container objects (`<sections>`). To hide an entire section, attach the identical `hideWhenExpression` to each question within that section.
+
+### CRITICAL: Null-State Transition Failure (Bug Pattern #4)
+
+When a radio button or select input transitions from `null` (pristine / unselected) → first selection, `hideWhenExpression` evaluated at the **section container level fails to re-evaluate**. This is a known OpenMRS 3.x React Form Engine limitation where section-level expression contexts are not re-mounted on first-touch events.
+
+**Symptom**: Clicking Yes/No on a pristine radio does nothing. Clicking the *other* option then triggers the conditional section. Subsequent toggles work fine.
+
+**Fix**: Move `hideWhenExpression` from the section container to **each question** within the conditional section:
+
+```json
+// ❌ Broken — section-level hide fails on null → first-click transition
+{
+  "label": "Yes Details Section",
+  "hide": { "hideWhenExpression": "procedure_done !== 'yes-concept-uuid'" },
+  "questions": [ ... ]
+}
+
+// ✅ Correct — question-level hide re-evaluates reliably
+{
+  "label": "Yes Details Section",
+  "questions": [
+    {
+      "id": "detail_field_1",
+      "hide": { "hideWhenExpression": "!procedure_done || procedure_done !== 'yes-concept-uuid'" },
+      ...
+    }
+  ]
+}
+```
+
+**Guard Against Null/Undefined**: Always prefix visibility checks with falsy guards (`!triggerField || ...`) so unset fields default cleanly to hidden:
+```json
+"hideWhenExpression": "!fresh_et_done || fresh_et_done !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+```
 
 ---
 

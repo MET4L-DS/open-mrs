@@ -24,6 +24,7 @@
     "validate:concepts": "python ../scripts/validate_concepts.py",
     "validate:forms": "python ../scripts/validate_forms.py",
     "audit:i18n": "tsx scripts/audit-i18n.ts",
+    "pre-flight": "npm run validate:forms && npm run validate:concepts && npm run audit:i18n && tsc --noEmit",
     "coverage": "vitest run --coverage --passWithNoTests",
     "typescript": "tsc",
     "lint": "eslint src",
