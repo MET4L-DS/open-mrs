@@ -126,15 +126,34 @@ async function runSmokeTests() {
   }
   console.log('✓ OK');
 
+  // All dashboards to test (including IVF Summary consolidated dashboard)
+  const allDashboards = [
+    {
+      key: 'ivf-summary',
+      name: 'AIIMS Visit: IVF Summary',
+      title: 'IVF Summary',
+      path: 'aiims-ivf-summary',
+      slot: 'aiims-ivf-summary-dashboard-slot',
+      uuid: 'ivf-summary',
+    },
+    ...FORM_REGISTRY,
+  ];
+
   // Filter forms if specified
   const formsToTest = options.formKey
-    ? FORM_REGISTRY.filter((f) => f.key === options.formKey || f.path === options.formKey)
-    : FORM_REGISTRY;
+    ? allDashboards.filter(
+        (f) =>
+          f.key === options.formKey ||
+          f.path === options.formKey ||
+          `aiims-${f.key}` === options.formKey
+      )
+    : allDashboards;
 
   if (formsToTest.length === 0) {
     console.error(`\n[Error] No form found matching filter "${options.formKey}".`);
     process.exit(1);
   }
+
 
   // 2. Launch Browser
   console.log('\nLaunching browser session...');

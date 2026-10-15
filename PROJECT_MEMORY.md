@@ -110,6 +110,8 @@ This file serves as the persistent project-level memory and source of truth acro
   - Form 32 (`add-procedure-art`): `37e59734-dac9-4332-ba27-f1053d189094` (`AIIMS Visit: Additional Procedures in Assisted Reproductive Technology`)
   - Form 33 (`post-ivf-investigation`): `639def6a-b768-4db5-a0b3-548452b0b8ed` (`AIIMS Visit: Post-InVitro Fertilisation Investigation`)
   - Form 34 (`examination-infant`): `1eec08ba-b346-4f61-9f17-95e65f2e6c87` (`AIIMS Visit: Examination Infant`)
+  - Consolidated Dashboard (`ivf-summary`): `aiims-ivf-summary` (Order 0 anchor in patient-chart-dashboard-slot, single unified encounter view across all 34 forms)
+
 
 - **Core Concept UUIDs (`src/constants.ts` & `docs/concept_registry.md`)**:
 
@@ -483,4 +485,7 @@ Follow this 6-stage lifecycle to add new clinical forms without errors:
 - [x] Register Form 31: Fresh Embryo Transfer Details (`fresh-et-details`).
 - [x] Register Form 32: Additional Procedures in Assisted Reproductive Technology (`add-procedure-art`).
 - [x] Register Form 33: Post-InVitro Fertilisation Investigation (`post-ivf-investigation`).
+- [x] Register Form 34: Examination Infant (`examination-infant`).
+- [x] Implement Consolidated IVF Summary Dashboard (`aiims-ivf-summary`) with full 6-domain clinical enrichment.
+
 
