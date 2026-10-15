@@ -22,7 +22,33 @@
   - Deployed microfrontend bundle to container.
   - Verified live mounting in real chart using headless browser smoke test robot (`npm run test:e2e -- --form=aiims-post-ivf-investigation` - 2.96s).
 
-### 2. Modern vs. Legacy Workflow Benchmark Comparison
+### 2. Form 34: Examination Infant Implementation
+
+- **Target Form**: Form 34 — "AIIMS Visit: Examination Infant" (`examination-infant`).
+- **Form UUID**: `1eec08ba-b346-4f61-9f17-95e65f2e6c87`
+- **Concept Modeling**:
+  - Registered 3 question concepts:
+    - `c0010001-...-0302`: Sex of Baby (Coded)
+    - `c0010001-...-0303`: Weight of Baby (Numeric, `0.3`–`8.0 kg`, `concept_numeric` verified)
+    - `c0010001-...-0304`: APGAR Score (Numeric, `0`–`10`, `concept_numeric` verified)
+  - Registered 3 coded answers:
+    - `c0010002-...-1155`: Male
+    - `c0010002-...-1156`: Female
+    - `c0010002-...-1157`: Ambiguous
+- **AMPATH Form Schema**:
+  - Authored `forms/aiims_examination_infant.json` with anthropometry and physical vitality sections.
+  - Published to OpenMRS backend via `scripts/publish_aiims_form.py`.
+- **Frontend Scaffolding & Component**:
+  - Scaffolded via CLI: `npm run create-form -- examination-infant "AIIMS Visit: Examination Infant" --uuid=1eec08ba-b346-4f61-9f17-95e65f2e6c87 --icon=PedestrianChild`.
+  - Implemented typed resource extraction hook `useExaminationInfant`.
+  - Built `ExaminationInfantCard` with Carbon color-coded tags for infant sex, birth weight in `kg`, and APGAR scores (`green` $\ge 7$, `warm-gray` $4\text{–}6$, `red` $< 4$).
+  - Added localized strings to `translations/en.json` (0 missing on `audit:i18n`).
+  - Implemented Vitest unit tests (3 tests passing).
+- **Deployment & E2E Validation**:
+  - All 9 pipeline deployment stages passed (`deploy:local` completed in 149.98s, cache-busting version `1.0.86`).
+  - Headless E2E smoke test robot verified live patient chart mounting in 3.44s (`npm run test:e2e -- --form=aiims-examination-infant`).
+
+### 3. Modern vs. Legacy Workflow Benchmark Comparison
 
 | Metric | Legacy Workflow | Modern Workflow (v2.0) | Improvement |
 | :--- | :--- | :--- | :--- |
@@ -30,3 +56,4 @@
 | **Manual Files Touched** | 8 files | 2 files (concept script + schema) | **-75% manual files** |
 | **Route Registration Drift** | ❌ Silent sidebar failure (12m 33s debug) | ✅ Single-sourced auto-generation | **100% drift prevention** |
 | **Verification Feedback** | ❌ Manual browser clicking | ✅ Automated pre-flight & E2E robot | **Deterministic validation** |
+

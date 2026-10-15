@@ -626,4 +626,18 @@
   "pogAtDeliveryLabel": "Period of Gestation at Delivery",
   "mIuPerMl": "mIU/mL",
   "weeks": "weeks"
+,
+  "aiimsExaminationInfantTitle": "Examination Infant",
+  "examinationInfantDetails": "Examination Infant Details",
+  "loadingExaminationInfant": "Loading Examination Infant...",
+  "noRecordedExaminationInfantEncounter": "No AIIMS Visit: Examination Infant encounter recorded yet",
+  "noExaminationInfantBody": "No clinical intake details have been submitted for this patient yet.",
+  "noExaminationInfantRecorded": "No Examination Infant recorded",
+  "recordExaminationInfant": "Record Examination Infant",
+  "updateExaminationInfant": "Update Examination Infant",
+  "sexOfBaby": "Sex of Baby",
+  "weightOfBaby": "Weight of Baby",
+  "apgarScore": "APGAR Score",
+  "kg": "kg",
+  "noExaminationInfantDetails": "No infant examination details recorded yet"
 }

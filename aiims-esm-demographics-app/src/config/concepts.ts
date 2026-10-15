@@ -421,7 +421,13 @@ export const CONCEPTS = {
   otherPregnancyComplications: 'c0010001-0000-0000-0000-000000000299',
   modeOfDelivery: 'c0010001-0000-0000-0000-000000000300',
   pogAtDelivery: 'c0010001-0000-0000-0000-000000000301',
+
+  // Examination Infant (Form 34)
+  sexOfBaby: 'c0010001-0000-0000-0000-000000000302',
+  weightOfBaby: 'c0010001-0000-0000-0000-000000000303',
+  apgarScore: 'c0010001-0000-0000-0000-000000000304',
 };
+
 
 
 // Person Attribute Type UUID for Patient Telephone Number

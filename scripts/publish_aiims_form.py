@@ -271,7 +271,16 @@ FORMS_TO_PUBLISH = [
         "uuid": "639def6a-b768-4db5-a0b3-548452b0b8ed",
         "encounter_type": "dd528487-82a5-4082-9c72-ed246bd49591",  # Consultation
     },
+    {
+        "name": "AIIMS Visit: Examination Infant",
+        "version": "1.0",
+        "description": "AIIMS Reproductive Medicine & IVF Examination Infant Sheet",
+        "schema_path": "forms/aiims_examination_infant.json",
+        "uuid": "1eec08ba-b346-4f61-9f17-95e65f2e6c87",
+        "encounter_type": "dd528487-82a5-4082-9c72-ed246bd49591",  # Consultation
+    },
 ]
+
 
 
 def get_db_container():

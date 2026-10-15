@@ -1,0 +1,85 @@
+{
+  "name": "AIIMS Visit: Examination Infant",
+  "uuid": "1eec08ba-b346-4f61-9f17-95e65f2e6c87",
+  "processor": "EncounterFormProcessor",
+  "encounterType": "aiims-encounter-type",
+  "version": "1.0",
+  "pages": [
+    {
+      "label": "Examination Infant",
+      "sections": [
+        {
+          "label": "Neonatal Anthropometry",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "label": "Sex of Baby",
+              "type": "obs",
+              "id": "sexOfBaby",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "c0010001-0000-0000-0000-000000000302",
+                "answers": [
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000001155",
+                    "label": "Male"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000001156",
+                    "label": "Female"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000001157",
+                    "label": "Ambiguous"
+                  }
+                ]
+              }
+            },
+            {
+              "label": "Weight of Baby (kg)",
+              "type": "obs",
+              "id": "weightOfBaby",
+              "questionOptions": {
+                "rendering": "number",
+                "concept": "c0010001-0000-0000-0000-000000000303",
+                "min": "0.3",
+                "max": "8.0"
+              },
+              "validators": [
+                {
+                  "type": "js_expression",
+                  "failsWhenExpression": "isEmpty(myValue) ? false : (myValue < 0.3 || myValue > 8.0)",
+                  "message": "Birth weight must be between 0.3 and 8.0 kg."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Physical Assessment & Vitality",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "label": "APGAR Score (Appearance, Pulse, Grimace, Activity, Respiration)",
+              "type": "obs",
+              "id": "apgarScore",
+              "questionOptions": {
+                "rendering": "number",
+                "concept": "c0010001-0000-0000-0000-000000000304",
+                "min": "0",
+                "max": "10"
+              },
+              "validators": [
+                {
+                  "type": "js_expression",
+                  "failsWhenExpression": "isEmpty(myValue) ? false : (myValue < 0 || myValue > 10)",
+                  "message": "APGAR score must be between 0 and 10."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

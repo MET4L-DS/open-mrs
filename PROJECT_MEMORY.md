@@ -109,6 +109,8 @@ This file serves as the persistent project-level memory and source of truth acro
   - Form 31 (`fresh-et-details`): `37e59734-dac9-4332-ba27-f1053d189093` (`AIIMS Visit: Fresh Embryo Transfer Details`)
   - Form 32 (`add-procedure-art`): `37e59734-dac9-4332-ba27-f1053d189094` (`AIIMS Visit: Additional Procedures in Assisted Reproductive Technology`)
   - Form 33 (`post-ivf-investigation`): `639def6a-b768-4db5-a0b3-548452b0b8ed` (`AIIMS Visit: Post-InVitro Fertilisation Investigation`)
+  - Form 34 (`examination-infant`): `1eec08ba-b346-4f61-9f17-95e65f2e6c87` (`AIIMS Visit: Examination Infant`)
+
 - **Core Concept UUIDs (`src/constants.ts` & `docs/concept_registry.md`)**:
 
   - `consultantUnit`: `c0010001-0000-0000-0000-000000000001`

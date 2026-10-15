@@ -668,6 +668,26 @@
       "slot": "aiims-post-ivf-investigation-dashboard-slot",
       "online": true,
       "offline": true
+    },
+    {
+      "name": "aiims-examination-infant-dashboard-link",
+      "component": "aiimsExaminationInfantDashboardLink",
+      "slot": "patient-chart-dashboard-slot",
+      "order": 1,
+      "meta": {
+        "slot": "aiims-examination-infant-dashboard-slot",
+        "path": "aiims-examination-infant",
+        "title": "Examination Infant"
+      },
+      "online": true,
+      "offline": true
+    },
+    {
+      "name": "aiims-examination-infant-dashboard",
+      "component": "aiimsExaminationInfantDashboard",
+      "slot": "aiims-examination-infant-dashboard-slot",
+      "online": true,
+      "offline": true
     }
   ]
 }

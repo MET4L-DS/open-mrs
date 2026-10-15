@@ -635,6 +635,14 @@ mode_of_delivery_answers = [
     ("c0010002-0000-0000-0000-000000001154", "Cesarean section"),
 ]
 
+# Form 34: Examination Infant Answers
+baby_sex_answers = [
+    ("c0010002-0000-0000-0000-000000001155", "Male"),
+    ("c0010002-0000-0000-0000-000000001156", "Female"),
+    ("c0010002-0000-0000-0000-000000001157", "Ambiguous"),
+]
+
+
 
 
 
@@ -737,6 +745,10 @@ for u, name in post_ivf_complications_answers:
 
 for u, name in mode_of_delivery_answers:
     full_script.append(add_concept_sql(u, name, datatype_id=4, class_id=11))
+
+for u, name in baby_sex_answers:
+    full_script.append(add_concept_sql(u, name, datatype_id=4, class_id=11))
+
 
 
 # 2. Question concepts
@@ -1182,6 +1194,12 @@ full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000298", "Post
 full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000299", "Other Pregnancy Complications", datatype_id=3, class_id=7))
 full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000300", "Mode of Delivery", datatype_id=2, class_id=7))
 full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000301", "Period of Gestation at Delivery", datatype_id=1, class_id=7, is_numeric=True, units="weeks", allow_decimal=1, low_abs=10, hi_abs=45))
+
+# Examination Infant Concepts (Form 34: 0302-0304)
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000302", "Sex of Baby", datatype_id=2, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000303", "Weight of Baby", datatype_id=1, class_id=7, is_numeric=True, units="kg", allow_decimal=1, low_abs=0.3, hi_abs=8.0))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000304", "APGAR Score", datatype_id=1, class_id=7, is_numeric=True, units="score", allow_decimal=0, low_abs=0, hi_abs=10))
+
 
 
 
@@ -1832,6 +1850,12 @@ for ans_uuid, _ in post_ivf_complications_answers:
 # Mode of Delivery (0300)
 for ans_uuid, _ in mode_of_delivery_answers:
     full_script.append(add_answer_sql("c0010001-0000-0000-0000-000000000300", ans_uuid))
+
+# Form 34: Examination Infant Answers
+# Sex of Baby (0302)
+for ans_uuid, _ in baby_sex_answers:
+    full_script.append(add_answer_sql("c0010001-0000-0000-0000-000000000302", ans_uuid))
+
 
 
 

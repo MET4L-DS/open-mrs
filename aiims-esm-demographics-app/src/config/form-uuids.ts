@@ -130,4 +130,8 @@ export const AIIMS_ADD_PROCEDURE_ART_FORM_NAME = 'AIIMS Visit: Additional Proced
 export const AIIMS_POST_IVF_INVESTIGATION_FORM_UUID = '639def6a-b768-4db5-a0b3-548452b0b8ed';
 export const AIIMS_POST_IVF_INVESTIGATION_FORM_NAME = 'AIIMS Visit: Post-InVitro Fertilisation Investigation';
 
+// Form UUID for AIIMS Visit: Examination Infant
+export const AIIMS_EXAMINATION_INFANT_FORM_UUID = '1eec08ba-b346-4f61-9f17-95e65f2e6c87';
+export const AIIMS_EXAMINATION_INFANT_FORM_NAME = 'AIIMS Visit: Examination Infant';
+
 // @create-form:uuids-end
