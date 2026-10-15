@@ -8,9 +8,7 @@ This directory maintains the chronological tally, audit records, and presentatio
 
 | Date | Milestone / Forms Delivered | Core Deliverables & Key Changes | Quality Gate Status | Record Details |
 |---|---|---|---|---|
-| **2026-10-15** | **Forms 33, 34 & IVF Summary Dashboard** | • Form 33: Post-InVitro Fertilisation Investigation (UPT, Beta-hCG, 6-7w Scan, Outcome, Complications, Delivery mode & POG)<br>• Form 34: Examination Infant (Sex of Baby, Birth Weight in kg, APGAR score 0-10)<br>• **Consolidated IVF Summary Dashboard**: Unified overview tab anchored at order 0 aggregating data across all 34 forms into a single high-performance clinical view<br>• Comparative benchmark between Legacy (32m 45s) and Modern Workflow v2.0 (8m 30s)<br>• Automated scaffolding, Single-SPA extension generation & live E2E smoke verification | ✓ 34/34 forms published<br>✓ 361/361 concepts active<br>✓ 100/100 unit tests pass<br>✓ Hot-deployed `1.0.87` | [Summary](2026-10-15/summary.md) \| [Legacy Audit](benchmark_legacy_workflow_audit_report.md) \| [Modern Audit](benchmark_modern_workflow_audit_report.md) \| [Comparison Audit](benchmark_comparison_audit_report.md) |
-
-
+| **2026-10-15** | **Forms 33, 34 & IVF Summary Dashboard** | • Form 33: Post-InVitro Fertilisation Investigation (UPT, Beta-hCG, 6-7w Scan, Outcome, Complications, Delivery mode & POG)<br>• Form 34: Examination Infant (Sex of Baby, Birth Weight in kg, APGAR score 0-10)<br>• **Consolidated IVF Summary Dashboard**: Unified overview tab anchored at order 0 aggregating data across all 34 forms into 6 clinical domains & 14 observation cards with zero extra network latency<br>• Comprehensive clinical gap audit & design alignment with clean Carbon Design System typography<br>• Comparative benchmark between Legacy (32m 45s) and Modern Workflow v2.0 (8m 30s)<br>• Automated scaffolding, Single-SPA extension generation & live E2E smoke verification | ✓ 34/34 forms published<br>✓ 361/361 concepts active<br>✓ 100/100 unit tests pass<br>✓ Hot-deployed `1.0.89` | [Summary](2026-10-15/summary.md) \| [Slides](2026-10-15/presentation_notes.md) \| [Legacy Audit](benchmark_legacy_workflow_audit_report.md) \| [Modern Audit](benchmark_modern_workflow_audit_report.md) \| [Comparison Audit](benchmark_comparison_audit_report.md) |
 
 | **2026-10-14** | **Forms 27–32 & Quality Gate Armor** | • Form 27: Fertilization & Embryo Assessment (Gardner grading dropdowns)<br>• Form 28: Fertilisation Details (Oocytes, fertilisation %, cleavage %)<br>• Form 29: Embryo Grading Day 3 (Alphanumeric Veeck Grade 1–4)<br>• Form 30: Embryos Frozen (Day 3 & Day 5 Vitrification, Grades A–C)<br>• Form 31: Fresh Embryo Transfer Details (ET decision, 20 cancellation reasons, procedure & embryo metrics)<br>• Form 32: Additional Procedures in ART (PRP, Endometrial Injury, G-CSF, Embryo Glue)<br>• Wife Body Mass Index (BMI) added across intake, card & header widget<br>• `validate_forms.py` (deep DB concept validation)<br>• Self-healing concept numeric migrations<br>• Interactive E2E workspace test in smoke robot<br>• Upgraded 9-stage `deploy_pipeline.py`<br>• Date-wise task tracking archives & Antigravity workflows | ✓ 32/32 forms published<br>✓ 350/350 concepts active<br>✓ 92/92 unit tests pass<br>✓ Hot-deployed `1.0.82` | [Summary](2026-10-14/summary.md) \| [Slides](2026-10-14/presentation_notes.md) \| [Time Audit](../form_implementation_time_audit.md) |
 
@@ -30,15 +28,16 @@ This directory maintains the chronological tally, audit records, and presentatio
 
 ## Directory Organization Standard
 
-Each date folder (`docs/records/YYYY-MM-DD/`) contains:
+Each date folder (`docs/records/YYYY-MM-DD/`) implements the **6-Section Daily Engineering & Decision Journal**:
 
 ```text
 YYYY-MM-DD/
-├── summary.md            # Technical log, code changes, database updates & post-mortems
-└── presentation_notes.md # Slide-ready clinical bullets, workflows & executive takeaways
+├── summary.md            # Technical deliverables, gap analysis, ADRs, human directives & PI briefing
+└── presentation_notes.md # Slide-ready clinical bullets, Mermaid architecture & executive metrics
 ```
 
 ### Purpose of Records
-1. **Auditing & Traceability**: Provides instant documentation of why technical decisions and schema migrations were made.
-2. **Presentations & Demonstrations**: `presentation_notes.md` enables engineers and clinical leads to quickly extract slides, talking points, and diagrams for stakeholder meetings.
-3. **Onboarding & Pair Programming**: New developers can read the chronological progression to understand the architectural evolution.
+1. **Decision Traceability & ADRs**: Captures not just what was coded, but *why* choices were made and *what alternatives were rejected* to eliminate decision amnesia.
+2. **Human-in-the-Loop Directives**: Documents the human lead's role as Chief Architect, Quality Gatekeeper, and Clinical Auditor.
+3. **PI Briefing & Presentation Ready**: Provides immediate, articulate talking points for daily standups, PI syncs, and clinical department meetings.
+
