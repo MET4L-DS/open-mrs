@@ -94,8 +94,11 @@
 - **Quality Gates & Verification**:
   - `npm run pre-flight`: 34 forms valid, 361 concepts valid, 100% i18n translation health, 0 TypeScript errors.
   - Vitest test suite: 100/100 tests passing across 38 test files.
-  - Automated deployment pipeline: Version `1.0.88` compiled and hot-deployed in 163.64s.
-  - Headless E2E robot smoke test: Single-SPA extension verified and mounted in **3.43s** (`npm run test:e2e -- --form=aiims-ivf-summary`).
+  - Automated deployment pipeline: Version `1.0.88` / `1.0.89` compiled and hot-deployed in 163.64s.
+  - Headless E2E robot smoke test: Single-SPA extension verified and mounted in **3.19s** (`npm run test:e2e -- --form=aiims-ivf-summary`).
+- **UI Polish & OpenMRS Design Alignment**:
+  - Removed static blue gradient card banner, unnecessary static counters (34/34 forms, latest event timestamp), and print button.
+  - Replaced with standard Carbon / OpenMRS 3.x typography header (`var(--cds-text-primary)`, `var(--cds-text-secondary)`, subtle divider) providing a clean, distraction-free clinical layout.
 
 
 

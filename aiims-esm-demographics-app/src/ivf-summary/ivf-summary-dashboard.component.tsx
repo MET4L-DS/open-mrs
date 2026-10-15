@@ -1,8 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { InlineLoading, InlineNotification, Button } from '@carbon/react';
+import { InlineLoading, InlineNotification } from '@carbon/react';
 import {
-  Printer,
   ChartCustom,
   ParentChild,
   Microscope,
@@ -16,7 +15,7 @@ import {
   Timer,
   EventSchedule,
 } from '@carbon/react/icons';
-import { usePatient, formatDatetime } from '@openmrs/esm-framework';
+import { usePatient } from '@openmrs/esm-framework';
 import { ObservationCard, type ObservationRow } from '../shared/components';
 import { useIvfSummary } from './ivf-summary.resource';
 import { CONCEPTS } from '../config/concepts';
@@ -67,11 +66,6 @@ export default function IvfSummaryDashboard({
 
   const { summaryData, isLoading, error, getFormObs } = useIvfSummary(patientUuid);
 
-  const handlePrint = () => {
-    if (typeof window !== 'undefined') {
-      window.print();
-    }
-  };
 
   if (isLoading || isPatientLoading) {
     return (
@@ -271,37 +265,9 @@ export default function IvfSummaryDashboard({
 
   return (
     <div className={styles.summaryContainer}>
-      <div className={styles.banner}>
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
-          <div>
-            <h2>{t('ivfSummaryDashboardTitle', 'AIIMS Comprehensive IVF Summary')}</h2>
-            <p>{t('ivfSummarySubtitle', 'Consolidated clinical parameters across all 34 reproductive medicine intake and procedure modules')}</p>
-          </div>
-          <Button
-            kind="tertiary"
-            size="sm"
-            renderIcon={Printer}
-            onClick={handlePrint}
-            style={{ color: '#ffffff', borderColor: '#ffffff' }}
-          >
-            {t('printSummary', 'Print / Export PDF')}
-          </Button>
-        </div>
-
-        <div className={styles.statsRow}>
-          <div className={styles.statItem}>
-            <span className={styles.statLabel}>{t('totalEncounters', 'Total Recorded Forms')}</span>
-            <span className={styles.statValue}>{Object.keys(summaryData.encountersByForm).length} / 34</span>
-          </div>
-          <div className={styles.statItem}>
-            <span className={styles.statLabel}>{t('latestEncounter', 'Latest Cycle Event')}</span>
-            <span className={styles.statValue}>
-              {summaryData.latestEncounterDate
-                ? formatDatetime(new Date(summaryData.latestEncounterDate))
-                : t('noEvents', 'No cycle data recorded')}
-            </span>
-          </div>
-        </div>
+      <div className={styles.header}>
+        <h2 className={styles.title}>{t('ivfSummaryDashboardTitle', 'AIIMS Comprehensive IVF Summary')}</h2>
+        <p className={styles.subtitle}>{t('ivfSummarySubtitle', 'Consolidated clinical parameters across all 34 reproductive medicine intake and procedure modules')}</p>
       </div>
 
       {/* Domain 1: Patient Infertility & Prior History */}
