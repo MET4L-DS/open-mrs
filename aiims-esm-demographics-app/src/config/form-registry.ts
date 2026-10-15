@@ -82,6 +82,8 @@ import {
   AIIMS_FRESH_ET_DETAILS_FORM_NAME,
     AIIMS_ADD_PROCEDURE_ART_FORM_UUID,
   AIIMS_ADD_PROCEDURE_ART_FORM_NAME,
+    AIIMS_POST_IVF_INVESTIGATION_FORM_UUID,
+  AIIMS_POST_IVF_INVESTIGATION_FORM_NAME,
   // @create-form:imports-end
 } from './form-uuids';
 
@@ -439,6 +441,17 @@ export const FORM_REGISTRY: FormRegistryEntry[] = [
     title: 'Additional Procedures in ART',
     slot: 'aiims-add-procedure-art-dashboard-slot',
     icon: Activity,
+    order: 1,
+  },
+    {
+    key: 'post-ivf-investigation',
+    uuid: AIIMS_POST_IVF_INVESTIGATION_FORM_UUID,
+    name: AIIMS_POST_IVF_INVESTIGATION_FORM_NAME,
+    path: 'aiims-post-ivf-investigation',
+    titleKey: 'aiimsPostIvfInvestigationTitle',
+    title: 'Post-InVitro Fertilisation Investigation',
+    slot: 'aiims-post-ivf-investigation-dashboard-slot',
+    icon: ReportData,
     order: 1,
   },
   // @create-form:registry-end

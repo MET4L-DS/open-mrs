@@ -1,0 +1,197 @@
+{
+  "name": "AIIMS Visit: Post-InVitro Fertilisation Investigation",
+  "uuid": "639def6a-b768-4db5-a0b3-548452b0b8ed",
+  "processor": "EncounterFormProcessor",
+  "referencedForms": [],
+  "pages": [
+    {
+      "label": "Post-InVitro Fertilisation Investigation",
+      "sections": [
+        {
+          "label": "Early Pregnancy Diagnostics",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "label": "Urine Pregnancy Test (UPT)",
+              "type": "obs",
+              "id": "uptResult",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "c0010001-0000-0000-0000-000000000294",
+                "answers": [
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000001136",
+                    "label": "Positive"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000001137",
+                    "label": "Negative"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000001138",
+                    "label": "Inconclusive"
+                  }
+                ]
+              }
+            },
+            {
+              "label": "Beta-Human Chorionic Gonadotropin (mIU/mL)",
+              "type": "obs",
+              "id": "betaHcg",
+              "questionOptions": {
+                "rendering": "number",
+                "concept": "c0010001-0000-0000-0000-000000000295",
+                "max": 500000,
+                "min": 0
+              }
+            },
+            {
+              "label": "Scan at 6-7 weeks",
+              "type": "obs",
+              "id": "scan6To7Weeks",
+              "questionOptions": {
+                "rendering": "textarea",
+                "concept": "c0010001-0000-0000-0000-000000000296",
+                "rows": 3
+              }
+            }
+          ]
+        },
+        {
+          "label": "Clinical Outcome & Maternal Complications",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "label": "Outcome",
+              "type": "obs",
+              "id": "postIvfOutcome",
+              "questionOptions": {
+                "rendering": "select",
+                "concept": "c0010001-0000-0000-0000-000000000297",
+                "answers": [
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000001139",
+                    "label": "Clinical pregnancy"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000001140",
+                    "label": "Ectopic pregnancy"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000001141",
+                    "label": "Abortion"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000001142",
+                    "label": "Failing pregnancy"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000001143",
+                    "label": "Live birth"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000001144",
+                    "label": "Intra-Uterine death"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000001145",
+                    "label": "Pre-term"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000001146",
+                    "label": "Preterm Premature Rupture of Membranes (PPROM)"
+                  }
+                ]
+              }
+            },
+            {
+              "label": "Complications",
+              "type": "obs",
+              "id": "postIvfComplications",
+              "questionOptions": {
+                "rendering": "select",
+                "concept": "c0010001-0000-0000-0000-000000000298",
+                "answers": [
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000001147",
+                    "label": "Diabetes (Gestational)"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000001148",
+                    "label": "Hypertension"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000001149",
+                    "label": "Intrahepatic Cholestasis of Pregnancy"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000001150",
+                    "label": "Fetal growth restriction"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000001146",
+                    "label": "Preterm Premature Rupture of Membranes (PPROM)"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000001151",
+                    "label": "Macrosomia"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000001152",
+                    "label": "Other"
+                  }
+                ]
+              }
+            },
+            {
+              "label": "Other Complications",
+              "type": "obs",
+              "id": "otherComplications",
+              "hideWhenExpression": "!postIvfComplications || postIvfComplications !== 'c0010002-0000-0000-0000-000000001152'",
+              "questionOptions": {
+                "rendering": "text",
+                "concept": "c0010001-0000-0000-0000-000000000299"
+              }
+            }
+          ]
+        },
+        {
+          "label": "Obstetric Delivery Details",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "label": "Mode of Delivery",
+              "type": "obs",
+              "id": "modeOfDelivery",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "c0010001-0000-0000-0000-000000000300",
+                "answers": [
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000001153",
+                    "label": "Normal Vaginal Delivery"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000001154",
+                    "label": "Cesarean section"
+                  }
+                ]
+              }
+            },
+            {
+              "label": "Period of Gestation at Delivery (weeks)",
+              "type": "obs",
+              "id": "pogAtDelivery",
+              "questionOptions": {
+                "rendering": "number",
+                "concept": "c0010001-0000-0000-0000-000000000301",
+                "max": 45,
+                "min": 10
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

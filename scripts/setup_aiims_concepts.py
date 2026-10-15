@@ -20,11 +20,11 @@ DB_PASS = "openmrs"
 DB_NAME = "openmrs"
 
 def run_sql(sql_commands):
-    full_cmd = f"docker exec -i {DB_CONTAINER} mariadb --default-character-set=utf8mb4 -u{DB_USER} -p{DB_PASS} {DB_NAME}"
+    with open("scripts/temp_exec.sql", "w", encoding="utf-8") as f:
+        f.write(sql_commands)
+    subprocess.run(["docker", "cp", "scripts/temp_exec.sql", f"{DB_CONTAINER}:/tmp/temp_exec.sql"], check=True)
     proc = subprocess.run(
-        full_cmd,
-        shell=True,
-        input=sql_commands,
+        ["docker", "exec", DB_CONTAINER, "mariadb", "--default-character-set=utf8mb4", f"-u{DB_USER}", f"-p{DB_PASS}", DB_NAME, "-e", "source /tmp/temp_exec.sql;"],
         capture_output=True,
         text=True
     )
@@ -32,6 +32,8 @@ def run_sql(sql_commands):
         print("SQL Error:", proc.stderr)
         sys.exit(1)
     return proc.stdout
+
+
 
 # Check database connection
 print("Checking MariaDB connection...")
@@ -602,6 +604,38 @@ additional_art_procedure_answers = [
     ("c0010002-0000-0000-0000-000000001135", "Embryo Glue"),
 ]
 
+upt_result_answers = [
+    ("c0010002-0000-0000-0000-000000001136", "Positive"),
+    ("c0010002-0000-0000-0000-000000001137", "Negative"),
+    ("c0010002-0000-0000-0000-000000001138", "Inconclusive"),
+]
+
+post_ivf_outcome_answers = [
+    ("c0010002-0000-0000-0000-000000001139", "Clinical pregnancy"),
+    ("c0010002-0000-0000-0000-000000001140", "Ectopic pregnancy"),
+    ("c0010002-0000-0000-0000-000000001141", "Abortion"),
+    ("c0010002-0000-0000-0000-000000001142", "Failing pregnancy"),
+    ("c0010002-0000-0000-0000-000000001143", "Live birth"),
+    ("c0010002-0000-0000-0000-000000001144", "Intra-Uterine death"),
+    ("c0010002-0000-0000-0000-000000001145", "Pre-term"),
+    ("c0010002-0000-0000-0000-000000001146", "Preterm Premature Rupture of Membranes (PPROM)"),
+]
+
+post_ivf_complications_answers = [
+    ("c0010002-0000-0000-0000-000000001147", "Diabetes (Gestational)"),
+    ("c0010002-0000-0000-0000-000000001148", "Hypertension"),
+    ("c0010002-0000-0000-0000-000000001149", "Intrahepatic Cholestasis of Pregnancy"),
+    ("c0010002-0000-0000-0000-000000001150", "Fetal growth restriction"),
+    ("c0010002-0000-0000-0000-000000001151", "Macrosomia"),
+    ("c0010002-0000-0000-0000-000000001152", "Other"),
+]
+
+mode_of_delivery_answers = [
+    ("c0010002-0000-0000-0000-000000001153", "Normal Vaginal Delivery"),
+    ("c0010002-0000-0000-0000-000000001154", "Cesarean section"),
+]
+
+
 
 
 
@@ -690,6 +724,18 @@ for u, name in fresh_et_day_answers:
     full_script.append(add_concept_sql(u, name, datatype_id=4, class_id=11))
 
 for u, name in additional_art_procedure_answers:
+    full_script.append(add_concept_sql(u, name, datatype_id=4, class_id=11))
+
+for u, name in upt_result_answers:
+    full_script.append(add_concept_sql(u, name, datatype_id=4, class_id=11))
+
+for u, name in post_ivf_outcome_answers:
+    full_script.append(add_concept_sql(u, name, datatype_id=4, class_id=11))
+
+for u, name in post_ivf_complications_answers:
+    full_script.append(add_concept_sql(u, name, datatype_id=4, class_id=11))
+
+for u, name in mode_of_delivery_answers:
     full_script.append(add_concept_sql(u, name, datatype_id=4, class_id=11))
 
 
@@ -1126,6 +1172,17 @@ full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000290", "Fres
 full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000291", "Additional Procedures in Assisted Reproductive Technology", datatype_id=2, class_id=7))
 full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000292", "Date of Additional Procedures in Assisted Reproductive Technology", datatype_id=6, class_id=7))
 full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000293", "Additional Procedures in Assisted Reproductive Technology Remarks", datatype_id=3, class_id=7))
+
+# Post-InVitro Fertilisation Investigation Concepts (Form 33: 0294-0301)
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000294", "Urine Pregnancy Test (UPT)", datatype_id=2, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000295", "Beta-Human Chorionic Gonadotropin", datatype_id=1, class_id=7, is_numeric=True, units="mIU/mL", allow_decimal=1, low_abs=0, hi_abs=500000))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000296", "Scan at 6-7 weeks", datatype_id=3, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000297", "Post IVF Outcome", datatype_id=2, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000298", "Post IVF Pregnancy Complications", datatype_id=2, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000299", "Other Pregnancy Complications", datatype_id=3, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000300", "Mode of Delivery", datatype_id=2, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000301", "Period of Gestation at Delivery", datatype_id=1, class_id=7, is_numeric=True, units="weeks", allow_decimal=1, low_abs=10, hi_abs=45))
+
 
 
 # 3. Link Answers
@@ -1758,6 +1815,24 @@ for ans_uuid in [
 # Additional Procedures in ART (0291)
 for ans_uuid, _ in additional_art_procedure_answers:
     full_script.append(add_answer_sql("c0010001-0000-0000-0000-000000000291", ans_uuid))
+
+# Form 33: Post-InVitro Fertilisation Investigation Answers
+# UPT Result (0294)
+for ans_uuid, _ in upt_result_answers:
+    full_script.append(add_answer_sql("c0010001-0000-0000-0000-000000000294", ans_uuid))
+
+# Post IVF Outcome (0297)
+for ans_uuid, _ in post_ivf_outcome_answers:
+    full_script.append(add_answer_sql("c0010001-0000-0000-0000-000000000297", ans_uuid))
+
+# Post IVF Pregnancy Complications (0298)
+for ans_uuid, _ in post_ivf_complications_answers:
+    full_script.append(add_answer_sql("c0010001-0000-0000-0000-000000000298", ans_uuid))
+
+# Mode of Delivery (0300)
+for ans_uuid, _ in mode_of_delivery_answers:
+    full_script.append(add_answer_sql("c0010001-0000-0000-0000-000000000300", ans_uuid))
+
 
 
 

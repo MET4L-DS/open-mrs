@@ -648,6 +648,26 @@
       "slot": "aiims-add-procedure-art-dashboard-slot",
       "online": true,
       "offline": true
+    },
+    {
+      "name": "aiims-post-ivf-investigation-dashboard-link",
+      "component": "aiimsPostIvfInvestigationDashboardLink",
+      "slot": "patient-chart-dashboard-slot",
+      "order": 1,
+      "meta": {
+        "slot": "aiims-post-ivf-investigation-dashboard-slot",
+        "path": "aiims-post-ivf-investigation",
+        "title": "Post-InVitro Fertilisation Investigation"
+      },
+      "online": true,
+      "offline": true
+    },
+    {
+      "name": "aiims-post-ivf-investigation-dashboard",
+      "component": "aiimsPostIvfInvestigationDashboard",
+      "slot": "aiims-post-ivf-investigation-dashboard-slot",
+      "online": true,
+      "offline": true
     }
   ]
 }

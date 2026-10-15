@@ -607,4 +607,23 @@
   "additionalProceduresArt": "Additional Procedures in ART",
   "dateOfAdditionalArtProcedure": "Date of Procedure",
   "additionalArtRemarks": "Remarks / Notes"
+,
+  "aiimsPostIvfInvestigationTitle": "Post-InVitro Fertilisation Investigation",
+  "postIvfInvestigationDetails": "Post-InVitro Fertilisation Investigation Details",
+  "loadingPostIvfInvestigation": "Loading Post-InVitro Fertilisation Investigation...",
+  "noRecordedPostIvfInvestigationEncounter": "No AIIMS Visit: Post-InVitro Fertilisation Investigation encounter recorded yet",
+  "noPostIvfInvestigationBody": "No clinical intake details have been submitted for this patient yet.",
+  "noPostIvfInvestigationRecorded": "No Post-InVitro Fertilisation Investigation recorded",
+  "recordPostIvfInvestigation": "Record Post-InVitro Fertilisation Investigation",
+  "updatePostIvfInvestigation": "Update Post-InVitro Fertilisation Investigation",
+  "uptResultLabel": "Urine Pregnancy Test (UPT)",
+  "betaHcgLabel": "Beta-Human Chorionic Gonadotropin",
+  "scan6To7WeeksLabel": "Scan at 6-7 weeks",
+  "postIvfOutcomeLabel": "Outcome",
+  "postIvfComplicationsLabel": "Complications",
+  "otherPregnancyComplicationsLabel": "Other Pregnancy Complications",
+  "modeOfDeliveryLabel": "Mode of Delivery",
+  "pogAtDeliveryLabel": "Period of Gestation at Delivery",
+  "mIuPerMl": "mIU/mL",
+  "weeks": "weeks"
 }

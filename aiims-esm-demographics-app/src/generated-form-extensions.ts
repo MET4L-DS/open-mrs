@@ -65,6 +65,7 @@ export const FORM_MODULES: Record<string, DashboardLoader> = {
   'embryos-frozen': () => import('./embryos-frozen/embryos-frozen-dashboard.component'),
   'fresh-et-details': () => import('./fresh-et-details/fresh-et-details-dashboard.component'),
   'add-procedure-art': () => import('./add-procedure-art/add-procedure-art-dashboard.component'),
+  'post-ivf-investigation': () => import('./post-ivf-investigation/post-ivf-investigation-dashboard.component'),
 };
 
 // Generate Single-SPA extension lifecycles
@@ -145,6 +146,8 @@ export const {
   aiimsFreshEtDetailsDashboard,
   aiimsAddProcedureArtDashboardLink,
   aiimsAddProcedureArtDashboard,
+  aiimsPostIvfInvestigationDashboardLink,
+  aiimsPostIvfInvestigationDashboard,
 } = _extensions;
 
 // Feature module re-exports
@@ -179,3 +182,4 @@ export * from './embryo-grading-day3';
 export * from './embryos-frozen';
 export * from './fresh-et-details';
 export * from './add-procedure-art';
+export * from './post-ivf-investigation';

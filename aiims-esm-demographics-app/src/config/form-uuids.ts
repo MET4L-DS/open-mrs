@@ -126,4 +126,8 @@ export const AIIMS_FRESH_ET_DETAILS_FORM_NAME = 'Fresh Embryo Transfer Details';
 export const AIIMS_ADD_PROCEDURE_ART_FORM_UUID = '37e59734-dac9-4332-ba27-f1053d189094';
 export const AIIMS_ADD_PROCEDURE_ART_FORM_NAME = 'AIIMS Visit: Additional Procedures in Assisted Reproductive Technology';
 
+// Form UUID for AIIMS Visit: Post-InVitro Fertilisation Investigation
+export const AIIMS_POST_IVF_INVESTIGATION_FORM_UUID = '639def6a-b768-4db5-a0b3-548452b0b8ed';
+export const AIIMS_POST_IVF_INVESTIGATION_FORM_NAME = 'AIIMS Visit: Post-InVitro Fertilisation Investigation';
+
 // @create-form:uuids-end

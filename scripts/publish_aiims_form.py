@@ -263,7 +263,16 @@ FORMS_TO_PUBLISH = [
         "uuid": "37e59734-dac9-4332-ba27-f1053d189094",
         "encounter_type": "dd528487-82a5-4082-9c72-ed246bd49591",  # Consultation
     },
+    {
+        "name": "AIIMS Visit: Post-InVitro Fertilisation Investigation",
+        "version": "1.0",
+        "description": "AIIMS Reproductive Medicine & IVF Post-InVitro Fertilisation Investigation Sheet",
+        "schema_path": "forms/aiims_post_ivf_investigation.json",
+        "uuid": "639def6a-b768-4db5-a0b3-548452b0b8ed",
+        "encounter_type": "dd528487-82a5-4082-9c72-ed246bd49591",  # Consultation
+    },
 ]
+
 
 def get_db_container():
     try:

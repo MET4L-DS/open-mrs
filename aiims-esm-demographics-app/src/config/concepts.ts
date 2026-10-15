@@ -411,7 +411,18 @@ export const CONCEPTS = {
   additionalProceduresArt: 'c0010001-0000-0000-0000-000000000291',
   dateOfAdditionalArtProcedure: 'c0010001-0000-0000-0000-000000000292',
   additionalArtRemarks: 'c0010001-0000-0000-0000-000000000293',
+
+  // Post-InVitro Fertilisation Investigation (Form 33)
+  uptResult: 'c0010001-0000-0000-0000-000000000294',
+  betaHcg: 'c0010001-0000-0000-0000-000000000295',
+  scan6To7Weeks: 'c0010001-0000-0000-0000-000000000296',
+  postIvfOutcome: 'c0010001-0000-0000-0000-000000000297',
+  postIvfComplications: 'c0010001-0000-0000-0000-000000000298',
+  otherPregnancyComplications: 'c0010001-0000-0000-0000-000000000299',
+  modeOfDelivery: 'c0010001-0000-0000-0000-000000000300',
+  pogAtDelivery: 'c0010001-0000-0000-0000-000000000301',
 };
+
 
 // Person Attribute Type UUID for Patient Telephone Number
 export const TELEPHONE_ATTRIBUTE_TYPE_UUID = '14d4f066-15f5-102d-96e4-000c29c2a5d7';

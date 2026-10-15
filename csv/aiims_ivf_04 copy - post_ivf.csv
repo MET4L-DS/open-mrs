@@ -1,0 +1,26 @@
+slot_columns,
+Urine Pregnancy Test (UPT),
+Beta-Human Chorionic Gonadotropin,
+Scan at 6-7 weeks,
+Outcome,
+,Clinical pregnancy
+,Ectopic pregnancy
+,Abortion
+,Failing pregnancy
+,Live birth
+,Intra-Uterine death
+,Pre-term 
+,Preterm Premature Rupture of Membranes(PPROM)
+Complications,
+,Diabetes (Gestational)
+,Hypertension
+,Intrahepatic Cholestasis of Pregnancy
+,Fetal growth restriction
+,Preterm Premature Rupture of Membranes(PPROM)
+,Macrosomia
+Complications_others,
+Mode of Delivery,
+,Normal Vaginal Delivery
+,Cesarean section 
+,
+Period of Gestation at Delivery,
