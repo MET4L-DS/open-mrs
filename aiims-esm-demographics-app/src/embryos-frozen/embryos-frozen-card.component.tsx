@@ -1,6 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { Chemistry, ChartRadial, Notebook } from '@carbon/react/icons';
+import { Chemistry } from '@carbon/react/icons';
 import { ObservationCard, type ObservationRow } from '../shared/components';
 import type { AiimsEmbryosFrozenData } from './embryos-frozen.resource';
 
@@ -11,7 +11,7 @@ export interface EmbryosFrozenCardProps {
 export const EmbryosFrozenCard: React.FC<EmbryosFrozenCardProps> = ({ data }) => {
   const { t } = useTranslation();
 
-  // Card 1: Day 3 Embryo Vitrification (Cleavage Stage)
+  // Day 3 Embryo Vitrification (Cleavage Stage)
   const day3Rows: ObservationRow[] = React.useMemo(() => {
     return [
       {
@@ -42,7 +42,7 @@ export const EmbryosFrozenCard: React.FC<EmbryosFrozenCardProps> = ({ data }) =>
     ];
   }, [data, t]);
 
-  // Card 2: Day 5 Blastocyst Vitrification
+  // Day 5 Blastocyst Vitrification
   const day5Rows: ObservationRow[] = React.useMemo(() => {
     return [
       {
@@ -61,7 +61,7 @@ export const EmbryosFrozenCard: React.FC<EmbryosFrozenCardProps> = ({ data }) =>
     ];
   }, [data, t]);
 
-  // Card 3: Cryopreservation Notes & Remarks
+  // Cryopreservation Notes & Remarks
   const remarksRows: ObservationRow[] = React.useMemo(() => {
     return [
       {
@@ -73,23 +73,17 @@ export const EmbryosFrozenCard: React.FC<EmbryosFrozenCardProps> = ({ data }) =>
     ];
   }, [data, t]);
 
+  const allRows = React.useMemo(() => [
+    ...day3Rows,
+    ...day5Rows,
+    ...(data?.embryosFrozenRemarks ? remarksRows : []),
+  ], [day3Rows, day5Rows, remarksRows, data?.embryosFrozenRemarks]);
+
   return (
-    <>
-      <ObservationCard
-        title={t('day3EmbryoVitrificationTitle', 'Day 3 Embryo Vitrification (Cleavage Stage)')}
-        icon={Chemistry}
-        rows={day3Rows}
-      />
-      <ObservationCard
-        title={t('day5BlastocystVitrificationTitle', 'Day 5 Blastocyst Vitrification')}
-        icon={ChartRadial}
-        rows={day5Rows}
-      />
-      <ObservationCard
-        title={t('embryosFrozenRemarksTitle', 'Cryopreservation Notes & Remarks')}
-        icon={Notebook}
-        rows={remarksRows}
-      />
-    </>
+    <ObservationCard
+      title={t('aiimsEmbryosFrozenTitle', 'Embryos Frozen')}
+      icon={Chemistry}
+      rows={allRows}
+    />
   );
 };

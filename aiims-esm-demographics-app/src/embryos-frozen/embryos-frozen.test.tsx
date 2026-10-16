@@ -37,11 +37,11 @@ vi.mock('../shared/components', async () => {
 });
 
 describe('EmbryosFrozenCard', () => {
-  it('renders card titles correctly', () => {
+  it('renders card title and question labels correctly', () => {
     render(<EmbryosFrozenCard data={null} />);
-    expect(screen.getByText('Day 3 Embryo Vitrification (Cleavage Stage)')).toBeInTheDocument();
-    expect(screen.getByText('Day 5 Blastocyst Vitrification')).toBeInTheDocument();
-    expect(screen.getByText('Cryopreservation Notes & Remarks')).toBeInTheDocument();
+    expect(screen.getByText('Embryos Frozen')).toBeInTheDocument();
+    expect(screen.getByText('Number of Day 3 Embryos Vitrified')).toBeInTheDocument();
+    expect(screen.getByText('Number of Day 5 Embryos Vitrified')).toBeInTheDocument();
   });
 
   it('renders all populated vitrification observations correctly', () => {
@@ -104,7 +104,7 @@ describe('EmbryosFrozenDashboard', () => {
     } as any);
 
     render(<EmbryosFrozenDashboard patientUuid="patient-1" />);
-    expect(screen.getByText('Day 3 Embryo Vitrification (Cleavage Stage)')).toBeInTheDocument();
+    expect(screen.getByText('Embryos Frozen')).toBeInTheDocument();
     expect(screen.getByText('Number of Day 3 Embryos Vitrified')).toBeInTheDocument();
   });
 });

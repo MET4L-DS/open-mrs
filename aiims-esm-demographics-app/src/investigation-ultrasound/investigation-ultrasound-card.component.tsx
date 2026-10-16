@@ -20,6 +20,12 @@ export const InvestigationUltrasoundCard: React.FC<InvestigationUltrasoundCardPr
   // 1. TVS Uterine Size & Adenomyosis
   const uterineRows: ObservationRow[] = React.useMemo(() => [
     {
+      id: 'day_of_cycle',
+      label: t('dayOfCycle', 'Day of Cycle'),
+      value: data.dayOfCycle,
+      emptyPlaceholder: '—',
+    },
+    {
       id: 'uterine_size_length',
       label: t('uterineSizeLength', 'Length'),
       value: data.uterineSizeLength !== undefined ? `${data.uterineSizeLength} ${cmUnit}` : undefined,
@@ -41,12 +47,6 @@ export const InvestigationUltrasoundCard: React.FC<InvestigationUltrasoundCardPr
       id: 'uterine_size_volume',
       label: t('uterineSizeVolume', 'Volume'),
       value: data.uterineSizeVolume !== undefined ? `${data.uterineSizeVolume} ${cm3Unit}` : undefined,
-      emptyPlaceholder: '—',
-    },
-    {
-      id: 'day_of_cycle',
-      label: t('dayOfCycle', 'Day of Cycle'),
-      value: data.dayOfCycle,
       emptyPlaceholder: '—',
     },
     {
@@ -405,43 +405,29 @@ export const InvestigationUltrasoundCard: React.FC<InvestigationUltrasoundCardPr
     }] : []),
   ], [data, t, cmUnit]);
 
+  const allRows = React.useMemo(() => [
+    ...uterineRows,
+    ...fibroidRows,
+    ...cavityRows,
+    ...ovaryRows,
+    ...hydrosalpinxRows,
+    ...cystRows,
+    ...zoneRows,
+  ], [
+    uterineRows,
+    fibroidRows,
+    cavityRows,
+    ovaryRows,
+    hydrosalpinxRows,
+    cystRows,
+    zoneRows,
+  ]);
+
   return (
-    <div className={styles.cardContainer}>
-      <ObservationCard
-        title={t('tvsUterineSizeTitle', 'Uterine Dimensions & Adenomyosis')}
-        icon={Waveform}
-        rows={uterineRows}
-      />
-      <ObservationCard
-        title={t('tvsFibroidsTitle', 'Fibroids & FIGO Staging')}
-        icon={ReportData}
-        rows={fibroidRows}
-      />
-      <ObservationCard
-        title={t('tvsCavityAnomaliesTitle', 'Endometrial Cavity & Congenital Anomalies')}
-        icon={Activity}
-        rows={cavityRows}
-      />
-      <ObservationCard
-        title={t('tvsOvariesAfcTitle', 'Ovaries, Antral Follicles & Endometrioma')}
-        icon={Events}
-        rows={ovaryRows}
-      />
-      <ObservationCard
-        title={t('tvsHydrosalpinxTitle', 'Hydrosalpinx & Endometrial Thickness')}
-        icon={Chemistry}
-        rows={hydrosalpinxRows}
-      />
-      <ObservationCard
-        title={t('tvsOvarianCystsTitle', 'Ovarian Cysts (Dermoid, Haemorrhagic, CL, Paro-ovarian)')}
-        icon={Scalpel}
-        rows={cystRows}
-      />
-      <ObservationCard
-        title={t('tvsJunctionalZonesTitle', 'Endometrial Junctional Zones & Remarks')}
-        icon={Waveform}
-        rows={zoneRows}
-      />
-    </div>
+    <ObservationCard
+      title={t('aiimsInvestigationFemaleTransvaginalUltrasoundTitle', 'Investigation Female Transvaginal Ultrasound')}
+      icon={Waveform}
+      rows={allRows}
+    />
   );
 };

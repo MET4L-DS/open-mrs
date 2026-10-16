@@ -14,16 +14,13 @@ vi.mock('react-i18next', () => ({
 }));
 
 describe('InvestigationUltrasoundCard', () => {
-  it('renders card titles and placeholders when empty', () => {
+  it('renders unified card title and placeholders when empty', () => {
     render(<InvestigationUltrasoundCard data={initialAiimsInvestigationUltrasoundData} />);
 
-    expect(screen.getByText('Uterine Dimensions & Adenomyosis')).toBeInTheDocument();
-    expect(screen.getByText('Fibroids & FIGO Staging')).toBeInTheDocument();
-    expect(screen.getByText('Endometrial Cavity & Congenital Anomalies')).toBeInTheDocument();
-    expect(screen.getByText('Ovaries, Antral Follicles & Endometrioma')).toBeInTheDocument();
-    expect(screen.getByText('Hydrosalpinx & Endometrial Thickness')).toBeInTheDocument();
-    expect(screen.getByText('Ovarian Cysts (Dermoid, Haemorrhagic, CL, Paro-ovarian)')).toBeInTheDocument();
-    expect(screen.getByText('Endometrial Junctional Zones & Remarks')).toBeInTheDocument();
+    expect(screen.getByText('Investigation Female Transvaginal Ultrasound')).toBeInTheDocument();
+    expect(screen.getByText('Day of Cycle')).toBeInTheDocument();
+    expect(screen.getByText('Length')).toBeInTheDocument();
+    expect(screen.getByText('Width')).toBeInTheDocument();
   });
 
   it('renders recorded TVS ultrasound observations correctly', () => {

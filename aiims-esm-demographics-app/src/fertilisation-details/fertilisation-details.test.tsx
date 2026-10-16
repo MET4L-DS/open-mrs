@@ -37,11 +37,11 @@ vi.mock('../shared/components', async () => {
 });
 
 describe('FertilisationDetailsCard', () => {
-  it('renders section cards correctly with empty placeholders', () => {
+  it('renders section card correctly with empty placeholders', () => {
     render(<FertilisationDetailsCard data={null} />);
-    expect(screen.getByText('Fertilisation & Insemination Outcome')).toBeInTheDocument();
-    expect(screen.getByText('Cleavage Stage Assessment')).toBeInTheDocument();
-    expect(screen.getByText('Laboratory Remarks')).toBeInTheDocument();
+    expect(screen.getByText('Fertilisation Details')).toBeInTheDocument();
+    expect(screen.getByText('Number of Oocytes Fertilised')).toBeInTheDocument();
+    expect(screen.getByText('Fertilisation Rate')).toBeInTheDocument();
   });
 
   it('renders recorded observation values correctly', () => {

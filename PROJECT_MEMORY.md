@@ -489,5 +489,6 @@ Follow this 6-stage lifecycle to add new clinical forms without errors:
 - [x] Implement Consolidated IVF Summary Dashboard (`aiims-ivf-summary`) with full 6-domain clinical enrichment.
 - [x] Realign Form 13 (TVS Ultrasound 55 fields + 11 conditional groups) & Form 15 (focused Hysteroscopy & Operative scope).
 - [x] Integrate Hysteroscopy Findings, Dimensions, and Operative Hysteroscopy into Form 9 (Previous Surgery) with Option B dual-card dashboard and cross-form IVF Summary support.
+- [x] Remove section grouping across 5 forms (TVS, Embryo Assessment, Fertilisation Details, Embryos Frozen, Fresh ET Details), promote Day of Cycle to question #1 on TVS, and flatten all corresponding frontend UI cards into unified continuous ObservationCards.
 
 

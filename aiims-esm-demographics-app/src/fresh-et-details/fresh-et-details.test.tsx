@@ -37,12 +37,12 @@ vi.mock('../shared/components', async () => {
 });
 
 describe('FreshEtDetailsCard', () => {
-  it('renders section card titles correctly', () => {
+  it('renders section card title and rows correctly', () => {
     render(<FreshEtDetailsCard data={null} />);
-    expect(screen.getByText('Fresh Embryo Transfer Clinical Decision')).toBeInTheDocument();
-    expect(screen.getByText('Cancellation & Clinical Rationale')).toBeInTheDocument();
-    expect(screen.getByText('Embryo Transfer Procedure & Embryo Details')).toBeInTheDocument();
-    expect(screen.getByText('Laboratory Notes & Remarks')).toBeInTheDocument();
+    expect(screen.getByText('Fresh Embryo Transfer Details')).toBeInTheDocument();
+    expect(screen.getByText('Fresh Embryo Transfer Done')).toBeInTheDocument();
+    expect(screen.getByText('Embryo Transfer Date')).toBeInTheDocument();
+    expect(screen.getByText('Number of Embryos Transferred')).toBeInTheDocument();
   });
 
   it('renders populated transfer procedure observations correctly', () => {

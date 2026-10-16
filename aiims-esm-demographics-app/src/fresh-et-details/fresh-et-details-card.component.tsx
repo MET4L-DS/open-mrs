@@ -1,6 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { EventSchedule, ReportData, WarningAlt, Notebook } from '@carbon/react/icons';
+import { EventSchedule } from '@carbon/react/icons';
 import { ObservationCard, type ObservationRow } from '../shared/components';
 import type { AiimsFreshEtDetailsData } from './fresh-et-details.resource';
 
@@ -11,7 +11,7 @@ export interface FreshEtDetailsCardProps {
 export const FreshEtDetailsCard: React.FC<FreshEtDetailsCardProps> = ({ data }) => {
   const { t } = useTranslation();
 
-  // Card 1: Fresh Embryo Transfer Clinical Status
+  // Fresh Embryo Transfer Clinical Status
   const decisionRows: ObservationRow[] = React.useMemo(() => {
     return [
       {
@@ -23,7 +23,7 @@ export const FreshEtDetailsCard: React.FC<FreshEtDetailsCardProps> = ({ data }) 
     ];
   }, [data, t]);
 
-  // Card 2: Cancellation & Rationale (when fresh ET not done / or if reasons recorded)
+  // Cancellation & Rationale (when fresh ET not done / or if reasons recorded)
   const cancellationRows: ObservationRow[] = React.useMemo(() => {
     return [
       {
@@ -41,7 +41,7 @@ export const FreshEtDetailsCard: React.FC<FreshEtDetailsCardProps> = ({ data }) 
     ];
   }, [data, t]);
 
-  // Card 3: Procedure & Embryo Details (when fresh ET performed)
+  // Procedure & Embryo Details (when fresh ET performed)
   const procedureRows: ObservationRow[] = React.useMemo(() => {
     return [
       {
@@ -91,7 +91,7 @@ export const FreshEtDetailsCard: React.FC<FreshEtDetailsCardProps> = ({ data }) 
     ];
   }, [data, t]);
 
-  // Card 4: Laboratory Remarks
+  // Laboratory Remarks
   const remarksRows: ObservationRow[] = React.useMemo(() => {
     return [
       {
@@ -103,28 +103,31 @@ export const FreshEtDetailsCard: React.FC<FreshEtDetailsCardProps> = ({ data }) 
     ];
   }, [data, t]);
 
+  const allRows = React.useMemo(() => {
+    const isCancelled =
+      data?.freshEmbryoTransfer?.toLowerCase() === 'no' ||
+      (!data?.freshEmbryoTransfer && Boolean(data?.reasonFreshEtNotDone || data?.otherReasonFreshEtNotDone));
+
+    const rows: ObservationRow[] = [...decisionRows];
+
+    if (isCancelled) {
+      rows.push(...cancellationRows);
+    } else {
+      rows.push(...procedureRows);
+    }
+
+    if (data?.freshEtRemarks) {
+      rows.push(...remarksRows);
+    }
+
+    return rows;
+  }, [data, decisionRows, cancellationRows, procedureRows, remarksRows]);
+
   return (
-    <>
-      <ObservationCard
-        title={t('freshEtDecisionTitle', 'Fresh Embryo Transfer Clinical Decision')}
-        icon={EventSchedule}
-        rows={decisionRows}
-      />
-      <ObservationCard
-        title={t('freshEtCancellationTitle', 'Cancellation & Clinical Rationale')}
-        icon={WarningAlt}
-        rows={cancellationRows}
-      />
-      <ObservationCard
-        title={t('freshEtProcedureDetailsTitle', 'Embryo Transfer Procedure & Embryo Details')}
-        icon={ReportData}
-        rows={procedureRows}
-      />
-      <ObservationCard
-        title={t('freshEtRemarksTitle', 'Laboratory Notes & Remarks')}
-        icon={Notebook}
-        rows={remarksRows}
-      />
-    </>
+    <ObservationCard
+      title={t('aiimsFreshEtDetailsTitle', 'Fresh Embryo Transfer Details')}
+      icon={EventSchedule}
+      rows={allRows}
+    />
   );
 };

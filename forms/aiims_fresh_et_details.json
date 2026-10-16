@@ -293,13 +293,7 @@
                   }
                 ]
               }
-            }
-          ]
-        },
-        {
-          "label": "Laboratory Remarks",
-          "isExpanded": true,
-          "questions": [
+            },
             {
               "label": "Fresh Embryo Transfer Remarks",
               "type": "obs",

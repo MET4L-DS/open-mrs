@@ -1,6 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { Microscope, Chemistry, ChartLineData } from '@carbon/react/icons';
+import { Microscope } from '@carbon/react/icons';
 import { ObservationCard, type ObservationRow } from '../shared/components';
 import type { AiimsEmbryoAssessmentData } from './embryo-assessment.resource';
 
@@ -107,25 +107,17 @@ export const EmbryoAssessmentCard: React.FC<EmbryoAssessmentCardProps> = ({ data
     ];
   }, [data, t]);
 
+  const allRows = React.useMemo(() => [
+    ...cleavageRows,
+    ...blastocystRows,
+    ...(data?.remarks ? remarksRows : []),
+  ], [cleavageRows, blastocystRows, remarksRows, data?.remarks]);
+
   return (
-    <>
-      <ObservationCard
-        title={t('cleavageStageAssessmentTitle', 'Fertilization & Cleavage Stage (Days 1–3)')}
-        icon={Microscope}
-        rows={cleavageRows}
-      />
-      <ObservationCard
-        title={t('blastocystProgressionTitle', 'Morula & Blastocyst Progression (Days 4–6)')}
-        icon={ChartLineData}
-        rows={blastocystRows}
-      />
-      {data?.remarks && (
-        <ObservationCard
-          title={t('embryoAssessmentRemarksTitle', 'Laboratory Notes & Remarks')}
-          icon={Chemistry}
-          rows={remarksRows}
-        />
-      )}
-    </>
+    <ObservationCard
+      title={t('aiimsEmbryoAssessmentTitle', 'Assessment of Fertilization, Embryo & Blastocyst')}
+      icon={Microscope}
+      rows={allRows}
+    />
   );
 };

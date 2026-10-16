@@ -12,7 +12,7 @@
       "label": "Embryos Frozen",
       "sections": [
         {
-          "label": "Day 3 Embryo Vitrification (Cleavage Stage)",
+          "label": "Embryos Frozen",
           "isExpanded": true,
           "questions": [
             {
@@ -56,13 +56,7 @@
                 "rendering": "text",
                 "concept": "c0010001-0000-0000-0000-000000000276"
               }
-            }
-          ]
-        },
-        {
-          "label": "Day 5 Blastocyst Vitrification",
-          "isExpanded": true,
-          "questions": [
+            },
             {
               "label": "Number of Day 5 Embryos Vitrified",
               "type": "obs",
@@ -84,13 +78,7 @@
                 "rendering": "text",
                 "concept": "c0010001-0000-0000-0000-000000000278"
               }
-            }
-          ]
-        },
-        {
-          "label": "Cryopreservation Notes & Remarks",
-          "isExpanded": true,
-          "questions": [
+            },
             {
               "label": "Remarks",
               "type": "obs",

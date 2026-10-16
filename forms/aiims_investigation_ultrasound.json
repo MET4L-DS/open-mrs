@@ -12,9 +12,19 @@
       "label": "Investigation Female Transvaginal Ultrasound",
       "sections": [
         {
-          "label": "TVS Uterine Size & Adenomyosis",
+          "label": "Investigation Female Transvaginal Ultrasound",
           "isExpanded": true,
           "questions": [
+            {
+              "label": "Day of Cycle",
+              "type": "obs",
+              "id": "day_of_cycle",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "number",
+                "concept": "c0010001-0000-0000-0000-000000000126"
+              }
+            },
             {
               "label": "Uterine size - Length (cm)",
               "type": "obs",
@@ -53,16 +63,6 @@
               "questionOptions": {
                 "rendering": "number",
                 "concept": "c0010001-0000-0000-0000-000000000125"
-              }
-            },
-            {
-              "label": "Day of Cycle",
-              "type": "obs",
-              "id": "day_of_cycle",
-              "required": "false",
-              "questionOptions": {
-                "rendering": "number",
-                "concept": "c0010001-0000-0000-0000-000000000126"
               }
             },
             {
@@ -132,13 +132,7 @@
                   }
                 ]
               }
-            }
-          ]
-        },
-        {
-          "label": "TVS Fibroids",
-          "isExpanded": true,
-          "questions": [
+            },
             {
               "label": "Fibroids",
               "type": "obs",
@@ -278,13 +272,7 @@
               "hide": {
                 "hideWhenExpression": "!fibroids_present || fibroids_present !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
               }
-            }
-          ]
-        },
-        {
-          "label": "TVS Endometrial Cavity & Anomalies",
-          "isExpanded": true,
-          "questions": [
+            },
             {
               "label": "Endometrial Cavity",
               "type": "obs",
@@ -515,13 +503,7 @@
               "hide": {
                 "hideWhenExpression": "!polyp_present || polyp_present !== '163748AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
               }
-            }
-          ]
-        },
-        {
-          "label": "TVS Ovaries, AFC & Endometrioma",
-          "isExpanded": true,
-          "questions": [
+            },
             {
               "label": "Antral Follicle Count - Right Ovary",
               "type": "obs",
@@ -682,13 +664,7 @@
                 "min": "0",
                 "max": "200"
               }
-            }
-          ]
-        },
-        {
-          "label": "TVS Hydrosalpinx & Endometrial Thickness",
-          "isExpanded": true,
-          "questions": [
+            },
             {
               "label": "Focal Adenomyoma Dimensions",
               "type": "obs",
@@ -773,13 +749,7 @@
                   }
                 ]
               }
-            }
-          ]
-        },
-        {
-          "label": "TVS Ovarian Cysts",
-          "isExpanded": true,
-          "questions": [
+            },
             {
               "label": "Ovarian Dermoid",
               "type": "obs",
@@ -963,13 +933,7 @@
               "hide": {
                 "hideWhenExpression": "!paro_ovarian_cyst || paro_ovarian_cyst !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
               }
-            }
-          ]
-        },
-        {
-          "label": "Endometrial Zones & Remarks",
-          "isExpanded": true,
-          "questions": [
+            },
             {
               "label": "Zone 1 (Myometrium surrounding the endometrium) (cm)",
               "type": "obs",

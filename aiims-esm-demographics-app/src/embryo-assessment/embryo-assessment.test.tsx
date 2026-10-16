@@ -31,10 +31,11 @@ vi.mock('../shared/components', async () => {
 });
 
 describe('EmbryoAssessmentCard', () => {
-  it('renders section headings correctly when empty', () => {
+  it('renders unified card title and observation labels when empty', () => {
     render(<EmbryoAssessmentCard data={null} />);
-    expect(screen.getByText('Fertilization & Cleavage Stage (Days 1–3)')).toBeInTheDocument();
-    expect(screen.getByText('Morula & Blastocyst Progression (Days 4–6)')).toBeInTheDocument();
+    expect(screen.getByText('Assessment of Fertilization, Embryo & Blastocyst')).toBeInTheDocument();
+    expect(screen.getByText('Number of Embryos Day 1 (2PN)')).toBeInTheDocument();
+    expect(screen.getByText('Number of Embryos Day 5 (Blastocysts)')).toBeInTheDocument();
   });
 
   it('renders clinical observation values when provided', () => {

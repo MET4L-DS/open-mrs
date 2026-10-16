@@ -1,6 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { Chemistry, ChartRadial, Notebook } from '@carbon/react/icons';
+import { Chemistry } from '@carbon/react/icons';
 import { ObservationCard, type ObservationRow } from '../shared/components';
 import type { AiimsFertilisationDetailsData } from './fertilisation-details.resource';
 
@@ -77,24 +77,18 @@ export const FertilisationDetailsCard: React.FC<FertilisationDetailsCardProps> =
     ];
   }, [data, t]);
 
+  const allRows = React.useMemo(() => [
+    ...outcomeRows,
+    ...cleavageRows,
+    ...(data?.fertilisationDetailsRemarks ? remarksRows : []),
+  ], [outcomeRows, cleavageRows, remarksRows, data?.fertilisationDetailsRemarks]);
+
   return (
-    <>
-      <ObservationCard
-        title={t('fertilisationOutcomeTitle', 'Fertilisation & Insemination Outcome')}
-        icon={Chemistry}
-        rows={outcomeRows}
-      />
-      <ObservationCard
-        title={t('cleavageAssessmentTitle', 'Cleavage Stage Assessment')}
-        icon={ChartRadial}
-        rows={cleavageRows}
-      />
-      <ObservationCard
-        title={t('fertilisationRemarksTitle', 'Laboratory Remarks')}
-        icon={Notebook}
-        rows={remarksRows}
-      />
-    </>
+    <ObservationCard
+      title={t('aiimsFertilisationDetailsTitle', 'Fertilisation Details')}
+      icon={Chemistry}
+      rows={allRows}
+    />
   );
 };
 
