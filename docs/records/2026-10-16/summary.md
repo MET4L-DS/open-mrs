@@ -49,6 +49,12 @@
 ### 2.5 Resilient Concept Dictionary Validator
 - **Auto-Retry Enhancement (`scripts/validate_concepts.py`)**: Added an exponential 3-attempt retry loop with 0.5s backoff for transient HTTP socket timeouts during high-concurrency 10-thread REST API checks.
 
+### 2.6 IVF Summary Dashboard Enrichment
+- **Hysteroscopy & Interventions Integrated**: Imported `AIIMS_FEMALE_SURGICAL_PROCEDURE_FORM_UUID` into `ivf-summary-dashboard.component.tsx` to surface operative hysteroscopy findings and cavity status in Domain 1 (*Prior Reproductive & Surgical History*).
+- **Resilient AFC Derivation**: Enhanced Domain 2 (*Hormonal & Ultrasound Reserve*) with an automatic bilateral fallback (`afcRightOvary` + `afcLeftOvary`) when total AFC is not pre-calculated by the sonographer.
+- **TVS Pelvic Findings**: Extracted Form 13 imaging findings (Fibroids + location, Adenomyosis, Hydrosalpinx) directly into Domain 2 (*Diagnostic Factors*) as a high-visibility clinical parameter.
+- **i18n Localization**: Added `hysteroscopyIntervention` and `tvsPelvicFindings` keys to `translations/en.json` (657/657 keys verified).
+
 ---
 
 ## 3. Clinical & Technical Analysis (The Investigation)
@@ -119,8 +125,8 @@
 | :--- | :--- | :--- |
 | **Total Registered Forms** | **34 / 34 Active & Published** | `validate_forms.py` (0 failed) |
 | **Active Concept Definitions** | **361 / 361 Verified** | `validate_concepts.py` (361 active) |
-| **i18n Translation Health** | **655 keys referenced, 0 missing** | `audit-i18n.ts` (100% health) |
+| **i18n Translation Health** | **657 keys referenced, 0 missing** | `audit-i18n.ts` (100% health) |
 | **TypeScript Compilation** | **0 Errors (`noImplicitAny: true`)** | `tsc --noEmit` |
 | **Unit Test Suite** | **100 / 100 Tests Passing** | `vitest` (38 test files) |
-| **Deployment Artifact** | **Version `1.0.91` Active** | HTTP 200 from live Nginx importmap probe |
-| **E2E Smoke Robot** | **Passed in 3.16s (Surg) / 4.15s (TVS)** | Headless Chromium Playwright session |
+| **Deployment Artifact** | **Version `1.0.92` Active** | HTTP 200 from live Nginx importmap probe |
+| **E2E Smoke Robot** | **Passed in 3.16s (Surg) / 4.15s (TVS) / 3.28s (Summary)** | Headless Chromium Playwright session |

@@ -32,6 +32,7 @@ import {
   AIIMS_TUBERCULOSIS_HISTORY_FORM_UUID,
   AIIMS_INVESTIGATION_ULTRASOUND_FORM_UUID,
   AIIMS_FEMALE_BLOOD_HORMONE_FORM_UUID,
+  AIIMS_FEMALE_SURGICAL_PROCEDURE_FORM_UUID,
   AIIMS_INVESTIGATION_MALE_SEMEN_FORM_UUID,
   AIIMS_OVARIAN_STIMULATION_PROTOCOL_FORM_UUID,
   AIIMS_DOSE_OF_DRUGS_FORM_UUID,
@@ -136,22 +137,69 @@ export default function IvfSummaryDashboard({
           }`
         : '—',
     },
+    {
+      label: t('hysteroscopyIntervention', 'Hysteroscopy & Interventions'),
+      value: getFormObs(AIIMS_FEMALE_SURGICAL_PROCEDURE_FORM_UUID, CONCEPTS.operativeHysteroscopy)
+        ? `${getFormObs(AIIMS_FEMALE_SURGICAL_PROCEDURE_FORM_UUID, CONCEPTS.operativeHysteroscopy)}${
+            getFormObs(AIIMS_FEMALE_SURGICAL_PROCEDURE_FORM_UUID, CONCEPTS.hysteroscopyEndometrialCavity)
+              ? ` (Cavity: ${getFormObs(AIIMS_FEMALE_SURGICAL_PROCEDURE_FORM_UUID, CONCEPTS.hysteroscopyEndometrialCavity)})`
+              : ''
+          }`
+        : getFormObs(AIIMS_FEMALE_SURGICAL_PROCEDURE_FORM_UUID, CONCEPTS.hysteroscopyEndometrialCavity)
+        ? `Cavity: ${getFormObs(AIIMS_FEMALE_SURGICAL_PROCEDURE_FORM_UUID, CONCEPTS.hysteroscopyEndometrialCavity)}`
+        : '—',
+    },
   ];
+
+  // Derive consolidated TVS ultrasound findings from Form 13
+  const tvsFindingsDisplay = (() => {
+    const findings: string[] = [];
+    const fibroids = getFormObs(AIIMS_INVESTIGATION_ULTRASOUND_FORM_UUID, CONCEPTS.fibroidsPresent);
+    if (fibroids && fibroids.toLowerCase() === 'yes') {
+      const fibroidLoc = getFormObs(AIIMS_INVESTIGATION_ULTRASOUND_FORM_UUID, CONCEPTS.fibroidsLocation);
+      findings.push(fibroidLoc ? `Fibroid (${fibroidLoc})` : 'Fibroids');
+    }
+    const adenomyosis = getFormObs(AIIMS_INVESTIGATION_ULTRASOUND_FORM_UUID, CONCEPTS.adenomyosisTvsFinding);
+    if (adenomyosis && adenomyosis !== '—') {
+      findings.push(`Adenomyosis: ${adenomyosis}`);
+    }
+    const hydrosalpinx = getFormObs(AIIMS_INVESTIGATION_ULTRASOUND_FORM_UUID, CONCEPTS.hydrosalpinxFinding);
+    if (hydrosalpinx && hydrosalpinx !== '—' && hydrosalpinx.toLowerCase() !== 'absent') {
+      findings.push(hydrosalpinx);
+    }
+    return findings.length > 0 ? findings.join(', ') : undefined;
+  })();
 
   // Domain 2: Diagnostic Factors & Hormones
   const factorRows: ObservationRow[] = [
     { label: t('tubalFactor', 'Tubal Factor'), value: getFormObs(AIIMS_FEMALE_FACTOR_FORM_UUID, CONCEPTS.tubalFactorDetails) || '—' },
     { label: t('ovarianFactor', 'Ovarian Factor'), value: getFormObs(AIIMS_FEMALE_FACTOR_FORM_UUID, CONCEPTS.dorDetails) || '—' },
     { label: t('uterineFactor', 'Uterine Factor'), value: getFormObs(AIIMS_FEMALE_FACTOR_FORM_UUID, CONCEPTS.uterineFactorDetails) || '—' },
+    { label: t('tvsPelvicFindings', 'TVS Ultrasound Findings'), value: tvsFindingsDisplay || '—' },
     { label: t('poseidonGroup', 'POSEIDON Group'), value: getFormObs(AIIMS_FEMALE_FACTOR_FORM_UUID, CONCEPTS.poseidonGroup) || '—' },
     { label: t('endometriosisStage', 'Endometriosis Stage'), value: getFormObs(AIIMS_FEMALE_FACTOR_FORM_UUID, CONCEPTS.endometriosisClassification) || '—' },
     { label: t('maleFactor', 'Male Factor'), value: getFormObs(AIIMS_MALE_FACTOR_FORM_UUID, CONCEPTS.maleInfertilityFactor) || '—' },
     { label: t('azoospermiaDetails', 'Azoospermia Details'), value: getFormObs(AIIMS_MALE_FACTOR_FORM_UUID, CONCEPTS.azoospermiaDetails) || '—' },
   ];
 
+  // Derive resilient AFC value from Form 13 (Total AFC, or Right + Left AFC fallback)
+  const afcDisplay = (() => {
+    const totalAfc = getFormObs(AIIMS_INVESTIGATION_ULTRASOUND_FORM_UUID, CONCEPTS.totalAntralFollicleCount);
+    if (totalAfc) return totalAfc;
+    const rightAfc = getFormObs(AIIMS_INVESTIGATION_ULTRASOUND_FORM_UUID, CONCEPTS.afcRightOvary);
+    const leftAfc = getFormObs(AIIMS_INVESTIGATION_ULTRASOUND_FORM_UUID, CONCEPTS.afcLeftOvary);
+    if (rightAfc && leftAfc) {
+      const sum = Number(rightAfc) + Number(leftAfc);
+      return !isNaN(sum) ? `${sum} (R:${rightAfc}, L:${leftAfc})` : `R:${rightAfc}, L:${leftAfc}`;
+    }
+    if (rightAfc) return `R:${rightAfc}`;
+    if (leftAfc) return `L:${leftAfc}`;
+    return '—';
+  })();
+
   const reserveRows: ObservationRow[] = [
     { label: t('amh', 'Serum AMH'), value: getFormObs(AIIMS_FEMALE_BLOOD_HORMONE_FORM_UUID, CONCEPTS.antiMullerianHormone) ? `${getFormObs(AIIMS_FEMALE_BLOOD_HORMONE_FORM_UUID, CONCEPTS.antiMullerianHormone)} ng/mL` : '—' },
-    { label: t('antralFollicleCount', 'Total AFC'), value: getFormObs(AIIMS_INVESTIGATION_ULTRASOUND_FORM_UUID, CONCEPTS.totalAntralFollicleCount) || '—' },
+    { label: t('antralFollicleCount', 'Total AFC'), value: afcDisplay },
     { label: t('fsh', 'Serum FSH (Day 2)'), value: getFormObs(AIIMS_FEMALE_BLOOD_HORMONE_FORM_UUID, CONCEPTS.day2FollicleStimulatingHormone) ? `${getFormObs(AIIMS_FEMALE_BLOOD_HORMONE_FORM_UUID, CONCEPTS.day2FollicleStimulatingHormone)} mIU/mL` : '—' },
     { label: t('tsh', 'Serum TSH'), value: getFormObs(AIIMS_FEMALE_BLOOD_HORMONE_FORM_UUID, CONCEPTS.thyroidStimulatingHormone) ? `${getFormObs(AIIMS_FEMALE_BLOOD_HORMONE_FORM_UUID, CONCEPTS.thyroidStimulatingHormone)} µIU/mL` : '—' },
   ];

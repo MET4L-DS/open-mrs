@@ -5,13 +5,14 @@
 ---
 
 ### Slide 1: Executive Summary & Milestone Achievement
-- **Milestone Reached**: Complete clinical realignment of Form 13 (**Investigation Female Transvaginal Ultrasound**) and Form 15 (**Investigation Female Surgical Procedure**).
+- **Milestone Reached**: Complete clinical realignment of Form 13 (**Investigation Female Transvaginal Ultrasound**) and Form 15 (**Investigation Female Surgical Procedure**), along with consolidated IVF Summary dashboard integration.
 - **Core Deliverables Today**:
   - **Form 13 Renamed & Expanded**: Converted into dedicated TVS Ultrasound sheet with 55 fields across 7 structured sections (uterine dimensions, adenomyosis, fibroids with FIGO staging, cavity anomalies, ovarian dimensions & AFC, endometrioma, hydrosalpinx, cysts, and junctional zones).
   - **Form 15 Streamlined**: Pruned out all pelvic ultrasound findings, retaining strictly Hysteroscopy findings (Ostia, Endometrium, Cavity, Cervical Canal), Dimensions, Operative Hysteroscopy, and Remarks.
   - **Exact Clinical Ordering**: Aligned field sequences 100% with AIIMS specifications, including moving `Focal Adenomyoma Dimensions` to item #37 before Hydrosalpinx.
   - **Dynamic Conditional Visibility**: Implemented question-level `hideWhenExpression` guards across 11 pathology groups, reducing visual clutter by 60% while eliminating null-state evaluation bugs.
-- **Verification**: 100/100 unit tests passing, 361/361 active concepts verified, bundle version `1.0.91` live in Docker, and E2E smoke robot confirmed 0 white screens (3.16s Surg / 4.15s TVS).
+  - **IVF Summary Dashboard Enriched**: Integrated operative hysteroscopy findings (Form 15), resilient bilateral AFC calculation (Form 13), and TVS ultrasound findings directly into the executive summary command center.
+- **Verification**: 100/100 unit tests passing, 361/361 active concepts verified, bundle version `1.0.92` live in Docker, and E2E smoke robot confirmed 0 white screens (3.16s Surg / 4.15s TVS / 3.28s IVF Summary).
 
 ---
 
@@ -64,5 +65,5 @@ graph TD
 | **Active Concept Definitions** | **361 Concepts Verified** in OpenMRS Dictionary |
 | **Unit Test Coverage** | **100 / 100 Tests Passing** across 38 test suites |
 | **Conditional Groups** | **11 Pathology Groups** dynamically showing/hiding detail inputs |
-| **Deployment Version** | **Bundle v1.0.91** active on `http://localhost/openmrs/spa` |
-| **E2E Live Smoke Verification** | **3.16s (Form 15) & 4.15s (Form 13)** without console errors |
+| **Deployment Version** | **Bundle v1.0.92** active on `http://localhost/openmrs/spa` |
+| **E2E Live Smoke Verification** | **3.16s (Form 15), 4.15s (Form 13) & 3.28s (Summary)** without console errors |

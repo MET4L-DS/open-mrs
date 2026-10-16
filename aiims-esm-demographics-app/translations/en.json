@@ -729,5 +729,7 @@
   "operativeHysteroscopyTitle": "Operative Hysteroscopy",
   "septateAngle": "Septate Angle",
   "surgicalProcedureRemarks": "Remarks / Notes",
-  "unicornuateVolume": "Unicornuate Volume"
+  "unicornuateVolume": "Unicornuate Volume",
+  "hysteroscopyIntervention": "Hysteroscopy & Interventions",
+  "tvsPelvicFindings": "TVS Ultrasound Findings"
 }
