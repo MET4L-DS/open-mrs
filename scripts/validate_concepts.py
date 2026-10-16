@@ -93,28 +93,37 @@ def validate_single_concept(
         "error": None,
     }
 
-    try:
-        with urllib.request.urlopen(req, timeout=8) as res:
-            result["status_code"] = res.getcode()
-            if res.getcode() == 200:
-                data = json.loads(res.read().decode("utf-8"))
-                result["display"] = data.get("display")
-                result["datatype"] = (data.get("datatype") or {}).get("name")
-                result["concept_class"] = (data.get("conceptClass") or {}).get("name")
-                result["retired"] = bool(data.get("retired"))
+    for attempt in range(3):
+        try:
+            with urllib.request.urlopen(req, timeout=12) as res:
+                result["status_code"] = res.getcode()
+                if res.getcode() == 200:
+                    data = json.loads(res.read().decode("utf-8"))
+                    result["display"] = data.get("display")
+                    result["datatype"] = (data.get("datatype") or {}).get("name")
+                    result["concept_class"] = (data.get("conceptClass") or {}).get("name")
+                    result["retired"] = bool(data.get("retired"))
 
-                # In OpenMRS, Numeric concepts MUST have a corresponding concept_numeric row.
-                # If concept_numeric is missing, allowDecimal is None and ObsValidator throws NPE on save.
-                if result["datatype"] == "Numeric" and data.get("allowDecimal") is None:
-                    result["valid"] = False
-                    result["error"] = "Numeric concept is missing concept_numeric record in DB (will cause HTTP 500 NPE on save)"
-                else:
-                    result["valid"] = True
-    except urllib.error.HTTPError as e:
-        result["status_code"] = e.code
-        result["error"] = f"HTTP {e.code}"
-    except Exception as e:
-        result["error"] = str(e)
+                    # In OpenMRS, Numeric concepts MUST have a corresponding concept_numeric row.
+                    # If concept_numeric is missing, allowDecimal is None and ObsValidator throws NPE on save.
+                    if result["datatype"] == "Numeric" and data.get("allowDecimal") is None:
+                        result["valid"] = False
+                        result["error"] = "Numeric concept is missing concept_numeric record in DB (will cause HTTP 500 NPE on save)"
+                    else:
+                        result["valid"] = True
+                    break
+        except urllib.error.HTTPError as e:
+            result["status_code"] = e.code
+            result["error"] = f"HTTP {e.code}"
+            if e.code == 404:
+                break
+            time.sleep(0.5)
+        except Exception as e:
+            result["error"] = str(e)
+            if attempt < 2:
+                time.sleep(0.5)
+            else:
+                break
 
     return result
 

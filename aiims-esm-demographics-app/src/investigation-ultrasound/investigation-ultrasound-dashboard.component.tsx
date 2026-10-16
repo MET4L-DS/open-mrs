@@ -37,18 +37,18 @@ export default function InvestigationUltrasoundDashboard({
       isLoading={isLoading}
       error={error}
       mutate={mutate}
-      loadingDescription={t('loadingInvestigationUltrasound', 'Loading Investigation Ultrasound details...')}
+      loadingDescription={t('loadingInvestigationFemaleTransvaginalUltrasound', 'Loading Transvaginal Ultrasound details...')}
       noRecordedText={t(
-        'noRecordedInvestigationUltrasoundEncounter',
-        'No AIIMS Investigation Ultrasound encounter recorded yet'
+        'noRecordedInvestigationFemaleTransvaginalUltrasoundEncounter',
+        'No AIIMS Transvaginal Ultrasound encounter recorded yet'
       )}
-      emptyHeading={t('noInvestigationUltrasoundHeader', 'No Investigation Ultrasound Recorded Yet')}
+      emptyHeading={t('noInvestigationFemaleTransvaginalUltrasoundHeader', 'No Transvaginal Ultrasound Recorded Yet')}
       emptyDescription={t(
-        'noInvestigationUltrasoundBody',
-        'Total antral follicle count and ovary volumes have not been recorded for this patient yet.'
+        'noInvestigationFemaleTransvaginalUltrasoundBody',
+        'Transvaginal ultrasound (TVS) findings including uterine dimensions, fibroids, cavity anomalies, antral follicles, and ovarian cysts have not been recorded for this patient yet.'
       )}
-      recordButtonText={t('recordInvestigationUltrasound', 'Record Investigation Ultrasound')}
-      updateButtonText={t('updateInvestigationUltrasound', 'Update Investigation Ultrasound')}
+      recordButtonText={t('recordInvestigationFemaleTransvaginalUltrasound', 'Record Female Transvaginal Ultrasound')}
+      updateButtonText={t('updateInvestigationFemaleTransvaginalUltrasound', 'Update Female Transvaginal Ultrasound')}
     >
       <InvestigationUltrasoundCard data={investigationUltrasoundData} />
     </FormDashboardShell>

@@ -48,7 +48,7 @@ export const AIIMS_TUBERCULOSIS_HISTORY_FORM_NAME = 'AIIMS Visit: Tuberculosis H
 
 // Form UUID for AIIMS Visit: Investigation Ultrasound
 export const AIIMS_INVESTIGATION_ULTRASOUND_FORM_UUID = '80930653-7e80-4bfd-9e29-ec37c334d88c';
-export const AIIMS_INVESTIGATION_ULTRASOUND_FORM_NAME = 'AIIMS Visit: Investigation Ultrasound';
+export const AIIMS_INVESTIGATION_ULTRASOUND_FORM_NAME = 'AIIMS Visit: Investigation Female Transvaginal Ultrasound';
 
 // Form UUID for AIIMS Visit: Investigation Female Blood Hormone
 export const AIIMS_FEMALE_BLOOD_HORMONE_FORM_UUID = '80930653-7e80-4bfd-9e29-ec37c334d88d';

@@ -88,7 +88,7 @@ This file serves as the persistent project-level memory and source of truth acro
   - Form 10 (`past-medical-history`): `80930653-7e80-4bfd-9e29-ec37c334d889` (`AIIMS Visit: Past Medical History`)
   - Form 11 (`family-history`): `80930653-7e80-4bfd-9e29-ec37c334d88a` (`AIIMS Visit: Family History`)
   - Form 12 (`tuberculosis-history`): `80930653-7e80-4bfd-9e29-ec37c334d88b` (`AIIMS Visit: Tuberculosis History`)
-  - Form 13 (`investigation-ultrasound`): `80930653-7e80-4bfd-9e29-ec37c334d88c` (`AIIMS Visit: Investigation Ultrasound`)
+  - Form 13 (`investigation-ultrasound`): `80930653-7e80-4bfd-9e29-ec37c334d88c` (`AIIMS Visit: Investigation Female Transvaginal Ultrasound`)
   - Form 14 (`female-blood-hormone`): `80930653-7e80-4bfd-9e29-ec37c334d88d` (`AIIMS Visit: Investigation Female Blood Hormone`)
   - Form 15 (`female-surgical-procedure`): `80930653-7e80-4bfd-9e29-ec37c334d88e` (`AIIMS Visit: Investigation Female Surgical Procedure`)
   - Form 16 (`procedure-embryo-transfer`): `80930653-7e80-4bfd-9e29-ec37c334d88f` (`AIIMS Visit: Procedure Embryo Transfer`)
@@ -464,7 +464,7 @@ Follow this 6-stage lifecycle to add new clinical forms without errors:
 - [x] Register Form 10: Past Medical History (`past-medical-history`).
 - [x] Register Form 11: Family History (`family-history`).
 - [x] Register Form 12: Tuberculosis History (`tuberculosis-history`).
-- [x] Register Form 13: Investigation Ultrasound (`investigation-ultrasound`).
+- [x] Register Form 13: Investigation Female Transvaginal Ultrasound (`investigation-ultrasound`).
 - [x] Register Form 14: Investigation Female Blood Hormone (`female-blood-hormone`).
 - [x] Register Form 15: Investigation Female Surgical Procedure (`female-surgical-procedure`).
 - [x] Register Form 16: Procedure Embryo Transfer (`procedure-embryo-transfer`).
@@ -487,5 +487,6 @@ Follow this 6-stage lifecycle to add new clinical forms without errors:
 - [x] Register Form 33: Post-InVitro Fertilisation Investigation (`post-ivf-investigation`).
 - [x] Register Form 34: Examination Infant (`examination-infant`).
 - [x] Implement Consolidated IVF Summary Dashboard (`aiims-ivf-summary`) with full 6-domain clinical enrichment.
+- [x] Realign Form 13 (TVS Ultrasound 55 fields + 11 conditional groups) & Form 15 (focused Hysteroscopy & Operative scope).
 
 
