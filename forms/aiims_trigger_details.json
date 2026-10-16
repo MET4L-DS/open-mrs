@@ -12,7 +12,7 @@
       "label": "Trigger Details",
       "sections": [
         {
-          "label": "Follicles & Endometrium on Trigger Day",
+          "label": "Trigger Details",
           "isExpanded": true,
           "questions": [
             {
@@ -76,13 +76,7 @@
                   }
                 ]
               }
-            }
-          ]
-        },
-        {
-          "label": "Hormones on Trigger Day",
-          "isExpanded": true,
-          "questions": [
+            },
             {
               "label": "Estradiol on Trigger Day (pg/mL)",
               "type": "obs",
@@ -102,13 +96,7 @@
                 "rendering": "number",
                 "concept": "c0010001-0000-0000-0000-000000000200"
               }
-            }
-          ]
-        },
-        {
-          "label": "Ovulation Trigger Administration",
-          "isExpanded": true,
-          "questions": [
+            },
             {
               "label": "Ovulation trigger",
               "type": "obs",

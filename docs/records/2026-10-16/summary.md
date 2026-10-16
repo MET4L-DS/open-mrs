@@ -1,11 +1,14 @@
 # Daily Engineering Record & Decision Journal: 2026-10-16
 
 ## 1. Executive Summary & Daily Mission
-- **Mission Goal**: Execute three major clinical and UX enhancements across the AIIMS Reproductive Medicine platform:
+- **Mission Goal**: Execute four major clinical and UX enhancements across the AIIMS Reproductive Medicine platform:
   1. Complete clinical realignment defined in `docs/plans/second_sheet_form_adjustments.md`: rename Form 13 to **"Investigation Female Transvaginal Ultrasound"**, transfer all 55 TVS ultrasound fields out of Form 15 into Form 13, streamline Form 15 (**"Investigation Female Surgical Procedure"**) strictly to hysteroscopy findings, hysteroscopy dimensions, and operative hysteroscopy, implement question-level conditional visibility rules, and enrich the consolidated IVF Summary dashboard.
   2. Integrate Hysteroscopy findings, dimensions, and operative interventions into Form 9 (**"Previous Surgery"**) using a dedicated dual-card dashboard architecture (Option B) with cross-form encounter aggregation in the IVF Summary.
-  3. Eliminate multi-section / accordion grouping across 5 forms (**Investigation Female Transvaginal Ultrasound**, **Assessment of Fertilization, Embryo & Blastocyst**, **Fertilisation Details**, **Embryos Frozen**, and **Fresh Embryo Transfer Details**), promote **Day of Cycle** to question #1 on TVS, and flatten all corresponding frontend UI cards into single continuous `ObservationCard` views.
-- **Operational Status**: 34/34 clinical forms active and published in MariaDB. 361/361 active concept definitions verified with auto-retry resilience. 102/102 unit tests passing across 39 test suites. Production bundle `1.0.95` hot-deployed to Docker container. E2E headless smoke robot confirmed 0 console errors and 0 white screens across all updated clinical dashboards.
+  3. Eliminate multi-section / accordion grouping across 11 clinical forms across two batches:
+     - **Batch 1 (5 Forms)**: TVS Ultrasound, Assessment of Fertilization, Fertilisation Details, Embryos Frozen, Fresh Embryo Transfer Details.
+     - **Batch 2 (6 Forms)**: Dose of Drugs, Trigger Details, Ovum Pick Up details, Procedure, Lab Procedure of Insemination, Embryo Grading Day 3.
+  4. Promote **Day of Cycle** to question #1 on TVS, and flatten all corresponding frontend UI cards across all 11 forms into unified continuous `ObservationCard` views matching form entry 1:1.
+- **Operational Status**: 34/34 clinical forms active and published in MariaDB. 361/361 active concept definitions verified with auto-retry resilience. 102/102 unit tests passing across 39 test suites. Production bundle `1.0.96` hot-deployed to Docker container. E2E headless smoke robot confirmed 0 console errors and 0 white screens across all updated clinical dashboards.
 
 ---
 
@@ -100,6 +103,27 @@
   - Live probe: HTTP 200 OK verified.
   - Headless E2E smoke robot: Verified clean renders for TVS Ultrasound (3.29s) and Fresh ET Details (3.56s).
 
+### 2.11 Batch 2 Form Grouping Removal Across 6 Additional Forms & Hot-Deployment v1.0.96
+- **Collapsed AMPATH Schemas into Single Continuous Sections**:
+  1. `forms/aiims_dose_of_drugs.json`: 4 sections collapsed into 1 continuous section (*"Dose of Drugs"*, 11 questions).
+  2. `forms/aiims_trigger_details.json`: 3 sections collapsed into 1 continuous section (*"Trigger Details"*, 11 questions).
+  3. `forms/aiims_ovum_pick_up_details.json`: 3 sections collapsed into 1 continuous section (*"Ovum Pick Up Details"*, 16 questions).
+  4. `forms/aiims_procedure.json`: 3 sections collapsed into 1 continuous section (*"Procedure"*, 3 questions).
+  5. `forms/aiims_lab_procedure_insemination.json`: 2 sections collapsed into 1 continuous section (*"Lab Procedure of Insemination"*, 3 questions).
+  6. `forms/aiims_embryo_grading_day3.json`: 2 sections collapsed into 1 continuous section (*"Embryo Grading Day 3"*, 5 questions).
+  - Re-published all 6 forms to MariaDB (`scripts/publish_aiims_form.py`) and verified via `validate_forms.py` (34/34 forms active).
+- **Unified Frontend UI Cards**:
+  1. `dose-of-drugs-card.component.tsx`: Rendered 1 continuous `ObservationCard` (`aiimsDoseOfDrugsTitle`, `Medication` icon).
+  2. `trigger-details-card.component.tsx`: Rendered 1 continuous `ObservationCard` (`aiimsTriggerDetailsTitle`, `Timer` icon).
+  3. `ovum-pick-up-details-card.component.tsx`: Rendered 1 continuous `ObservationCard` (`aiimsOvumPickUpDetailsTitle`, `Microscope` icon).
+  4. `procedure-card.component.tsx`: Rendered 1 continuous `ObservationCard` (`aiimsProcedureTitle`, `Microscope` icon).
+  5. `lab-procedure-insemination-card.component.tsx`: Rendered 1 continuous `ObservationCard` (`aiimsLabProcedureInseminationTitle`, `Chemistry` icon).
+  6. `embryo-grading-day3-card.component.tsx`: Rendered 1 continuous `ObservationCard` (`aiimsEmbryoGradingDay3Title`, `Microscope` icon).
+- **Unit Test Updates & 9-Stage Deployment**:
+  - Updated assertions across 6 test files (`dose-of-drugs.test.tsx`, `trigger-details-card.component.test.tsx`, `ovum-pick-up-details-card.component.test.tsx`, `procedure-card.component.test.tsx`, `lab-procedure-insemination-card.component.test.tsx`, `embryo-grading-day3.test.tsx`).
+  - Vitest suite: 102/102 tests passing across 39 test files.
+  - Hot-deployed production bundle `1.0.96` to Docker container. Live E2E smoke tests verified for `Dose of Drugs` (3.18s) and `Ovum Pick Up Details` (3.38s).
+
 ---
 
 ## 3. Clinical & Technical Analysis (The Investigation)
@@ -167,10 +191,11 @@
    - Identified and caught that `focal_adenomyoma_dimensions` had been misplaced in Section 1 rather than position #37 before Hydrosalpinx.
 3. **Previous Surgery Architectural Decision**:
    - Directed that Option B (dedicated Previous Hysteroscopy card) be chosen for clean separation of concerns in Form 9.
-4. **Form Grouping Removal Directive**:
-   - Explicitly directed that grouping be removed across 5 forms (TVS, Embryo Assessment, Fertilisation Details, Embryos Frozen, Fresh ET Details) and that Day of Cycle be placed at the top of the TVS form.
+4. **Form Grouping Removal Directives (Batch 1 & Batch 2)**:
+   - Explicitly directed that grouping be removed across Batch 1 (5 forms: TVS, Embryo Assessment, Fertilisation Details, Embryos Frozen, Fresh ET Details) and that Day of Cycle be placed at the top of the TVS form.
+   - Explicitly directed that grouping be removed across Batch 2 (6 forms: Dose of Drugs, Trigger Details, Ovum Pick Up details, Procedure, Lab Procedure of Insemination, Embryo Grading Day 3).
 5. **Frontend UI Synchronization Directive**:
-   - Instructed that the frontend UI cards and unit tests must be updated to reflect the flattened, non-grouped form structures across all 5 modules.
+   - Instructed that the frontend UI cards and unit tests must be updated to reflect the flattened, non-grouped form structures across all 11 modules (Batch 1 + Batch 2).
 
 ---
 
@@ -184,12 +209,12 @@
 ### Value Delivered
 - Disentangled clinical imaging from surgical interventions, giving AIIMS reproductive specialists a dedicated 55-parameter Transvaginal Ultrasound sheet and a streamlined Hysteroscopy sheet.
 - Enhanced Previous Surgery with dedicated Hysteroscopy documentation and cross-form IVF summary integration.
-- Eliminated accordion friction across 5 clinical intake forms, reducing clinician cognitive load and visual clutter while positioning Day of Cycle as the primary clinical parameter on TVS.
+- Eliminated accordion friction across 11 clinical intake forms, reducing clinician cognitive load and visual clutter while positioning Day of Cycle as the primary clinical parameter on TVS.
 
 ### 3 Standup Talking Points for the Principal Investigator (PI)
 1. *"We successfully realigned Form 13 into a comprehensive 55-field Female Transvaginal Ultrasound sheet, moving all pelvic ultrasound imaging out of the surgical procedure form, and integrated previous hysteroscopy into Form 9 with a dedicated dual-card dashboard."*
-2. *"We removed section grouping across 5 forms (TVS, Embryo Assessment, Fertilisation Details, Embryos Frozen, Fresh ET Details) in both backend schemas and frontend UI cards, promoting Day of Cycle to question #1 on the TVS form."*
-3. *"The full 9-stage deployment pipeline completed with 102/102 passing tests, 361 active concepts, 0 missing translations, and bundle version 1.0.95 hot-deployed and verified on live endpoints."*
+2. *"We eliminated section grouping across 11 clinical intake and embryology forms in both backend schemas and frontend UI cards, creating high-density continuous observation cards matching form entry 1:1."*
+3. *"The full 9-stage deployment pipeline completed with 102/102 passing tests, 361 active concepts, 0 missing translations, and bundle version 1.0.96 hot-deployed and verified on live endpoints."*
 
 ---
 
@@ -202,6 +227,6 @@
 | **i18n Translation Health** | **642 keys referenced, 0 missing** | `audit-i18n.ts` (100% health) |
 | **TypeScript Compilation** | **0 Errors (`noImplicitAny: true`)** | `tsc --noEmit` |
 | **Unit Test Suite** | **102 / 102 Tests Passing** | `vitest` (39 test files) |
-| **Deployment Artifact** | **Version `1.0.95` Active** | HTTP 200 from live Nginx importmap probe |
-| **E2E Smoke Robot** | **Passed across all forms (3.29s–3.56s)** | Headless Chromium Playwright session |
-| **UI Card Flattening** | **5 / 5 ObservationCards unified** | Single continuous cards with zero multi-card grouping |
+| **Deployment Artifact** | **Version `1.0.96` Active** | HTTP 200 from live Nginx importmap probe |
+| **E2E Smoke Robot** | **Passed across all forms (3.18s–3.56s)** | Headless Chromium Playwright session |
+| **UI Card Flattening** | **11 / 11 ObservationCards unified** | Single continuous cards with zero multi-card grouping (Batch 1: 5 forms, Batch 2: 6 forms) |

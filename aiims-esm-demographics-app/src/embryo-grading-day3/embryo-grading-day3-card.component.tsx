@@ -1,6 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { Microscope, Notebook } from '@carbon/react/icons';
+import { Microscope } from '@carbon/react/icons';
 import { ObservationCard, type ObservationRow } from '../shared/components';
 import type { AiimsEmbryoGradingDay3Data } from './embryo-grading-day3.resource';
 
@@ -11,7 +11,7 @@ export interface EmbryoGradingDay3CardProps {
 export const EmbryoGradingDay3Card: React.FC<EmbryoGradingDay3CardProps> = ({ data }) => {
   const { t } = useTranslation();
 
-  // Card 1: Day 3 Cleavage Stage Embryo Grading
+  // Day 3 Cleavage Stage Embryo Grading
   const gradingRows: ObservationRow[] = React.useMemo(() => {
     return [
       {
@@ -41,7 +41,7 @@ export const EmbryoGradingDay3Card: React.FC<EmbryoGradingDay3CardProps> = ({ da
     ];
   }, [data, t]);
 
-  // Card 2: Laboratory Remarks
+  // Laboratory Remarks
   const remarksRows: ObservationRow[] = React.useMemo(() => {
     return [
       {
@@ -53,18 +53,16 @@ export const EmbryoGradingDay3Card: React.FC<EmbryoGradingDay3CardProps> = ({ da
     ];
   }, [data, t]);
 
+  const allRows = React.useMemo(() => [
+    ...gradingRows,
+    ...(data?.embryoGradingDay3Remarks ? remarksRows : []),
+  ], [gradingRows, remarksRows, data?.embryoGradingDay3Remarks]);
+
   return (
-    <>
-      <ObservationCard
-        title={t('embryoGradingDay3Title', 'Day 3 Cleavage Stage Embryo Grading')}
-        icon={Microscope}
-        rows={gradingRows}
-      />
-      <ObservationCard
-        title={t('embryoGradingDay3RemarksTitle', 'Laboratory Notes & Remarks')}
-        icon={Notebook}
-        rows={remarksRows}
-      />
-    </>
+    <ObservationCard
+      title={t('aiimsEmbryoGradingDay3Title', 'Embryo Grading Day 3')}
+      icon={Microscope}
+      rows={allRows}
+    />
   );
 };

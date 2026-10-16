@@ -22,10 +22,7 @@ describe('LabProcedureInseminationCard', () => {
     );
 
     expect(
-      screen.getByText('Insemination & Fertilization Method')
-    ).toBeInTheDocument();
-    expect(
-      screen.getByText('Laboratory Notes & Remarks')
+      screen.getByText('Lab Procedure of Insemination')
     ).toBeInTheDocument();
 
     expect(screen.getByText('Method of Insemination')).toBeInTheDocument();

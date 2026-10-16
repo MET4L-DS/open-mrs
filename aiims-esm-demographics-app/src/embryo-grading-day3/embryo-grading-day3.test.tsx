@@ -37,10 +37,10 @@ vi.mock('../shared/components', async () => {
 });
 
 describe('EmbryoGradingDay3Card', () => {
-  it('renders card titles correctly', () => {
+  it('renders card title correctly', () => {
     render(<EmbryoGradingDay3Card data={null} />);
-    expect(screen.getByText('Day 3 Cleavage Stage Embryo Grading')).toBeInTheDocument();
-    expect(screen.getByText('Laboratory Notes & Remarks')).toBeInTheDocument();
+    expect(screen.getByText('Embryo Grading Day 3')).toBeInTheDocument();
+    expect(screen.getByText('Grade 1 Embryos (Day 3)')).toBeInTheDocument();
   });
 
   it('renders all alphanumeric grade values correctly when data is provided', () => {
@@ -98,7 +98,7 @@ describe('EmbryoGradingDay3Dashboard', () => {
     } as any);
 
     render(<EmbryoGradingDay3Dashboard patientUuid="patient-1" />);
-    expect(screen.getByText('Day 3 Cleavage Stage Embryo Grading')).toBeInTheDocument();
+    expect(screen.getByText('Embryo Grading Day 3')).toBeInTheDocument();
     expect(screen.getByText('Grade 1 Embryos (Day 3)')).toBeInTheDocument();
   });
 });

@@ -12,7 +12,7 @@
       "label": "Embryo Grading Day 3",
       "sections": [
         {
-          "label": "Day 3 Cleavage Stage Embryo Grading",
+          "label": "Embryo Grading Day 3",
           "isExpanded": true,
           "questions": [
             {
@@ -54,13 +54,7 @@
                 "rendering": "text",
                 "concept": "c0010001-0000-0000-0000-000000000271"
               }
-            }
-          ]
-        },
-        {
-          "label": "Laboratory Notes & Remarks",
-          "isExpanded": true,
-          "questions": [
+            },
             {
               "label": "Remarks",
               "type": "obs",

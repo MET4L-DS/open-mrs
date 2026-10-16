@@ -12,7 +12,7 @@
       "label": "Lab Procedure of Insemination",
       "sections": [
         {
-          "label": "Insemination & Fertilization Method",
+          "label": "Lab Procedure of Insemination",
           "isExpanded": true,
           "questions": [
             {
@@ -52,13 +52,7 @@
                 "rendering": "text",
                 "concept": "c0010001-0000-0000-0000-000000000223"
               }
-            }
-          ]
-        },
-        {
-          "label": "Laboratory Notes & Remarks",
-          "isExpanded": true,
-          "questions": [
+            },
             {
               "label": "Remarks",
               "type": "obs",

@@ -12,7 +12,7 @@
       "label": "Dose of Drugs",
       "sections": [
         {
-          "label": "Duration of Regimen",
+          "label": "Dose of Drugs",
           "isExpanded": true,
           "questions": [
             {
@@ -38,13 +38,7 @@
                 "min": 0,
                 "max": 100
               }
-            }
-          ]
-        },
-        {
-          "label": "Gonadotropin Dosages",
-          "isExpanded": true,
-          "questions": [
+            },
             {
               "label": "Starting dose Follicle-Stimulating Hormone (FSH)",
               "type": "obs",
@@ -116,13 +110,7 @@
                 "min": 0,
                 "max": 50000
               }
-            }
-          ]
-        },
-        {
-          "label": "Cetrotide Administration",
-          "isExpanded": true,
-          "questions": [
+            },
             {
               "label": "Day of start of Cetrotide",
               "type": "obs",
@@ -210,13 +198,7 @@
                 "min": 0,
                 "max": 100
               }
-            }
-          ]
-        },
-        {
-          "label": "Clinical Notes & Remarks",
-          "isExpanded": true,
-          "questions": [
+            },
             {
               "label": "Remarks",
               "type": "obs",

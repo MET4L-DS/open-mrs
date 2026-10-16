@@ -12,7 +12,7 @@
       "label": "Ovum Pick Up Details",
       "sections": [
         {
-          "label": "Procedure Timing & Oocytes Retrieval",
+          "label": "Ovum Pick Up Details",
           "isExpanded": true,
           "questions": [
             {
@@ -84,13 +84,7 @@
                 "rendering": "number",
                 "concept": "c0010001-0000-0000-0000-000000000212"
               }
-            }
-          ]
-        },
-        {
-          "label": "Oocyte Maturity & Grading",
-          "isExpanded": true,
-          "questions": [
+            },
             {
               "label": "Oocyte-Cumulus Complex Grade-I",
               "type": "obs",
@@ -150,13 +144,7 @@
                 "rendering": "number",
                 "concept": "c0010001-0000-0000-0000-000000000218"
               }
-            }
-          ]
-        },
-        {
-          "label": "Oocyte Abnormalities & Notes",
-          "isExpanded": true,
-          "questions": [
+            },
             {
               "label": "Abnormal oocytes number",
               "type": "obs",

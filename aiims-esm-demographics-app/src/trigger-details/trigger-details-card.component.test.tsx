@@ -17,12 +17,7 @@ describe('TriggerDetailsCard', () => {
   it('renders card titles and question labels when empty', () => {
     render(<TriggerDetailsCard data={initialAiimsTriggerDetailsData} />);
 
-    expect(
-      screen.getByText('Trigger Day Follicles & Endometrium')
-    ).toBeInTheDocument();
-    expect(
-      screen.getByText('Ovulation Trigger Administration')
-    ).toBeInTheDocument();
+    expect(screen.getByText('Trigger Details')).toBeInTheDocument();
     expect(screen.getByText('Follicles (14 mm - 22 mm)')).toBeInTheDocument();
     expect(screen.getByText('Follicles (16 mm - 22 mm)')).toBeInTheDocument();
     expect(screen.getByText('Endometrial Thickness')).toBeInTheDocument();

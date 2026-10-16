@@ -49,10 +49,10 @@ describe('DoseOfDrugsCard', () => {
 
     render(<DoseOfDrugsCard data={mockData} />);
 
-    expect(screen.getByText('Duration of Regimen')).toBeInTheDocument();
-    expect(screen.getByText('Gonadotropin Dosages')).toBeInTheDocument();
-    expect(screen.getByText('Cetrotide Administration')).toBeInTheDocument();
-    expect(screen.getByText('Clinical Notes & Remarks')).toBeInTheDocument();
+    expect(screen.getByText('Dose of Drugs')).toBeInTheDocument();
+    expect(screen.getByText('Total days of Leuprolide Downregulation')).toBeInTheDocument();
+    expect(screen.getByText('Starting dose Follicle-Stimulating Hormone (FSH)')).toBeInTheDocument();
+    expect(screen.getByText('Day of start of Cetrotide')).toBeInTheDocument();
 
     expect(screen.getByText('14 days')).toBeInTheDocument();
     expect(screen.getByText('10 days')).toBeInTheDocument();
@@ -68,10 +68,9 @@ describe('DoseOfDrugsCard', () => {
   it('renders placeholders when data fields are undefined', () => {
     render(<DoseOfDrugsCard data={null} />);
 
-    expect(screen.getByText('Duration of Regimen')).toBeInTheDocument();
-    expect(screen.getByText('Gonadotropin Dosages')).toBeInTheDocument();
-    expect(screen.getByText('Cetrotide Administration')).toBeInTheDocument();
-    expect(screen.getByText('Clinical Notes & Remarks')).toBeInTheDocument();
+    expect(screen.getByText('Dose of Drugs')).toBeInTheDocument();
+    expect(screen.getByText('Total days of Leuprolide Downregulation')).toBeInTheDocument();
+    expect(screen.getByText('Starting dose Follicle-Stimulating Hormone (FSH)')).toBeInTheDocument();
   });
 });
 
@@ -106,7 +105,7 @@ describe('DoseOfDrugsDashboard', () => {
 
     render(<DoseOfDrugsDashboard patientUuid="patient-123" />);
 
-    expect(screen.getByText('Duration of Regimen')).toBeInTheDocument();
+    expect(screen.getByText('Dose of Drugs')).toBeInTheDocument();
     expect(screen.getByText('11 days')).toBeInTheDocument();
     expect(screen.getByText('225 IU')).toBeInTheDocument();
   });

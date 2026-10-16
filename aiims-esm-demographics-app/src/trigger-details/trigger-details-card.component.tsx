@@ -1,5 +1,5 @@
 import React from 'react';
-import { Timer, Medication } from '@carbon/react/icons';
+import { Timer } from '@carbon/react/icons';
 import { useTranslation } from 'react-i18next';
 import { type AiimsTriggerDetailsData } from './trigger-details.resource';
 import { ObservationCard, type ObservationRow } from '../shared/components';
@@ -128,18 +128,16 @@ export const TriggerDetailsCard: React.FC<TriggerDetailsCardProps> = ({
     return list;
   }, [data, t]);
 
+  const allRows = React.useMemo(() => [
+    ...follicleRows,
+    ...administrationRows,
+  ], [follicleRows, administrationRows]);
+
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-      <ObservationCard
-        title={t('triggerDetailsCardTitle', 'Trigger Day Follicles & Endometrium')}
-        icon={Timer}
-        rows={follicleRows}
-      />
-      <ObservationCard
-        title={t('triggerAdministrationCardTitle', 'Ovulation Trigger Administration')}
-        icon={Medication}
-        rows={administrationRows}
-      />
-    </div>
+    <ObservationCard
+      title={t('aiimsTriggerDetailsTitle', 'Trigger Details')}
+      icon={Timer}
+      rows={allRows}
+    />
   );
 };

@@ -17,14 +17,7 @@ describe('OvumPickUpDetailsCard', () => {
   it('renders card titles and question labels when empty', () => {
     render(<OvumPickUpDetailsCard data={initialAiimsOvumPickUpDetailsData} />);
 
-    expect(
-      screen.getByText('Procedure Timing & Oocytes Retrieval')
-    ).toBeInTheDocument();
-    expect(screen.getByText('Oocyte Maturity & Grading')).toBeInTheDocument();
-    expect(
-      screen.getByText('Oocyte Abnormalities & Notes')
-    ).toBeInTheDocument();
-
+    expect(screen.getByText('Ovum Pick Up Details')).toBeInTheDocument();
     expect(screen.getByText('Date of Ovum Pick Up')).toBeInTheDocument();
     expect(screen.getByText('Time of Ovum Pick Up')).toBeInTheDocument();
     expect(

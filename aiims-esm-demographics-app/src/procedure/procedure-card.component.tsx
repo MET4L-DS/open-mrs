@@ -1,5 +1,5 @@
 import React from 'react';
-import { Microscope, Activity, ReportData } from '@carbon/react/icons';
+import { Microscope } from '@carbon/react/icons';
 import { useTranslation } from 'react-i18next';
 import { type AiimsProcedureData } from './procedure.resource';
 import { ObservationCard, type ObservationRow } from '../shared/components';
@@ -59,29 +59,17 @@ export const ProcedureCard: React.FC<ProcedureCardProps> = ({ data }) => {
     return list;
   }, [data.procedureRemarks, t]);
 
+  const allRows = React.useMemo(() => [
+    ...spermRetrievalRows,
+    ...additionalIvfRows,
+    ...remarksRows,
+  ], [spermRetrievalRows, additionalIvfRows, remarksRows]);
+
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-      <ObservationCard
-        title={t(
-          'spermRetrievalCardTitle',
-          'Sperm Retrieval & Source Procedure'
-        )}
-        icon={Microscope}
-        rows={spermRetrievalRows}
-      />
-      <ObservationCard
-        title={t(
-          'additionalIvfProceduresCardTitle',
-          'Additional IVF Procedures'
-        )}
-        icon={Activity}
-        rows={additionalIvfRows}
-      />
-      <ObservationCard
-        title={t('laboratoryNotesRemarks', 'Laboratory Notes & Remarks')}
-        icon={ReportData}
-        rows={remarksRows}
-      />
-    </div>
+    <ObservationCard
+      title={t('aiimsProcedureTitle', 'Procedure')}
+      icon={Microscope}
+      rows={allRows}
+    />
   );
 };

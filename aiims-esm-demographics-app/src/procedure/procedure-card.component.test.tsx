@@ -17,15 +17,8 @@ describe('ProcedureCard', () => {
   it('renders card titles and question labels when empty', () => {
     render(<ProcedureCard data={initialAiimsProcedureData} />);
 
-    expect(
-      screen.getByText('Sperm Retrieval & Source Procedure')
-    ).toBeInTheDocument();
-    expect(
-      screen.getAllByText('Additional IVF Procedures')
-    ).toHaveLength(2);
-    expect(
-      screen.getByText('Laboratory Notes & Remarks')
-    ).toBeInTheDocument();
+    expect(screen.getByText('Procedure')).toBeInTheDocument();
+    expect(screen.getByText('Additional IVF Procedures')).toBeInTheDocument();
 
     expect(screen.getByText('Sperm Retrieval Procedure')).toBeInTheDocument();
     expect(screen.getByText('Remarks / Notes')).toBeInTheDocument();

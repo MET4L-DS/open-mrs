@@ -1,5 +1,5 @@
 import React from 'react';
-import { Timer, Microscope, ReportData } from '@carbon/react/icons';
+import { Microscope } from '@carbon/react/icons';
 import { useTranslation } from 'react-i18next';
 import { type AiimsOvumPickUpDetailsData } from './ovum-pick-up-details.resource';
 import { ObservationCard, type ObservationRow } from '../shared/components';
@@ -197,29 +197,17 @@ export const OvumPickUpDetailsCard: React.FC<OvumPickUpDetailsCardProps> = ({
     return list;
   }, [data, t]);
 
+  const allRows = React.useMemo(() => [
+    ...procedureRows,
+    ...maturityRows,
+    ...abnormalityRows,
+  ], [procedureRows, maturityRows, abnormalityRows]);
+
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-      <ObservationCard
-        title={t(
-          'ovumPickupProcedureCardTitle',
-          'Procedure Timing & Oocytes Retrieval'
-        )}
-        icon={Timer}
-        rows={procedureRows}
-      />
-      <ObservationCard
-        title={t('oocyteMaturityCardTitle', 'Oocyte Maturity & Grading')}
-        icon={Microscope}
-        rows={maturityRows}
-      />
-      <ObservationCard
-        title={t(
-          'oocyteAbnormalitiesCardTitle',
-          'Oocyte Abnormalities & Notes'
-        )}
-        icon={ReportData}
-        rows={abnormalityRows}
-      />
-    </div>
+    <ObservationCard
+      title={t('aiimsOvumPickUpDetailsTitle', 'Ovum Pick Up Details')}
+      icon={Microscope}
+      rows={allRows}
+    />
   );
 };

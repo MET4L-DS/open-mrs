@@ -1,5 +1,5 @@
 import React from 'react';
-import { Medication, Time, Chemistry } from '@carbon/react/icons';
+import { Medication } from '@carbon/react/icons';
 import { useTranslation } from 'react-i18next';
 import { type AiimsDoseOfDrugsData } from './dose-of-drugs.resource';
 import { ObservationCard, type ObservationRow } from '../shared/components';
@@ -140,28 +140,18 @@ export const DoseOfDrugsCard: React.FC<DoseOfDrugsCardProps> = ({ data }) => {
     return list;
   }, [data, t]);
 
+  const allRows = React.useMemo(() => [
+    ...durationRows,
+    ...gonadotropinRows,
+    ...cetrotideRows,
+    ...(data?.remarks ? remarksRows : []),
+  ], [durationRows, gonadotropinRows, cetrotideRows, remarksRows, data?.remarks]);
+
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-      <ObservationCard
-        title={t('durationOfRegimenTitle', 'Duration of Regimen')}
-        icon={Time}
-        rows={durationRows}
-      />
-      <ObservationCard
-        title={t('gonadotropinDosagesTitle', 'Gonadotropin Dosages')}
-        icon={Chemistry}
-        rows={gonadotropinRows}
-      />
-      <ObservationCard
-        title={t('cetrotideAdministrationTitle', 'Cetrotide Administration')}
-        icon={Medication}
-        rows={cetrotideRows}
-      />
-      <ObservationCard
-        title={t('doseOfDrugsRemarksTitle', 'Clinical Notes & Remarks')}
-        icon={Medication}
-        rows={remarksRows}
-      />
-    </div>
+    <ObservationCard
+      title={t('aiimsDoseOfDrugsTitle', 'Dose of Drugs')}
+      icon={Medication}
+      rows={allRows}
+    />
   );
 };
