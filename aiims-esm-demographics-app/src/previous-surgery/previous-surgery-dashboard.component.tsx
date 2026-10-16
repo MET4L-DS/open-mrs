@@ -6,7 +6,9 @@ import {
 } from '../constants';
 import { usePreviousSurgery } from './previous-surgery.resource';
 import { PreviousSurgeryCard } from './previous-surgery-card.component';
+import { PreviousHysteroscopyCard } from './previous-hysteroscopy-card.component';
 import { FormDashboardShell } from '../shared/components';
+import styles from '../shared/styles/shared.scss';
 
 interface PreviousSurgeryDashboardProps {
   patientUuid?: string;
@@ -50,7 +52,10 @@ export default function PreviousSurgeryDashboard({
       recordButtonText={t('recordPreviousSurgery', 'Record Previous Surgery')}
       updateButtonText={t('updatePreviousSurgery', 'Update Previous Surgery')}
     >
-      <PreviousSurgeryCard data={previousSurgeryData} />
+      <div className={styles.cardContainer}>
+        <PreviousSurgeryCard data={previousSurgeryData} />
+        <PreviousHysteroscopyCard data={previousSurgeryData} />
+      </div>
     </FormDashboardShell>
   );
 }

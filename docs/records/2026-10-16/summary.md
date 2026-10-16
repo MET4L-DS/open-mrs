@@ -115,7 +115,7 @@
 ### 3 Standup Talking Points for the Principal Investigator (PI)
 1. *"We successfully realigned Form 13 into a comprehensive 55-field Female Transvaginal Ultrasound sheet, moving all pelvic ultrasound imaging out of the surgical procedure form."*
 2. *"Form 15 is now strictly focused on Hysteroscopy findings, cavity dimensions, and operative interventions, matching hospital OT workflow."*
-3. *"We implemented question-level conditional logic across all 11 pathology groups, reducing visual clutter on normal scans while ensuring 100% of measurements remain available when findings are present."*
+3. *"We integrated full Hysteroscopy findings, dimensions, and operative procedures into Form 9 (Previous Surgery) under an Option B dual-card dashboard architecture, complete with IVF Summary cross-form resilience."*
 
 ---
 
@@ -127,6 +127,6 @@
 | **Active Concept Definitions** | **361 / 361 Verified** | `validate_concepts.py` (361 active) |
 | **i18n Translation Health** | **657 keys referenced, 0 missing** | `audit-i18n.ts` (100% health) |
 | **TypeScript Compilation** | **0 Errors (`noImplicitAny: true`)** | `tsc --noEmit` |
-| **Unit Test Suite** | **100 / 100 Tests Passing** | `vitest` (38 test files) |
-| **Deployment Artifact** | **Version `1.0.92` Active** | HTTP 200 from live Nginx importmap probe |
-| **E2E Smoke Robot** | **Passed in 3.16s (Surg) / 4.15s (TVS) / 3.28s (Summary)** | Headless Chromium Playwright session |
+| **Unit Test Suite** | **102 / 102 Tests Passing** | `vitest` (39 test files) |
+| **Deployment Artifact** | **Version `1.0.93` Active** | HTTP 200 from live Nginx importmap probe |
+| **E2E Smoke Robot** | **Passed in 2.98s (Prev Surgery) / 2.91s (IVF Summary)** | Headless Chromium Playwright session |

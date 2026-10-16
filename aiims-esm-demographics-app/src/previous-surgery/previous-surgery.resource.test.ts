@@ -101,6 +101,43 @@ describe('usePreviousSurgery hook', () => {
           concept: { uuid: CONCEPTS.tubalCannulationLaterality, display: 'Tubal Cannulation Laterality' },
           value: { uuid: CONCEPTS.lateralityLeft, display: 'Left' },
         },
+        // Hysteroscopy Obs
+        {
+          uuid: 'obs-hyst-ostia',
+          obsDatetime: '2026-09-29T11:54:00.000Z',
+          concept: { uuid: CONCEPTS.hysteroscopyOstia, display: 'Ostia' },
+          value: 'Normal',
+        },
+        {
+          uuid: 'obs-hyst-endo',
+          obsDatetime: '2026-09-29T11:54:00.000Z',
+          concept: { uuid: CONCEPTS.hysteroscopyEndometrium, display: 'Endometrium' },
+          value: 'Normal',
+        },
+        {
+          uuid: 'obs-hyst-cavity',
+          obsDatetime: '2026-09-29T11:54:00.000Z',
+          concept: { uuid: CONCEPTS.hysteroscopyEndometrialCavity, display: 'Endometrial Cavity' },
+          value: 'Adequate',
+        },
+        {
+          uuid: 'obs-hyst-cervical',
+          obsDatetime: '2026-09-29T11:54:00.000Z',
+          concept: { uuid: CONCEPTS.hysteroscopyCervicalCanalDirection, display: 'Cervical Canal Direction' },
+          value: 'Straight',
+        },
+        {
+          uuid: 'obs-hyst-dim',
+          obsDatetime: '2026-09-29T11:54:00.000Z',
+          concept: { uuid: CONCEPTS.hysteroscopyDimensions, display: 'Hysteroscopy Dimensions' },
+          value: '4.5 x 2.2 cm',
+        },
+        {
+          uuid: 'obs-hyst-op',
+          obsDatetime: '2026-09-29T11:54:00.000Z',
+          concept: { uuid: CONCEPTS.operativeHysteroscopy, display: 'Operative Hysteroscopy' },
+          value: 'Septal resection',
+        },
       ],
     };
 
@@ -135,5 +172,13 @@ describe('usePreviousSurgery hook', () => {
     expect(result.current.previousSurgeryData.tubalSurgeries).toEqual([
       { procedure: 'Tubal cannulation', laterality: 'Left' },
     ]);
+
+    // Verify Hysteroscopy obs extraction
+    expect(result.current.previousSurgeryData.hysteroscopyOstia).toBe('Normal');
+    expect(result.current.previousSurgeryData.hysteroscopyEndometrium).toBe('Normal');
+    expect(result.current.previousSurgeryData.hysteroscopyEndometrialCavity).toBe('Adequate');
+    expect(result.current.previousSurgeryData.hysteroscopyCervicalCanalDirection).toBe('Straight');
+    expect(result.current.previousSurgeryData.hysteroscopyDimensions).toBe('4.5 x 2.2 cm');
+    expect(result.current.previousSurgeryData.operativeHysteroscopy).toBe('Septal resection');
   });
 });

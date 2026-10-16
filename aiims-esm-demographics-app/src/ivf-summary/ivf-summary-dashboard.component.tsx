@@ -139,15 +139,21 @@ export default function IvfSummaryDashboard({
     },
     {
       label: t('hysteroscopyIntervention', 'Hysteroscopy & Interventions'),
-      value: getFormObs(AIIMS_FEMALE_SURGICAL_PROCEDURE_FORM_UUID, CONCEPTS.operativeHysteroscopy)
-        ? `${getFormObs(AIIMS_FEMALE_SURGICAL_PROCEDURE_FORM_UUID, CONCEPTS.operativeHysteroscopy)}${
-            getFormObs(AIIMS_FEMALE_SURGICAL_PROCEDURE_FORM_UUID, CONCEPTS.hysteroscopyEndometrialCavity)
-              ? ` (Cavity: ${getFormObs(AIIMS_FEMALE_SURGICAL_PROCEDURE_FORM_UUID, CONCEPTS.hysteroscopyEndometrialCavity)})`
-              : ''
-          }`
-        : getFormObs(AIIMS_FEMALE_SURGICAL_PROCEDURE_FORM_UUID, CONCEPTS.hysteroscopyEndometrialCavity)
-        ? `Cavity: ${getFormObs(AIIMS_FEMALE_SURGICAL_PROCEDURE_FORM_UUID, CONCEPTS.hysteroscopyEndometrialCavity)}`
-        : '—',
+      value: (() => {
+        const operative =
+          getFormObs(AIIMS_FEMALE_SURGICAL_PROCEDURE_FORM_UUID, CONCEPTS.operativeHysteroscopy) ||
+          getFormObs(AIIMS_PREV_SURGERY_FORM_UUID, CONCEPTS.operativeHysteroscopy);
+        const cavity =
+          getFormObs(AIIMS_FEMALE_SURGICAL_PROCEDURE_FORM_UUID, CONCEPTS.hysteroscopyEndometrialCavity) ||
+          getFormObs(AIIMS_PREV_SURGERY_FORM_UUID, CONCEPTS.hysteroscopyEndometrialCavity);
+        if (operative) {
+          return cavity ? `${operative} (Cavity: ${cavity})` : operative;
+        }
+        if (cavity) {
+          return `Cavity: ${cavity}`;
+        }
+        return '—';
+      })(),
     },
   ];
 

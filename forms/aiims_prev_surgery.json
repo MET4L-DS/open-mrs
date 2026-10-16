@@ -594,6 +594,242 @@
           ]
         },
         {
+          "label": "Hysteroscopy Findings",
+          "isExpanded": true,
+          "questions": [
+            {
+              "label": "Ostia",
+              "type": "obs",
+              "id": "prev_hysteroscopy_ostia",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "select",
+                "concept": "c0010001-0000-0000-0000-000000000116",
+                "answers": [
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000901",
+                    "label": "Deep seated"
+                  },
+                  {
+                    "concept": "1115AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Normal"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000902",
+                    "label": "Peri-ostial adhesion"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000903",
+                    "label": "Right ostia not seen"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000904",
+                    "label": "Left ostia not seen"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000905",
+                    "label": "Both ostia not seen"
+                  }
+                ]
+              },
+              "hide": {
+                "hideWhenExpression": "!prev_surgery || prev_surgery !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              }
+            },
+            {
+              "label": "Endometrium",
+              "type": "obs",
+              "id": "prev_hysteroscopy_endometrium",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "select",
+                "concept": "c0010001-0000-0000-0000-000000000117",
+                "answers": [
+                  {
+                    "concept": "1115AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Normal"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000906",
+                    "label": "Pale"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000907",
+                    "label": "Micropolyps"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000908",
+                    "label": "Thin"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000909",
+                    "label": "Congested"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000910",
+                    "label": "Fibrosis"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000911",
+                    "label": "Polypoidal"
+                  }
+                ]
+              },
+              "hide": {
+                "hideWhenExpression": "!prev_surgery || prev_surgery !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              }
+            },
+            {
+              "label": "Endometrial Cavity",
+              "type": "obs",
+              "id": "prev_hysteroscopy_endometrial_cavity",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "select",
+                "concept": "c0010001-0000-0000-0000-000000000118",
+                "answers": [
+                  {
+                    "concept": "1115AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Normal"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000912",
+                    "label": "Polyp"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000913",
+                    "label": "Septum"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000914",
+                    "label": "Adhesion"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000915",
+                    "label": "Fibroid"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000916",
+                    "label": "Subseptate"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000917",
+                    "label": "Tubular"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000918",
+                    "label": "Adequate"
+                  }
+                ]
+              },
+              "hide": {
+                "hideWhenExpression": "!prev_surgery || prev_surgery !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              }
+            },
+            {
+              "label": "Cervical Canal Direction",
+              "type": "obs",
+              "id": "prev_cervical_canal_direction",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "select",
+                "concept": "c0010001-0000-0000-0000-000000000119",
+                "answers": [
+                  {
+                    "concept": "1115AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Normal"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000919",
+                    "label": "Straight"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000920",
+                    "label": "Towards left"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000921",
+                    "label": "Towards right"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000922",
+                    "label": "Adhesions"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000923",
+                    "label": "Anteverted"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000924",
+                    "label": "Retroverted"
+                  }
+                ]
+              },
+              "hide": {
+                "hideWhenExpression": "!prev_surgery || prev_surgery !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              }
+            },
+            {
+              "label": "Hysteroscopy Dimensions (cm)",
+              "type": "obs",
+              "id": "prev_hysteroscopy_dimensions",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "text",
+                "concept": "c0010001-0000-0000-0000-000000000120"
+              },
+              "hide": {
+                "hideWhenExpression": "!prev_surgery || prev_surgery !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              }
+            }
+          ]
+        },
+        {
+          "label": "Operative Hysteroscopy",
+          "isExpanded": true,
+          "questions": [
+            {
+              "label": "Operative Hysteroscopy",
+              "type": "obs",
+              "id": "prev_operative_hysteroscopy",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "select",
+                "concept": "c0010001-0000-0000-0000-000000000121",
+                "answers": [
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000925",
+                    "label": "Uterine Polypectomy"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000926",
+                    "label": "Metroplasty"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000927",
+                    "label": "Septal resection"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000928",
+                    "label": "Myomectomy"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000929",
+                    "label": "Adhesiolysis"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000930",
+                    "label": "Platelet Rich Plasma (PRP)/Stem cell instillation"
+                  }
+                ]
+              },
+              "hide": {
+                "hideWhenExpression": "!prev_surgery || prev_surgery !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              }
+            }
+          ]
+        },
+        {
           "label": "Intra-operative Findings & Remarks",
           "isExpanded": true,
           "questions": [

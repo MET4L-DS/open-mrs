@@ -21,6 +21,14 @@ export interface AiimsPreviousSurgeryData {
   peritonealSurgeries: string[];
   intraoperativeFindings?: string;
   previousSurgeryOtherNotes?: string;
+
+  // Hysteroscopy Findings & Interventions
+  hysteroscopyOstia?: string;
+  hysteroscopyEndometrium?: string;
+  hysteroscopyEndometrialCavity?: string;
+  hysteroscopyCervicalCanalDirection?: string;
+  hysteroscopyDimensions?: string;
+  operativeHysteroscopy?: string;
 }
 
 export const initialAiimsPreviousSurgeryData: Readonly<AiimsPreviousSurgeryData> = Object.freeze({
@@ -185,6 +193,12 @@ export function usePreviousSurgery(
     peritonealSurgeries: getObsValues(CONCEPTS.peritonealSurgeries),
     intraoperativeFindings: getOptionalObsValue(CONCEPTS.intraoperativeFindings),
     previousSurgeryOtherNotes: getOptionalObsValue(CONCEPTS.previousSurgeryOtherNotes),
+    hysteroscopyOstia: getOptionalObsValue(CONCEPTS.hysteroscopyOstia),
+    hysteroscopyEndometrium: getOptionalObsValue(CONCEPTS.hysteroscopyEndometrium),
+    hysteroscopyEndometrialCavity: getOptionalObsValue(CONCEPTS.hysteroscopyEndometrialCavity),
+    hysteroscopyCervicalCanalDirection: getOptionalObsValue(CONCEPTS.hysteroscopyCervicalCanalDirection),
+    hysteroscopyDimensions: getOptionalObsValue(CONCEPTS.hysteroscopyDimensions),
+    operativeHysteroscopy: getOptionalObsValue(CONCEPTS.operativeHysteroscopy),
   };
 
   return {
