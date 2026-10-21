@@ -25,7 +25,7 @@ describe('PreviousSurgeryCard', () => {
   it('renders card title and placeholder when empty', () => {
     render(<PreviousSurgeryCard data={initialAiimsPreviousSurgeryData} />);
 
-    expect(screen.getByText('Previous Surgery')).toBeInTheDocument();
+    expect(screen.getByText('Previous Fertility Enhancing Surgery')).toBeInTheDocument();
     expect(screen.getByText('Previous Surgery Performed')).toBeInTheDocument();
     expect(screen.getByText('—')).toBeInTheDocument();
   });

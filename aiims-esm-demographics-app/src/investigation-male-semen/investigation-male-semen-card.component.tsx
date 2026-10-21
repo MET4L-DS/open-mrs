@@ -70,14 +70,6 @@ export const InvestigationMaleSemenCard: React.FC<InvestigationMaleSemenCardProp
       emptyPlaceholder: '—',
     });
 
-    // Remarks
-    list.push({
-      id: 'investigation_male_semen_remarks',
-      label: t('maleSemenRemarks', 'Semen Analysis Remarks / Notes'),
-      value: data.investigationMaleSemenRemarks,
-      emptyPlaceholder: '—',
-    });
-
     return list;
   }, [data, t]);
 

@@ -162,7 +162,7 @@ export const PreviousSurgeryCard: React.FC<PreviousSurgeryCardProps> = ({ data }
 
   return (
     <ObservationCard
-      title={t('previousSurgery', 'Previous Surgery')}
+      title={t('previousSurgery', 'Previous Fertility Enhancing Surgery')}
       icon={Cut}
       rows={rows}
     />

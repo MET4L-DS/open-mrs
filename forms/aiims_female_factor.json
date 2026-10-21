@@ -114,9 +114,9 @@
               }
             },
             {
-              "label": "POSEIDON Group",
+              "label": "POSEIDON Criteria Group",
               "type": "obs",
-              "id": "poseidon_group",
+              "id": "poseidon_group_tier",
               "required": "false",
               "questionOptions": {
                 "rendering": "radio",
@@ -124,32 +124,70 @@
                 "answers": [
                   {
                     "concept": "c0010002-0000-0000-0000-000000000323",
-                    "label": "POSEIDON GROUP 1a"
-                  },
-                  {
-                    "concept": "c0010002-0000-0000-0000-000000000324",
-                    "label": "POSEIDON GROUP 1b"
+                    "label": "POSEIDON Group 1 (Age < 35, Adequate Reserve)"
                   },
                   {
                     "concept": "c0010002-0000-0000-0000-000000000325",
-                    "label": "POSEIDON GROUP 2a"
-                  },
-                  {
-                    "concept": "c0010002-0000-0000-0000-000000000326",
-                    "label": "POSEIDON GROUP 2b"
+                    "label": "POSEIDON Group 2 (Age >= 35, Adequate Reserve)"
                   },
                   {
                     "concept": "c0010002-0000-0000-0000-000000000327",
-                    "label": "POSEIDON GROUP 3"
+                    "label": "POSEIDON Group 3 (Age < 35, Poor Reserve - AFC < 5, AMH < 1.2)"
                   },
                   {
                     "concept": "c0010002-0000-0000-0000-000000000328",
-                    "label": "POSEIDON GROUP 4"
+                    "label": "POSEIDON Group 4 (Age >= 35, Poor Reserve - AFC < 5, AMH < 1.2)"
                   }
                 ]
               },
               "hide": {
                 "hideWhenExpression": "!female_factors || !female_factors.includes('c0010002-0000-0000-0000-000000000302') || dor_details !== 'c0010002-0000-0000-0000-000000000322'"
+              }
+            },
+            {
+              "label": "POSEIDON Group 1 Subgroup",
+              "type": "obs",
+              "id": "poseidon_group_1_subgroup",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "c0010001-0000-0000-0000-000000000033",
+                "answers": [
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000323",
+                    "label": "POSEIDON GROUP 1a (< 4 oocytes retrieved)"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000324",
+                    "label": "POSEIDON GROUP 1b (4-9 oocytes retrieved)"
+                  }
+                ]
+              },
+              "hide": {
+                "hideWhenExpression": "!female_factors || !female_factors.includes('c0010002-0000-0000-0000-000000000302') || dor_details !== 'c0010002-0000-0000-0000-000000000322' || (poseidon_group_tier !== 'c0010002-0000-0000-0000-000000000323' && poseidon_group_tier !== 'c0010002-0000-0000-0000-000000000324')"
+              }
+            },
+            {
+              "label": "POSEIDON Group 2 Subgroup",
+              "type": "obs",
+              "id": "poseidon_group_2_subgroup",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "c0010001-0000-0000-0000-000000000033",
+                "answers": [
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000325",
+                    "label": "POSEIDON GROUP 2a (< 4 oocytes retrieved)"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000326",
+                    "label": "POSEIDON GROUP 2b (4-9 oocytes retrieved)"
+                  }
+                ]
+              },
+              "hide": {
+                "hideWhenExpression": "!female_factors || !female_factors.includes('c0010002-0000-0000-0000-000000000302') || dor_details !== 'c0010002-0000-0000-0000-000000000322' || (poseidon_group_tier !== 'c0010002-0000-0000-0000-000000000325' && poseidon_group_tier !== 'c0010002-0000-0000-0000-000000000326')"
               }
             },
             {

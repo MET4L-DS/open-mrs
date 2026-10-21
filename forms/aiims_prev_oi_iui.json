@@ -59,7 +59,22 @@
                   {
                     "concept": "c0010002-0000-0000-0000-000000000504",
                     "label": "Human menopausal gonadotropin + Clomiphene citrate"
-                  },
+                  }
+                ]
+              },
+              "hide": {
+                "hideWhenExpression": "!prev_oi || prev_oi !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+              }
+            },
+            {
+              "label": "Multiple OVI",
+              "type": "obs",
+              "id": "multiple_ovi",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "checkbox",
+                "concept": "c0010001-0000-0000-0000-000000000046",
+                "answers": [
                   {
                     "concept": "c0010002-0000-0000-0000-000000000505",
                     "label": "Multiple OVI"
@@ -307,18 +322,6 @@
               },
               "hide": {
                 "hideWhenExpression": "!failed_ivf || failed_ivf !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
-              }
-            },
-            {
-              "label": "Previous ART Treatment Clinical Notes",
-              "type": "obs",
-              "id": "previous_art_notes",
-              "required": "false",
-              "questionOptions": {
-                "rendering": "textarea",
-                "concept": "c0010001-0000-0000-0000-000000000057",
-                "rows": 4,
-                "placeholder": "Enter details of prior stimulation protocols, egg retrieval outcomes, embryo transfer history, or complications..."
               }
             }
           ]

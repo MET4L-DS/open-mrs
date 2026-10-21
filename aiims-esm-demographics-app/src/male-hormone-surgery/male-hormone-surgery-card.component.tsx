@@ -24,7 +24,7 @@ export const MaleHormoneSurgeryCard: React.FC<MaleHormoneSurgeryCardProps> = ({ 
         unit: data.testosteroneHusband ? t('ngPerDl', 'ng/dL') : undefined,
       },
       {
-        label: t('testicularBiopsy', 'Testicular Biopsy Report / Notes'),
+        label: t('testicularBiopsy', 'Testicular Biopsy Findings'),
         value: data.testicularBiopsy,
       },
     ];

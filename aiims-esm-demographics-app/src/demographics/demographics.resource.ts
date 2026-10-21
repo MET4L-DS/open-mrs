@@ -20,6 +20,7 @@ export interface AiimsDemographicsData {
   husbandPhone?: string;
   husbandEducation?: string;
   husbandOccupation?: string;
+  marriedForYears?: string;
   socioeconomicStatus?: string;
 }
 
@@ -83,6 +84,7 @@ export function useAiimsDemographics(
     husbandPhone: getObsValue(CONCEPTS.husbandPhone),
     husbandEducation,
     husbandOccupation: getObsValue(CONCEPTS.occupationHusband),
+    marriedForYears: getObsValue(CONCEPTS.marriedForYears),
     socioeconomicStatus: getObsValue(CONCEPTS.socioeconomicStatus),
   };
 

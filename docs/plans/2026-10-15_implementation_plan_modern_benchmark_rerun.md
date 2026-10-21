@@ -1,83 +1,184 @@
-# Execution Plan: Clean Re-Run Benchmark of Modern Workflow (v2.0)
+# Benchmark Execution Plan: Controlled Comparative Re-Run (Modern vs. Legacy Workflow)
 
-**Date Planned**: Post Form 33 Delivery  
-**Target Form**: AIIMS Form 33 — "Post-InVitro Fertilisation Investigation"  
-**Goal**: Measure the pure, unperturbed execution speed and latency of the Modern Workflow (v2.0) by eliminating host-level Windows subprocess contention and Docker restart lags experienced during the first benchmark run.
-
----
-
-## 1. Why a Clean Re-Run is Required
-
-During the first live run of the Modern Workflow on 2026-10-15:
-- **Net Implementation Time**: **8m 30s** (Active coding, CLI scaffolding, schema validation, and headless test).
-- **Observed Friction (Gross Wall-Clock Time: 26m 55s)**:
-  1. **Windows Subprocess Named-Pipe Deadlock (~3 min stall)**: `setup_aiims_concepts.py` used `subprocess.run(..., input=sql_script, shell=True)` which hung on Windows stdin buffering against `docker exec -i`.
-  2. **Zombie Background Process**: A lingering PowerShell one-liner (`task-13624`) remained stuck open for hours, causing chat messages to queue and inflating background resource contention.
-  3. **Frontend Container Health Check Delay (~4 min stall)**: Restarting the container triggered a slow Tomcat/Gateway handshake.
-
-**Objective of Clean Re-Run**: Run the entire sequence end-to-end under controlled, healthy container conditions with automated stopwatch timers at every stage to record verified, uninhibited timings.
+**Target Clinical Specification**: AIIMS Fresh Embryo Transfer Details Sheet  
+**Specification Source**: [`csv/aiims_ivf_04 copy - freshET_details.csv`](file:///c:/Met4l.DSCode/Projects/open-mrs/csv/aiims_ivf_04%20copy%20-%20freshET_details.csv)  
+**Implementation Target**: Two Isolated Temporary Dummy Forms:  
+1. **Form A (Modern Workflow v2.0)**: `AIIMS Visit: Fresh ET Dummy Modern` (`fresh-et-dummy-modern`)  
+2. **Form B (Legacy Workflow Baseline)**: `AIIMS Visit: Fresh ET Dummy Legacy` (`fresh-et-dummy-legacy`)  
+**Status**: Revised & Hardened Plan (Awaiting Execution Approval)
 
 ---
 
-## 2. Pre-Flight Hardening (Zero-Friction Safeguards)
+## 1. Executive Summary & Why a Controlled Re-Run is Required
 
-Before triggering the re-run benchmark, the following pre-flight optimizations will be applied:
+In the initial benchmark run on 2026-10-15 (conducted on Form 33 — Post-IVF):
+- **Legacy Workflow** took **32m 45s** (including 12m 33s diagnosing silent route drift in decoupled `routes.json`).
+- **Modern Workflow (v2.0)** completed in **8m 30s** Net active time, but suffered from **26m 55s** Gross wall-clock time due to two external host-level infrastructure friction points:
+  1. A Windows subprocess pipe buffer deadlock during Python-to-Docker SQL execution (`shell=True` with `input=...`).
+  2. A 4-minute container restart delay caused by Tomcat/Gateway synchronization.
 
-1. **SQL Direct File Injection (No stdin piping)**:
-   - Ensure `setup_aiims_concepts.py` and `register_aiims_concepts.sql` execute strictly via direct container volume copies (`docker cp ... /tmp/` followed by `docker exec openmrs-distro-referenceapplication-db-1 mariadb -u ... -e "source /tmp/..."`), avoiding Windows stdin pipe buffers entirely.
-2. **Clean Process State**:
-   - Verify `manage_task list` shows zero background tasks.
-   - Clean Docker container logs to ensure zero table lock contention.
-3. **Hot-Module Reloading (No Unnecessary Container Restarts)**:
-   - Use direct file replacement in `/usr/share/nginx/html/openmrs-esm-aiims-demographics-app-1.0.82/` with graceful `nginx -s reload` instead of full `docker restart`, eliminating the 4-minute Tomcat handshake lag.
+### Lessons from Previous Re-Run Attempts:
+- **Critical Requirement**: A genuine benchmark cannot simply execute build/deploy scripts against pre-existing codebase files. It **must measure the full end-to-end development lifecycle from scratch**, including:
+  - Concept modeling and database registration
+  - AMPATH JSON schema authoring and publishing
+  - Microfrontend scaffolding and route registration
+  - Feature component coding (`resource.ts`, `card.component.tsx`, `dashboard.component.tsx`)
+  - Localization (`en.json`) and translation health auditing
+  - Pre-flight quality gate verification
+  - Build, hot deployment, and end-to-end functional verification
 
 ---
 
-## 3. Re-Run Benchmark Protocol & Telemetry
+## 2. Benchmark Architecture: Isolated Temporary Dummy Forms
 
-The benchmark will be executed using a standardized high-resolution Python timer script (`scripts/benchmark_modern_runner.py` or equivalent CLI runner) tracking the exact elapsed seconds for each phase:
+To prevent any mutation, collision, or regression against the existing production Form 31 (`Fresh Embryo Transfer Details`), the benchmark will implement two isolated, temporary dummy forms:
+
+| Configuration Parameter | Form A: Modern Workflow (v2.0) | Form B: Legacy Workflow (Baseline) |
+| :--- | :--- | :--- |
+| **Form Display Name** | `AIIMS Visit: Fresh ET Dummy Modern` | `AIIMS Visit: Fresh ET Dummy Legacy` |
+| **Registry Key** | `fresh-et-dummy-modern` | `fresh-et-dummy-legacy` |
+| **Form UUID** | `e0000001-0000-0000-0000-000000000001` | `e0000001-0000-0000-0000-000000000002` |
+| **CLOB Schema UUID** | `e0000002-0000-0000-0000-000000000001` | `e0000002-0000-0000-0000-000000000002` |
+| **Schema File** | `forms/aiims_fresh_et_dummy_modern.json` | `forms/aiims_fresh_et_dummy_legacy.json` |
+| **Frontend Directory** | `src/fresh-et-dummy-modern/` | `src/fresh-et-dummy-legacy/` |
+| **Route Slot** | `patient-chart-dashboard-slot` (order: 998) | `patient-chart-dashboard-slot` (order: 999) |
+| **Scaffolding Tool** | Scaffolder CLI (`npm run create-form`) | Manual creation of 5 files & manual wiring |
+| **Route Sync Method** | Single-sourced auto-derivation (`generate-routes`) | Manual edits to `routes.json` & `index.ts` |
+| **Quality Armor** | Automated 4-tier pre-flight (`npm run pre-flight`) | Manual `tsc` and `vitest` (no schema/i18n gates) |
+| **Verification Method**| Automated headless Playwright robot (`test:e2e`) | Manual browser clicking / route verification |
+
+---
+
+## 3. Pre-Flight Hardening (Zero-Friction Safeguards)
+
+Before starting the stopwatch for either workflow, the following safeguards must be verified:
+
+1. **Direct SQL Volume Injection (No Windows stdin pipe deadlocks)**:
+   - All SQL executions must write to a temporary file (`/tmp/temp_exec.sql`) and be executed inside the container via `source /tmp/temp_exec.sql;`, bypassing Windows stdin pipe buffers entirely.
+2. **Clean Process Environment**:
+   - Verify `manage_task list` returns zero running background tasks.
+   - Verify MariaDB has zero active row locks or hanging queries (`SHOW FULL PROCESSLIST;`).
+3. **Hot-Module Reloading (No Container Restarts)**:
+   - Use direct bundle directory injection into `/usr/share/nginx/html/` with graceful `nginx -s reload`, eliminating the 4-minute Tomcat handshake lag.
+4. **Deterministic High-Resolution Telemetry**:
+   - High-resolution stopwatch timers (`time.perf_counter()`) measuring each distinct phase.
+
+---
+
+## 4. End-to-End Metrics & Measurement Protocol
+
+The benchmark measures two distinct categories of effort:
+- **Active Authoring Time ($T_{author}$)**: Hands-on developer effort required to author schemas, type code, scaffold modules, configure routes, and write tests.
+- **Automated Pipeline Time ($T_{pipeline}$)**: Time spent by automated CLI tools, validators, compilers, deployment scripts, and test runners.
+
+$$\text{Total Turnaround Time } (T_{net}) = T_{author} + T_{pipeline}$$
+
+### Granular Stage-by-Stage Breakdown:
 
 ```mermaid
 graph TD
-    A[Start Stopwatch T0] --> B[Phase 1: Concept DB Migration & Validation]
-    B --> C[Phase 2: AMPATH Schema Publishing & Validation]
-    C --> D[Phase 3: CLI Scaffolding & Route Generation]
-    D --> E[Phase 4: Component Implementation & i18n Audit]
-    E --> F[Phase 5: Pre-Flight 4-Tier Gate Check]
-    F --> G[Phase 6: Rspack Bundle & Hot Nginx Reload]
-    G --> H[Phase 7: Headless Playwright Smoke Robot]
-    H --> I[Stop Stopwatch T_final & Generate Audit Diff]
+    subgraph Modern_Workflow ["Modern Workflow (v2.0)"]
+        M1["M1: Concept DB Setup & Linking"] --> M2["M2: AMPATH Schema Authoring & Publish"]
+        M2 --> M3["M3: Scaffolder CLI (npm run create-form)"]
+        M3 --> M4["M4: Component & Resource Coding + i18n"]
+        M4 --> M5["M5: Pre-Flight Armor (validate:forms, concepts, i18n, tsc)"]
+        M5 --> M6["M6: Production Build & Hot Container Deploy"]
+        M6 --> M7["M7: Headless Playwright Smoke Test Robot"]
+    end
+
+    subgraph Legacy_Workflow ["Legacy Workflow (Baseline)"]
+        L1["L1: Manual Concept SQL & DB Setup"] --> L2["L2: Hand-Authored Schema & Publishing"]
+        L3["L3: Manual File Creation (5 files) & Constants Wiring"]
+        L2 --> L3
+        L3 --> L4["L4: Manual Component Coding, en.json, & index.ts wiring"]
+        L4 --> L5["L5: Manual tsc & Vitest Execution"]
+        L5 --> L6["L6: Build & Manual Container Deployment"]
+        L6 --> L7["L7: Manual Browser Testing & Route Drift Debugging"]
+    end
 ```
 
-### Measured Stages & Target Times:
+---
 
-| Stage | Activity | Prior Net Time | Target Clean Time | Automated Verification Gate |
-| :--- | :--- | :---: | :---: | :--- |
-| **Stage 1** | Concept Migration (`setup_aiims_concepts.py`) | 2m 15s | **< 45s** | `validate:concepts` (358 concepts in ~14s) |
-| **Stage 2** | AMPATH Schema Publishing | 1m 40s | **< 30s** | `validate:forms` (33 forms in ~14s) |
-| **Stage 3** | Scaffolding CLI (`npm run create-form`) | 45s | **< 20s** | Auto-generates 5 files & updates `FORM_REGISTRY` |
-| **Stage 4** | Component & Resource Implementation | 2m 20s | **< 2m 00s** | `audit:i18n` (0 missing keys) |
-| **Stage 5** | Pre-Flight 4-Tier Armor (`npm run pre-flight`) | 35s | **< 35s** | Forms + Concepts + i18n + `tsc --noEmit` |
-| **Stage 6** | Rspack Production Compilation & Deploy | 2m 18s | **< 1m 15s** | Nginx hot reload & HTTP 200 `/importmap.json` probe |
-| **Stage 7** | Headless E2E Smoke Test Robot | 2.96s | **< 3s** | Playwright headless browser test passes |
-| **Total** | **End-to-End Modern Turnaround** | **8m 30s** | **< 5m 30s** | **100% automated gate verification** |
+## 5. Sequential Execution Phases & Human Approval Gate
+
+To maintain absolute transparency and control, the execution is divided into two sequential phases with an explicit human-in-the-loop checkpoint:
+
+```mermaid
+stateDiagram-v2
+    [*] --> Phase1_Modern: Start Benchmark
+    Phase1_Modern --> Form1_Report: Implement Form A (Modern v2.0)
+    Form1_Report --> Human_Approval_Gate: Present Form 1 Benchmark Report
+    state Human_Approval_Gate {
+        [*] --> Awaiting_User_Review
+        Awaiting_User_Review --> Approved_To_Proceed: User Approves
+    }
+    Human_Approval_Gate --> Phase2_Legacy: Start Legacy Benchmark
+    Phase2_Legacy --> Form2_Report: Implement Form B (Legacy Baseline)
+    Form2_Report --> Comparative_Audit: Side-by-Side Analysis
+    Comparative_Audit --> Teardown_Cleanup: Full Cleanup Protocol
+    Teardown_Cleanup --> [*]: Restored Clean Workspace
+```
+
+### Phase 1: Modern Workflow v2.0 Implementation (Form A)
+1. **Start Timer $T_0$**.
+2. **M1 — Concept Linking**: Ensure concept bindings for Fresh ET questions are active and linked in MariaDB.
+3. **M2 — AMPATH Schema**: Author `forms/aiims_fresh_et_dummy_modern.json` and publish to MariaDB using `scripts/publish_aiims_form.py` with dummy UUID.
+4. **M3 — Scaffolder CLI**: Execute `npm run create-form -- fresh-et-dummy-modern "AIIMS Visit: Fresh ET Dummy Modern" --uuid=e0000001-0000-0000-0000-000000000001 --icon=EventSchedule`.
+   - *Automates*: Creation of 5 files, `form-uuids.ts`, `form-registry.ts`, `en.json`, and route generation.
+5. **M4 — Feature Implementation**: Populate `fresh-et-dummy-modern.resource.ts` and `fresh-et-dummy-modern-card.component.tsx` with clinical fields from CSV (Fresh ET done, reason not done, embryo day/number/grade, catheter tip blood, remarks). Run `npm run audit:i18n`.
+6. **M5 — Pre-Flight Armor**: Execute `npm run pre-flight` (validates 35 forms, 361 concepts, 100% i18n keys, `tsc --noEmit`).
+7. **M6 — Build & Deploy**: Execute Rspack production build and hot-deploy to Docker container via `scripts/deploy_demographics.py`.
+8. **M7 — Headless Verification**: Execute Playwright headless robot `npm run test:e2e -- --form=aiims-fresh-et-dummy-modern`.
+9. **Stop Timer $T_{final}$** and generate **Form 1 Modern Benchmark Report**.
+10. 🛑 **STOP AND AWAIT USER APPROVAL**: Present report to user and do not touch Legacy workflow until user provides explicit approval.
 
 ---
 
-## 4. Teardown & Reset Procedure (For Isolated Benchmark)
-
-To test the re-run cleanly without residual artifacts:
-1. Temporarily unregister Form 33 in `FORM_REGISTRY` and revert `routes.json` via git stash / branch.
-2. Remove Form 33 schema row and concept rows from MariaDB test instance.
-3. Start the timer, run the modern creation workflow from scratch, and record the telemetry live.
-4. Compare clean results directly against the **32m 45s Legacy Baseline**.
+### Phase 2: Legacy Workflow Baseline Implementation (Form B)
+*(Triggered ONLY after user approval)*
+1. **Start Timer $T_0$**.
+2. **L1 — Concept Linking**: Manually format SQL insert statement for Form B in MariaDB.
+3. **L2 — Hand-Authored Schema**: Manually author `forms/aiims_fresh_et_dummy_legacy.json` and publish via CLI.
+4. **L3 — Manual Scaffolding**: Manually create folder `src/fresh-et-dummy-legacy/` and 5 files (`resource.ts`, `card.component.tsx`, `dashboard.component.tsx`, `test.tsx`, `index.ts`). Manually register UUID in `src/config/form-uuids.ts` and `src/constants.ts`.
+5. **L4 — Manual Route & Translation Wiring**:
+   - Manually edit `src/routes.json` to register dashboard extension and dashboard link extension in `patient-chart-dashboard-slot`.
+   - Manually export Single-SPA lifecycles in `src/index.ts`.
+   - Manually append 15+ translation keys into `translations/en.json`.
+6. **L5 — Manual Quality Check**: Run manual `npm run typescript` and `npm run test`.
+7. **L6 — Build & Deployment**: Run `npm run build` and hot-deploy bundle.
+8. **L7 — Manual Browser Verification & Route Diagnostics**: Test in browser; if route drift occurs (due to manual `routes.json` decoupling), diagnose and apply legacy route synchronization.
+9. **Stop Timer $T_{final}$** and generate **Side-by-Side Comparative Audit Report**.
 
 ---
 
-## 5. Deliverables
+### Phase 3: Complete Teardown & Workspace Cleanup Protocol
+After both reports are accepted:
+1. **Unregister Dummy Forms in MariaDB**:
+   ```sql
+   DELETE FROM form_resource WHERE form_id IN (SELECT form_id FROM form WHERE uuid IN ('e0000001-0000-0000-0000-000000000001', 'e0000001-0000-0000-0000-000000000002'));
+   DELETE FROM clob_datatype_storage WHERE uuid IN ('e0000002-0000-0000-0000-000000000001', 'e0000002-0000-0000-0000-000000000002');
+   DELETE FROM form WHERE uuid IN ('e0000001-0000-0000-0000-000000000001', 'e0000001-0000-0000-0000-000000000002');
+   ```
+2. **Remove Dummy Schema Files**:
+   - `forms/aiims_fresh_et_dummy_modern.json`
+   - `forms/aiims_fresh_et_dummy_legacy.json`
+3. **Remove Frontend Dummy Packages**:
+   - `src/fresh-et-dummy-modern/`
+   - `src/fresh-et-dummy-legacy/`
+4. **Revert Registries & Translations**:
+   - Remove dummy UUIDs from `src/config/form-uuids.ts` and entries from `src/config/form-registry.ts`.
+   - Re-run `npm run generate-routes` to clean `src/routes.json` and `src/generated-form-extensions.ts`.
+   - Revert dummy keys from `translations/en.json`.
+5. **Re-deploy Pristine Production Bundle**:
+   - Run `npm run deploy:local` to ensure container is running clean production bundle version with 34 standard forms.
+6. **Verify Git Working Tree**:
+   - Run `git status` to confirm 0 residual untracked or modified files.
 
-1. Update `docs/records/benchmark_modern_workflow_audit_report.md` with:
-   - Run 1 (Gross: 26m 55s, Net: 8m 30s, includes Windows pipe incident).
-   - Run 2 (Clean Isolated Run: expected ~5m 30s).
-2. Update `docs/records/benchmark_comparison_audit_report.md` with side-by-side run comparisons.
-3. Archive raw execution logs into `docs/records/2026-10-15/benchmark_rerun_telemetry.log`.
+---
+
+## 6. Deliverables & Documentation
+
+1. **`docs/records/benchmark_modern_workflow_audit_report.md`**: Updated with the true end-to-end Form A execution metrics.
+2. **`docs/records/benchmark_legacy_workflow_audit_report.md`**: Updated with Form B legacy execution metrics.
+3. **`docs/records/benchmark_comparison_audit_report.md`**: Granular side-by-side comparative analysis of Form A vs Form B.
+4. **`docs/records/2026-10-15/benchmark_rerun_telemetry.log`**: Raw timestamped execution log.

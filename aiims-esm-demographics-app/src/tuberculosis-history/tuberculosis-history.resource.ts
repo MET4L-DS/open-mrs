@@ -48,7 +48,8 @@ export function useTuberculosisHistory(
   const tbSiteOther = getOptionalObsValue(CONCEPTS.tbSiteOther);
   const attStartDate = getOptionalObsValue(CONCEPTS.attStartDate);
   const attCount = getOptionalObsValue(CONCEPTS.attCount);
-  const attDuration = getOptionalObsValue(CONCEPTS.attDuration);
+  const attDurationObs = getObsValues(CONCEPTS.attDuration);
+  const attDuration = attDurationObs.length > 0 ? attDurationObs.join(', ') : getOptionalObsValue(CONCEPTS.attDuration);
   const tbClinicalNotes = getOptionalObsValue(CONCEPTS.tbClinicalNotes);
 
   const hasData =

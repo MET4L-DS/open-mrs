@@ -189,6 +189,25 @@
                   }
                 ]
               }
+            },
+            {
+              "label": "Married for (years)",
+              "type": "obs",
+              "id": "married_for_years",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "number",
+                "concept": "c0010001-0000-0000-0000-000000000018",
+                "min": "0",
+                "max": "60"
+              },
+              "validators": [
+                {
+                  "type": "js_expression",
+                  "failsWhenExpression": "myValue && myValue != 0 && (Number(myValue) < 0 || Number(myValue) > 60)",
+                  "message": "Duration of marriage should be between 0 and 60 years."
+                }
+              ]
             }
           ]
         },

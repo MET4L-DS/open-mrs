@@ -32,7 +32,7 @@ export const AIIMS_PREV_OI_IUI_FORM_NAME = 'AIIMS Visit: Previous OI and IUI';
 
 // Form UUID for AIIMS Visit: Previous Surgery
 export const AIIMS_PREV_SURGERY_FORM_UUID = '80930653-7e80-4bfd-9e29-ec37c334d888';
-export const AIIMS_PREV_SURGERY_FORM_NAME = 'AIIMS Visit: Previous Surgery';
+export const AIIMS_PREV_SURGERY_FORM_NAME = 'AIIMS Visit: Previous Fertility Enhancing Surgery';
 
 // Form UUID for AIIMS Visit: Past Medical History
 export const AIIMS_PAST_MEDICAL_HISTORY_FORM_UUID = '80930653-7e80-4bfd-9e29-ec37c334d889';

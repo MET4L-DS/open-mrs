@@ -10,7 +10,6 @@ describe('InfertilityCard', () => {
         data={{
           hasData: true,
           typeOfInfertility: 'Primary infertility',
-          marriedForYears: '5',
           durationOfInfertility: '3',
         }}
       />
@@ -19,8 +18,6 @@ describe('InfertilityCard', () => {
     expect(screen.getByText('Infertility Classification & Timeline')).toBeInTheDocument();
     expect(screen.getByText('Type of Infertility')).toBeInTheDocument();
     expect(screen.getByText('Primary infertility')).toBeInTheDocument();
-    expect(screen.getByText('Married for')).toBeInTheDocument();
-    expect(screen.getByText('5 years')).toBeInTheDocument();
     expect(screen.getByText('Duration of Infertility')).toBeInTheDocument();
     expect(screen.getByText('3 years')).toBeInTheDocument();
   });
@@ -31,7 +28,6 @@ describe('InfertilityCard', () => {
         data={{
           hasData: true,
           typeOfInfertility: 'Secondary infertility',
-          marriedForYears: '',
           durationOfInfertility: undefined,
         }}
       />
@@ -39,6 +35,6 @@ describe('InfertilityCard', () => {
 
     expect(screen.getByText('Secondary infertility')).toBeInTheDocument();
     const dashes = screen.getAllByText('—');
-    expect(dashes.length).toBe(2);
+    expect(dashes.length).toBe(1);
   });
 });

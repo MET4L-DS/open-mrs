@@ -39,18 +39,18 @@ export default function PreviousSurgeryDashboard({
       isLoading={isLoading}
       error={error}
       mutate={mutate}
-      loadingDescription={t('loadingPreviousSurgery', 'Loading Previous Surgery history...')}
+      loadingDescription={t('loadingPreviousSurgery', 'Loading Previous Fertility Enhancing Surgery history...')}
       noRecordedText={t(
         'noRecordedPreviousSurgeryEncounter',
-        'No AIIMS Previous Surgery encounter recorded yet'
+        'No AIIMS Previous Fertility Enhancing Surgery encounter recorded yet'
       )}
-      emptyHeading={t('noPreviousSurgeryHeader', 'No Previous Surgery History Recorded Yet')}
+      emptyHeading={t('noPreviousSurgeryHeader', 'No Previous Fertility Enhancing Surgery History Recorded Yet')}
       emptyDescription={t(
         'noPreviousSurgeryBody',
         'Previous surgical procedures including laparoscopy, laparotomy, and pelvic interventions have not been recorded for this patient yet.'
       )}
-      recordButtonText={t('recordPreviousSurgery', 'Record Previous Surgery')}
-      updateButtonText={t('updatePreviousSurgery', 'Update Previous Surgery')}
+      recordButtonText={t('recordPreviousSurgery', 'Record Previous Fertility Enhancing Surgery')}
+      updateButtonText={t('updatePreviousSurgery', 'Update Previous Fertility Enhancing Surgery')}
     >
       <div className={styles.cardContainer}>
         <PreviousSurgeryCard data={previousSurgeryData} />

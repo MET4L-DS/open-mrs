@@ -57,28 +57,12 @@
                     "label": "Endometrial hyperplasia"
                   },
                   {
-                    "concept": "c0010002-0000-0000-0000-000000000987",
-                    "label": "Endometrial hyperplasia with atypia"
-                  },
-                  {
-                    "concept": "c0010002-0000-0000-0000-000000000988",
-                    "label": "Endometrial hyperplasia without atypia"
-                  },
-                  {
                     "concept": "c0010002-0000-0000-0000-000000000989",
                     "label": "Epitheloid cells"
                   },
                   {
                     "concept": "c0010002-0000-0000-0000-000000000990",
                     "label": "Granuloma"
-                  },
-                  {
-                    "concept": "c0010002-0000-0000-0000-000000000991",
-                    "label": "Granuloma Present"
-                  },
-                  {
-                    "concept": "c0010002-0000-0000-0000-000000000992",
-                    "label": "Granuloma Absent"
                   },
                   {
                     "concept": "c0010002-0000-0000-0000-000000000993",
@@ -89,6 +73,52 @@
                     "label": "Interval phase endometrium"
                   }
                 ]
+              }
+            },
+            {
+              "label": "Endometrial Hyperplasia Type",
+              "type": "obs",
+              "id": "eahpe_hyperplasia_type",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "c0010001-0000-0000-0000-000000000183",
+                "answers": [
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000987",
+                    "label": "with atypia"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000988",
+                    "label": "without atypia"
+                  }
+                ]
+              },
+              "hide": {
+                "hideWhenExpression": "!eahpe_finding || !eahpe_finding.includes('c0010002-0000-0000-0000-000000000986')"
+              }
+            },
+            {
+              "label": "Granuloma Finding",
+              "type": "obs",
+              "id": "eahpe_granuloma_status",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "c0010001-0000-0000-0000-000000000183",
+                "answers": [
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000991",
+                    "label": "Granuloma Present"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000992",
+                    "label": "Granuloma Absent"
+                  }
+                ]
+              },
+              "hide": {
+                "hideWhenExpression": "!eahpe_finding || !eahpe_finding.includes('c0010002-0000-0000-0000-000000000990')"
               }
             },
             {

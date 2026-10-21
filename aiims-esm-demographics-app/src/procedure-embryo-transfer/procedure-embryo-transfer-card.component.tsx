@@ -43,14 +43,6 @@ export const ProcedureEmbryoTransferCard: React.FC<ProcedureEmbryoTransferCardPr
       emptyPlaceholder: '—',
     });
 
-    // Procedure Remarks
-    list.push({
-      id: 'procedure_embryo_transfer_remarks',
-      label: t('procedureEmbryoTransferRemarks', 'Procedure Remarks'),
-      value: data.procedureEmbryoTransferRemarks,
-      emptyPlaceholder: '—',
-    });
-
     return list;
   }, [data, t]);
 

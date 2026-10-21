@@ -21,7 +21,6 @@ describe('ProcedureEmbryoTransferCard', () => {
     expect(screen.getByText('Mock Embryo Transfer')).toBeInTheDocument();
     expect(screen.getByText('Speculum Type')).toBeInTheDocument();
     expect(screen.getByText('Cervical Canal Direction')).toBeInTheDocument();
-    expect(screen.getByText('Procedure Remarks')).toBeInTheDocument();
   });
 
   it('renders recorded procedure embryo transfer observations correctly', () => {
@@ -32,7 +31,6 @@ describe('ProcedureEmbryoTransferCard', () => {
       mockEmbryoTransfer: 'Easy',
       mockEmbryoTransferSpeculum: "With Cusco's",
       embryoTransferCervicalCanalDirection: 'Deviated to Left',
-      procedureEmbryoTransferRemarks: 'Smooth transfer without resistance',
     };
 
     render(<ProcedureEmbryoTransferCard data={data} />);
@@ -40,6 +38,5 @@ describe('ProcedureEmbryoTransferCard', () => {
     expect(screen.getByText("Easy (With Cusco's)")).toBeInTheDocument();
     expect(screen.getByText("With Cusco's")).toBeInTheDocument();
     expect(screen.getByText('Deviated to Left')).toBeInTheDocument();
-    expect(screen.getByText('Smooth transfer without resistance')).toBeInTheDocument();
   });
 });

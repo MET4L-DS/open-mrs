@@ -151,13 +151,6 @@ export const PreviousOiIuiCard: React.FC<PreviousOiIuiCardProps> = ({ data }) =>
       }
     }
 
-    if (data.previousArtNotes) {
-      list.push({
-        label: t('previousArtNotes', 'Previous ART Clinical Notes'),
-        value: data.previousArtNotes,
-      });
-    }
-
     return list;
   }, [data, oiDrugsDisplay, iuiDrugsDisplay, t]);
 

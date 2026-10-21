@@ -40,7 +40,7 @@
               }
             },
             {
-              "label": "Testicular Biopsy Report / Surgical Notes",
+              "label": "Testicular Biopsy Findings",
               "type": "obs",
               "id": "testicular_biopsy",
               "required": "false",

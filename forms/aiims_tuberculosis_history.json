@@ -128,22 +128,14 @@
               ]
             },
             {
-              "label": "Anti-tubercular therapy (Duration)",
+              "label": "Anti-tubercular therapy Duration (Years)",
               "type": "obs",
-              "id": "att_duration",
+              "id": "att_duration_years",
               "required": "false",
               "questionOptions": {
-                "rendering": "radio",
+                "rendering": "select",
                 "concept": "c0010001-0000-0000-0000-000000000105",
                 "answers": [
-                  {
-                    "concept": "c0010002-0000-0000-0000-000000000821",
-                    "label": "6 Months"
-                  },
-                  {
-                    "concept": "c0010002-0000-0000-0000-000000000822",
-                    "label": "9 Months"
-                  },
                   {
                     "concept": "c0010002-0000-0000-0000-000000000823",
                     "label": "1 Year"
@@ -155,18 +147,26 @@
                   {
                     "concept": "c0010002-0000-0000-0000-000000000825",
                     "label": "3 Year"
+                  }
+                ]
+              }
+            },
+            {
+              "label": "Anti-tubercular therapy Duration (Months)",
+              "type": "obs",
+              "id": "att_duration_months",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "select",
+                "concept": "c0010001-0000-0000-0000-000000000105",
+                "answers": [
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000821",
+                    "label": "6 Months"
                   },
                   {
-                    "concept": "c0010002-0000-0000-0000-000000000826",
-                    "label": "Month"
-                  },
-                  {
-                    "concept": "c0010002-0000-0000-0000-000000000827",
-                    "label": "Year"
-                  },
-                  {
-                    "concept": "c0010002-0000-0000-0000-000000000828",
-                    "label": "Other duration"
+                    "concept": "c0010002-0000-0000-0000-000000000822",
+                    "label": "9 Months"
                   }
                 ]
               }

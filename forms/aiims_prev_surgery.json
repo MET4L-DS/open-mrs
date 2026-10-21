@@ -1,6 +1,6 @@
 {
-  "name": "AIIMS Visit: Previous Surgery",
-  "description": "AIIMS Department of Reproductive Medicine & IVF - Previous Surgery Sheet",
+  "name": "AIIMS Visit: Previous Fertility Enhancing Surgery",
+  "description": "AIIMS Department of Reproductive Medicine & IVF - Previous Fertility Enhancing Surgery Sheet",
   "version": "1.0",
   "published": true,
   "retired": false,
@@ -9,7 +9,7 @@
   "referencedForms": [],
   "pages": [
     {
-      "label": "Previous Surgery",
+      "label": "Previous Fertility Enhancing Surgery",
       "sections": [
         {
           "label": "Surgical History & Approach",
@@ -768,7 +768,13 @@
               "hide": {
                 "hideWhenExpression": "!prev_surgery || prev_surgery !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
               }
-            },
+            }
+          ]
+        },
+        {
+          "label": "Operative Hysteroscopy",
+          "isExpanded": true,
+          "questions": [
             {
               "label": "Hysteroscopy Dimensions (cm)",
               "type": "obs",
@@ -781,13 +787,7 @@
               "hide": {
                 "hideWhenExpression": "!prev_surgery || prev_surgery !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
               }
-            }
-          ]
-        },
-        {
-          "label": "Operative Hysteroscopy",
-          "isExpanded": true,
-          "questions": [
+            },
             {
               "label": "Operative Hysteroscopy",
               "type": "obs",

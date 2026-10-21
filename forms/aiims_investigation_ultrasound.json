@@ -287,14 +287,6 @@
                     "label": "Normal"
                   },
                   {
-                    "concept": "c0010002-0000-0000-0000-000000000956",
-                    "label": "3D"
-                  },
-                  {
-                    "concept": "c0010002-0000-0000-0000-000000000957",
-                    "label": "4D"
-                  },
-                  {
                     "concept": "c0010002-0000-0000-0000-000000000958",
                     "label": "Adhesions"
                   },
@@ -303,6 +295,29 @@
                     "label": "Fluid in cavity"
                   }
                 ]
+              }
+            },
+            {
+              "label": "Endometrial Cavity Normal Evaluation",
+              "type": "obs",
+              "id": "tvs_endometrial_cavity_normal_type",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "c0010001-0000-0000-0000-000000000134",
+                "answers": [
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000956",
+                    "label": "3D"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000957",
+                    "label": "4D"
+                  }
+                ]
+              },
+              "hide": {
+                "hideWhenExpression": "!tvs_endometrial_cavity || tvs_endometrial_cavity !== '1115AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
               }
             },
             {
@@ -354,7 +369,7 @@
               }
             },
             {
-              "label": "Septate Angle (degrees)",
+              "label": "Endometrial Cavity Septate Angle (degrees)",
               "type": "obs",
               "id": "septate_angle",
               "required": "false",
@@ -367,7 +382,7 @@
               }
             },
             {
-              "label": "Length of Septum (cm)",
+              "label": "Endometrial Cavity Length of Septum (cm)",
               "type": "obs",
               "id": "length_of_septum",
               "required": "false",

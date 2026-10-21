@@ -119,13 +119,13 @@ export const InvestigationUltrasoundCard: React.FC<InvestigationUltrasoundCardPr
     },
     {
       id: 'septate_angle',
-      label: t('septateAngle', 'Septate Angle'),
+      label: t('endometrialCavitySeptateAngle', 'Endometrial Cavity Septate Angle'),
       value: data.endometrialCavitySeptateAngle !== undefined ? `${data.endometrialCavitySeptateAngle} ${degreesUnit}` : undefined,
       emptyPlaceholder: '—',
     },
     {
       id: 'length_of_septum',
-      label: t('lengthOfSeptum', 'Length of Septum'),
+      label: t('endometrialCavityLengthOfSeptum', 'Endometrial Cavity Length of Septum'),
       value: data.endometrialCavityLengthOfSeptum !== undefined ? `${data.endometrialCavityLengthOfSeptum} ${cmUnit}` : undefined,
       emptyPlaceholder: '—',
     },

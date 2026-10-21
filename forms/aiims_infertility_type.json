@@ -36,25 +36,6 @@
               }
             },
             {
-              "label": "Married for (years)",
-              "type": "obs",
-              "id": "married_for_years",
-              "required": "true",
-              "questionOptions": {
-                "rendering": "number",
-                "concept": "c0010001-0000-0000-0000-000000000018",
-                "min": "0",
-                "max": "60"
-              },
-              "validators": [
-                {
-                  "type": "js_expression",
-                  "failsWhenExpression": "myValue < 0 || myValue > 60",
-                  "message": "Duration of marriage should be between 0 and 60 years."
-                }
-              ]
-            },
-            {
               "label": "Duration of Infertility (years)",
               "type": "obs",
               "id": "duration_of_infertility",

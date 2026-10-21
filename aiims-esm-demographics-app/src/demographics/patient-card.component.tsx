@@ -31,6 +31,11 @@ export const PatientCard: React.FC<PatientCardProps> = ({ demographics, patientN
         { label: t('phone', 'Phone Number'), value: demographics.patientPhone },
         { label: t('education', 'Education'), value: demographics.wifeEducation },
         { label: t('occupation', 'Occupation'), value: demographics.wifeOccupation },
+        {
+          label: t('marriedForYears', 'Married for'),
+          value: demographics.marriedForYears,
+          unit: demographics.marriedForYears ? t('years', 'years') : undefined,
+        },
       ]}
     />
   );

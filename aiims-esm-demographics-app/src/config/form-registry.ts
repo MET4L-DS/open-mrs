@@ -175,7 +175,7 @@ export const FORM_REGISTRY: FormRegistryEntry[] = [
     name: AIIMS_PREV_SURGERY_FORM_NAME,
     path: 'aiims-previous-surgery',
     titleKey: 'aiimsPreviousSurgeryTitle',
-    title: 'Previous Surgery',
+    title: 'Previous Fertility Enhancing Surgery',
     slot: 'aiims-previous-surgery-dashboard-slot',
     icon: Cut,
     order: 1,

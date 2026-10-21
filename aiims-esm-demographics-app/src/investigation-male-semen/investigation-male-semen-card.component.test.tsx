@@ -27,13 +27,8 @@ describe('InvestigationMaleSemenCard', () => {
     expect(screen.getByText('Semen Volume')).toBeInTheDocument();
     expect(screen.getByText('Semen Count')).toBeInTheDocument();
     expect(screen.getByText('Motility Finding')).toBeInTheDocument();
-    expect(
-      screen.getByText('Motility (Total / Progressive)')
-    ).toBeInTheDocument();
+    expect(screen.getByText('Motility (Total / Progressive)')).toBeInTheDocument();
     expect(screen.getByText('Sperm Morphology')).toBeInTheDocument();
-    expect(
-      screen.getByText('Semen Analysis Remarks / Notes')
-    ).toBeInTheDocument();
   });
 
   it('renders recorded semen observations correctly', () => {
@@ -46,7 +41,6 @@ describe('InvestigationMaleSemenCard', () => {
       semenMotilityFinding: ['Few motile'],
       semenMotilityTotalProgressive: '50% / 35%',
       spermMorphology: 'Normal forms 4%',
-      investigationMaleSemenRemarks: 'Normozoospermia',
     };
 
     render(<InvestigationMaleSemenCard data={data} />);
@@ -56,6 +50,5 @@ describe('InvestigationMaleSemenCard', () => {
     expect(screen.getByText('Few motile')).toBeInTheDocument();
     expect(screen.getByText('50% / 35%')).toBeInTheDocument();
     expect(screen.getByText('Normal forms 4%')).toBeInTheDocument();
-    expect(screen.getByText('Normozoospermia')).toBeInTheDocument();
   });
 });

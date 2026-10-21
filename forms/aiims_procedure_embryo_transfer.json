@@ -93,16 +93,6 @@
                   }
                 ]
               }
-            },
-            {
-              "label": "Procedure Remarks",
-              "type": "obs",
-              "id": "procedure_embryo_transfer_remarks",
-              "required": "false",
-              "questionOptions": {
-                "rendering": "textarea",
-                "concept": "c0010001-0000-0000-0000-000000000182"
-              }
             }
           ]
         }

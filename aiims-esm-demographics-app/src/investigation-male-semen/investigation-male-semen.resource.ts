@@ -14,7 +14,6 @@ export interface AiimsInvestigationMaleSemenData {
   semenMotilityFinding: string[];
   semenMotilityTotalProgressive?: string;
   spermMorphology?: string;
-  investigationMaleSemenRemarks?: string;
 }
 
 export const initialAiimsInvestigationMaleSemenData: Readonly<AiimsInvestigationMaleSemenData> =
@@ -56,17 +55,13 @@ export function useInvestigationMaleSemen(
     CONCEPTS.semenMotilityTotalProgressive
   );
   const spermMorphology = getOptionalObsValue(CONCEPTS.spermMorphology);
-  const investigationMaleSemenRemarks = getOptionalObsValue(
-    CONCEPTS.investigationMaleSemenRemarks
-  );
 
   const hasData =
     semenVolume !== undefined ||
     semenCount !== undefined ||
     semenMotilityFinding.length > 0 ||
     semenMotilityTotalProgressive !== undefined ||
-    spermMorphology !== undefined ||
-    investigationMaleSemenRemarks !== undefined;
+    spermMorphology !== undefined;
 
   const maleSemenData: AiimsInvestigationMaleSemenData = {
     hasData,
@@ -77,7 +72,6 @@ export function useInvestigationMaleSemen(
     semenMotilityFinding,
     semenMotilityTotalProgressive,
     spermMorphology,
-    investigationMaleSemenRemarks,
   };
 
   return {

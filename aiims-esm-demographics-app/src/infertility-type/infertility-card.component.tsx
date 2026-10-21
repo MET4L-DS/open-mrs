@@ -32,11 +32,6 @@ export const InfertilityCard: React.FC<InfertilityCardProps> = ({ data }) => {
           value: renderInfertilityType(data.typeOfInfertility),
         },
         {
-          label: t('marriedForYears', 'Married for'),
-          value: data.marriedForYears,
-          unit: data.marriedForYears ? t('years', 'years') : undefined,
-        },
-        {
           label: t('durationOfInfertility', 'Duration of Infertility'),
           value: data.durationOfInfertility,
           unit: data.durationOfInfertility ? t('years', 'years') : undefined,

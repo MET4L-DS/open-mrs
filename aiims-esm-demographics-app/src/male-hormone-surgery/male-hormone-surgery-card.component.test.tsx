@@ -29,7 +29,7 @@ describe('MaleHormoneSurgeryCard', () => {
     expect(screen.getByText('Male Hormone & Surgery Findings')).toBeInTheDocument();
     expect(screen.getByText('Follicle Stimulating Hormone (FSH)')).toBeInTheDocument();
     expect(screen.getByText('Serum Testosterone')).toBeInTheDocument();
-    expect(screen.getByText('Testicular Biopsy Report / Notes')).toBeInTheDocument();
+    expect(screen.getByText('Testicular Biopsy Findings')).toBeInTheDocument();
     expect(screen.getAllByText('—')).toHaveLength(3);
   });
 

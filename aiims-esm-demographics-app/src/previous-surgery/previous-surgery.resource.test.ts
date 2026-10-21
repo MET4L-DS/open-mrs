@@ -18,7 +18,7 @@ describe('usePreviousSurgery hook', () => {
     const mockEncounter = {
       uuid: 'enc-prev-surg-1',
       encounterDatetime: '2026-09-29T11:54:00.000Z',
-      form: { uuid: AIIMS_PREV_SURGERY_FORM_UUID, name: 'AIIMS Visit: Previous Surgery' },
+      form: { uuid: AIIMS_PREV_SURGERY_FORM_UUID, name: 'AIIMS Visit: Previous Fertility Enhancing Surgery' },
       obs: [
         {
           uuid: 'obs-prev-performed',

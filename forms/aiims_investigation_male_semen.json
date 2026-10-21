@@ -74,16 +74,6 @@
                 "rendering": "text",
                 "concept": "c0010001-0000-0000-0000-000000000191"
               }
-            },
-            {
-              "label": "Investigation Male Semen Remarks",
-              "type": "obs",
-              "id": "male_semen_remarks",
-              "required": "false",
-              "questionOptions": {
-                "rendering": "textarea",
-                "concept": "c0010001-0000-0000-0000-000000000192"
-              }
             }
           ]
         }

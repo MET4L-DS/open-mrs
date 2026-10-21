@@ -84,8 +84,5 @@ describe('PreviousOiIuiCard', () => {
     expect(
       screen.getByText('Antagonist protocol, 2 embryos transferred.')
     ).toBeInTheDocument();
-    expect(
-      screen.getByText('Previous antagonist protocol with poor response.')
-    ).toBeInTheDocument();
   });
 });
