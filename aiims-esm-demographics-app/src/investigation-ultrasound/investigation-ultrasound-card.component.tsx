@@ -1,9 +1,8 @@
 import React from 'react';
-import { Waveform, Activity, ReportData, Events, Chemistry, Scalpel } from '@carbon/react/icons';
+import { Waveform } from '@carbon/react/icons';
 import { useTranslation } from 'react-i18next';
 import { type AiimsInvestigationUltrasoundData } from './investigation-ultrasound.resource';
 import { ObservationCard, type ObservationRow } from '../shared/components';
-import styles from '../shared/styles/shared.scss';
 
 interface InvestigationUltrasoundCardProps {
   data: AiimsInvestigationUltrasoundData;
@@ -17,7 +16,7 @@ export const InvestigationUltrasoundCard: React.FC<InvestigationUltrasoundCardPr
   const mmUnit = t('unitMm', 'mm');
   const degreesUnit = t('unitDegrees', 'degrees');
 
-  // 1. TVS Uterine Size & Adenomyosis
+  // 1. TVS Uterine Size & Endometrial Findings (Exact Sequence 1-11)
   const uterineRows: ObservationRow[] = React.useMemo(() => [
     {
       id: 'day_of_cycle',
@@ -50,9 +49,33 @@ export const InvestigationUltrasoundCard: React.FC<InvestigationUltrasoundCardPr
       emptyPlaceholder: '—',
     },
     {
+      id: 'day14_16_endometrial_thickness',
+      label: t('day1416EndometrialThickness', 'Day 14–16 Endometrial Thickness'),
+      value: data.day1416EndometrialThickness !== undefined ? `${data.day1416EndometrialThickness} ${mmUnit}` : undefined,
+      emptyPlaceholder: '—',
+    },
+    {
+      id: 'day14_16_endometrial_pattern',
+      label: t('day1416EndometrialPattern', 'Day 14–16 Pattern'),
+      value: data.day1416EndometrialPattern,
+      emptyPlaceholder: '—',
+    },
+    {
+      id: 'endometrial_vascularity',
+      label: t('endometrialVascularity', 'Endometrial Vascularity'),
+      value: data.endometrialVascularity,
+      emptyPlaceholder: '—',
+    },
+    {
       id: 'adenomyosis_tvs',
       label: t('adenomyosisTvsFinding', 'Adenomyosis'),
       value: data.adenomyosisTvsFinding,
+      emptyPlaceholder: '—',
+    },
+    {
+      id: 'focal_adenomyoma_dimensions',
+      label: t('focalAdenomyomaDimensions', 'Focal Adenomyoma Dimensions'),
+      value: data.focalAdenomyomaDimensions,
       emptyPlaceholder: '—',
     },
     {
@@ -61,9 +84,9 @@ export const InvestigationUltrasoundCard: React.FC<InvestigationUltrasoundCardPr
       value: data.uterineCalcifications,
       emptyPlaceholder: '—',
     },
-  ], [data, t, cmUnit, cm3Unit]);
+  ], [data, t, cmUnit, cm3Unit, mmUnit]);
 
-  // 2. TVS Fibroids
+  // 2. TVS Fibroids (Sequence 12-16)
   const fibroidRows: ObservationRow[] = React.useMemo(() => [
     {
       id: 'fibroids_present',
@@ -97,7 +120,7 @@ export const InvestigationUltrasoundCard: React.FC<InvestigationUltrasoundCardPr
     },
   ], [data, t]);
 
-  // 3. TVS Cavity & Anomalies
+  // 3. TVS Cavity & Anomalies (Sequence 17-30)
   const cavityRows: ObservationRow[] = React.useMemo(() => [
     {
       id: 'tvs_endometrial_cavity',
@@ -179,7 +202,7 @@ export const InvestigationUltrasoundCard: React.FC<InvestigationUltrasoundCardPr
     },
   ], [data, t, cmUnit, cm3Unit, degreesUnit]);
 
-  // 4. TVS Ovaries & AFC
+  // 4. TVS Ovaries & AFC (Sequence 31-41)
   const ovaryRows: ObservationRow[] = React.useMemo(() => [
     {
       id: 'afc_right_ovary',
@@ -197,18 +220,6 @@ export const InvestigationUltrasoundCard: React.FC<InvestigationUltrasoundCardPr
       id: 'total_antral_follicle_count',
       label: t('totalAntralFollicleCount', 'Total Antral Follicle Count'),
       value: data.totalAntralFollicleCount !== undefined ? String(data.totalAntralFollicleCount) : undefined,
-      emptyPlaceholder: '—',
-    },
-    {
-      id: 'volume_right_ovary',
-      label: t('volumeRightOvary', 'Right Ovary Volume'),
-      value: data.volumeRightOvary !== undefined ? `${data.volumeRightOvary} ${cm3Unit}` : undefined,
-      emptyPlaceholder: '—',
-    },
-    {
-      id: 'volume_left_ovary',
-      label: t('volumeLeftOvary', 'Left Ovary Volume'),
-      value: data.volumeLeftOvary !== undefined ? `${data.volumeLeftOvary} ${cm3Unit}` : undefined,
       emptyPlaceholder: '—',
     },
     {
@@ -259,43 +270,9 @@ export const InvestigationUltrasoundCard: React.FC<InvestigationUltrasoundCardPr
       value: data.endometriomaLeftOvaryDimensions,
       emptyPlaceholder: '—',
     },
-  ], [data, t, cm3Unit]);
+  ], [data, t]);
 
-  // 5. TVS Hydrosalpinx & Endometrial Thickness
-  const hydrosalpinxRows: ObservationRow[] = React.useMemo(() => [
-    {
-      id: 'focal_adenomyoma_dimensions',
-      label: t('focalAdenomyomaDimensions', 'Focal Adenomyoma Dimensions'),
-      value: data.focalAdenomyomaDimensions,
-      emptyPlaceholder: '—',
-    },
-    {
-      id: 'hydrosalpinx_finding',
-      label: t('hydrosalpinxFinding', 'Hydrosalpinx'),
-      value: data.hydrosalpinxFinding,
-      emptyPlaceholder: '—',
-    },
-    {
-      id: 'hydrosalpinx_dimensions',
-      label: t('hydrosalpinxDimensions', 'Hydrosalpinx Dimensions'),
-      value: data.hydrosalpinxDimensions,
-      emptyPlaceholder: '—',
-    },
-    {
-      id: 'day14_16_endometrial_thickness',
-      label: t('day1416EndometrialThickness', 'Day 14–16 Endometrial Thickness'),
-      value: data.day1416EndometrialThickness !== undefined ? `${data.day1416EndometrialThickness} ${mmUnit}` : undefined,
-      emptyPlaceholder: '—',
-    },
-    {
-      id: 'day14_16_endometrial_pattern',
-      label: t('day1416EndometrialPattern', 'Day 14–16 Pattern'),
-      value: data.day1416EndometrialPattern,
-      emptyPlaceholder: '—',
-    },
-  ], [data, t, mmUnit]);
-
-  // 6. TVS Cysts
+  // 5. TVS Ovarian Cysts (Sequence 42-55)
   const cystRows: ObservationRow[] = React.useMemo(() => [
     {
       id: 'ovarian_dermoid_finding',
@@ -369,58 +346,68 @@ export const InvestigationUltrasoundCard: React.FC<InvestigationUltrasoundCardPr
       value: data.paroOvarianLeftDimensions,
       emptyPlaceholder: '—',
     },
+    {
+      id: 'other_ovarian_cyst',
+      label: t('otherOvarianCyst', 'Other Cyst'),
+      value: data.otherOvarianCyst,
+      emptyPlaceholder: '—',
+    },
+    {
+      id: 'other_ovarian_cyst_dimensions',
+      label: t('otherOvarianCystDimensions', 'Other Cyst Dimensions'),
+      value: data.otherOvarianCystDimensions,
+      emptyPlaceholder: '—',
+    },
   ], [data, t]);
 
-  // 7. Endometrial Zones & Remarks
-  const zoneRows: ObservationRow[] = React.useMemo(() => [
+  // 6. Fallopian Tube (Sequence 56-60)
+  const fallopianTubeRows: ObservationRow[] = React.useMemo(() => [
     {
-      id: 'zone_1_dimensions',
-      label: t('zone1Dimensions', 'Zone 1 (Myometrium)'),
-      value: data.zone1Dimensions !== undefined ? `${data.zone1Dimensions} ${cmUnit}` : undefined,
+      id: 'hydrosalpinx_finding',
+      label: t('hydrosalpinxFinding', 'Hydrosalpinx'),
+      value: data.hydrosalpinxFinding,
       emptyPlaceholder: '—',
     },
     {
-      id: 'zone_2_dimensions',
-      label: t('zone2Dimensions', 'Zone 2 (Hyperechoic Edge)'),
-      value: data.zone2Dimensions !== undefined ? `${data.zone2Dimensions} ${cmUnit}` : undefined,
+      id: 'hydrosalpinx_left_dimensions',
+      label: t('hydrosalpinxLeftDimensions', 'Left Hydrosalpinx Dimensions'),
+      value: data.hydrosalpinxLeftDimensions,
       emptyPlaceholder: '—',
     },
     {
-      id: 'zone_3_dimensions',
-      label: t('zone3Dimensions', 'Zone 3 (Internal Hypoechoic)'),
-      value: data.zone3Dimensions !== undefined ? `${data.zone3Dimensions} ${cmUnit}` : undefined,
+      id: 'hydrosalpinx_right_dimensions',
+      label: t('hydrosalpinxRightDimensions', 'Right Hydrosalpinx Dimensions'),
+      value: data.hydrosalpinxRightDimensions,
       emptyPlaceholder: '—',
     },
     {
-      id: 'zone_4_dimensions',
-      label: t('zone4Dimensions', 'Zone 4 (Endometrial Cavity)'),
-      value: data.zone4Dimensions !== undefined ? `${data.zone4Dimensions} ${cmUnit}` : undefined,
+      id: 'haematosalpinx_finding',
+      label: t('haematosalpinxFinding', 'Haematosalpinx'),
+      value: data.haematosalpinxFinding,
       emptyPlaceholder: '—',
     },
-    ...(data.ultrasoundRemarks ? [{
-      id: 'ultrasound_remarks',
-      label: t('ultrasoundRemarks', 'Ultrasound Remarks / Notes'),
-      value: <span className={styles.clinicalNotes}>{data.ultrasoundRemarks}</span>,
+    {
+      id: 'haematosalpinx_dimensions',
+      label: t('haematosalpinxDimensions', 'Haematosalpinx Dimensions'),
+      value: data.haematosalpinxDimensions,
       emptyPlaceholder: '—',
-    }] : []),
-  ], [data, t, cmUnit]);
+    },
+  ], [data, t]);
 
   const allRows = React.useMemo(() => [
     ...uterineRows,
     ...fibroidRows,
     ...cavityRows,
     ...ovaryRows,
-    ...hydrosalpinxRows,
     ...cystRows,
-    ...zoneRows,
+    ...fallopianTubeRows,
   ], [
     uterineRows,
     fibroidRows,
     cavityRows,
     ovaryRows,
-    hydrosalpinxRows,
     cystRows,
-    zoneRows,
+    fallopianTubeRows,
   ]);
 
   return (

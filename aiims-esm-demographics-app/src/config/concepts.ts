@@ -426,6 +426,15 @@ export const CONCEPTS = {
   sexOfBaby: 'c0010001-0000-0000-0000-000000000302',
   weightOfBaby: 'c0010001-0000-0000-0000-000000000303',
   apgarScore: 'c0010001-0000-0000-0000-000000000304',
+
+  // Form 13: TVS Ultrasound Adjustments (0305-0310)
+  endometrialVascularity: 'c0010001-0000-0000-0000-000000000305',
+  otherOvarianCyst: 'c0010001-0000-0000-0000-000000000306',
+  otherOvarianCystDimensions: 'c0010001-0000-0000-0000-000000000307',
+  hydrosalpinxLeftDimensions: 'c0010001-0000-0000-0000-000000000308',
+  hydrosalpinxRightDimensions: 'c0010001-0000-0000-0000-000000000159',
+  haematosalpinxFinding: 'c0010001-0000-0000-0000-000000000309',
+  haematosalpinxDimensions: 'c0010001-0000-0000-0000-000000000310',
 };
 
 

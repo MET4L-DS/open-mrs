@@ -642,6 +642,20 @@ baby_sex_answers = [
     ("c0010002-0000-0000-0000-000000001157", "Ambiguous"),
 ]
 
+# Form 13: TVS Ultrasound Adjustments Answers
+endometrial_vascularity_answers = [
+    ("c0010002-0000-0000-0000-000000001158", "Zone 1 (Myometrium surrounding the endometrium)"),
+    ("c0010002-0000-0000-0000-000000001159", "Zone 2 (Hyperechoic endometrial edge)"),
+    ("c0010002-0000-0000-0000-000000001160", "Zone 3 (Internal endometrial hypoechoic zone)"),
+    ("c0010002-0000-0000-0000-000000001161", "Zone 4 (Endometrial cavity)"),
+]
+
+haematosalpinx_answers = [
+    ("c0010002-0000-0000-0000-000000001162", "Right"),
+    ("c0010002-0000-0000-0000-000000001163", "Left"),
+    ("c0010002-0000-0000-0000-000000001164", "Both"),
+]
+
 
 
 
@@ -747,6 +761,12 @@ for u, name in mode_of_delivery_answers:
     full_script.append(add_concept_sql(u, name, datatype_id=4, class_id=11))
 
 for u, name in baby_sex_answers:
+    full_script.append(add_concept_sql(u, name, datatype_id=4, class_id=11))
+
+for u, name in endometrial_vascularity_answers:
+    full_script.append(add_concept_sql(u, name, datatype_id=4, class_id=11))
+
+for u, name in haematosalpinx_answers:
     full_script.append(add_concept_sql(u, name, datatype_id=4, class_id=11))
 
 
@@ -1199,6 +1219,14 @@ full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000301", "Peri
 full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000302", "Sex of Baby", datatype_id=2, class_id=7))
 full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000303", "Weight of Baby", datatype_id=1, class_id=7, is_numeric=True, units="kg", allow_decimal=1, low_abs=0.3, hi_abs=8.0))
 full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000304", "APGAR Score", datatype_id=1, class_id=7, is_numeric=True, units="score", allow_decimal=0, low_abs=0, hi_abs=10))
+
+# Form 13: TVS Ultrasound Realignment & Additions (0305-0310)
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000305", "Endometrial Vascularity", datatype_id=2, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000306", "Other Ovarian Cyst", datatype_id=2, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000307", "Other Ovarian Cyst Dimensions", datatype_id=3, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000308", "Left Hydrosalpinx Dimensions", datatype_id=3, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000309", "Haematosalpinx Finding", datatype_id=2, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000310", "Haematosalpinx Dimensions", datatype_id=3, class_id=7))
 
 
 
@@ -1855,6 +1883,20 @@ for ans_uuid, _ in mode_of_delivery_answers:
 # Sex of Baby (0302)
 for ans_uuid, _ in baby_sex_answers:
     full_script.append(add_answer_sql("c0010001-0000-0000-0000-000000000302", ans_uuid))
+
+# Form 13: TVS Ultrasound Adjustments Answers
+# Endometrial Vascularity (0305)
+for ans_uuid, _ in endometrial_vascularity_answers:
+    full_script.append(add_answer_sql("c0010001-0000-0000-0000-000000000305", ans_uuid))
+
+# Other Ovarian Cyst (0306) Yes/No
+full_script.append(add_answer_sql("c0010001-0000-0000-0000-000000000306", "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"))
+full_script.append(add_answer_sql("c0010001-0000-0000-0000-000000000306", "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"))
+
+# Haematosalpinx Finding (0309)
+for ans_uuid, _ in haematosalpinx_answers:
+    full_script.append(add_answer_sql("c0010001-0000-0000-0000-000000000309", ans_uuid))
+full_script.append(add_answer_sql("c0010001-0000-0000-0000-000000000309", "163747AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"))  # Absent
 
 
 

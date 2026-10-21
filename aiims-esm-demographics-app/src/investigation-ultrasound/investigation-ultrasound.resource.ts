@@ -7,15 +7,18 @@ export interface AiimsInvestigationUltrasoundData {
   encounterUuid?: string;
   encounterDatetime?: string;
 
-  // TVS Uterine Size & Adenomyosis
+  // TVS Uterine Size & Endometrial Findings
+  dayOfCycle?: string | number;
   uterineSizeLength?: string | number;
   uterineSizeWidth?: string | number;
   uterineSizeTransverseDiameter?: string | number;
   uterineSizeVolume?: string | number;
-  dayOfCycle?: string | number;
+  day1416EndometrialThickness?: string | number;
+  day1416EndometrialPattern?: string;
+  endometrialVascularity?: string;
   adenomyosisTvsFinding?: string;
-  uterineCalcifications?: string;
   focalAdenomyomaDimensions?: string;
+  uterineCalcifications?: string;
 
   // TVS Fibroids
   fibroidsPresent?: string;
@@ -43,8 +46,6 @@ export interface AiimsInvestigationUltrasoundData {
   afcRightOvary?: string | number;
   afcLeftOvary?: string | number;
   totalAntralFollicleCount?: string | number;
-  volumeRightOvary?: string | number;
-  volumeLeftOvary?: string | number;
   rightOvaryDimensions?: string;
   leftOvaryDimensions?: string;
   endometriomaFinding?: string;
@@ -53,12 +54,6 @@ export interface AiimsInvestigationUltrasoundData {
   folliclesInaccessible?: string | number;
   endometriomaRightOvaryDimensions?: string;
   endometriomaLeftOvaryDimensions?: string;
-
-  // TVS Hydrosalpinx & Endometrial Thickness
-  hydrosalpinxFinding?: string;
-  hydrosalpinxDimensions?: string;
-  day1416EndometrialThickness?: string | number;
-  day1416EndometrialPattern?: string;
 
   // TVS Ovarian Cysts
   ovarianDermoidFinding?: string;
@@ -73,15 +68,15 @@ export interface AiimsInvestigationUltrasoundData {
   paroOvarianCystFinding?: string;
   paroOvarianRightDimensions?: string;
   paroOvarianLeftDimensions?: string;
+  otherOvarianCyst?: string;
+  otherOvarianCystDimensions?: string;
 
-  // Endometrial Zones
-  zone1Dimensions?: string | number;
-  zone2Dimensions?: string | number;
-  zone3Dimensions?: string | number;
-  zone4Dimensions?: string | number;
-
-  // Remarks
-  ultrasoundRemarks?: string;
+  // Fallopian Tube Findings
+  hydrosalpinxFinding?: string;
+  hydrosalpinxLeftDimensions?: string;
+  hydrosalpinxRightDimensions?: string;
+  haematosalpinxFinding?: string;
+  haematosalpinxDimensions?: string;
 }
 
 export const initialAiimsInvestigationUltrasoundData: Readonly<AiimsInvestigationUltrasoundData> = Object.freeze({
@@ -110,15 +105,18 @@ export function useInvestigationUltrasound(
     };
   }
 
-  // TVS Uterine Size & Adenomyosis
+  // TVS Uterus & Endometrium
+  const dayOfCycle = getOptionalObsValue(CONCEPTS.dayOfCycle);
   const uterineSizeLength = getOptionalObsValue(CONCEPTS.uterineSizeLength);
   const uterineSizeWidth = getOptionalObsValue(CONCEPTS.uterineSizeWidth);
   const uterineSizeTransverseDiameter = getOptionalObsValue(CONCEPTS.uterineSizeTransverseDiameter);
   const uterineSizeVolume = getOptionalObsValue(CONCEPTS.uterineSizeVolume);
-  const dayOfCycle = getOptionalObsValue(CONCEPTS.dayOfCycle);
+  const day1416EndometrialThickness = getOptionalObsValue(CONCEPTS.day1416EndometrialThickness);
+  const day1416EndometrialPattern = getOptionalObsValue(CONCEPTS.day1416EndometrialPattern);
+  const endometrialVascularity = getOptionalObsValue(CONCEPTS.endometrialVascularity);
   const adenomyosisTvsFinding = getOptionalObsValue(CONCEPTS.adenomyosisTvsFinding);
-  const uterineCalcifications = getOptionalObsValue(CONCEPTS.uterineCalcifications);
   const focalAdenomyomaDimensions = getOptionalObsValue(CONCEPTS.focalAdenomyomaDimensions);
+  const uterineCalcifications = getOptionalObsValue(CONCEPTS.uterineCalcifications);
 
   // TVS Fibroids
   const fibroidsPresent = getOptionalObsValue(CONCEPTS.fibroidsPresent);
@@ -146,8 +144,6 @@ export function useInvestigationUltrasound(
   const afcRightOvary = getOptionalObsValue(CONCEPTS.afcRightOvary);
   const afcLeftOvary = getOptionalObsValue(CONCEPTS.afcLeftOvary);
   const totalAntralFollicleCount = getOptionalObsValue(CONCEPTS.totalAntralFollicleCount);
-  const volumeRightOvary = getOptionalObsValue(CONCEPTS.volumeRightOvary);
-  const volumeLeftOvary = getOptionalObsValue(CONCEPTS.volumeLeftOvary);
   const rightOvaryDimensions = getOptionalObsValue(CONCEPTS.rightOvaryDimensions);
   const leftOvaryDimensions = getOptionalObsValue(CONCEPTS.leftOvaryDimensions);
   const endometriomaFinding = getOptionalObsValue(CONCEPTS.endometriomaFinding);
@@ -156,12 +152,6 @@ export function useInvestigationUltrasound(
   const folliclesInaccessible = getOptionalObsValue(CONCEPTS.folliclesInaccessible);
   const endometriomaRightOvaryDimensions = getOptionalObsValue(CONCEPTS.endometriomaRightOvaryDimensions);
   const endometriomaLeftOvaryDimensions = getOptionalObsValue(CONCEPTS.endometriomaLeftOvaryDimensions);
-
-  // TVS Hydrosalpinx & Endometrial Thickness
-  const hydrosalpinxFinding = getOptionalObsValue(CONCEPTS.hydrosalpinxFinding);
-  const hydrosalpinxDimensions = getOptionalObsValue(CONCEPTS.hydrosalpinxDimensions);
-  const day1416EndometrialThickness = getOptionalObsValue(CONCEPTS.day1416EndometrialThickness);
-  const day1416EndometrialPattern = getOptionalObsValue(CONCEPTS.day1416EndometrialPattern);
 
   // TVS Cysts
   const ovarianDermoidFinding = getOptionalObsValue(CONCEPTS.ovarianDermoidFinding);
@@ -176,25 +166,28 @@ export function useInvestigationUltrasound(
   const paroOvarianCystFinding = getOptionalObsValue(CONCEPTS.paroOvarianCystFinding);
   const paroOvarianRightDimensions = getOptionalObsValue(CONCEPTS.paroOvarianRightDimensions);
   const paroOvarianLeftDimensions = getOptionalObsValue(CONCEPTS.paroOvarianLeftDimensions);
+  const otherOvarianCyst = getOptionalObsValue(CONCEPTS.otherOvarianCyst);
+  const otherOvarianCystDimensions = getOptionalObsValue(CONCEPTS.otherOvarianCystDimensions);
 
-  // Endometrial Zones
-  const zone1Dimensions = getOptionalObsValue(CONCEPTS.zone1Dimensions);
-  const zone2Dimensions = getOptionalObsValue(CONCEPTS.zone2Dimensions);
-  const zone3Dimensions = getOptionalObsValue(CONCEPTS.zone3Dimensions);
-  const zone4Dimensions = getOptionalObsValue(CONCEPTS.zone4Dimensions);
-
-  // Remarks
-  const ultrasoundRemarks = getOptionalObsValue(CONCEPTS.ultrasoundRemarks);
+  // Fallopian Tube
+  const hydrosalpinxFinding = getOptionalObsValue(CONCEPTS.hydrosalpinxFinding);
+  const hydrosalpinxLeftDimensions = getOptionalObsValue(CONCEPTS.hydrosalpinxLeftDimensions);
+  const hydrosalpinxRightDimensions = getOptionalObsValue(CONCEPTS.hydrosalpinxRightDimensions);
+  const haematosalpinxFinding = getOptionalObsValue(CONCEPTS.haematosalpinxFinding);
+  const haematosalpinxDimensions = getOptionalObsValue(CONCEPTS.haematosalpinxDimensions);
 
   const hasData =
+    dayOfCycle !== undefined ||
     uterineSizeLength !== undefined ||
     uterineSizeWidth !== undefined ||
     uterineSizeTransverseDiameter !== undefined ||
     uterineSizeVolume !== undefined ||
-    dayOfCycle !== undefined ||
+    day1416EndometrialThickness !== undefined ||
+    day1416EndometrialPattern !== undefined ||
+    endometrialVascularity !== undefined ||
     adenomyosisTvsFinding !== undefined ||
-    uterineCalcifications !== undefined ||
     focalAdenomyomaDimensions !== undefined ||
+    uterineCalcifications !== undefined ||
     fibroidsPresent !== undefined ||
     numberOfFibroids !== undefined ||
     fibroidsLocation !== undefined ||
@@ -216,8 +209,6 @@ export function useInvestigationUltrasound(
     afcRightOvary !== undefined ||
     afcLeftOvary !== undefined ||
     totalAntralFollicleCount !== undefined ||
-    volumeRightOvary !== undefined ||
-    volumeLeftOvary !== undefined ||
     rightOvaryDimensions !== undefined ||
     leftOvaryDimensions !== undefined ||
     endometriomaFinding !== undefined ||
@@ -226,10 +217,6 @@ export function useInvestigationUltrasound(
     folliclesInaccessible !== undefined ||
     endometriomaRightOvaryDimensions !== undefined ||
     endometriomaLeftOvaryDimensions !== undefined ||
-    hydrosalpinxFinding !== undefined ||
-    hydrosalpinxDimensions !== undefined ||
-    day1416EndometrialThickness !== undefined ||
-    day1416EndometrialPattern !== undefined ||
     ovarianDermoidFinding !== undefined ||
     rightOvaryDermoidDimensions !== undefined ||
     leftOvaryDermoidDimensions !== undefined ||
@@ -242,24 +229,29 @@ export function useInvestigationUltrasound(
     paroOvarianCystFinding !== undefined ||
     paroOvarianRightDimensions !== undefined ||
     paroOvarianLeftDimensions !== undefined ||
-    zone1Dimensions !== undefined ||
-    zone2Dimensions !== undefined ||
-    zone3Dimensions !== undefined ||
-    zone4Dimensions !== undefined ||
-    ultrasoundRemarks !== undefined;
+    otherOvarianCyst !== undefined ||
+    otherOvarianCystDimensions !== undefined ||
+    hydrosalpinxFinding !== undefined ||
+    hydrosalpinxLeftDimensions !== undefined ||
+    hydrosalpinxRightDimensions !== undefined ||
+    haematosalpinxFinding !== undefined ||
+    haematosalpinxDimensions !== undefined;
 
   const investigationUltrasoundData: AiimsInvestigationUltrasoundData = {
     hasData,
     encounterUuid: latestEncounter.uuid,
     encounterDatetime: latestEncounter.encounterDatetime,
+    dayOfCycle,
     uterineSizeLength,
     uterineSizeWidth,
     uterineSizeTransverseDiameter,
     uterineSizeVolume,
-    dayOfCycle,
+    day1416EndometrialThickness,
+    day1416EndometrialPattern,
+    endometrialVascularity,
     adenomyosisTvsFinding,
-    uterineCalcifications,
     focalAdenomyomaDimensions,
+    uterineCalcifications,
     fibroidsPresent,
     numberOfFibroids,
     fibroidsLocation,
@@ -281,8 +273,6 @@ export function useInvestigationUltrasound(
     afcRightOvary,
     afcLeftOvary,
     totalAntralFollicleCount,
-    volumeRightOvary,
-    volumeLeftOvary,
     rightOvaryDimensions,
     leftOvaryDimensions,
     endometriomaFinding,
@@ -291,10 +281,6 @@ export function useInvestigationUltrasound(
     folliclesInaccessible,
     endometriomaRightOvaryDimensions,
     endometriomaLeftOvaryDimensions,
-    hydrosalpinxFinding,
-    hydrosalpinxDimensions,
-    day1416EndometrialThickness,
-    day1416EndometrialPattern,
     ovarianDermoidFinding,
     rightOvaryDermoidDimensions,
     leftOvaryDermoidDimensions,
@@ -307,11 +293,13 @@ export function useInvestigationUltrasound(
     paroOvarianCystFinding,
     paroOvarianRightDimensions,
     paroOvarianLeftDimensions,
-    zone1Dimensions,
-    zone2Dimensions,
-    zone3Dimensions,
-    zone4Dimensions,
-    ultrasoundRemarks,
+    otherOvarianCyst,
+    otherOvarianCystDimensions,
+    hydrosalpinxFinding,
+    hydrosalpinxLeftDimensions,
+    hydrosalpinxRightDimensions,
+    haematosalpinxFinding,
+    haematosalpinxDimensions,
   };
 
   return {

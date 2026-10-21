@@ -21,6 +21,10 @@ describe('InvestigationUltrasoundCard', () => {
     expect(screen.getByText('Day of Cycle')).toBeInTheDocument();
     expect(screen.getByText('Length')).toBeInTheDocument();
     expect(screen.getByText('Width')).toBeInTheDocument();
+    expect(screen.getByText('Endometrial Vascularity')).toBeInTheDocument();
+    expect(screen.getByText('Right Ovary Dimensions')).toBeInTheDocument();
+    expect(screen.getByText('Other Cyst')).toBeInTheDocument();
+    expect(screen.getByText('Haematosalpinx')).toBeInTheDocument();
   });
 
   it('renders recorded TVS ultrasound observations correctly', () => {
@@ -31,13 +35,17 @@ describe('InvestigationUltrasoundCard', () => {
       uterineSizeLength: 7.5,
       uterineSizeWidth: 4.2,
       totalAntralFollicleCount: 14,
-      volumeRightOvary: 6.5,
-      volumeLeftOvary: 7.2,
+      rightOvaryDimensions: '3.2 x 2.1 cm',
+      leftOvaryDimensions: '3.5 x 2.4 cm',
       fibroidsPresent: 'Yes',
       numberOfFibroids: 2,
       day1416EndometrialThickness: 9.5,
       day1416EndometrialPattern: 'Trilaminar',
-      ultrasoundRemarks: 'Normal ovarian morphology bilaterally.',
+      endometrialVascularity: 'Zone 2 (Hyperechoic endometrial edge)',
+      otherOvarianCyst: 'No',
+      hydrosalpinxFinding: 'Right Hydrosalpinx',
+      hydrosalpinxRightDimensions: '2.5 x 1.0 cm',
+      haematosalpinxFinding: 'Absent',
     };
 
     render(<InvestigationUltrasoundCard data={data} />);
@@ -45,10 +53,11 @@ describe('InvestigationUltrasoundCard', () => {
     expect(screen.getByText('7.5 cm')).toBeInTheDocument();
     expect(screen.getByText('4.2 cm')).toBeInTheDocument();
     expect(screen.getByText('14')).toBeInTheDocument();
-    expect(screen.getByText('6.5 cm³')).toBeInTheDocument();
-    expect(screen.getByText('7.2 cm³')).toBeInTheDocument();
+    expect(screen.getByText('3.2 x 2.1 cm')).toBeInTheDocument();
+    expect(screen.getByText('3.5 x 2.4 cm')).toBeInTheDocument();
     expect(screen.getByText('9.5 mm')).toBeInTheDocument();
     expect(screen.getByText('Trilaminar')).toBeInTheDocument();
-    expect(screen.getByText('Normal ovarian morphology bilaterally.')).toBeInTheDocument();
+    expect(screen.getByText('Zone 2 (Hyperechoic endometrial edge)')).toBeInTheDocument();
+    expect(screen.getByText('2.5 x 1.0 cm')).toBeInTheDocument();
   });
 });

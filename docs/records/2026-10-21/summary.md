@@ -75,9 +75,21 @@
   - `src/investigation-male-semen/investigation-male-semen.resource.ts`: Removed `investigationMaleSemenRemarks` from interface and parser.
   - `src/investigation-male-semen/investigation-male-semen-card.component.tsx`: Removed Remarks row.
   - `src/investigation-male-semen/investigation-male-semen-card.component.test.tsx`: Updated unit test assertions.
+- **Investigation Female Transvaginal Ultrasound (Form 13 Alignment to `TVS_FINDING.xlsx`)**:
+  - Reordered schema to match exact 60-field clinical sequence: Uterus $\to$ Ovary $\to$ Fallopian Tube.
+  - Promoted Day 14–16 Endometrial Thickness & Pattern immediately after Uterine Size.
+  - Modeled `Endometrial Vascularity` (Applebaum Zones 1–4) as a coded question.
+  - Relocated `Focal Adenomyoma Dimensions` immediately following Adenomyosis.
+  - Renamed / consolidated Ovary Volume into Ovary Dimensions (`right_ovary_dimensions`, `left_ovary_dimensions`) and pruned obsolete volume fields (`volume_right_ovary`, `volume_left_ovary`).
+  - Added new observations: `Other Cyst` (`c0010001-...-0306`), `Other Cyst Dimensions` (`c0010001-...-0307`), `Haematosalpinx Finding` (`c0010001-...-0309`), and `Haematosalpinx Dimensions` (`c0010001-...-0310`).
+  - Split Hydrosalpinx Dimensions into bilateral fields: `Left Hydrosalpinx Dimensions` (`c0010001-...-0308`) and `Right Hydrosalpinx Dimensions` (`c0010001-...-0159`).
+  - Pruned `Ultrasound Remarks / Notes` (`ultrasound_remarks`).
+  - Registered relational concepts in MariaDB via `scripts/setup_aiims_concepts.py` and published schema via `scripts/publish_aiims_form.py`.
+  - Updated resource hook, observation card rows, and test suite.
 - **Translations (`translations/en.json`)**:
   - Updated `previousSurgery` title/labels.
   - Added full strings for `endometrialCavitySeptateAngle` and `endometrialCavityLengthOfSeptum`.
+  - Added TVS keys for `endometrialVascularity`, `otherOvarianCyst`, `otherOvarianCystDimensions`, `hydrosalpinxLeftDimensions`, `hydrosalpinxRightDimensions`, `haematosalpinxFinding`, `haematosalpinxDimensions`.
   - Updated `testicularBiopsy` fallback.
 
 ### 2.4 Verification, Automated Testing & Deployment
@@ -85,18 +97,20 @@
 - `npm run test`: Vitest test suite executed across all 39 test files; 102/102 unit tests passed.
 - `npm run deploy:local`: All 9 stages passed cleanly:
   1. Docker Pre-flight Check: All containers active.
-  2. Clinical Form Schema Verification: Passed (8.75s).
-  3. Concept Dictionary Verification: Passed (6.09s).
-  4. i18n Translation Health Check: Passed (5.23s).
-  5. TypeScript Type Check: Passed (7.72s).
-  6. Unit Test Suite (vitest): Passed (75.71s).
-  7. Production Build (Rspack): Passed (15.6s).
-  8. Hot-Deploy to Docker Container: Updated to version `1.0.99` (2.92s).
+  2. Clinical Form Schema Verification: Passed (6.73s).
+  3. Concept Dictionary Verification: Passed (4.9s).
+  4. i18n Translation Health Check: Passed (5.84s).
+  5. TypeScript Type Check: Passed (8.08s).
+  6. Unit Test Suite (vitest): Passed (79.12s).
+  7. Production Build (Rspack): Passed (51.46s).
+  8. Hot-Deploy to Docker Container: Updated to version `1.0.100` (2.68s).
   9. Live Endpoint Verification Probe: HTTP 200 OK received from `http://localhost/openmrs/spa/importmap.json`.
 
 ---
 
 ## 3. Architectural Decisions & Rationale (The "Why")
 - **ADR-014 (Route Stability)**: When renaming Form 9 to "Previous Fertility Enhancing Surgery", preserved the URL path `aiims-previous-surgery` and extension slot `aiims-previous-surgery-dashboard-slot` to prevent breaking existing navigation bookmarks and patient chart tab links.
+- **ADR-015 (Anatomical Alignment of Transvaginal Ultrasound)**: Reorganized Form 13 to strictly mirror the clinical sonographic workflow from `TVS_FINDING.xlsx`: grouping Uterine myometrium and endometrial vascularity together before evaluating ovarian antral reserves and fallopian pathology.
+- **ADR-016 (Bilateral Hydrosalpinx & Haematosalpinx Partitioning)**: Replaced generalized tubular dimensions with dedicated Left and Right Hydrosalpinx measurements and dedicated Haematosalpinx observations to ensure granular tracking of tubal disease laterality prior to embryo transfer.
 - **Concept Reusability for Duration**: For `att_duration_years` and `att_duration_months`, both dropdowns bind to concept `c0010001-0000-0000-0000-000000000105` which already has distinct answer concept UUIDs for `6M`, `9M`, `1Y`, `2Y`, `3Y`. This avoided registering redundant concept rows in the database.
 - **Demographics Single-Sourcing**: Relocating "Married for years" from Infertility Type to Demographics ensures marital timeline data is recorded alongside patient age, spouse name, and contact information without requiring an infertility classification visit encounter.

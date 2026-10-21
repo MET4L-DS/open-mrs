@@ -66,6 +66,68 @@
               }
             },
             {
+              "label": "Day 14-16 Endometrial Thickness (mm)",
+              "type": "obs",
+              "id": "day14_16_endometrial_thickness",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "number",
+                "concept": "c0010001-0000-0000-0000-000000000160"
+              }
+            },
+            {
+              "label": "Day 14-16 Endometrial Thickness Pattern",
+              "type": "obs",
+              "id": "day14_16_endometrial_pattern",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "select",
+                "concept": "c0010001-0000-0000-0000-000000000161",
+                "answers": [
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000967",
+                    "label": "Trilaminar"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000968",
+                    "label": "Diffuse"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000969",
+                    "label": "Fluid"
+                  }
+                ]
+              }
+            },
+            {
+              "label": "Endometrial Vascularity",
+              "type": "obs",
+              "id": "endometrial_vascularity",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "select",
+                "concept": "c0010001-0000-0000-0000-000000000305",
+                "answers": [
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000001158",
+                    "label": "Zone 1 (Myometrium surrounding the endometrium)"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000001159",
+                    "label": "Zone 2 (Hyperechoic endometrial edge)"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000001160",
+                    "label": "Zone 3 (Internal endometrial hypoechoic zone)"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000001161",
+                    "label": "Zone 4 (Endometrial cavity)"
+                  }
+                ]
+              }
+            },
+            {
               "label": "Adenomyosis",
               "type": "obs",
               "id": "adenomyosis",
@@ -111,6 +173,16 @@
                     "label": "Interrupted junctional zone"
                   }
                 ]
+              }
+            },
+            {
+              "label": "Focal Adenomyoma Dimensions",
+              "type": "obs",
+              "id": "focal_adenomyoma_dimensions",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "text",
+                "concept": "c0010001-0000-0000-0000-000000000157"
               }
             },
             {
@@ -657,115 +729,6 @@
               }
             },
             {
-              "label": "Volume Right Ovary (cm\u00b3)",
-              "type": "obs",
-              "id": "volume_right_ovary",
-              "required": "false",
-              "questionOptions": {
-                "rendering": "number",
-                "concept": "c0010001-0000-0000-0000-000000000108",
-                "min": "0",
-                "max": "200"
-              }
-            },
-            {
-              "label": "Volume Left Ovary (cm\u00b3)",
-              "type": "obs",
-              "id": "volume_left_ovary",
-              "required": "false",
-              "questionOptions": {
-                "rendering": "number",
-                "concept": "c0010001-0000-0000-0000-000000000109",
-                "min": "0",
-                "max": "200"
-              }
-            },
-            {
-              "label": "Focal Adenomyoma Dimensions",
-              "type": "obs",
-              "id": "focal_adenomyoma_dimensions",
-              "required": "false",
-              "questionOptions": {
-                "rendering": "text",
-                "concept": "c0010001-0000-0000-0000-000000000157"
-              }
-            },
-            {
-              "label": "Hydrosalpinx",
-              "type": "obs",
-              "id": "hydrosalpinx",
-              "required": "false",
-              "questionOptions": {
-                "rendering": "select",
-                "concept": "c0010001-0000-0000-0000-000000000158",
-                "answers": [
-                  {
-                    "concept": "c0010002-0000-0000-0000-000000000964",
-                    "label": "Right Hydrosalpinx"
-                  },
-                  {
-                    "concept": "c0010002-0000-0000-0000-000000000965",
-                    "label": "Left Hydrosalpinx"
-                  },
-                  {
-                    "concept": "c0010002-0000-0000-0000-000000000966",
-                    "label": "Both Hydrosalpinx"
-                  },
-                  {
-                    "concept": "163747AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                    "label": "Absent"
-                  }
-                ]
-              }
-            },
-            {
-              "label": "Hydrosalpinx Dimensions",
-              "type": "obs",
-              "id": "hydrosalpinx_dimensions",
-              "required": "false",
-              "questionOptions": {
-                "rendering": "text",
-                "concept": "c0010001-0000-0000-0000-000000000159"
-              },
-              "hide": {
-                "hideWhenExpression": "!hydrosalpinx || hydrosalpinx === '163747AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
-              }
-            },
-            {
-              "label": "Day 14-16 Endometrial Thickness (mm)",
-              "type": "obs",
-              "id": "day14_16_endometrial_thickness",
-              "required": "false",
-              "questionOptions": {
-                "rendering": "number",
-                "concept": "c0010001-0000-0000-0000-000000000160"
-              }
-            },
-            {
-              "label": "Day 14-16 Endometrial Thickness Pattern",
-              "type": "obs",
-              "id": "day14_16_endometrial_pattern",
-              "required": "false",
-              "questionOptions": {
-                "rendering": "select",
-                "concept": "c0010001-0000-0000-0000-000000000161",
-                "answers": [
-                  {
-                    "concept": "c0010002-0000-0000-0000-000000000967",
-                    "label": "Trilaminar"
-                  },
-                  {
-                    "concept": "c0010002-0000-0000-0000-000000000968",
-                    "label": "Diffuse"
-                  },
-                  {
-                    "concept": "c0010002-0000-0000-0000-000000000969",
-                    "label": "Fluid"
-                  }
-                ]
-              }
-            },
-            {
               "label": "Ovarian Dermoid",
               "type": "obs",
               "id": "ovarian_dermoid",
@@ -950,55 +913,131 @@
               }
             },
             {
-              "label": "Zone 1 (Myometrium surrounding the endometrium) (cm)",
+              "label": "Other Cyst",
               "type": "obs",
-              "id": "zone_1_dimensions",
+              "id": "other_ovarian_cyst",
               "required": "false",
               "questionOptions": {
-                "rendering": "number",
-                "concept": "c0010001-0000-0000-0000-000000000174"
+                "rendering": "radio",
+                "concept": "c0010001-0000-0000-0000-000000000306",
+                "answers": [
+                  {
+                    "concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Yes"
+                  },
+                  {
+                    "concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "No"
+                  }
+                ]
               }
             },
             {
-              "label": "Zone 2 (Hyperechoic endometrial edge) (cm)",
+              "label": "Other Cyst Dimensions",
               "type": "obs",
-              "id": "zone_2_dimensions",
+              "id": "other_ovarian_cyst_dimensions",
               "required": "false",
               "questionOptions": {
-                "rendering": "number",
-                "concept": "c0010001-0000-0000-0000-000000000175"
+                "rendering": "text",
+                "concept": "c0010001-0000-0000-0000-000000000307"
+              },
+              "hide": {
+                "hideWhenExpression": "!other_ovarian_cyst || other_ovarian_cyst !== '1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
               }
             },
             {
-              "label": "Zone 3 (Internal endometrial hypoechoic zone) (cm)",
+              "label": "Hydrosalpinx",
               "type": "obs",
-              "id": "zone_3_dimensions",
+              "id": "hydrosalpinx",
               "required": "false",
               "questionOptions": {
-                "rendering": "number",
-                "concept": "c0010001-0000-0000-0000-000000000176"
+                "rendering": "select",
+                "concept": "c0010001-0000-0000-0000-000000000158",
+                "answers": [
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000964",
+                    "label": "Right Hydrosalpinx"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000965",
+                    "label": "Left Hydrosalpinx"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000000966",
+                    "label": "Both Hydrosalpinx"
+                  },
+                  {
+                    "concept": "163747AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Absent"
+                  }
+                ]
               }
             },
             {
-              "label": "Zone 4 (Endometrial cavity) (cm)",
+              "label": "Left Hydrosalpinx Dimensions",
               "type": "obs",
-              "id": "zone_4_dimensions",
+              "id": "hydrosalpinx_left_dimensions",
               "required": "false",
               "questionOptions": {
-                "rendering": "number",
-                "concept": "c0010001-0000-0000-0000-000000000177"
+                "rendering": "text",
+                "concept": "c0010001-0000-0000-0000-000000000308"
+              },
+              "hide": {
+                "hideWhenExpression": "!hydrosalpinx || (hydrosalpinx !== 'c0010002-0000-0000-0000-000000000965' && hydrosalpinx !== 'c0010002-0000-0000-0000-000000000966')"
               }
             },
             {
-              "label": "Ultrasound Remarks / Notes",
+              "label": "Right Hydrosalpinx Dimensions",
               "type": "obs",
-              "id": "ultrasound_remarks",
+              "id": "hydrosalpinx_right_dimensions",
               "required": "false",
               "questionOptions": {
-                "rendering": "textarea",
-                "concept": "c0010001-0000-0000-0000-000000000110",
-                "rows": 3,
-                "placeholder": "Specify any additional ultrasound findings, notes, or remarks..."
+                "rendering": "text",
+                "concept": "c0010001-0000-0000-0000-000000000159"
+              },
+              "hide": {
+                "hideWhenExpression": "!hydrosalpinx || (hydrosalpinx !== 'c0010002-0000-0000-0000-000000000964' && hydrosalpinx !== 'c0010002-0000-0000-0000-000000000966')"
+              }
+            },
+            {
+              "label": "Haematosalpinx",
+              "type": "obs",
+              "id": "haematosalpinx",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "select",
+                "concept": "c0010001-0000-0000-0000-000000000309",
+                "answers": [
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000001162",
+                    "label": "Right"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000001163",
+                    "label": "Left"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000001164",
+                    "label": "Both"
+                  },
+                  {
+                    "concept": "163747AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Absent"
+                  }
+                ]
+              }
+            },
+            {
+              "label": "Haematosalpinx Dimensions",
+              "type": "obs",
+              "id": "haematosalpinx_dimensions",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "text",
+                "concept": "c0010001-0000-0000-0000-000000000310"
+              },
+              "hide": {
+                "hideWhenExpression": "!haematosalpinx || haematosalpinx === '163747AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
               }
             }
           ]
