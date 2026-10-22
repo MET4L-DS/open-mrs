@@ -465,7 +465,13 @@ export default function IvfSummaryDashboard({
       <div className={styles.grid}>
         <ObservationCard title={t('demographicsProfile', 'Demographics & Couple Profile')} icon={ChartCustom} rows={profileRows} />
         <ObservationCard title={t('obstetricMenstrual', 'Obstetric & Menstrual Profile')} icon={Calendar} rows={obstetricRows} />
-        <ObservationCard title={t('priorReproductiveSurgery', 'Prior Reproductive & Surgical History')} icon={Scalpel} rows={priorHistoryRows} />
+        <ObservationCard
+          title={t('priorReproductiveSurgery', 'Prior Reproductive & Surgical History')}
+          icon={Scalpel}
+          rows={priorHistoryRows}
+          fullWidth
+          columns={2}
+        />
       </div>
 
       {/* Domain 2: Ovarian Reserve & Diagnostic Factors */}
@@ -474,7 +480,13 @@ export default function IvfSummaryDashboard({
         <h3>{t('domainDiagnostics', '2. Ovarian Reserve & Diagnostic Subtyping')}</h3>
       </div>
       <div className={styles.grid}>
-        <ObservationCard title={t('diagnosticPrognostic', 'Diagnostic Factors & Prognostic Groups')} icon={Activity} rows={factorRows} />
+        <ObservationCard
+          title={t('diagnosticPrognostic', 'Diagnostic Factors & Prognostic Groups')}
+          icon={Activity}
+          rows={factorRows}
+          fullWidth
+          columns={2}
+        />
         <ObservationCard title={t('hormonalUltrasoundReserve', 'Hormonal & Ultrasound Reserve')} icon={Microscope} rows={reserveRows} />
         <ObservationCard title={t('maleEvaluation', 'Male Semen & Hormonal Evaluation')} icon={Chemistry} rows={maleEvalRows} />
       </div>
@@ -495,8 +507,27 @@ export default function IvfSummaryDashboard({
         <h3>{t('domainOpuInsemination', '4. OPU, Insemination & Laboratory Procedures')}</h3>
       </div>
       <div className={styles.grid}>
-        <ObservationCard title={t('oocyteYieldMaturity', 'Oocyte Yield & Nuclear Maturity')} icon={Microscope} rows={oocyteRows} />
-        <ObservationCard title={t('inseminationSemenPrep', 'Insemination Modality & Semen Prep')} icon={Chemistry} rows={inseminationRows} />
+        <div className={styles.statRibbonCard}>
+          <div className={styles.ribbonHeader}>
+            <Microscope size={20} />
+            <h4>{t('oocyteYieldMaturity', 'Oocyte Yield & Nuclear Maturity')}</h4>
+          </div>
+          <div className={styles.statGrid}>
+            {oocyteRows.map((item, idx) => (
+              <div key={idx} className={styles.statBox}>
+                <span className={styles.statLabel}>{item.label}</span>
+                <span className={styles.statValue}>{item.value || '—'}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+        <ObservationCard
+          title={t('inseminationSemenPrep', 'Insemination Modality & Semen Prep')}
+          icon={Chemistry}
+          rows={inseminationRows}
+          fullWidth
+          columns={2}
+        />
       </div>
 
       {/* Domain 5: Embryology & Cryopreservation */}

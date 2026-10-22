@@ -17,6 +17,8 @@ export interface ObservationCardProps {
   rows: ObservationRow[];
   headerAction?: React.ReactNode;
   className?: string;
+  columns?: 1 | 2;
+  fullWidth?: boolean;
 }
 
 export const ObservationCard: React.FC<ObservationCardProps> = ({
@@ -25,9 +27,21 @@ export const ObservationCard: React.FC<ObservationCardProps> = ({
   rows,
   headerAction,
   className,
+  columns = 1,
+  fullWidth = false,
 }) => {
+  const cardClassName = [
+    styles.card,
+    fullWidth ? styles.fullWidthCard : '',
+    className || '',
+  ]
+    .filter(Boolean)
+    .join(' ');
+
+  const listClassName = columns === 2 ? styles.twoColumnFieldList : styles.fieldList;
+
   return (
-    <Tile className={className ? `${styles.card} ${className}` : styles.card}>
+    <Tile className={cardClassName}>
       <div className={styles.cardHeader}>
         <div className={styles.cardTitleWrapper}>
           {Icon && <Icon size={20} />}
@@ -35,7 +49,7 @@ export const ObservationCard: React.FC<ObservationCardProps> = ({
         </div>
         {headerAction}
       </div>
-      <div className={styles.fieldList}>
+      <div className={listClassName}>
         {rows.map((row, idx) => (
           <DataRow
             key={row.id || (typeof row.label === 'string' ? row.label : idx)}

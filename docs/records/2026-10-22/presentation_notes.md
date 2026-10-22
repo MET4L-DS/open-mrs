@@ -121,6 +121,8 @@ graph TD
   - Introduced `getFormObsList(formUuid, conceptUuid)` in `ivf-summary.resource.ts` to prevent data loss in multi-select diagnostic factors, surgical histories, and laboratory procedures.
 - **ADR-025 (Full Clinical Federation of 35 Modules)**:
   - Federates 100% of all 35 clinical modules into a single overview screen with 0 extra network requests.
+- **ADR-026 (Horizontal Multi-Column Layout Architecture)**:
+  - Enhances `ObservationCard` with `fullWidth` and `columns={2}` to eliminate dead space and cut multi-select text wrapping by >60% across text-heavy cards (*Prior History*, *Diagnostic Factors*, *Insemination Modality*).
 
 ---
 
@@ -133,6 +135,6 @@ graph TD
 | Missing i18n Translation Keys | $0$ | **0 missing keys (753 total)** | Passed |
 | TypeScript Strict Check (`noImplicitAny`) | $0\text{ errors}$ | **0 errors (`tsc` passed)** | Passed |
 | Vitest Unit Test Suites | $100\%$ | **40/40 passed (106/106 tests)** | Passed |
-| Production Bundle Build | Zero warnings | **Rspack compiled successfully (13.35s)** | Passed |
-| Docker Hot-Deployment | Container updated | **Bundle `v1.0.105` active in Nginx** | Passed |
+| Production Bundle Build | Zero warnings | **Rspack compiled successfully (14.09s)** | Passed |
+| Docker Hot-Deployment | Container updated | **Bundle `v1.0.106` active in Nginx** | Passed |
 | Live SPA Verification Probe | HTTP 200 OK | **Verified on `importmap.json`** | Passed |

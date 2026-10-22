@@ -43,7 +43,75 @@
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1.25rem;
   margin-bottom: 1.25rem;
+
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.fullWidth {
+  grid-column: 1 / -1;
+}
+
+.statRibbonCard {
+  grid-column: 1 / -1;
+  padding: 1rem 1.25rem;
+  background-color: var(--cds-layer, #ffffff);
+  border: 1px solid var(--cds-border-subtle, #e0e0e0);
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+
+  .ribbonHeader {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+
+    svg {
+      fill: var(--cds-interactive, #005d5d);
+      color: var(--cds-interactive, #005d5d);
+    }
+
+    h4 {
+      margin: 0;
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--cds-text-primary, #161616);
+    }
+  }
+
+  .statGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+
+    @media (max-width: 700px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  .statBox {
+    background-color: var(--cds-layer-accent, #f4f4f4);
+    border-radius: 4px;
+    padding: 0.625rem 0.875rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    border-left: 3px solid var(--cds-interactive, #005d5d);
+  }
+
+  .statLabel {
+    font-size: 0.8125rem;
+    color: var(--cds-text-secondary, #525252);
+    font-weight: 500;
+  }
+
+  .statValue {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--cds-text-primary, #161616);
+  }
 }
