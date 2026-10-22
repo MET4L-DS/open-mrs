@@ -29,10 +29,14 @@ import {
   AIIMS_MALE_HORMONE_SURGERY_FORM_UUID,
   AIIMS_PREV_OI_IUI_FORM_UUID,
   AIIMS_PREV_SURGERY_FORM_UUID,
+  AIIMS_PAST_MEDICAL_HISTORY_FORM_UUID,
+  AIIMS_FAMILY_HISTORY_FORM_UUID,
   AIIMS_TUBERCULOSIS_HISTORY_FORM_UUID,
   AIIMS_INVESTIGATION_ULTRASOUND_FORM_UUID,
   AIIMS_FEMALE_BLOOD_HORMONE_FORM_UUID,
   AIIMS_FEMALE_SURGICAL_PROCEDURE_FORM_UUID,
+  AIIMS_PROCEDURE_EMBRYO_TRANSFER_FORM_UUID,
+  AIIMS_INVESTIGATION_FEMALE_PROCEDURE_BIOPSY_FORM_UUID,
   AIIMS_INVESTIGATION_MALE_SEMEN_FORM_UUID,
   AIIMS_OVARIAN_STIMULATION_PROTOCOL_FORM_UUID,
   AIIMS_DOSE_OF_DRUGS_FORM_UUID,
@@ -66,7 +70,7 @@ export default function IvfSummaryDashboard({
   const { patient, patientUuid: contextPatientUuid, isLoading: isPatientLoading } = usePatient(propPatientUuid);
   const patientUuid = propPatientUuid || contextPatientUuid;
 
-  const { summaryData, isLoading, error, getFormObs } = useIvfSummary(patientUuid);
+  const { summaryData, isLoading, error, getFormObs, getFormObsList } = useIvfSummary(patientUuid);
 
 
   if (isLoading || isPatientLoading) {
@@ -107,6 +111,56 @@ export default function IvfSummaryDashboard({
     { label: t('cycleLength', 'Cycle Regularity'), value: getFormObs(AIIMS_MENSTRUAL_FORM_UUID, CONCEPTS.patternOfMenstrualCycle) || '—' },
   ];
 
+  // Past Medical History (Form 10)
+  const medicalConditions = getFormObsList(AIIMS_PAST_MEDICAL_HISTORY_FORM_UUID, CONCEPTS.medicalDisease);
+  const medicalOthers = getFormObs(AIIMS_PAST_MEDICAL_HISTORY_FORM_UUID, CONCEPTS.medicalDiseasesOthers);
+  const medicalDisplay = medicalConditions.length > 0
+    ? `${medicalConditions.join(', ')}${medicalOthers ? ` (${medicalOthers})` : ''}`
+    : medicalOthers || undefined;
+
+  // Family History (Form 11)
+  const familyConditions = [
+    ...getFormObsList(AIIMS_FAMILY_HISTORY_FORM_UUID, CONCEPTS.fatherMedicalDisease),
+    ...getFormObsList(AIIMS_FAMILY_HISTORY_FORM_UUID, CONCEPTS.motherMedicalDisease),
+    ...getFormObsList(AIIMS_FAMILY_HISTORY_FORM_UUID, CONCEPTS.husbandMedicalDisease),
+    ...getFormObsList(AIIMS_FAMILY_HISTORY_FORM_UUID, CONCEPTS.brotherMedicalDisease),
+    ...getFormObsList(AIIMS_FAMILY_HISTORY_FORM_UUID, CONCEPTS.maternalGrandmotherMedicalDisease),
+    ...getFormObsList(AIIMS_FAMILY_HISTORY_FORM_UUID, CONCEPTS.maternalGrandfatherMedicalDisease),
+  ];
+  const uniqueFamilyConditions = Array.from(new Set(familyConditions.filter(Boolean)));
+  const familyDisplay = uniqueFamilyConditions.length > 0 ? uniqueFamilyConditions.join(', ') : undefined;
+
+  // Previous Pelvic Surgery (Form 8): Checkbox procedures & approach
+  const previousSurgeriesList = [
+    ...getFormObsList(AIIMS_PREV_SURGERY_FORM_UUID, CONCEPTS.uterineSurgeries),
+    ...getFormObsList(AIIMS_PREV_SURGERY_FORM_UUID, CONCEPTS.peritonealSurgeries),
+    ...getFormObsList(AIIMS_PREV_SURGERY_FORM_UUID, CONCEPTS.endometriosisSurgeries),
+    ...getFormObsList(AIIMS_PREV_SURGERY_FORM_UUID, CONCEPTS.ovarianSurgeries),
+    ...getFormObsList(AIIMS_PREV_SURGERY_FORM_UUID, CONCEPTS.fallopianTubeSurgeries),
+  ].filter(Boolean);
+  const prevSurgeryPerf = getFormObs(AIIMS_PREV_SURGERY_FORM_UUID, CONCEPTS.previousSurgeryPerformed);
+  const prevSurgeryApproach = getFormObs(AIIMS_PREV_SURGERY_FORM_UUID, CONCEPTS.surgicalApproach);
+  const prevSurgeryDisplay = (() => {
+    if (prevSurgeryPerf && prevSurgeryPerf.toLowerCase() === 'yes') {
+      const details = [
+        prevSurgeryApproach,
+        previousSurgeriesList.length > 0 ? previousSurgeriesList.join(', ') : undefined,
+      ].filter(Boolean).join(': ');
+      return details ? `Yes (${details})` : 'Yes';
+    }
+    if (previousSurgeriesList.length > 0) {
+      return previousSurgeriesList.join(', ');
+    }
+    return prevSurgeryPerf || '—';
+  })();
+
+  // Tuberculosis History (Form 12): site_of_tb is a checkbox
+  const tbSites = getFormObsList(AIIMS_TUBERCULOSIS_HISTORY_FORM_UUID, CONCEPTS.tbSite);
+  const tbAttDuration = getFormObs(AIIMS_TUBERCULOSIS_HISTORY_FORM_UUID, CONCEPTS.attDuration);
+  const tbDisplay = tbSites.length > 0
+    ? `${tbSites.join(', ')}${tbAttDuration ? ` (ATT: ${tbAttDuration})` : ''}`
+    : '—';
+
   const priorHistoryRows: ObservationRow[] = [
     {
       label: t('failedIvf', 'Prior Failed IVF Cycles'),
@@ -120,23 +174,19 @@ export default function IvfSummaryDashboard({
     },
     {
       label: t('previousSurgery', 'Previous Pelvic Surgery'),
-      value: getFormObs(AIIMS_PREV_SURGERY_FORM_UUID, CONCEPTS.previousSurgeryPerformed)
-        ? `${getFormObs(AIIMS_PREV_SURGERY_FORM_UUID, CONCEPTS.previousSurgeryPerformed)}${
-            getFormObs(AIIMS_PREV_SURGERY_FORM_UUID, CONCEPTS.surgicalApproach)
-              ? ` (${getFormObs(AIIMS_PREV_SURGERY_FORM_UUID, CONCEPTS.surgicalApproach)})`
-              : ''
-          }`
-        : '—',
+      value: prevSurgeryDisplay,
+    },
+    {
+      label: t('pastMedicalHistory', 'Past Medical History'),
+      value: medicalDisplay || '—',
+    },
+    {
+      label: t('familyHistory', 'Family History'),
+      value: familyDisplay || '—',
     },
     {
       label: t('tbHistory', 'Tuberculosis History'),
-      value: getFormObs(AIIMS_TUBERCULOSIS_HISTORY_FORM_UUID, CONCEPTS.tbSite)
-        ? `${getFormObs(AIIMS_TUBERCULOSIS_HISTORY_FORM_UUID, CONCEPTS.tbSite)}${
-            getFormObs(AIIMS_TUBERCULOSIS_HISTORY_FORM_UUID, CONCEPTS.attDuration)
-              ? ` (ATT: ${getFormObs(AIIMS_TUBERCULOSIS_HISTORY_FORM_UUID, CONCEPTS.attDuration)})`
-              : ''
-          }`
-        : '—',
+      value: tbDisplay,
     },
     {
       label: t('hysteroscopyIntervention', 'Hysteroscopy & Interventions'),
@@ -177,15 +227,34 @@ export default function IvfSummaryDashboard({
     return findings.length > 0 ? findings.join(', ') : undefined;
   })();
 
+  // Endometrial Biopsy Findings from Form 17 (EAHPE, PCR, AFB)
+  const biopsyDisplay = (() => {
+    const eahpe = getFormObsList(AIIMS_INVESTIGATION_FEMALE_PROCEDURE_BIOPSY_FORM_UUID, CONCEPTS.endometrialAspirationHistopathology);
+    const pcr = getFormObs(AIIMS_INVESTIGATION_FEMALE_PROCEDURE_BIOPSY_FORM_UUID, CONCEPTS.endometrialAspirationPcr);
+    const afb = getFormObs(AIIMS_INVESTIGATION_FEMALE_PROCEDURE_BIOPSY_FORM_UUID, CONCEPTS.endometrialAspirationAfb);
+    const parts: string[] = [];
+    if (eahpe.length > 0) parts.push(eahpe.join(', '));
+    if (pcr && pcr !== '—') parts.push(`PCR: ${pcr}`);
+    if (afb && afb !== '—') parts.push(`AFB: ${afb}`);
+    return parts.length > 0 ? parts.join('; ') : undefined;
+  })();
+
+  // Checkbox diagnostic factor lists (Form 5 & 6)
+  const tubalFactors = getFormObsList(AIIMS_FEMALE_FACTOR_FORM_UUID, CONCEPTS.tubalFactorDetails);
+  const uterineFactors = getFormObsList(AIIMS_FEMALE_FACTOR_FORM_UUID, CONCEPTS.uterineFactorDetails);
+  const endoClassList = getFormObsList(AIIMS_FEMALE_FACTOR_FORM_UUID, CONCEPTS.endometriosisClassification);
+  const maleFactorsList = getFormObsList(AIIMS_MALE_FACTOR_FORM_UUID, CONCEPTS.maleInfertilityFactor);
+
   // Domain 2: Diagnostic Factors & Hormones
   const factorRows: ObservationRow[] = [
-    { label: t('tubalFactor', 'Tubal Factor'), value: getFormObs(AIIMS_FEMALE_FACTOR_FORM_UUID, CONCEPTS.tubalFactorDetails) || '—' },
+    { label: t('tubalFactor', 'Tubal Factor'), value: tubalFactors.length > 0 ? tubalFactors.join(', ') : '—' },
     { label: t('ovarianFactor', 'Ovarian Factor'), value: getFormObs(AIIMS_FEMALE_FACTOR_FORM_UUID, CONCEPTS.dorDetails) || '—' },
-    { label: t('uterineFactor', 'Uterine Factor'), value: getFormObs(AIIMS_FEMALE_FACTOR_FORM_UUID, CONCEPTS.uterineFactorDetails) || '—' },
+    { label: t('uterineFactor', 'Uterine Factor'), value: uterineFactors.length > 0 ? uterineFactors.join(', ') : '—' },
     { label: t('tvsPelvicFindings', 'TVS Ultrasound Findings'), value: tvsFindingsDisplay || '—' },
+    { label: t('endometrialBiopsy', 'Endometrial Biopsy (EAHPE / PCR)'), value: biopsyDisplay || '—' },
     { label: t('poseidonGroup', 'POSEIDON Group'), value: getFormObs(AIIMS_FEMALE_FACTOR_FORM_UUID, CONCEPTS.poseidonGroup) || '—' },
-    { label: t('endometriosisStage', 'Endometriosis Stage'), value: getFormObs(AIIMS_FEMALE_FACTOR_FORM_UUID, CONCEPTS.endometriosisClassification) || '—' },
-    { label: t('maleFactor', 'Male Factor'), value: getFormObs(AIIMS_MALE_FACTOR_FORM_UUID, CONCEPTS.maleInfertilityFactor) || '—' },
+    { label: t('endometriosisStage', 'Endometriosis Stage'), value: endoClassList.length > 0 ? endoClassList.join(', ') : '—' },
+    { label: t('maleFactor', 'Male Factor'), value: maleFactorsList.length > 0 ? maleFactorsList.join(', ') : '—' },
     { label: t('azoospermiaDetails', 'Azoospermia Details'), value: getFormObs(AIIMS_MALE_FACTOR_FORM_UUID, CONCEPTS.azoospermiaDetails) || '—' },
   ];
 
@@ -225,6 +294,20 @@ export default function IvfSummaryDashboard({
     },
   ];
 
+  // Adjuvant Therapy from Form 21 (Growth Hormone)
+  const ghDisplay = (() => {
+    const gh = getFormObs(AIIMS_ADJUVANT_DRUG_FORM_UUID, CONCEPTS.growthHormone);
+    if (!gh) return undefined;
+    if (gh.toLowerCase() === 'yes') {
+      const dose = getFormObs(AIIMS_ADJUVANT_DRUG_FORM_UUID, CONCEPTS.growthHormoneDose);
+      const duration = getFormObs(AIIMS_ADJUVANT_DRUG_FORM_UUID, CONCEPTS.growthHormoneDuration);
+      if (dose && duration) return `Yes (${dose} IU, ${duration} days)`;
+      if (dose) return `Yes (${dose} IU)`;
+      return 'Yes';
+    }
+    return gh;
+  })();
+
   // Domain 3: Stimulation & Cycle Monitoring
   const protocolRows: ObservationRow[] = [
     { label: t('stimulationProtocol', 'Stimulation Protocol'), value: getFormObs(AIIMS_OVARIAN_STIMULATION_PROTOCOL_FORM_UUID, CONCEPTS.ovarianStimulationProtocol) || '—' },
@@ -239,6 +322,7 @@ export default function IvfSummaryDashboard({
     },
     { label: t('stimulationDays', 'Stimulation Duration'), value: getFormObs(AIIMS_DOSE_OF_DRUGS_FORM_UUID, CONCEPTS.totalDaysOfStimulation) ? `${getFormObs(AIIMS_DOSE_OF_DRUGS_FORM_UUID, CONCEPTS.totalDaysOfStimulation)} days` : '—' },
     { label: t('cetrotideDose', 'Antagonist Dose'), value: getFormObs(AIIMS_DOSE_OF_DRUGS_FORM_UUID, CONCEPTS.totalCetrotideDose) ? `${getFormObs(AIIMS_DOSE_OF_DRUGS_FORM_UUID, CONCEPTS.totalCetrotideDose)} mg` : '—' },
+    { label: t('growthHormoneAdjuvant', 'Adjuvant Growth Hormone (GH)'), value: ghDisplay || '—' },
   ];
 
   const triggerRows: ObservationRow[] = [
@@ -266,20 +350,45 @@ export default function IvfSummaryDashboard({
     { label: t('gvOocytes', 'Germinal Vesicles (GV)'), value: getFormObs(AIIMS_OVUM_PICK_UP_DETAILS_FORM_UUID, CONCEPTS.germinalVesicle) || '—' },
   ];
 
+  // Lab Procedure of Insemination (Form 25): Method is a checkbox (IVF + ICSI can both be checked)
+  const inseminationMethodList = getFormObsList(AIIMS_LAB_PROCEDURE_INSEMINATION_FORM_UUID, CONCEPTS.methodOfInsemination);
+  // Semen Sample Type (Form 25): Frozen / Donor / Husband — checkbox
+  const semenSampleTypeList = getFormObsList(AIIMS_LAB_PROCEDURE_INSEMINATION_FORM_UUID, CONCEPTS.semenSampleType);
+  // Sperm Retrieval Procedure (Form 24: Procedure): PESA/TESA/TESE/Micro-TESE — checkbox
+  const spermRetrievalList = getFormObsList(AIIMS_PROCEDURE_FORM_UUID, CONCEPTS.spermRetrievalProcedure);
+  // Additional IVF Procedures (Form 24: Procedure): LAH, PICSI, AOA — checkbox
+  const additionalIvfProceduresList = getFormObsList(AIIMS_PROCEDURE_FORM_UUID, CONCEPTS.additionalIvfProcedures);
+
   const inseminationRows: ObservationRow[] = [
-    { label: t('inseminationMethod', 'Insemination Modality'), value: getFormObs(AIIMS_LAB_PROCEDURE_INSEMINATION_FORM_UUID, CONCEPTS.methodOfInsemination) || '—' },
-    { label: t('spermRetrieval', 'Sperm Retrieval Source'), value: getFormObs(AIIMS_PROCEDURE_FORM_UUID, CONCEPTS.spermRetrievalProcedure) || '—' },
+    {
+      label: t('inseminationMethod', 'Insemination Modality'),
+      value: inseminationMethodList.length > 0 ? inseminationMethodList.join(', ') : '—',
+    },
+    {
+      label: t('semenSampleType', 'Semen Sample Type'),
+      value: semenSampleTypeList.length > 0 ? semenSampleTypeList.join(', ') : '—',
+    },
+    {
+      label: t('spermRetrieval', 'Sperm Retrieval Source'),
+      value: spermRetrievalList.length > 0 ? spermRetrievalList.join(', ') : '—',
+    },
+    {
+      label: t('additionalLabProcedures', 'Additional Lab Procedures (LAH/PICSI/AOA)'),
+      value: additionalIvfProceduresList.length > 0 ? additionalIvfProceduresList.join(', ') : '—',
+    },
     { label: t('postWashConcentration', 'Post-Wash Sperm Count'), value: getFormObs(AIIMS_SPERM_QUALITY_ASSESSMENT_FORM_UUID, CONCEPTS.postWashSpermConcentration) ? `${getFormObs(AIIMS_SPERM_QUALITY_ASSESSMENT_FORM_UUID, CONCEPTS.postWashSpermConcentration)} M/mL` : '—' },
     { label: t('postWashMotility', 'Post-Wash Motility'), value: getFormObs(AIIMS_SPERM_QUALITY_ASSESSMENT_FORM_UUID, CONCEPTS.spermMotilityOpuDay) ? `${getFormObs(AIIMS_SPERM_QUALITY_ASSESSMENT_FORM_UUID, CONCEPTS.spermMotilityOpuDay)}%` : '—' },
   ];
 
   // Domain 5: Embryology & Cryopreservation
+  const cleavageRateVal = getFormObs(AIIMS_EMBRYOS_CLEAVAGE_DETAILS_FORM_UUID, CONCEPTS.cleavageRate);
+
   const fertilizationRows: ObservationRow[] = [
     { label: t('numberEmbryosDay1', 'Day 1 (2PN Fertilization)'), value: getFormObs(AIIMS_EMBRYO_ASSESSMENT_FORM_UUID, CONCEPTS.numberEmbryosDay1) || '—' },
     { label: t('fertilizationRate', 'Fertilization Rate'), value: getFormObs(AIIMS_FERTILISATION_DETAILS_FORM_UUID, CONCEPTS.fertilisationRate) ? `${getFormObs(AIIMS_FERTILISATION_DETAILS_FORM_UUID, CONCEPTS.fertilisationRate)}%` : '—' },
     { label: t('numberEmbryosDay3', 'Day 3 Cleavage Embryos'), value: getFormObs(AIIMS_EMBRYO_ASSESSMENT_FORM_UUID, CONCEPTS.numberEmbryosDay3) || '—' },
     { label: t('grade1EmbryosDay3', 'Grade 1/2 Embryos (Day 3)'), value: getFormObs(AIIMS_EMBRYO_GRADING_DAY3_FORM_UUID, CONCEPTS.grade1EmbryosDay3) || '—' },
-    { label: t('cleavageRate', 'Cleavage Rate'), value: (getFormObs(AIIMS_EMBRYOS_CLEAVAGE_DETAILS_FORM_UUID, CONCEPTS.cleavageRate) || getFormObs(AIIMS_FERTILISATION_DETAILS_FORM_UUID, CONCEPTS.cleavageRate)) ? `${getFormObs(AIIMS_EMBRYOS_CLEAVAGE_DETAILS_FORM_UUID, CONCEPTS.cleavageRate) || getFormObs(AIIMS_FERTILISATION_DETAILS_FORM_UUID, CONCEPTS.cleavageRate)}%` : '—' },
+    { label: t('cleavageRate', 'Cleavage Rate'), value: cleavageRateVal ? `${cleavageRateVal}%` : '—' },
   ];
 
   const blastocystRows: ObservationRow[] = [
@@ -289,7 +398,22 @@ export default function IvfSummaryDashboard({
     { label: t('vitrifiedDay5', 'Day 5 Blastocysts Vitrified'), value: getFormObs(AIIMS_EMBRYOS_FROZEN_FORM_UUID, CONCEPTS.numberDay5EmbryosVitrified) || '—' },
   ];
 
+  // Mock Embryo Transfer & Cervical Direction from Form 16
+  const mockEtDisplay = (() => {
+    const mockEt = getFormObs(AIIMS_PROCEDURE_EMBRYO_TRANSFER_FORM_UUID, CONCEPTS.mockEmbryoTransfer);
+    const speculum = getFormObs(AIIMS_PROCEDURE_EMBRYO_TRANSFER_FORM_UUID, CONCEPTS.mockEmbryoTransferSpeculum);
+    const direction = getFormObs(AIIMS_PROCEDURE_EMBRYO_TRANSFER_FORM_UUID, CONCEPTS.embryoTransferCervicalCanalDirection);
+    if (mockEt) {
+      const details = [speculum, direction ? `Canal: ${direction}` : ''].filter(Boolean).join(', ');
+      return details ? `${mockEt} (${details})` : mockEt;
+    }
+    if (direction) return `Canal: ${direction}`;
+    return undefined;
+  })();
+
   // Domain 6: Transfer, Outcome & Neonate
+  const artAddonsList = getFormObsList(AIIMS_ADD_PROCEDURE_ART_FORM_UUID, CONCEPTS.additionalProceduresArt);
+
   const transferRows: ObservationRow[] = [
     { label: t('freshEtStatus', 'Fresh ET Status'), value: getFormObs(AIIMS_FRESH_ET_DETAILS_FORM_UUID, CONCEPTS.freshEmbryoTransfer) || '—' },
     { label: t('reasonEtDeferred', 'Deferred / Cancellation Reason'), value: getFormObs(AIIMS_FRESH_ET_DETAILS_FORM_UUID, CONCEPTS.reasonFreshEtNotDone) || '—' },
@@ -304,15 +428,23 @@ export default function IvfSummaryDashboard({
         : '—',
     },
     { label: t('dayOfEt', 'Transfer Day'), value: getFormObs(AIIMS_FRESH_ET_DETAILS_FORM_UUID, CONCEPTS.dayOfFreshEmbryoTransfer) || '—' },
+    { label: t('mockEmbryoTransferSummary', 'Mock ET & Canal Direction'), value: mockEtDisplay || '—' },
     { label: t('freshEtDifficulty', 'Transfer Ease / Difficulty'), value: getFormObs(AIIMS_FRESH_ET_DETAILS_FORM_UUID, CONCEPTS.freshEtDifficulty) || '—' },
-    { label: t('artAddons', 'ART Add-ons'), value: getFormObs(AIIMS_ADD_PROCEDURE_ART_FORM_UUID, CONCEPTS.additionalProceduresArt) || '—' },
+    { label: t('artAddons', 'ART Add-ons'), value: artAddonsList.length > 0 ? artAddonsList.join(', ') : '—' },
   ];
+
+  const deliveryMode = getFormObs(AIIMS_POST_IVF_INVESTIGATION_FORM_UUID, CONCEPTS.modeOfDelivery);
+  const deliveryPog = getFormObs(AIIMS_POST_IVF_INVESTIGATION_FORM_UUID, CONCEPTS.pogAtDelivery);
+  const deliveryDisplay = deliveryMode && deliveryPog
+    ? `${deliveryMode} (${deliveryPog} wks)`
+    : deliveryMode || (deliveryPog ? `${deliveryPog} wks` : undefined);
 
   const outcomeRows: ObservationRow[] = [
     { label: t('uptResult', 'Urine Pregnancy Test (UPT)'), value: getFormObs(AIIMS_POST_IVF_INVESTIGATION_FORM_UUID, CONCEPTS.uptResult) || '—' },
     { label: t('betaHcg', 'Serum Beta-hCG'), value: getFormObs(AIIMS_POST_IVF_INVESTIGATION_FORM_UUID, CONCEPTS.betaHcg) ? `${getFormObs(AIIMS_POST_IVF_INVESTIGATION_FORM_UUID, CONCEPTS.betaHcg)} mIU/mL` : '—' },
     { label: t('scan6To7Weeks', '6-7 Week Scan Viability'), value: getFormObs(AIIMS_POST_IVF_INVESTIGATION_FORM_UUID, CONCEPTS.scan6To7Weeks) || '—' },
     { label: t('postIvfOutcome', 'Clinical Outcome'), value: getFormObs(AIIMS_POST_IVF_INVESTIGATION_FORM_UUID, CONCEPTS.postIvfOutcome) || '—' },
+    { label: t('deliveryDetails', 'Delivery & Gestation'), value: deliveryDisplay || '—' },
     { label: t('sexOfBaby', 'Sex of Baby'), value: getFormObs(AIIMS_EXAMINATION_INFANT_FORM_UUID, CONCEPTS.sexOfBaby) || '—' },
     { label: t('weightOfBaby', 'Birth Weight'), value: getFormObs(AIIMS_EXAMINATION_INFANT_FORM_UUID, CONCEPTS.weightOfBaby) ? `${getFormObs(AIIMS_EXAMINATION_INFANT_FORM_UUID, CONCEPTS.weightOfBaby)} kg` : '—' },
     { label: t('apgarScore', 'APGAR Score'), value: getFormObs(AIIMS_EXAMINATION_INFANT_FORM_UUID, CONCEPTS.apgarScore) ? `${getFormObs(AIIMS_EXAMINATION_INFANT_FORM_UUID, CONCEPTS.apgarScore)} / 10` : '—' },
@@ -322,7 +454,7 @@ export default function IvfSummaryDashboard({
     <div className={styles.summaryContainer}>
       <div className={styles.header}>
         <h2 className={styles.title}>{t('ivfSummaryDashboardTitle', 'AIIMS Comprehensive IVF Summary')}</h2>
-        <p className={styles.subtitle}>{t('ivfSummarySubtitle', 'Consolidated clinical parameters across all 34 reproductive medicine intake and procedure modules')}</p>
+        <p className={styles.subtitle}>{t('ivfSummarySubtitle', 'Consolidated clinical parameters across all 35 reproductive medicine intake and procedure modules')}</p>
       </div>
 
       {/* Domain 1: Patient Infertility & Prior History */}

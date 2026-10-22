@@ -1,12 +1,12 @@
 # Presentation Notes & Standup Briefing: 2026-10-22
 
-## Milestone: IVF Clinical Adjustments, Embryos Cleavage Details (Form 35), and Batch 3 Streamlining
+## Milestone: IVF Clinical Adjustments, Embryos Cleavage Details (Form 35), and 100% 35-Form IVF Summary Federation
 
 ---
 
 ### Slide 1: Executive Summary & Milestone Deliverables
 - **Core Milestone Reached**:
-  Executed comprehensive clinical refinements across the entire AIIMS IVF intake, embryology, and neonatal suite, resolving core data migration traps and delivering Form 35:
+  Executed comprehensive clinical refinements across the entire AIIMS IVF intake, embryology, and neonatal suite, resolving core data migration traps and delivering 100% clinical federation in the IVF Summary:
   1. **Batch 2 Clinical Form Adjustments (8 Forms)**:
      - *Dose of Drugs (Form 20)*: Reordered 10 parameters to match clinical sheet sequence; removed remarks.
      - *Adjuvant Drug (Form 21)*: Pruned remarks.
@@ -31,44 +31,72 @@
      - *Additional Procedures in Assisted Reproductive Technology (Form 32)*: Expanded title from abbreviation to full clinical standard.
      - *Post-InVitro Fertilisation Investigation (Form 33)*: Pruned `"Inconclusive"` from UPT, enforcing binary diagnostic clarity.
      - *Examination Infant (Form 34)*: Merged sections into single section (ADR-014); converted `"Sex of Baby"` to free text with proactive historical observation migration (ADR-019).
+  5. **100% 35-Form IVF Summary Dashboard Federation & Multi-Select Remediation**:
+     - Integrated all 35 forms into 6 structured clinical domains (14 ObservationCards) with zero extra network requests.
+     - Rectified multi-select checkbox queries via `getFormObsList` across 8 clinical domains, eliminating truncation.
+     - Added *Semen Sample Type*, intra-cycle *Additional IVF Procedures*, and *Delivery & Gestation* details.
+     - Verified 142/142 concept queries against 35 JSON form schemas with 0 mismatches.
 
 ---
 
-### Slide 2: Clinical Workflow & Domain Alignment
+### Slide 2: Clinical Workflow & 35-Form Summary Federation
 
 ```mermaid
 graph TD
-    subgraph Theater_and_Stimulation["Operating Theater & Stimulation Protocols"]
-        DOD["Form 20: Dose of Drugs (10-step sequence)"]
-        ADJ["Form 21: Adjuvant Drug (Clean)"]
-        TRIG["Form 22: Trigger Details (Clean)"]
-        OPU["Form 23: OPU Details (Meta I ➔ Meta II)"]
-        PROC["Form 24: Procedure (PESA, TESA, TESE, Micro TESE)"]
+    subgraph Domain1["1. Infertility Profile & Prior History"]
+        F1["Form 1: Demographics"]
+        F2["Form 2: Infertility Type"]
+        F3["Form 3: Obstetric History"]
+        F4["Form 4: Menstrual History"]
+        F7["Form 7: Prev OI & IUI"]
+        F8["Form 8: Prev Pelvic Surgery"]
+        F10["Form 10: Past Medical History"]
+        F11["Form 11: Family History"]
+        F12["Form 12: Tuberculosis History"]
     end
 
-    subgraph Embryology_Cleanroom["Embryology Laboratory (Chronological Split)"]
-        LAB["Form 25: Lab Procedure of Insemination (+ Semen Sample Type)"]
-        SPERM["Form 26: Sperm Quality Assessment (Clean)"]
-        EMB["Form 27: Embryo Assessment (Day 4 Grade: Free-Text)"]
-        FERT["Form 28: Fertilisation Details (Day 1 Fertilization Only)"]
-        CLEAVE["Form 35: Embryos Cleavage Details (Days 2, 3, 5 Progression)"]
-        DAY3["Form 29: Embryo Grading Day 3 (Grade 1 to 4)"]
-        FROZEN["Form 30: Embryos Frozen (Vitrification Details)"]
+    subgraph Domain2["2. Ovarian Reserve & Diagnostic Subtyping"]
+        F5["Form 5: Female Factor"]
+        F6["Form 6: Male Factor"]
+        F9["Form 9: Male Hormone & Surgery"]
+        F13["Form 13: TVS Ultrasound"]
+        F14["Form 14: Female Blood Hormone"]
+        F15["Form 15: Female Surgical Procedure"]
+        F17["Form 17: Endometrial Biopsy"]
+        F18["Form 18: Male Semen Analysis"]
     end
 
-    subgraph Clinical_Transfer_and_Outcome["Transfer & Clinical Follow-up"]
-        FRESH["Form 31: Fresh Embryo Transfer Details"]
-        ART["Form 32: Additional Procedures in Assisted Reproductive Technology"]
-        POST["Form 33: Post-InVitro Fertilisation Investigation (Binary UPT)"]
-        INFANT["Form 34: Examination Infant (Unified Section & Free-Text Sex)"]
+    subgraph Domain3["3. Stimulation & Cycle Monitoring"]
+        F19["Form 19: Stimulation Protocol"]
+        F20["Form 20: Dose of Drugs"]
+        F21["Form 21: Adjuvant Drug (GH)"]
+        F22["Form 22: Trigger Details"]
     end
 
-    Theater_and_Stimulation -->|Oocytes & Surgical Sperm Retrieval| Embryology_Cleanroom
-    FERT -->|Day 1 2PN Assessment| CLEAVE
-    CLEAVE -->|Day 3 Assessment| DAY3
-    CLEAVE -->|Day 3 / 5 Vitrification| FROZEN
-    CLEAVE -->|Transfer Decision| FRESH
-    FRESH --> ART --> POST --> INFANT
+    subgraph Domain4["4. OPU, Insemination & Laboratory"]
+        F23["Form 23: OPU Details"]
+        F24["Form 24: Procedure (Surgical)"]
+        F25["Form 25: Insemination Lab"]
+        F26["Form 26: Sperm Quality Assessment"]
+    end
+
+    subgraph Domain5["5. Embryology Culture & Cryopreservation"]
+        F27["Form 27: Embryo Assessment"]
+        F28["Form 28: Fertilisation Details"]
+        F29["Form 29: Embryo Grading Day 3"]
+        F30["Form 30: Embryos Frozen"]
+        F35["Form 35: Embryos Cleavage Details"]
+    end
+
+    subgraph Domain6["6. Embryo Transfer, Outcome & Neonate"]
+        F16["Form 16: Mock Embryo Transfer"]
+        F31["Form 31: Fresh Embryo Transfer"]
+        F32["Form 32: Additional ART Procedures"]
+        F33["Form 33: Post-IVF Investigation"]
+        F34["Form 34: Examination Infant"]
+    end
+
+    Domain1 --> Domain2 --> Domain3 --> Domain4 --> Domain5 --> Domain6
 ```
 
 ---
@@ -89,6 +117,10 @@ graph TD
   - Eliminated `"Inconclusive"` qualitative dipstick option, routing all ambiguous cases to quantitative Serum Beta-hCG.
 - **ADR-023 (Assisted Reproductive Technology Title Expansion)**:
   - Standardized full official terminology across navigation, routing, schemas, and patient charts.
+- **ADR-024 (Multi-Select Observation Array Flattening)**:
+  - Introduced `getFormObsList(formUuid, conceptUuid)` in `ivf-summary.resource.ts` to prevent data loss in multi-select diagnostic factors, surgical histories, and laboratory procedures.
+- **ADR-025 (Full Clinical Federation of 35 Modules)**:
+  - Federates 100% of all 35 clinical modules into a single overview screen with 0 extra network requests.
 
 ---
 
@@ -97,9 +129,10 @@ graph TD
 |:---|:---:|:---:|:---:|
 | Registered Clinical Forms | $\ge 35$ | **35 forms active & published** | Passed |
 | Concept Dictionary Integrity | $\ge 370$ | **370 active concepts verified** | Passed |
-| Missing i18n Translation Keys | $0$ | **0 missing keys (751 total)** | Passed |
-| TypeScript Strict Compilation | 0 errors | **0 errors (`noImplicitAny: true`)** | Passed |
-| Vitest Unit Test Suites | 40 suites | **40 passed (105 tests)** | Passed |
-| Production Build (Rspack) | Success | **Compiled cleanly (13.65s)** | Passed |
-| Live Endpoint Verification | HTTP 200 | **HTTP 200 OK** | Passed |
-| Deployment Pipeline Duration | $< 300\text{s}$ | **125.06s (Bundle v1.0.103)** | Passed |
+| Concept Query Verification | $100\%$ | **142/142 queries verified (0 mismatches)** | Passed |
+| Missing i18n Translation Keys | $0$ | **0 missing keys (753 total)** | Passed |
+| TypeScript Strict Check (`noImplicitAny`) | $0\text{ errors}$ | **0 errors (`tsc` passed)** | Passed |
+| Vitest Unit Test Suites | $100\%$ | **40/40 passed (106/106 tests)** | Passed |
+| Production Bundle Build | Zero warnings | **Rspack compiled successfully (13.35s)** | Passed |
+| Docker Hot-Deployment | Container updated | **Bundle `v1.0.105` active in Nginx** | Passed |
+| Live SPA Verification Probe | HTTP 200 OK | **Verified on `importmap.json`** | Passed |

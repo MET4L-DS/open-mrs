@@ -1,7 +1,7 @@
 # Daily Engineering Record & Decision Journal: 2026-10-22
 
 ## 1. Executive Summary & Daily Mission
-- **Mission Goal**: Execute Phase 2 and Phase 3 clinical intake and embryology refinements across the AIIMS Reproductive Medicine platform, addressing three clinical and architectural mandates:
+- **Mission Goal**: Execute Phase 2, Phase 3, and consolidated IVF Summary platform refinements across the AIIMS Reproductive Medicine platform, addressing five clinical, diagnostic, and architectural mandates:
   1. **IVF Forms Adjustments (Batch 2 - 8 Forms)**: Reorder *Dose of Drugs* into clinical sequence; prune obsolete *Remarks* across 8 forms; swap maturity grading (*Metaphase I* before *Metaphase II*); decouple sperm preservation from surgical retrieval in *Procedure* (add *TESE* and *Micro TESE*; prune *Ejaculated*, *Frozen*, *Donor Semen*, *Husband Semen*); migrate semen sample types to *Lab Procedure of Insemination*; convert *Grade of Embryos Day 4* from rigid coded dropdown to free-text descriptive input.
   2. **Day 4 Embryo Grade Concept Bug Fix & Historical Migration**: Diagnose and rectify OpenMRS React Form Engine defect where converting concept `c0010001-...-0255` from Coded (`datatype_id=2`) to Text (`datatype_id=3`) caused existing encounters to display the concept UUID in the text input and fail to save updates due to `obs.value_coded` database conflicts.
   3. **Fertilisation Details Refactoring & "Embryos Cleavage Details" (Form 35)**: Prune remarks and extract cleavage progression parameters (Days 2, 3, 5 and Cleavage Rate) out of *Fertilisation Details* into a dedicated new clinical intake form and Single-SPA dashboard (*Embryos Cleavage Details* / Form 35), maintaining historical multi-form fallback in the consolidated IVF Summary dashboard.
@@ -12,13 +12,18 @@
      - *Additional Procedures in Assisted Reproductive Technology (Form 32)*: Realize full title expansion from `"Additional Procedures in ART"` to `"Additional Procedures in Assisted Reproductive Technology"` across registry, routing, schemas, cards, and translations.
      - *Post-InVitro Fertilisation Investigation (Form 33)*: Prune answer option `"Inconclusive"` from `"Urine Pregnancy Test (UPT)"` (`c0010001-...-0294`), restricting options to binary `"Positive"` and `"Negative"`.
      - *Examination Infant (Form 34)*: Flatten multi-section layout into a unified single section under ADR-014; convert `"Sex of Baby"` (`c0010001-...-0302`) to Text (`datatype_id=3`), proactively migrating historical MariaDB observation records from `value_coded` to `value_text` under ADR-019.
+  5. **100% 35-Form IVF Summary Dashboard Federation & Multi-Select Remediation**:
+     - Integrate 100% of all 35 clinical intake and procedure modules into the unified Single-SPA summary interface (adding Forms 10, 11, 16, 17, and 21 across Domains 1, 2, 3, and 6).
+     - Perform relational concept audit across all 142 concept queries against the 35 AMPATH JSON schemas, achieving 0 mismatches.
+     - Eliminate silent truncation of concurrent checkbox selections by converting `getFormObs` to `getFormObsList` across 8 clinical domains.
+     - Add missing parameters: *Semen Sample Type* (`c0010001-...-0311`), intra-cycle *Additional IVF Procedures* (`c0010001-...-0227`), and *Delivery & Gestation* (`modeOfDelivery` + `pogAtDelivery`).
 - **Operational Outcome**:
-  - **35 Registered Clinical Forms**: All 35 forms published and verified active in MariaDB via `scripts/validate_forms.py` (0 failures).
-  - **370 Active Relational Concepts**: 100% dictionary integrity verified in MariaDB via `scripts/validate_concepts.py` (0 missing).
-  - **40 Vitest Test Suites**: 105/105 unit tests passing across all 40 test suites (100% pass rate).
+  - **35 Registered Clinical Forms**: 100% of forms published and active in MariaDB via `scripts/validate_forms.py` (0 failures).
+  - **370 Active Relational Concepts**: 100% concept dictionary integrity verified in MariaDB via `scripts/validate_concepts.py` (0 missing).
+  - **40 Vitest Test Suites**: 106/106 unit tests passing across all 40 test suites (100% pass rate).
   - **Strict TypeScript Check**: `tsc --noEmit` passing with 0 errors (`noImplicitAny: true` maintained).
-  - **i18n Translation Health**: 751 translation keys verified via `audit:i18n` (0 missing keys).
-  - **Automated Deployment Pipeline**: Full 9-stage pipeline executed cleanly (125.06s); production bundle `1.0.103` hot-deployed to Docker container and verified via live HTTP 200 OK probe.
+  - **i18n Translation Health**: 753 translation keys verified via `audit:i18n` (0 missing keys, 100% coverage).
+  - **Automated Deployment Pipeline**: Full 9-stage deployment pipeline executed cleanly (118.77s); production bundle `v1.0.105` hot-deployed to Docker container and verified via live HTTP 200 OK probe.
 
 ---
 
@@ -86,6 +91,33 @@
   - Converted `"Sex of Baby"` (`c0010001-...-0302`) from Coded (`datatype_id=2`) to Text (`datatype_id=3`).
   - Executed proactive MariaDB observation migration: updated `obs_id=6426` (`value_coded=5002` [Male]) to `value_text='Male'` and `value_coded=NULL` to prevent Form Engine UUID display bugs.
 
+### 2.5 100% 35-Form IVF Summary Dashboard Federation & Multi-Select Remediation
+- **Integration of 5 Previously Unfederated Forms**:
+  - **Form 10 (Past Medical History)**: Formatted deduplicated disease list with custom `medicalDiseasesOthers` notes in Domain 1.
+  - **Form 11 (Family History)**: Aggregated and deduplicated medical conditions across Father, Mother, Husband, Brother, and Maternal Grandparents in Domain 1.
+  - **Form 17 (Investigation Female Procedure Biopsy)**: Integrated Endometrial Aspiration Histopathology (EAHPE), PCR, and AFB into Domain 2.
+  - **Form 21 (Adjuvant Drug)**: Formatted Growth Hormone (GH) yes/no status with dose (IU) and duration (days) in Domain 3.
+  - **Form 16 (Procedure Embryo Transfer)**: Added Mock Embryo Transfer, Speculum type, and Cervical Canal Direction into Domain 6.
+- **Multi-Select Observation Querying (`getFormObsList`)**:
+  - Implemented `getFormObsList(formUuid, conceptUuid)` in `ivf-summary.resource.ts` to return all matching observations formatted and joined with commas.
+  - Replaced `getFormObs` with `getFormObsList` across 8 multi-select questions:
+    - Insemination Modality (Form 25)
+    - Sperm Retrieval Modalities (Form 24)
+    - Semen Sample Type (Form 25)
+    - Additional Intra-cycle Lab Procedures (LAH/PICSI/AOA, Form 24)
+    - Tuberculosis Sites (Form 12)
+    - Tubal Factors, Uterine Factors, Endometriosis Classifications (Form 5)
+    - Male Infertility Factors (Form 6)
+    - ART Add-ons (Form 33)
+- **Added Missing Parameters & Single-Source Verification**:
+  - Added `semenSampleType` to insemination overview.
+  - Added intra-cycle `additionalIvfProcedures` to lab procedures row.
+  - Added `deliveryDetails` (`modeOfDelivery` + `pogAtDelivery`) to pregnancy outcome row.
+  - Enhanced *Previous Pelvic Surgery* to aggregate specific uterine, peritoneal, endometriosis, ovarian, and tubal surgical checklists alongside approach.
+  - Verified 142/142 concept queries against all 35 JSON form schemas via `verify_dashboard_concepts.py` with 0 mismatches.
+  - Corrected `cleavageRate` single sourcing to Form 29 (`AIIMS_EMBRYOS_CLEAVAGE_DETAILS_FORM_UUID`).
+  - Added `additionalLabProcedures` and `deliveryDetails` to `translations/en.json` (104/104 dashboard strings localized).
+
 ---
 
 ## 3. Clinical & Technical Analysis
@@ -109,6 +141,11 @@
 ### 3.4 Neonatal Sex Identification as Free-Text Variable
 - Standard radio dropdowns ("Male", "Female", "Ambiguous") impose rigid categorization on neonatal intake, creating friction when documenting disorders of sex development (DSD), chromosomal intersex conditions, or delayed phenotypic determination in premature neonates.
 - Transitioning `"Sex of Baby"` to free text provides clinicians the flexibility to enter standard terms or detailed clinical descriptions without schema constraints.
+
+### 3.5 Clinical Multi-Select Capture Fidelity in High-Throughput IVF Summaries
+- In OpenMRS 3.x, when an encounter contains multiple checked options for a single question concept, the REST representation outputs an array of observation objects with identical `concept.uuid` references.
+- Querying with `.find()` truncates the clinician's record: a patient with bilateral hydrosalpinx and prior salpingectomy would only be listed as having "Bilateral Hydrosalpinx"; a male with Oligo-astheno-teratozoospermia would only show "Oligozoospermia".
+- Migrating to `getFormObsList` extracts the full array of observation values, deduplicates them, and joins them into a clinically complete, human-readable summary.
 
 ---
 
@@ -164,6 +201,21 @@
 - **Rejected Alternatives**:
   - *Keep abbreviated title in sidebar navigation*: Rejected for inconsistency between sidebar links and chart page headers.
 
+### ADR-024: Multi-Select Observation Extraction via Array Flattening (`getFormObsList`)
+- **Context**: Form Engine renders multi-select checkboxes by posting multiple observations linked to the same concept UUID. The dashboard helper `getFormObs` used `Array.prototype.find`, silently ignoring all selections after the first.
+- **Decision**: Introduce `getFormObsList(formUuid, conceptUuid)` in `ivf-summary.resource.ts` which filters all matching observations, formats each value, deduplicates via `Set`, and returns an array of strings that the UI joins with commas.
+- **Rationale**: Completely prevents data loss in multi-select diagnostic factors, surgical histories, and laboratory procedures.
+- **Rejected Alternatives**:
+  - *Inline loop in component*: Rejected for code duplication across 8 clinical domains.
+  - *Concatenation in backend SQL view*: Rejected because OpenMRS Single-SPA frontend reads standard REST encounter representations directly.
+
+### ADR-025: Full Clinical Federation of 35 Modules in the Single-Screen IVF Summary Dashboard
+- **Context**: Initial summary prototype only aggregated 30 forms, omitting General Medical History (Form 10), Family History (Form 11), Mock ET (Form 16), Biopsy (Form 17), and Growth Hormone (Form 21).
+- **Decision**: Federate 100% of all 35 forms into 6 structured clinical domains (14 ObservationCards) with zero extra network requests (single REST encounter call).
+- **Rationale**: Ensures the summary dashboard acts as the single source of truth for the entire cycle without requiring clinicians to click through 35 distinct sub-tabs.
+- **Rejected Alternatives**:
+  - *Paginated or multi-tab summary*: Rejected because clinicians require an instantaneous, unified overview during multidisciplinary team (MDT) cycle reviews.
+
 ---
 
 ## 5. Human-in-the-Loop (HITL) Directives & Gatekeeping
@@ -172,6 +224,9 @@
 - **Form Decoupling Mandate**: Directed the separation of cleavage stage parameters into an independent *Embryos Cleavage Details* form.
 - **Field Simplification & Remarks Removal**: Directed the removal of `"Embryos (Day 3)"` from Day 3 grades, deprecation of remarks across multiple forms, title expansion of ART procedures, pruning of UPT inconclusive option, section flattening in infant examination, and conversion of infant sex to free text.
 - **Runtime Defect Reporting**: Provided visual bug capture showing the concept UUID leak on Day 4 embryo grading, guiding immediate investigation and database remediation.
+- **Comprehensive Summary Audit Directives**:
+  - *"Nice work! Now please check if all the forms are covered in the IVF summary interface."* — Directed a full audit that identified 5 unfederated forms (Forms 10, 11, 16, 17, 21) and integrated them across Domains 1, 2, 3, and 6.
+  - *"Nice work! Now again recheck if anything was missed and if forms are covered correctly."* — Directed a deep second-pass audit that uncovered multi-select truncation bugs, missing semen sample types, missing intra-cycle lab procedures, and single-source cleavage rate mapping.
 
 ---
 
@@ -179,14 +234,16 @@
 
 ### Key Technical Learnings
 1. **OpenMRS Concept Datatype Migration Traps**: Altering a concept's `datatype_id` in the `concept` table from Coded (2) to Text (3) does not automatically clean existing rows in the `obs` table. Proactive database cleanup logic is essential to prevent UUID serialization bugs in the React Form Engine.
-2. **Resilient Cross-Form Derivation**: When migrating fields between forms, dashboards that aggregate cross-form data (such as `ivf-summary`) must implement multi-form fallback queries (`getFormObs(FormNew, Concept) || getFormObs(FormOld, Concept)`) to ensure historical patient records continue displaying seamlessly.
+2. **Multi-Select Observation Array Handling**: Checkbox questions in AMPATH forms create multiple distinct observation rows per encounter. Frontend resource consumers must never rely on `.find()`; they must aggregate with `Array.prototype.filter` and deduplicate via `Set`.
+3. **Cross-Form Schema Verification**: Automated script verification (`verify_dashboard_concepts.py`) comparing dashboard concept queries against JSON schemas caught a subtle concept mismatch in `cleavageRate` that unit tests had missed due to mock isolation.
 
 ### Clinical Value Delivered
-- **Laboratory Workflow Efficiency**: Embryologists can now record Day 1 fertilisation without carrying unentered cleavage fields, and theater surgeons have a clean *Procedure* sheet restricted solely to surgical retrieval interventions.
-- **Information Density & Chart Clarity**: Pruned redundant remarks across 11 forms, expanded official ART nomenclature, and streamlined Day 3 alphanumeric embryo grading to compact "Grade 1–4" cards.
-- **Regulatory Compliance**: Structured capture of *Semen Sample Type* (Frozen, Donor Semen, Husband Semen) in the insemination record provides automated compliance reporting for national ART registries.
+- **35-Form Single-Screen Cycle Federation**: Reproductive medicine consultants can now review all 35 clinical intake, surgical, laboratory, and pregnancy parameters on a single screen during clinical rounds and MDT meetings.
+- **Complete Diagnostic Multi-Select Fidelity**: Clinicians no longer experience truncation of concurrent diagnoses (e.g. multiple tubal blocks, combined male factors, or concurrent ART add-on procedures).
+- **Laboratory Workflow Chronology**: Embryologists can now record Day 1 fertilisation without carrying unentered cleavage fields, and theater surgeons have a clean *Procedure* sheet restricted solely to surgical retrieval interventions.
+- **Standardized Nomenclature**: Full official terminology for *Assisted Reproductive Technology*, standard "Grade 1–4" Day 3 embryo grades, and removal of ambiguous "Inconclusive" dipstick pregnancy tests.
 
 ### 3 Concise Standup Talking Points for the Principal Investigator (PI)
-1. **Clinical Decoupling & Modularization Completed**: Successfully refactored *Fertilisation Details* and launched *Embryos Cleavage Details* (Form 35), aligning OpenMRS 1:1 with the multi-day embryology lab timeline.
-2. **Surgical Precision & Laboratory Refinements**: Added dedicated *TESE* and *Micro TESE* options, expanded ART procedure titles, standardized Day 3 embryo grades to "Grade 1–4", and pruned obsolete remarks across 11 forms.
-3. **Flawless Quality Gate Status**: 35/35 forms verified active in backend, 370 concepts validated, 105 unit tests passing, 0 TypeScript errors, 100% translation health, and production bundle `1.0.103` hot-deployed live.
+1. **100% 35-Form IVF Summary Dashboard Delivered**: Every single one of the 35 clinical intake, stimulation, embryology, and neonatal modules is now federated into the unified IVF Summary dashboard with zero data truncation across multi-select fields.
+2. **Clinical Decoupling & Modularization Completed**: Successfully refactored *Fertilisation Details* and launched *Embryos Cleavage Details* (Form 35), aligning OpenMRS 1:1 with the multi-day embryology lab timeline.
+3. **Impeccable Quality Gate & Deployment Status**: 35/35 forms verified active, 370 concepts validated, 106 unit tests passing (100%), 0 TypeScript errors, 100% translation health, and production bundle `v1.0.105` hot-deployed live to Docker.

@@ -67,6 +67,13 @@ export function useIvfSummary(patientUuid?: string) {
     return item ? formatObsValue(item.value) : undefined;
   };
 
+  const getFormObsList = (formUuid: string, conceptUuid: string): string[] => {
+    const enc = summaryData.encountersByForm[formUuid];
+    if (!enc || !enc.obs) return [];
+    const items = enc.obs.filter(o => o.concept?.uuid === conceptUuid);
+    return Array.from(new Set(items.map(o => formatObsValue(o.value)).filter(Boolean)));
+  };
+
   return {
     summaryData,
     encounters,
@@ -74,5 +81,6 @@ export function useIvfSummary(patientUuid?: string) {
     error,
     mutate,
     getFormObs,
+    getFormObsList,
   };
 }

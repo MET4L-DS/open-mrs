@@ -33,6 +33,7 @@ describe('IvfSummaryDashboard', () => {
       error: undefined,
       mutate: vi.fn(),
       getFormObs: vi.fn(),
+      getFormObsList: vi.fn().mockReturnValue([]),
     });
 
     render(<IvfSummaryDashboard patientUuid="patient-1" />);
@@ -59,6 +60,7 @@ describe('IvfSummaryDashboard', () => {
       error: undefined,
       mutate: vi.fn(),
       getFormObs: (formUuid: string) => (formUuid.includes('80930653') ? '30' : undefined),
+      getFormObsList: () => [],
     });
 
     render(<IvfSummaryDashboard patientUuid="patient-1" />);
@@ -69,5 +71,44 @@ describe('IvfSummaryDashboard', () => {
     expect(screen.getByText('4. OPU, Insemination & Laboratory Procedures')).toBeInTheDocument();
     expect(screen.getByText('5. Embryology Culture & Cryopreservation')).toBeInTheDocument();
     expect(screen.getByText('6. Embryo Transfer, Pregnancy Outcome & Neonate')).toBeInTheDocument();
+  });
+
+  it('renders multi-select observations and new procedure/delivery fields correctly', () => {
+    vi.spyOn(resource, 'useIvfSummary').mockReturnValue({
+      summaryData: {
+        patientUuid: 'patient-1',
+        encountersCount: 5,
+        latestEncounterDate: '2026-10-15T10:00:00.000Z',
+        hasAnyData: true,
+        encountersByForm: {},
+      },
+      encounters: [],
+      isLoading: false,
+      error: undefined,
+      mutate: vi.fn(),
+      getFormObs: (formUuid: string, conceptUuid: string) => {
+        if (conceptUuid === 'c0010001-0000-0000-0000-000000000300') return 'Cesarean section';
+        if (conceptUuid === 'c0010001-0000-0000-0000-000000000301') return '38';
+        return undefined;
+      },
+      getFormObsList: (_formUuid: string, conceptUuid: string) => {
+        if (conceptUuid === 'c0010001-0000-0000-0000-000000000311') return ['Husband Semen (HS)', 'Frozen'];
+        if (conceptUuid === 'c0010001-0000-0000-0000-000000000227') return ['Laser Assisted Hatching (LAH)', 'Physiological Intracytoplasmic Sperm Injection (PICSI)'];
+        if (conceptUuid === 'c0010001-0000-0000-0000-000000000222') return ['In vitro Fertilisation (IVF)', 'IntraCytoplasmic Sperm Injection (ICSI)'];
+        if (conceptUuid === 'c0010001-0000-0000-0000-000000000225') return ['Percutaneous Epididymal Sperm Aspiration (PESA)', 'Testicular Sperm Aspiration (TESA)'];
+        return [];
+      },
+    });
+
+    render(<IvfSummaryDashboard patientUuid="patient-1" />);
+
+    // Multi-select insemination and procedure fields
+    expect(screen.getByText('Husband Semen (HS), Frozen')).toBeInTheDocument();
+    expect(screen.getByText('Laser Assisted Hatching (LAH), Physiological Intracytoplasmic Sperm Injection (PICSI)')).toBeInTheDocument();
+    expect(screen.getByText('In vitro Fertilisation (IVF), IntraCytoplasmic Sperm Injection (ICSI)')).toBeInTheDocument();
+    expect(screen.getByText('Percutaneous Epididymal Sperm Aspiration (PESA), Testicular Sperm Aspiration (TESA)')).toBeInTheDocument();
+
+    // Delivery & gestation row
+    expect(screen.getByText('Cesarean section (38 wks)')).toBeInTheDocument();
   });
 });
