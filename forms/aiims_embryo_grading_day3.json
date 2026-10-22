@@ -16,7 +16,7 @@
           "isExpanded": true,
           "questions": [
             {
-              "label": "Grade 1 Embryos (Day 3)",
+              "label": "Grade 1",
               "type": "obs",
               "id": "grade_1_embryos_day3",
               "required": "false",
@@ -26,7 +26,7 @@
               }
             },
             {
-              "label": "Grade 2 Embryos (Day 3)",
+              "label": "Grade 2",
               "type": "obs",
               "id": "grade_2_embryos_day3",
               "required": "false",
@@ -36,7 +36,7 @@
               }
             },
             {
-              "label": "Grade 3 Embryos (Day 3)",
+              "label": "Grade 3",
               "type": "obs",
               "id": "grade_3_embryos_day3",
               "required": "false",
@@ -46,7 +46,7 @@
               }
             },
             {
-              "label": "Grade 4 Embryos (Day 3)",
+              "label": "Grade 4",
               "type": "obs",
               "id": "grade_4_embryos_day3",
               "required": "false",

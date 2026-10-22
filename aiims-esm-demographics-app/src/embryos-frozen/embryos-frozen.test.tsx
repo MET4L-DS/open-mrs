@@ -53,7 +53,6 @@ describe('EmbryosFrozenCard', () => {
       gradeCEmbryosVitrified: '1 (Straw 2: 6C/C)',
       numberDay5EmbryosVitrified: '2',
       gradeDay5EmbryosVitrified: '4AA, 3BB',
-      embryosFrozenRemarks: 'Vitrified in LN2 Tank 3, Canister 2, Goblet Red',
     };
 
     render(<EmbryosFrozenCard data={mockData} />);
@@ -69,7 +68,6 @@ describe('EmbryosFrozenCard', () => {
     expect(screen.getByText(/2\s+embryos/)).toBeInTheDocument();
     expect(screen.getByText('Grade of Day 5 Embryos Vitrified')).toBeInTheDocument();
     expect(screen.getByText('4AA, 3BB')).toBeInTheDocument();
-    expect(screen.getByText('Vitrified in LN2 Tank 3, Canister 2, Goblet Red')).toBeInTheDocument();
   });
 });
 

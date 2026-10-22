@@ -9,14 +9,14 @@
   "referencedForms": [],
   "pages": [
     {
-      "label": "Additional Procedures in ART",
+      "label": "Additional Procedures in Assisted Reproductive Technology",
       "sections": [
         {
-          "label": "Additional Procedures in ART",
+          "label": "Additional Procedures in Assisted Reproductive Technology",
           "isExpanded": true,
           "questions": [
             {
-              "label": "Additional Procedures in ART",
+              "label": "Additional Procedures in Assisted Reproductive Technology",
               "type": "obs",
               "id": "additional_procedures_art",
               "required": "false",

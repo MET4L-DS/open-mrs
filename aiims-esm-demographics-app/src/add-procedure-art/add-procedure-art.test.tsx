@@ -39,7 +39,7 @@ vi.mock('../shared/components', async () => {
 describe('AddProcedureArtCard', () => {
   it('renders card titles and placeholders when data is empty', () => {
     render(<AddProcedureArtCard data={null} />);
-    expect(screen.getAllByText('Additional Procedures in ART').length).toBeGreaterThanOrEqual(1);
+    expect(screen.getAllByText('Additional Procedures in Assisted Reproductive Technology').length).toBeGreaterThanOrEqual(1);
     expect(screen.getByText('Clinical Notes & Remarks')).toBeInTheDocument();
   });
 
@@ -81,7 +81,7 @@ describe('AddProcedureArtDashboard', () => {
 
     render(<AddProcedureArtDashboard patientUuid="patient-1" />);
     expect(
-      screen.getByText('No Additional Procedures in ART encounter recorded yet')
+      screen.getByText('No Additional Procedures in Assisted Reproductive Technology encounter recorded yet')
     ).toBeInTheDocument();
   });
 });

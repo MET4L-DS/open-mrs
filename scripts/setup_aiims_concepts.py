@@ -608,7 +608,6 @@ additional_art_procedure_answers = [
 upt_result_answers = [
     ("c0010002-0000-0000-0000-000000001136", "Positive"),
     ("c0010002-0000-0000-0000-000000001137", "Negative"),
-    ("c0010002-0000-0000-0000-000000001138", "Inconclusive"),
 ]
 
 post_ivf_outcome_answers = [
@@ -1227,7 +1226,7 @@ full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000300", "Mode
 full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000301", "Period of Gestation at Delivery", datatype_id=1, class_id=7, is_numeric=True, units="weeks", allow_decimal=1, low_abs=10, hi_abs=45))
 
 # Examination Infant Concepts (Form 34: 0302-0304)
-full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000302", "Sex of Baby", datatype_id=2, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000302", "Sex of Baby", datatype_id=3, class_id=7))
 full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000303", "Weight of Baby", datatype_id=1, class_id=7, is_numeric=True, units="kg", allow_decimal=1, low_abs=0.3, hi_abs=8.0))
 full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000304", "APGAR Score", datatype_id=1, class_id=7, is_numeric=True, units="score", allow_decimal=0, low_abs=0, hi_abs=10))
 
@@ -1835,6 +1834,18 @@ UPDATE concept SET datatype_id = 2 WHERE uuid IN (
 );
 UPDATE concept SET datatype_id = 3 WHERE uuid = 'c0010001-0000-0000-0000-000000000255';
 DELETE FROM concept_answer WHERE concept_id = (SELECT concept_id FROM concept WHERE uuid = 'c0010001-0000-0000-0000-000000000255');
+
+-- Sex of Baby (0302): migrate Coded to Text and preserve historical obs
+UPDATE concept SET datatype_id = 3 WHERE uuid = 'c0010001-0000-0000-0000-000000000302';
+DELETE FROM concept_answer WHERE concept_id = (SELECT concept_id FROM concept WHERE uuid = 'c0010001-0000-0000-0000-000000000302');
+UPDATE obs o
+JOIN concept_name cn ON o.value_coded = cn.concept_id AND cn.locale = 'en' AND cn.concept_name_type = 'FULLY_SPECIFIED'
+SET o.value_text = cn.name, o.value_coded = NULL
+WHERE o.concept_id = (SELECT concept_id FROM concept WHERE uuid = 'c0010001-0000-0000-0000-000000000302');
+
+-- UPT Result (0294): remove Inconclusive answer (1138)
+DELETE FROM concept_answer WHERE concept_id = (SELECT concept_id FROM concept WHERE uuid = 'c0010001-0000-0000-0000-000000000294')
+AND answer_concept = (SELECT concept_id FROM concept WHERE uuid = 'c0010002-0000-0000-0000-000000001138');
 """)
 
 # Grade of Embryos Day 2 (0251)
@@ -1904,10 +1915,7 @@ for ans_uuid, _ in post_ivf_complications_answers:
 for ans_uuid, _ in mode_of_delivery_answers:
     full_script.append(add_answer_sql("c0010001-0000-0000-0000-000000000300", ans_uuid))
 
-# Form 34: Examination Infant Answers
-# Sex of Baby (0302)
-for ans_uuid, _ in baby_sex_answers:
-    full_script.append(add_answer_sql("c0010001-0000-0000-0000-000000000302", ans_uuid))
+# Form 34: Examination Infant Answers (Sex of Baby is Text - no coded answers)
 
 # Form 13: TVS Ultrasound Adjustments Answers
 # Endometrial Vascularity (0305)

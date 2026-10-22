@@ -40,7 +40,7 @@ describe('EmbryoGradingDay3Card', () => {
   it('renders card title correctly', () => {
     render(<EmbryoGradingDay3Card data={null} />);
     expect(screen.getByText('Embryo Grading Day 3')).toBeInTheDocument();
-    expect(screen.getByText('Grade 1 Embryos (Day 3)')).toBeInTheDocument();
+    expect(screen.getByText('Grade 1')).toBeInTheDocument();
   });
 
   it('renders all alphanumeric grade values correctly when data is provided', () => {
@@ -54,13 +54,13 @@ describe('EmbryoGradingDay3Card', () => {
     };
 
     render(<EmbryoGradingDay3Card data={mockData} />);
-    expect(screen.getByText('Grade 1 Embryos (Day 3)')).toBeInTheDocument();
+    expect(screen.getByText('Grade 1')).toBeInTheDocument();
     expect(screen.getByText('8C/A, 8C/B')).toBeInTheDocument();
-    expect(screen.getByText('Grade 2 Embryos (Day 3)')).toBeInTheDocument();
+    expect(screen.getByText('Grade 2')).toBeInTheDocument();
     expect(screen.getByText('6C/B')).toBeInTheDocument();
-    expect(screen.getByText('Grade 3 Embryos (Day 3)')).toBeInTheDocument();
+    expect(screen.getByText('Grade 3')).toBeInTheDocument();
     expect(screen.getByText('4C/C')).toBeInTheDocument();
-    expect(screen.getByText('Grade 4 Embryos (Day 3)')).toBeInTheDocument();
+    expect(screen.getByText('Grade 4')).toBeInTheDocument();
     expect(screen.getByText('2PN-arrest')).toBeInTheDocument();
     expect(screen.getByText('Uniform cleavage, minimal fragmentation')).toBeInTheDocument();
   });
@@ -99,6 +99,6 @@ describe('EmbryoGradingDay3Dashboard', () => {
 
     render(<EmbryoGradingDay3Dashboard patientUuid="patient-1" />);
     expect(screen.getByText('Embryo Grading Day 3')).toBeInTheDocument();
-    expect(screen.getByText('Grade 1 Embryos (Day 3)')).toBeInTheDocument();
+    expect(screen.getByText('Grade 1')).toBeInTheDocument();
   });
 });

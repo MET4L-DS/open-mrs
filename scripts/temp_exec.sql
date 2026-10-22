@@ -7239,24 +7239,6 @@ BEGIN
     END IF;
     
 
-    SET @existing_id = (SELECT concept_id FROM concept WHERE uuid = 'c0010002-0000-0000-0000-000000001138');
-    IF @existing_id IS NULL THEN
-        INSERT INTO concept (retired, datatype_id, class_id, is_set, creator, date_created, uuid)
-        VALUES (0, 4, 11, 0, 1, NOW(), 'c0010002-0000-0000-0000-000000001138');
-        SET @new_id = LAST_INSERT_ID();
-        
-        INSERT INTO concept_name (concept_id, name, locale, locale_preferred, creator, date_created, concept_name_type, voided, uuid)
-        VALUES (@new_id, 'Inconclusive', 'en', 1, 1, NOW(), 'FULLY_SPECIFIED', 0, UUID());
-        
-        
-    ELSE
-        SET @new_id = @existing_id;
-        UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
-        DELETE FROM concept_numeric WHERE concept_id = @existing_id;
-        
-    END IF;
-    
-
     SET @existing_id = (SELECT concept_id FROM concept WHERE uuid = 'c0010002-0000-0000-0000-000000001139');
     IF @existing_id IS NULL THEN
         INSERT INTO concept (retired, datatype_id, class_id, is_set, creator, date_created, uuid)
@@ -13200,7 +13182,7 @@ BEGIN
     SET @existing_id = (SELECT concept_id FROM concept WHERE uuid = 'c0010001-0000-0000-0000-000000000302');
     IF @existing_id IS NULL THEN
         INSERT INTO concept (retired, datatype_id, class_id, is_set, creator, date_created, uuid)
-        VALUES (0, 2, 7, 0, 1, NOW(), 'c0010001-0000-0000-0000-000000000302');
+        VALUES (0, 3, 7, 0, 1, NOW(), 'c0010001-0000-0000-0000-000000000302');
         SET @new_id = LAST_INSERT_ID();
         
         INSERT INTO concept_name (concept_id, name, locale, locale_preferred, creator, date_created, concept_name_type, voided, uuid)
@@ -13209,9 +13191,9 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
-        UPDATE concept SET datatype_id = 2, class_id = 7 WHERE concept_id = @existing_id;
+        UPDATE concept SET datatype_id = 3, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
-        
+        UPDATE obs o JOIN concept_name cn ON o.value_coded = cn.concept_id AND cn.locale = 'en' AND cn.locale_preferred = 1 SET o.value_text = cn.name, o.value_coded = NULL WHERE o.concept_id = @existing_id AND o.value_coded IS NOT NULL;
     END IF;
     
 
@@ -20000,6 +19982,18 @@ UPDATE concept SET datatype_id = 2 WHERE uuid IN (
 UPDATE concept SET datatype_id = 3 WHERE uuid = 'c0010001-0000-0000-0000-000000000255';
 DELETE FROM concept_answer WHERE concept_id = (SELECT concept_id FROM concept WHERE uuid = 'c0010001-0000-0000-0000-000000000255');
 
+-- Sex of Baby (0302): migrate Coded to Text and preserve historical obs
+UPDATE concept SET datatype_id = 3 WHERE uuid = 'c0010001-0000-0000-0000-000000000302';
+DELETE FROM concept_answer WHERE concept_id = (SELECT concept_id FROM concept WHERE uuid = 'c0010001-0000-0000-0000-000000000302');
+UPDATE obs o
+JOIN concept_name cn ON o.value_coded = cn.concept_id AND cn.locale = 'en' AND cn.concept_name_type = 'FULLY_SPECIFIED'
+SET o.value_text = cn.name, o.value_coded = NULL
+WHERE o.concept_id = (SELECT concept_id FROM concept WHERE uuid = 'c0010001-0000-0000-0000-000000000302');
+
+-- UPT Result (0294): remove Inconclusive answer (1138)
+DELETE FROM concept_answer WHERE concept_id = (SELECT concept_id FROM concept WHERE uuid = 'c0010001-0000-0000-0000-000000000294')
+AND answer_concept = (SELECT concept_id FROM concept WHERE uuid = 'c0010002-0000-0000-0000-000000001138');
+
 
     SET @q_id = (SELECT concept_id FROM concept WHERE uuid = 'c0010001-0000-0000-0000-000000000251');
     SET @a_id = (SELECT concept_id FROM concept WHERE uuid = 'c0010002-0000-0000-0000-000000001050');
@@ -21431,16 +21425,6 @@ DELETE FROM concept_answer WHERE concept_id = (SELECT concept_id FROM concept WH
     END IF;
     
 
-    SET @q_id = (SELECT concept_id FROM concept WHERE uuid = 'c0010001-0000-0000-0000-000000000294');
-    SET @a_id = (SELECT concept_id FROM concept WHERE uuid = 'c0010002-0000-0000-0000-000000001138');
-    IF @q_id IS NOT NULL AND @a_id IS NOT NULL THEN
-        IF NOT EXISTS (SELECT 1 FROM concept_answer WHERE concept_id = @q_id AND answer_concept = @a_id) THEN
-            INSERT INTO concept_answer (concept_id, answer_concept, creator, date_created, uuid)
-            VALUES (@q_id, @a_id, 1, NOW(), UUID());
-        END IF;
-    END IF;
-    
-
     SET @q_id = (SELECT concept_id FROM concept WHERE uuid = 'c0010001-0000-0000-0000-000000000297');
     SET @a_id = (SELECT concept_id FROM concept WHERE uuid = 'c0010002-0000-0000-0000-000000001139');
     IF @q_id IS NOT NULL AND @a_id IS NOT NULL THEN
@@ -21593,36 +21577,6 @@ DELETE FROM concept_answer WHERE concept_id = (SELECT concept_id FROM concept WH
 
     SET @q_id = (SELECT concept_id FROM concept WHERE uuid = 'c0010001-0000-0000-0000-000000000300');
     SET @a_id = (SELECT concept_id FROM concept WHERE uuid = 'c0010002-0000-0000-0000-000000001154');
-    IF @q_id IS NOT NULL AND @a_id IS NOT NULL THEN
-        IF NOT EXISTS (SELECT 1 FROM concept_answer WHERE concept_id = @q_id AND answer_concept = @a_id) THEN
-            INSERT INTO concept_answer (concept_id, answer_concept, creator, date_created, uuid)
-            VALUES (@q_id, @a_id, 1, NOW(), UUID());
-        END IF;
-    END IF;
-    
-
-    SET @q_id = (SELECT concept_id FROM concept WHERE uuid = 'c0010001-0000-0000-0000-000000000302');
-    SET @a_id = (SELECT concept_id FROM concept WHERE uuid = 'c0010002-0000-0000-0000-000000001155');
-    IF @q_id IS NOT NULL AND @a_id IS NOT NULL THEN
-        IF NOT EXISTS (SELECT 1 FROM concept_answer WHERE concept_id = @q_id AND answer_concept = @a_id) THEN
-            INSERT INTO concept_answer (concept_id, answer_concept, creator, date_created, uuid)
-            VALUES (@q_id, @a_id, 1, NOW(), UUID());
-        END IF;
-    END IF;
-    
-
-    SET @q_id = (SELECT concept_id FROM concept WHERE uuid = 'c0010001-0000-0000-0000-000000000302');
-    SET @a_id = (SELECT concept_id FROM concept WHERE uuid = 'c0010002-0000-0000-0000-000000001156');
-    IF @q_id IS NOT NULL AND @a_id IS NOT NULL THEN
-        IF NOT EXISTS (SELECT 1 FROM concept_answer WHERE concept_id = @q_id AND answer_concept = @a_id) THEN
-            INSERT INTO concept_answer (concept_id, answer_concept, creator, date_created, uuid)
-            VALUES (@q_id, @a_id, 1, NOW(), UUID());
-        END IF;
-    END IF;
-    
-
-    SET @q_id = (SELECT concept_id FROM concept WHERE uuid = 'c0010001-0000-0000-0000-000000000302');
-    SET @a_id = (SELECT concept_id FROM concept WHERE uuid = 'c0010002-0000-0000-0000-000000001157');
     IF @q_id IS NOT NULL AND @a_id IS NOT NULL THEN
         IF NOT EXISTS (SELECT 1 FROM concept_answer WHERE concept_id = @q_id AND answer_concept = @a_id) THEN
             INSERT INTO concept_answer (concept_id, answer_concept, creator, date_created, uuid)

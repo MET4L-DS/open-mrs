@@ -19,7 +19,6 @@ export interface AiimsFreshEtDetailsData {
   freshEtDifficulty?: string;
   bloodOnTipOfCatheter?: string;
   freshEtDate?: string;
-  freshEtRemarks?: string;
 }
 
 export const initialAiimsFreshEtDetailsData: Readonly<AiimsFreshEtDetailsData> =
@@ -58,7 +57,6 @@ export function useFreshEtDetails(
       freshEtDifficulty: getOptionalObsValue(CONCEPTS.freshEtDifficulty),
       bloodOnTipOfCatheter: getOptionalObsValue(CONCEPTS.bloodOnTipOfCatheter),
       freshEtDate: getOptionalObsValue(CONCEPTS.freshEtDate),
-      freshEtRemarks: getOptionalObsValue(CONCEPTS.freshEtRemarks),
     };
   }
 

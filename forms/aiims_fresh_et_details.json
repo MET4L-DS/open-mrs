@@ -293,16 +293,6 @@
                   }
                 ]
               }
-            },
-            {
-              "label": "Fresh Embryo Transfer Remarks",
-              "type": "obs",
-              "id": "fresh_et_remarks",
-              "required": "false",
-              "questionOptions": {
-                "rendering": "textarea",
-                "concept": "c0010001-0000-0000-0000-000000000290"
-              }
             }
           ]
         }

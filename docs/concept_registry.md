@@ -247,6 +247,23 @@ To maintain agility and avoid blocking clinical deployment pending terminology l
 | `c0010001-0000-0000-0000-000000000291` | Additional Procedures in Assisted Reproductive Technology | Coded | Finding | Local / Additional ART | — | — | Active | Form 32: Adjuvant procedures in ART (PRP, Endo Injury, G-CSF, Embryo Glue) |
 | `c0010001-0000-0000-0000-000000000292` | Date of Additional Procedures in Assisted Reproductive Technology | Date | Observable entity | Local / Additional ART | — | — | Active | Form 32: Procedure date |
 | `c0010001-0000-0000-0000-000000000293` | Additional Procedures in Assisted Reproductive Technology Remarks | Text | Misc | Local / Additional ART | — | — | Active | Form 32: Clinical notes & procedural remarks |
+| `c0010001-0000-0000-0000-000000000294` | Urine Pregnancy Test (UPT) | Coded | Finding | Local / Post-IVF | — | — | Active | Form 33: Positive, Negative |
+| `c0010001-0000-0000-0000-000000000295` | Beta-Human Chorionic Gonadotropin | Numeric | Finding | Local / Post-IVF | mIU/mL | — | Active | Form 33: Beta-hCG blood test |
+| `c0010001-0000-0000-0000-000000000296` | Scan at 6-7 weeks | Text | Finding | Local / Post-IVF | — | — | Active | Form 33: Early pregnancy scan |
+| `c0010001-0000-0000-0000-000000000297` | Post IVF Outcome | Coded | Finding | Local / Post-IVF | — | — | Active | Form 33: Clinical pregnancy, ectopic, etc. |
+| `c0010001-0000-0000-0000-000000000298` | Post IVF Pregnancy Complications | Coded | Finding | Local / Post-IVF | — | — | Active | Form 33: Diabetes, hypertension, etc. |
+| `c0010001-0000-0000-0000-000000000299` | Other Pregnancy Complications | Text | Finding | Local / Post-IVF | — | — | Active | Form 33: Other complication details |
+| `c0010001-0000-0000-0000-000000000300` | Mode of Delivery | Coded | Finding | Local / Post-IVF | — | — | Active | Form 33: Normal vaginal, Cesarean |
+| `c0010001-0000-0000-0000-000000000301` | Period of Gestation at Delivery | Numeric | Finding | Local / Post-IVF | weeks | — | Active | Form 33: Gestational age at delivery |
+| `c0010001-0000-0000-0000-000000000302` | Sex of Baby | Text | Finding | Local / Examination Infant | — | — | Active | Form 34: Free-text sex of newborn |
+| `c0010001-0000-0000-0000-000000000303` | Weight of Baby | Numeric | Finding | Local / Examination Infant | kg | — | Active | Form 34: Birth weight |
+| `c0010001-0000-0000-0000-000000000304` | APGAR Score | Numeric | Finding | Local / Examination Infant | score | — | Active | Form 34: 0 to 10 vitality score |
+| `c0010001-0000-0000-0000-000000000305` | Endometrial Vascularity | Coded | Finding | Local / TVS | — | — | Active | Form 13: Zone 1 to Zone 3 |
+| `c0010001-0000-0000-0000-000000000306` | Other Ovarian Cyst | Coded | Finding | Local / TVS | — | — | Active | Form 13: Yes/No |
+| `c0010001-0000-0000-0000-000000000307` | Other Ovarian Cyst Dimensions | Text | Finding | Local / TVS | — | — | Active | Form 13: Cyst measurements |
+| `c0010001-0000-0000-0000-000000000308` | Left Hydrosalpinx Dimensions | Text | Finding | Local / TVS | — | — | Active | Form 13: Hydrosalpinx size |
+| `c0010001-0000-0000-0000-000000000309` | Haematosalpinx Finding | Coded | Finding | Local / TVS | — | — | Active | Form 13: Right/Left/Bilateral/Absent |
+| `c0010001-0000-0000-0000-000000000310` | Haematosalpinx Dimensions | Text | Finding | Local / TVS | — | — | Active | Form 13: Dimensions |
 | `c0010001-0000-0000-0000-000000000311` | Semen Sample Type | Coded | Finding | Local / Insemination | — | — | Active | Form 21: Frozen, Donor Semen, Husband Semen |
 
 ---

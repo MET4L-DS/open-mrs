@@ -16,25 +16,25 @@ export const EmbryoGradingDay3Card: React.FC<EmbryoGradingDay3CardProps> = ({ da
     return [
       {
         id: 'grade-1-embryos-day3',
-        label: t('grade1EmbryosDay3', 'Grade 1 Embryos (Day 3)'),
+        label: t('grade1EmbryosDay3', 'Grade 1'),
         value: data?.grade1EmbryosDay3,
         emptyPlaceholder: '—',
       },
       {
         id: 'grade-2-embryos-day3',
-        label: t('grade2EmbryosDay3', 'Grade 2 Embryos (Day 3)'),
+        label: t('grade2EmbryosDay3', 'Grade 2'),
         value: data?.grade2EmbryosDay3,
         emptyPlaceholder: '—',
       },
       {
         id: 'grade-3-embryos-day3',
-        label: t('grade3EmbryosDay3', 'Grade 3 Embryos (Day 3)'),
+        label: t('grade3EmbryosDay3', 'Grade 3'),
         value: data?.grade3EmbryosDay3,
         emptyPlaceholder: '—',
       },
       {
         id: 'grade-4-embryos-day3',
-        label: t('grade4EmbryosDay3', 'Grade 4 Embryos (Day 3)'),
+        label: t('grade4EmbryosDay3', 'Grade 4'),
         value: data?.grade4EmbryosDay3,
         emptyPlaceholder: '—',
       },

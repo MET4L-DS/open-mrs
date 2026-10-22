@@ -56,7 +56,6 @@ describe('FreshEtDetailsCard', () => {
       freshEtEndometrialThickness: '9.5',
       freshEtDifficulty: 'Easy',
       bloodOnTipOfCatheter: 'No',
-      freshEtRemarks: 'Smooth transfer under ultrasound guidance',
     };
 
     render(<FreshEtDetailsCard data={mockData} />);
@@ -67,7 +66,6 @@ describe('FreshEtDetailsCard', () => {
     expect(screen.getByText('4AA')).toBeInTheDocument();
     expect(screen.getByText(/9\.5\s+mm/)).toBeInTheDocument();
     expect(screen.getByText('Easy')).toBeInTheDocument();
-    expect(screen.getByText('Smooth transfer under ultrasound guidance')).toBeInTheDocument();
   });
 
   it('renders cancellation reasons correctly when transfer not done', () => {
@@ -76,7 +74,6 @@ describe('FreshEtDetailsCard', () => {
       freshEmbryoTransfer: 'No',
       reasonFreshEtNotDone: 'Risk of Ovarian Hyperstimulation',
       otherReasonFreshEtNotDone: 'Freeze-all policy due to high follicle count',
-      freshEtRemarks: 'Planned for frozen embryo transfer next cycle',
     };
 
     render(<FreshEtDetailsCard data={mockData} />);

@@ -448,13 +448,13 @@ export const FORM_REGISTRY: FormRegistryEntry[] = [
     icon: EventSchedule,
     order: 1,
   },
-    {
+  {
     key: 'add-procedure-art',
     uuid: AIIMS_ADD_PROCEDURE_ART_FORM_UUID,
     name: AIIMS_ADD_PROCEDURE_ART_FORM_NAME,
     path: 'aiims-add-procedure-art',
     titleKey: 'aiimsAddProcedureArtTitle',
-    title: 'Additional Procedures in ART',
+    title: 'Additional Procedures in Assisted Reproductive Technology',
     slot: 'aiims-add-procedure-art-dashboard-slot',
     icon: Activity,
     order: 1,

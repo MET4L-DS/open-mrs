@@ -15,7 +15,6 @@ export interface AiimsEmbryosFrozenData {
   gradeCEmbryosVitrified?: string;
   numberDay5EmbryosVitrified?: string;
   gradeDay5EmbryosVitrified?: string;
-  embryosFrozenRemarks?: string;
 }
 
 export const initialAiimsEmbryosFrozenData: Readonly<AiimsEmbryosFrozenData> =
@@ -50,7 +49,6 @@ export function useEmbryosFrozen(
       gradeCEmbryosVitrified: getOptionalObsValue(CONCEPTS.gradeCEmbryosVitrified),
       numberDay5EmbryosVitrified: getOptionalObsValue(CONCEPTS.numberDay5EmbryosVitrified),
       gradeDay5EmbryosVitrified: getOptionalObsValue(CONCEPTS.gradeDay5EmbryosVitrified),
-      embryosFrozenRemarks: getOptionalObsValue(CONCEPTS.embryosFrozenRemarks),
     };
   }
 

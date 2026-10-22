@@ -61,23 +61,10 @@ export const EmbryosFrozenCard: React.FC<EmbryosFrozenCardProps> = ({ data }) =>
     ];
   }, [data, t]);
 
-  // Cryopreservation Notes & Remarks
-  const remarksRows: ObservationRow[] = React.useMemo(() => {
-    return [
-      {
-        id: 'embryos-frozen-remarks',
-        label: t('embryosFrozenRemarks', 'Embryos Frozen Remarks'),
-        value: data?.embryosFrozenRemarks,
-        emptyPlaceholder: '—',
-      },
-    ];
-  }, [data, t]);
-
   const allRows = React.useMemo(() => [
     ...day3Rows,
     ...day5Rows,
-    ...(data?.embryosFrozenRemarks ? remarksRows : []),
-  ], [day3Rows, day5Rows, remarksRows, data?.embryosFrozenRemarks]);
+  ], [day3Rows, day5Rows]);
 
   return (
     <ObservationCard

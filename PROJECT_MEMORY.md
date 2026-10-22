@@ -8,7 +8,7 @@ This file serves as the persistent project-level memory and source of truth acro
 
 - **Objective**: Develop and maintain clinical intake and specialty encounter microfrontends for AIIMS on OpenMRS 3.x (O3).
 - **Core Frontend Module**: `@aiims/esm-demographics-app` (located in `./aiims-esm-demographics-app`).
-- **Goal**: Scalable, configuration-driven architecture supporting 32+ clinical forms with zero boilerplate for new dashboards and extension points.
+- **Goal**: Scalable, configuration-driven architecture supporting 35 clinical forms with zero boilerplate for new dashboards and extension points.
 
 ---
 
@@ -434,19 +434,28 @@ Follow this 6-stage lifecycle to add new clinical forms without errors:
     - Longitudinal embryology tracking from Day 1 to Day 6: 2PN fertilization count/grade, cleavage counts and Istanbul/Veeck coded grades for Days 2-3, Day 4 morula grades, and Days 5-6 blastocyst counts with standard Gardner scale coded grades (`1AA`-`6CC`).
 28. **Form 28: AIIMS Visit: Fertilisation Details** (`37e59734-dac9-4332-ba27-f1053d189090`)
     - Path: `aiims-fertilisation-details`
-    - Total oocytes fertilised, fertilisation rate (%), Day 2 cleaved embryos, cleavage rate (%), Day 3 cleaved embryos, Day 5 blastocyst count, and embryology notes.
+    - Day 1 post-insemination 2PN assessment: total oocytes fertilised and fertilisation rate (%).
 29. **Form 29: AIIMS Visit: Embryo Grading Day 3** (`37e59734-dac9-4332-ba27-f1053d189091`)
     - Path: `aiims-embryo-grading-day3`
-    - Day 3 cleavage stage grading breakdown for Grade 1, Grade 2, Grade 3, and Grade 4 embryos with embryology notations and laboratory remarks.
+    - Day 3 cleavage stage grading breakdown for Grade 1, Grade 2, Grade 3, and Grade 4 embryos with alphanumeric notations.
 30. **Form 30: AIIMS Visit: Embryos Frozen** (`37e59734-dac9-4332-ba27-f1053d189092`)
     - Path: `aiims-embryos-frozen`
-    - Cryopreservation and vitrification records: Day 3 vitrified embryos with straw/grade breakdown (Grade A, B, C), Day 5 blastocysts vitrified with Gardner grades, and vitrification notes.
+    - Cryopreservation and vitrification records: Day 3 vitrified embryos with straw/grade breakdown (Grade A, B, C), and Day 5 blastocysts vitrified with Gardner grades.
 31. **Form 31: AIIMS Visit: Fresh Embryo Transfer Details** (`37e59734-dac9-4332-ba27-f1053d189093`)
     - Path: `aiims-fresh-et-details`
-    - Fresh ET decision (Yes/No), conditional cancellation etiology (20 clinical indications including OHSS risk, thin/thick endometrium, elevated P4) with free-text other notes, or transfer metrics (transfer date, embryo day, number of embryos, grades, endometrial thickness in mm, transfer difficulty Easy/Difficult, catheter tip blood, and clinical remarks).
+    - Fresh ET decision (Yes/No), conditional cancellation etiology (20 clinical indications including OHSS risk, thin/thick endometrium, elevated P4) with free-text other notes, or transfer metrics (transfer date, embryo day, number of embryos, grades, endometrial thickness in mm, transfer difficulty Easy/Difficult, catheter tip blood).
 32. **Form 32: AIIMS Visit: Additional Procedures in Assisted Reproductive Technology** (`37e59734-dac9-4332-ba27-f1053d189094`)
     - Path: `aiims-add-procedure-art`
-    - Adjuvant and add-on procedures in ART: multi-select checkboxes for Platelet Rich Plasma (PRP), Endometrial Injury (Endo Injury), Granulocyte Colony Stimulating Factor (G-CSF), and Embryo Glue, with procedure date and clinical notes/remarks.
+    - Adjuvant and add-on procedures in Assisted Reproductive Technology: multi-select checkboxes for Platelet Rich Plasma (PRP), Endometrial Injury (Endo Injury), Granulocyte Colony Stimulating Factor (G-CSF), and Embryo Glue, with procedure date and clinical notes/remarks.
+33. **Form 33: AIIMS Visit: Post-InVitro Fertilisation Investigation** (`639def6a-b768-4db5-a0b3-548452b0b8ed`)
+    - Path: `aiims-post-ivf-investigation`
+    - Early pregnancy diagnostics and follow-up: binary UPT (Positive/Negative), quantitative Serum Beta-hCG (mIU/mL), 6-7 week ultrasound scan, post-IVF clinical outcome, pregnancy complications, mode of delivery, and gestational age at delivery.
+34. **Form 34: AIIMS Visit: Examination Infant** (`1eec08ba-b346-4f61-9f17-95e65f2e6c87`)
+    - Path: `aiims-examination-infant`
+    - Unified single-section neonatal assessment: free-text Sex of Baby, birth weight in kg, and APGAR score (0–10).
+35. **Form 35: AIIMS Visit: Embryos Cleavage Details** (`37e59734-e4ff-4fc9-b69c-5d9c79239095`)
+    - Path: `aiims-embryos-cleavage-details`
+    - Serial embryology cleavage progression: Day 2 cleaved embryos, cleavage rate (%), Day 3 cleaved embryos, and Day 5 cleaved blastocyst count.
 
 ---
 
@@ -486,6 +495,7 @@ Follow this 6-stage lifecycle to add new clinical forms without errors:
 - [x] Register Form 32: Additional Procedures in Assisted Reproductive Technology (`add-procedure-art`).
 - [x] Register Form 33: Post-InVitro Fertilisation Investigation (`post-ivf-investigation`).
 - [x] Register Form 34: Examination Infant (`examination-infant`).
+- [x] Register Form 35: Embryos Cleavage Details (`embryos-cleavage-details`).
 - [x] Implement Consolidated IVF Summary Dashboard (`aiims-ivf-summary`) with full 6-domain clinical enrichment.
 - [x] Realign Form 13 (TVS Ultrasound 55 fields + 11 conditional groups) & Form 15 (focused Hysteroscopy & Operative scope).
 - [x] Integrate Hysteroscopy Findings, Dimensions, and Operative Hysteroscopy into Form 9 (Previous Surgery) with Option B dual-card dashboard and cross-form IVF Summary support.
@@ -494,6 +504,7 @@ Follow this 6-stage lifecycle to add new clinical forms without errors:
 - [x] Execute 11 structural adjustments across 10 forms and align TVS Ultrasound 1:1 with clinical sheet `TVS_FINDING.xlsx` (v1.0.100).
 - [x] Execute Batch 2 clinical form adjustments across 8 forms: reorder Dose of Drugs; prune remarks across all 8 forms; swap Ovum Pick Up maturity order (MI before MII); decouple sperm retrieval from preservation (add TESE & Micro TESE; add Semen Sample Type to Insemination); migrate Day 4 Embryo Grade to free-text (v1.0.101).
 - [x] Refactor Fertilisation Details (Form 28) and separate cleavage progression fields into new clinical form 'Embryos Cleavage Details' (Form 35 / v1.0.102).
+- [x] Execute Batch 3 clinical form adjustments across 6 forms: simplify Day 3 grades to Grade 1–4; prune remarks from Embryos Frozen and Fresh ET; expand Form 32 title to 'Additional Procedures in Assisted Reproductive Technology'; prune 'Inconclusive' from UPT; flatten Infant Examination sections and migrate Sex of Baby to free text with historical obs migration (v1.0.103).
 
 
 

@@ -9,7 +9,7 @@
       "label": "Examination Infant",
       "sections": [
         {
-          "label": "Neonatal Anthropometry",
+          "label": "Examination Infant",
           "isExpanded": "true",
           "questions": [
             {
@@ -17,22 +17,8 @@
               "type": "obs",
               "id": "sexOfBaby",
               "questionOptions": {
-                "rendering": "radio",
-                "concept": "c0010001-0000-0000-0000-000000000302",
-                "answers": [
-                  {
-                    "concept": "c0010002-0000-0000-0000-000000001155",
-                    "label": "Male"
-                  },
-                  {
-                    "concept": "c0010002-0000-0000-0000-000000001156",
-                    "label": "Female"
-                  },
-                  {
-                    "concept": "c0010002-0000-0000-0000-000000001157",
-                    "label": "Ambiguous"
-                  }
-                ]
+                "rendering": "text",
+                "concept": "c0010001-0000-0000-0000-000000000302"
               }
             },
             {
@@ -52,13 +38,7 @@
                   "message": "Birth weight must be between 0.3 and 8.0 kg."
                 }
               ]
-            }
-          ]
-        },
-        {
-          "label": "Physical Assessment & Vitality",
-          "isExpanded": "true",
-          "questions": [
+            },
             {
               "label": "APGAR Score (Appearance, Pulse, Grimace, Activity, Respiration)",
               "type": "obs",

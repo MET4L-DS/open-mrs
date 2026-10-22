@@ -31,15 +31,15 @@ export const AddProcedureArtDashboard: React.FC<AddProcedureArtDashboardProps> =
       isLoading={isLoading}
       error={error}
       mutate={mutate}
-      loadingDescription={t('loadingAddProcedureArt', 'Loading Additional Procedures in ART...')}
-      emptyHeading={t('noRecordedAddProcedureArtEncounter', 'No Additional Procedures in ART encounter recorded yet')}
+      loadingDescription={t('loadingAddProcedureArt', 'Loading Additional Procedures in Assisted Reproductive Technology...')}
+      emptyHeading={t('noRecordedAddProcedureArtEncounter', 'No Additional Procedures in Assisted Reproductive Technology encounter recorded yet')}
       emptyDescription={t(
         'noAddProcedureArtBody',
-        'Additional procedures in ART have not been recorded for this patient yet.'
+        'Additional procedures in Assisted Reproductive Technology have not been recorded for this patient yet.'
       )}
-      noRecordedText={t('noAddProcedureArtRecorded', 'No Additional Procedures in ART recorded')}
-      recordButtonText={t('recordAddProcedureArt', 'Record Additional Procedures in ART')}
-      updateButtonText={t('updateAddProcedureArt', 'Update Additional Procedures in ART')}
+      noRecordedText={t('noAddProcedureArtRecorded', 'No Additional Procedures in Assisted Reproductive Technology recorded')}
+      recordButtonText={t('recordAddProcedureArt', 'Record Additional Procedures in Assisted Reproductive Technology')}
+      updateButtonText={t('updateAddProcedureArt', 'Update Additional Procedures in Assisted Reproductive Technology')}
     >
       <AddProcedureArtCard data={data} />
     </FormDashboardShell>

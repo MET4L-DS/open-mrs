@@ -16,7 +16,7 @@ export const AddProcedureArtCard: React.FC<AddProcedureArtCardProps> = ({ data }
     return [
       {
         id: 'additional-procedures-art',
-        label: t('additionalProceduresArt', 'Additional Procedures in ART'),
+        label: t('additionalProceduresArt', 'Additional Procedures in Assisted Reproductive Technology'),
         value:
           data?.additionalProceduresArt && data.additionalProceduresArt.length > 0
             ? data.additionalProceduresArt.join(', ')
@@ -47,7 +47,7 @@ export const AddProcedureArtCard: React.FC<AddProcedureArtCardProps> = ({ data }
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
       <ObservationCard
-        title={t('additionalProceduresArtCardTitle', 'Additional Procedures in ART')}
+        title={t('additionalProceduresArtCardTitle', 'Additional Procedures in Assisted Reproductive Technology')}
         icon={Activity}
         rows={procedureRows}
       />

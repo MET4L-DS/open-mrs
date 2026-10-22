@@ -91,18 +91,6 @@ export const FreshEtDetailsCard: React.FC<FreshEtDetailsCardProps> = ({ data }) 
     ];
   }, [data, t]);
 
-  // Laboratory Remarks
-  const remarksRows: ObservationRow[] = React.useMemo(() => {
-    return [
-      {
-        id: 'fresh-et-remarks',
-        label: t('freshEtRemarks', 'Fresh Embryo Transfer Remarks'),
-        value: data?.freshEtRemarks,
-        emptyPlaceholder: '—',
-      },
-    ];
-  }, [data, t]);
-
   const allRows = React.useMemo(() => {
     const isCancelled =
       data?.freshEmbryoTransfer?.toLowerCase() === 'no' ||
@@ -116,12 +104,8 @@ export const FreshEtDetailsCard: React.FC<FreshEtDetailsCardProps> = ({ data }) 
       rows.push(...procedureRows);
     }
 
-    if (data?.freshEtRemarks) {
-      rows.push(...remarksRows);
-    }
-
     return rows;
-  }, [data, decisionRows, cancellationRows, procedureRows, remarksRows]);
+  }, [data, decisionRows, cancellationRows, procedureRows]);
 
   return (
     <ObservationCard
