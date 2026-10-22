@@ -49,11 +49,6 @@ describe('FertilisationDetailsCard', () => {
       hasData: true,
       numberOocytesFertilised: '12',
       fertilisationRate: '80.0',
-      embryosCleavedDay2: '10',
-      cleavageRate: '83.3',
-      embryosCleavedDay3: '8',
-      embryosCleavedDay5: '5',
-      fertilisationDetailsRemarks: 'Good cleavage progression with high blastocyst rate.',
     };
 
     render(<FertilisationDetailsCard data={mockData} />);
@@ -61,9 +56,6 @@ describe('FertilisationDetailsCard', () => {
     expect(screen.getByText('12 oocytes')).toBeInTheDocument();
     expect(screen.getByText('Fertilisation Rate')).toBeInTheDocument();
     expect(screen.getByText('80.0 %')).toBeInTheDocument();
-    expect(screen.getByText('Embryos Cleaved on Day 2')).toBeInTheDocument();
-    expect(screen.getByText('10 embryos')).toBeInTheDocument();
-    expect(screen.getByText('Good cleavage progression with high blastocyst rate.')).toBeInTheDocument();
   });
 });
 

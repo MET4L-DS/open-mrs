@@ -95,23 +95,10 @@ export const EmbryoAssessmentCard: React.FC<EmbryoAssessmentCardProps> = ({ data
     ];
   }, [data, t]);
 
-  // Card 3: Remarks
-  const remarksRows: ObservationRow[] = React.useMemo(() => {
-    return [
-      {
-        id: 'remarks',
-        label: t('remarks', 'Remarks / Notes'),
-        value: data?.remarks,
-        emptyPlaceholder: '—',
-      },
-    ];
-  }, [data, t]);
-
   const allRows = React.useMemo(() => [
     ...cleavageRows,
     ...blastocystRows,
-    ...(data?.remarks ? remarksRows : []),
-  ], [cleavageRows, blastocystRows, remarksRows, data?.remarks]);
+  ], [cleavageRows, blastocystRows]);
 
   return (
     <ObservationCard

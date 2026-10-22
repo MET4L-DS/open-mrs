@@ -54,14 +54,27 @@
               }
             },
             {
-              "label": "Remarks",
+              "label": "Semen Sample Type",
               "type": "obs",
-              "id": "lab_procedure_insemination_remarks",
+              "id": "semen_sample_type",
               "required": "false",
               "questionOptions": {
-                "rendering": "textarea",
-                "concept": "c0010001-0000-0000-0000-000000000224",
-                "rows": 4
+                "rendering": "checkbox",
+                "concept": "c0010001-0000-0000-0000-000000000311",
+                "answers": [
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000001014",
+                    "label": "Frozen"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000001015",
+                    "label": "Donor Semen (DS)"
+                  },
+                  {
+                    "concept": "c0010002-0000-0000-0000-000000001016",
+                    "label": "Husband Semen (HS)"
+                  }
+                ]
               }
             }
           ]

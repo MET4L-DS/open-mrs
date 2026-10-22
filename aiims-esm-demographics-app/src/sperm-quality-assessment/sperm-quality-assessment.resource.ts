@@ -11,7 +11,6 @@ export interface AiimsSpermQualityAssessmentData {
   encounterDatetime?: string;
   postWashConcentration?: string;
   spermMotility?: string;
-  remarks?: string;
 }
 
 export const initialAiimsSpermQualityAssessmentData: Readonly<AiimsSpermQualityAssessmentData> =
@@ -43,12 +42,10 @@ export function useSpermQualityAssessment(
 
   const postWashConcentration = getOptionalObsValue(CONCEPTS.postWashSpermConcentration);
   const spermMotility = getOptionalObsValue(CONCEPTS.spermMotilityOpuDay);
-  const remarks = getOptionalObsValue(CONCEPTS.spermQualityAssessmentRemarks);
 
   const hasData =
     postWashConcentration !== undefined ||
-    spermMotility !== undefined ||
-    remarks !== undefined;
+    spermMotility !== undefined;
 
   const spermQualityData: AiimsSpermQualityAssessmentData = {
     hasData,
@@ -56,7 +53,6 @@ export function useSpermQualityAssessment(
     encounterDatetime: latestEncounter.encounterDatetime,
     postWashConcentration,
     spermMotility,
-    remarks,
   };
 
   return {

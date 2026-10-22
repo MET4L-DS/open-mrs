@@ -45,25 +45,10 @@ export const ProcedureCard: React.FC<ProcedureCardProps> = ({ data }) => {
     return list;
   }, [data.additionalIvfProcedures, t]);
 
-  const remarksRows: ObservationRow[] = React.useMemo(() => {
-    const list: ObservationRow[] = [];
-
-    // Remarks
-    list.push({
-      id: 'procedure_remarks',
-      label: t('remarks', 'Remarks / Notes'),
-      value: data.procedureRemarks,
-      emptyPlaceholder: '—',
-    });
-
-    return list;
-  }, [data.procedureRemarks, t]);
-
   const allRows = React.useMemo(() => [
     ...spermRetrievalRows,
     ...additionalIvfRows,
-    ...remarksRows,
-  ], [spermRetrievalRows, additionalIvfRows, remarksRows]);
+  ], [spermRetrievalRows, additionalIvfRows]);
 
   return (
     <ObservationCard

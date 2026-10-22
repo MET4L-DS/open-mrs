@@ -66,23 +66,6 @@
               }
             }
           ]
-        },
-        {
-          "label": "Clinical Notes & Remarks",
-          "isExpanded": true,
-          "questions": [
-            {
-              "label": "Remarks",
-              "type": "obs",
-              "id": "adjuvant_drug_remarks",
-              "required": "false",
-              "questionOptions": {
-                "rendering": "textarea",
-                "concept": "c0010001-0000-0000-0000-000000000247",
-                "rows": 4
-              }
-            }
-          ]
         }
       ]
     }

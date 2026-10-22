@@ -19,7 +19,6 @@ export interface AiimsTriggerDetailsData {
   ovulationTriggerDose?: string;
   dateOfTrigger?: string;
   timeOfTrigger?: string;
-  triggerDetailsRemarks?: string;
 }
 
 export const initialAiimsTriggerDetailsData: Readonly<AiimsTriggerDetailsData> =
@@ -68,7 +67,6 @@ export function useTriggerDetails(
   const ovulationTriggerDose = getOptionalObsValue(CONCEPTS.ovulationTriggerDose);
   const dateOfTrigger = getOptionalObsValue(CONCEPTS.dateOfTrigger);
   const timeOfTrigger = getOptionalObsValue(CONCEPTS.timeOfTrigger);
-  const triggerDetailsRemarks = getOptionalObsValue(CONCEPTS.triggerDetailsRemarks);
 
   const hasData =
     numberOfFollicles14to22mm !== undefined ||
@@ -80,8 +78,7 @@ export function useTriggerDetails(
     ovulationTrigger !== undefined ||
     ovulationTriggerDose !== undefined ||
     dateOfTrigger !== undefined ||
-    timeOfTrigger !== undefined ||
-    triggerDetailsRemarks !== undefined;
+    timeOfTrigger !== undefined;
 
   const triggerDetailsData: AiimsTriggerDetailsData = {
     hasData,
@@ -97,7 +94,6 @@ export function useTriggerDetails(
     ovulationTriggerDose,
     dateOfTrigger,
     timeOfTrigger,
-    triggerDetailsRemarks,
   };
 
   return {

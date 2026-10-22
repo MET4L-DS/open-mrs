@@ -17,6 +17,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -34,6 +35,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -51,6 +53,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -68,6 +71,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -85,6 +89,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -102,6 +107,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -119,6 +125,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -136,6 +143,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -153,6 +161,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -170,6 +179,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -187,6 +197,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -204,6 +215,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -221,6 +233,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -238,6 +251,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -255,6 +269,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -272,6 +287,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -289,6 +305,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -306,6 +323,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -323,6 +341,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -340,6 +359,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -357,6 +377,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -374,6 +395,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -391,6 +413,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -408,6 +431,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -425,6 +449,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -442,6 +467,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -459,6 +485,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -476,6 +503,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -493,6 +521,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -510,6 +539,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -527,6 +557,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -544,6 +575,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -561,6 +593,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -578,6 +611,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -595,6 +629,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -612,6 +647,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -629,6 +665,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -646,6 +683,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -663,6 +701,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -680,6 +719,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -697,6 +737,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -714,6 +755,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -731,6 +773,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -748,6 +791,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -765,6 +809,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -782,6 +827,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -799,6 +845,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -816,6 +863,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -833,6 +881,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -850,6 +899,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -867,6 +917,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -884,6 +935,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -901,6 +953,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -918,6 +971,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -935,6 +989,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -952,6 +1007,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -969,6 +1025,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -986,6 +1043,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -1003,6 +1061,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -1020,6 +1079,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -1037,6 +1097,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -1054,6 +1115,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -1071,6 +1133,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -1088,6 +1151,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -1105,6 +1169,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -1122,6 +1187,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -1139,6 +1205,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -1156,6 +1223,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -1173,6 +1241,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -1190,6 +1259,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -1207,6 +1277,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -1224,6 +1295,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -1241,6 +1313,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -1258,6 +1331,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -1275,6 +1349,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -1292,6 +1367,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -1309,6 +1385,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -1326,6 +1403,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -1343,6 +1421,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -1360,6 +1439,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -1377,6 +1457,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -1394,6 +1475,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -1411,6 +1493,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -1428,6 +1511,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -1445,6 +1529,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -1462,6 +1547,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -1479,6 +1565,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -1496,6 +1583,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -1513,6 +1601,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -1530,6 +1619,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -1547,6 +1637,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -1564,6 +1655,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -1581,6 +1673,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -1598,6 +1691,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -1615,6 +1709,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -1632,6 +1727,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -1649,6 +1745,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -1666,6 +1763,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -1683,6 +1781,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -1700,6 +1799,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -1717,6 +1817,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -1734,6 +1835,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -1751,6 +1853,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -1768,6 +1871,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -1785,6 +1889,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -1802,6 +1907,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -1819,6 +1925,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -1836,6 +1943,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -1853,6 +1961,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -1870,6 +1979,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -1887,6 +1997,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -1904,6 +2015,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -1921,6 +2033,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -1938,6 +2051,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -1955,6 +2069,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -1972,6 +2087,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -1989,6 +2105,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -2006,6 +2123,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -2023,6 +2141,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -2040,6 +2159,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -2057,6 +2177,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -2074,6 +2195,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -2091,6 +2213,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -2108,6 +2231,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -2125,6 +2249,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -2142,6 +2267,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -2159,6 +2285,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -2176,6 +2303,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -2193,6 +2321,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -2210,6 +2339,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -2227,6 +2357,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -2244,6 +2375,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -2261,6 +2393,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -2278,6 +2411,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -2295,6 +2429,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -2312,6 +2447,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -2329,6 +2465,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -2346,6 +2483,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -2363,6 +2501,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -2380,6 +2519,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -2397,6 +2537,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -2414,6 +2555,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -2431,6 +2573,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -2448,6 +2591,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -2465,6 +2609,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -2482,6 +2627,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -2499,6 +2645,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -2516,6 +2663,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -2533,6 +2681,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -2550,6 +2699,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -2567,6 +2717,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -2584,6 +2735,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -2601,6 +2753,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -2618,6 +2771,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -2635,6 +2789,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -2652,6 +2807,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -2669,6 +2825,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -2686,6 +2843,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -2703,6 +2861,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -2720,6 +2879,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -2737,6 +2897,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -2754,6 +2915,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -2771,6 +2933,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -2788,6 +2951,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -2805,6 +2969,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -2822,6 +2987,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -2839,6 +3005,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -2856,6 +3023,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -2873,6 +3041,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -2890,6 +3059,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -2907,6 +3077,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -2924,6 +3095,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -2941,6 +3113,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -2958,6 +3131,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -2975,6 +3149,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -2992,6 +3167,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -3009,6 +3185,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -3026,6 +3203,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -3043,6 +3221,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -3060,6 +3239,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -3077,6 +3257,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -3094,6 +3275,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -3111,6 +3293,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -3128,6 +3311,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -3145,6 +3329,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -3162,6 +3347,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -3179,6 +3365,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -3196,6 +3383,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -3213,6 +3401,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -3230,6 +3419,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -3247,6 +3437,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -3264,6 +3455,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -3281,6 +3473,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -3298,6 +3491,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -3315,6 +3509,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -3332,6 +3527,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -3349,6 +3545,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -3366,6 +3563,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -3383,6 +3581,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -3400,6 +3599,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -3417,6 +3617,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -3434,6 +3635,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -3451,6 +3653,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -3468,6 +3671,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -3485,6 +3689,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -3502,6 +3707,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -3519,6 +3725,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -3536,6 +3743,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -3553,6 +3761,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -3570,6 +3779,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -3587,6 +3797,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -3604,6 +3815,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -3621,6 +3833,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -3638,6 +3851,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -3655,6 +3869,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -3672,6 +3887,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -3689,6 +3905,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -3706,6 +3923,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -3723,6 +3941,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -3740,6 +3959,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -3757,6 +3977,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -3774,6 +3995,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -3791,6 +4013,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -3808,6 +4031,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -3825,6 +4049,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -3842,6 +4067,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -3859,6 +4085,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -3876,6 +4103,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -3893,6 +4121,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -3910,6 +4139,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -3927,6 +4157,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -3944,6 +4175,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -3961,6 +4193,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -3978,6 +4211,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -3995,6 +4229,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -4012,6 +4247,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -4029,6 +4265,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -4046,6 +4283,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -4063,6 +4301,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -4080,6 +4319,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -4097,6 +4337,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -4114,6 +4355,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -4131,6 +4373,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -4148,6 +4391,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -4165,6 +4409,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -4182,6 +4427,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -4199,6 +4445,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -4216,6 +4463,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -4233,6 +4481,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -4250,6 +4499,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -4267,6 +4517,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -4284,6 +4535,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -4301,6 +4553,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -4318,6 +4571,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -4335,6 +4589,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -4352,6 +4607,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -4369,6 +4625,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -4386,6 +4643,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -4403,6 +4661,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -4420,6 +4679,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -4437,6 +4697,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -4454,6 +4715,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -4471,6 +4733,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -4488,6 +4751,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -4505,6 +4769,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -4522,6 +4787,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -4539,6 +4805,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -4556,6 +4823,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -4573,6 +4841,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -4590,6 +4859,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -4607,6 +4877,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -4624,6 +4895,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -4641,6 +4913,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -4658,6 +4931,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -4675,6 +4949,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -4692,6 +4967,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -4709,6 +4985,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -4726,6 +5003,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -4743,6 +5021,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -4760,6 +5039,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -4777,6 +5057,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -4794,6 +5075,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -4811,6 +5093,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -4828,6 +5111,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -4845,6 +5129,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -4862,6 +5147,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -4879,6 +5165,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -4896,6 +5183,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -4913,6 +5201,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -4930,6 +5219,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -4947,6 +5237,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -4964,6 +5255,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -4981,6 +5273,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -4998,6 +5291,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -5015,6 +5309,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -5032,6 +5327,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -5049,6 +5345,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -5066,6 +5363,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -5083,6 +5381,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -5100,6 +5399,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -5117,6 +5417,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -5134,6 +5435,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -5151,6 +5453,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -5168,6 +5471,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -5185,6 +5489,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -5202,6 +5507,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -5219,6 +5525,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -5236,6 +5543,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -5253,6 +5561,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -5270,6 +5579,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -5287,6 +5597,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -5304,6 +5615,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -5321,6 +5633,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -5338,6 +5651,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -5355,6 +5669,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -5372,6 +5687,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -5389,6 +5705,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -5406,6 +5723,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -5423,6 +5741,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -5440,6 +5759,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -5457,6 +5777,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -5474,6 +5795,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -5491,6 +5813,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -5508,6 +5831,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -5525,6 +5849,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -5542,6 +5867,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -5559,6 +5885,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -5576,6 +5903,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -5593,6 +5921,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -5610,6 +5939,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -5627,6 +5957,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -5644,6 +5975,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -5661,6 +5993,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -5678,6 +6011,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -5695,6 +6029,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -5712,6 +6047,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -5729,6 +6065,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -5746,6 +6083,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -5763,6 +6101,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -5780,6 +6119,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -5797,6 +6137,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -5814,6 +6155,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -5831,6 +6173,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -5848,6 +6191,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -5865,6 +6209,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -5882,6 +6227,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -5899,6 +6245,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -5916,6 +6263,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -5933,6 +6281,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -5950,6 +6299,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -5967,6 +6317,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -5984,6 +6335,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -6001,6 +6353,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -6018,6 +6371,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -6035,6 +6389,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -6052,6 +6407,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -6069,6 +6425,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -6086,6 +6443,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -6103,6 +6461,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -6120,6 +6479,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -6137,6 +6497,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -6154,6 +6515,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -6171,6 +6533,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -6188,6 +6551,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -6205,6 +6569,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -6222,6 +6587,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -6239,6 +6605,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -6256,6 +6623,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -6273,6 +6641,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -6290,6 +6659,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -6307,6 +6677,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -6324,6 +6695,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -6341,6 +6713,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -6358,6 +6731,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -6375,6 +6749,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -6392,6 +6767,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -6409,6 +6785,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -6426,6 +6803,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -6443,6 +6821,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -6460,6 +6839,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -6477,6 +6857,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -6494,6 +6875,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -6511,6 +6893,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -6528,6 +6911,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -6545,6 +6929,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -6562,6 +6947,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -6579,6 +6965,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -6596,6 +6983,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -6613,6 +7001,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -6630,6 +7019,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -6647,6 +7037,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -6664,6 +7055,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -6681,6 +7073,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -6698,6 +7091,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -6715,6 +7109,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -6732,6 +7127,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -6749,6 +7145,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -6766,6 +7163,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -6783,6 +7181,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -6800,6 +7199,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -6817,6 +7217,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -6834,6 +7235,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -6851,6 +7253,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -6868,6 +7271,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -6885,6 +7289,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -6902,6 +7307,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -6919,6 +7325,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -6936,6 +7343,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -6953,6 +7361,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -6970,6 +7379,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -6987,6 +7397,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -7004,6 +7415,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -7021,6 +7433,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -7038,6 +7451,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -7055,6 +7469,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -7072,6 +7487,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -7089,6 +7505,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -7106,6 +7523,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -7123,6 +7541,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -7140,6 +7559,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -7157,6 +7577,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -7174,6 +7595,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -7191,6 +7613,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -7208,6 +7631,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -7225,6 +7649,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -7242,6 +7667,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -7259,6 +7685,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -7276,6 +7703,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -7293,6 +7721,43 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
+    END IF;
+    
+
+    SET @existing_id = (SELECT concept_id FROM concept WHERE uuid = 'c0010002-0000-0000-0000-000000001165');
+    IF @existing_id IS NULL THEN
+        INSERT INTO concept (retired, datatype_id, class_id, is_set, creator, date_created, uuid)
+        VALUES (0, 4, 11, 0, 1, NOW(), 'c0010002-0000-0000-0000-000000001165');
+        SET @new_id = LAST_INSERT_ID();
+        
+        INSERT INTO concept_name (concept_id, name, locale, locale_preferred, creator, date_created, concept_name_type, voided, uuid)
+        VALUES (@new_id, 'Testicular Sperm Extraction (TESE)', 'en', 1, 1, NOW(), 'FULLY_SPECIFIED', 0, UUID());
+        
+        
+    ELSE
+        SET @new_id = @existing_id;
+        UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
+        DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
+    END IF;
+    
+
+    SET @existing_id = (SELECT concept_id FROM concept WHERE uuid = 'c0010002-0000-0000-0000-000000001166');
+    IF @existing_id IS NULL THEN
+        INSERT INTO concept (retired, datatype_id, class_id, is_set, creator, date_created, uuid)
+        VALUES (0, 4, 11, 0, 1, NOW(), 'c0010002-0000-0000-0000-000000001166');
+        SET @new_id = LAST_INSERT_ID();
+        
+        INSERT INTO concept_name (concept_id, name, locale, locale_preferred, creator, date_created, concept_name_type, voided, uuid)
+        VALUES (@new_id, 'Micro TESE (Microsurgical Testicular Sperm Extraction)', 'en', 1, 1, NOW(), 'FULLY_SPECIFIED', 0, UUID());
+        
+        
+    ELSE
+        SET @new_id = @existing_id;
+        UPDATE concept SET datatype_id = 4, class_id = 11 WHERE concept_id = @existing_id;
+        DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -7310,6 +7775,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 3, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        UPDATE obs o JOIN concept_name cn ON o.value_coded = cn.concept_id AND cn.locale = 'en' AND cn.locale_preferred = 1 SET o.value_text = cn.name, o.value_coded = NULL WHERE o.concept_id = @existing_id AND o.value_coded IS NOT NULL;
     END IF;
     
 
@@ -7327,6 +7793,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 3, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        UPDATE obs o JOIN concept_name cn ON o.value_coded = cn.concept_id AND cn.locale = 'en' AND cn.locale_preferred = 1 SET o.value_text = cn.name, o.value_coded = NULL WHERE o.concept_id = @existing_id AND o.value_coded IS NOT NULL;
     END IF;
     
 
@@ -7344,6 +7811,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 3, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        UPDATE obs o JOIN concept_name cn ON o.value_coded = cn.concept_id AND cn.locale = 'en' AND cn.locale_preferred = 1 SET o.value_text = cn.name, o.value_coded = NULL WHERE o.concept_id = @existing_id AND o.value_coded IS NOT NULL;
     END IF;
     
 
@@ -7361,6 +7829,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 1, class_id = 7 WHERE concept_id = @existing_id;
         IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, 'years', 0, 0, 130); END IF;
+        
     END IF;
     
 
@@ -7378,6 +7847,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 3, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        UPDATE obs o JOIN concept_name cn ON o.value_coded = cn.concept_id AND cn.locale = 'en' AND cn.locale_preferred = 1 SET o.value_text = cn.name, o.value_coded = NULL WHERE o.concept_id = @existing_id AND o.value_coded IS NOT NULL;
     END IF;
     
 
@@ -7395,6 +7865,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 3, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        UPDATE obs o JOIN concept_name cn ON o.value_coded = cn.concept_id AND cn.locale = 'en' AND cn.locale_preferred = 1 SET o.value_text = cn.name, o.value_coded = NULL WHERE o.concept_id = @existing_id AND o.value_coded IS NOT NULL;
     END IF;
     
 
@@ -7412,6 +7883,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 3, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        UPDATE obs o JOIN concept_name cn ON o.value_coded = cn.concept_id AND cn.locale = 'en' AND cn.locale_preferred = 1 SET o.value_text = cn.name, o.value_coded = NULL WHERE o.concept_id = @existing_id AND o.value_coded IS NOT NULL;
     END IF;
     
 
@@ -7429,6 +7901,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 1, class_id = 7 WHERE concept_id = @existing_id;
         IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, 'years', 0, 0, 130); END IF;
+        
     END IF;
     
 
@@ -7446,6 +7919,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 1, class_id = 7 WHERE concept_id = @existing_id;
         IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, 'kg/m2', 1, 5, 90); END IF;
+        
     END IF;
     
 
@@ -7463,6 +7937,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 3, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        UPDATE obs o JOIN concept_name cn ON o.value_coded = cn.concept_id AND cn.locale = 'en' AND cn.locale_preferred = 1 SET o.value_text = cn.name, o.value_coded = NULL WHERE o.concept_id = @existing_id AND o.value_coded IS NOT NULL;
     END IF;
     
 
@@ -7480,6 +7955,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 3, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        UPDATE obs o JOIN concept_name cn ON o.value_coded = cn.concept_id AND cn.locale = 'en' AND cn.locale_preferred = 1 SET o.value_text = cn.name, o.value_coded = NULL WHERE o.concept_id = @existing_id AND o.value_coded IS NOT NULL;
     END IF;
     
 
@@ -7497,6 +7973,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 1, class_id = 7 WHERE concept_id = @existing_id;
         IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, 'kg/m2', 1, 5, 90); END IF;
+        
     END IF;
     
 
@@ -7514,6 +7991,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 2, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -7531,6 +8009,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 2, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -7548,6 +8027,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 2, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -7565,6 +8045,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 2, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -7582,6 +8063,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 2, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -7599,6 +8081,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 2, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -7616,6 +8099,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 1, class_id = 7 WHERE concept_id = @existing_id;
         IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, 'years', 0, 0, 80); END IF;
+        
     END IF;
     
 
@@ -7633,6 +8117,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 1, class_id = 7 WHERE concept_id = @existing_id;
         IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, 'years', 0, 0, 80); END IF;
+        
     END IF;
     
 
@@ -7650,6 +8135,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 1, class_id = 7 WHERE concept_id = @existing_id;
         IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, NULL, 0, 0, 30); END IF;
+        
     END IF;
     
 
@@ -7667,6 +8153,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 1, class_id = 7 WHERE concept_id = @existing_id;
         IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, NULL, 0, 0, 30); END IF;
+        
     END IF;
     
 
@@ -7684,6 +8171,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 1, class_id = 7 WHERE concept_id = @existing_id;
         IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, NULL, 0, 0, 30); END IF;
+        
     END IF;
     
 
@@ -7701,6 +8189,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 1, class_id = 7 WHERE concept_id = @existing_id;
         IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, NULL, 0, 0, 30); END IF;
+        
     END IF;
     
 
@@ -7718,6 +8207,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 1, class_id = 7 WHERE concept_id = @existing_id;
         IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, NULL, 0, 0, 30); END IF;
+        
     END IF;
     
 
@@ -7735,6 +8225,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 2, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -7752,6 +8243,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 6, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -7769,6 +8261,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 2, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -7786,6 +8279,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 2, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -7803,6 +8297,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 2, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -7820,6 +8315,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 2, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -7837,6 +8333,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 2, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -7854,6 +8351,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 2, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -7871,6 +8369,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 2, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -7888,6 +8387,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 2, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -7905,6 +8405,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 2, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -7922,6 +8423,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 2, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -7939,6 +8441,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 2, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -7956,6 +8459,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 3, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        UPDATE obs o JOIN concept_name cn ON o.value_coded = cn.concept_id AND cn.locale = 'en' AND cn.locale_preferred = 1 SET o.value_text = cn.name, o.value_coded = NULL WHERE o.concept_id = @existing_id AND o.value_coded IS NOT NULL;
     END IF;
     
 
@@ -7973,6 +8477,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 2, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -7990,6 +8495,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 2, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -8007,6 +8513,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 3, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        UPDATE obs o JOIN concept_name cn ON o.value_coded = cn.concept_id AND cn.locale = 'en' AND cn.locale_preferred = 1 SET o.value_text = cn.name, o.value_coded = NULL WHERE o.concept_id = @existing_id AND o.value_coded IS NOT NULL;
     END IF;
     
 
@@ -8024,6 +8531,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 1, class_id = 7 WHERE concept_id = @existing_id;
         IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, 'mIU/mL', 1, 0, 100); END IF;
+        
     END IF;
     
 
@@ -8041,6 +8549,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 1, class_id = 7 WHERE concept_id = @existing_id;
         IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, 'ng/dL', 1, 0, 2000); END IF;
+        
     END IF;
     
 
@@ -8058,6 +8567,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 3, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        UPDATE obs o JOIN concept_name cn ON o.value_coded = cn.concept_id AND cn.locale = 'en' AND cn.locale_preferred = 1 SET o.value_text = cn.name, o.value_coded = NULL WHERE o.concept_id = @existing_id AND o.value_coded IS NOT NULL;
     END IF;
     
 
@@ -8075,6 +8585,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 2, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -8092,6 +8603,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 2, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -8109,6 +8621,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 3, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        UPDATE obs o JOIN concept_name cn ON o.value_coded = cn.concept_id AND cn.locale = 'en' AND cn.locale_preferred = 1 SET o.value_text = cn.name, o.value_coded = NULL WHERE o.concept_id = @existing_id AND o.value_coded IS NOT NULL;
     END IF;
     
 
@@ -8126,6 +8639,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 1, class_id = 7 WHERE concept_id = @existing_id;
         IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, NULL, 0, 0, 50); END IF;
+        
     END IF;
     
 
@@ -8143,6 +8657,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 1, class_id = 7 WHERE concept_id = @existing_id;
         IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, NULL, 0, NULL, NULL); END IF;
+        
     END IF;
     
 
@@ -8160,6 +8675,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 2, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -8177,6 +8693,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 2, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -8194,6 +8711,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 3, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        UPDATE obs o JOIN concept_name cn ON o.value_coded = cn.concept_id AND cn.locale = 'en' AND cn.locale_preferred = 1 SET o.value_text = cn.name, o.value_coded = NULL WHERE o.concept_id = @existing_id AND o.value_coded IS NOT NULL;
     END IF;
     
 
@@ -8211,6 +8729,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 1, class_id = 7 WHERE concept_id = @existing_id;
         IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, NULL, 0, 0, 50); END IF;
+        
     END IF;
     
 
@@ -8228,6 +8747,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 1, class_id = 7 WHERE concept_id = @existing_id;
         IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, NULL, 0, NULL, NULL); END IF;
+        
     END IF;
     
 
@@ -8245,6 +8765,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 2, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -8262,6 +8783,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 1, class_id = 7 WHERE concept_id = @existing_id;
         IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, NULL, 0, 0, 50); END IF;
+        
     END IF;
     
 
@@ -8279,6 +8801,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 3, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        UPDATE obs o JOIN concept_name cn ON o.value_coded = cn.concept_id AND cn.locale = 'en' AND cn.locale_preferred = 1 SET o.value_text = cn.name, o.value_coded = NULL WHERE o.concept_id = @existing_id AND o.value_coded IS NOT NULL;
     END IF;
     
 
@@ -8296,6 +8819,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 2, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -8313,6 +8837,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 2, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -8330,6 +8855,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 3, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        UPDATE obs o JOIN concept_name cn ON o.value_coded = cn.concept_id AND cn.locale = 'en' AND cn.locale_preferred = 1 SET o.value_text = cn.name, o.value_coded = NULL WHERE o.concept_id = @existing_id AND o.value_coded IS NOT NULL;
     END IF;
     
 
@@ -8347,6 +8873,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 2, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -8364,6 +8891,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 2, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -8381,6 +8909,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 2, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -8398,6 +8927,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 2, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -8415,6 +8945,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 2, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -8432,6 +8963,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 2, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -8449,6 +8981,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 2, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -8466,6 +8999,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 2, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -8483,6 +9017,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 2, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -8500,6 +9035,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 2, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -8517,6 +9053,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 2, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -8534,6 +9071,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 2, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -8551,6 +9089,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 2, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -8568,6 +9107,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 2, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -8585,6 +9125,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 2, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -8602,6 +9143,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 2, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -8619,6 +9161,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 2, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -8636,6 +9179,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 2, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -8653,6 +9197,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 2, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -8670,6 +9215,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 2, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -8687,6 +9233,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 2, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -8704,6 +9251,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 2, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -8721,6 +9269,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 2, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -8738,6 +9287,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 3, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        UPDATE obs o JOIN concept_name cn ON o.value_coded = cn.concept_id AND cn.locale = 'en' AND cn.locale_preferred = 1 SET o.value_text = cn.name, o.value_coded = NULL WHERE o.concept_id = @existing_id AND o.value_coded IS NOT NULL;
     END IF;
     
 
@@ -8755,6 +9305,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 3, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        UPDATE obs o JOIN concept_name cn ON o.value_coded = cn.concept_id AND cn.locale = 'en' AND cn.locale_preferred = 1 SET o.value_text = cn.name, o.value_coded = NULL WHERE o.concept_id = @existing_id AND o.value_coded IS NOT NULL;
     END IF;
     
 
@@ -8772,6 +9323,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 2, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -8789,6 +9341,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 3, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        UPDATE obs o JOIN concept_name cn ON o.value_coded = cn.concept_id AND cn.locale = 'en' AND cn.locale_preferred = 1 SET o.value_text = cn.name, o.value_coded = NULL WHERE o.concept_id = @existing_id AND o.value_coded IS NOT NULL;
     END IF;
     
 
@@ -8806,6 +9359,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 2, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -8823,6 +9377,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 3, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        UPDATE obs o JOIN concept_name cn ON o.value_coded = cn.concept_id AND cn.locale = 'en' AND cn.locale_preferred = 1 SET o.value_text = cn.name, o.value_coded = NULL WHERE o.concept_id = @existing_id AND o.value_coded IS NOT NULL;
     END IF;
     
 
@@ -8840,6 +9395,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 2, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -8857,6 +9413,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 3, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        UPDATE obs o JOIN concept_name cn ON o.value_coded = cn.concept_id AND cn.locale = 'en' AND cn.locale_preferred = 1 SET o.value_text = cn.name, o.value_coded = NULL WHERE o.concept_id = @existing_id AND o.value_coded IS NOT NULL;
     END IF;
     
 
@@ -8874,6 +9431,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 2, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -8891,6 +9449,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 3, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        UPDATE obs o JOIN concept_name cn ON o.value_coded = cn.concept_id AND cn.locale = 'en' AND cn.locale_preferred = 1 SET o.value_text = cn.name, o.value_coded = NULL WHERE o.concept_id = @existing_id AND o.value_coded IS NOT NULL;
     END IF;
     
 
@@ -8908,6 +9467,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 2, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -8925,6 +9485,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 3, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        UPDATE obs o JOIN concept_name cn ON o.value_coded = cn.concept_id AND cn.locale = 'en' AND cn.locale_preferred = 1 SET o.value_text = cn.name, o.value_coded = NULL WHERE o.concept_id = @existing_id AND o.value_coded IS NOT NULL;
     END IF;
     
 
@@ -8942,6 +9503,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 2, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -8959,6 +9521,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 3, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        UPDATE obs o JOIN concept_name cn ON o.value_coded = cn.concept_id AND cn.locale = 'en' AND cn.locale_preferred = 1 SET o.value_text = cn.name, o.value_coded = NULL WHERE o.concept_id = @existing_id AND o.value_coded IS NOT NULL;
     END IF;
     
 
@@ -8976,6 +9539,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 2, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -8993,6 +9557,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 3, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        UPDATE obs o JOIN concept_name cn ON o.value_coded = cn.concept_id AND cn.locale = 'en' AND cn.locale_preferred = 1 SET o.value_text = cn.name, o.value_coded = NULL WHERE o.concept_id = @existing_id AND o.value_coded IS NOT NULL;
     END IF;
     
 
@@ -9010,6 +9575,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 6, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -9027,6 +9593,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 2, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -9044,6 +9611,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 3, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        UPDATE obs o JOIN concept_name cn ON o.value_coded = cn.concept_id AND cn.locale = 'en' AND cn.locale_preferred = 1 SET o.value_text = cn.name, o.value_coded = NULL WHERE o.concept_id = @existing_id AND o.value_coded IS NOT NULL;
     END IF;
     
 
@@ -9061,6 +9629,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 6, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -9078,6 +9647,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 1, class_id = 7 WHERE concept_id = @existing_id;
         IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, NULL, 0, 0, 50); END IF;
+        
     END IF;
     
 
@@ -9095,6 +9665,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 2, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -9112,6 +9683,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 3, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        UPDATE obs o JOIN concept_name cn ON o.value_coded = cn.concept_id AND cn.locale = 'en' AND cn.locale_preferred = 1 SET o.value_text = cn.name, o.value_coded = NULL WHERE o.concept_id = @existing_id AND o.value_coded IS NOT NULL;
     END IF;
     
 
@@ -9129,6 +9701,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 1, class_id = 7 WHERE concept_id = @existing_id;
         IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, NULL, 0, 0, 150); END IF;
+        
     END IF;
     
 
@@ -9146,6 +9719,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 1, class_id = 7 WHERE concept_id = @existing_id;
         IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, 'cm3', 2, 0, 200); END IF;
+        
     END IF;
     
 
@@ -9163,6 +9737,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 1, class_id = 7 WHERE concept_id = @existing_id;
         IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, 'cm3', 2, 0, 200); END IF;
+        
     END IF;
     
 
@@ -9180,6 +9755,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 3, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        UPDATE obs o JOIN concept_name cn ON o.value_coded = cn.concept_id AND cn.locale = 'en' AND cn.locale_preferred = 1 SET o.value_text = cn.name, o.value_coded = NULL WHERE o.concept_id = @existing_id AND o.value_coded IS NOT NULL;
     END IF;
     
 
@@ -9197,6 +9773,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 1, class_id = 7 WHERE concept_id = @existing_id;
         IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, 'ng/mL', 1, NULL, NULL); END IF;
+        
     END IF;
     
 
@@ -9214,6 +9791,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 1, class_id = 7 WHERE concept_id = @existing_id;
         IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, 'mIU/mL', 1, NULL, NULL); END IF;
+        
     END IF;
     
 
@@ -9231,6 +9809,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 1, class_id = 7 WHERE concept_id = @existing_id;
         IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, 'mIU/mL', 1, NULL, NULL); END IF;
+        
     END IF;
     
 
@@ -9248,6 +9827,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 1, class_id = 7 WHERE concept_id = @existing_id;
         IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, 'uIU/mL', 1, NULL, NULL); END IF;
+        
     END IF;
     
 
@@ -9265,6 +9845,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 1, class_id = 7 WHERE concept_id = @existing_id;
         IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, 'ng/mL', 1, NULL, NULL); END IF;
+        
     END IF;
     
 
@@ -9282,6 +9863,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 2, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -9299,6 +9881,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 2, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -9316,6 +9899,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 2, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -9333,6 +9917,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 2, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -9350,6 +9935,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 3, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        UPDATE obs o JOIN concept_name cn ON o.value_coded = cn.concept_id AND cn.locale = 'en' AND cn.locale_preferred = 1 SET o.value_text = cn.name, o.value_coded = NULL WHERE o.concept_id = @existing_id AND o.value_coded IS NOT NULL;
     END IF;
     
 
@@ -9367,6 +9953,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 2, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -9384,6 +9971,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 1, class_id = 7 WHERE concept_id = @existing_id;
         IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, 'cm', 1, NULL, NULL); END IF;
+        
     END IF;
     
 
@@ -9401,6 +9989,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 1, class_id = 7 WHERE concept_id = @existing_id;
         IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, 'cm', 1, NULL, NULL); END IF;
+        
     END IF;
     
 
@@ -9418,6 +10007,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 1, class_id = 7 WHERE concept_id = @existing_id;
         IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, 'cm', 1, NULL, NULL); END IF;
+        
     END IF;
     
 
@@ -9435,6 +10025,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 1, class_id = 7 WHERE concept_id = @existing_id;
         IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, 'cm3', 2, NULL, NULL); END IF;
+        
     END IF;
     
 
@@ -9452,6 +10043,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 1, class_id = 7 WHERE concept_id = @existing_id;
         IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, NULL, 0, NULL, NULL); END IF;
+        
     END IF;
     
 
@@ -9469,6 +10061,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 2, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -9486,6 +10079,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 2, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -9503,6 +10097,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 2, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -9520,6 +10115,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 1, class_id = 7 WHERE concept_id = @existing_id;
         IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, NULL, 0, NULL, NULL); END IF;
+        
     END IF;
     
 
@@ -9537,6 +10133,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 2, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -9554,6 +10151,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 3, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        UPDATE obs o JOIN concept_name cn ON o.value_coded = cn.concept_id AND cn.locale = 'en' AND cn.locale_preferred = 1 SET o.value_text = cn.name, o.value_coded = NULL WHERE o.concept_id = @existing_id AND o.value_coded IS NOT NULL;
     END IF;
     
 
@@ -9571,6 +10169,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 2, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -9588,6 +10187,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 2, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -9605,6 +10205,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 2, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -9622,6 +10223,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 2, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -9639,6 +10241,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 1, class_id = 7 WHERE concept_id = @existing_id;
         IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, 'degrees', 1, NULL, NULL); END IF;
+        
     END IF;
     
 
@@ -9656,6 +10259,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 1, class_id = 7 WHERE concept_id = @existing_id;
         IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, 'cm', 2, NULL, NULL); END IF;
+        
     END IF;
     
 
@@ -9673,6 +10277,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 2, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -9690,6 +10295,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 1, class_id = 7 WHERE concept_id = @existing_id;
         IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, 'cm3', 2, NULL, NULL); END IF;
+        
     END IF;
     
 
@@ -9707,6 +10313,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 1, class_id = 7 WHERE concept_id = @existing_id;
         IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, 'cm3', 2, NULL, NULL); END IF;
+        
     END IF;
     
 
@@ -9724,6 +10331,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 2, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -9741,6 +10349,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 1, class_id = 7 WHERE concept_id = @existing_id;
         IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, 'cm3', 2, NULL, NULL); END IF;
+        
     END IF;
     
 
@@ -9758,6 +10367,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 2, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -9775,6 +10385,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 1, class_id = 7 WHERE concept_id = @existing_id;
         IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, NULL, 0, NULL, NULL); END IF;
+        
     END IF;
     
 
@@ -9792,6 +10403,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 3, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        UPDATE obs o JOIN concept_name cn ON o.value_coded = cn.concept_id AND cn.locale = 'en' AND cn.locale_preferred = 1 SET o.value_text = cn.name, o.value_coded = NULL WHERE o.concept_id = @existing_id AND o.value_coded IS NOT NULL;
     END IF;
     
 
@@ -9809,6 +10421,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 1, class_id = 7 WHERE concept_id = @existing_id;
         IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, NULL, 0, NULL, NULL); END IF;
+        
     END IF;
     
 
@@ -9826,6 +10439,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 1, class_id = 7 WHERE concept_id = @existing_id;
         IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, NULL, 0, NULL, NULL); END IF;
+        
     END IF;
     
 
@@ -9843,6 +10457,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 3, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        UPDATE obs o JOIN concept_name cn ON o.value_coded = cn.concept_id AND cn.locale = 'en' AND cn.locale_preferred = 1 SET o.value_text = cn.name, o.value_coded = NULL WHERE o.concept_id = @existing_id AND o.value_coded IS NOT NULL;
     END IF;
     
 
@@ -9860,6 +10475,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 3, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        UPDATE obs o JOIN concept_name cn ON o.value_coded = cn.concept_id AND cn.locale = 'en' AND cn.locale_preferred = 1 SET o.value_text = cn.name, o.value_coded = NULL WHERE o.concept_id = @existing_id AND o.value_coded IS NOT NULL;
     END IF;
     
 
@@ -9877,6 +10493,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 2, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -9894,6 +10511,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 1, class_id = 7 WHERE concept_id = @existing_id;
         IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, NULL, 0, NULL, NULL); END IF;
+        
     END IF;
     
 
@@ -9911,6 +10529,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 1, class_id = 7 WHERE concept_id = @existing_id;
         IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, NULL, 0, NULL, NULL); END IF;
+        
     END IF;
     
 
@@ -9928,6 +10547,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 1, class_id = 7 WHERE concept_id = @existing_id;
         IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, NULL, 0, NULL, NULL); END IF;
+        
     END IF;
     
 
@@ -9945,6 +10565,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 3, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        UPDATE obs o JOIN concept_name cn ON o.value_coded = cn.concept_id AND cn.locale = 'en' AND cn.locale_preferred = 1 SET o.value_text = cn.name, o.value_coded = NULL WHERE o.concept_id = @existing_id AND o.value_coded IS NOT NULL;
     END IF;
     
 
@@ -9962,6 +10583,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 3, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        UPDATE obs o JOIN concept_name cn ON o.value_coded = cn.concept_id AND cn.locale = 'en' AND cn.locale_preferred = 1 SET o.value_text = cn.name, o.value_coded = NULL WHERE o.concept_id = @existing_id AND o.value_coded IS NOT NULL;
     END IF;
     
 
@@ -9979,6 +10601,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 3, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        UPDATE obs o JOIN concept_name cn ON o.value_coded = cn.concept_id AND cn.locale = 'en' AND cn.locale_preferred = 1 SET o.value_text = cn.name, o.value_coded = NULL WHERE o.concept_id = @existing_id AND o.value_coded IS NOT NULL;
     END IF;
     
 
@@ -9996,6 +10619,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 2, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -10013,6 +10637,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 3, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        UPDATE obs o JOIN concept_name cn ON o.value_coded = cn.concept_id AND cn.locale = 'en' AND cn.locale_preferred = 1 SET o.value_text = cn.name, o.value_coded = NULL WHERE o.concept_id = @existing_id AND o.value_coded IS NOT NULL;
     END IF;
     
 
@@ -10030,6 +10655,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 1, class_id = 7 WHERE concept_id = @existing_id;
         IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, 'mm', 2, NULL, NULL); END IF;
+        
     END IF;
     
 
@@ -10047,6 +10673,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 2, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -10064,6 +10691,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 2, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -10081,6 +10709,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 3, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        UPDATE obs o JOIN concept_name cn ON o.value_coded = cn.concept_id AND cn.locale = 'en' AND cn.locale_preferred = 1 SET o.value_text = cn.name, o.value_coded = NULL WHERE o.concept_id = @existing_id AND o.value_coded IS NOT NULL;
     END IF;
     
 
@@ -10098,6 +10727,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 3, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        UPDATE obs o JOIN concept_name cn ON o.value_coded = cn.concept_id AND cn.locale = 'en' AND cn.locale_preferred = 1 SET o.value_text = cn.name, o.value_coded = NULL WHERE o.concept_id = @existing_id AND o.value_coded IS NOT NULL;
     END IF;
     
 
@@ -10115,6 +10745,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 2, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -10132,6 +10763,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 3, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        UPDATE obs o JOIN concept_name cn ON o.value_coded = cn.concept_id AND cn.locale = 'en' AND cn.locale_preferred = 1 SET o.value_text = cn.name, o.value_coded = NULL WHERE o.concept_id = @existing_id AND o.value_coded IS NOT NULL;
     END IF;
     
 
@@ -10149,6 +10781,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 3, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        UPDATE obs o JOIN concept_name cn ON o.value_coded = cn.concept_id AND cn.locale = 'en' AND cn.locale_preferred = 1 SET o.value_text = cn.name, o.value_coded = NULL WHERE o.concept_id = @existing_id AND o.value_coded IS NOT NULL;
     END IF;
     
 
@@ -10166,6 +10799,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 2, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -10183,6 +10817,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 3, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        UPDATE obs o JOIN concept_name cn ON o.value_coded = cn.concept_id AND cn.locale = 'en' AND cn.locale_preferred = 1 SET o.value_text = cn.name, o.value_coded = NULL WHERE o.concept_id = @existing_id AND o.value_coded IS NOT NULL;
     END IF;
     
 
@@ -10200,6 +10835,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 3, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        UPDATE obs o JOIN concept_name cn ON o.value_coded = cn.concept_id AND cn.locale = 'en' AND cn.locale_preferred = 1 SET o.value_text = cn.name, o.value_coded = NULL WHERE o.concept_id = @existing_id AND o.value_coded IS NOT NULL;
     END IF;
     
 
@@ -10217,6 +10853,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 2, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -10234,6 +10871,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 3, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        UPDATE obs o JOIN concept_name cn ON o.value_coded = cn.concept_id AND cn.locale = 'en' AND cn.locale_preferred = 1 SET o.value_text = cn.name, o.value_coded = NULL WHERE o.concept_id = @existing_id AND o.value_coded IS NOT NULL;
     END IF;
     
 
@@ -10251,6 +10889,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 3, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        UPDATE obs o JOIN concept_name cn ON o.value_coded = cn.concept_id AND cn.locale = 'en' AND cn.locale_preferred = 1 SET o.value_text = cn.name, o.value_coded = NULL WHERE o.concept_id = @existing_id AND o.value_coded IS NOT NULL;
     END IF;
     
 
@@ -10268,6 +10907,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 1, class_id = 7 WHERE concept_id = @existing_id;
         IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, 'cm', 2, NULL, NULL); END IF;
+        
     END IF;
     
 
@@ -10285,6 +10925,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 1, class_id = 7 WHERE concept_id = @existing_id;
         IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, 'cm', 2, NULL, NULL); END IF;
+        
     END IF;
     
 
@@ -10302,6 +10943,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 1, class_id = 7 WHERE concept_id = @existing_id;
         IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, 'cm', 2, NULL, NULL); END IF;
+        
     END IF;
     
 
@@ -10319,6 +10961,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 1, class_id = 7 WHERE concept_id = @existing_id;
         IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, 'cm', 2, NULL, NULL); END IF;
+        
     END IF;
     
 
@@ -10336,6 +10979,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 3, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        UPDATE obs o JOIN concept_name cn ON o.value_coded = cn.concept_id AND cn.locale = 'en' AND cn.locale_preferred = 1 SET o.value_text = cn.name, o.value_coded = NULL WHERE o.concept_id = @existing_id AND o.value_coded IS NOT NULL;
     END IF;
     
 
@@ -10353,6 +10997,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 2, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -10370,6 +11015,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 2, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -10387,6 +11033,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 2, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -10404,6 +11051,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 3, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        UPDATE obs o JOIN concept_name cn ON o.value_coded = cn.concept_id AND cn.locale = 'en' AND cn.locale_preferred = 1 SET o.value_text = cn.name, o.value_coded = NULL WHERE o.concept_id = @existing_id AND o.value_coded IS NOT NULL;
     END IF;
     
 
@@ -10421,6 +11069,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 2, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -10438,6 +11087,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 2, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -10455,6 +11105,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 2, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -10472,6 +11123,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 3, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        UPDATE obs o JOIN concept_name cn ON o.value_coded = cn.concept_id AND cn.locale = 'en' AND cn.locale_preferred = 1 SET o.value_text = cn.name, o.value_coded = NULL WHERE o.concept_id = @existing_id AND o.value_coded IS NOT NULL;
     END IF;
     
 
@@ -10489,6 +11141,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 1, class_id = 7 WHERE concept_id = @existing_id;
         IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, 'mL', 1, 0, 20); END IF;
+        
     END IF;
     
 
@@ -10506,6 +11159,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 1, class_id = 7 WHERE concept_id = @existing_id;
         IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, 'million/mL', 1, 0, 1000); END IF;
+        
     END IF;
     
 
@@ -10523,6 +11177,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 2, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -10540,6 +11195,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 3, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        UPDATE obs o JOIN concept_name cn ON o.value_coded = cn.concept_id AND cn.locale = 'en' AND cn.locale_preferred = 1 SET o.value_text = cn.name, o.value_coded = NULL WHERE o.concept_id = @existing_id AND o.value_coded IS NOT NULL;
     END IF;
     
 
@@ -10557,6 +11213,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 3, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        UPDATE obs o JOIN concept_name cn ON o.value_coded = cn.concept_id AND cn.locale = 'en' AND cn.locale_preferred = 1 SET o.value_text = cn.name, o.value_coded = NULL WHERE o.concept_id = @existing_id AND o.value_coded IS NOT NULL;
     END IF;
     
 
@@ -10574,6 +11231,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 3, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        UPDATE obs o JOIN concept_name cn ON o.value_coded = cn.concept_id AND cn.locale = 'en' AND cn.locale_preferred = 1 SET o.value_text = cn.name, o.value_coded = NULL WHERE o.concept_id = @existing_id AND o.value_coded IS NOT NULL;
     END IF;
     
 
@@ -10591,6 +11249,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 3, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        UPDATE obs o JOIN concept_name cn ON o.value_coded = cn.concept_id AND cn.locale = 'en' AND cn.locale_preferred = 1 SET o.value_text = cn.name, o.value_coded = NULL WHERE o.concept_id = @existing_id AND o.value_coded IS NOT NULL;
     END IF;
     
 
@@ -10608,6 +11267,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 6, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -10625,6 +11285,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 1, class_id = 7 WHERE concept_id = @existing_id;
         IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, NULL, 0, 0, 100); END IF;
+        
     END IF;
     
 
@@ -10642,6 +11303,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 1, class_id = 7 WHERE concept_id = @existing_id;
         IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, NULL, 0, 0, 100); END IF;
+        
     END IF;
     
 
@@ -10659,6 +11321,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 1, class_id = 7 WHERE concept_id = @existing_id;
         IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, 'mm', 1, 0, 30); END IF;
+        
     END IF;
     
 
@@ -10676,6 +11339,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 2, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -10693,6 +11357,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 1, class_id = 7 WHERE concept_id = @existing_id;
         IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, 'pg/mL', 1, 0, 20000); END IF;
+        
     END IF;
     
 
@@ -10710,6 +11375,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 1, class_id = 7 WHERE concept_id = @existing_id;
         IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, 'ng/mL', 2, 0, 100); END IF;
+        
     END IF;
     
 
@@ -10727,6 +11393,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 2, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -10744,6 +11411,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 3, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        UPDATE obs o JOIN concept_name cn ON o.value_coded = cn.concept_id AND cn.locale = 'en' AND cn.locale_preferred = 1 SET o.value_text = cn.name, o.value_coded = NULL WHERE o.concept_id = @existing_id AND o.value_coded IS NOT NULL;
     END IF;
     
 
@@ -10761,6 +11429,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 6, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -10778,6 +11447,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 3, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        UPDATE obs o JOIN concept_name cn ON o.value_coded = cn.concept_id AND cn.locale = 'en' AND cn.locale_preferred = 1 SET o.value_text = cn.name, o.value_coded = NULL WHERE o.concept_id = @existing_id AND o.value_coded IS NOT NULL;
     END IF;
     
 
@@ -10795,6 +11465,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 3, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        UPDATE obs o JOIN concept_name cn ON o.value_coded = cn.concept_id AND cn.locale = 'en' AND cn.locale_preferred = 1 SET o.value_text = cn.name, o.value_coded = NULL WHERE o.concept_id = @existing_id AND o.value_coded IS NOT NULL;
     END IF;
     
 
@@ -10812,6 +11483,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 6, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -10829,6 +11501,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 3, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        UPDATE obs o JOIN concept_name cn ON o.value_coded = cn.concept_id AND cn.locale = 'en' AND cn.locale_preferred = 1 SET o.value_text = cn.name, o.value_coded = NULL WHERE o.concept_id = @existing_id AND o.value_coded IS NOT NULL;
     END IF;
     
 
@@ -10846,6 +11519,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 3, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        UPDATE obs o JOIN concept_name cn ON o.value_coded = cn.concept_id AND cn.locale = 'en' AND cn.locale_preferred = 1 SET o.value_text = cn.name, o.value_coded = NULL WHERE o.concept_id = @existing_id AND o.value_coded IS NOT NULL;
     END IF;
     
 
@@ -10863,6 +11537,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 1, class_id = 7 WHERE concept_id = @existing_id;
         IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, NULL, 0, 0, 150); END IF;
+        
     END IF;
     
 
@@ -10880,6 +11555,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 3, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        UPDATE obs o JOIN concept_name cn ON o.value_coded = cn.concept_id AND cn.locale = 'en' AND cn.locale_preferred = 1 SET o.value_text = cn.name, o.value_coded = NULL WHERE o.concept_id = @existing_id AND o.value_coded IS NOT NULL;
     END IF;
     
 
@@ -10897,6 +11573,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 1, class_id = 7 WHERE concept_id = @existing_id;
         IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, '%', 1, 0, 500); END IF;
+        
     END IF;
     
 
@@ -10914,6 +11591,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 1, class_id = 7 WHERE concept_id = @existing_id;
         IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, '%', 1, 0, 500); END IF;
+        
     END IF;
     
 
@@ -10931,6 +11609,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 1, class_id = 7 WHERE concept_id = @existing_id;
         IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, NULL, 0, 0, 150); END IF;
+        
     END IF;
     
 
@@ -10948,6 +11627,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 1, class_id = 7 WHERE concept_id = @existing_id;
         IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, NULL, 0, 0, 150); END IF;
+        
     END IF;
     
 
@@ -10965,6 +11645,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 1, class_id = 7 WHERE concept_id = @existing_id;
         IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, NULL, 0, 0, 150); END IF;
+        
     END IF;
     
 
@@ -10982,6 +11663,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 1, class_id = 7 WHERE concept_id = @existing_id;
         IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, NULL, 0, 0, 150); END IF;
+        
     END IF;
     
 
@@ -10999,6 +11681,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 1, class_id = 7 WHERE concept_id = @existing_id;
         IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, NULL, 0, 0, 150); END IF;
+        
     END IF;
     
 
@@ -11016,6 +11699,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 1, class_id = 7 WHERE concept_id = @existing_id;
         IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, NULL, 0, 0, 150); END IF;
+        
     END IF;
     
 
@@ -11033,6 +11717,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 1, class_id = 7 WHERE concept_id = @existing_id;
         IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, NULL, 0, 0, 150); END IF;
+        
     END IF;
     
 
@@ -11050,6 +11735,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 2, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -11067,6 +11753,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 3, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        UPDATE obs o JOIN concept_name cn ON o.value_coded = cn.concept_id AND cn.locale = 'en' AND cn.locale_preferred = 1 SET o.value_text = cn.name, o.value_coded = NULL WHERE o.concept_id = @existing_id AND o.value_coded IS NOT NULL;
     END IF;
     
 
@@ -11084,6 +11771,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 2, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -11101,6 +11789,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 3, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        UPDATE obs o JOIN concept_name cn ON o.value_coded = cn.concept_id AND cn.locale = 'en' AND cn.locale_preferred = 1 SET o.value_text = cn.name, o.value_coded = NULL WHERE o.concept_id = @existing_id AND o.value_coded IS NOT NULL;
     END IF;
     
 
@@ -11118,6 +11807,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 3, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        UPDATE obs o JOIN concept_name cn ON o.value_coded = cn.concept_id AND cn.locale = 'en' AND cn.locale_preferred = 1 SET o.value_text = cn.name, o.value_coded = NULL WHERE o.concept_id = @existing_id AND o.value_coded IS NOT NULL;
     END IF;
     
 
@@ -11135,6 +11825,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 2, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -11152,6 +11843,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 3, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        UPDATE obs o JOIN concept_name cn ON o.value_coded = cn.concept_id AND cn.locale = 'en' AND cn.locale_preferred = 1 SET o.value_text = cn.name, o.value_coded = NULL WHERE o.concept_id = @existing_id AND o.value_coded IS NOT NULL;
     END IF;
     
 
@@ -11169,6 +11861,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 2, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -11186,6 +11879,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 1, class_id = 7 WHERE concept_id = @existing_id;
         IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, 'million/mL', 1, 0, 1000); END IF;
+        
     END IF;
     
 
@@ -11203,6 +11897,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 1, class_id = 7 WHERE concept_id = @existing_id;
         IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, '%', 1, 0, 100); END IF;
+        
     END IF;
     
 
@@ -11220,6 +11915,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 3, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        UPDATE obs o JOIN concept_name cn ON o.value_coded = cn.concept_id AND cn.locale = 'en' AND cn.locale_preferred = 1 SET o.value_text = cn.name, o.value_coded = NULL WHERE o.concept_id = @existing_id AND o.value_coded IS NOT NULL;
     END IF;
     
 
@@ -11237,6 +11933,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 2, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -11254,6 +11951,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 3, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        UPDATE obs o JOIN concept_name cn ON o.value_coded = cn.concept_id AND cn.locale = 'en' AND cn.locale_preferred = 1 SET o.value_text = cn.name, o.value_coded = NULL WHERE o.concept_id = @existing_id AND o.value_coded IS NOT NULL;
     END IF;
     
 
@@ -11271,6 +11969,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 1, class_id = 7 WHERE concept_id = @existing_id;
         IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, 'days', 0, 0, 100); END IF;
+        
     END IF;
     
 
@@ -11288,6 +11987,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 1, class_id = 7 WHERE concept_id = @existing_id;
         IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, 'IU', 1, 0, 5000); END IF;
+        
     END IF;
     
 
@@ -11305,6 +12005,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 1, class_id = 7 WHERE concept_id = @existing_id;
         IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, 'IU', 1, 0, 5000); END IF;
+        
     END IF;
     
 
@@ -11322,6 +12023,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 1, class_id = 7 WHERE concept_id = @existing_id;
         IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, 'IU', 1, 0, 5000); END IF;
+        
     END IF;
     
 
@@ -11339,6 +12041,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 1, class_id = 7 WHERE concept_id = @existing_id;
         IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, 'IU', 1, 0, 50000); END IF;
+        
     END IF;
     
 
@@ -11356,6 +12059,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 1, class_id = 7 WHERE concept_id = @existing_id;
         IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, 'IU', 1, 0, 50000); END IF;
+        
     END IF;
     
 
@@ -11373,6 +12077,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 1, class_id = 7 WHERE concept_id = @existing_id;
         IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, 'IU', 1, 0, 50000); END IF;
+        
     END IF;
     
 
@@ -11390,6 +12095,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 1, class_id = 7 WHERE concept_id = @existing_id;
         IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, 'mg', 2, 0, 100); END IF;
+        
     END IF;
     
 
@@ -11407,6 +12113,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 2, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -11424,6 +12131,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 1, class_id = 7 WHERE concept_id = @existing_id;
         IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, 'days', 0, 0, 100); END IF;
+        
     END IF;
     
 
@@ -11441,6 +12149,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 3, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        UPDATE obs o JOIN concept_name cn ON o.value_coded = cn.concept_id AND cn.locale = 'en' AND cn.locale_preferred = 1 SET o.value_text = cn.name, o.value_coded = NULL WHERE o.concept_id = @existing_id AND o.value_coded IS NOT NULL;
     END IF;
     
 
@@ -11458,6 +12167,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 2, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -11475,6 +12185,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 1, class_id = 7 WHERE concept_id = @existing_id;
         IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, 'IU', 2, 0, 100); END IF;
+        
     END IF;
     
 
@@ -11492,6 +12203,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 1, class_id = 7 WHERE concept_id = @existing_id;
         IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, 'days', 0, 0, 365); END IF;
+        
     END IF;
     
 
@@ -11509,6 +12221,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 3, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        UPDATE obs o JOIN concept_name cn ON o.value_coded = cn.concept_id AND cn.locale = 'en' AND cn.locale_preferred = 1 SET o.value_text = cn.name, o.value_coded = NULL WHERE o.concept_id = @existing_id AND o.value_coded IS NOT NULL;
     END IF;
     
 
@@ -11526,6 +12239,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 1, class_id = 7 WHERE concept_id = @existing_id;
         IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, NULL, 0, 0, 100); END IF;
+        
     END IF;
     
 
@@ -11543,6 +12257,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 3, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        UPDATE obs o JOIN concept_name cn ON o.value_coded = cn.concept_id AND cn.locale = 'en' AND cn.locale_preferred = 1 SET o.value_text = cn.name, o.value_coded = NULL WHERE o.concept_id = @existing_id AND o.value_coded IS NOT NULL;
     END IF;
     
 
@@ -11560,6 +12275,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 1, class_id = 7 WHERE concept_id = @existing_id;
         IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, NULL, 0, 0, 100); END IF;
+        
     END IF;
     
 
@@ -11577,6 +12293,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 2, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -11594,6 +12311,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 1, class_id = 7 WHERE concept_id = @existing_id;
         IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, NULL, 0, 0, 100); END IF;
+        
     END IF;
     
 
@@ -11611,6 +12329,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 2, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -11628,13 +12347,14 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 1, class_id = 7 WHERE concept_id = @existing_id;
         IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, NULL, 0, 0, 100); END IF;
+        
     END IF;
     
 
     SET @existing_id = (SELECT concept_id FROM concept WHERE uuid = 'c0010001-0000-0000-0000-000000000255');
     IF @existing_id IS NULL THEN
         INSERT INTO concept (retired, datatype_id, class_id, is_set, creator, date_created, uuid)
-        VALUES (0, 2, 7, 0, 1, NOW(), 'c0010001-0000-0000-0000-000000000255');
+        VALUES (0, 3, 7, 0, 1, NOW(), 'c0010001-0000-0000-0000-000000000255');
         SET @new_id = LAST_INSERT_ID();
         
         INSERT INTO concept_name (concept_id, name, locale, locale_preferred, creator, date_created, concept_name_type, voided, uuid)
@@ -11643,8 +12363,9 @@ BEGIN
         
     ELSE
         SET @new_id = @existing_id;
-        UPDATE concept SET datatype_id = 2, class_id = 7 WHERE concept_id = @existing_id;
+        UPDATE concept SET datatype_id = 3, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        UPDATE obs o JOIN concept_name cn ON o.value_coded = cn.concept_id AND cn.locale = 'en' AND cn.locale_preferred = 1 SET o.value_text = cn.name, o.value_coded = NULL WHERE o.concept_id = @existing_id AND o.value_coded IS NOT NULL;
     END IF;
     
 
@@ -11662,6 +12383,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 1, class_id = 7 WHERE concept_id = @existing_id;
         IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, NULL, 0, 0, 100); END IF;
+        
     END IF;
     
 
@@ -11679,6 +12401,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 2, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -11696,6 +12419,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 1, class_id = 7 WHERE concept_id = @existing_id;
         IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, NULL, 0, 0, 100); END IF;
+        
     END IF;
     
 
@@ -11713,6 +12437,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 2, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -11730,6 +12455,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 3, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        UPDATE obs o JOIN concept_name cn ON o.value_coded = cn.concept_id AND cn.locale = 'en' AND cn.locale_preferred = 1 SET o.value_text = cn.name, o.value_coded = NULL WHERE o.concept_id = @existing_id AND o.value_coded IS NOT NULL;
     END IF;
     
 
@@ -11747,6 +12473,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 1, class_id = 7 WHERE concept_id = @existing_id;
         IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, 'oocytes', 0, 0, 100); END IF;
+        
     END IF;
     
 
@@ -11764,6 +12491,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 1, class_id = 7 WHERE concept_id = @existing_id;
         IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, '%', 1, 0, 100); END IF;
+        
     END IF;
     
 
@@ -11781,6 +12509,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 1, class_id = 7 WHERE concept_id = @existing_id;
         IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, 'embryos', 0, 0, 100); END IF;
+        
     END IF;
     
 
@@ -11798,6 +12527,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 1, class_id = 7 WHERE concept_id = @existing_id;
         IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, '%', 1, 0, 100); END IF;
+        
     END IF;
     
 
@@ -11815,6 +12545,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 1, class_id = 7 WHERE concept_id = @existing_id;
         IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, 'embryos', 0, 0, 100); END IF;
+        
     END IF;
     
 
@@ -11832,6 +12563,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 1, class_id = 7 WHERE concept_id = @existing_id;
         IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, 'embryos', 0, 0, 100); END IF;
+        
     END IF;
     
 
@@ -11849,6 +12581,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 3, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        UPDATE obs o JOIN concept_name cn ON o.value_coded = cn.concept_id AND cn.locale = 'en' AND cn.locale_preferred = 1 SET o.value_text = cn.name, o.value_coded = NULL WHERE o.concept_id = @existing_id AND o.value_coded IS NOT NULL;
     END IF;
     
 
@@ -11866,6 +12599,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 3, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        UPDATE obs o JOIN concept_name cn ON o.value_coded = cn.concept_id AND cn.locale = 'en' AND cn.locale_preferred = 1 SET o.value_text = cn.name, o.value_coded = NULL WHERE o.concept_id = @existing_id AND o.value_coded IS NOT NULL;
     END IF;
     
 
@@ -11883,6 +12617,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 3, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        UPDATE obs o JOIN concept_name cn ON o.value_coded = cn.concept_id AND cn.locale = 'en' AND cn.locale_preferred = 1 SET o.value_text = cn.name, o.value_coded = NULL WHERE o.concept_id = @existing_id AND o.value_coded IS NOT NULL;
     END IF;
     
 
@@ -11900,6 +12635,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 3, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        UPDATE obs o JOIN concept_name cn ON o.value_coded = cn.concept_id AND cn.locale = 'en' AND cn.locale_preferred = 1 SET o.value_text = cn.name, o.value_coded = NULL WHERE o.concept_id = @existing_id AND o.value_coded IS NOT NULL;
     END IF;
     
 
@@ -11917,6 +12653,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 3, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        UPDATE obs o JOIN concept_name cn ON o.value_coded = cn.concept_id AND cn.locale = 'en' AND cn.locale_preferred = 1 SET o.value_text = cn.name, o.value_coded = NULL WHERE o.concept_id = @existing_id AND o.value_coded IS NOT NULL;
     END IF;
     
 
@@ -11934,6 +12671,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 3, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        UPDATE obs o JOIN concept_name cn ON o.value_coded = cn.concept_id AND cn.locale = 'en' AND cn.locale_preferred = 1 SET o.value_text = cn.name, o.value_coded = NULL WHERE o.concept_id = @existing_id AND o.value_coded IS NOT NULL;
     END IF;
     
 
@@ -11951,6 +12689,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 1, class_id = 7 WHERE concept_id = @existing_id;
         IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, 'embryos', 0, 0, 100); END IF;
+        
     END IF;
     
 
@@ -11968,6 +12707,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 3, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        UPDATE obs o JOIN concept_name cn ON o.value_coded = cn.concept_id AND cn.locale = 'en' AND cn.locale_preferred = 1 SET o.value_text = cn.name, o.value_coded = NULL WHERE o.concept_id = @existing_id AND o.value_coded IS NOT NULL;
     END IF;
     
 
@@ -11985,6 +12725,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 3, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        UPDATE obs o JOIN concept_name cn ON o.value_coded = cn.concept_id AND cn.locale = 'en' AND cn.locale_preferred = 1 SET o.value_text = cn.name, o.value_coded = NULL WHERE o.concept_id = @existing_id AND o.value_coded IS NOT NULL;
     END IF;
     
 
@@ -12002,6 +12743,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 3, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        UPDATE obs o JOIN concept_name cn ON o.value_coded = cn.concept_id AND cn.locale = 'en' AND cn.locale_preferred = 1 SET o.value_text = cn.name, o.value_coded = NULL WHERE o.concept_id = @existing_id AND o.value_coded IS NOT NULL;
     END IF;
     
 
@@ -12019,6 +12761,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 1, class_id = 7 WHERE concept_id = @existing_id;
         IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, 'embryos', 0, 0, 100); END IF;
+        
     END IF;
     
 
@@ -12036,6 +12779,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 3, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        UPDATE obs o JOIN concept_name cn ON o.value_coded = cn.concept_id AND cn.locale = 'en' AND cn.locale_preferred = 1 SET o.value_text = cn.name, o.value_coded = NULL WHERE o.concept_id = @existing_id AND o.value_coded IS NOT NULL;
     END IF;
     
 
@@ -12053,6 +12797,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 3, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        UPDATE obs o JOIN concept_name cn ON o.value_coded = cn.concept_id AND cn.locale = 'en' AND cn.locale_preferred = 1 SET o.value_text = cn.name, o.value_coded = NULL WHERE o.concept_id = @existing_id AND o.value_coded IS NOT NULL;
     END IF;
     
 
@@ -12070,6 +12815,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 2, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -12087,6 +12833,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 2, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -12104,6 +12851,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 3, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        UPDATE obs o JOIN concept_name cn ON o.value_coded = cn.concept_id AND cn.locale = 'en' AND cn.locale_preferred = 1 SET o.value_text = cn.name, o.value_coded = NULL WHERE o.concept_id = @existing_id AND o.value_coded IS NOT NULL;
     END IF;
     
 
@@ -12121,6 +12869,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 1, class_id = 7 WHERE concept_id = @existing_id;
         IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, 'embryos', 0, 0, 10); END IF;
+        
     END IF;
     
 
@@ -12138,6 +12887,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 3, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        UPDATE obs o JOIN concept_name cn ON o.value_coded = cn.concept_id AND cn.locale = 'en' AND cn.locale_preferred = 1 SET o.value_text = cn.name, o.value_coded = NULL WHERE o.concept_id = @existing_id AND o.value_coded IS NOT NULL;
     END IF;
     
 
@@ -12155,6 +12905,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 2, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -12172,6 +12923,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 1, class_id = 7 WHERE concept_id = @existing_id;
         IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, 'mm', 1, 1.0, 30.0); END IF;
+        
     END IF;
     
 
@@ -12189,6 +12941,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 2, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -12206,6 +12959,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 2, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -12223,6 +12977,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 6, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -12240,6 +12995,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 3, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        UPDATE obs o JOIN concept_name cn ON o.value_coded = cn.concept_id AND cn.locale = 'en' AND cn.locale_preferred = 1 SET o.value_text = cn.name, o.value_coded = NULL WHERE o.concept_id = @existing_id AND o.value_coded IS NOT NULL;
     END IF;
     
 
@@ -12257,6 +13013,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 2, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -12274,6 +13031,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 6, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -12291,6 +13049,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 3, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        UPDATE obs o JOIN concept_name cn ON o.value_coded = cn.concept_id AND cn.locale = 'en' AND cn.locale_preferred = 1 SET o.value_text = cn.name, o.value_coded = NULL WHERE o.concept_id = @existing_id AND o.value_coded IS NOT NULL;
     END IF;
     
 
@@ -12308,6 +13067,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 2, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -12325,6 +13085,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 1, class_id = 7 WHERE concept_id = @existing_id;
         IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, 'mIU/mL', 1, 0, 500000); END IF;
+        
     END IF;
     
 
@@ -12342,6 +13103,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 3, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        UPDATE obs o JOIN concept_name cn ON o.value_coded = cn.concept_id AND cn.locale = 'en' AND cn.locale_preferred = 1 SET o.value_text = cn.name, o.value_coded = NULL WHERE o.concept_id = @existing_id AND o.value_coded IS NOT NULL;
     END IF;
     
 
@@ -12359,6 +13121,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 2, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -12376,6 +13139,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 2, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -12393,6 +13157,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 3, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        UPDATE obs o JOIN concept_name cn ON o.value_coded = cn.concept_id AND cn.locale = 'en' AND cn.locale_preferred = 1 SET o.value_text = cn.name, o.value_coded = NULL WHERE o.concept_id = @existing_id AND o.value_coded IS NOT NULL;
     END IF;
     
 
@@ -12410,6 +13175,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 2, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -12427,6 +13193,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 1, class_id = 7 WHERE concept_id = @existing_id;
         IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, 'weeks', 1, 10, 45); END IF;
+        
     END IF;
     
 
@@ -12444,6 +13211,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 2, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -12461,6 +13229,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 1, class_id = 7 WHERE concept_id = @existing_id;
         IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, 'kg', 1, 0.3, 8.0); END IF;
+        
     END IF;
     
 
@@ -12478,6 +13247,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 1, class_id = 7 WHERE concept_id = @existing_id;
         IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, 'score', 0, 0, 10); END IF;
+        
     END IF;
     
 
@@ -12495,6 +13265,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 2, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -12512,6 +13283,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 2, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -12529,6 +13301,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 3, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        UPDATE obs o JOIN concept_name cn ON o.value_coded = cn.concept_id AND cn.locale = 'en' AND cn.locale_preferred = 1 SET o.value_text = cn.name, o.value_coded = NULL WHERE o.concept_id = @existing_id AND o.value_coded IS NOT NULL;
     END IF;
     
 
@@ -12546,6 +13319,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 3, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        UPDATE obs o JOIN concept_name cn ON o.value_coded = cn.concept_id AND cn.locale = 'en' AND cn.locale_preferred = 1 SET o.value_text = cn.name, o.value_coded = NULL WHERE o.concept_id = @existing_id AND o.value_coded IS NOT NULL;
     END IF;
     
 
@@ -12563,6 +13337,7 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 2, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -12580,6 +13355,25 @@ BEGIN
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = 3, class_id = 7 WHERE concept_id = @existing_id;
         DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        UPDATE obs o JOIN concept_name cn ON o.value_coded = cn.concept_id AND cn.locale = 'en' AND cn.locale_preferred = 1 SET o.value_text = cn.name, o.value_coded = NULL WHERE o.concept_id = @existing_id AND o.value_coded IS NOT NULL;
+    END IF;
+    
+
+    SET @existing_id = (SELECT concept_id FROM concept WHERE uuid = 'c0010001-0000-0000-0000-000000000311');
+    IF @existing_id IS NULL THEN
+        INSERT INTO concept (retired, datatype_id, class_id, is_set, creator, date_created, uuid)
+        VALUES (0, 2, 7, 0, 1, NOW(), 'c0010001-0000-0000-0000-000000000311');
+        SET @new_id = LAST_INSERT_ID();
+        
+        INSERT INTO concept_name (concept_id, name, locale, locale_preferred, creator, date_created, concept_name_type, voided, uuid)
+        VALUES (@new_id, 'Semen Sample Type', 'en', 1, 1, NOW(), 'FULLY_SPECIFIED', 0, UUID());
+        
+        
+    ELSE
+        SET @new_id = @existing_id;
+        UPDATE concept SET datatype_id = 2, class_id = 7 WHERE concept_id = @existing_id;
+        DELETE FROM concept_numeric WHERE concept_id = @existing_id;
+        
     END IF;
     
 
@@ -18817,6 +19611,36 @@ BEGIN
     END IF;
     
 
+    SET @q_id = (SELECT concept_id FROM concept WHERE uuid = 'c0010001-0000-0000-0000-000000000311');
+    SET @a_id = (SELECT concept_id FROM concept WHERE uuid = 'c0010002-0000-0000-0000-000000001014');
+    IF @q_id IS NOT NULL AND @a_id IS NOT NULL THEN
+        IF NOT EXISTS (SELECT 1 FROM concept_answer WHERE concept_id = @q_id AND answer_concept = @a_id) THEN
+            INSERT INTO concept_answer (concept_id, answer_concept, creator, date_created, uuid)
+            VALUES (@q_id, @a_id, 1, NOW(), UUID());
+        END IF;
+    END IF;
+    
+
+    SET @q_id = (SELECT concept_id FROM concept WHERE uuid = 'c0010001-0000-0000-0000-000000000311');
+    SET @a_id = (SELECT concept_id FROM concept WHERE uuid = 'c0010002-0000-0000-0000-000000001015');
+    IF @q_id IS NOT NULL AND @a_id IS NOT NULL THEN
+        IF NOT EXISTS (SELECT 1 FROM concept_answer WHERE concept_id = @q_id AND answer_concept = @a_id) THEN
+            INSERT INTO concept_answer (concept_id, answer_concept, creator, date_created, uuid)
+            VALUES (@q_id, @a_id, 1, NOW(), UUID());
+        END IF;
+    END IF;
+    
+
+    SET @q_id = (SELECT concept_id FROM concept WHERE uuid = 'c0010001-0000-0000-0000-000000000311');
+    SET @a_id = (SELECT concept_id FROM concept WHERE uuid = 'c0010002-0000-0000-0000-000000001016');
+    IF @q_id IS NOT NULL AND @a_id IS NOT NULL THEN
+        IF NOT EXISTS (SELECT 1 FROM concept_answer WHERE concept_id = @q_id AND answer_concept = @a_id) THEN
+            INSERT INTO concept_answer (concept_id, answer_concept, creator, date_created, uuid)
+            VALUES (@q_id, @a_id, 1, NOW(), UUID());
+        END IF;
+    END IF;
+    
+
     SET @q_id = (SELECT concept_id FROM concept WHERE uuid = 'c0010001-0000-0000-0000-000000000225');
     SET @a_id = (SELECT concept_id FROM concept WHERE uuid = 'c0010002-0000-0000-0000-000000001011');
     IF @q_id IS NOT NULL AND @a_id IS NOT NULL THEN
@@ -18838,7 +19662,7 @@ BEGIN
     
 
     SET @q_id = (SELECT concept_id FROM concept WHERE uuid = 'c0010001-0000-0000-0000-000000000225');
-    SET @a_id = (SELECT concept_id FROM concept WHERE uuid = 'c0010002-0000-0000-0000-000000001013');
+    SET @a_id = (SELECT concept_id FROM concept WHERE uuid = 'c0010002-0000-0000-0000-000000001165');
     IF @q_id IS NOT NULL AND @a_id IS NOT NULL THEN
         IF NOT EXISTS (SELECT 1 FROM concept_answer WHERE concept_id = @q_id AND answer_concept = @a_id) THEN
             INSERT INTO concept_answer (concept_id, answer_concept, creator, date_created, uuid)
@@ -18848,27 +19672,7 @@ BEGIN
     
 
     SET @q_id = (SELECT concept_id FROM concept WHERE uuid = 'c0010001-0000-0000-0000-000000000225');
-    SET @a_id = (SELECT concept_id FROM concept WHERE uuid = 'c0010002-0000-0000-0000-000000001014');
-    IF @q_id IS NOT NULL AND @a_id IS NOT NULL THEN
-        IF NOT EXISTS (SELECT 1 FROM concept_answer WHERE concept_id = @q_id AND answer_concept = @a_id) THEN
-            INSERT INTO concept_answer (concept_id, answer_concept, creator, date_created, uuid)
-            VALUES (@q_id, @a_id, 1, NOW(), UUID());
-        END IF;
-    END IF;
-    
-
-    SET @q_id = (SELECT concept_id FROM concept WHERE uuid = 'c0010001-0000-0000-0000-000000000225');
-    SET @a_id = (SELECT concept_id FROM concept WHERE uuid = 'c0010002-0000-0000-0000-000000001015');
-    IF @q_id IS NOT NULL AND @a_id IS NOT NULL THEN
-        IF NOT EXISTS (SELECT 1 FROM concept_answer WHERE concept_id = @q_id AND answer_concept = @a_id) THEN
-            INSERT INTO concept_answer (concept_id, answer_concept, creator, date_created, uuid)
-            VALUES (@q_id, @a_id, 1, NOW(), UUID());
-        END IF;
-    END IF;
-    
-
-    SET @q_id = (SELECT concept_id FROM concept WHERE uuid = 'c0010001-0000-0000-0000-000000000225');
-    SET @a_id = (SELECT concept_id FROM concept WHERE uuid = 'c0010002-0000-0000-0000-000000001016');
+    SET @a_id = (SELECT concept_id FROM concept WHERE uuid = 'c0010002-0000-0000-0000-000000001166');
     IF @q_id IS NOT NULL AND @a_id IS NOT NULL THEN
         IF NOT EXISTS (SELECT 1 FROM concept_answer WHERE concept_id = @q_id AND answer_concept = @a_id) THEN
             INSERT INTO concept_answer (concept_id, answer_concept, creator, date_created, uuid)
@@ -19190,10 +19994,11 @@ BEGIN
 UPDATE concept SET datatype_id = 2 WHERE uuid IN (
     'c0010001-0000-0000-0000-000000000251',
     'c0010001-0000-0000-0000-000000000253',
-    'c0010001-0000-0000-0000-000000000255',
     'c0010001-0000-0000-0000-000000000257',
     'c0010001-0000-0000-0000-000000000259'
 );
+UPDATE concept SET datatype_id = 3 WHERE uuid = 'c0010001-0000-0000-0000-000000000255';
+DELETE FROM concept_answer WHERE concept_id = (SELECT concept_id FROM concept WHERE uuid = 'c0010001-0000-0000-0000-000000000255');
 
 
     SET @q_id = (SELECT concept_id FROM concept WHERE uuid = 'c0010001-0000-0000-0000-000000000251');
@@ -19588,46 +20393,6 @@ UPDATE concept SET datatype_id = 2 WHERE uuid IN (
 
     SET @q_id = (SELECT concept_id FROM concept WHERE uuid = 'c0010001-0000-0000-0000-000000000253');
     SET @a_id = (SELECT concept_id FROM concept WHERE uuid = 'c0010002-0000-0000-0000-000000001069');
-    IF @q_id IS NOT NULL AND @a_id IS NOT NULL THEN
-        IF NOT EXISTS (SELECT 1 FROM concept_answer WHERE concept_id = @q_id AND answer_concept = @a_id) THEN
-            INSERT INTO concept_answer (concept_id, answer_concept, creator, date_created, uuid)
-            VALUES (@q_id, @a_id, 1, NOW(), UUID());
-        END IF;
-    END IF;
-    
-
-    SET @q_id = (SELECT concept_id FROM concept WHERE uuid = 'c0010001-0000-0000-0000-000000000255');
-    SET @a_id = (SELECT concept_id FROM concept WHERE uuid = 'c0010002-0000-0000-0000-000000001070');
-    IF @q_id IS NOT NULL AND @a_id IS NOT NULL THEN
-        IF NOT EXISTS (SELECT 1 FROM concept_answer WHERE concept_id = @q_id AND answer_concept = @a_id) THEN
-            INSERT INTO concept_answer (concept_id, answer_concept, creator, date_created, uuid)
-            VALUES (@q_id, @a_id, 1, NOW(), UUID());
-        END IF;
-    END IF;
-    
-
-    SET @q_id = (SELECT concept_id FROM concept WHERE uuid = 'c0010001-0000-0000-0000-000000000255');
-    SET @a_id = (SELECT concept_id FROM concept WHERE uuid = 'c0010002-0000-0000-0000-000000001071');
-    IF @q_id IS NOT NULL AND @a_id IS NOT NULL THEN
-        IF NOT EXISTS (SELECT 1 FROM concept_answer WHERE concept_id = @q_id AND answer_concept = @a_id) THEN
-            INSERT INTO concept_answer (concept_id, answer_concept, creator, date_created, uuid)
-            VALUES (@q_id, @a_id, 1, NOW(), UUID());
-        END IF;
-    END IF;
-    
-
-    SET @q_id = (SELECT concept_id FROM concept WHERE uuid = 'c0010001-0000-0000-0000-000000000255');
-    SET @a_id = (SELECT concept_id FROM concept WHERE uuid = 'c0010002-0000-0000-0000-000000001072');
-    IF @q_id IS NOT NULL AND @a_id IS NOT NULL THEN
-        IF NOT EXISTS (SELECT 1 FROM concept_answer WHERE concept_id = @q_id AND answer_concept = @a_id) THEN
-            INSERT INTO concept_answer (concept_id, answer_concept, creator, date_created, uuid)
-            VALUES (@q_id, @a_id, 1, NOW(), UUID());
-        END IF;
-    END IF;
-    
-
-    SET @q_id = (SELECT concept_id FROM concept WHERE uuid = 'c0010001-0000-0000-0000-000000000255');
-    SET @a_id = (SELECT concept_id FROM concept WHERE uuid = 'c0010002-0000-0000-0000-000000001073');
     IF @q_id IS NOT NULL AND @a_id IS NOT NULL THEN
         IF NOT EXISTS (SELECT 1 FROM concept_answer WHERE concept_id = @q_id AND answer_concept = @a_id) THEN
             INSERT INTO concept_answer (concept_id, answer_concept, creator, date_created, uuid)

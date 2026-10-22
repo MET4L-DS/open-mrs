@@ -11,9 +11,11 @@ interface DoseOfDrugsCardProps {
 export const DoseOfDrugsCard: React.FC<DoseOfDrugsCardProps> = ({ data }) => {
   const { t } = useTranslation();
 
-  const durationRows: ObservationRow[] = React.useMemo(() => {
+  const allRows: ObservationRow[] = React.useMemo(() => {
     const list: ObservationRow[] = [];
+    const iuUnit = t('iuUnit', 'IU');
 
+    // 1. Total days of Leuprolide downregulation
     list.push({
       id: 'total_days_of_leuprolide_downregulation',
       label: t('totalDaysOfLeuprolideDownregulation', 'Total days of Leuprolide Downregulation'),
@@ -24,6 +26,92 @@ export const DoseOfDrugsCard: React.FC<DoseOfDrugsCardProps> = ({ data }) => {
       emptyPlaceholder: '—',
     });
 
+    // 2. Starting dose FSH
+    list.push({
+      id: 'starting_dose_fsh',
+      label: t('startingDoseFsh', 'Starting dose Follicle-Stimulating Hormone (FSH)'),
+      value:
+        data?.startingDoseFsh !== undefined && data?.startingDoseFsh !== null
+          ? `${data.startingDoseFsh} ${iuUnit}`
+          : undefined,
+      emptyPlaceholder: '—',
+    });
+
+    // 3. Starting dose HMG
+    list.push({
+      id: 'starting_dose_hmg',
+      label: t('startingDoseHmg', 'Starting dose Human Menopausal Gonadotropin (HMG)'),
+      value:
+        data?.startingDoseHmg !== undefined && data?.startingDoseHmg !== null
+          ? `${data.startingDoseHmg} ${iuUnit}`
+          : undefined,
+      emptyPlaceholder: '—',
+    });
+
+    // 4. Starting dose rLH
+    list.push({
+      id: 'starting_dose_rlh',
+      label: t('startingDoseRlh', 'Starting dose Recombinant Luteinizing Hormone (rLH)'),
+      value:
+        data?.startingDoseRlh !== undefined && data?.startingDoseRlh !== null
+          ? `${data.startingDoseRlh} ${iuUnit}`
+          : undefined,
+      emptyPlaceholder: '—',
+    });
+
+    // 5. Total dose FSH
+    list.push({
+      id: 'total_dose_fsh',
+      label: t('totalDoseFsh', 'Total dose Follicle-Stimulating Hormone (FSH)'),
+      value:
+        data?.totalDoseFsh !== undefined && data?.totalDoseFsh !== null
+          ? `${data.totalDoseFsh} ${iuUnit}`
+          : undefined,
+      emptyPlaceholder: '—',
+    });
+
+    // 6. Total dose HMG
+    list.push({
+      id: 'total_dose_hmg',
+      label: t('totalDoseHmg', 'Total dose Human Menopausal Gonadotropin (HMG)'),
+      value:
+        data?.totalDoseHmg !== undefined && data?.totalDoseHmg !== null
+          ? `${data.totalDoseHmg} ${iuUnit}`
+          : undefined,
+      emptyPlaceholder: '—',
+    });
+
+    // 7. Total dose rLH
+    list.push({
+      id: 'total_dose_rlh',
+      label: t('totalDoseRlh', 'Total dose Recombinant Luteinizing Hormone (rLH)'),
+      value:
+        data?.totalDoseRlh !== undefined && data?.totalDoseRlh !== null
+          ? `${data.totalDoseRlh} ${iuUnit}`
+          : undefined,
+      emptyPlaceholder: '—',
+    });
+
+    // 8. Total Cetrotide dose
+    list.push({
+      id: 'total_cetrotide_dose',
+      label: t('totalCetrotideDose', 'Total Cetrotide dose'),
+      value:
+        data?.totalCetrotideDose !== undefined && data?.totalCetrotideDose !== null
+          ? `${data.totalCetrotideDose} ${t('mgUnit', 'mg')}`
+          : undefined,
+      emptyPlaceholder: '—',
+    });
+
+    // 9. Day of start of Cetrotide
+    list.push({
+      id: 'day_of_start_of_cetrotide',
+      label: t('dayOfStartOfCetrotide', 'Day of start of Cetrotide'),
+      value: data?.dayOfStartOfCetrotide,
+      emptyPlaceholder: '—',
+    });
+
+    // 10. Total days of stimulation
     list.push({
       id: 'total_days_of_stimulation',
       label: t('totalDaysOfStimulation', 'Total days of Stimulation'),
@@ -36,116 +124,6 @@ export const DoseOfDrugsCard: React.FC<DoseOfDrugsCardProps> = ({ data }) => {
 
     return list;
   }, [data, t]);
-
-  const gonadotropinRows: ObservationRow[] = React.useMemo(() => {
-    const list: ObservationRow[] = [];
-    const iuUnit = t('iuUnit', 'IU');
-
-    list.push({
-      id: 'starting_dose_fsh',
-      label: t('startingDoseFsh', 'Starting dose Follicle-Stimulating Hormone (FSH)'),
-      value:
-        data?.startingDoseFsh !== undefined && data?.startingDoseFsh !== null
-          ? `${data.startingDoseFsh} ${iuUnit}`
-          : undefined,
-      emptyPlaceholder: '—',
-    });
-
-    list.push({
-      id: 'total_dose_fsh',
-      label: t('totalDoseFsh', 'Total dose Follicle-Stimulating Hormone (FSH)'),
-      value:
-        data?.totalDoseFsh !== undefined && data?.totalDoseFsh !== null
-          ? `${data.totalDoseFsh} ${iuUnit}`
-          : undefined,
-      emptyPlaceholder: '—',
-    });
-
-    list.push({
-      id: 'starting_dose_hmg',
-      label: t('startingDoseHmg', 'Starting dose Human Menopausal Gonadotropin (HMG)'),
-      value:
-        data?.startingDoseHmg !== undefined && data?.startingDoseHmg !== null
-          ? `${data.startingDoseHmg} ${iuUnit}`
-          : undefined,
-      emptyPlaceholder: '—',
-    });
-
-    list.push({
-      id: 'total_dose_hmg',
-      label: t('totalDoseHmg', 'Total dose Human Menopausal Gonadotropin (HMG)'),
-      value:
-        data?.totalDoseHmg !== undefined && data?.totalDoseHmg !== null
-          ? `${data.totalDoseHmg} ${iuUnit}`
-          : undefined,
-      emptyPlaceholder: '—',
-    });
-
-    list.push({
-      id: 'starting_dose_rlh',
-      label: t('startingDoseRlh', 'Starting dose Recombinant Luteinizing Hormone (rLH)'),
-      value:
-        data?.startingDoseRlh !== undefined && data?.startingDoseRlh !== null
-          ? `${data.startingDoseRlh} ${iuUnit}`
-          : undefined,
-      emptyPlaceholder: '—',
-    });
-
-    list.push({
-      id: 'total_dose_rlh',
-      label: t('totalDoseRlh', 'Total dose Recombinant Luteinizing Hormone (rLH)'),
-      value:
-        data?.totalDoseRlh !== undefined && data?.totalDoseRlh !== null
-          ? `${data.totalDoseRlh} ${iuUnit}`
-          : undefined,
-      emptyPlaceholder: '—',
-    });
-
-    return list;
-  }, [data, t]);
-
-  const cetrotideRows: ObservationRow[] = React.useMemo(() => {
-    const list: ObservationRow[] = [];
-
-    list.push({
-      id: 'day_of_start_of_cetrotide',
-      label: t('dayOfStartOfCetrotide', 'Day of start of Cetrotide'),
-      value: data?.dayOfStartOfCetrotide,
-      emptyPlaceholder: '—',
-    });
-
-    list.push({
-      id: 'total_cetrotide_dose',
-      label: t('totalCetrotideDose', 'Total Cetrotide dose'),
-      value:
-        data?.totalCetrotideDose !== undefined && data?.totalCetrotideDose !== null
-          ? `${data.totalCetrotideDose} ${t('mgUnit', 'mg')}`
-          : undefined,
-      emptyPlaceholder: '—',
-    });
-
-    return list;
-  }, [data, t]);
-
-  const remarksRows: ObservationRow[] = React.useMemo(() => {
-    const list: ObservationRow[] = [];
-
-    list.push({
-      id: 'dose_of_drugs_remarks',
-      label: t('doseOfDrugsRemarks', 'Remarks / Notes'),
-      value: data?.remarks,
-      emptyPlaceholder: '—',
-    });
-
-    return list;
-  }, [data, t]);
-
-  const allRows = React.useMemo(() => [
-    ...durationRows,
-    ...gonadotropinRows,
-    ...cetrotideRows,
-    ...(data?.remarks ? remarksRows : []),
-  ], [durationRows, gonadotropinRows, cetrotideRows, remarksRows, data?.remarks]);
 
   return (
     <ObservationCard

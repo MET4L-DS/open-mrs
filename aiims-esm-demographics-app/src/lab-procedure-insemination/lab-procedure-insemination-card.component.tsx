@@ -13,7 +13,7 @@ export const LabProcedureInseminationCard: React.FC<
 > = ({ data }) => {
   const { t } = useTranslation();
 
-  const procedureRows: ObservationRow[] = React.useMemo(() => {
+  const allRows: ObservationRow[] = React.useMemo(() => {
     const list: ObservationRow[] = [];
 
     // Method of Insemination
@@ -38,27 +38,19 @@ export const LabProcedureInseminationCard: React.FC<
       emptyPlaceholder: '—',
     });
 
-    return list;
-  }, [data.methodOfInsemination, data.timeOfInseminationInjection, t]);
-
-  const remarksRows: ObservationRow[] = React.useMemo(() => {
-    const list: ObservationRow[] = [];
-
-    // Remarks
+    // Semen Sample Type
     list.push({
-      id: 'lab_procedure_insemination_remarks',
-      label: t('remarks', 'Remarks / Notes'),
-      value: data.labProcedureInseminationRemarks,
+      id: 'semen_sample_type',
+      label: t('semenSampleType', 'Semen Sample Type'),
+      value:
+        data.semenSampleType.length > 0
+          ? data.semenSampleType.join(', ')
+          : undefined,
       emptyPlaceholder: '—',
     });
 
     return list;
-  }, [data.labProcedureInseminationRemarks, t]);
-
-  const allRows = React.useMemo(() => [
-    ...procedureRows,
-    ...remarksRows,
-  ], [procedureRows, remarksRows]);
+  }, [data.methodOfInsemination, data.timeOfInseminationInjection, data.semenSampleType, t]);
 
   return (
     <ObservationCard

@@ -19,7 +19,6 @@ export interface AiimsDoseOfDrugsData {
   totalCetrotideDose?: string;
   dayOfStartOfCetrotide?: string;
   totalDaysOfStimulation?: string;
-  remarks?: string;
 }
 
 export const initialAiimsDoseOfDrugsData: Readonly<AiimsDoseOfDrugsData> =
@@ -59,7 +58,6 @@ export function useDoseOfDrugs(
   const totalCetrotideDose = getOptionalObsValue(CONCEPTS.totalCetrotideDose);
   const dayOfStartOfCetrotide = getOptionalObsValue(CONCEPTS.dayOfStartOfCetrotide);
   const totalDaysOfStimulation = getOptionalObsValue(CONCEPTS.totalDaysOfStimulation);
-  const remarks = getOptionalObsValue(CONCEPTS.doseOfDrugsRemarks);
 
   const hasData =
     totalDaysOfLeuprolideDownregulation !== undefined ||
@@ -71,8 +69,7 @@ export function useDoseOfDrugs(
     totalDoseRlh !== undefined ||
     totalCetrotideDose !== undefined ||
     dayOfStartOfCetrotide !== undefined ||
-    totalDaysOfStimulation !== undefined ||
-    remarks !== undefined;
+    totalDaysOfStimulation !== undefined;
 
   const doseOfDrugsData: AiimsDoseOfDrugsData = {
     hasData,
@@ -88,7 +85,6 @@ export function useDoseOfDrugs(
     totalCetrotideDose,
     dayOfStartOfCetrotide,
     totalDaysOfStimulation,
-    remarks,
   };
 
   return {

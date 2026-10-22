@@ -1,5 +1,5 @@
 import React from 'react';
-import { Microscope, Chemistry } from '@carbon/react/icons';
+import { Microscope } from '@carbon/react/icons';
 import { useTranslation } from 'react-i18next';
 import { type AiimsSpermQualityAssessmentData } from './sperm-quality-assessment.resource';
 import { ObservationCard, type ObservationRow } from '../shared/components';
@@ -38,14 +38,6 @@ export const SpermQualityAssessmentCard: React.FC<SpermQualityAssessmentCardProp
         data?.spermMotility !== undefined && data?.spermMotility !== ''
           ? `${data.spermMotility} ${t('unitPercent', '%')}`
           : undefined,
-      emptyPlaceholder: '—',
-    });
-
-    // Remarks
-    list.push({
-      id: 'sperm_quality_assessment_remarks',
-      label: t('spermQualityAssessmentRemarks', 'Remarks / Notes'),
-      value: data?.remarks,
       emptyPlaceholder: '—',
     });
 

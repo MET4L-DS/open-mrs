@@ -28,18 +28,6 @@
               }
             },
             {
-              "label": "Total days of stimulation",
-              "type": "obs",
-              "id": "total_days_of_stimulation",
-              "required": "false",
-              "questionOptions": {
-                "rendering": "number",
-                "concept": "c0010001-0000-0000-0000-000000000242",
-                "min": 0,
-                "max": 100
-              }
-            },
-            {
               "label": "Starting dose Follicle-Stimulating Hormone (FSH)",
               "type": "obs",
               "id": "starting_dose_fsh",
@@ -47,6 +35,30 @@
               "questionOptions": {
                 "rendering": "number",
                 "concept": "c0010001-0000-0000-0000-000000000234",
+                "min": 0,
+                "max": 5000
+              }
+            },
+            {
+              "label": "Starting dose Human Menopausal Gonadotropin (HMG)",
+              "type": "obs",
+              "id": "starting_dose_hmg",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "number",
+                "concept": "c0010001-0000-0000-0000-000000000235",
+                "min": 0,
+                "max": 5000
+              }
+            },
+            {
+              "label": "Starting dose Recombinant Luteinizing Hormone (rLH)",
+              "type": "obs",
+              "id": "starting_dose_rlh",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "number",
+                "concept": "c0010001-0000-0000-0000-000000000236",
                 "min": 0,
                 "max": 5000
               }
@@ -64,18 +76,6 @@
               }
             },
             {
-              "label": "Starting dose Human Menopausal Gonadotropin (HMG)",
-              "type": "obs",
-              "id": "starting_dose_hmg",
-              "required": "false",
-              "questionOptions": {
-                "rendering": "number",
-                "concept": "c0010001-0000-0000-0000-000000000235",
-                "min": 0,
-                "max": 5000
-              }
-            },
-            {
               "label": "Total dose Human Menopausal Gonadotropin (HMG)",
               "type": "obs",
               "id": "total_dose_hmg",
@@ -88,18 +88,6 @@
               }
             },
             {
-              "label": "Starting dose Recombinant Luteinizing Hormone (rLH)",
-              "type": "obs",
-              "id": "starting_dose_rlh",
-              "required": "false",
-              "questionOptions": {
-                "rendering": "number",
-                "concept": "c0010001-0000-0000-0000-000000000236",
-                "min": 0,
-                "max": 5000
-              }
-            },
-            {
               "label": "Total dose Recombinant Luteinizing Hormone (rLH)",
               "type": "obs",
               "id": "total_dose_rlh",
@@ -109,6 +97,18 @@
                 "concept": "c0010001-0000-0000-0000-000000000239",
                 "min": 0,
                 "max": 50000
+              }
+            },
+            {
+              "label": "Total Cetrotide dose",
+              "type": "obs",
+              "id": "total_cetrotide_dose",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "number",
+                "concept": "c0010001-0000-0000-0000-000000000240",
+                "min": 0,
+                "max": 100
               }
             },
             {
@@ -188,26 +188,15 @@
               }
             },
             {
-              "label": "Total Cetrotide dose",
+              "label": "Total days of stimulation",
               "type": "obs",
-              "id": "total_cetrotide_dose",
+              "id": "total_days_of_stimulation",
               "required": "false",
               "questionOptions": {
                 "rendering": "number",
-                "concept": "c0010001-0000-0000-0000-000000000240",
+                "concept": "c0010001-0000-0000-0000-000000000242",
                 "min": 0,
                 "max": 100
-              }
-            },
-            {
-              "label": "Remarks",
-              "type": "obs",
-              "id": "dose_of_drugs_remarks",
-              "required": "false",
-              "questionOptions": {
-                "rendering": "textarea",
-                "concept": "c0010001-0000-0000-0000-000000000243",
-                "rows": 4
               }
             }
           ]

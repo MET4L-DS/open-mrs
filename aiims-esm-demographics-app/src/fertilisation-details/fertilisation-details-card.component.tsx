@@ -11,8 +11,7 @@ export interface FertilisationDetailsCardProps {
 export const FertilisationDetailsCard: React.FC<FertilisationDetailsCardProps> = ({ data }) => {
   const { t } = useTranslation();
 
-  // Card 1: Fertilisation & Insemination Outcome
-  const outcomeRows: ObservationRow[] = React.useMemo(() => {
+  const rows: ObservationRow[] = React.useMemo(() => {
     return [
       {
         id: 'number-oocytes-fertilised',
@@ -31,64 +30,11 @@ export const FertilisationDetailsCard: React.FC<FertilisationDetailsCardProps> =
     ];
   }, [data, t]);
 
-  // Card 2: Cleavage Stage Assessment
-  const cleavageRows: ObservationRow[] = React.useMemo(() => {
-    return [
-      {
-        id: 'embryos-cleaved-day2',
-        label: t('embryosCleavedDay2', 'Embryos Cleaved on Day 2'),
-        value: data?.embryosCleavedDay2,
-        unit: data?.embryosCleavedDay2 ? ` ${t('embryos', 'embryos')}` : undefined,
-        emptyPlaceholder: '—',
-      },
-      {
-        id: 'cleavage-rate',
-        label: t('cleavageRate', 'Cleavage Rate'),
-        value: data?.cleavageRate,
-        unit: data?.cleavageRate ? ' %' : undefined,
-        emptyPlaceholder: '—',
-      },
-      {
-        id: 'embryos-cleaved-day3',
-        label: t('embryosCleavedDay3', 'Embryos Cleaved on Day 3'),
-        value: data?.embryosCleavedDay3,
-        unit: data?.embryosCleavedDay3 ? ` ${t('embryos', 'embryos')}` : undefined,
-        emptyPlaceholder: '—',
-      },
-      {
-        id: 'embryos-cleaved-day5',
-        label: t('embryosCleavedDay5', 'Number of Embryos Cleaved on Day 5'),
-        value: data?.embryosCleavedDay5,
-        unit: data?.embryosCleavedDay5 ? ` ${t('embryos', 'embryos')}` : undefined,
-        emptyPlaceholder: '—',
-      },
-    ];
-  }, [data, t]);
-
-  // Card 3: Laboratory Remarks
-  const remarksRows: ObservationRow[] = React.useMemo(() => {
-    return [
-      {
-        id: 'fertilisation-details-remarks',
-        label: t('fertilisationDetailsRemarks', 'Fertilisation Details Remarks'),
-        value: data?.fertilisationDetailsRemarks,
-        emptyPlaceholder: '—',
-      },
-    ];
-  }, [data, t]);
-
-  const allRows = React.useMemo(() => [
-    ...outcomeRows,
-    ...cleavageRows,
-    ...(data?.fertilisationDetailsRemarks ? remarksRows : []),
-  ], [outcomeRows, cleavageRows, remarksRows, data?.fertilisationDetailsRemarks]);
-
   return (
     <ObservationCard
       title={t('aiimsFertilisationDetailsTitle', 'Fertilisation Details')}
       icon={Chemistry}
-      rows={allRows}
+      rows={rows}
     />
   );
 };
-

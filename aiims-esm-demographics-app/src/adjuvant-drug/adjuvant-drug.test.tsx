@@ -37,28 +37,24 @@ describe('AdjuvantDrugCard', () => {
       growthHormone: 'Yes',
       growthHormoneDose: '4.5',
       growthHormoneDuration: '14',
-      remarks: 'Administered in luteal phase prior to stimulation.',
     };
 
     render(<AdjuvantDrugCard data={mockData} />);
 
     expect(screen.getByText('Growth Hormone (GH) Adjuvant Therapy')).toBeInTheDocument();
-    expect(screen.getByText('Clinical Notes & Remarks')).toBeInTheDocument();
 
     expect(screen.getByText('Yes')).toBeInTheDocument();
     expect(screen.getByText('4.5 IU')).toBeInTheDocument();
     expect(screen.getByText('14 days')).toBeInTheDocument();
-    expect(screen.getByText('Administered in luteal phase prior to stimulation.')).toBeInTheDocument();
   });
 
   it('renders empty placeholders when data is null', () => {
     render(<AdjuvantDrugCard data={null} />);
 
     expect(screen.getByText('Growth Hormone (GH) Adjuvant Therapy')).toBeInTheDocument();
-    expect(screen.getByText('Clinical Notes & Remarks')).toBeInTheDocument();
 
     const placeholders = screen.getAllByText('—');
-    expect(placeholders).toHaveLength(4);
+    expect(placeholders).toHaveLength(3);
   });
 });
 

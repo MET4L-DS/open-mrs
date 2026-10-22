@@ -47,7 +47,6 @@ describe('OvumPickUpDetailsCard', () => {
 
     expect(screen.getByText('Abnormal Oocytes (Count)')).toBeInTheDocument();
     expect(screen.getByText('Abnormal Oocytes Findings')).toBeInTheDocument();
-    expect(screen.getByText('Remarks / Notes')).toBeInTheDocument();
   });
 
   it('renders recorded ovum pick up details observations correctly', () => {
@@ -70,8 +69,6 @@ describe('OvumPickUpDetailsCard', () => {
       germinalVesicle: 1,
       abnormalOocytesNumber: 1,
       abnormalOocytes: ['Giant oocyte', 'Dark cumulus'],
-      ovumPickUpDetailsRemarks:
-        'Good quality oocytes retrieved without complications',
     };
 
     render(<OvumPickUpDetailsCard data={data} />);
@@ -93,8 +90,5 @@ describe('OvumPickUpDetailsCard', () => {
     expect(screen.getAllByText('1')).toHaveLength(2);
 
     expect(screen.getByText('Giant oocyte, Dark cumulus')).toBeInTheDocument();
-    expect(
-      screen.getByText('Good quality oocytes retrieved without complications')
-    ).toBeInTheDocument();
   });
 });

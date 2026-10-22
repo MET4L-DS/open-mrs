@@ -19,7 +19,7 @@ export interface AiimsEmbryoAssessmentData {
   numberEmbryosDay3?: string;
   gradeEmbryosDay3?: string;
 
-  // Day 4: Morula Stage
+  // Day 4: Morula Stage (Free Text)
   numberEmbryosDay4?: string;
   gradeEmbryosDay4?: string;
 
@@ -30,9 +30,6 @@ export interface AiimsEmbryoAssessmentData {
   // Day 6: Extended Culture
   numberEmbryosDay6?: string;
   gradeEmbryosDay6?: string;
-
-  // Remarks
-  remarks?: string;
 }
 
 export const initialAiimsEmbryoAssessmentData: Readonly<AiimsEmbryoAssessmentData> =
@@ -75,8 +72,6 @@ export function useEmbryoAssessment(
     const numberEmbryosDay6 = getOptionalObsValue(CONCEPTS.numberEmbryosDay6);
     const gradeEmbryosDay6 = getOptionalObsValue(CONCEPTS.gradeEmbryosDay6);
 
-    const remarks = getOptionalObsValue(CONCEPTS.embryoAssessmentRemarks);
-
     data = {
       hasData: true,
       encounterUuid: latestEncounter.uuid,
@@ -93,7 +88,6 @@ export function useEmbryoAssessment(
       gradeEmbryosDay5,
       numberEmbryosDay6,
       gradeEmbryosDay6,
-      remarks,
     };
   }
 

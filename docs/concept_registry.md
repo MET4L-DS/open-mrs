@@ -208,7 +208,7 @@ To maintain agility and avoid blocking clinical deployment pending terminology l
 | `c0010001-0000-0000-0000-000000000252` | Number of Embryos Day 3 | Numeric | Finding | Local / Embryo Assessment | embryos | — | Active | Form 27: Day 3 count |
 | `c0010001-0000-0000-0000-000000000253` | Grade of Embryos Day 3 | Coded | Finding | Local / Embryo Assessment | — | — | Active | Form 27: Day 3 grade (Cleavage answers) |
 | `c0010001-0000-0000-0000-000000000254` | Number of Embryos Day 4 | Numeric | Finding | Local / Embryo Assessment | embryos | — | Active | Form 27: Day 4 count |
-| `c0010001-0000-0000-0000-000000000255` | Grade of Embryos Day 4 | Coded | Finding | Local / Embryo Assessment | — | — | Active | Form 27: Day 4 grade (Morula answers) |
+| `c0010001-0000-0000-0000-000000000255` | Grade of Embryos Day 4 | Text | Finding | Local / Embryo Assessment | — | — | Active | Form 27: Day 4 grade (Morula free text) |
 | `c0010001-0000-0000-0000-000000000256` | Number of Embryos Day 5 | Numeric | Finding | Local / Embryo Assessment | embryos | — | Active | Form 27: Day 5 count |
 | `c0010001-0000-0000-0000-000000000257` | Grade of Embryos Day 5 | Coded | Finding | Local / Embryo Assessment | — | — | Active | Form 27: Day 5 grade (Blastocyst answers) |
 | `c0010001-0000-0000-0000-000000000258` | Number of Embryos Day 6 | Numeric | Finding | Local / Embryo Assessment | embryos | — | Active | Form 27: Day 6 count |
@@ -247,6 +247,7 @@ To maintain agility and avoid blocking clinical deployment pending terminology l
 | `c0010001-0000-0000-0000-000000000291` | Additional Procedures in Assisted Reproductive Technology | Coded | Finding | Local / Additional ART | — | — | Active | Form 32: Adjuvant procedures in ART (PRP, Endo Injury, G-CSF, Embryo Glue) |
 | `c0010001-0000-0000-0000-000000000292` | Date of Additional Procedures in Assisted Reproductive Technology | Date | Observable entity | Local / Additional ART | — | — | Active | Form 32: Procedure date |
 | `c0010001-0000-0000-0000-000000000293` | Additional Procedures in Assisted Reproductive Technology Remarks | Text | Misc | Local / Additional ART | — | — | Active | Form 32: Clinical notes & procedural remarks |
+| `c0010001-0000-0000-0000-000000000311` | Semen Sample Type | Coded | Finding | Local / Insemination | — | — | Active | Form 21: Frozen, Donor Semen, Husband Semen |
 
 ---
 
@@ -403,6 +404,8 @@ To maintain agility and avoid blocking clinical deployment pending terminology l
 | `c0010002-0000-0000-0000-000000001016` | Husband Semen | Local | — | — | Active |
 | `c0010002-0000-0000-0000-000000001017` | Laser Assisted Hatching (LAH) | SNOMED CT / Local | — | — | Active |
 | `c0010002-0000-0000-0000-000000001018` | Artificial Oocyte Activation (AOA) | SNOMED CT / Local | — | — | Active |
+| `c0010002-0000-0000-0000-000000001165` | Testicular Sperm Extraction (TESE) | SNOMED CT | `236876008` | Yes | Active |
+| `c0010002-0000-0000-0000-000000001166` | Micro TESE (Microsurgical Testicular Sperm Extraction) | SNOMED CT | `718105001` | Yes | Active |
 
 ---
 

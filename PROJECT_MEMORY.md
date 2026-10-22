@@ -491,5 +491,9 @@ Follow this 6-stage lifecycle to add new clinical forms without errors:
 - [x] Integrate Hysteroscopy Findings, Dimensions, and Operative Hysteroscopy into Form 9 (Previous Surgery) with Option B dual-card dashboard and cross-form IVF Summary support.
 - [x] Remove section grouping across 5 forms (TVS, Embryo Assessment, Fertilisation Details, Embryos Frozen, Fresh ET Details), promote Day of Cycle to question #1 on TVS, and flatten all corresponding frontend UI cards into unified continuous ObservationCards (v1.0.95).
 - [x] Remove section grouping across 6 additional forms (Dose of Drugs, Trigger Details, Ovum Pick Up details, Procedure, Lab Procedure of Insemination, Embryo Grading Day 3) in AMPATH schemas and frontend UI cards into single continuous ObservationCards (v1.0.96).
+- [x] Execute 11 structural adjustments across 10 forms and align TVS Ultrasound 1:1 with clinical sheet `TVS_FINDING.xlsx` (v1.0.100).
+- [x] Execute Batch 2 clinical form adjustments across 8 forms: reorder Dose of Drugs; prune remarks across all 8 forms; swap Ovum Pick Up maturity order (MI before MII); decouple sperm retrieval from preservation (add TESE & Micro TESE; add Semen Sample Type to Insemination); migrate Day 4 Embryo Grade to free-text (v1.0.101).
+- [x] Refactor Fertilisation Details (Form 28) and separate cleavage progression fields into new clinical form 'Embryos Cleavage Details' (Form 35 / v1.0.102).
+
 
 

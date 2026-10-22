@@ -11,7 +11,6 @@ export interface AiimsProcedureData {
   encounterDatetime?: string;
   spermRetrievalProcedure: string[];
   additionalIvfProcedures: string[];
-  procedureRemarks?: string;
 }
 
 export const initialAiimsProcedureData: Readonly<AiimsProcedureData> =
@@ -30,7 +29,6 @@ export function useProcedure(
     isLoading,
     error,
     mutate,
-    getOptionalObsValue,
     getObsValues,
   } = useFormEncounter(patientUuid, formUuid);
 
@@ -46,12 +44,10 @@ export function useProcedure(
 
   const spermRetrievalProcedure = getObsValues(CONCEPTS.spermRetrievalProcedure);
   const additionalIvfProcedures = getObsValues(CONCEPTS.additionalIvfProcedures);
-  const procedureRemarks = getOptionalObsValue(CONCEPTS.procedureRemarks);
 
   const hasData =
     spermRetrievalProcedure.length > 0 ||
-    additionalIvfProcedures.length > 0 ||
-    procedureRemarks !== undefined;
+    additionalIvfProcedures.length > 0;
 
   const procedureData: AiimsProcedureData = {
     hasData,
@@ -59,7 +55,6 @@ export function useProcedure(
     encounterDatetime: latestEncounter.encounterDatetime,
     spermRetrievalProcedure,
     additionalIvfProcedures,
-    procedureRemarks,
   };
 
   return {

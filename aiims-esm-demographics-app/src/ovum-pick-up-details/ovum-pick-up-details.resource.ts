@@ -24,7 +24,6 @@ export interface AiimsOvumPickUpDetailsData {
   germinalVesicle?: number;
   abnormalOocytesNumber?: number;
   abnormalOocytes: string[];
-  ovumPickUpDetailsRemarks?: string;
 }
 
 export const initialAiimsOvumPickUpDetailsData: Readonly<AiimsOvumPickUpDetailsData> =
@@ -104,9 +103,6 @@ export function useOvumPickUpDetails(
     abNumStr !== undefined ? parseFloat(abNumStr) : undefined;
 
   const abnormalOocytes = getObsValues(CONCEPTS.abnormalOocytes);
-  const ovumPickUpDetailsRemarks = getOptionalObsValue(
-    CONCEPTS.ovumPickUpDetailsRemarks
-  );
 
   const hasData =
     dateOfOvumPickUp !== undefined ||
@@ -123,8 +119,7 @@ export function useOvumPickUpDetails(
     metaphase1 !== undefined ||
     germinalVesicle !== undefined ||
     abnormalOocytesNumber !== undefined ||
-    abnormalOocytes.length > 0 ||
-    ovumPickUpDetailsRemarks !== undefined;
+    abnormalOocytes.length > 0;
 
   const ovumPickUpDetailsData: AiimsOvumPickUpDetailsData = {
     hasData,
@@ -145,7 +140,6 @@ export function useOvumPickUpDetails(
     germinalVesicle,
     abnormalOocytesNumber,
     abnormalOocytes,
-    ovumPickUpDetailsRemarks,
   };
 
   return {

@@ -129,21 +129,21 @@ export const OvumPickUpDetailsCard: React.FC<OvumPickUpDetailsCardProps> = ({
       emptyPlaceholder: '—',
     });
 
-    // Metaphase II
-    list.push({
-      id: 'metaphase_2',
-      label: t('metaphase2', 'Metaphase II (MII)'),
-      value:
-        data.metaphase2 !== undefined ? `${data.metaphase2}` : undefined,
-      emptyPlaceholder: '—',
-    });
-
     // Metaphase I
     list.push({
       id: 'metaphase_1',
       label: t('metaphase1', 'Metaphase I (MI)'),
       value:
         data.metaphase1 !== undefined ? `${data.metaphase1}` : undefined,
+      emptyPlaceholder: '—',
+    });
+
+    // Metaphase II
+    list.push({
+      id: 'metaphase_2',
+      label: t('metaphase2', 'Metaphase II (MII)'),
+      value:
+        data.metaphase2 !== undefined ? `${data.metaphase2}` : undefined,
       emptyPlaceholder: '—',
     });
 
@@ -183,14 +183,6 @@ export const OvumPickUpDetailsCard: React.FC<OvumPickUpDetailsCardProps> = ({
         data.abnormalOocytes.length > 0
           ? data.abnormalOocytes.join(', ')
           : undefined,
-      emptyPlaceholder: '—',
-    });
-
-    // Remarks
-    list.push({
-      id: 'ovum_pick_up_details_remarks',
-      label: t('ovumPickUpDetailsRemarks', 'Remarks / Notes'),
-      value: data.ovumPickUpDetailsRemarks,
       emptyPlaceholder: '—',
     });
 

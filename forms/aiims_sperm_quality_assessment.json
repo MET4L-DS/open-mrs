@@ -36,23 +36,6 @@
               }
             }
           ]
-        },
-        {
-          "label": "Laboratory Notes & Remarks",
-          "isExpanded": true,
-          "questions": [
-            {
-              "label": "Remarks",
-              "type": "obs",
-              "id": "sperm_quality_assessment_remarks",
-              "required": "false",
-              "questionOptions": {
-                "rendering": "textarea",
-                "concept": "c0010001-0000-0000-0000-000000000230",
-                "rows": 4
-              }
-            }
-          ]
         }
       ]
     }

@@ -117,14 +117,6 @@ export const TriggerDetailsCard: React.FC<TriggerDetailsCardProps> = ({
       emptyPlaceholder: '—',
     });
 
-    // Remarks
-    list.push({
-      id: 'trigger_details_remarks',
-      label: t('triggerDetailsRemarks', 'Remarks / Notes'),
-      value: data.triggerDetailsRemarks,
-      emptyPlaceholder: '—',
-    });
-
     return list;
   }, [data, t]);
 

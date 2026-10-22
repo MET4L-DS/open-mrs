@@ -435,6 +435,11 @@ export const CONCEPTS = {
   hydrosalpinxRightDimensions: 'c0010001-0000-0000-0000-000000000159',
   haematosalpinxFinding: 'c0010001-0000-0000-0000-000000000309',
   haematosalpinxDimensions: 'c0010001-0000-0000-0000-000000000310',
+
+  // Form 21 & 22 Additions
+  semenSampleType: 'c0010001-0000-0000-0000-000000000311',
+  tese: 'c0010002-0000-0000-0000-000000001165',
+  microTese: 'c0010002-0000-0000-0000-000000001166',
 };
 
 

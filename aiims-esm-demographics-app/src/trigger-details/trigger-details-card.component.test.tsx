@@ -28,7 +28,6 @@ describe('TriggerDetailsCard', () => {
     expect(screen.getByText('Trigger Dose')).toBeInTheDocument();
     expect(screen.getByText('Date of Trigger')).toBeInTheDocument();
     expect(screen.getByText('Time of Trigger')).toBeInTheDocument();
-    expect(screen.getByText('Remarks / Notes')).toBeInTheDocument();
   });
 
   it('renders recorded trigger details observations correctly', () => {
@@ -46,7 +45,6 @@ describe('TriggerDetailsCard', () => {
       ovulationTriggerDose: '250 mcg',
       dateOfTrigger: '2026-10-09',
       timeOfTrigger: '21:30',
-      triggerDetailsRemarks: 'Dual trigger planned if needed',
     };
 
     render(<TriggerDetailsCard data={data} />);
@@ -61,6 +59,5 @@ describe('TriggerDetailsCard', () => {
     expect(screen.getByText('250 mcg')).toBeInTheDocument();
     expect(screen.getByText('2026-10-09')).toBeInTheDocument();
     expect(screen.getByText('21:30')).toBeInTheDocument();
-    expect(screen.getByText('Dual trigger planned if needed')).toBeInTheDocument();
   });
 });

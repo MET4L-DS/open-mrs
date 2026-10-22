@@ -44,7 +44,6 @@ describe('DoseOfDrugsCard', () => {
       totalDoseRlh: '750',
       dayOfStartOfCetrotide: 'Day 6',
       totalCetrotideDose: '1.25',
-      remarks: 'Patient responded well to stimulation.',
     };
 
     render(<DoseOfDrugsCard data={mockData} />);
@@ -62,7 +61,6 @@ describe('DoseOfDrugsCard', () => {
     expect(screen.getAllByText('750 IU')).toHaveLength(2);
     expect(screen.getByText('Day 6')).toBeInTheDocument();
     expect(screen.getByText('1.25 mg')).toBeInTheDocument();
-    expect(screen.getByText('Patient responded well to stimulation.')).toBeInTheDocument();
   });
 
   it('renders placeholders when data fields are undefined', () => {

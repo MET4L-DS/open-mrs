@@ -33,20 +33,12 @@
                     "label": "Testicular Sperm Aspiration (TESA)"
                   },
                   {
-                    "concept": "c0010002-0000-0000-0000-000000001013",
-                    "label": "Ejaculated"
+                    "concept": "c0010002-0000-0000-0000-000000001165",
+                    "label": "Testicular Sperm Extraction (TESE)"
                   },
                   {
-                    "concept": "c0010002-0000-0000-0000-000000001014",
-                    "label": "Frozen"
-                  },
-                  {
-                    "concept": "c0010002-0000-0000-0000-000000001015",
-                    "label": "Donor Semen"
-                  },
-                  {
-                    "concept": "c0010002-0000-0000-0000-000000001016",
-                    "label": "Husband Semen (HS)"
+                    "concept": "c0010002-0000-0000-0000-000000001166",
+                    "label": "Micro TESE (Microsurgical Testicular Sperm Extraction)"
                   }
                 ]
               }
@@ -73,17 +65,6 @@
                     "label": "Artificial Oocyte Activation (AOA)"
                   }
                 ]
-              }
-            },
-            {
-              "label": "Remarks",
-              "type": "obs",
-              "id": "procedure_remarks",
-              "required": "false",
-              "questionOptions": {
-                "rendering": "textarea",
-                "concept": "c0010001-0000-0000-0000-000000000226",
-                "rows": 4
               }
             }
           ]

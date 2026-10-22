@@ -21,7 +21,6 @@ describe('ProcedureCard', () => {
     expect(screen.getByText('Additional IVF Procedures')).toBeInTheDocument();
 
     expect(screen.getByText('Sperm Retrieval Procedure')).toBeInTheDocument();
-    expect(screen.getByText('Remarks / Notes')).toBeInTheDocument();
   });
 
   it('renders recorded procedure observations correctly', () => {
@@ -31,32 +30,24 @@ describe('ProcedureCard', () => {
       encounterDatetime: '2026-10-12T11:45:00.000Z',
       spermRetrievalProcedure: [
         'Percutaneous Epididymal Sperm Aspiration (PESA)',
-        'Frozen',
-        'Husband Semen (HS)',
+        'Testicular Sperm Extraction (TESE)',
       ],
       additionalIvfProcedures: [
         'Laser Assisted Hatching (LAH)',
         'Physiological Intracytoplasmic Sperm Injection (PICSI)',
       ],
-      procedureRemarks:
-        'Sperm thawed with good viability; LAH and PICSI performed.',
     };
 
     render(<ProcedureCard data={data} />);
 
     expect(
       screen.getByText(
-        'Percutaneous Epididymal Sperm Aspiration (PESA), Frozen, Husband Semen (HS)'
+        'Percutaneous Epididymal Sperm Aspiration (PESA), Testicular Sperm Extraction (TESE)'
       )
     ).toBeInTheDocument();
     expect(
       screen.getByText(
         'Laser Assisted Hatching (LAH), Physiological Intracytoplasmic Sperm Injection (PICSI)'
-      )
-    ).toBeInTheDocument();
-    expect(
-      screen.getByText(
-        'Sperm thawed with good viability; LAH and PICSI performed.'
       )
     ).toBeInTheDocument();
   });

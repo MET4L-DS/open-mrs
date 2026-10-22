@@ -146,16 +146,6 @@
                 "rendering": "text",
                 "concept": "c0010001-0000-0000-0000-000000000204"
               }
-            },
-            {
-              "label": "Remarks",
-              "type": "obs",
-              "id": "trigger_details_remarks",
-              "required": "false",
-              "questionOptions": {
-                "rendering": "textarea",
-                "concept": "c0010001-0000-0000-0000-000000000205"
-              }
             }
           ]
         }

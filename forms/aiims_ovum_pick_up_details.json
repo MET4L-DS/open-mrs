@@ -116,16 +116,6 @@
               }
             },
             {
-              "label": "Metaphase II",
-              "type": "obs",
-              "id": "metaphase_2",
-              "required": "false",
-              "questionOptions": {
-                "rendering": "number",
-                "concept": "c0010001-0000-0000-0000-000000000216"
-              }
-            },
-            {
               "label": "Metaphase I",
               "type": "obs",
               "id": "metaphase_1",
@@ -133,6 +123,16 @@
               "questionOptions": {
                 "rendering": "number",
                 "concept": "c0010001-0000-0000-0000-000000000217"
+              }
+            },
+            {
+              "label": "Metaphase II",
+              "type": "obs",
+              "id": "metaphase_2",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "number",
+                "concept": "c0010001-0000-0000-0000-000000000216"
               }
             },
             {
@@ -185,16 +185,6 @@
                     "label": "Dark cumulus"
                   }
                 ]
-              }
-            },
-            {
-              "label": "Remarks",
-              "type": "obs",
-              "id": "ovum_pick_up_details_remarks",
-              "required": "false",
-              "questionOptions": {
-                "rendering": "textarea",
-                "concept": "c0010001-0000-0000-0000-000000000221"
               }
             }
           ]

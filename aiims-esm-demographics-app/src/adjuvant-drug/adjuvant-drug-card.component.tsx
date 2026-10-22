@@ -44,31 +44,11 @@ export const AdjuvantDrugCard: React.FC<AdjuvantDrugCardProps> = ({ data }) => {
     return list;
   }, [data, t]);
 
-  const remarksRows: ObservationRow[] = React.useMemo(() => {
-    const list: ObservationRow[] = [];
-
-    list.push({
-      id: 'adjuvant_drug_remarks',
-      label: t('adjuvantDrugRemarks', 'Remarks / Notes'),
-      value: data?.remarks,
-      emptyPlaceholder: '—',
-    });
-
-    return list;
-  }, [data, t]);
-
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-      <ObservationCard
-        title={t('growthHormoneAdjuvantTherapyTitle', 'Growth Hormone (GH) Adjuvant Therapy')}
-        icon={Medication}
-        rows={ghRows}
-      />
-      <ObservationCard
-        title={t('adjuvantDrugRemarksTitle', 'Clinical Notes & Remarks')}
-        icon={Medication}
-        rows={remarksRows}
-      />
-    </div>
+    <ObservationCard
+      title={t('growthHormoneAdjuvantTherapyTitle', 'Growth Hormone (GH) Adjuvant Therapy')}
+      icon={Medication}
+      rows={ghRows}
+    />
   );
 };

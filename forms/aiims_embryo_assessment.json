@@ -259,26 +259,8 @@
               "id": "grade_embryos_day4",
               "required": "false",
               "questionOptions": {
-                "rendering": "select",
-                "concept": "c0010001-0000-0000-0000-000000000255",
-                "answers": [
-                  {
-                    "concept": "c0010002-0000-0000-0000-000000001070",
-                    "label": "Morula"
-                  },
-                  {
-                    "concept": "c0010002-0000-0000-0000-000000001071",
-                    "label": "Compacted Morula"
-                  },
-                  {
-                    "concept": "c0010002-0000-0000-0000-000000001072",
-                    "label": "Early Blastocyst"
-                  },
-                  {
-                    "concept": "c0010002-0000-0000-0000-000000001073",
-                    "label": "Arrest"
-                  }
-                ]
+                "rendering": "text",
+                "concept": "c0010001-0000-0000-0000-000000000255"
               }
             },
             {
@@ -589,17 +571,6 @@
                     "label": "6CC"
                   }
                 ]
-              }
-            },
-            {
-              "label": "Remarks",
-              "type": "obs",
-              "id": "embryo_assessment_remarks",
-              "required": "false",
-              "questionOptions": {
-                "rendering": "textarea",
-                "concept": "c0010001-0000-0000-0000-000000000260",
-                "rows": 4
               }
             }
           ]

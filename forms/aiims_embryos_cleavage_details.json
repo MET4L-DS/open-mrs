@@ -1,0 +1,71 @@
+{
+  "name": "AIIMS Visit: Embryos Cleavage Details",
+  "description": "AIIMS Department of Reproductive Medicine & IVF - Embryos Cleavage Details Sheet",
+  "version": "1.0",
+  "published": true,
+  "retired": false,
+  "encounter": "Consultation",
+  "processor": "EncounterFormProcessor",
+  "referencedForms": [],
+  "pages": [
+    {
+      "label": "Embryos Cleavage Details",
+      "sections": [
+        {
+          "label": "Embryos Cleavage Details",
+          "isExpanded": true,
+          "questions": [
+            {
+              "label": "Embryos Cleaved on Day 2",
+              "type": "obs",
+              "id": "embryos_cleaved_day2",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "number",
+                "concept": "c0010001-0000-0000-0000-000000000263",
+                "min": 0,
+                "max": 100
+              }
+            },
+            {
+              "label": "Cleavage Rate (%)",
+              "type": "obs",
+              "id": "cleavage_rate",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "number",
+                "concept": "c0010001-0000-0000-0000-000000000264",
+                "min": 0,
+                "max": 100
+              }
+            },
+            {
+              "label": "Embryos Cleaved on Day 3",
+              "type": "obs",
+              "id": "embryos_cleaved_day3",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "number",
+                "concept": "c0010001-0000-0000-0000-000000000265",
+                "min": 0,
+                "max": 100
+              }
+            },
+            {
+              "label": "Number of Embryos Cleaved on Day 5",
+              "type": "obs",
+              "id": "embryos_cleaved_day5",
+              "required": "false",
+              "questionOptions": {
+                "rendering": "number",
+                "concept": "c0010001-0000-0000-0000-000000000266",
+                "min": 0,
+                "max": 100
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

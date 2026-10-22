@@ -12,7 +12,6 @@ export interface AiimsAdjuvantDrugData {
   growthHormone?: string;
   growthHormoneDose?: string;
   growthHormoneDuration?: string;
-  remarks?: string;
 }
 
 export const initialAiimsAdjuvantDrugData: Readonly<AiimsAdjuvantDrugData> =
@@ -45,13 +44,11 @@ export function useAdjuvantDrug(
   const growthHormone = getOptionalObsValue(CONCEPTS.growthHormone);
   const growthHormoneDose = getOptionalObsValue(CONCEPTS.growthHormoneDose);
   const growthHormoneDuration = getOptionalObsValue(CONCEPTS.growthHormoneDuration);
-  const remarks = getOptionalObsValue(CONCEPTS.adjuvantDrugRemarks);
 
   const hasData =
     growthHormone !== undefined ||
     growthHormoneDose !== undefined ||
-    growthHormoneDuration !== undefined ||
-    remarks !== undefined;
+    growthHormoneDuration !== undefined;
 
   const adjuvantDrugData: AiimsAdjuvantDrugData = {
     hasData,
@@ -60,7 +57,6 @@ export function useAdjuvantDrug(
     growthHormone,
     growthHormoneDose,
     growthHormoneDuration,
-    remarks,
   };
 
   return {

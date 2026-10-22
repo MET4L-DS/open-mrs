@@ -232,6 +232,14 @@ FORMS_TO_PUBLISH = [
         "encounter_type": "dd528487-82a5-4082-9c72-ed246bd49591",  # Consultation
     },
     {
+        "name": "AIIMS Visit: Embryos Cleavage Details",
+        "version": "1.0",
+        "description": "AIIMS Reproductive Medicine & IVF Day 2, Day 3 & Day 5 Embryos Cleavage Details Sheet",
+        "schema_path": "forms/aiims_embryos_cleavage_details.json",
+        "uuid": "37e59734-dac9-4332-ba27-f1053d189095",
+        "encounter_type": "dd528487-82a5-4082-9c72-ed246bd49591",  # Consultation
+    },
+    {
         "name": "AIIMS Visit: Embryo Grading Day 3",
         "version": "1.0",
         "description": "AIIMS Reproductive Medicine & IVF Day 3 Cleavage Embryo Grading Sheet",

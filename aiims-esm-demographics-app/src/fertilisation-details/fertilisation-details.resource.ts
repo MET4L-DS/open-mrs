@@ -3,7 +3,6 @@ import {
   AIIMS_FERTILISATION_DETAILS_FORM_UUID,
 } from '../config/form-uuids';
 import { useFormEncounter } from '../shared/hooks/useFormEncounter';
-import type { EncounterItem } from '../shared/types';
 
 export interface AiimsFertilisationDetailsData {
   hasData: boolean;
@@ -11,11 +10,6 @@ export interface AiimsFertilisationDetailsData {
   encounterDatetime?: string;
   numberOocytesFertilised?: string;
   fertilisationRate?: string;
-  embryosCleavedDay2?: string;
-  cleavageRate?: string;
-  embryosCleavedDay3?: string;
-  embryosCleavedDay5?: string;
-  fertilisationDetailsRemarks?: string;
 }
 
 export const initialAiimsFertilisationDetailsData: Readonly<AiimsFertilisationDetailsData> =
@@ -46,11 +40,6 @@ export function useFertilisationDetails(
       encounterDatetime: latestEncounter.encounterDatetime,
       numberOocytesFertilised: getOptionalObsValue(CONCEPTS.numberOocytesFertilised),
       fertilisationRate: getOptionalObsValue(CONCEPTS.fertilisationRate),
-      embryosCleavedDay2: getOptionalObsValue(CONCEPTS.embryosCleavedDay2),
-      cleavageRate: getOptionalObsValue(CONCEPTS.cleavageRate),
-      embryosCleavedDay3: getOptionalObsValue(CONCEPTS.embryosCleavedDay3),
-      embryosCleavedDay5: getOptionalObsValue(CONCEPTS.embryosCleavedDay5),
-      fertilisationDetailsRemarks: getOptionalObsValue(CONCEPTS.fertilisationDetailsRemarks),
     };
   }
 

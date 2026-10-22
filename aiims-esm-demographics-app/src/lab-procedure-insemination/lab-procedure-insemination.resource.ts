@@ -11,13 +11,14 @@ export interface AiimsLabProcedureInseminationData {
   encounterDatetime?: string;
   methodOfInsemination: string[];
   timeOfInseminationInjection?: string;
-  labProcedureInseminationRemarks?: string;
+  semenSampleType: string[];
 }
 
 export const initialAiimsLabProcedureInseminationData: Readonly<AiimsLabProcedureInseminationData> =
   Object.freeze({
     hasData: false,
     methodOfInsemination: [],
+    semenSampleType: [],
   });
 
 export function useLabProcedureInsemination(
@@ -47,14 +48,12 @@ export function useLabProcedureInsemination(
   const timeOfInseminationInjection = getOptionalObsValue(
     CONCEPTS.timeOfInseminationInjection
   );
-  const labProcedureInseminationRemarks = getOptionalObsValue(
-    CONCEPTS.labProcedureInseminationRemarks
-  );
+  const semenSampleType = getObsValues(CONCEPTS.semenSampleType);
 
   const hasData =
     methodOfInsemination.length > 0 ||
     timeOfInseminationInjection !== undefined ||
-    labProcedureInseminationRemarks !== undefined;
+    semenSampleType.length > 0;
 
   const labProcedureInseminationData: AiimsLabProcedureInseminationData = {
     hasData,
@@ -62,7 +61,7 @@ export function useLabProcedureInsemination(
     encounterDatetime: latestEncounter.encounterDatetime,
     methodOfInsemination,
     timeOfInseminationInjection,
-    labProcedureInseminationRemarks,
+    semenSampleType,
   };
 
   return {

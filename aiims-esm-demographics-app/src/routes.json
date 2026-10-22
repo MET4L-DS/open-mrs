@@ -590,6 +590,26 @@
       "offline": true
     },
     {
+      "name": "aiims-embryos-cleavage-details-dashboard-link",
+      "component": "aiimsEmbryosCleavageDetailsDashboardLink",
+      "slot": "patient-chart-dashboard-slot",
+      "order": 1,
+      "meta": {
+        "slot": "aiims-embryos-cleavage-details-dashboard-slot",
+        "path": "aiims-embryos-cleavage-details",
+        "title": "Embryos Cleavage Details"
+      },
+      "online": true,
+      "offline": true
+    },
+    {
+      "name": "aiims-embryos-cleavage-details-dashboard",
+      "component": "aiimsEmbryosCleavageDetailsDashboard",
+      "slot": "aiims-embryos-cleavage-details-dashboard-slot",
+      "online": true,
+      "offline": true
+    },
+    {
       "name": "aiims-embryo-grading-day3-dashboard-link",
       "component": "aiimsEmbryoGradingDay3DashboardLink",
       "slot": "patient-chart-dashboard-slot",

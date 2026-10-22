@@ -62,6 +62,7 @@ export const FORM_MODULES: Record<string, DashboardLoader> = {
   'sperm-quality-assessment': () => import('./sperm-quality-assessment/sperm-quality-assessment-dashboard.component'),
   'embryo-assessment': () => import('./embryo-assessment/embryo-assessment-dashboard.component'),
   'fertilisation-details': () => import('./fertilisation-details/fertilisation-details-dashboard.component'),
+  'embryos-cleavage-details': () => import('./embryos-cleavage-details/embryos-cleavage-details-dashboard.component'),
   'embryo-grading-day3': () => import('./embryo-grading-day3/embryo-grading-day3-dashboard.component'),
   'embryos-frozen': () => import('./embryos-frozen/embryos-frozen-dashboard.component'),
   'fresh-et-details': () => import('./fresh-et-details/fresh-et-details-dashboard.component'),
@@ -158,6 +159,8 @@ export const {
   aiimsEmbryoAssessmentDashboard,
   aiimsFertilisationDetailsDashboardLink,
   aiimsFertilisationDetailsDashboard,
+  aiimsEmbryosCleavageDetailsDashboardLink,
+  aiimsEmbryosCleavageDetailsDashboard,
   aiimsEmbryoGradingDay3DashboardLink,
   aiimsEmbryoGradingDay3Dashboard,
   aiimsEmbryosFrozenDashboardLink,
@@ -200,6 +203,7 @@ export * from './lab-procedure-insemination';
 export * from './sperm-quality-assessment';
 export * from './embryo-assessment';
 export * from './fertilisation-details';
+export * from './embryos-cleavage-details';
 export * from './embryo-grading-day3';
 export * from './embryos-frozen';
 export * from './fresh-et-details';

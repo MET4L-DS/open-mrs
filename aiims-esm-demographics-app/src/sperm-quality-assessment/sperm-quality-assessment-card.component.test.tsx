@@ -23,10 +23,9 @@ describe('SpermQualityAssessmentCard', () => {
     expect(
       screen.getByText('Sperm motility on Ovum Pick Up Day')
     ).toBeInTheDocument();
-    expect(screen.getByText('Remarks / Notes')).toBeInTheDocument();
 
     const placeholders = screen.getAllByText('—');
-    expect(placeholders).toHaveLength(3);
+    expect(placeholders).toHaveLength(2);
   });
 
   it('renders populated data with units correctly', () => {
@@ -34,7 +33,6 @@ describe('SpermQualityAssessmentCard', () => {
       hasData: true,
       postWashConcentration: '45.5',
       spermMotility: '78',
-      remarks: 'Good progressive motility observed post-swim up.',
     };
 
     render(<SpermQualityAssessmentCard data={mockData} />);
@@ -48,9 +46,5 @@ describe('SpermQualityAssessmentCard', () => {
       screen.getByText('Sperm motility on Ovum Pick Up Day')
     ).toBeInTheDocument();
     expect(screen.getByText('78 %')).toBeInTheDocument();
-
-    expect(
-      screen.getByText('Good progressive motility observed post-swim up.')
-    ).toBeInTheDocument();
   });
 });

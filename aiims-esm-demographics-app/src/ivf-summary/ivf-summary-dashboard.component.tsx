@@ -44,6 +44,7 @@ import {
   AIIMS_SPERM_QUALITY_ASSESSMENT_FORM_UUID,
   AIIMS_EMBRYO_ASSESSMENT_FORM_UUID,
   AIIMS_FERTILISATION_DETAILS_FORM_UUID,
+  AIIMS_EMBRYOS_CLEAVAGE_DETAILS_FORM_UUID,
   AIIMS_EMBRYO_GRADING_DAY3_FORM_UUID,
   AIIMS_EMBRYOS_FROZEN_FORM_UUID,
   AIIMS_FRESH_ET_DETAILS_FORM_UUID,
@@ -278,7 +279,7 @@ export default function IvfSummaryDashboard({
     { label: t('fertilizationRate', 'Fertilization Rate'), value: getFormObs(AIIMS_FERTILISATION_DETAILS_FORM_UUID, CONCEPTS.fertilisationRate) ? `${getFormObs(AIIMS_FERTILISATION_DETAILS_FORM_UUID, CONCEPTS.fertilisationRate)}%` : '—' },
     { label: t('numberEmbryosDay3', 'Day 3 Cleavage Embryos'), value: getFormObs(AIIMS_EMBRYO_ASSESSMENT_FORM_UUID, CONCEPTS.numberEmbryosDay3) || '—' },
     { label: t('grade1EmbryosDay3', 'Grade 1/2 Embryos (Day 3)'), value: getFormObs(AIIMS_EMBRYO_GRADING_DAY3_FORM_UUID, CONCEPTS.grade1EmbryosDay3) || '—' },
-    { label: t('cleavageRate', 'Cleavage Rate'), value: getFormObs(AIIMS_FERTILISATION_DETAILS_FORM_UUID, CONCEPTS.cleavageRate) ? `${getFormObs(AIIMS_FERTILISATION_DETAILS_FORM_UUID, CONCEPTS.cleavageRate)}%` : '—' },
+    { label: t('cleavageRate', 'Cleavage Rate'), value: (getFormObs(AIIMS_EMBRYOS_CLEAVAGE_DETAILS_FORM_UUID, CONCEPTS.cleavageRate) || getFormObs(AIIMS_FERTILISATION_DETAILS_FORM_UUID, CONCEPTS.cleavageRate)) ? `${getFormObs(AIIMS_EMBRYOS_CLEAVAGE_DETAILS_FORM_UUID, CONCEPTS.cleavageRate) || getFormObs(AIIMS_FERTILISATION_DETAILS_FORM_UUID, CONCEPTS.cleavageRate)}%` : '—' },
   ];
 
   const blastocystRows: ObservationRow[] = [

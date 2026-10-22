@@ -53,13 +53,12 @@ describe('EmbryoAssessmentCard', () => {
       gradeEmbryosDay5: '4AA',
       numberEmbryosDay6: '3',
       gradeEmbryosDay6: '5AA',
-      remarks: 'High quality blastocyst progression',
     };
 
     render(<EmbryoAssessmentCard data={mockData} />);
     expect(screen.getByText('Normal 2PN')).toBeInTheDocument();
     expect(screen.getByText('4AA')).toBeInTheDocument();
-    expect(screen.getByText('High quality blastocyst progression')).toBeInTheDocument();
+    expect(screen.getByText('Compacted Morula')).toBeInTheDocument();
   });
 });
 

@@ -29,7 +29,7 @@ describe('LabProcedureInseminationCard', () => {
     expect(
       screen.getByText('Time of Insemination or Injection')
     ).toBeInTheDocument();
-    expect(screen.getByText('Remarks / Notes')).toBeInTheDocument();
+    expect(screen.getByText('Semen Sample Type')).toBeInTheDocument();
   });
 
   it('renders recorded lab procedure of insemination observations correctly', () => {
@@ -42,8 +42,7 @@ describe('LabProcedureInseminationCard', () => {
         'Assisted Oocyte Activation (AOA)',
       ],
       timeOfInseminationInjection: '11:30 AM',
-      labProcedureInseminationRemarks:
-        'All 10 MII oocytes injected successfully with good sperm morphology.',
+      semenSampleType: ['Frozen', 'Husband Semen (HS)'],
     };
 
     render(<LabProcedureInseminationCard data={data} />);
@@ -54,10 +53,6 @@ describe('LabProcedureInseminationCard', () => {
       )
     ).toBeInTheDocument();
     expect(screen.getByText('11:30 AM')).toBeInTheDocument();
-    expect(
-      screen.getByText(
-        'All 10 MII oocytes injected successfully with good sperm morphology.'
-      )
-    ).toBeInTheDocument();
+    expect(screen.getByText('Frozen, Husband Semen (HS)')).toBeInTheDocument();
   });
 });

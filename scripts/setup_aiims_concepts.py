@@ -61,6 +61,7 @@ def add_concept_sql(c_uuid, name, datatype_id, class_id=7, is_numeric=False, uni
         SET @new_id = @existing_id;
         UPDATE concept SET datatype_id = {datatype_id}, class_id = {class_id} WHERE concept_id = @existing_id;
         {"IF NOT EXISTS (SELECT 1 FROM concept_numeric WHERE concept_id = @existing_id) THEN INSERT INTO concept_numeric (concept_id, units, allow_decimal, low_absolute, hi_absolute) VALUES (@existing_id, " + (f"'{units}'" if units else "NULL") + f", {allow_decimal}, " + (str(low_abs) if low_abs is not None else "NULL") + f", " + (str(hi_abs) if hi_abs is not None else "NULL") + "); END IF;" if is_numeric else "DELETE FROM concept_numeric WHERE concept_id = @existing_id;"}
+        {"UPDATE obs o JOIN concept_name cn ON o.value_coded = cn.concept_id AND cn.locale = 'en' AND cn.locale_preferred = 1 SET o.value_text = cn.name, o.value_coded = NULL WHERE o.concept_id = @existing_id AND o.value_coded IS NOT NULL;" if datatype_id == 3 else ""}
     END IF;
     """
     return sql
@@ -656,6 +657,13 @@ haematosalpinx_answers = [
     ("c0010002-0000-0000-0000-000000001164", "Both"),
 ]
 
+# Form 22: Sperm Retrieval Additions Answers
+sperm_retrieval_procedure_additions = [
+    ("c0010002-0000-0000-0000-000000001165", "Testicular Sperm Extraction (TESE)"),
+    ("c0010002-0000-0000-0000-000000001166", "Micro TESE (Microsurgical Testicular Sperm Extraction)"),
+]
+
+
 
 
 
@@ -767,6 +775,9 @@ for u, name in endometrial_vascularity_answers:
     full_script.append(add_concept_sql(u, name, datatype_id=4, class_id=11))
 
 for u, name in haematosalpinx_answers:
+    full_script.append(add_concept_sql(u, name, datatype_id=4, class_id=11))
+
+for u, name in sperm_retrieval_procedure_additions:
     full_script.append(add_concept_sql(u, name, datatype_id=4, class_id=11))
 
 
@@ -1155,7 +1166,7 @@ full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000251", "Grad
 full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000252", "Number of Embryos Day 3", datatype_id=1, class_id=7, is_numeric=True, allow_decimal=0, low_abs=0, hi_abs=100))
 full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000253", "Grade of Embryos Day 3", datatype_id=2, class_id=7))
 full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000254", "Number of Embryos Day 4", datatype_id=1, class_id=7, is_numeric=True, allow_decimal=0, low_abs=0, hi_abs=100))
-full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000255", "Grade of Embryos Day 4", datatype_id=2, class_id=7))
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000255", "Grade of Embryos Day 4", datatype_id=3, class_id=7))
 full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000256", "Number of Embryos Day 5", datatype_id=1, class_id=7, is_numeric=True, allow_decimal=0, low_abs=0, hi_abs=100))
 full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000257", "Grade of Embryos Day 5", datatype_id=2, class_id=7))
 full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000258", "Number of Embryos Day 6", datatype_id=1, class_id=7, is_numeric=True, allow_decimal=0, low_abs=0, hi_abs=100))
@@ -1227,6 +1238,9 @@ full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000307", "Othe
 full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000308", "Left Hydrosalpinx Dimensions", datatype_id=3, class_id=7))
 full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000309", "Haematosalpinx Finding", datatype_id=2, class_id=7))
 full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000310", "Haematosalpinx Dimensions", datatype_id=3, class_id=7))
+
+# Form 21: Lab Procedure of Insemination Additions (0311)
+full_script.append(add_concept_sql("c0010001-0000-0000-0000-000000000311", "Semen Sample Type", datatype_id=2, class_id=7))
 
 
 
@@ -1768,9 +1782,22 @@ for ans_uuid, _ in ovum_pick_up_answers:
 for ans_uuid, _ in lab_procedure_insemination_answers:
     full_script.append(add_answer_sql("c0010001-0000-0000-0000-000000000222", ans_uuid))
 
+# Semen Sample Type (0311)
+for ans_uuid in [
+    "c0010002-0000-0000-0000-000000001014",  # Frozen
+    "c0010002-0000-0000-0000-000000001015",  # Donor Semen
+    "c0010002-0000-0000-0000-000000001016",  # Husband Semen (HS)
+]:
+    full_script.append(add_answer_sql("c0010001-0000-0000-0000-000000000311", ans_uuid))
+
 # Procedure (Form 22)
-# Sperm Retrieval Procedure (0225)
-for ans_uuid, _ in sperm_quality_assessment_answers:
+# Sperm Retrieval Procedure (0225): PESA, TESA, TESE, Micro TESE
+for ans_uuid in [
+    "c0010002-0000-0000-0000-000000001011",  # PESA
+    "c0010002-0000-0000-0000-000000001012",  # TESA
+    "c0010002-0000-0000-0000-000000001165",  # TESE
+    "c0010002-0000-0000-0000-000000001166",  # Micro TESE
+]:
     full_script.append(add_answer_sql("c0010001-0000-0000-0000-000000000225", ans_uuid))
 
 # Additional IVF Procedures (0227)
@@ -1797,15 +1824,17 @@ for ans_uuid in [
     full_script.append(add_answer_sql("c0010001-0000-0000-0000-000000000244", ans_uuid))
 
 # Assessment of Fertilization, Embryo & Blastocyst (Form 27)
-# Ensure question concepts are updated to datatype_id = 2 (Coded) in case they already exist as Text
+# Ensure Day 2, 3, 5, 6 question concepts are updated to datatype_id = 2 (Coded) in case they already exist as Text,
+# and ensure Day 4 (0255) is updated to datatype_id = 3 (Text).
 full_script.append("""
 UPDATE concept SET datatype_id = 2 WHERE uuid IN (
     'c0010001-0000-0000-0000-000000000251',
     'c0010001-0000-0000-0000-000000000253',
-    'c0010001-0000-0000-0000-000000000255',
     'c0010001-0000-0000-0000-000000000257',
     'c0010001-0000-0000-0000-000000000259'
 );
+UPDATE concept SET datatype_id = 3 WHERE uuid = 'c0010001-0000-0000-0000-000000000255';
+DELETE FROM concept_answer WHERE concept_id = (SELECT concept_id FROM concept WHERE uuid = 'c0010001-0000-0000-0000-000000000255');
 """)
 
 # Grade of Embryos Day 2 (0251)
@@ -1815,10 +1844,6 @@ for ans_uuid, _ in cleavage_embryo_grade_answers:
 # Grade of Embryos Day 3 (0253)
 for ans_uuid, _ in cleavage_embryo_grade_answers:
     full_script.append(add_answer_sql("c0010001-0000-0000-0000-000000000253", ans_uuid))
-
-# Grade of Embryos Day 4 (0255)
-for ans_uuid, _ in day4_embryo_grade_answers:
-    full_script.append(add_answer_sql("c0010001-0000-0000-0000-000000000255", ans_uuid))
 
 # Grade of Embryos Day 5 (0257)
 for ans_uuid, _ in blastocyst_embryo_grade_answers:
