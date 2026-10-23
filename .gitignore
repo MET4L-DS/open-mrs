@@ -36,3 +36,4 @@ dist_temp.tar
 node_modules/
 .turbo/
 
+docs/.obsidian/
