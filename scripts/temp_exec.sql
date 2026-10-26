@@ -2,6 +2,13 @@ DELIMITER $$
 DROP PROCEDURE IF EXISTS register_aiims_concepts$$
 CREATE PROCEDURE register_aiims_concepts()
 BEGIN
+    DECLARE EXIT HANDLER FOR SQLEXCEPTION
+    BEGIN
+        ROLLBACK;
+        RESIGNAL;
+    END;
+
+    START TRANSACTION;
 
     SET @existing_id = (SELECT concept_id FROM concept WHERE uuid = '160296AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA');
     IF @existing_id IS NULL THEN
@@ -21684,6 +21691,7 @@ AND answer_concept = (SELECT concept_id FROM concept WHERE uuid = 'c0010002-0000
         END IF;
     END IF;
     
+    COMMIT;
 END$$
 DELIMITER ;
 CALL register_aiims_concepts();

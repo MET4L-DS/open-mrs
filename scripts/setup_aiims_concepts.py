@@ -668,12 +668,19 @@ sperm_retrieval_procedure_additions = [
 
 
 
-# We assemble the migration script wrapped in a stored procedure for IF/ELSE control flow
+# We assemble the migration script wrapped in a stored procedure for IF/ELSE control flow with ACID transactional atomicity
 full_script = [
     "DELIMITER $$",
     "DROP PROCEDURE IF EXISTS register_aiims_concepts$$",
     "CREATE PROCEDURE register_aiims_concepts()",
     "BEGIN",
+    "    DECLARE EXIT HANDLER FOR SQLEXCEPTION",
+    "    BEGIN",
+    "        ROLLBACK;",
+    "        RESIGNAL;",
+    "    END;",
+    "",
+    "    START TRANSACTION;",
 ]
 
 # 1. Answer concepts (datatype 4 = N/A, class 11 = Misc)
@@ -1935,6 +1942,7 @@ full_script.append(add_answer_sql("c0010001-0000-0000-0000-000000000309", "16374
 
 
 
+full_script.append("    COMMIT;")
 full_script.append("END$$")
 full_script.append("DELIMITER ;")
 full_script.append("CALL register_aiims_concepts();")

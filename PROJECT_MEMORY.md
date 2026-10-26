@@ -203,6 +203,7 @@ Follow this 6-stage lifecycle to add new clinical forms without errors:
 1. Define concepts and answers in `scripts/setup_aiims_concepts.py`.
 2. **CRITICAL OpenMRS Rule**: Every concept with `datatype_id = 1` (`Numeric`) **MUST** have a corresponding entry in `concept_numeric` (`allow_decimal`, `low_absolute`, `hi_absolute`, `units`). If omitted, `ObsValidator` throws `NullPointerException` (HTTP 500) upon saving observations.
 3. Run `python scripts/setup_aiims_concepts.py` to sync MariaDB and regenerate `scripts/register_aiims_concepts.sql`.
+   - **ACID Transactional Atomicity**: `setup_aiims_concepts.py` generates `register_aiims_concepts()` inside an explicit `START TRANSACTION ... COMMIT` block with a `DECLARE EXIT HANDLER FOR SQLEXCEPTION` (`ROLLBACK; RESIGNAL;`). If any error occurs, MariaDB immediately rolls back all changes to preserve dictionary integrity.
 4. Add concept UUIDs to `src/config/concepts.ts`.
 5. Run `npm run validate:concepts` to verify all UUIDs and `concept_numeric` metadata against the backend.
 
@@ -508,6 +509,7 @@ Follow this 6-stage lifecycle to add new clinical forms without errors:
 - [x] Audit and integrate 100% of all 35 clinical intake and procedure forms into the AIIMS IVF Summary interface: added Past Medical History (Form 10) & Family History (Form 11) to Domain 1; Endometrial Biopsy (Form 17) to Domain 2; Adjuvant Growth Hormone (Form 21) to Domain 3; Mock Embryo Transfer & Cervical Direction (Form 16) to Domain 6; updated subtitle to 35 modules; 40 test files (105 tests) passing (v1.0.104).
 - [x] Complete comprehensive 35-form deep audit of AIIMS IVF Summary interface: fixed multi-select checkbox observation querying via `getFormObsList` for Insemination Method, Sperm Retrieval Modalities, Semen Sample Type, Additional Intra-cycle Lab Procedures (LAH/PICSI/AOA), Tuberculosis Sites, Tubal Factors, Uterine Factors, Endometriosis Classifications, Male Infertility Factors, and ART Add-ons; added missing fields (`semenSampleType`, intra-cycle `additionalIvfProcedures`, `deliveryDetails`); fixed single-source mapping for `cleavageRate` to Form 29; localized all 104 dashboard strings; 40 test files (106 tests) passing; deployed v1.0.105.
 - [x] Optimize IVF Summary layout to eliminate excessive whitespace across Domains 1, 2, and 4: added `fullWidth` and `columns={2}` support to `ObservationCard`; transformed *Prior Reproductive & Surgical History* and *Diagnostic Factors & Prognostic Groups* into horizontal full-width cards with 2-column internal grids; balanced Domain 2 with 1:1 symmetry (*Hormonal Reserve* and *Male Evaluation* side-by-side); refactored Domain 4 with executive horizontal stat ribbon for *Oocyte Yield* and full-width 2-column *Insemination Modality & Semen Prep*; deployed v1.0.106.
+- [x] Implement full ACID transactional atomicity in AIIMS concept migration scripts (`scripts/setup_aiims_concepts.py` and `scripts/register_aiims_concepts.sql`): wrapped the 21,698-line stored procedure in `START TRANSACTION ... COMMIT` and declared an `EXIT HANDLER FOR SQLEXCEPTION` with `ROLLBACK; RESIGNAL;` to guarantee all-or-nothing dictionary integrity in MariaDB InnoDB.
 
 
 
