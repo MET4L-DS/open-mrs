@@ -37,3 +37,30 @@ node_modules/
 .turbo/
 
 docs/.obsidian/
+
+# Environment & Local Secrets
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+.venv/
+env/
+ENV/
+
+# Temporary CIEL & OCL Export Artifacts
+ciel_ocl_export/
+CIEL_concepts*.csv
+CIEL_names.csv
+VERSION.txt
+
+# Scratch & Temporary Analysis Files
+*results_concepts.csv
+scripts/temp_*
+scripts/*.sql.tmp
